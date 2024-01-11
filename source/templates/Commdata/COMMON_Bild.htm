@@ -1,0 +1,35 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Bild" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Commdata.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Bild" %}</p><p>{% trans "Dieses Feld zeigt eine Grafik, welche die Dialogeingaben und/oder die Funktion des Dialogs verdeutlichen soll." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

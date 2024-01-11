@@ -1,0 +1,48 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "FeatureManager (Einstellungen) XXXBILDER ALT" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "FeatureManager (Einstellungen)" %}</p><p class="dialog">{% trans "Kleine Ikonen / Mittlere Ikonen" %}</p>
+<p>{% trans "Bestimmt die Größe der im #FeatureManager# angezeigten Ikonen." %}</p>
+<p>{% trans "Das folgende Bild zeigt links die rechts kleine Ikonen und mittlere Ikonengröße." %}</p>
+<p class="hcp1"> </p>
+<p><img src="../Icon_Size.gif" alt="Icon_Size.gif" width="642" height="266" border="0"/></p>
+<p class="hcp1"> </p>
+<p class="Tip_Note_Heading">{% trans "Kurzhilfen anzeigen" %}</p>
+<p>{% trans "Legt fest, ob eine [Kurzhilfe] angezeigt werden soll, wenn man den Mauscursor über einen Dialogeintrag positioniert." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,74 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Mehrfache Einfahrpunkte" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Mehrfache Einfahrpunkte" %}</p><p>{% trans "Wird eine Geometrie mit mehreren Schnitten bearbeitet, können Sie diesen Befehl verwenden, um unterschiedliche Anfahrpositionen, für jeden einzelnen Nachschnitt festzulegen." %}</p><p>{% trans "Der Befehl ist ausschließlich für die Bearbeitung von Matrizen gedacht, eine Anwendung für Stempelgeometrien ist nicht möglich." %}</p>
+<p>{% trans "Normalerweise wird der Befehl verwendet, zur Vermeidung von Anfahrmarkierungen, die entstehen können, wenn der Draht bei den Nachschnitten immer an der gleichen Position anfährt." %}</p>
+<p>{% trans "In vielen Fällen reicht es, wenn man die Startpunkte für die Nachschnitte nur um wenige Millimeter versetzt." %}</p>
+<p>{% trans "Beachten Sie jedoch, dass einige CNC-Steuerungen nur ein senkrechtes Anfahren erlauben. In diesen Fällen, sollten Sie die Startpunkte um 90 Grad versetzen." %}</p>
+<p class="hcp1"> </p>
+<p><img src="../Mehrfach_Einfahrpu1.gif" alt="Mehrfach_Einfahrpu1.gif" width="398" height="174" border="0"/></p>
+<p class="hcp1"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp1"> </p>
+<p><img src="../Mehrfach_Einfahrpu_shg.gif" usemap="#AreaMap0" alt="Mehrfach_Einfahrpu_shg.gif" width="344" height="247" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="9, 29, 273, 78" href="javascript:BSSCPopup('Figurname_Mehrfache_Einfahrpunkte.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="8, 78, 272, 145" href="javascript:BSSCPopup('Startpunkt_Mehrfache_Einfahrpunkte.htm',500,500);" id="area2" alt=""/>
+<area shape="rect" coords="17, 153, 90, 176" href="javascript:BSSCPopup('Hinzufuegen_Mehrfache_Einfahrpunkte.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="17, 181, 92, 204" href="javascript:BSSCPopup('Loeschen_Mehrfache_Einfahrpunkte.htm',400,300);" id="area4" alt=""/>
+<area shape="rect" coords="97, 148, 272, 211" href="javascript:BSSCPopup('Optionen_Mehrfache_Einfahrpunkte.htm',400,600);" id="area5" alt=""/>
+<area shape="rect" coords="9, 217, 107, 239" href="javascript:BSSCPopup('../Commdata/COMMON_Schliessen.htm',400,300);" id="area6" alt=""/>
+<area shape="rect" coords="112, 219, 233, 242" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area7" alt=""/>
+<area shape="rect" coords="238,213,335,238" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" alt="" id="area8"/>
+<area shape="rect" coords="291, 45, 325, 77" href="Common_049.chm::/CommonHelp5/Ausschnitt.htm" alt=""/>
+<area shape="rect" coords="292, 125, 325, 159" href="Common_049.chm::/CommonHelp5/Neuzeichnen_Mag.htm" alt=""/>
+<area shape="rect" coords="288, 84, 326, 117" href="Common_049.chm::/CommonHelp5/Vorher_Auschnitt.htm" alt=""/>
+</map> </p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+	FilePopupInit('area3');
+	FilePopupInit('area4');
+	FilePopupInit('area5');
+	FilePopupInit('area6');
+	FilePopupInit('area7');
+	FilePopupInit('area8');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

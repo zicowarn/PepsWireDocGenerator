@@ -1,0 +1,43 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Max. Schnitteingriff vor Anzeige" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Max. Schnitteingriff vor Anzeige" %}</p><p>{% trans "Diese Einstellung überschreibt die Einstellung #[Anzahl der Schnitte zwischen jeder Anzeige]#, wenn lange Geometrieelemente bearbeitet werden." %}</p>
+<p>{% trans "[Beispiel]: Angenommen die [Anzahl der Schnitte zwischen jeder Anzeige] ist auf 20 eingestellt und die nächsten 20 Schnitte sind jeweils 1 mm lang." %}</p>
+<p>{% trans "Dies würde heißen, die Simulationsgrafik würde erst nach 20 mm neu aufgebaut." %}</p>
+<p>{% trans "Ist die [Max. Schnitteingriff vor Anzeige] jedoch auf z.B. 5 mm eingestellt, würde ein Neuaufbau der Simulationsgrafik in 5 mm Intervallen erfolgen." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

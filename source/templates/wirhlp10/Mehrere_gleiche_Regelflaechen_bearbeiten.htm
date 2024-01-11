@@ -1,0 +1,46 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Mehrere gleiche Regelflächen bearbeiten" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Mehrere gleiche Regelflächen bearbeiten" %}</p><p>{% trans "Es ist möglich [mehrere gleiche Regelflächen] an verschiedenen Positionen zu schneiden." %}</p>
+<p>{% trans "In diesen Fällen ist es ausreichend nur die [untere Figur der Regelfläche] an die entsprechende Positionen zu [kopieren]." %}</p>
+<p>{% trans "Nach dem grafischen Positionieren der unteren Regelflächenfiguren, ist es nicht notwendig etwaige Technologiesymbole die in die Originalfigur eingebracht sind ebenfalls zu kopieren." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p>{% trans "[Hinweise:]" %}</p>
+<p>{% trans "Mit dem Befehl #[Kreise/Bögen zur Mehrfachfigur]# im Menü [Vorbereitung \ Diverses], kann man die untere Regelflächenfigur auf eine Punktegruppe kopieren." %}</p>
+<p>{% trans "Die Checkbox #[Zeige alle Figuren]# muss aktiviert sein, um die Bearbeitungsgrafik für ALLE kopierten Regelflächengeometrie zu sehen." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

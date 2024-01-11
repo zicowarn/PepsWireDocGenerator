@@ -1,0 +1,59 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Kollisionserkennung" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Kollisionserkennung" %}</p><p>{% trans "Hier legen Sie fest, auf welche Weise die Kollisionskontrolle bei [Eilgangsbewegungen] des Werkzeuges reagiert." %}</p><p>{% trans "Kollisionen definiert man als Kontakte des Werkzeuges mit dem Material oder mit Spannmitteln, bei Verfahrbewegungen im Eilgang." %}</p>
+<p>{% trans "Folgenden XY-Kollisionskontrollen sind vorhanden:" %}</p>
+<p> </p>
+<p>{% trans "[Aus]" %}</p>
+<p>{% trans "Es findet keine Kollisionskontrolle statt." %}</p>
+<p class="dialog">{% trans "Zeige Kollisionen in Drahtfarbe" %}</p>
+<p>{% trans "Das System kennzeichnet Kollisionen in der einstellten Farbe für Eilgänge (Standard = [Rot])." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p>{% trans "[Kollisionen kennzeichnen und Eintrag im Logbuch]" %}</p>
+<p>{% trans "Das System kennzeichnet Kollisionen in der einstellten Farbe für Eilgänge (Standard = [Rot]) und gibt eine Meldung aus im #Logbuch-Fenster# aus." %}</p>
+<p>{% trans "[Kollisionen kennzeichnen und Warnung ausgeben]" %}</p>
+<p>{% trans "Das System kennzeichnet Kollisionen in der einstellten Farbe für Eilgänge (Standard = [Rot]) und gibt eine Meldung im [Ausgabefenster] (mit Ikone @ öffnen) aus." %}</p>
+<p>{% trans "[Simulation unterbrechen]" %}</p>
+<p>{% trans "Stoppt die Simulation bei einer Kollision und zeigt einen Dialog mit einer Warnmeldung." %}</p>
+<script type="text/javascript" language="JavaScript1.2">
+//&lt;![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a1');
+//]]&gt;
+</script>
+
+{% endblock %}
+{% endlinebreakless %}

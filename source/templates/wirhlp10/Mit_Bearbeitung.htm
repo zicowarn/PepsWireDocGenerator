@@ -1,0 +1,44 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Mit Bearbeitung von Figur zu Figur XXX TO DO" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Mit Bearbeitung von Figur zu Figur" %}</p><p>{% trans "Ist diese Option [aktiviert], fährt die Maschine mit [eingefädeltem Draht, schneidend] von einer Bearbeitungsfigur zur nächsten." %}</p>
+<p>{% trans "Ist sie [deaktiviert], wird der [Draht abgeschnitten], [im Eilgang zur nächsten Bearbeitungsfigur] verfahren und [eingefädelt]." %}</p>
+<p> </p>
+<p class="dialog">{% trans "Erlaube gerade Anzahl von Schnitten" %}</p>
+<p>XXX</p>
+
+{% endblock %}
+{% endlinebreakless %}

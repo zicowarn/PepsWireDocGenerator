@@ -1,0 +1,73 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Strategieart" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Strategieart" %}</p><p>{% trans "Wählen Sie hier die benötigte Bearbeitungsstrategie. Folgende Strategien sind verfügbar:" %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Strategien der Bearbeitungsoperationen verwenden" %}</p>
+<p>{% trans "Die Bearbeitungsstrategie wird von den #[Strategieeinstellungen]# der [programmierten Bearbeitungsoperation(en)] gesteuert." %}</p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "Diese Option ist die Voreinstellung des Systems." %}</p>
+<p>{% trans "Wählt man eine der folgenden Strategien, so gilt die gewählte Strategie für das [gesamte Programm]." %}</p>
+<p>{% trans "In den einzelnen Bearbeitungsoperationen können dann keine #[Strategieeinstellungen]# eingestellt werden." %}</p>
+<p class="footnote_text" style="margin-bottom: 0.00pt;"> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Matrize - Beaufsichtigter Tagbetrieb" %}</p>
+<p>{% trans "Ausfallteil wird nach erstem Schnitt entfernt. Stopp vor Entfernen des Ausfallteils. Jeder Durchbruch wird komplett fertiggeschlichtet, bevor der nächste bearbeitet wird." %}</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Matrize - Unbeaufsichtigter Tagbetrieb" %}</p>
+<p>{% trans "Der erste Schnitt wird für jeden Durchbruch ausgeführt, wobei eine Anbindung stehen bleibt. Die Maschine stoppt. Dann werden alle Anbindungen entfernt und die Ausfallteile entnommen." %}</p>
+<p>{% trans "Jeder Durchbruch wird dann komplett geschlichtet bevor der nächste Durchbruch fertig bearbeitet wird." %}</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Matrize - Unbeaufsichtigter Nachtbetrieb" %}</p>
+<p>{% trans "Alle Schnitte werden an allen Durchbrüchen im Pendelschnitt ausgeführt, wobei eine Anbindung stehen bleibt. Die Maschine stoppt." %}</p>
+<p>{% trans "Dann wird die Anbindung entfernt und im Pendelschnitt fertig geschlichtet." %}</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;"> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Stempel - Beaufsichtigt schneiden" %}</p>
+<p>{% trans "Alle Schnitte werden am ersten Stempel im Pendelschnitt ausgeführt, wobei eine Anbindung stehen bleibt. Die Maschine stoppt." %}</p>
+<p>{% trans "Der Stempel wird vom Bediener fixiert und die Anbindung fertig bearbeitet. Dann zum nächsten Stempel fahren und die Arbeitsfolge wiederholen." %}</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Stempel - Beaufsichtigt schneiden (Anbindung wird abgeschliffen)" %}</p>
+<p>{% trans "Alle Schnitte werden am ersten Stempel im Pendelschnitt ausgeführt, wobei eine Anbindung stehen bleibt. Die" %}</p>
+<p>{% trans "Maschine stoppt. Der Stempel wird vom Bediener fixiert und die Anbindung mit einem Schnitt bearbeitet. Dann zum nächsten Stempel fahren und die Arbeitsfolge wiederholen." %}</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Stempel - Unbeaufsichtigt schneiden" %}</p>
+<p>{% trans "Alle Schnitte werden am ersten Stempel im Pendelschnitt ausgeführt, wobei eine Anbindung stehen bleibt. Dann wird der nächste Stempel angefahren und die Bearbeitungsfolge wiederholt." %}</p>
+<p>{% trans "Die Maschine stoppt. Alle Stempel werden vom Bediener fixiert und die Anbindungen werden im Pendelschnitt fertig geschlichtet." %}</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;"> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Spannungsfrei schneiden" %}</p>
+<p>{% trans "Der erste Schnitt wird für jeden Durchbruch ausgeführt, wobei eine Anbindung stehen bleibt. Die Maschine stoppt. Dann werden alle Anbindungen entfernt und die Ausfallteile entnommen." %}</p>
+<p>{% trans "Die Schlichtschnitte werden nacheinander an jedem Durchbruch ausgeführt." %}</p>
+<p> </p>
+<p class="Tip_Note_Heading">{% trans "Erzeuge 3 Dateien für Schruppen, Anbindung entfernen und Schlichten" %}</p>
+<p>{% trans "Bei einem Postprozessorlauf werden [3 separate NC-Dateien] erzeugt, für den Schruppschnitt, das Entfernen der Anbindung und die Schlichtschnitte." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

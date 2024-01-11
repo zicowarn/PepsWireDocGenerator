@@ -1,0 +1,41 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Anzeige der Bearbeitungsrichtung" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Anzeige der Bearbeitungsrichtung" %}</p><p>{% trans "Diese Pfeilanzeige zeigt die Richtung der Bearbeitungssimulation an." %}</p>
+<p>{% trans "Zeigt der Pfeil nach [rechts] &lt;img src='../sim_Vorwärts.gif' alt='sim_Vorwärts.gif' width='35' height='21' border='0'/&gt; wird eine [Vorwärts-Simulation] ausgeführt zeigt er nach [links] &lt;img src='../sim_Rückwärts.gif' alt='sim_Rückwärts.gif' width='38' height='20' border='0'/&gt; eine [Rückwärts-Simulation]." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,43 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Neu ordnen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Neu ordnen" %}</p><p>{% trans "Mit dieser Funktion können Sie die Reihenfolge der Bearbeitung ändern, indem Sie die Liste der zu schneidenden Bearbeitungsfiguren [automatisch neu ordnen]." %}</p>
+<p>{% trans "Die Funktion ist nur sinnvoll, wenn die Bearbeitungsreihenfolgen von einer [größeren Zahl von Bearbeitungsfiguren] verändert werden soll." %}</p>
+<p> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Siehe auch: #Schneidreihenfolge einer Operation ändern, die eine große Anzahl von Figuren bearbeitet.#" %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

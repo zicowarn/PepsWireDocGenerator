@@ -1,0 +1,39 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Infofenster" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../WIRE_ExpertRH_context_Menu.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Infofenster" %}</p><p>{% trans "Dieses Fenster zeigt Informationen (Art des Objekt, Konikwinkel etc... ) über das aktuell erzeugte Feature." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><img src="../RH_Feature_Recognition_manual_Info.gif" alt="RH_Feature_Recognition_manual_Info.gif" width="297" height="100" border="0"/></p>
+<p style="text-align: center;"> </p>
+<p>{% trans "Kann kein Feature erzeugt werden, zeigt das [Infofenster] Fehlermeldungen." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,36 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Startposition" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Startposition" %}</p><p>{% trans "In diesem Dialog legt man die Drahtstartposition für NURBS-Surface Bearbeitungen fest. Soll der Draht senkrecht starten reicht die Eingabe einer XY-Position." %}</p>
+<p>{% trans "Soll der Draht in einem bestimmten Winkel anfahren, müssen Sie eine zweite XY-Position im Feld [UV-Startposition] eingeben, die das System dann in UV-Daten umrechnet." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

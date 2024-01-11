@@ -1,0 +1,37 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Vorgabe für Reflexionsfaktoren" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Vorgabe für Reflexionsfaktoren" %}</p><p>{% trans "In diesen Dialogbereich können Sie einstellen, wie das Licht auf der Simulationsgrafik reflektiert." %}</p>
+<p>{% trans "Mit der Schaltfläche [Voreinstellungen verwenden], können Sie die Einstellungen wieder auf die Werkseinstellungen zurücksetzen." %}</p>
+<p>{% trans "Normalerweise werden die Einstellwerte in diesem Dialogbereich nicht verändert." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

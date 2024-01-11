@@ -1,0 +1,52 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Umfangs Parameter" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Umfangs Parameter" %}</p><p>{% trans "Mit diesem Textfeld legen Sie die Position des Startloches fest. Für jede der verfügbaren geometrischen #[Standardformen]# können Sie eine eigene Startlochposition festgelegen." %}</p><p>{% trans "Die Startlochposition bezieht sich auf den Umfang der Figur und wird durch eine Zahleneinteilung festgelegt. Jede geometrische Standardform hat eine andere Einteilung." %}</p>
+<p>{% trans "Der Abstand des Startloches von der Figur wird mit dem Parameter #[Einfahrabstand]# eingestellt." %}</p>
+<p> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Beispiele:" %}</p>
+<p>{% trans "Ein [Kreis] besteht aus einem Element, deshalb beginnt die Einteilung bei [0] und endet bei [1]. (Beispiel: 0/1 ist der Start- / Endpunkt des Kreises und 0.5 die Position 9 Uhr)" %}</p>
+<p>{% trans "Ein Rechteck besteht aus vier Elementen, die Einteilung beginnt bei [0] und endet bei [4] (Beispiel: 0/4 ist der Start- / Endpunkt des Rechteckes und 2.5 ist die Mitte oben)" %}</p>
+<p>{% trans "Jeder Standardform ist eine Bitmapgrafik zugeordnet, welche die Werte für den Start- / Endpunkt und einige typische Startlochpositionen zeigt." %}</p>
+<p>{% trans "(Diese Option ist bei Verwendung eines [Suchschemas] nicht aktiv)." %}</p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a1');
+	FilePopupInit('a2');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

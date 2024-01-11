@@ -1,0 +1,42 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Startansicht" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    span.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Startansicht" %}</p><p>{% trans "Hier wird festgelegt, welche Ansicht nach dem Start der Simulation angezeigt wird." %}</p>
+<p>{% trans "Es stehen die Ansichten [XYZ], [XZ],[YZ] zur Verfügung oder die im Grafikfenster des [CAM-Systems verwendete Ansicht]." %}</p>
+<p> </p>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,46 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Transparenz für Maschinenbauteile" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Transparenz für Maschinenbauteile" %}</p><p>{% trans "Hier können Sie die [Transparenz] (Durchsichtigkeit) für die [Maschinenbauteile] einstellen." %}</p>
+<p>{% trans "Aktivieren Sie dazu die Option [Aktivieren]. Dies schaltet eine Liste frei, in der Sie auswählen können, welche [Maschinenbauteile] ([Alle Maschinenteile] oder [bestimmte Maschinenbauteile]) transparent dargestellt werden soll." %}</p>
+<p> </p>
+<p><img src="../Sol_Sim_Spannmittel_Transp.gif" alt="Sol_Sim_Spannmittel_Transp.gif" width="545" height="271" border="0"/></p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p>{% trans "Verwenden Sie anschließend den Schieber @, um den Transparenzgrad für die gewählte Simulationsgrafik einzustellen." %}</p>
+<p>{% trans "Der Wert kann zwischen [0] und [100] liegen, wobei [0] die Simulationsgrafik als [Solid] und [100] die Grafik völlig [transparent] (durchsichtig) anzeigt." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

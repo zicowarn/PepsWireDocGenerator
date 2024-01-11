@@ -1,0 +1,38 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Sonderfunktionen (Extras Menü)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Extra.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "Sonderfunktionen (Extras Menü)" %}</p><p class="Hinweis"> </p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "In diesen Menüs finden Sie [optionale Sonderfunktionen], die nicht zum Standardlieferumfang des Systems gehören." %}</p>
+<p>{% trans "Dieses Hilfesystem enthält keine Beschreibung der Sonderfunktionen. Kauft ein Kunde eine Sonderfunktion, wird eine separate Beschreibung mitgeliefert." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

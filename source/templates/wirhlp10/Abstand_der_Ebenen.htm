@@ -1,0 +1,52 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Abstand der Ebenen (Regelflächenbearbeitung)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Abstand der Ebenen (Regelflächenbearbeitung)" %}</p><p>{% trans "Der [Abstand der Ebenen] beschreibt den [Abstand zwischen der unteren und oberen Ebene] [einer Regelfläche]." %}</p>
+<p>{% trans "Die folgende Zeichnung zeigt eine Konik mit einem Bund auf der Höhe von Z5." %}</p>
+<p>{% trans "Wenn dies eine Regelfläche wäre, so müsste für die [untere Ebene 5 mm], für die [obere Ebene 30 mm] und als [Abstand der Ebenen] [25] [mm] bestimmt werden." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../BUND.gif" alt="BUND.gif" width="584" height="478" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "Würde das Beispielwerkstück umgedreht auf die Maschine gespannt, müssen Sie für die [untere Ebene] und [obere Ebene] andere Werte eingeben." %}</p>
+<p>{% trans "Die [untere Ebene] wäre jetzt auf [Z0] und die [obere Ebene] bei [Z25]. Der [Abstand der Ebenen] bleibt mit [25 mm] gleich." %}</p>
+<p>{% trans "In der Simulation wird die Bearbeitung mit einer Materialdicke von 30 mm dargestellt, wobei die obere Öffnung kleiner dargestellt wird." %}</p>
+<p>{% trans "Der zylindrische Bund von 5 mm kann sowohl vorher als auch anschließend mit Hilfe der [Standardkonturbearbeitung] bearbeitet werden." %}</p>
+<p>{% trans "Das Feld [Abstand der Ebenen] wird ebenfalls verwendet, wenn sehr hohe Regelflächen, aufgeteilt in mehrere Schnittebenen geschnitten werden müssen (Vergl. #[Regelflächen in mehreren Schnittebenen schneiden]#)." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

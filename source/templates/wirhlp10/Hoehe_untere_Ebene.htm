@@ -1,0 +1,47 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Höhe (untere Ebene)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+    font.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Höhe (untere Ebene)" %}</p><p>{% trans "Wird normalerweise bei einer Bundbearbeitung verwendet und legt die Z-Höhe der unteren Ebene fest." %}</p>
+<p>{% trans "Für das folgende Beispiel müsste die Höhe mit 5 mm bestimmt werden." %}</p>
+<p class="hcp1"> </p>
+<p><img src="../BUND1.gif" alt="BUND1.gif" width="556" height="427" border="0"/></p>
+<p class="hcp1"> </p>
+<p>{% trans "[Siehe auch:] #[Regelflaechen in mehreren Schnittebenen schneiden]# und #[Modellhöhe]#." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

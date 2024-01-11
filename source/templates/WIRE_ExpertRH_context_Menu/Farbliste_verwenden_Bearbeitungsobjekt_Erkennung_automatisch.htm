@@ -1,0 +1,47 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Farbliste verwenden" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../WIRE_ExpertRH_context_Menu.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Farbliste verwenden" %}</p><p class="Block_Text">{% trans "Es gibt Firmen, die alle zu erodierenden Bereiche mit bestimmten Farben kennzeichnen." %}</p>
+<p class="Block_Text">{% trans "Die automatische Feature-Erkennung ist in der Lage, ausschließlich diese Flächen zu erkennen und zu bearbeiten." %}</p>
+<p>{% trans "Wenn Sie die Option [F][arbliste verwenden] aktivieren, können Sie im Dialogbereich [Farbliste] eine Liste auswählen, die bestimmt, nach welcher(n) Farbe(n) gesucht werden soll." %}</p>
+<p>{% trans "Farblisten werden erzeugt mit Hilfe der Schaltfläche #Farbliste bearbeiten# oder über die OPTICAM Menüfolge [OPTICAM &amp;gt; Einstellungen &amp;gt;] [#Farbeinstellungen#]." %}</p>
+<p> </p>
+<p>{% trans "[Siehe auch:]" %}</p>
+<p>{% trans "#Automatische Feature-Erkennung nach Flächenfarben - Farbliste erzeugen#" %}</p>
+<p> </p>
+
+{% endblock %}
+{% endlinebreakless %}

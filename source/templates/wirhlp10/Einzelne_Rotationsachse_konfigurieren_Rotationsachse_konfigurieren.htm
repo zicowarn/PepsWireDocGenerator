@@ -1,0 +1,53 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Einzelne Rotationsachse konfigurieren" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Einzelne Rotationsachse konfigurieren" %}</p><p>{% trans "Mit diesem Dialog legen Sie die XY-Position der Rotationsachse fest und die Z-Höhe der Spindelmitte." %}</p>
+<p class="hcp1"> </p>
+<p><img src="../Rotationsachse_konfigurieren.gif" alt="Rotationsachse_konfigurieren.gif" width="379" height="224" border="0"/></p>
+<p class="hcp1"> </p>
+<p class="Tip_Note_Heading">{% trans "X-, Y-Achse:" %}</p>
+<p>{% trans "Legt die X-, Y-Position der Rotationsachse auf dem Maschinentisch fest." %}</p>
+<p class="hcp1"> </p>
+<p><img src="../Rotationsachse_konfigurieren_XY_Achse.gif" alt="Rotationsachse_konfigurieren_XY_Achse.gif" width="363" height="263" border="0"/></p>
+<p style="text-align: center;"> </p>
+<p class="Tip_Note_Heading">{% trans "Achsenhöhe:" %}</p>
+<p>{% trans "Bestimmt die Z-Höhe der Spindelmitte, bezogen auf die Maschinentischoberfläche." %}</p>
+<p class="hcp1"> </p>
+<p><img src="../Rotationsachse_konfigurieren_Höhe.gif" alt="Rotationsachse_konfigurieren_Höhe.gif" width="356" height="188" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

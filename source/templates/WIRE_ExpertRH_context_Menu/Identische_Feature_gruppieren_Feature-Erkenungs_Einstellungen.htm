@@ -1,0 +1,44 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Identische Feature gruppieren" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../WIRE_ExpertRH_context_Menu.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Identische Feature gruppieren" %}</p><p>{% trans "Fasst [geometrisch identisch] [Bearbeitungsfeatures] zusammen zu einem Bearbeitungsfeature." %}</p>
+<p>{% trans "Dies reduziert die Anzahl der Einträge im #FeatureManager# wenn viele identische Geometrien bearbeitet werden müssen." %}</p>
+<p>{% trans "Das folgende Bild zeigt links das Ergebnis ohne gruppieren und rechts mit gruppieren." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><img src="../Feature_Recognition_Group_Features.gif" alt="Feature_Recognition_Group_Features.gif" width="875" height="517" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

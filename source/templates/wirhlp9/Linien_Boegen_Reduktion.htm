@@ -1,0 +1,40 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Reduktion" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog" style="text-align: left;">{% trans "Reduktion" %}</p><p>{% trans "Mit dieser Option können Sie bei einer Figurerzeugung, sehr kleine Geometrieelemente (z.B. Geraden mit einer Länge von 0.1 - 0.001 mm), zu Linien und Bogenelementen zusammenfassen." %}</p>
+<p>{% trans "Auf diese Weise können Sie die Anzahl der Geometrieelemente verringern." %}</p>
+<p>{% trans "Die geometrische Abweichung zur Originalgeometrie beträgt maximal, den im Feld [Toleranz] eingegebenen Wert." %}</p>
+<p>{% trans "Je größer der Wert, umso mehr Elemente werden entfernt. Beachten Sie jedoch, dass zu große Toleranzwerte, zu Ungenauigkeiten in der erzeugten Figur führen können." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><img src="../reduktion.gif" alt="reduktion.gif" width="629" height="395" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

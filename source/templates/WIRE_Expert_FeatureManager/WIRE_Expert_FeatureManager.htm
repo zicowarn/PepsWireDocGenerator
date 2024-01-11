@@ -1,0 +1,65 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "WIRE-Expert FeatureManager" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../WIRE_Expert_FeatureManager.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <a name="642b3b9347ca42c9b00b820c00c373fa=1"/><h1>{% trans "WIRE-Expert FeatureManager" %}</h1><p> </p>
+<p>{% trans "Mit Hilfe des Moduls [WIRE-Expert] (optional) können Sie die Erzeugung von NC-Daten für Drahterodiermaschinen, auf Basis von 3D-Volumenmodellen, weitgehend automatisieren." %}</p>
+<p>{% trans "Dabei ist der [FeatureManager] das zentrale Bedienelement des Moduls [WIRE-Expert] und wird auf der [linken] Seite des Grafikfensters angezeigt." %}</p>
+<p>{% trans "Im [FeatureManager] werden alle programmierten Features aufgelistet." %}</p>
+<p> </p>
+<p class="Normal_(Web) pitalic" style="margin-left: 5.75pt; margin-right: 6.50pt;  margin-top: 4.00pt; margin-bottom: 0.00pt;">{% trans "&lt;p class='Normal_(Web)' style='margin-left: 5.75pt; margin-right: 6.50pt; margin-top: 4.00pt; margin-bottom: 0.00pt;'&gt;[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="Normal_(Web)" style="margin-left: 5.75pt; margin-right: 6.50pt;  margin-top: 4.00pt; margin-bottom: 0.00pt;"> </p>
+<p><img src="../FeatureManager_shg.gif" usemap="#AreaMap0" alt="FeatureManager_shg.gif" width="320" height="214" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="3, 19, 77, 52" href="../Operationsmanager/Geometrie_Register_Operationsmanager.htm" alt=""/>
+<area shape="rect" coords="80, 20, 153, 53" href="../Operationsmanager/Bearbeitungs_Register_Operationsmanager.htm" alt=""/>
+<area shape="rect" coords="155, 19, 226, 52" href="Parameter_Register_Operationsmanager_.htm" alt=""/>
+<area shape="rect" coords="2, 52, 319, 208" href="../WIRE_ExpertRH_context_Menu/OPTICAM_FeatureManager_Optionen_der_rechten_Maustaste.htm" alt=""/>
+</map> </p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Siehe auch:" %}</p>
+<p>{% trans "#[Der Feature-Manager - Funktionen der rechten Maustaste]#" %}</p>
+<p>{% trans "#[WIRE-Expert - Prinzip der automatisierten Bearbeitung]#" %}</p>
+<p>{% trans "#[Automatische Featureerkennung]#" %}</p>
+<p class="hcp2">{% trans "#Manuelle Featureerkennung#" %}</p>
+<p class="hcp2">{% trans "#Automatische Featureerkennung nach Flächenfarben#" %}</p>
+<p>{% trans "#[Figuren + Bearbeitungen von Features erzeugen]#" %}</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "und:" %}</p>
+<p>{% trans "#[Doppelklick auf ein Element des FeatureManagers]#" %}</p>
+<p>{% trans "#[Klick mit rechter Maustaste auf ein Element des FeatureManagers]#" %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

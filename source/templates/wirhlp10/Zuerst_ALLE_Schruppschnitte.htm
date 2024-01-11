@@ -1,0 +1,36 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Zuerst ALLE Schruppschnitte" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Zuerst ALLE Schruppschnitte" %}</p><p>{% trans "Diese Option wird aktiviert, wenn man z.B. mehrere Matrizen mit mehreren Schnitten bearbeiten möchte." %}</p>
+<p>{% trans "Durch die Wahl dieser Option ist es möglich, den Abfall erst nach Ausführung der Schruppschnitte zu entfernen und die zeitaufwendigen Nachschnitte anschließend auszuführen, vielleicht sogar über Nacht." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

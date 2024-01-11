@@ -1,0 +1,51 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Tempo (Drahtmodell-Simulation)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+    font.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Tempo (Drahtmodell-Simulation)" %}</p><p>{% trans "Die Schaltfläche @ hat die Aufgabe die Geschwindigkeitsunterschiede zwischen schnellen und langsamen Computern auszugleichen." %}</p>
+<p>{% trans "Die Schaltfläche ruft einen Dialog auf, in der Sie die maximale Simulationsgeschwindigkeit einstellen können." %}</p>
+<p class="hcp1"> </p>
+<p><img src="../RANGE.gif" alt="RANGE.gif" width="285" height="157" border="0"/></p>
+<p class="Beispiel">{% trans "Beispiel:" %}</p>
+<p>{% trans "Einstellung: [Grundeinstellung Tempo = 100] und Parameter [Geschwindigkeit] (100) = Maximale Simulationsgeschwindigkeit" %}</p>
+<p>{% trans "Einstellung: [Grundeinstellung Tempo = 50] und Parameter [Geschwindigkeit] (100) = Hälfte der möglichen Simulationsgeschwindigkeit" %}</p>
+<p>{% trans "Einstellung: [Grundeinstellung Tempo = 25] und Parameter [Geschwindigkeit] (100) = Viertel der möglichen Simulationsgeschwindigkeit" %}</p>
+<p class="hcp1"> </p>
+<p>{% trans "Für sehr schnelle Computer stellt man die Grundeinstellung für das Tempo am besten auf 50 oder 25 ein, um eine akzeptable Simulationsgeschwindigkeit zu erzielen." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

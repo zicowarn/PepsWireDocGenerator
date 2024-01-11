@@ -1,0 +1,51 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Drahtsorte löschen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    li.hcp1 { font-size:9pt; }
+    font.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "@ Drahtsorte löschen" %}</p><p class="Tip_Note_Heading">{% trans "Eine Drahtsorte löschen" %}</p>
+<ul>
+<li class="hcp1">
+<p class="Tip_Note_Text_Bulleted">{% trans "Rufen Sie im Menü #[Bearbeitung]# den Befehl #[Operation starten]# auf und wählen Sie das Register [Technologie]. Klicken Sie im Dialog auf die Schaltfläche @." %}</p>
+</li>
+</ul>
+<ul>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Klicken Sie mit der [linken Maustaste] die zu löschende Drahtsorte in der Drahtsortenliste an und anschließend auf die Schaltfläche @." %}</p>
+</li>
+</ul>
+
+{% endblock %}
+{% endlinebreakless %}

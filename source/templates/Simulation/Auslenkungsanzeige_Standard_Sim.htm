@@ -1,0 +1,42 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Auslenkungsanzeige" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Auslenkungsanzeige" %}</p><p>{% trans "Diese Anzeige zeigt die [aktuelle] [X]-,[Y]- / [U]-,[V]-Auslenkung und die [aktuelle] [Drahtauslenkung] (Konik). Zusätzlich wird die [maximale U]-,[V]-Auslenkung und die [maximale Drahtauslenkung] (Konik) angezeigt." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><img src="../Auslenkungsanzeige_Std_Sim.gif" alt="Auslenkungsanzeige_Std_Sim.gif" width="529" height="85" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

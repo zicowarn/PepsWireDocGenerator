@@ -1,0 +1,87 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Startlochgeometrien" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../RH_Context_Menu.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    span.hcp1 { font-weight:bold; }
+    font.hcp2 { font-weight:bold; }
+    p.hcp3 { margin-top:0;
+    margin-bottom:0; }
+    img.hcp4 { border:none; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Startloch-Geometrien" %}</p><p> </p>
+<p>{% trans "Wird eine Feature-Erkennung ausgeführt, erkennt [OPTICAM] nicht nur erodierbare Geometrien, sondern legt auch die Position der Startlöcher fest. Dabei wird die Position der Startlöcher nach einem intern festgelegtem Regelwerk bestimmt." %}</p>
+<p>{% trans "Mit Hilfe des Dialogbereiches [Startloch-Geometrien], können Sie das interne Regelwerk außer Kraft setzen und die Position der Startlöcher durch Vorgabe von [Startloch-Geometrien] (Zylindrische Geometrien vom Typ 'Oberfläche') selbst bestimmen." %}</p>
+<p>{% trans "Im Dialogbereich [Startloch-Geometrien] können Sie einstellen, wie das System vorhandene Startlochgeometrien interpretiert:" %}</p>
+<p class="hcp3"> </p>
+<p class="dialog">{% trans "Startloch-Geometrien ignorieren" %}</p>
+<p>{% trans "Alle vorhandenen [Startloch-Geometrien] werden ignoriert und es gilt das interne Regelwerk für die Positionierung der Startlöcher." %}</p>
+<p>{% trans "Das folgende Bild zeigt, dass die Feature-Erkennung alle existierenden Startlochgeometrien ignoriert und für alle Feature das interne Regelwerk für die Positionierung der Startlöcher verwendet." %}</p>
+<p class="hcp3"> </p>
+<p><img src="../image/Create_Features_ignore_Startholes.gif" alt="image\Create_Features_ignore_Startholes.gif" title="image\Create_Features_ignore_Startholes.gif" width="408" height="330" border="0"/></p>
+<p class="hcp3"> </p>
+<p class="dialog">{% trans "Existierende Startloch-Geometrien verwenden" %}</p>
+<p>{% trans "Existieren [Startloch-Geometrien], werden diese erkannt und für die Positionierung der Startlöcher verwendet." %}</p>
+<p>{% trans "Für Features ohne vorhandenen [Startloch-Geometrien] gilt das interne Regelwerk für die Positionierung der Startlöcher. Das folgende Bild zeigt, dass für die beiden Dreiecke das interne Regelwerk für die Positionierung der Startlöcher verwendet wird, da für diese Features keine Startlochgeometrien existieren." %}</p>
+<p class="hcp3"> </p>
+<p><img src="../image/Create_Features_use_existing_Startholes.gif" alt="image\Create_Features_use_existing_Startholes.gif" title="image\Create_Features_use_existing_Startholes.gif" width="409" height="333" border="0"/></p>
+<p class="hcp3"> </p>
+<p class="dialog">{% trans "Features ohne Startloch-Geometrien ignorieren" %}</p>
+<p>{% trans "Legt fest, dass Bearbeitungen nur dann erzeugt werden, wenn für ein Feature auch eine [Startloch-Geometrie] existiert. Das folgende Bild zeigt, dass nur die beiden Dreiecke unbearbeitet bleiben, da für diese Feature keine Startlochgeometrien existieren." %}</p>
+<p class="hcp3"> </p>
+<p><img src="../image/Create_Features_with_Startholes_only.gif" alt="image\Create_Features_with_Startholes_only.gif" title="image\Create_Features_with_Startholes_only.gif" width="409" height="332" border="0"/></p>
+<p class="hcp3"> </p>
+<p class="dialog">{% trans "Startloch-Geometrien auch für Endposition verwenden" %}</p>
+<p style="margin-bottom: 0pt; margin-top: 4pt;">{% trans "Ist diese Option aktiv und verfügt ein Feature über eine [[Startloch-Geometrie],] dann fährt der Draht nach jedem Schnitt zurück in die Mitte der [Startloch-Geometrie[.]]" %}</p>
+<p class="hcp3">{% trans "Das folgende Bild zeigt links die Situation OHNE Aktivierung der Option [Startloch-Geometrien auch für Endposition verwenden] und rechts mit." %}</p>
+<p class="hcp3"> </p>
+<p class="hcp3"><img src="../image/Use%20start%20hole%20geometry%20for%20end%20hole%20too.gif" alt="" border="0" class="hcp4"/></p>
+<p class="hcp3"> </p>
+<p class="dialog">{% trans "Mehrfach-Segmente erzeugen wenn möglich" %}</p>
+<p>{% trans "Ist diese Option aktiv und verfügt ein Feature über [mehrere Startloch-Geometrien], dann werden diese automatisch erkannt und das Feature in mehrere [Segmente] (Teilbereiche) aufgeteilt." %}</p>
+<p>{% trans "Das folgende Bild zeigt links die Wirkung der Option [Mehrfach-Segmente erzeugen,] da die drei Startloch-Geometrien erkannt und berücksichtigt werden." %}</p>
+<p>{% trans "Das rechte Bild zeigt die gleiche Geometrie, aber die drei Startlochgeometrien bleiben unberücksichtigt, da die Option [Mehrfach-Segmente erzeugen falls möglich] [nicht] aktiv ist." %}</p>
+<p class="hcp3"> </p>
+<p><img src="../image/Create_Multiple_Segments.gif" alt="image\Create_Multiple_Segments.gif" title="image\Create_Multiple_Segments.gif" width="739" height="406" border="0"/></p>
+<p> </p>
+<p class="dialog">{% trans "Erkenne Startloch-Geometrien nach Abstand" %}</p>
+<p>{% trans "Es kann passieren, dass das System [Startloch-Geometrien] nicht eindeutig zu einem Feature zuweisen kann. Die Angabe eines [Abstandwertes] kann jedoch helfen das Problem zu lösen." %}</p>
+<p> </p>
+<p>{% trans "Das [folgende Bild] oberhalb zeigt 3 Stempel mit jeweils zwei [Startloch-Geometrien], deren Abstand zur Schneidkontur [5 mm] beträgt. Bei Ausführung der [Automatischen Feature-Erkennung] war der Parameter [Erkenne Startloch-Geometrien nach Abstand] jedoch auf [10 mm] eingestellt. Dies führt dazu, dass die [Startloch-Geometrien] falsch erkannt werden." %}</p>
+<p>{% trans "&lt;img src='../image/Recognize%20start%20holes%20by%20Offset.gif' alt='' border='0' class='hcp4'/&gt;" %}</p>
+<p>{% trans "Um das Problem zu lösen, stellt man den Parameter [Erkenne Startloch-Geometrien nach Abstand] auf [5mm] ein. Auf diese Weise werden die [Startloch-Geometrien] korrekt erkannt." %}</p>
+<p>{% trans "&lt;img src='../image/Recognize%20start%20holes%20by%20Offset_1.gif' alt='' border='0' class='hcp4'/&gt;" %}</p>
+<p> </p>
+<p> </p>
+
+{% endblock %}
+{% endlinebreakless %}

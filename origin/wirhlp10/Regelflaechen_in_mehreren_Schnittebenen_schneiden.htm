@@ -1,0 +1,110 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Regelflächen in mehreren Schnittebenen schneiden</title>
+<link rel="StyleSheet" href="../wirhlp10.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { margin-top:0;
+margin-bottom:0; }
+font.hcp2 { font-weight:bold; }
+li.hcp3 { font-size:9pt; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<p class="dialog">Regelflächen in mehreren Schnittebenen schneiden</p>
+<p>Schnittebenen werden dann angewendet, wenn die Werkstückhöhe die physikalischen 
+ Grenzen der NC-Maschine überschreitet oder die maximal mögliche Drahtauslenkung 
+ überschritten wird.</p>
+<p>In solchen Fällen wird das Werkstück aus mehreren Schnittplatten, die 
+ nacheinander geschnitten werden, zusammengebaut. Jede Schnittplatte wird 
+ dabei als separate Schnittebene betrachtet.</p>
+<p>Die folgende Zeichnung zeigt ein 60 mm hohes Werkstück das in 3 Schnittplatten(ebenen) 
+ aufgeteilt ist.</p>
+<p>In dem Beispiel wird angenommen, dass nur die Geometrie der unteren 
+ und obere Ebene (d.h. Z0 und Z60) bekannt sind.</p>
+<p>&#160;</p>
+<p class="Tip_Note_Heading">Regelfläche in mehreren Schnittebenen schneiden:</p>
+<p class="hcp1">&#160;</p>
+<p><img src="../RULESEC.gif" alt="RULESEC.gif" width="457" height="217" border="0"></p>
+<p><font class="hcp2">Schnitt 1</font> bearbeiten</p>
+<ul>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">Starten 
+	 Sie eine Operation mit <font class="hcp2">Operation 
+	 starten</font></p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">Definieren 
+	 Sie die <font class="hcp2">Referenzhöhe</font> auf <font class="hcp2">0</font> und die <font class="hcp2">Sekundärebene</font> 
+	 auf <font class="hcp2">20</font> mm.</p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">Bearbeiten 
+	 Sie die Regelfläche mit:</p></li>
+</ul>
+<p><font class="hcp2">Höhe untere Ebene</font> = <font class="hcp2">0</font> 
+ und</p>
+<p class="Topic_Text_Bulleted" style="margin-left: 5.75pt;"><font class="hcp2">&#160;&#160;&#160;&#160;Abstand 
+ der Ebenen</font> <font class="hcp2"><span style="font-weight: normal;">=</span> 
+ 60</font></p>
+<ul>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">Im Feld 
+	 <font class="hcp2">Ebenen Berechnung</font> geben Sie 
+	 bitte ein:</p></li>
+</ul>
+<p><font class="hcp2">Starthöhe</font> = <font class="hcp2">0</font></p>
+<p><font class="hcp2">Endhöhe</font> = <font class="hcp2">60</font> 
+ und <font class="hcp2">Anzahl Ebenen</font> = <font class="hcp2">4</font></p>
+<p class="hcp1">&#160;</p>
+<p><font class="hcp2">Schnitt 2</font> bearbeiten</p>
+<ul>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">Starten 
+	 Sie eine Operation mit <font class="hcp2">Operation 
+	 starten</font></p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">Definieren 
+	 Sie die <font class="hcp2">Referenzhöhe</font> auf <font class="hcp2">0</font> und die <font class="hcp2">Sekundärebene</font> 
+	 auf <font class="hcp2">20</font> mm.</p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">Bearbeiten 
+	 Sie die Regelfläche mit:</p></li>
+</ul>
+<p><font class="hcp2">Höhe untere Ebene</font> = -<font class="hcp2">20</font> 
+ und</p>
+<p><font class="hcp2">Abstand der Ebenen</font> = <font class="hcp2">60</font></p>
+<ul>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">Im Feld 
+	 <font class="hcp2">Ebenen Berechnung</font> geben Sie 
+	 bitte ein:</p></li>
+</ul>
+<p><font class="hcp2">Starthöhe</font> = <font class="hcp2">0</font></p>
+<p><font class="hcp2">Endhöhe</font> = <font class="hcp2">60</font> 
+ und <font class="hcp2">Anzahl Ebenen</font> = <font class="hcp2">4</font></p>
+<p class="hcp1">&#160;</p>
+<p><font class="hcp2">Schnitt 3</font> bearbeiten</p>
+<ul>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">Starten 
+	 Sie eine weitere Operation mit <font class="hcp2">Operation 
+	 starten</font></p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">Definieren 
+	 Sie die <font class="hcp2">Referenzhöhe</font> auf <font class="hcp2">0</font> und die <font class="hcp2">Sekundärebene</font> 
+	 auf <font class="hcp2">20</font> mm.</p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">Bearbeiten 
+	 Sie die Regelfläche mit:</p></li>
+</ul>
+<p><font class="hcp2">Höhe untere Ebene</font> = -<font class="hcp2">40</font> 
+ und</p>
+<p><font class="hcp2">Abstand der Ebenen</font> = <font class="hcp2">60</font></p>
+<ul>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">Im Feld 
+	 <font class="hcp2">Ebenen Berechnung</font> geben Sie 
+	 bitte ein:</p></li>
+</ul>
+<p><font class="hcp2">Starthöhe</font> = <font class="hcp2">0</font></p>
+<p><font class="hcp2">Endhöhe</font> = <font class="hcp2">60</font> 
+ und <font class="hcp2">Anzahl Ebenen</font> = <font class="hcp2">4</font></p>
+</body>
+</html>

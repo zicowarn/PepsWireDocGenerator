@@ -1,0 +1,44 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Zeige alle Figuren XXXBILD" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Zeige alle Figuren" %}</p><p>{% trans "Bei der Bearbeitung einer [größeren Anzahl gleicher Regelflächen], wird standardmäßig für jede Regelfläche die NC-Bearbeitungsgrafik als Drahtmodell aufgebaut." %}</p>
+<p>{% trans "Auch die Bearbeitungssimulation wird für jede der Figuren ausgeführt. Dies kann dazu führen, dass der Bildschirmaufbau und die Simulation der Bearbeitung unverhältnismäßig lange dauert." %}</p>
+<p>{% trans "Durch das Deaktivieren der Option [Zeige alle Figuren], wird das Drahtmodell der NC-Bearbeitung und die Bearbeitungssimulation, [nur an der ersten] gewählten [Regelfläche] ausgeführt." %}</p>
+<p> </p>
+<p><img src="../Config_wire_expert_3.gif" alt="Config_wire_expert_3.gif" width="459" height="181" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

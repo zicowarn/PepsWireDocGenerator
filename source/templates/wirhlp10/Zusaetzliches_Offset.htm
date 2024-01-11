@@ -1,0 +1,43 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Zusätzlicher Offset" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Zusätzlicher Offset" %}</p><p>{% trans "Die Angabe eines zusätzlichen Offsets kann z.B. nötig sein, wenn von einer gleichen Geometrie Stempel und Matrize geschnitten werden sollen und die Matrize größer als der Stempel sein muss." %}</p>
+<p>{% trans "Im Feld [Zusätzliches Offset] gibt man an, um wie viel Millimeter die Matrize größer sein soll als der Stempel." %}</p>
+<p>{% trans "Bei der Bearbeitung einer [Matrize] würde die Eingabe eines [negativen Wertes] zu einer größeren [Matrize] führen." %}</p>
+<p>{% trans "Bei der Bearbeitung eines [Stempels] würde die Eingabe eines [negativen Wertes] zu einem kleinerem [Stempel] führen." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

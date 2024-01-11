@@ -1,0 +1,111 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Sekundärfigur (TWIST) erzeugen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+    font.hcp2 { font-weight:bold; }
+    li.hcp3 { font-size:9pt; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Sekundärfigur (TWIST) erzeugen" %}</p><p>{% trans "Dieser Befehl erzeugt eine Kopie (Sekundärfigur) von einer vorhandenen Figur. Anschließend besteht die Möglichkeit, die kopierte Sekundärfigur zu rotieren, transformieren und zu skalieren." %}</p>
+<p>{% trans "Mit Hilfe dieses Befehls können Sie auf einfache Weise die z.B. untere Regelflächengeometrie für Schrägschieber oder verdrehte Schrägschieber (TWIST) erzeugen." %}</p>
+<p class="hcp1"> </p>
+<p class="Hinweis">{% trans "Wichtiger Hinweis:" %}</p>
+<p>{% trans "Dieser Befehl findet ab der Version 5 [kaum] noch Verwendung, da man [Schrägschieber] direkt programmieren kann, mit der Option #[Konik]# des Bearbeitungsbefehls #[Standard Konturbearbeitung]#." %}</p>
+<p class="hcp1"> </p>
+<p class="Tip_Note_Heading">{% trans "Schrägschieber mit TWIST erzeugen und bearbeiten:" %}</p>
+<p>{% trans "In eine Schnittplatte soll eine 20 Grad schräge Bohrung (Schrägschieber) eingebracht werden." %}</p>
+<p class="hcp1"> </p>
+<p><img src="../TWIST.gif" alt="TWIST.gif" width="229" height="369" border="0"/></p>
+<ul>
+<li class="hcp3">
+<p class="Topic_Text_Bulleted">{% trans "Zeichnen Sie den 20 mm Kreis und erzeugen Sie eine Bearbeitungsfigur." %}</p>
+</li>
+<li class="hcp3">
+<p class="Topic_Text_Bulleted">{% trans "Rotieren Sie die Figur um 20 Grad um die Y-Achse. Verwenden Sie den Befehl [3D Rotieren] im Menü [Transformation]." %}</p>
+</li>
+<li class="hcp3">
+<p class="Topic_Text_Bulleted">{% trans "Da wir eine rotierte Figur nicht schneiden können, müssen wir diese auf die XY-Ebene projizieren." %}</p>
+</li>
+<li class="hcp3">
+<p class="Topic_Text_Bulleted">{% trans "Erzeugen Sie die Projektion mit dem Befehl #[Figur projizieren oder skalieren]# im Menü [Vorbereitung \ Diverses]. Das Ergebnis der Projektion ist eine Ellipse." %}</p>
+</li>
+<li class="hcp3">
+<p class="Topic_Text_Bulleted">{% trans "Der Schrägschieber wird als Regelfläche geschnitten, deshalb benötigen wir eine weitere, verschobene Figur für die untere (z-20) Regelfläche." %}</p>
+</li>
+<li class="hcp3">
+<p class="Topic_Text_Bulleted">{% trans "Der Befehl [Sekundärfigur (TWIST) erzeugen] erzeugt eben diese zweite Figur (Sekundärfigur)." %}</p>
+</li>
+<li class="hcp3">
+<p class="Topic_Text_Bulleted">{% trans "Wählen Sie den Befehl [Sekundärfigur (TWIST) erzeugen] im Menü [Vorbereitung \ Diverses]." %}</p>
+</li>
+<li class="hcp3">
+<p class="Topic_Text_Bulleted">{% trans "Klicken Sie zunächst die projizierte Figur an. Das System fragt nun:" %}</p>
+</li>
+</ul>
+<p class="Prompts">{% trans "Startposition od. Mittelpunkt für die Skalierung/Rotation/Spiegelung :" %}</p>
+<ul>
+<li class="hcp3">
+<p class="Topic_Text_Bulleted">{% trans "Fangen Sie die Position der Startlochbohrung." %}</p>
+</li>
+<li class="hcp3">
+<p class="Topic_Text_Bulleted">{% trans "Das System fragt nun ob skaliert, transformiert oder rotiert werden soll. In unserem Fall benötigen wir eine Transformation." %}</p>
+</li>
+<li class="hcp3">
+<p class="Topic_Text_Bulleted">{% trans "Wählen Sie auf die Option [Transformieren] (siehe [rechte Maustaste] od. [horizontale Ikonenleiste])." %}</p>
+</li>
+<li class="hcp3">
+<p class="Topic_Text_Bulleted">{% trans "Die untere Regelflächenfigur muss [inkremental] (DX, DY) verschoben werden. Die Formel lautet: [DX],[Y] [tangens]([Winkel]) [X] [Höhe]" %}</p>
+</li>
+<li class="hcp3">
+<p class="Topic_Text_Bulleted">{% trans "Geben Sie ein: [DXtan(20)*20]. Beenden Sie den Befehl" %}</p>
+</li>
+<li class="hcp3">
+<p class="Topic_Text_Bulleted">{% trans "Editieren Sie die Figur und fügen Sie [2 C-Punkte] ein, welche die Startlochposition und die Bearbeitungsposition auf der Figur definieren." %}</p>
+</li>
+</ul>
+<p class="hcp1"> </p>
+<p>{% trans "[Hinweis][:] Es darauf zu achten, dass das [Startloch der unteren Figur in] [der Schnittmenge der beiden Figuren liegt], damit der Draht eingefädelt werden kann." %}</p>
+<p>{% trans "Ggf. muss die Figur nochmals editiert werden, um die Startlochposition zu verändern. Schneiden sich die Figuren nicht, muss der Draht schräg eingefädelt werden." %}</p>
+<p>{% trans "[Figuren, die keine Schnittmenge aufweisen:] Wenn die Geometrie des Schrägschiebers sehr klein ist und/oder das Teil sehr hoch und/oder der Winkel sehr groß, kann es vorkommen, dass es keinen Bereich gibt, den beide Bearbeitungsfiguren einschließen." %}</p>
+<p>{% trans "In diesem Fall sind folgende Regeln zu beachten:" %}</p>
+<p>{% trans "Weil das automatische Einfädeln und Abschneiden des Drahtes in der Regelflächenbearbeitung ausgeschaltet wird, muss der Befehl zum Draht Einfädeln [vor] der Regelflächenbearbeitung aufgerufen werden." %}</p>
+<p>{% trans "Dies geschieht im Menü [Bearbeitung] mit dem Befehl #[Draht abschneiden/einfädeln]# oder mit der entsprechenden Ikone." %}</p>
+<ul>
+<li class="hcp3">
+<p class="Topic_Text_Bulleted">{% trans "Bearbeiten Sie nun beide Figuren als Regelfläche." %}</p>
+</li>
+</ul>
+
+{% endblock %}
+{% endlinebreakless %}

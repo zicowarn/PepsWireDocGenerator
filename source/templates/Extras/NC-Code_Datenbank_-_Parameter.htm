@@ -1,0 +1,63 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "NC-Code Datenbank - Parameter" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    img.hcp1 { border:none; }
+    span.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "NC-Code Datenbank - Parameter" %}</p><p> </p>
+<p class="Tip_Note_Heading">{% trans "Speichernamen" %}</p>
+<p>{% trans "Die Liste zeigt alle aktuell vorhandenen NC-Codes an." %}</p>
+<p>{% trans "Die 4 Schaltflächen unterhalb der Liste dienen zum Navigieren in der NC-Codeliste." %}</p>
+<p> </p>
+<p class="Tip_Note_Heading">{% trans "Name zum Laden / Speichern / Löschen" %}</p>
+<p>{% trans "Zeigt den aktuell in der Liste gewählten NC-Code an." %}</p>
+<p> </p>
+<p class="Tip_Note_Heading">{% trans "Bemerkung" %}</p>
+<p>{% trans "Zeigt die Bedeutung des aktuell gewählten NC-Codes an." %}</p>
+<p> </p>
+<p class="Tip_Note_Heading">{% trans "Funktionsschaltflächen" %}</p>
+<p>{% trans "Die Schaltflächen @ haben folgende Bedeutung:" %}</p>
+<p>{% trans "@ : [Suchen] in der NC-Code Datenbank." %}</p>
+<p>{% trans "@ : [Neuen NC-Code] zur Liste hinzufügen" %}</p>
+<p>{% trans "@ : Gewählten [NC-Code ]in die MS-Windows [Zwischenablage kopieren]." %}</p>
+<p>{% trans "@ : Gewählten [NC-Code verändern.]" %}</p>
+<p>{% trans "@ : Gewählten [NC-Code löschen.]" %}</p>
+<p>{% trans "@ : Ruft einen [Einstell-Dialog] auf mit verschiedenen Einstellparametern:" %}</p>
+<p> </p>
+<p><img src="../NC_Code_Datenbank_Settings_Dialog.gif" alt="" border="0" class="hcp1"/></p>
+<p> </p>
+<p> </p>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,46 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Figuren oder auf Punkten" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Figuren oder auf Punkten" %}</p><p>{% trans "Mit dieser Funktion können Sie eine gruppierte Operation auf beliebigen Positionen wiederholen." %}</p>
+<p>{% trans "Die Positionen werden in der Zeichnung durch [C-Punkte] oder [Bearbeitungsfiguren] gekennzeichnet." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p>{% trans "[Siehe auch:]" %}</p>
+<p>{% trans "#[Figuren oder auf Punkten]#" %}</p>
+<p>{% trans "#[Gruppierte Operationen auf Figuren wiederholen]#" %}</p>
+<p>{% trans "#[Gruppierte Operationen auf Punkten wiederholen]#" %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

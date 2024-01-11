@@ -1,0 +1,59 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "NC-Daten editieren &sol; kopieren" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Extra.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ NC-Daten editieren / kopieren" %}</p><p class="Block_Text"> </p><p class="Block_Text">{% trans "Mit diesem Dialog können Sie die NC-Datendateien (NC-Daten, Einrichteblatt ...) des momentan geladenen Programmes [anzeigen], [editieren], [ausdrucken] oder auf [Diskette kopieren]." %}</p>
+<p>{% trans "Zusätzlich bietet der Dialog Möglichkeiten die Datenübertragung [PC &amp;gt; CNC-Maschine] zu realisieren (Optionale Dienstleistung)." %}</p>
+<p>{% trans "Dazu wird normalerweise die PEPS eigene Datenübertragungssoftware WNCCOMMS32.EXE verwendet, die ein Einstellen der Übertragungsparameter erlaubt." %}</p>
+<p class="hcp2"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Edit_NC-Data_wire_shg.gif" usemap="#AreaMap0" alt="Edit_NC-Data_wire_shg.gif" width="503" height="217" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="7, 75, 261, 115" href="NC_Daten_NC_Daten_Editieren_kopieren.htm" alt=""/>
+<area shape="rect" coords="7, 39, 484, 64" href="javascript:BSSCPopup('Erzeugte_Dateien_Listbox_Extras_NC_Daten_editieren.htm',400,500);" id="area1" alt=""/>
+<area shape="rect" coords="257, 184, 353, 209" href="javascript:BSSCPopup('../Commdata/COMMON_Schliessen.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="136, 184, 234, 210" href="Optionen_Dialog_NC-Daten_editieren_kopieren.htm" id="area3" alt=""/>
+</map> </p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

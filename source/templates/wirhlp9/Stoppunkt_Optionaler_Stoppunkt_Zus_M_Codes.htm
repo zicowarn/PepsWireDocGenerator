@@ -1,0 +1,41 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Stoppunkt &sol; Optionaler Stoppunkt" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Stoppunkt / Optionaler Stoppunkt" %}</p><p>{% trans "Bei aktivierter Checkbox wird der NC-Code für [einen Stop] oder einen [optionalen Stop] (z.B. M00 oder M01) in die NC-Daten ausgegeben." %}</p>
+<p>{% trans "Der Code wird exakt an der Stelle ausgegeben, an der das NC-Codesymbol positioniert wurde." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

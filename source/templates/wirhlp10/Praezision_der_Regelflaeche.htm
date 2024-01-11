@@ -1,0 +1,45 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Präzision der Regelfläche" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Präzision der Regelfläche" %}</p><p>{% trans "Bei der NC-Ausgabe von Regelflächen werden bei einigen NC-Maschinen keine Radien ausgegeben." %}</p>
+<p>{% trans "Sämtliche Radien werden in eine Anzahl von kleinen Geraden zerlegt, um die [XY UV]-Ausgabe zu steuern." %}</p>
+<p>{% trans "Je kleiner die Geraden, desto feiner die Regelflächenoberfläche. Im Eingabefeld [Präzision der Regelfläche] legt der Anwender die gewünschte Präzision der Regelflächenoberfläche fest." %}</p>
+<p>{% trans "Je kleiner der Wert, desto genauer ist die Konturtreue. Beachten Sie, dass die Größe der NC-Ausgabedatei mit steigender Oberflächenpräzision zunimmt (mehr Geraden)." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><img src="../CUS.gif" alt="CUS.gif" width="382" height="197" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

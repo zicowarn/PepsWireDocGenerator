@@ -1,0 +1,45 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Richtung (Entformungstest Dialog)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Richtung (Entformungstest Dialog)" %}</p><p>{% trans "In diesem Dialogabschnitt legen Sie fest, in welcher Richtungsachse der Entformungstest ausgeführt werden soll." %}</p>
+<p>{% trans "Normalerweise ist die Achse für den Entformungstest [+Z] oder -[Z]." %}</p>
+<p>{% trans "Das System führt nach Aufruf des Dialogs einen vorläufigen Entformungstest aus und kennzeichnet die Achsen in denen eine Entnahme des Ausfallteils möglich ist, in der Farbe [Grün]." %}</p>
+<p>{% trans "In Situationen in denen die Entnahme des Abfallteiles nur entlang mehrerer Achsen möglich ist (z.B. Schrägschieber), müssen Sie die Achsen selbst bestimmen und den Entformungswinkel im Feld #[Offset Winkel]# eingeben." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><img src="../Ausfall_test2.gif" alt="Ausfall_test2.gif" width="435" height="251" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

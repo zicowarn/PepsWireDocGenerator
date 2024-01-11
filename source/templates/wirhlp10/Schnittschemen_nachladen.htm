@@ -1,0 +1,45 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Schnittschemen nachladen XXXNEU" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { mso-bidi-font-family:Arial; }
+    span.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <h1>{% trans "Schnittschemen nachladen" %}</h1><p class="hcp1"> </p>
+<p class="hcp1">{% trans "Die #Schnittschemen-Datenbank# ermöglicht es, dass bei einem Wechsel von [Maschine A] zu [Maschine B], automatisch die richtige Technologie geladen wird." %}</p>
+<p>{% trans "Hierzu müssen die Schnittschemen der [Maschinen A] und [B] nur den [gleichen Namen] haben. Zudem müssen Sie beim Programmieren Schnittschemen verwenden." %}</p>
+<p> </p>
+<p>{% trans "Beschreibung in Arbeit ...." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,69 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Schnittschema speichern Dialog - Parameter XXX" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    span.hcp1 { font-weight:bold; }
+    img.hcp2 { border:none; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "@ Schnittschema speichern Dialog - Parameter" %}</p><p>{% trans "Verwenden Sie diese Schaltfläche@ , um die aktuellen Dialogeinstellungen als neues Schnittschema zu speichern." %}</p>
+<p>{% trans "Bestehende Schnittschemen können Sie verändern, indem Sie mit Schaltfläche @ den [#Schnittschema laden#] Dialog aufrufen. Dann das Schnittsschema suchen es anpassen und danach speichern." %}</p>
+<p>{% trans "[Siehe auch:] #Erodierbearbeitungen durch Schnittschemen automatisieren#" %}</p>
+<p> </p>
+<p><img src="../Schnittschema_speichern_Parameter_1.gif" alt="" border="0" class="hcp2"/></p>
+<p> </p>
+<p class="Tip_Note_Heading">{% trans "KNO Dateiname" %}</p>
+<p>{% trans "In diesem Feld gibt das System einen Name für das Schnittschema vor. Die Vorgabe besteht aus dem aktuell gewähltem [Material], [Materialhöhe], [Draht], [Drahtdurchmesser] und der [Anzahl der Schnitte]." %}</p>
+<p>{% trans "Beachten Sie, dass man den vorgegeben Name verändern kann. Die Systemvorgabe lässt sich einstellen im Dialog [Modul Einstellungen] (Menüfolge: [Datei &amp;gt; Einstellungen &amp;gt; Modul Einstellungen &amp;gt; Dialogeinstellungen]." %}</p>
+<p> </p>
+<p class="Tip_Note_Heading">{% trans "Schnittschemenfarbe" %}</p>
+<p>{% trans "In einigen Anwendungsfällen sind bestimmte Flächen von 3D Modellen[ farbig eingefärb]t." %}</p>
+<p>{% trans "So könnte beispielsweise, eine [rote Bohrung] eine Passung [H7] kennzeichnen." %}</p>
+<p>{% trans "Das Feld [Farbe] zeigt an, welche Farbe einem Schnittschema zugewiesen wurde." %}</p>
+<p>{% trans "Der benötigte Farbcode lässt sich mit der Schaltfläche [Face picken] von einem 3D Modell ableiten oder mit der Schaltfläche [Farbe wählen] über den MS-Windows Dialog zur Farbauswahl bestimmen." %}</p>
+<p> </p>
+<p><img src="../Schnittschema_speichern_Parameter_2.gif" alt="" border="0" class="hcp2"/></p>
+<p class="Tip_Note_Heading">{% trans "Draht, Draht-Durchmesser" %}</p>
+<p>{% trans "Bestimmt den verwendeten Draht und den Drahtdurchmesser." %}</p>
+<p class="Tip_Note_Heading">{% trans "Werkstückmaterial, Höhe" %}</p>
+<p>{% trans "Bestimmt das verwendete Material und dessen Höhe." %}</p>
+<p class="Tip_Note_Heading">{% trans "Durchmesser" %}</p>
+<p>{% trans "XXX Spezialfall - Beschreibung in Arbeit." %}</p>
+<p class="Tip_Note_Heading">{% trans "Anzahl der Schnitte" %}</p>
+<p>{% trans "Zeigt die im Schnittschema gespeicherte Anzahl von Schnitten." %}</p>
+<p class="Tip_Note_Heading">{% trans "Beschreibung, Kommentar" %}</p>
+<p>{% trans "Zwei frei beschreibbare Felder, in denen der Anwender einem Schnittschema kommentierende Texte zuweisen kann." %}</p>
+<p> </p>
+<p> </p>
+
+{% endblock %}
+{% endlinebreakless %}

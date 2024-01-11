@@ -1,0 +1,46 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Genauigkeit für Solidsimulation-Zielteilvergleich" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Genauigkeit für Solidsimulation-Zielteilvergleich" %}</p><p>{% trans "Dieser Parameter wird von der #[Solid Simulation]# verwendet, um die Genauigkeit einzustellen, mit der ein #[Zielteilvergleich]# von bearbeiteter Werkstückoberfläche und 'wirklicher' Werkstückoberfläche ausgeführt wird." %}</p><p>{% trans "Zielteilvergleiche können nur für Werkstücke ausgeführt werden, die aus Solids, NURBS-Surfaces oder importierten STL-Daten erzeugt wurden." %}</p>
+<p>{% trans "Bereiche der Werkstückoberfläche, die [nicht] die eingestellte Genauigkeit erreichen (Restmaterial od. Gouges (Hinterschnitte/Beschädigungen)), werden farblich gekennzeichnet." %}</p>
+<p>{% trans "[Siehe]: [#Vergleich - Optionen des Zielteilvergleiches#.]" %}</p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a1');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

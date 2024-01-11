@@ -1,0 +1,66 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Das Bearbeitungs Menü (AGIEVISION)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Agievhlp.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <h1>{% trans "Das Bearbeitungs Menü (AGIEVISION)" %}</h1><p>{% trans "Um allen Möglichkeiten der [AGIEVISION] Maschinen gerecht zu werden, war es nötig die [Menüs] [Bearbeitung] und #[Vorbereitung]# sowie einige [Bearbeitungsdialogboxen] zu verändern." %}</p>
+<p>{% trans "Die geänderten Menüs und Dialogboxeinträge des Menüs [Bearbeitung] sind Gegenstand dieser speziellen Hilfedatei." %}</p>
+<p> </p>
+<p style="color: #ff0000; font-style: italic;">{% trans "Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen." %}</p>
+<p> </p>
+<p><img src="../WIR10_AV_shg.gif" usemap="#AreaMap0" alt="WIR10_AV_shg.gif" width="223" height="443" border="0"/> <map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="0,18,213,37" href="Programmstart_AGIEVISION.htm" alt=""/>
+<area shape="rect" coords="0,38,213,57" href="Operation_starten_AGIEVISION.htm" alt=""/>
+<area shape="rect" coords="0,56,213,76" href="Operation_editieren_AGIEVISION.htm" alt=""/>
+<area shape="rect" coords="0,76,213,100" href="Das_Vorbereitungs_Menue_AGIEVISION.htm" alt=""/>
+<area shape="rect" coords="0,149,213,167" href="Im_Vorschub_AGIEVISION.htm" alt=""/>
+<area shape="rect" coords="0,208,213,227" href="Standard_Konturbearbeitung_AGIEVISION.htm" alt=""/>
+<area shape="rect" coords="0,243,213,263" href="Regelflaechenbearbeitung_AGIEVISION.htm" alt=""/>
+<area shape="rect" coords="0,264,213,285" href="NC_Kommentar_AGIEVISION.htm" alt=""/>
+<area shape="rect" coords="0,284,213,302" href="NC_Zeile_einfuegen_AGIEVISION.htm" alt=""/>
+<area shape="rect" coords="0,318,213,340" href="Zurueck_zur_Startposition_AGIEVISION.htm" alt=""/>
+<area shape="rect" coords="0,385,213,407" href="Grafik_NC_Bearbeitung_loeschen_AGIEVISION.htm" alt=""/>
+<area shape="rect" coords="0,408,213,426" href="Grafik_NC_Bearbeitung_neu_erzeugen_AGIEVISION.htm" alt=""/>
+<area shape="rect" coords="0,424,213,443" href="Alle_VDM_Eintraege_loeschen_AGIEVISION.htm" alt=""/>
+<area shape="rect" coords="0,340,213,363" href="Job_Kommandodatei_erzeugen_AGIEVISION.htm" alt=""/>
+<area shape="rect" coords="2,363,215,383" href="Grafisches_Einrichteblatt_AGIEVISION.htm" alt=""/>
+<area shape="rect" coords="0,226,213,243" href="Std_Konturb_Auto_Matr_Stempel_AGIEVISION.htm" alt=""/>
+<area shape="rect" coords="0,164,213,185" href="Draht_einfaedeln_abschneiden_AGIEVISION.htm" alt=""/>
+<area shape="rect" coords="0,302,213,319" href="M_Code_einfuegen_AGIEVISION.htm" alt=""/>
+<area shape="rect" coords="3,101,222,127" href="../Simulation/_Standard_Simulation.htm" alt=""/>
+<area shape="rect" coords="3,128,223,150" href="Im_Eilgang_AGIEVISION.htm" alt=""/>
+<area shape="rect" coords="4,187,222,208" href="../wirhlp10/Mess_Zyklen.htm" alt=""/></map></p>
+
+{% endblock %}
+{% endlinebreakless %}

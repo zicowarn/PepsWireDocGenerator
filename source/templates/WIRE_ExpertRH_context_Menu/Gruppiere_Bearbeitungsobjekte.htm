@@ -1,0 +1,55 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Gruppiere Features" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../WIRE_ExpertRH_context_Menu.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+    li.hcp3 { font-size:9pt; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Gruppiere Features" %}</p><p>{% trans "Im [WIRE-Expert] #[Feature Manager]# ist es möglich, [mehrere] [Features] zusammenzufassen zu einem Feature." %}</p>
+<p>{% trans "Dies reduziert die Anzahl der Einträge im [WIRE-Expert] #[Feature Manager]# wenn viele identische Geometrien bearbeitet werden müssen." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Group_Features.gif" alt="Group_Features.gif" width="538" height="150" border="0"/></p>
+<p style="text-align: center;"> </p>
+<p>{% trans "Das Bild oberhalb zeigt links das Ergebnis ohne gruppieren und rechts mit gruppieren." %}</p>
+<p class="hcp2"> </p>
+<p>{% trans "[So wird es gemacht:]" %}</p>
+<ul>
+	<li class="hcp3"><p class="Tip_Note_Text_Bulleted">{% trans "Klicken Sie im #Feature Manager# [nacheinander] alle Features an, die zusammengefasst werden sollen. Halten Sie während der Auswahl die [Umschalt]-Taste gedrückt." %}</p></li>
+	<li class="hcp3"><p class="Tip_Note_Text_Bulleted">{% trans "Klicken Sie die [rechte] Maustaste und wählen Sie im Menü die Option [Gruppiere] [Features]." %}</p></li>
+</ul>
+<p>{% trans "Das System fasst die gewählten Features zusammen zu einem Feature." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

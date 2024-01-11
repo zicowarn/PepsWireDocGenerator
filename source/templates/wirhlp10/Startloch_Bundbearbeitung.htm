@@ -1,0 +1,51 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Startloch (Bundbearbeitung)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Startloch (Bundbearbeitung)" %}</p><p class="dialog">{% trans "Rund" %}</p><p>{% trans "Wird aktiviert, wenn das Startloch eine runde Bohrung ist. Die Option aktiviert das Feld [Startlochdurchmesser] in der Sie den Durchmesser der Startlochbohrung bestimmen können." %}</p>
+<p> </p>
+<p class="dialog">{% trans "Unregelmäßig" %}</p>
+<p>{% trans "Wird aktiviert, wenn das [#Startloch keine runde Form#] hat und eine [beliebige andere geometrische] Form als Startloch verwendet werden soll." %}</p>
+<p>{% trans "Die Funktion aktiviert das Feld [Beliebiges Startloch], in der Sie die Figur auswählen können, die das unregelmäßige Startloch bildet." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "Die Geometrie des beliebigen Startlochs muss als Geometrietyp [Figur] vorliegen. Figuren kann man erzeugen mit dem Befehl #[Linien/Bögen ==&amp;gt; Bearbeitungsfigur]# im Menü #[Vorbereitung]#." %}</p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a1');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

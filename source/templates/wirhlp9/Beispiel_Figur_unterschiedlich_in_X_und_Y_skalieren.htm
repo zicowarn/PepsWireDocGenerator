@@ -1,0 +1,51 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Figur unterschiedlich in X und Y skalieren" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    li.hcp1 { font-size:9pt; }
+    font.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Tip_Note_Heading">{% trans "Figur unterschiedlich in X und Y skalieren" %}</p><ul>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Wählen Sie im Menü [Vorbereitung \ Diverses] den Befehl [Figur projizieren oder skalieren]" %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Bestimmen Sie im Feld [Zu projizierende Figur] die Figur die skaliert werden soll. Verwenden Sie die Schaltfläche @ zur Auswahl der Figur." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf das Register [XY-Skalieren]." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Geben Sie im Feld [Bezugspunkt] die Position ein, auf die sich der Skaliervorgang beziehen soll." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Tragen Sie in den Feldern [X-Skalier] und [Y-Skalier] die Skalierfaktoren ein (z.B. 0.5 = 50 % kleiner - 2 = 200 % größer) und schließen Sie den Dialog mit [OK]." %}</p></li>
+</ul>
+<p>{% trans "Die folgende Zeichnung zeigt ein einfaches verrundetes Rechteck das in der X-Achse um 2 und in der Y-Achse um 1.5 skaliert wurde." %}</p>
+<p>{% trans "Die Zeichnung zeigt ebenfalls den Bezugspunkt für den Skaliervorgang und das die Ecken des Rechtecks durch die Skalierung in Ellipsen gewandelt wurden." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><img src="../DIFSCALE.gif" alt="DIFSCALE.gif" width="326" height="187" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

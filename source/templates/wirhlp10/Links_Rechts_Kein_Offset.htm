@@ -1,0 +1,49 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Links &sol; Rechts &sol; Kein Offset" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Links / Rechts / Kein Offset" %}</p><p>{% trans "Die Option Links / Rechts werden eingesetzt, wenn 'offene' Bearbeitungsfiguren geschnitten werden sollen. Wird [Links] oder [Rechts] gewählt, entscheidet der Anwender über die Ausgabe des Offsets." %}</p><p>{% trans "Basis der Angabe ist die Figurrichtung. Ist die [Figurrichtung im Uhrzeigersinn] und soll eine [Matrize im Uhrzeigersinn] geschnitten werden, so ist das [Offset rechts]." %}</p>
+<p>{% trans "Das System prüft nicht die Richtigkeit der Angaben." %}</p>
+<p> </p>
+<p>{% trans "Wird [#Kein Offset#] gewählt, berechnet das System die Drahtmittelpunktsbahn ohne Offsetverrechnung und schneidet 'auf' der Figur." %}</p>
+<p> </p>
+<p>{% trans "[Hinweis]: Mit dem Befehl [Figurrichtung zeigen / ändern] im Menü [Info/Bemaßung] können Sie die Richtung von Bearbeitungsfiguren prüfen und ggf. umkehren." %}</p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a1');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

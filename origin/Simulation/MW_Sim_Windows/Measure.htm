@@ -1,0 +1,257 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Messungen Fenster</title>
+<link rel="StyleSheet" href="../../MW_Sim_Windows.css" type="text/css">
+
+<script language="JavaScript" title="onClick_onLoad" src="../../Funktionen_Camtek.js" type="text/javascript"></script>
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+p.hcp2 { margin-top:0;
+margin-bottom:0; }
+font.hcp3 { font-weight:bold; }
+font.hcp4 { font-weight:bold;
+font-style:italic; }
+p.hcp5 { font-weight:bold; }
+img.hcp6 { border:none; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Messungen</h1>
+<p>&#160;</p>
+<p>Der <span class="hcp1">Messungen</span> Dialog verfügt 
+ über verschiedene Funktionen, um das angezeigte Rohteil oder andere Elemente 
+ zu vermessen. </p>
+<p>Zudem bietet der Dialog Funktionen, um Ausfallteile anzuzeigen und diese 
+ zu entfernen. </p>
+<p>&#160;</p>
+<p><img src="../../newUI_measure.gif" alt="newUI_measure.gif" width="562" height="494" border="0"></p>
+<p class="hcp2">&#160;</p>
+<p class="hcp2">&#160;</p>
+<h2><font class="hcp3">Punkte</font></h2>
+<p>Die <font class="hcp3">Punkt</font>-Funktion liefert Information 
+ über die aktuell angeklickte (! <font class="hcp4">mittlere</font> 
+ Maustaste verwenden) Koordinate. Es wird die XYZ-Koordinate, das verwendete 
+ Werkzeug und das Materialaufmaß (engl. Deviation) angezeigt.</p>
+<p class="hcp5"><img src="../../newUI_measure_Tab_Punkte.gif" alt="" border="0" class="hcp6"></p>
+<p class="hcp5">Beispiel:</p>
+<p><img src="../../newUI_point.gif" alt="newUI_point.gif" width="589" height="456" border="0"></p>
+<p>Bewegen Sie den Cursor auf die gewünschte Position. Klicken Sie mit 
+ der <font class="hcp4">mittleren</font> 
+ Maustaste. Es wird eine kleine Infobox mit Informationen über den angeklickten 
+ Punkt gezeigt. Die Informationen werden zusätzlich im <font class="hcp3">Messen</font>-Dialog 
+ in einer Liste notiert.</p>
+<p>Folgende Informationen werden angezeigt:</p>
+<p><font class="hcp3">Position</font>: Sind die X-, Y- und 
+ Z-Koordinaten des angeklickten Punktes.</p>
+<p><font class="hcp3">Abweichung &#160;(Deviation)</font>: 
+ Zeigt die Dicke des Aufmaßes, das heißt die Abweichung des Restmaterials 
+ vom <span class="hcp1">Zielteil (Werkstück)</span>. In unserem 
+ Beispiel beträgt das gemessene Aufmaß dies 0.0015 mm</p>
+<p><font class="hcp3">Wkz. Nummer (Tool number)</font>: Zeigt 
+ die Nummer des verwendeten Werkzeugs.</p>
+<p><font class="hcp3">Satznummer (Move number)</font>: Satznummer 
+ in der Liste der NC-Sätze.</p>
+<p><font class="hcp3">Ziel ID (Target ID)</font>: Zeigt die 
+ interne Nummer der Zielteilgeometrie</p>
+<p><img src="../../newUI_point_1.gif" alt="newUI_point_1.gif" width="604" height="461" border="0"></p>
+<p><span class="hcp1">Hinweis</span>: Um das Restmaterial 
+ farblich zu kennzeichnen, müssen Sie in den Dialog <a href="Stock_Analysis.htm"><font class="hcp3">Rohteilanalyse</font> / <span class="hcp1">Abweichung</span></a><span class="hcp1"> </span>wechseln.</p>
+<p><span><font class="hcp3">Abweichung</font></span>: Ist 
+ die Abweichung des Restmaterials vom Zielteil. In dem Beispielbild oberhalb 
+ beträgt die Abweichung 0.0015 mm</p>
+<p class="hcp2">&#160;</p>
+<p class="hcp2">&#160;</p>
+<h2>Distanzen</h2>
+<p>Die Funktion <span class="hcp1">Distanzen</span> misst 
+ den 3D-Abstand, zwischen zwei auf dem Rohteil gemessenen Punkten.</p>
+<p><img src="../../newUI_measure_Tab_Distanzen.gif" alt="" border="0" class="hcp6"></p>
+<p><font class="hcp3">Beispiel:</font></p>
+<p><img src="../../newUI_distance.gif" alt="newUI_distance.gif" width="500" height="461" border="0"></p>
+<p>Bewegen Sie den Cursor auf die gewünschte Position. Klicken Sie <font class="hcp3">zweimal</font> mit der <font class="hcp4">mittleren</font> 
+ Maustaste, um den Startpunkt und den Endpunkt auszuwählen. </p>
+<p>Es wird eine kleine Infobox mit dem gemessenen Abstandswert angezeigt. 
+ Die Infobox zeigt den 3D-Abstand, zwischen zwei auf dem Rohteil gemessenen 
+ Punkten.</p>
+<p class="hcp2">&#160;</p>
+<p class="hcp2">&#160;</p>
+<h2><span>Bereich vergrößern</span></h2>
+<p>Hier können Sie einen Teilbereich des Rohteils mittels eines rechteckigen 
+ Auswahlfensters auszuwählen und auszuschneiden. Das Material <font class="hcp3">außerhalb</font> 
+ des Fensters wird entfernt. </p>
+<p>Der Bereich <font class="hcp3">innerhalb</font> des Fensters 
+ wird neu berechnet und mit einer höheren Darstellungs-Genauigkeit angezeigt.</p>
+<p class="hcp5"><img src="../../newUI_measure_Tab_Bereich_vergroessern.gif" alt="" border="0" class="hcp6"></p>
+<p class="hcp5">Beispiel:</p>
+<p><img src="../../newUI_zoom_box.gif" alt="newUI_zoom_box.gif" width="466" height="430" border="0"></p>
+<p>Bewegen Sie den Cursor auf die gewünschte Position. Klicken Sie mit 
+ der <font class="hcp3">mittleren</font> Maustaste, um den 
+ <font class="hcp3">oberen linken Punkt</font> des Auswahlfensters 
+ zu definieren. Klicken Sie erneut die <font class="hcp3">mittlere</font> 
+ Maustaste, um den <font class="hcp3">unteren rechten Punkt</font> 
+ des Auswahlfensters zu definieren.</p>
+<p>Klicken Sie im Dialog auf die <span class="hcp1">Dynamisch 
+ vergrößern</span> <img src="../../newUI_zoomin.gif" alt="newUI_zoomin.gif" width="31" height="32" border="0"> Schaltfläche, 
+ um den Prozess zu starten.</p>
+<p>Klicken Sie im Dialog auf die <span class="hcp1">Dynamisch 
+ vergrößern zurücksetzen</span> <img src="../../newUI_zoomout.gif" alt="newUI_zoomout.gif" width="32" height="33" border="0"> 
+ Schaltfläche, um den Prozess zu beenden.</p>
+<p><img src="../../newUI_zoomed.gif" alt="newUI_zoomed.gif" width="505" height="488" border="0"></p>
+<p>&#160;</p>
+<p>&#160;</p>
+<h2><font class="hcp3"><span class="hcp1">Lösche 
+ Teil </span>(Auswahl)</font></h2>
+<p><img src="../../newUI_measure_Loesche_Teil_Auswahl.gif" alt="" border="0" class="hcp6"></p>
+<p>Mit dieser Funktion kann der Benutzer interaktiv die Ausfallteile löschen, 
+ die losgelöst vom Werkstück angezeigt werden. </p>
+<p>Klicken Sie einfach das zu löschende &#160;Ausfallteil an (! <font class="hcp4">mittlere</font> Maustaste verwenden). </p>
+<p>Beachten Sie bitte, dass das System die Ausfallteile nur dann in unterschiedlichen 
+ Farben anzeigt, wenn im Vorfeld die Rohteilanalysefunktion <span class="hcp1"><a 
+	 href="Stock_Analysis.htm">Teile markieren</a></span> aktiviert wurde.</p>
+<p>&#160;</p>
+<p><span class="hcp1">Beispiel</span>: Das folgende Bild 
+ zeigt links ein gefrästes Werkstück mit mehreren Ausfallteilen. Das violette 
+ Ausfallteil wurde mit der<span class="hcp1"> mittleren Maustaste</span> 
+ angeklickt, um es zu löschen. Das rechte Bild zeigt das Ergebnis. </p>
+<p><img src="../../newUI_L&ouml;sche_Teil_Auswahl.gif" alt="" border="0" class="hcp6"></p>
+<p>&#160;</p>
+<p>&#160;</p>
+<h2><span class="hcp1">Lösche alle Teile</span><font class="hcp3">&#160;(behalte 
+ nur 1)</font></h2>
+<p><img src="../../newUI_measure_Loesche_Alle_Teile_behalte_nur_1.gif" alt="" border="0" class="hcp6"></p>
+<p>Diese Funktion löscht <span class="hcp1">alle</span> vorhandenen 
+ Ausfallteile <span class="hcp1">außer</span> dem aktuell,&#160;mit 
+ der ! <font class="hcp4">mittleren</font> 
+ Maustaste ausgewähltem Ausfallteil. </p>
+<p>Beachten Sie bitte, dass das System die Ausfallteile nur dann in unterschiedlichen 
+ Farben anzeigt, wenn im Vorfeld die Rohteilanalysefunktion <span class="hcp1"><a 
+	 href="Stock_Analysis.htm">Teile markieren</a></span> aktiviert wurde.</p>
+<p>&#160;</p>
+<p><span class="hcp1">Beispiel</span>: Das folgende Bild 
+ zeigt links ein gefrästes Werkstück mit mehreren Ausfallteilen. Das orangefarbene 
+ Werkstück Ausfallteil wurde mit der<span class="hcp1">&#160;mittleren 
+ Maustaste</span> angeklickt, um es zu behalten und alle anderen Ausfallteile 
+ zu entfernen. Das rechte Bild zeigt das Ergebnis. </p>
+<p><img src="../../newUI_L&ouml;sche_alle_Teile.gif" alt="" border="0" class="hcp6"></p>
+<p>&#160;</p>
+<p>&#160;</p>
+<h2><span class="hcp1">Lösche Teile</span>&#160;<font class="hcp3">(automatisch)</font></h2>
+<p><img src="../../newUI_measure_Loesche_Teil_Automatisch.gif" alt="" border="0" class="hcp6"></p>
+<p>Dieser Funktion behält alle Ausfallteile, die nach einer Simulation 
+ mit der ! <font class="hcp4">mittleren</font> 
+ Maustaste ausgewählt wurden. </p>
+<p>Klickt man die Ausfallteile an, wird die Auswahl durch ein kleines &quot;Fähnchen&quot; 
+ angezeigt (Siehe Beispiel unterhalb) . Klicken Sie anschließend auf die 
+ Schaltfläche <span class="hcp1">Anwenden</span>, um die 
+ Auswahl auszuführen. </p>
+<p>Dies führt dazu, dass nur die ausgewählten Ausfallteile übrig bleiben.</p>
+<p><span class="hcp1">Beispiel</span>: Das folgende Bild 
+ zeigt links ein gefrästes Werkstück mit mehreren Ausfallteilen. Es wurden 
+ 3 Ausfallteile mit der<span class="hcp1"> mittleren Maustaste</span> 
+ angeklickt, die übrig bleiben sollen, der Rest wird automatisch gelöscht, 
+ wenn man die Schaltfläche <span class="hcp1">Anwenden </span>klickt. 
+ Das rechte Bild zeigt das Ergebnis. </p>
+<p><img src="../../newUI_L&ouml;sche_Teile_automatisch.gif" alt="" border="0" class="hcp6"></p>
+<p>Mit dieser Funktion kann der Anwender ausgewählte &#160;Ausfallteile 
+ vom Löschvorgang ausnehmen. Die Auswahl findet statt, indem man auf jedem 
+ <span style="font-style: italic;">nicht</span> zu löschenden Ausfallteil 
+ eine Punktposition mit der <span class="hcp1">mittleren 
+ Maustaste </span>anklickt. Alle anderen &#160;Ausfallteile werden gelöscht. 
+ &#160;</p>
+<p>Die Ausfallteile werden gelöscht, wenn sie während der Simulation entstehen 
+ (wenn man vorher die Punktpositionen gewählt halt) oder jedes mal, wenn 
+ man auf die Schaltfläche <span class="hcp1">Anwenden</span> 
+ klickt. </p>
+<p>Beachten Sie bitte, dass das System die Ausfallteile nur dann in unterschiedlichen 
+ Farben anzeigt, wenn im Vorfeld die Rohteilanalysefunktion <span class="hcp1"><a 
+	 href="Stock_Analysis.htm">Teile markieren</a></span> aktiviert wurde.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<h2><font class="hcp3">Entferne Elemente (mit Test)</font></h2>
+<p><img src="../../newUI_measure_Entferne_Elemente_mit_Test.gif" alt="" border="0" class="hcp6"></p>
+<p>Mit dieser Funktion können Sie testen, ob sich Ausfallteile überhaupt 
+ entnehmen lassen. Es existieren Situationen, in denen sich beispielsweise 
+ beim <span class="hcp1">Drahterodieren</span> eines konischen 
+ Durchbruchs, dass sich das Ausfallteil nicht oder nur in eine bestimmte 
+ Richtung entnehmen lässt. Das folgende Beispiel soll so eine Situation 
+ zeigen:</p>
+<p><span class="hcp1">Beispiel</span>: Das folgende Bild 
+ zeigt einen konischen Durchbruch und das Ergebnis eines Tests auf Ausfallteile. 
+ Das Ergebnis des Tests zeigt, dass das Ausfallteil (grüner Volumenkörper) 
+ nur nach unten in Richtung (Z-) &#160;entnommen werden kann. Ein Herausziehen 
+ des Ausfallteils nach oben (Z+) ist nicht möglich. &#160;&#160;&#160;</p>
+<p><img src="../../newUI_Ausfallteil_Test.gif" alt="" border="0" class="hcp6"></p>
+<p>&#160;</p>
+<p><span class="hcp1">Vorgehensweise</span>:</p>
+<p>Alle Ausfallteile werden im Zuge der Simulation in dem Dialog aufgelistet. 
+ </p>
+<p>Um den Test für ein Ausfallteil durchzuführen, aktiviert man das Ausfallteil 
+ in der Liste der Ausfallteile und drückt die Schaltfläche <span class="hcp1"><img src="../../newUI_measure_Entferne_Elemente_mit_Test_Test_Button.gif" alt="" border="0" class="hcp6">Test</span>. Dies führt 
+ den Test aus.</p>
+<p>&#160;</p>
+<p class="hcp5">Schaltflächen</p>
+<p><span class="hcp1"><img src="../../newUI_measure_Entferne_Elemente_mit_Test_Test_Button.gif" alt="" border="0" class="hcp6"> 
+ Test</span>:</p>
+<p>Diese Funktion verschiebt die gewählten Ausfallteile in die Achsenrichtung, 
+ die im unteren Dialogbereich <span class="hcp1">Zum Testen 
+ wähle Richtung</span> eingestellt wurde.</p>
+<p>Die Funktion <span class="hcp1">Test</span> betrachtet 
+ auch den eingestellten <span class="hcp1">Offset Winkel 
+ </span>der Richtungsachse und um die Richtungsachse herum. </p>
+<p><span class="hcp1"><img src="../../newUI_measure_Entferne_Elemente_mit_Tes_Entferne_Bauteil_Button.gif" alt="" border="0" class="hcp6"> 
+ Entferne ausgewähltes Bauteil</span></p>
+<p>Diese Schaltfläche löscht alle in der Liste gewählten Ausfallteile. 
+ </p>
+<p class="hcp5"><img src="../../newUI_measure_Entferne_Elemente_mit_Test_Stopp_bei_Button.gif" alt="" border="0" class="hcp6"> 
+ Stop wenn neuer Chip (Ausfallteil) erkannt wird</p>
+<p>Ist diese Schaltfläche gewählt, erscheint jedes mal ein Hinweisfenster, 
+ wenn das System ein Ausfallteil entdeckt. &#160;</p>
+<p>Die Dialogparameter &quot;<span class="hcp1">Von Richtungsachse</span>&quot; 
+ und &quot;<span class="hcp1">Um Richtungsachse</span>&quot; 
+ ermöglichen es, Ausfallteiltests in jeder beliebigen Richtung auszuführen. 
+ </p>
+<p>Die beiden oberhalb genannten Parameter, erweitern das Spektrum der 
+ erlaubten Richtungen für Ausfallteiltests, weil man Tests in einer offsettierten 
+ Richtung zur Hauptachse oder in einer offsettierten Richtung um die Hauptachse 
+ herum ausführen kann. Die Offsetwerte müssen durch den Anwender bestimmt 
+ werden.</p>
+<p><img src="../../newUI_Ausfallteil.gif" alt="" border="0" class="hcp6"></p>
+<p>&#160;</p>
+<p>&#160;</p>
+<h2><span class="hcp1">Chips löschen automatisch (automatisch 
+ basierend auf Volumen)</span></h2>
+<p><img src="../../newUI_measure_Chips_Loeschen_automatisch.gif" alt="" border="0" class="hcp6"></p>
+<p>Mit diesen Funktionen kann der Anwender die Ausfallteile basierend auf 
+ deren Volumen. Folgende Kriterien stehen zur Verfügung:</p>
+<p class="hcp5">Entferne kleine Bauteile und behalte die 
+ Größten</p>
+<p><span class="hcp1">Entferne kleine Bauteile unter einem 
+ Volumen von</span> (Volumengröße durch den Anwender bestimmbar)</p>
+<p class="hcp5">Automatisch alle kleinen Chips löschen und 
+ nur den großen behalten</p>
+<p>Durch das Aktivieren der Option &quot;<span class="hcp1">Automatisch 
+ alle kleinen Chips löschen und nur den großen behalten</span>&quot;, lassen 
+ sich die Ausfallteile im Zuge einer Simulation automatisch löschen.</p>
+<p>Ist die Option NICHT aktiv, kann man die Schaltfläche <span class="hcp1">Ausführen</span> 
+ zum Löschen der Ausfallteile verwenden.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<h2>Aus </h2>
+<p><img src="../../newUI_measure_Tab_Aus.gif" alt="" border="0" class="hcp6"></p>
+<p>Mit dieser Option wird die Verwendung der Mauskombination (Klick mit 
+ <span class="hcp1">mittlerer Maustaste</span>) deaktiviert, 
+ die bei den meisten Messfunktionen Verwendung findet.. </p>
+<p>Die Option löscht ebenfalls alle Markierungen von gemessenen Punkten 
+ und die Grafik des Auswahlfensters der Funktion &quot;<span class="hcp1">Bereich 
+ vergrößern</span>&quot;. </p>
+<p>Zudem wird das Rohteil auf seine ursprüngliche Größe zurückgesetzt.</p>
+</body>
+</html>

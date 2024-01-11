@@ -1,0 +1,110 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Drehstahlbearbeitung</title>
+<link rel="StyleSheet" href="../wirhlp9.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+font.hcp1 { font-weight:bold; }
+p.hcp2 { margin-top:0;
+margin-bottom:0; }
+font.hcp3 { font-style:italic; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; 
+	 border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;"><img src="../turntool.gif" alt="turntool.gif" width="33" height="34" border="0"> 
+ Drehstahlbearbeitung</p>
+<p>Das Drehstahlmodul berechnet die zum Drahterodieren von Profildrehstählen 
+ erforderliche projizierte Geometrie, in Abhängigkeit der folgenden Winkelangaben: 
+ <font class="hcp1">frontaler Freiwinkel, sei</font><font class="hcp1">t</font><font class="hcp1">licher 
+ Freiwinkel</font> und <font class="hcp1">Spanwinkel .</font></p>
+<p><font class="hcp1">Siehe auch:</font> <a href="Beispiel_Drehstahl_programmieren.htm"><font class="hcp1">Drehstahl programmieren</font></a></p>
+<p class="hcp2">&#160;</p>
+<p><font color="#FF0000" class="hcp3">Klicken Sie auf die 
+ einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.</font></p>
+<p class="hcp2">&#160;</p>
+<p><img src="../DREHSTA_shg.gif" usemap="#AreaMap0" alt="DREHSTA_shg.gif" width="460" height="509" border="0">
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="13, 31, 214, 190" href="javascript:BSSCPopup('Spanwinkel_frontaler_Freiwinkel_seitlicher_Freiwinkel_Drehstahlbearbeitung.htm',400,300);" id="area1" alt="">
+<area shape="rect" coords="222, 37, 446, 217" href="javascript:BSSCPopup('../Commdata/COMMON_Bild.htm',400,300);" id="area2" alt="">
+<area shape="rect" coords="6, 478, 88, 507" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area3" alt="">
+<area shape="rect" coords="95, 477, 180, 499" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area4" alt="">
+<area shape="rect" coords="192, 475, 276, 500" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area5" alt="">
+<area shape="rect" coords="315, 479, 450, 503" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area6" alt="">
+<area shape="rect" coords="10, 391, 215, 415" href="javascript:BSSCPopup('Frontaler_Freiwinkel_durch_Vorrichtung__Drehstahlbearbeitung.htm',400,300);" id="area7" alt="">
+<area shape="rect" coords="11, 441, 162, 462" href="javascript:BSSCPopup('Bearbeitung_erzeugen_Drehstahlbearbeitung.htm',400,300);" id="area8" alt="">
+<area shape="rect" coords="230, 443, 387, 468" href="javascript:BSSCPopup('Ausgabe_ISO_Radien_Drehstahlbearbeitung.htm',400,300);" id="area9" alt="">
+<area shape="rect" coords="11, 204, 208, 256" href="javascript:BSSCPopup('Zu_bearbeitende_Figur_Drehstahlbearbeitung.htm',400,300);" id="area10" alt="">
+<area shape="rect" coords="228, 223, 386, 250" href="javascript:BSSCPopup('Drehstahlschneide_unten_Drehstahlbeabeitung.htm',400,300);" id="area11" alt="">
+<area shape="rect" coords="224, 351, 446, 379" href="javascript:BSSCPopup('Versatz_zur_Mitte_Drehstahlbearbeitung.htm',400,300);" id="area12" alt="">
+<area shape="rect" coords="10, 416, 150, 440" href="javascript:BSSCPopup('Ausgabe_variable_Konik_Drehstahlbearbeitung.htm',400,300);" id="area13" alt="">
+<area shape="rect" coords="230, 420, 390, 441" href="javascript:BSSCPopup('Ausgabe_Parameter_als_Text_Drehstahlbearbeitung.htm',400,300);" id="area14" alt="">
+<area shape="rect" coords="10, 259, 210, 307" href="javascript:BSSCPopup('Punkt_für_Winkelwechsel_Drehstahlbearbeitung.htm',400,300);" id="area15" alt="">
+</map> </p>
+<p>&#160;</p>
+<h2 style="margin-top: 4.00pt; margin-bottom: 0.00pt;">Geometrieerstellung</h2>
+<p>Für die Berechnung ist es unerlässlich, dass die Geometrie des Drehteils 
+ <font class="hcp1">unterhalb</font> der X-Achse, im <font class="hcp1">rechten X/Y</font>(-) Quadranten erstellt 
+ wird. Da der kleinste Drehteildurchmesser für die Projektion maßgebend 
+ ist, sollten alle Durchmessermaße wirklichkeitsgetreu gezeichnet werden, 
+ d.h. die X-Achse stellt als Bezug die Drehachse dar. Die Geometrie muss 
+ in eine <a href="Linien_Boegen_Bearbeitungsfigur.htm"><font class="hcp1">Bearbeitungsfigur</font></a> 
+ umgewandelt werden. Der <font class="hcp1">Richtungssinn</font> 
+ der Figur muss zwingend von <font class="hcp1">links nach 
+ rechts</font> erfolgen. Die Geometrieverzerrung wird in Abhängigkeit der 
+ eingegebenen Winkel (frontaler-, seitlicher Freiwinkel und Spanwinkel) 
+ und des automatisch ermittelten kleinsten Drehteildurchmessers errechnet. 
+ Zunächst wird entsprechend den Winkeleingaben eine Konikfigur erzeugt. 
+ Falls es geometrisch möglich ist, wird als Eckenmodus <font class="hcp1">ISO</font> 
+ (konstanter Radius) verwendet. Anhand dieser zwei Figuren erfolgt die 
+ Berechnung der Profilverzerrung.</p>
+<p>Als Ausgabe liefert das Makro zwei Figuren, die in Verbindung mit einem 
+ Regelflächenprogramm, die NC-Daten für die Drehteilgeometrie liefern. 
+ Die Figuren werden in folgender Form ausgegeben:</p>
+<p class="hcp2">&#160;</p>
+<p><font class="hcp1">Obere Figur:</font> Figurname = <font class="hcp3">Drehstahl oben</font>. Figurfarbe = <font class="hcp3">Grün</font></p>
+<p><font class="hcp1">Untere Figur:</font> Figurname = <font class="hcp3">Drehstahl unten</font>. Figurfarbe = <font class="hcp3">Rot</font></p>
+<p class="hcp2">&#160;</p>
+<p>Der Abstand dieser zwei Figuren richtet sich nach den programmierten 
+ Referenz- und Sekundärhöhen. D.h. vor dem Aufruf des Drehstahlmakros muss 
+ ein <a href="../wirhlp10/Operation_starten.htm"><font class="hcp1">Operationsstart</font></a> 
+ durchgeführt werden. In bestimmten Fällen können an der unteren Figur 
+ Hinterschnitte auftreten, die geometrisch bedingt sind. Dies ist z.B. 
+ bei allen Übergängen der Fall, die geometrisch keinen Eckenmodus ISO ermöglichen 
+ (z.B. Übergang Linie -&gt; Kreis -&gt; Kreis). Hierbei wird empfohlen, 
+ den Abstand der Referenz- und Sekundärhöhe möglichst gering zu definieren 
+ (z.B. 0.5).</p>
+<p class="hcp2">&#160;</p>
+<p class="Hinweis">Hinweis:</p>
+<p>Die Funktion <font class="hcp1">Drehstahlbearbeitung</font> 
+ ist optional.</p>
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+	FilePopupInit('area3');
+	FilePopupInit('area4');
+	FilePopupInit('area5');
+	FilePopupInit('area6');
+	FilePopupInit('area7');
+	FilePopupInit('area8');
+	FilePopupInit('area9');
+	FilePopupInit('area10');
+	FilePopupInit('area11');
+	FilePopupInit('area12');
+	FilePopupInit('area13');
+	FilePopupInit('area14');
+	FilePopupInit('area15');
+//]]></script>
+</body>
+</html>

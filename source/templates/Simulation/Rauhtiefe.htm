@@ -1,0 +1,38 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Rauhtiefe" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Rauhtiefe" %}</p><p>{% trans "Die [Rauhtiefenangabe] wird vom System verwendet, um die Genauigkeit einzustellen, mit der das System kreisförmige Interpolationen in Vektoren umrechnet." %}</p>
+<p>{% trans "Dies ist der Fall, wenn 3D Werkstückoberflächen gefräst werden oder bei älteren CNC-Steuerungen, helixförmige Eintauchbewegungen, in kleine Vektoren, anstatt von Kreisinterpolationen umgerechnet werden müssen." %}</p>
+<p> </p>
+<p><img src="../CUS2.gif" alt="CUS2.gif" width="382" height="197" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,51 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Grafik NC-Bearbeitung löschen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+    font.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Grafik NC-Bearbeitung löschen" %}</p><p> </p>
+<p>{% trans "Dieser Befehl löscht die Drahtmodelldarstellung sämtlicher NC-Bearbeitungen des aktuellen Programms." %}</p>
+<p>{% trans "Der Befehl wird normalerweise verwendet, um die Bildschirmdarstellung übersichtlicher zu gestalten. Das Löschen des Drahtmodells hat keinen Einfluss auf die NC-Datenausgabe." %}</p>
+<p class="hcp1"> </p>
+<p><img src="../graf_nc.gif" alt="graf_nc.gif" width="581" height="203" border="0"/></p>
+<p class="hcp1"> </p>
+<p>{% trans "Nach der Ausführung einer NC-Bearbeitung wie z.B. [Standard Kontur-], [Regelflächen-] oder [Taschenerodierbearbeitungen], erzeugt PEPS einen Eintrag im Operationsmanager und eine grafische Darstellung der Bearbeitung als Drahtmodell." %}</p>
+<p>{% trans "Das Drahtmodell ist ein Geometrieelement vom Typ [Figur] und hat den Namen [@@GENSEC] gefolgt von dem Namen der Bearbeitungsfigur." %}</p>
+<p>{% trans "Der Befehl löscht [alle] vorhandenen NC-Bearbeitungsgrafiken. Verwenden Sie die Ikone @ zum Löschen [einzelner] NC-Bearbeitungsgrafiken." %}</p>
+<p>{% trans "Gelöschte NC-Bearbeitungsgrafiken können Sie mit dem Befehl @ #[Grafik NC-Bearbeitung neu erzeugen]# wiederherstellen." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

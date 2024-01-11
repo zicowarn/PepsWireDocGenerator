@@ -1,0 +1,37 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Umbenennen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Operationsmanager.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Umbenennen" %}</p><p> </p>
+<p>{% trans "Mit dieser Option können Sie den im #Operationsmanager# angezeigten Namen einer Solid-Geometrie verändern." %}</p>
+<p>{% trans "Wie bei MS-Windows Anwendungen üblich, können Sie den Namen ebenfalls ändern, indem Sie auf die Beschreibung klicken, dann erneut klicken und anschließend den Text des Namens verändern." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

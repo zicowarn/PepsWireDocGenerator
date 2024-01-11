@@ -1,0 +1,49 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Statistik Fenster" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../../MW_Sim_Windows.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    span.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <h2>{% trans "Statistik" %}</h2><p> </p>
+<p>{% trans "Die Statistik liefert nützliche Informationen über den Bearbeitungsprozess und ist eingeteilt in 3 Hauptbereiche:" %}</p>
+<p> </p>
+<p>{% trans "1) [Einzelsatz]: Zeigt Informationen über den [aktuell] ausgeführten [Verfahrweg]" %}</p>
+<p>{% trans "2) [Operation]: Zeigt Informationen über die [aktuell] ausgeführte [Bearbeitungsoperation]" %}</p>
+<p>{% trans "3) [Sequenz]: Zeigt Informationen (z.B. Bearbeitunszeit) über [alle] ausgeführten [Bearbeitungsoperationen]." %}</p>
+<p>{% trans "4) [Min./Max.]: Zeigt Informationen über die maximal und minimal ausgeführten XYZ-Verfahrwege und Vorschübe." %}</p>
+<p> </p>
+<p><img src="../../newUI_statistics.gif" alt="newUI_statistics.gif" width="486" height="870" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

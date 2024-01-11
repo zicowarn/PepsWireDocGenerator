@@ -1,0 +1,44 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Offset prüfen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Offset prüfen" %}</p><p>{% trans "Diese Option überprüft, ob die simulierten Bearbeitungsfigur Radien aufweist, die kleiner sind als die simulierte Offsetbahn (d.h. der Radius ist kleiner als Drahtradius + Offset)." %}</p>
+<p>{% trans "Eventuelle Problemstellen werden durch [kleine blaue Symbole] gekennzeichnet und ein Warnhinweis informiert über die Größe des Radius." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "Die Option [Offset prüfen] wird erst nach einem Neustart der Simulation aktiv." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

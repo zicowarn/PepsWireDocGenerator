@@ -1,0 +1,38 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Beispiel für eine Bearbeitungsfigur mit Endpunkt" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Beispiel für eine Bearbeitungsfigur mit Endpunkt" %}</p><p>{% trans "Die folgende Zeichnung zeigt eine offene und eine geschlossene Bearbeitungsfigur, die beide unter Angabe von [optionalen][ Endpunkten] erzeugt wurden." %}</p>
+<p>{% trans "Die Zeichnung zeigt, dass man durch die Angabe eines Endpunktes, eine beliebige Position bei der Abfahrbewegung anfahren kann." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><img src="../ENDPNTP2.gif" alt="ENDPNTP2.gif" width="494" height="349" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,37 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Registerkontrolle (Simulation)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Registerkontrolle (Simulation)" %}</p><p>{% trans "Dieser Dialog zeigt die Registereinstellungen, Offsetwerte etc. für den momentan simulierten Schnitt." %}</p>
+<p>{% trans "Auf diese Weise kann man kontrollieren, ob die Einstellungen korrekt sind oder ob Einstellungen übersehen wurden." %}</p>
+<p>{% trans "Der Dialog kann je nach verwendeter NC-Maschine variieren." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

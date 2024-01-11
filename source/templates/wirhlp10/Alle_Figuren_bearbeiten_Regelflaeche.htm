@@ -1,0 +1,52 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Alle Figuren bearbeiten" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Alle Figuren bearbeiten" %}</p><p>{% trans "Diese Option wird aktiviert, wenn Sie mehrere [identische] [Regelflächengeometrien] (haben alle den gleichen Figurnamen z.B. Fig_001) bearbeiten wollen, ohne für jede Regelfläche eine separate Bearbeitungsoperation programmieren zu müssen." %}</p><p>{% trans "Ist die Option aktiviert, reicht es aus, [nur eine] der Regelflächengeometrien [auszuwählen]." %}</p>
+<p>{% trans "Alle anderen [identischen] Regelflächengeometrien werden anschließend automatisch in der Reihenfolge bearbeitet, in der Sie erzeugt wurden." %}</p>
+<p>{% trans "Ist die Option [nicht] aktiv, wird nur die erste Figur bearbeitet." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><img src="../Ruled_Surface_Machine_all.gif" alt="Ruled_Surface_Machine_all.gif" width="653" height="312" border="0"/></p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "Aktivieren Sie in jedem Fall die Option #[Zeige alle Figuren]#, da sonst [nur eine] Regelflächenbearbeitung angezeigt wird." %}</p>
+<script type="text/javascript" language="JavaScript1.2">
+//&lt;![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a1');
+//]]&gt;
+</script>
+
+{% endblock %}
+{% endlinebreakless %}

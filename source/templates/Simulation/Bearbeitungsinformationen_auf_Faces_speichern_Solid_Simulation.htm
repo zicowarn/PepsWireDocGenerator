@@ -1,0 +1,45 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Bearbeitungsinformationen auf Faces speichern" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Bearbeitungsinformationen auf Faces speichern" %}</p><p>{% trans "Mit dieser Option können Sie die Möglichkeit, Bearbeitungsinformationen auf den geschnittenen Flächen zu speichern (z.B. welche Operation hat eine Kavität geschnitten), ein- und ausschalten." %}</p><p>{% trans "Nutzen Sie die Funktion #[Informationen aus Simulationsgrafik abfragen]#, um die Informationen abzufragen." %}</p>
+<p>{% trans "Ist die Option nicht aktiv, läuft die Simulation schneller, da keine Informationen auf den bearbeiteten Flächen gespeichert werden." %}</p>
+<p> </p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "Änderungen an dieser Optionseinstellung werden erst bei der nächsten Simulation wirksam." %}</p>
+<script type="text/javascript" language="JavaScript1.2">
+//&lt;![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a1');
+//]]&gt;
+</script>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,38 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Erzeuge nur Figuren von Features" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../WIRE_ExpertRH_context_Menu.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Erzeuge nur Figuren von Features" %}</p><p>{% trans "Diese Funktion wandelt die gewählten Features um und erzeugt ausschließlich [Bearbeitungsfiguren] (2D Bearbeitungsgeometrien)." %}</p>
+<p> </p>
+<p>{% trans "Im Gegensatz zur Funktion [#Erzeuge Figuren + Bearbeitungen von Features#] erzeugt diese keine Bearbeitungsoperationen." %}</p>
+<p>{% trans "Die fehlenden Bearbeitungsoperationen müssen manuell programmiert werden." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

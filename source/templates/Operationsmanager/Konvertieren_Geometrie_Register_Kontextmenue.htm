@@ -1,0 +1,37 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Konvertieren" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Operationsmanager.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Konvertieren" %}</p><p> </p>
+<p>{% trans "Mit dieser Option können Sie Solid-Bodies und deren Unterelemente in PEPS-Geometrieelemente (z.B. Linien/Bögen, NURBS-Kurven ...) umwandeln." %}</p>
+<p>{% trans "Beachten Sie, dass man Solid-Geometrien auch mit Hilfe des Befehls [Elemente konvertieren] umwandeln können." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

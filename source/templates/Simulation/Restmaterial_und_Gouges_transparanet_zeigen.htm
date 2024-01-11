@@ -1,0 +1,42 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Restmaterial und Gouges transparent zeigen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Restmaterial und Gouges transparent zeigen" %}</p><p>{% trans "Bei einem #[Zielteilvergleich]# zeigt das System das Restmaterial und Gouges (Hinterschnitte) [nicht] transparent an." %}</p>
+<p>{% trans "In einigen Fällen möchte der Anwender das Restmaterial jedoch transparent (durchsichtig) sehen, um das Zielteil besser erkennen zu können." %}</p>
+<p>{% trans "Aktivieren Sie diese Option, um Restmaterial und Gouges transparent anzuzeigen." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

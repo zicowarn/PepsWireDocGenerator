@@ -1,0 +1,76 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Drahtmodell - Projektions-Assistent" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    a.hcp1 { font-weight:bold; }
+    font.hcp2 { font-weight:bold; }
+    font.hcp3 { font-style:italic; }
+    img.hcp4 { border:none; }
+    p.hcp5 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Drahtmodell - Projektions-Assistent" %}</p><p>{% trans "Die Funktion führt zum Aufruf eines #Assistenten-Dialogs#, mit dem Sie die für eine 4 Achsen Regelflächenbearbeitung erforderlichen [zwei XY-planaren Geometrien] durch Projizieren von 3D Kurven ableiten können." %}</p><p>{% trans "Schritt [1] des #[Assistenten]# besteht aus der Auswahl der [Projektionsmethode]." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen. Klicken Sie auf die Schaltfläche] [Weiter &amp;gt;][, um den nächsten Dialog des Assistenten zu sehen.]" %}</p>
+<p> </p>
+<p><img src="../Wire_Proj_Man_Main_Dialog.gif" alt="" usemap="#MAP506454060" border="0" class="hcp4"/> <map id="MAP506454060" name="MAP506454060">
+<area shape="rect" coords="16, 39, 146, 320" href="javascript:BSSCPopup('../Commdata/COMMON_Bild.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="162, 138, 411, 185" href="Drahtmodell_-_Projektions-Assistent_Beispiel_2_Kurven.htm" alt=""/>
+<area shape="rect" coords="162, 187, 458, 239" href="Drahtmodell_-_Projektions-Assistent_Beispiel_1_Kurve.htm" alt=""/>
+<area shape="rect" coords="148, 323, 227, 345" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="243, 323, 316, 347" alt=""/>
+<area shape="rect" coords="414, 324, 488, 347" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area3" alt=""/></map></p>
+<p> </p>
+<p>{% trans "Es existieren zwei Möglichkeiten:" %}</p>
+<p class="dialog">{% trans "1.) Projektion über zwei 3D-Kurven." %}</p>
+<p class="hcp5"><img src="../Wire_Projection_Wiz_2.gif" alt="" border="0" class="hcp4"/></p>
+<p class="Tip_Note_Heading">{% trans "So wird es gemacht:" %}</p>
+<p class="hcp5">{% trans "#Projektion über zwei 3D-Kurven#" %}</p>
+<p> </p>
+<p class="dialog">{% trans "2.) Projektion einer Kurve unter einem konstanten Winkel." %}</p>
+<p class="hcp5"><img src="../Wire_Projection_Wiz_1.gif" alt="" border="0" class="hcp4"/></p>
+<p class="Tip_Note_Heading">{% trans "So wird es gemacht:" %}</p>
+<p class="hcp5">{% trans "#Projektion einer Kurve unter einem konstanten Winkel#" %}</p>
+<p> </p>
+<p> </p>
+<script type="text/javascript" language="JavaScript1.2">
+//&lt;![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a2');
+        FilePopupInit('area1');
+        FilePopupInit('area2');
+        FilePopupInit('area3');
+//]]&gt;
+</script>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,45 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Synchronisationslinien anpassen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Synchronisationslinien anpassen" %}</p><p>{% trans "Diese Option wird verwendet, wenn die Geometrie der oberen oder unteren Regelflächenebene geometrisch verändert wurde oder durch eine Transformation in der Z-Achse verschoben wurden und vorhandene Synchronisationslinien neu angepasst werden müssen." %}</p>
+<p> </p>
+<p>{% trans "[Beispiel]:" %}</p>
+<p>{% trans "Beide Ebenen einer Regelfläche wurden auf der XY-Ebene gezeichnet und mit Synchronisationslinien versehen." %}</p>
+<p>{% trans "Es stellt sich aber im Zuge der Arbeit heraus, dass die obere Ebene in der Z-Achse verschoben werden muss, um komplexere Synchronisationslinien in 3D zu zeichnen." %}</p>
+<p>{% trans "Damit die in der XY-Ebene gezeichneten Synchronisationslinien nicht verloren gehen, wählt man die Option [Anpassen] (siehe [rechte Maustaste] od. [horizontale Ikonenleiste]), um die Synchronisationslinien anzupassen." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

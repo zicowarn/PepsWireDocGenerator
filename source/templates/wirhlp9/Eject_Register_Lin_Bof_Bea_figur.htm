@@ -1,0 +1,58 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Eject Register" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Eject Register" %}</p><p>{% trans "Einige Drahterosionsmaschinen verfügen über eine Einrichtung zum automatischen Entfernen von Ausfallteilen (Ejector od. Ausfallteilentsorger)." %}</p><p>{% trans "Die Maschine positioniert dabei den Ausfallteilentsorger auf eine bestimmbare XY-Koordinaten über dem Ausfallteil, wobei der Entsorger einen Schlag auf das Ausfallteil ausführt." %}</p>
+<p>{% trans "Mit den Optionen in diesem Dialog können Sie bei der Figurerzeugung festlegen, an welcher XY-Koordinate der Ausfallteilentsorger positioniert werden soll." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><img src="../CREPRFG5_shg.gif" usemap="#AreaMap0" alt="CREPRFG5_shg.gif" width="376" height="503" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="19, 75, 356, 127" href="javascript:BSSCPopup('Digitalisiere_Ejectpunkt_Lin_Bof_Bea_figur.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="17, 125, 292, 143" href="javascript:BSSCPopup('Schwerpunkt_der_Figur_als_Ejectpunkt_verwenden.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="17, 144, 279, 162" href="javascript:BSSCPopup('Startloch_der_Figur_als_Ejektpunkt_verwenden.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="12, 39, 92, 60" href="Linien_Boegen_Bearbeitungsfigur.htm" alt=""/>
+<area shape="rect" coords="97, 40, 153, 60" href="Optionen_Register_Linien_Boegen_Bearbeitungsfigur.htm" alt=""/>
+<area shape="rect" coords="154, 40, 196, 61" href="Report_Register_Lin_Bof_Bea_figur.htm" alt=""/>
+<area shape="rect" coords="21, 472, 115, 499" href="javascript:BSSCPopup('../Commdata/COMMON_Schliessen.htm',400,300);" id="area4" alt=""/>
+<area shape="rect" coords="129, 474, 235, 497" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area5" alt=""/>
+<area shape="rect" coords="264, 472, 350, 493" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area6" alt=""/>
+</map> </p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+	FilePopupInit('area3');
+	FilePopupInit('area4');
+	FilePopupInit('area5');
+	FilePopupInit('area6');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

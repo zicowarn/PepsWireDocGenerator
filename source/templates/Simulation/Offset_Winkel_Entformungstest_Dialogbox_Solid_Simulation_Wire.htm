@@ -1,0 +1,51 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Offset Winkel (Entformungstest Dialogbox)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Offset Winkel (Entformungstest Dialog)" %}</p><p>{% trans "Auf Grund der großen Anzahl möglicher Entformungstests, kann das System den Entformungstest bei [nicht] vertikalen Ausfallteilen (z.B. Schrägschiebern), [nicht automatisch] ausführen." %}</p>
+<p>{% trans "In diesem Dialogbereich können Sie einstellen, entlang welcher Richtungsachse und in welchem Winkel der Entformungstest ausgeführt werden soll." %}</p>
+<p>{% trans "Als Richtungsachse können Sie theoretisch jede Achse bestimmen, aber normalerweise nimmt man die Achsen [+Z] oder -[Z]. Das folgende Beispiel verwendet die [+Z] Richtungsachse" %}</p>
+<p> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "+Z Richtungsachse" %}</p>
+<p>{% trans "Ist der Parameter [Von Richtungsachse] auf 0 Grad eingestellt ist, verläuft der Entformungstest entlang der vertikalen Z-Achse." %}</p>
+<p>{% trans "Wenn der Parameter [Von Richtungsachse] auf 30 Grad eingestellt ist, wird die Achse bezogen auf die Vertikale, um 30 Grad rotiert - aber in welche Richtung?" %}</p>
+<p> </p>
+<p>{% trans "Wird im Feld [Um Richtungsachse] e. Winkel v.[0] Grad bestimmt, verläuft d. 30 Grad Winkel in [+X] Richtung (siehe Bild)." %}</p>
+<p>{% trans "Wird im Feld [Um Richtungsachse] e. Winkel v. [90] Grad bestimmt, verläuft d. 30 Grad Winkel in [+Y] Richtung (siehe Bild)." %}</p>
+<p>{% trans "Wird im Feld [Um Richtungsachse] e. Winkel v. [180] Grad bestimmt, verläuft d. 30 Grad Winkel in [-X] Richtung (siehe Bild)." %}</p>
+<p><img src="../separate_axis.gif" alt="separate_axis.gif" width="457" height="354" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

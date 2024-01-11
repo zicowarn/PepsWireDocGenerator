@@ -1,0 +1,43 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Einfügeposition (Linien&sol;Bögen => Bearbeitungsfigur)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Einfügeposition (Linien/Bögen =&gt; Bearbeitungsfigur)" %}</p><p>{% trans "Dieses Textfeld erlaubt es dem Anwender die Einfügeposition der zu erzeugenden Bearbeitungsfigur zu beeinflussen." %}</p>
+<p>{% trans "Die Einfügeposition hat nur dann eine Bedeutung, wenn weitere Kopien einer vorhandenen Bearbeitungsfigur erzeugt werden sollen." %}</p>
+<p>{% trans "Dies kann mit der Optionen [Kopieren] oder [Figur einfügen] des Dialogs [Figur Optionen] oder dem Befehl #[Kreise/Bögen =&amp;gt; Mehrfachfigur]# im Menü [Vorbereitung &amp;gt; Diverses] geschehen." %}</p>
+<p>{% trans "Die Einfügeposition wird normalerweise direkt als [XY-Koordinate] eingegeben oder mit der Schaltfläche @ und mit Hilfe der [Fangfunktionen] [Endpunkt - Koordinaten] in der Zeichnung ermittelt." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

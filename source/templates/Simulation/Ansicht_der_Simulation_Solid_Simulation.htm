@@ -1,0 +1,54 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Ansicht der Simulation" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Ansicht der Simulation" %}</p><p>{% trans "Mit diesen Schaltflächen können Sie die Simulationsansicht steuern." %}</p>
+<p>{% trans "[Rückg.](ängig): Hebt die letzte Ansichtsänderung auf (Nur #Solid-Simulation#)." %}</p>
+<p>{% trans "[Origin.](nal): Zeigt die Ansicht, mit der die Simulation gestartet wurde (Nur #Solid-Simulation#)." %}</p>
+<p>{% trans "[XYZ], [XY], [XZ], [YZ]: Mit diesen Schaltflächen können Sie die in der Simulation angezeigte Ansicht einstellen." %}</p>
+<p>{% trans "[Zentr.](ieren): Zentriert die Simulationsgrafik in der Mitte des Grafikfensters und ist hilfreich, wenn die Simulationsgrafik außerhalb des Grafikfenster liegt." %}</p>
+<p>{% trans "[Einpas.](sen): Zentriert entweder das [Rohteil] oder die [gesamte Simulationsgrafik] in der Mitte des Grafikfensters. Was zentriert wird, legen Sie mit der Schaltfläche [Rohteil / Alles] fest." %}</p>
+<p>{% trans "[Rohteil / Alles]: - Diese Schaltfläche ist doppelt belegt und zeigt entweder [Rohteil] oder [Alles]." %}</p>
+<p>{% trans "Wird [Rohteil] angezeigt, wird bei Anwendung der Schaltflächen [Zentr.](ieren) oder [Einpas].(sen) [nur das Rohteil] zentriert bzw. eingepasst." %}</p>
+<p>{% trans "Eventuell vorhandene Spannmittelgrafiken bleiben unberücksichtigt." %}</p>
+<p>{% trans "Wird [Alles] angezeigt, werden auch Spannmittelgrafiken zentriert bzw. eingepasst." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<h2 style="margin-top: 4.00pt; margin-bottom: 0.00pt;">{% trans "Interaktives Ändern der Simulationsansicht" %}</h2>
+<p>{% trans "Normalerweise wird die Simulationsansicht interaktiv mit Hilfe der Maus gesteuert. Siehe: [#Interaktives Zoomen/Rotieren im PEPS Grafikfenster#.]" %}</p>
+<p>{% trans "Die Simulationsansicht lässt sich auch mit Hilfe der Tastatur verändern." %}</p>
+<p>{% trans "Dabei können Sie die [Umschalt]-Taste [gedrückt halten] und die [vier Pfeiltasten] der Tastatur zum rotieren und drehen der Werkstückgrafik verwenden." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

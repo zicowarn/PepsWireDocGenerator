@@ -1,0 +1,58 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Optionen XXX" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Extra.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    span.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Optionen" %}</p><p> </p>
+<p>{% trans "In diesem Dialog können Sie den Dialog [NC-Daten editieren / kopieren] voreinstellen." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><img src="../Edit_NC-Data_wire_Options.gif" alt="Edit_NC-Data_wire_Options.gif" width="506" height="266" border="0"/></p>
+<p>{% trans "[Ziellaufwerk]: Hier können Sie einstellen, in welches Verzeichnis die Daten kopiert werden sollen, wenn Sie die Option @ [Kopiere Datei auf Diskette] verwenden." %}</p>
+<p> </p>
+<p>{% trans "[DNC-Aufruf]: In diesem Feld können Sie den Pfad zur Datenübertragungssoftware und den Namen des Übertragungsprogramms eingeben." %}</p>
+<p>{% trans "Normalerweise ist dies die PEPS Software [WNCCOMMS32.EXE], die im PEPS Unterverzeichnis ...\[System] abgelegt ist (Optionale Dienstleistung)." %}</p>
+<p> </p>
+<p>{% trans "[Editor-Software]: Hier können Sie einstellen, welcher Texteditor zum Editieren der NC-Dateien verwendet werden soll." %}</p>
+<p>{% trans "Die Voreinstellung ist das Programm [MS Windows Notepad.exe]." %}</p>
+<p> </p>
+<p>{% trans "[Software für Simulation]: In diesem Feld können Sie den Pfad zu einer [externen Simulationssoftware] eingeben." %}</p>
+<p>{% trans "[Ziellaufwerk 2]: Hier können Sie ein [zweites, alternatives] Laufwerk (z.B. für einen [USB]-Stick) einstellen, in das die Daten kopiert werden sollen, wenn Sie die Schaltfläche @ [Ziellaufwerk 2] klicken." %}</p>
+<p> </p>
+<p>{% trans "[Kopiere Einrichteblatt:] Ist diese Option aktiv, wird neben den NC-Daten, auch das Einrichteblatt in das Ziellaufwerk kopiert." %}</p>
+<p> </p>
+<p>{% trans "[Programm Name anhängen:] XXX" %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

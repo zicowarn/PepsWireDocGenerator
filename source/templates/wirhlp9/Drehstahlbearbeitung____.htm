@@ -1,0 +1,94 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Drehstahlbearbeitung" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+    font.hcp3 { font-style:italic; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Drehstahlbearbeitung" %}</p><p>{% trans "Das Drehstahlmodul berechnet die zum Drahterodieren von Profildrehstählen erforderliche projizierte Geometrie, in Abhängigkeit der folgenden Winkelangaben: [frontaler Freiwinkel, sei][t][licher Freiwinkel] und [Spanwinkel .]" %}</p><p>{% trans "[Siehe auch:] #[Drehstahl programmieren]#" %}</p>
+<p class="hcp2"> </p>
+<p>{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp2"> </p>
+<p><img src="../DREHSTA_shg.gif" usemap="#AreaMap0" alt="DREHSTA_shg.gif" width="460" height="509" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="13, 31, 214, 190" href="javascript:BSSCPopup('Spanwinkel_frontaler_Freiwinkel_seitlicher_Freiwinkel_Drehstahlbearbeitung.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="222, 37, 446, 217" href="javascript:BSSCPopup('../Commdata/COMMON_Bild.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="6, 478, 88, 507" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="95, 477, 180, 499" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area4" alt=""/>
+<area shape="rect" coords="192, 475, 276, 500" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area5" alt=""/>
+<area shape="rect" coords="315, 479, 450, 503" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area6" alt=""/>
+<area shape="rect" coords="10, 391, 215, 415" href="javascript:BSSCPopup('Frontaler_Freiwinkel_durch_Vorrichtung__Drehstahlbearbeitung.htm',400,300);" id="area7" alt=""/>
+<area shape="rect" coords="11, 441, 162, 462" href="javascript:BSSCPopup('Bearbeitung_erzeugen_Drehstahlbearbeitung.htm',400,300);" id="area8" alt=""/>
+<area shape="rect" coords="230, 443, 387, 468" href="javascript:BSSCPopup('Ausgabe_ISO_Radien_Drehstahlbearbeitung.htm',400,300);" id="area9" alt=""/>
+<area shape="rect" coords="11, 204, 208, 256" href="javascript:BSSCPopup('Zu_bearbeitende_Figur_Drehstahlbearbeitung.htm',400,300);" id="area10" alt=""/>
+<area shape="rect" coords="228, 223, 386, 250" href="javascript:BSSCPopup('Drehstahlschneide_unten_Drehstahlbeabeitung.htm',400,300);" id="area11" alt=""/>
+<area shape="rect" coords="224, 351, 446, 379" href="javascript:BSSCPopup('Versatz_zur_Mitte_Drehstahlbearbeitung.htm',400,300);" id="area12" alt=""/>
+<area shape="rect" coords="10, 416, 150, 440" href="javascript:BSSCPopup('Ausgabe_variable_Konik_Drehstahlbearbeitung.htm',400,300);" id="area13" alt=""/>
+<area shape="rect" coords="230, 420, 390, 441" href="javascript:BSSCPopup('Ausgabe_Parameter_als_Text_Drehstahlbearbeitung.htm',400,300);" id="area14" alt=""/>
+<area shape="rect" coords="10, 259, 210, 307" href="javascript:BSSCPopup('Punkt_fuer_Winkelwechsel_Drehstahlbearbeitung.htm',400,300);" id="area15" alt=""/>
+</map> </p>
+<p> </p>
+<h2 style="margin-top: 4.00pt; margin-bottom: 0.00pt;">{% trans "Geometrieerstellung" %}</h2>
+<p>{% trans "Für die Berechnung ist es unerlässlich, dass die Geometrie des Drehteils [unterhalb] der X-Achse, im [rechten X/Y](-) Quadranten erstellt wird. Da der kleinste Drehteildurchmesser für die Projektion maßgebend ist, sollten alle Durchmessermaße wirklichkeitsgetreu gezeichnet werden, d.h. die X-Achse stellt als Bezug die Drehachse dar. Die Geometrie muss in eine #[Bearbeitungsfigur]# umgewandelt werden. Der [Richtungssinn] der Figur muss zwingend von [links nach rechts] erfolgen. Die Geometrieverzerrung wird in Abhängigkeit der eingegebenen Winkel (frontaler-, seitlicher Freiwinkel und Spanwinkel) und des automatisch ermittelten kleinsten Drehteildurchmessers errechnet. Zunächst wird entsprechend den Winkeleingaben eine Konikfigur erzeugt. Falls es geometrisch möglich ist, wird als Eckenmodus [ISO] (konstanter Radius) verwendet. Anhand dieser zwei Figuren erfolgt die Berechnung der Profilverzerrung." %}</p>
+<p>{% trans "Als Ausgabe liefert das Makro zwei Figuren, die in Verbindung mit einem Regelflächenprogramm, die NC-Daten für die Drehteilgeometrie liefern. Die Figuren werden in folgender Form ausgegeben:" %}</p>
+<p class="hcp2"> </p>
+<p>{% trans "[Obere Figur:] Figurname = [Drehstahl oben]. Figurfarbe = [Grün]" %}</p>
+<p>{% trans "[Untere Figur:] Figurname = [Drehstahl unten]. Figurfarbe = [Rot]" %}</p>
+<p class="hcp2"> </p>
+<p>{% trans "Der Abstand dieser zwei Figuren richtet sich nach den programmierten Referenz- und Sekundärhöhen. D.h. vor dem Aufruf des Drehstahlmakros muss ein #[Operationsstart]# durchgeführt werden. In bestimmten Fällen können an der unteren Figur Hinterschnitte auftreten, die geometrisch bedingt sind. Dies ist z.B. bei allen Übergängen der Fall, die geometrisch keinen Eckenmodus ISO ermöglichen (z.B. Übergang Linie -&amp;gt; Kreis -&amp;gt; Kreis). Hierbei wird empfohlen, den Abstand der Referenz- und Sekundärhöhe möglichst gering zu definieren (z.B. 0.5)." %}</p>
+<p class="hcp2"> </p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "Die Funktion [Drehstahlbearbeitung] ist optional." %}</p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+	FilePopupInit('area3');
+	FilePopupInit('area4');
+	FilePopupInit('area5');
+	FilePopupInit('area6');
+	FilePopupInit('area7');
+	FilePopupInit('area8');
+	FilePopupInit('area9');
+	FilePopupInit('area10');
+	FilePopupInit('area11');
+	FilePopupInit('area12');
+	FilePopupInit('area13');
+	FilePopupInit('area14');
+	FilePopupInit('area15');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

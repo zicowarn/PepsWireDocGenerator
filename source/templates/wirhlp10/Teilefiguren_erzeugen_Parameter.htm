@@ -1,0 +1,73 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Teilefiguren erzeugen Parameter" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    b.hcp1 { mso-bidi-font-weight:normal; }
+    span.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Teilefiguren erzeugen - Parameter" %}</p><p> </p>
+<p class="Tip_Note_Heading">{% trans "[Vorgehensweise:][ ]" %}</p>
+<p>{% trans "Zunächst ist eine geschlossene Figur für die zu schneidende Geometrie zu erstellen. Anschließend wird die Funktion [Teilfiguren] [[erzeugen] aufgerufen.]" %}</p>
+<p>{% trans "An der ausgewählten Figur wird nun ein Richtungspfeil angezeigt." %}</p>
+<p>{% trans "In Figurrichtung sind nun die Endpunkte für die Teilfiguren zu definieren, sowie deren Ausfahrabstand und die Anzahl der Schnitte pro Teilefigur." %}</p>
+<p>{% trans "Für das [letzte Teilstück] der Figur müssen Sie die Schaltfläche [Letztes Teilstück erstellen] verwenden, um die Funktion zu beenden." %}</p>
+<p class="dialog"> </p>
+<p class="dialog">{% trans "Die Dialogparameter:" %}</p>
+<p class="Tip_Note_Heading">{% trans "Figur" %}</p>
+<p>{% trans "Figur auswählen (Original Figur)" %}</p>
+<p> </p>
+<p class="Tip_Note_Heading">{% trans "Endpunkt" %}</p>
+<p>{% trans "Definiert den Endpunkt der jeweiligen Teilfigur." %}</p>
+<p> </p>
+<p class="Tip_Note_Heading">{% trans "Ausfahrlänge" %}</p>
+<p>{% trans "Ausfahrlänge für die jeweilige Teilfigur." %}</p>
+<p> </p>
+<p class="Tip_Note_Heading">{% trans "Anzahl der Schnitte" %}</p>
+<p>{% trans "Anzahl der Schnitte für die jeweilige Teilfigur." %}</p>
+<p> </p>
+<p class="Tip_Note_Heading">{% trans "Schnittschema" %}</p>
+<p>{% trans "Möglichkeit zum Import eines #Schnittschemas# aus der Schnittschemadatenbank." %}</p>
+<p> </p>
+<p class="Tip_Note_Heading">{% trans "Teilfigur erstellen" %}</p>
+<p>{% trans "Mit dieser Schaltfläche werden die jeweiligen Teilfiguren erzeugt." %}</p>
+<p> </p>
+<p class="Tip_Note_Heading">{% trans "Letztes Teilstück erstellen" %}</p>
+<p>{% trans "Dieses Schaltfläche [muss] verwendet werden, zur Definition des [letzten Teilstücks]." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "Diese Funktion ist optional." %}</p>
+<p> </p>
+<p> </p>
+
+{% endblock %}
+{% endlinebreakless %}

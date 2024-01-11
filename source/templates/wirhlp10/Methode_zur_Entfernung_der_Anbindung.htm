@@ -1,0 +1,56 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Methode zur Entfernung der Anbindung(en)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Methode zur Entfernung der Anbindung(en)" %}</p><p>{% trans "Legt fest, mit welcher Methode Anbindungen (Haltestege) entfernt werden." %}</p><p class="hcp1"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp1"> </p>
+<p><img src="../ANBINDUN_shg.gif" usemap="#AreaMap0" alt="ANBINDUN_shg.gif" width="330" height="178" border="0"/> <map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="5,70,323,87" href="Kein_Entfernen_der_Anbindung_am_Ende_der_Operation.htm" alt=""/>
+<area shape="rect" coords="5,95,322,113" href="javascript:BSSCPopup('Ausfallteilentsorger_der_NC_Maschine_verwenden.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="5,120,324,140" href="Automatisches_Entfernen_der_Anbindungen_am_Ende_der_Operation.htm" alt=""/>
+<area shape="rect" coords="6,145,325,164" href="Automatisches_Entfernen_der_Anbindungen_NACH_1ten_Schnitten.htm" alt=""/>
+<area shape="rect" coords="6,43,326,64" href="Automatisches_Entfernen_der_Anbindungen_am_Ende_der_Figur.htm" alt=""/>
+<area shape="rect" coords="9, 20, 324, 42" href="Stopp_Anbindung_mit_dem_ersten_Schnitt_entfernen.htm" alt=""/></map></p>
+<script type="text/javascript" language="JavaScript1.2">
+//&lt;![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('area1');
+//]]&gt;
+</script>
+
+{% endblock %}
+{% endlinebreakless %}

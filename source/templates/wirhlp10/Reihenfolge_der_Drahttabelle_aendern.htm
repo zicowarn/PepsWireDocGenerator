@@ -1,0 +1,44 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Reihenfolge der Drahttabelle ändern" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    li.hcp1 { font-size:9pt; }
+    font.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "@ Reihenfolge der Drahttabelle ändern" %}</p><ul>
+	<li class="hcp1"><p class="Tip_Note_Text_Bulleted">{% trans "Rufen Sie im Menü #[Bearbeitung]# den Befehl #[Operation starten]# auf und wählen Sie das Register [Technologie]. Klicken Sie im Dialog auf die Schaltfläche @." %}</p></li>
+	<li class="hcp1"><p class="Tip_Note_Text_Bulleted">{% trans "Klicken Sie den Eintrag den Sie verschieben wollen mit der [linken Maustaste] an. Klicken Sie anschließend auf eine der Schaltflächen @, um den Eintrag zu verschieben." %}</p></li>
+</ul>
+
+{% endblock %}
+{% endlinebreakless %}

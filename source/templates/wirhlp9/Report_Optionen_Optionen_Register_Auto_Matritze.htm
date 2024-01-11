@@ -1,0 +1,49 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Report Optionen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    span.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Report Optionen" %}</p><p>{% trans "Diese Optionen erlauben es, einen Überblick über die [kleinsten] und [größten Radien] zu bekommen." %}</p>
+<p> </p>
+<p class="dialog">{% trans "Zeige Radien Report" %}</p>
+<p>{% trans "Ist diese Option aktiv, zeigt das System nach Ausführung des Befehls '[Auto Matritzen / Stempel]' den folgenden Dialog." %}</p>
+<p>{% trans "Er informiert über die [kleinsten/größten Radien] in den aktuell ausgewählten Zeichnungsdasten." %}</p>
+<p> </p>
+<p><img src="../Radien_Report.gif" alt="" style="border: none;" border="0"/></p>
+<p> </p>
+<p class="dialog">{% trans "Markiere kleine Radien" %}</p>
+<p>{% trans "[Radien] die [kleiner oder gleich] sind, als der hier eingestellte Wert, werden im der Zeichnung durch [Punkte] gekennzeichnet." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

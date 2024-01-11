@@ -1,0 +1,44 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Solid ausblenden &sol; einblenden" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Operationsmanager.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Solid ausblenden / einblenden" %}</p><p> </p>
+<p>{% trans "Wird verwendet, um Solidgeometrien auszublenden. Das heißt die gewählte Solidgeometrie wird nicht mehr im Grafikfenster dargestellt." %}</p>
+<p>{% trans "Eine ausgeblendete Geometrie wird im #[Operationsmanager]# durch ein Symbol @ gekennzeichnet." %}</p>
+<p>{% trans "Sie können eine ausgeblendete Geometrie wieder einblenden, indem Sie mit der [rechten] Maustaste auf den entsprechenden Eintrag im #[Operationsmanager]# klicken und die Option [Solid einblenden] wählen." %}</p>
+<p>{% trans "Sie können ALLE [ausgeblendeten] Geometrien einblenden, indem Sie mit der [rechten] Maustaste irgendwo in das Grafikfenster klicken und die Option [Alle ausgeblendeten Solid zeigen] wählen." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

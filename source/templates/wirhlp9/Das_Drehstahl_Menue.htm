@@ -1,0 +1,50 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Das Drehstahl Menü" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <h1>{% trans "Das Drehstahl Menü" %}</h1><p class="hcp1"> </p>
+<p>{% trans "Im Menü [Drehstahl] finden Sie Befehle, um die Geometrie von verschiedenen Drehstählen zu erzeugen." %}</p>
+<p> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp1"> </p>
+<p>{% trans "&lt;img src='../WIR9b_shg.gif' alt='' usemap='#MAP485224823' style='border: none;' border='0'/&gt;&lt;map id='MAP485224823' name='MAP485224823'&gt;###&lt;/map&gt;" %}<map id="MAP485224823" name="MAP485224823">
+<area shape="rect" coords="2, 69, 269, 97" href="Drehstahlbearbeitung____.htm" alt=""/>
+<area shape="rect" coords="4, 99, 268, 129" href="Einseitiger_Tangentialdrehstahl.htm" alt=""/>
+<area shape="rect" coords="4, 130, 270, 160" href="Wechselseitiger_Tangentialdrehstahl.htm" alt=""/>
+</map> </p>
+
+{% endblock %}
+{% endlinebreakless %}

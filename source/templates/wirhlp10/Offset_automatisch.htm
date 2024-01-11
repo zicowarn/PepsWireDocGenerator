@@ -1,0 +1,42 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Offset automatisch" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Offset wie Figurrichtung" %}</p><p>{% trans "Wählen Sie diese Option, wenn das System das [Offset automatisch] auf der [Basis der Richtung der Figur] berechnen soll." %}</p>
+<p>{% trans "Dies geschieht durch Prüfung der Lage der Startposition (innen oder außen) und Ermitteln der Richtung der Bearbeitungsfigur." %}</p>
+<p>{% trans "Diese Funktion kann nur bei geschlossenen Umrissen verwendet werden. Eine automatische Richtungsänderung der Figur findet nicht statt." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

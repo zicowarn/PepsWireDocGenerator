@@ -1,0 +1,88 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Einfahren - Modi</title>
+<link rel="StyleSheet" href="../wirhlp10.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+font.hcp1 { font-weight:bold; }
+p.hcp2 { margin-top:0;
+margin-bottom:0; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="dialog">Einfahren Gerade</p>
+<p>Führt zu einer linearen (geraden) Einfahrbewegung. Der Draht fährt gerade 
+ von der Startlochbohrungsposition, auf die Bearbeitungsstartposition einer 
+ Bearbeitungsfigur.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="dialog">Einfahren Bogen mit Eckenmodus</p>
+<p>Führt zu einer <font class="hcp1">kreisförmigen tangentialen 
+ Einfahrbewegung</font> an die Bearbeitungsfigur.</p>
+<p>Für diese Option muss man einen Einfahrradius programmieren. Der Radius 
+ der Einfahrbewegung muss <font class="hcp1">kleiner sein</font> 
+ als der <font class="hcp1">Abstand zwischen</font> der <font class="hcp1">Start(loch)position</font> und der <font class="hcp1">Bearbeitungsstartposition auf der Figur</font> 
+ und <font class="hcp1">größer sein</font> als der <font class="hcp1">Drahtradius + Offset</font>.</p>
+<p class="Block_Text">Es existieren zwei Methoden für das kreisförmige 
+ Einfahren, nämlich:</p>
+<p><font class="hcp1">Einfahren Bogen mit ISO</font> und 
+ <font class="hcp1">Einfahren Bogen mit Eckenmodus</font></p>
+<p>Der <font class="hcp1">Unterschied</font> zwischen den 
+ Methoden wird <font class="hcp1">nur bei der Bearbeitung 
+ von Koniken</font> offensichtlich.</p>
+<p>Normalerweise verwendet man die Einfahroption <font class="hcp1">Einfahren 
+ Bogen mit ISO</font>. Sie ist auch die einzig mögliche Methode wenn man 
+ Regelflächen bogenförmig anfahren möchte.</p>
+<p>Die folgende Zeichnung zeigt die Methode <font class="hcp1">Einfahren 
+ Bogen mit ISO</font>.</p>
+<p class="hcp2">&#160;</p>
+<p><img src="../LEADISO.gif" alt="LEADISO.gif" width="283" height="179" border="0"></p>
+<p class="hcp2">&#160;</p>
+<p>Wird die Option <font class="hcp1">Einfahren Bogen mit 
+ Eckenmodus</font> aktiviert, wird je nach Einstellung des <font class="hcp1"><a href="javascript:void(0);" id="a3" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('Eckenmodus.htm',400,300);return false;">Eckenmodus</a></font> 
+ im Dialog <font class="hcp1">Standard Konturbearbeitung</font> 
+ entweder ein ISO-Radius oder ein Drehspindelradius erzeugt.</p>
+<p>Die Option <font class="hcp1">Einfahren Bogen mit Eckenmodus</font> 
+ ist nicht identisch mit der Einfahroption <font class="hcp1">Einfahren 
+ Bogen mit ISO</font>.</p>
+<p class="hcp2">&#160;</p>
+<p><font class="hcp1">Einfahren Bogen mit: ISO Eckenmodus</font></p>
+<p><img src="../LEADISOC.gif" alt="LEADISOC.gif" width="279" height="176" border="0"></p>
+<p><font class="hcp1">Einfahren Bogen mit: Drehspindel Eckenmodus</font></p>
+<p><img src="../LEADCONC.gif" alt="LEADCONC.gif" width="287" height="180" border="0"></p>
+<p class="hcp2">&#160;</p>
+<p>Die oben gezeigten Einfahrmethoden (<font class="hcp1">ISO</font> 
+ und <font class="hcp1">Drehspindel</font>) sollten man nur 
+ programmieren wenn die NC-Steuerung dies auch zulässt.</p>
+<p>Verwenden Sie im Zweifelsfall die Option <font class="hcp1">Einfahren 
+ Bogen mit ISO</font>.</p>
+<p>Beachten Sie ebenfalls, dass ein bogenförmigen Anfahren auf einem Radiuselement 
+ bei vielen Steuerungen zu Offsetfehlern führt.</p>
+<p>Fahren Sie deshalb besser auf einem geraden Element an.</p>
+<p>&#160;</p>
+<p class="dialog">Einfahren Bogen mit ISO</p>
+<p>Führt zu einer bogenförmigen Einfahrbewegung. Der Draht fährt im programmierten 
+ Radius von der Startlochbohrungsposition, auf die Bearbeitungsstartposition 
+ einer Bearbeitungsfigur.</p>
+<p><font class="hcp1">Ist eine Konik programmiert</font>, 
+ bildet die Einfahrbewegung immer <font class="hcp1">einen 
+ ISO-Radius</font>.</p>
+<p>Der <font class="hcp1">Radius</font> der Einfahrbewegung 
+ <font class="hcp1">muss angegeben werden</font>. Bei Radius 
+ 0 (Null) wird gerade angefahren.</p>
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a3');
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Solid Register (Einstellungen)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Solid Register (Einstellungen)" %}</p><p>{% trans "Mit diesen Optionen legen Sie fest, wie die Simulationsform #[Solid]# ausgeführt wird." %}</p><p class="hcp1"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp1"> </p>
+<p><img src="../LI_E_SOL_W_shg.gif" usemap="#AreaMap0" alt="LI_E_SOL_W_shg.gif" width="349" height="457" border="0"/> <map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="22,76,242,96" href="javascript:BSSCPopup('Bearbeitungen_mit_WKZ_Farbe_markieren.htm');" id="area1" alt=""/>
+<area shape="rect" coords="23,421,99,442" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm');" id="area2" alt=""/>
+<area shape="rect" coords="104,421,180,445" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm');" id="area3" alt=""/>
+<area shape="rect" coords="183,421,257,444" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm');" id="area4" alt=""/>
+<area shape="rect" coords="266,421,339,443" href="javascript:BSSCPopup('../Commdata/COMMON_Vorgaben.htm');" id="area5" alt=""/>
+<area shape="rect" coords="23,100,199,121" href="javascript:BSSCPopup('Schnittebenen_farbig_anzeigen.htm');" id="area6" alt=""/>
+<area shape="rect" coords="20,122,218,143" href="javascript:BSSCPopup('Spannmittel_bei_Schnitt_ausblenden.htm');" id="area7" alt=""/>
+<area shape="rect" coords="11,33,89,53" href="Farben_Register_Einstellungen.htm" alt=""/>
+<area shape="rect" coords="264,34,338,53" href="Draht_Register_Einstellungen_.htm" alt=""/>
+<area shape="rect" coords="83,54,169,72" href="Kollisionen_Register_Einstellungen.htm" alt=""/>
+<area shape="rect" coords="171,50,263,70" href="Toleranzen_Register_Einstellungen.htm" alt=""/>
+<area shape="rect" coords="262,54,339,71" href="Ansicht_Register_Einstellungen.htm" alt=""/>
+<area shape="rect" coords="22,163,275,183" href="javascript:BSSCPopup('Restmaterial_und_Gouges_transparanet_zeigen.htm',400,300);" id="area8" alt=""/>
+<area shape="rect" coords="22,144,246,162" href="javascript:BSSCPopup('Schnittebenen_auch_durch_Spannmittel.htm',400,300);" id="area9" alt=""/>
+<area shape="rect" coords="19,230,252,247" href="javascript:BSSCPopup('Simulation_in_einer_Log_Datei_speichern.htm',400,300);" id="area10" alt=""/>
+<area shape="rect" coords="21,185,286,205" href="javascript:BSSCPopup('Parasolid_Attribute_bei_Soliderzeugung_verwenden.htm',400,300);" id="area11" alt=""/>
+<area shape="rect" coords="21,206,230,228" href="javascript:BSSCPopup('Bild_von_fertiger_Simulation_speichern_Solid_Simulation.htm',400,300);" id="area12" alt=""/>
+<area shape="rect" coords="21,249,192,270" href="javascript:BSSCPopup('Simulation_endlos_wiederholen.htm',400,300);" id="area13" alt=""/>
+<area shape="rect" coords="20,270,300,289" href="javascript:BSSCPopup('Bei_Auswahl_von_Punkten_ein_Ergebnisfenster_zeigen.htm',400,300);" id="area14" alt=""/>
+<area shape="rect" coords="21,314,251,332" href="javascript:BSSCPopup('Daten_bereinigen_bei_Erzeugung_von_Solids.htm',400,300);" id="area15" alt=""/>
+<area shape="rect" coords="89,31,169,53" href="Dialoge_Register_Einstellungen_.htm" alt=""/>
+<area shape="rect" coords="170,32,263,51" href="Simulation_Register_Einstellungen_.htm" alt=""/>
+<area shape="rect" coords="20,332,246,353" href="javascript:BSSCPopup('Zeige_Nullpunktsymbol_auf_X0Y0.htm',400,600);" id="area16" alt=""/>
+<area shape="rect" coords="19,355,250,374" href="Zeige_Nullpunktsymbol_in_Ecke.htm" alt=""/>
+<area shape="rect" coords="19,375,293,397" href="Offsettierte_Drahtbahnkurven_bei_Simulationsende_behalten_Solid_Simulation.htm" alt=""/>
+<area shape="rect" coords="15, 289, 336, 310" href="javascript:BSSCPopup('STL_Dateien_im_Binaerformat_abspeichern.htm',400,300);" id="area17" alt=""/></map></p>
+<script type="text/javascript" language="JavaScript1.2">
+//&lt;![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('area1');
+        FilePopupInit('area2');
+        FilePopupInit('area3');
+        FilePopupInit('area4');
+        FilePopupInit('area5');
+        FilePopupInit('area6');
+        FilePopupInit('area7');
+        FilePopupInit('area8');
+        FilePopupInit('area9');
+        FilePopupInit('area10');
+        FilePopupInit('area11');
+        FilePopupInit('area12');
+        FilePopupInit('area13');
+        FilePopupInit('area14');
+        FilePopupInit('area15');
+        FilePopupInit('area16');
+        FilePopupInit('area17');
+//]]&gt;
+</script>
+
+{% endblock %}
+{% endlinebreakless %}

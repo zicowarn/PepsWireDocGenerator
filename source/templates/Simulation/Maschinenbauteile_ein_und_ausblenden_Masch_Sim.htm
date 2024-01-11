@@ -1,0 +1,73 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Maschinenbauteile ein- und ausblenden" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    li.hcp2 { font-size:9pt; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Maschinenbauteile ein- und ausblenden" %}</p><p>{% trans "Mit diesen Schaltflächen können Sie einzelne [Maschinenbauteile] ein- oder ausblenden." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
+<p class="Tip_Note_Heading">{% trans "Maschinenbauteile ausblenden" %}</p>
+<ul>
+<li class="hcp2">
+<p class="Tip_Note_Text_Bulleted">{% trans "Klicken Sie auf die Schaltfläche [Ausblen &amp;gt;&amp;gt;]." %}</p>
+</li>
+<li class="hcp2">
+<p class="Tip_Note_Text_Bulleted">{% trans "Wählen Sie die auszublendenden Elemente im Grafikfenster aus." %}</p>
+</li>
+<li class="hcp2">
+<p class="Tip_Note_Text_Bulleted">{% trans "Beenden Sie die Auswahl mit der Taste [Esc] oder der Schaltfläche [Abbruch]." %}</p>
+</li>
+</ul>
+<p class="Tip_Note_Heading">{% trans "Maschinenbauteile ausblenden und von der Kollisionskontrolle ausschließen" %}</p>
+<ul>
+<li class="hcp2">
+<p class="Tip_Note_Text_Bulleted">{% trans "Klicken Sie auf die Schaltfläche [Entfernen &amp;gt;&amp;gt;]." %}</p>
+</li>
+<li class="hcp2">
+<p class="Tip_Note_Text_Bulleted">{% trans "Wählen Sie die auszublendenden Elemente im Grafikfenster aus." %}</p>
+</li>
+<li class="hcp2">
+<p class="Tip_Note_Text_Bulleted">{% trans "Beenden Sie die Auswahl mit der Taste [Esc] oder der Schaltfläche [Abbruch]." %}</p>
+</li>
+</ul>
+<p class="Tip_Note_Heading">{% trans "Ausgeblendete Maschinenbauteile wieder einblenden" %}</p>
+<ul>
+<li class="hcp2">
+<p class="Tip_Note_Text_Bulleted">{% trans "Klicken Sie auf die Schaltfläche [Wiederherstellen]." %}</p>
+</li>
+</ul>
+
+{% endblock %}
+{% endlinebreakless %}

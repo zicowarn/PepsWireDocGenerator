@@ -1,0 +1,36 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Strom Ein &sol; Aus" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Strom Ein / Aus" %}</p><p>{% trans "Bei aktivierter Checkbox wird der entsprechenden Code zum [Ein/Ausschalten] des Strom (z.B. M21 /M22) in die NC-Daten ausgegeben." %}</p>
+<p>{% trans "Der Code wird exakt an der Stelle ausgegeben, an der das NC-Codesymbol positioniert wurde." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,45 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Erzeugte Dateien Listbox" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Extra.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Erzeugte Dateien Listbox" %}</p><p> </p>
+<p>{% trans "Es gibt Maschinen (z.B. ACVision), für die [mehr] [als eine] NC-Datei erzeugt wird." %}</p>
+<p>{% trans "Ist dies der Fall, wird der Dialog [NC-Daten editieren / kopieren] um eine Listbox erweitert." %}</p>
+<p>{% trans "Auf diese Weise können Sie auswählen, welche Datei bei Wahl der Schaltfläche @ [Zeige Datei] angezeigt wird." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><img src="../Edit_NC-Data_Listbox.gif" alt="Edit_NC-Data_Listbox.gif" width="503" height="217" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

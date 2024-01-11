@@ -1,0 +1,49 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Editieren (Technologie Datenbank) XXXBILD ALT" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+    font.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Editieren (Technologie Datenbank)" %}</p><p>{% trans "Ruft einen weiteren Dialog auf, der zeigt wie viel Schnitte, welcher Offset, welches Offsetregister und welche Stromstufe dem gewählten Material zugeordnet ist." %}</p>
+<p>{% trans "Hinweis: Der Dialog kann je nach NC-Maschine variieren." %}</p>
+<p class="hcp1"> </p>
+<p><img src="../TEC_DAT3.gif" alt="TEC_DAT3.gif" width="270" height="449" border="0"/></p>
+<p class="hcp1"> </p>
+<p>{% trans "Das Feld [Offset Betrag] dient ausschließlich dazu, den Offset bei einer Simulation optisch zu veranschaulichen. Es gibt jedoch eine Ausnahme:" %}</p>
+<p>{% trans "Ist bei Bearbeitung die Option #[Offset ausgeben]# aktiv, so werden die Offsetwerte in die NC-Daten ausgegeben." %}</p>
+<p>{% trans "Das Feld [Offset] zeigt mit welchem Offsetregister ein Schnitt ausgeführt wird." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

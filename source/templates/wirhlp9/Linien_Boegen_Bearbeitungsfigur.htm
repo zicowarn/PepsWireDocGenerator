@@ -1,0 +1,83 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Linien&sol;Bögen => Bearbeitungsfigur" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+    p.hcp3 { font-weight:bold; }
+    img.hcp4 { border:none; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Linien/Bögen =&amp;gt; Bearbeitungsfigur" %}</p><p>{% trans "Der Befehl wird verwendet, um einzelne Linien-/Bogenelemente in eine Bearbeitungsfigur umzuwandeln." %}</p><p>{% trans "Der Befehl legt zusätzlich eine [Startposition] [VOR] der Figur, den [Bearbeitungsstartpunkt AUF der Figur] sowie [die Richtung der Figur] fest." %}</p>
+<p>{% trans "Bearbeitungsparameter und Technologien werden zum Zeitpunkt der Figurdefinition noch nicht bestimmt." %}</p>
+<p>{% trans "Diese werden erst bei der Bearbeitungsprogrammierung mit Hilfe der Befehle #Standard Konturbearbeitung#, #Regelflächenbearbeitung# und #[Bundbearbeitung]# festgelegt." %}</p>
+<p class="hcp2"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp2"> </p>
+<p><img src="../CREPRFG3_shg.gif" usemap="#AreaMap0" alt="CREPRFG3_shg.gif" width="376" height="503" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="95, 41, 151, 60" href="Optionen_Register_Linien_Boegen_Bearbeitungsfigur.htm" alt=""/>
+<area shape="rect" coords="20, 73, 352, 108" href="javascript:BSSCPopup('Figurname_Linien_Boegen_Bearbeitungsfigur.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="20, 106, 347, 135" href="javascript:BSSCPopup('Einfuegeposition_Linien_Boegen_Bearbeitungsfigur.htm',400,500);" id="area2" alt=""/>
+<area shape="rect" coords="14, 180, 347, 216" href="javascript:BSSCPopup('Startloch__Linien_Boegen_Bearbeitungsfigur.htm',400,500);" id="area3" alt=""/>
+<area shape="rect" coords="18, 217, 352, 291" href="javascript:BSSCPopup('Auf_Figur_Startpunkte.htm',400,500);" id="area4" alt=""/>
+<area shape="rect" coords="15, 303, 353, 346" href="Ausfahren_auf_Linien_Boegen_Bearbeitungsfigur.htm" alt=""/>
+<area shape="rect" coords="16, 404, 356, 449" href="Figur_Auswahlbutton_Linien_Boegen_Bearbeitungsfigur.htm" id="area5" alt=""/>
+<area shape="rect" coords="19, 140, 339, 167" href="javascript:BSSCPopup('Startloch_Einfuegeposition_der_Figur.htm',400,500);" id="area6" alt=""/>
+<area shape="rect" coords="15, 347, 347, 397" href="javascript:BSSCPopup('Auf_Figur_Endpunkte.htm',400,600);" id="area7" alt=""/>
+<area shape="rect" coords="10, 474, 114, 495" href="javascript:BSSCPopup('../Commdata/COMMON_Schliessen.htm',400,300);" id="area8" alt=""/>
+<area shape="rect" coords="129, 475, 237, 498" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area9" alt=""/>
+<area shape="rect" coords="250, 472, 356, 497" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area10" alt=""/>
+<area shape="rect" coords="149, 42, 191, 62" href="Report_Register_Lin_Bof_Bea_figur.htm" alt=""/>
+<area shape="rect" coords="192, 42, 231, 60" href="Eject_Register_Lin_Bof_Bea_figur.htm" alt=""/>
+</map> </p>
+<p> </p>
+<p class="dialog">{% trans "So wird es gemacht:" %}</p>
+<p class="hcp3">{% trans "@ #Video: Bearbeitungsfigur erzeugen geschlossen#" %}</p>
+<p class="hcp3">{% trans "@ #Video: Bearbeitungsfigur - Startposition ändern#" %}</p>
+<p>{% trans "#[Beispiel für eine Bearbeitungsfigur mit Endpunkt]#" %}</p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+	FilePopupInit('area3');
+	FilePopupInit('area4');
+	FilePopupInit('area6');
+	FilePopupInit('area7');
+	FilePopupInit('area8');
+	FilePopupInit('area9');
+	FilePopupInit('area10');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

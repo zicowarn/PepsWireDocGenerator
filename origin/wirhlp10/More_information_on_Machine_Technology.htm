@@ -1,0 +1,23 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>More information on Machine TechnologyXXX</title>
+<link rel="StyleSheet" href="../wirhlp10.css" type="text/css">
+
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<p class="dialog">More information on Machine Technology</p>
+<p>XXX Technology files (supplied by the machine manufacturer), contain machining parameters i.e. generator or power settings, strategy, and wire offsets. The most critical of these probably being the wire offsets and number of cuts. Each technology file is developed to meet a specific set of machining requirements, given details of - material type, material thickness, wire type, wire diameter, corner deviation, tolerance, and roughness. Peps knowledge based technology, determines which of these files will be used for an operation based on the material type and thickness, the wire type and diameter and the quality of surface required. Once the specific technology file has been determined, then PEPS will know the number of cuts to be taken and the wire offset to be used on each cut, automatically setting these values in the relevant cutting dialogue.</p>
+<p>The use of knowledge base technology is important for two reasons.</p>
+<p>1. The CAM system can properly program the number of cuts to achieve the part specifications.</p>
+<p>2. The CAM system can predict any potential for overcutting that may occur in small inside corner radii.</p>
+<p>The first reason is of lesser importance if a common technology file is used for most jobs. Reason number two is more significant for Agie machines if small internal radii (less than .010 in.) are to be cut. When programming the CNC 123 control all corners must be tangent, this means that a fillet radius must be programmed in all sharp corners. If the machine has to offset larger than an inside radius, then overcutting will occur. Even if overcutting only occurs on the roughing cuts with the larger offsets, if it is large enough then the corner may not clean up with the final trim cuts.</p>
+<p>The technology file on the Agievision is essentially the same as the CNC 123. There is no requirement for fillets in sharp corners as with the CNC 123. This control is also capable of adapting the programmed path to avoid overcutting on small radii, if the radius is tangent.</p>
+</body>
+</html>

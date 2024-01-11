@@ -1,0 +1,64 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Kreismuster" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+    font.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Kreismuster" %}</p><p><img src="../Kreismuster_Gruppe.gif" alt="Kreismuster_Gruppe.gif" width="370" height="251" border="0"/></p>
+<p class="hcp1"> </p>
+<p style="font-weight: bold;">{% trans "Die Optionen des Dialoges:" %}</p>
+<p> </p>
+<p class="Tip_Note_Heading">{% trans "Gruppenname" %}</p>
+<p>{% trans "Wird verwendet, um den Namen der Gruppe auszuwählen, falls mehrere Gruppen existieren." %}</p>
+<p> </p>
+<p class="Tip_Note_Heading">{% trans "Teilkreis- und Winkeldetails" %}</p>
+<p>{% trans "[Gesamtanzahl von Gruppen]: Die Gesamtanzahl der zu erzeugenden Gruppenbearbeitungen auf dem Teilkreis." %}</p>
+<p>{% trans "[Winkel zwischen den Gruppen]: Winkel zwischen den Gruppenbearbeitungen in Grad." %}</p>
+<p>{% trans "[XY-Teilkreiszentrum]: Die Koordinate des Teilkreiszentrums. Verwenden Sie die Schaltfläche @, um die Koordinate zu digitalisieren." %}</p>
+<p> </p>
+<p class="Tip_Note_Heading">{% trans "Zeige/Simuliere diese gruppierten Operationen" %}</p>
+<p>{% trans "Wenn aktiv, werden bei einer Bearbeitungssimulation alle Gruppenpositionen simuliert. Wenn nicht, wird nur die erste Gruppenoperation simuliert." %}</p>
+<p class="hcp1"> </p>
+<p>{% trans "@" %}</p>
+<p class="hcp1"> </p>
+<p>{% trans "Das obige Beispiel zeigt ein Kreismuster, auf dem eine gruppierte Operationen (ein Rechteck mit Bundbearbeitung und eine Bohrung mit zylindrischer Bearbeitung) wiederholt wurde." %}</p>
+<p> </p>
+<p>{% trans "Folgende Optionen wurden im Dialog eingestellt:" %}</p>
+<p>{% trans "[8] Gesamtanzahl der Gruppen" %}</p>
+<p>{% trans "[45] Grad zwischen den Gruppen" %}</p>
+<p>{% trans "[X0 Y40] ist das Teilkreiszentrum" %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

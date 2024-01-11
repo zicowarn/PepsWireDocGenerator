@@ -1,0 +1,65 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Das Simulation Menü" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Extra.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { font-weight:bold; }
+    a.hcp2 { font-weight:bold; }
+    span.hcp3 { font-weight:normal; }
+    p.hcp4 { margin-top:0;
+    margin-bottom:0; }
+    p.hcp5 { color:#ff0000;
+    font-style:italic; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <a name="642b3b9347ca42c9b00b820c00c373fa=1"/><h1 style="font-size: 12pt;">{% trans "Simulation Menü (Drahterodieren)" %}</h1><p> </p>
+<p>{% trans "In diesem Menü finden Sie Aufrufe, um verschiedene Werkzeugweg-Simulatoren zu starten. Verfügbar sind:" %}</p>
+<p> </p>
+<p>{% trans "#[Drahtmodell Simulation] # - Einfache Simulation OHNE Materialabtrag." %}</p>
+<p class="hcp1">{% trans "#Maschinenraum-Simulation (optional)#[ - Simulation MIT Materialabtrag für Erodierbearbeitungen mit Rotations-, Schwenk- oder Hohlachsen ggf. mit Maschinenraumdarstellung.]" %}</p>
+<p class="hcp1">{% trans "#Standard-Simulation #[ -] [Simulation MIT Materialabtrag für Erodierbearbeitungen]" %}</p>
+<p class="hcp4"> </p>
+<p class="hcp5">{% trans "Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen." %}</p>
+<p class="hcp5"> </p>
+<p><img src="../WIR12_shg.gif" alt="" usemap="#MAP602711682" style="border: none;" border="0"/>
+<map id="MAP602711682" name="MAP602711682">
+<area shape="rect" coords="167, 31, 401, 63" href="Grafik_NC_Bearbeitung_neu_erzeugen.htm" alt=""/>
+<area shape="rect" coords="167, -2, 401, 30" href="Grafik_NC_Bearbeitung_loeschen.htm" alt=""/>
+<area shape="rect" coords="3, 0, 161, 35" href="Drahtmodell_Simulation.htm" alt=""/>
+<area shape="rect" coords="676, 1, 933, 111" href="_Standard_Simulation.htm" alt=""/>
+<area shape="rect" coords="528, 2, 674, 92" href="Maschinenraum-Simulation_Beschreibung_der_Benutzeroberflaeche/Maschinenraum_Simulation_-_Uebersicht.htm" alt=""/>
+<area shape="rect" coords="405, 2, 529, 93" href="Maschinen_Simulation_Einstellungen.htm" alt=""/>
+</map> </p>
+<p class="hcp4"> </p>
+<p>  </p>
+
+{% endblock %}
+{% endlinebreakless %}

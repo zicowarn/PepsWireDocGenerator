@@ -1,0 +1,43 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Wähle Matrizen &sol; Stempel >>" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Wähle Matrizen / Stempel &gt;&gt;" %}</p><p>{% trans "Die Schaltfläche [Wähle Matrizen / Stempel &amp;gt;&amp;gt;] dient zur Auswahl der Elemente, die in Bearbeitungsfiguren vom Typ Matrize oder Stempel umgewandelt werden sollen." %}</p>
+<p> </p>
+<p>{% trans "[Beachten Sie, dass das System bei der Elementauswahl unabhängig von den Einstellungen in dem Register] [#Filter#, zunächst alle gewählten Elemente markiert.]" %}</p>
+<p>{% trans "[Erst nach dem Beenden der Elementauswahl konvertiert das System die in durch den Filter zugelassenen Formen zu Bearbeitungsfi][g][uren.]" %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

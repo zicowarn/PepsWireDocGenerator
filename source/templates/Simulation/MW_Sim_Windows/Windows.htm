@@ -1,0 +1,62 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Angedockte Fenster auf der rechten Seite" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../../MW_Sim_Windows.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-bottom:6.00pt; }
+    font.hcp2 { font-weight:bold; }
+    p.hcp3 { font-weight:bold; }
+    a.hcp4 { font-weight:bold; }
+    p.hcp5 { margin-bottom:6.00pt;
+    font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <h1>{% trans "Simulations-Fenster" %}</h1><p class="hcp1"> </p>
+<p class="hcp1">{% trans "Die [Simulations]-[Fenster] werden als Voreinstellung auf der rechten Fensterseite, untereinander angezeigt und dienen zur Steuerung sowie zur Anpassung der Simulationsparameter." %}</p>
+<p class="hcp1">{% trans "Die Fenster sind frei verschiebbar und lassen sich beliebig im Simulationsfenster positionieren. Beachten Sie, das sich der Original-Zustand der Fensterpositionen mit der Menüfolge [Ansicht] &amp;gt; [Zurücksetzen] wiederherstellen lässt." %}</p>
+<p class="hcp1"> </p>
+<p class="hcp1"><img src="../../NewUI_Simulationsfenster_2_Tabs.gif" alt="" style="border: none;" border="0"/></p>
+<p> </p>
+<p>{% trans "Folgende [Simulations-Fenster] sind verfügbar:" %}</p>
+<p class="hcp3">{% trans "#Satzliste#" %}</p>
+<p class="hcp5">{% trans "#Analyse (Werkzeugweg)#" %}</p>
+<p class="hcp5">{% trans "#Statistik#" %}</p>
+<p class="hcp5">{% trans "#Maschine#" %}</p>
+<p class="hcp3">{% trans "#Simulation#" %}</p>
+<p class="hcp1"> </p>
+<p class="hcp5">{% trans "#Report#" %}</p>
+<p class="hcp5">{% trans "#Abtragssimulation#" %}</p>
+<p class="hcp5">{% trans "#Analyse (Rohteil)#" %}</p>
+<p class="hcp5">{% trans "#Messungen#" %}</p>
+<p class="hcp5">{% trans "#Man. Achsensteuerung#" %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

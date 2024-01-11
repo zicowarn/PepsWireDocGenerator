@@ -1,0 +1,61 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Rotationsachse Register (Standard Konturbearbeitung) XXX" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Rotationsachse Register (Standard Konturbearbeitung)" %}</p><p>{% trans "Das Register [Rotationsachse] dient zur Programmierung von Drahterodierarbeiten auf Maschinen, die mit einem gesteuertem CNC-Rundtisch ausgerüstet sind." %}</p><p class="hcp1"> </p>
+<p><img src="../Rotationsachse_Exa.gif" alt="Rotationsachse_Exa.gif" width="400" height="335" border="0"/></p>
+<p class="hcp1"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp1"> </p>
+<p><img src="../Rotationsachse_shg.gif" usemap="#AreaMap0" alt="Rotationsachse_shg.gif" width="329" height="237" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="2,1,45,21" href="Konik_lasche.htm" alt=""/>
+<area shape="rect" coords="251,0,305,21" href="Optionen_Lasche_Standard_Konturbearbeitung.htm" alt=""/>
+<area shape="rect" coords="46,0,162,22" href="Taschenerodieren_1.htm" alt=""/>
+<area shape="rect" coords="16,52,176,79" href="javascript:BSSCPopup('Rotationsachse_verwenden_Rotationsachsen_Register_STD_Konturbea.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="18,92,316,117" href="Beispiel_Profil_auf_einer_Helix_abwickeln_Rotationsachsen_Register_STD_Konturbea.htm" alt=""/>
+<area shape="rect" coords="18,119,314,141" href="Beispiel_Profil_auf_einem_Zylinder_abwickeln_Rotationsachsen_Register_STD_Konturbea.htm" alt=""/>
+</map> </p>
+<p class="hcp1"> </p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "Diese Funktion ist optional und muss lizenziert werden." %}</p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

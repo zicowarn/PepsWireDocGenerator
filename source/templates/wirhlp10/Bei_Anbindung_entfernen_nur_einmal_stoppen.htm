@@ -1,0 +1,48 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Bei Anbindung entfernen nur EINMAL stoppen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    font.hcp2 { font-weight:bold;
+    font-style:italic; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Bei Anbindung entfernen nur EINMAL stoppen" %}</p><p>{% trans "Diese Option wird normalerweise nur dann aktiviert, wenn man [Mehrfachanbindungen] zum Festhalten des Abfallteils programmieren will." %}</p>
+<p>{% trans "Ist die Option aktiv, gibt das System [nur einen Maschinenstop] (z.B. M01) bei der Entfernung der ersten Anbindung aus. Ist sie nicht aktiv, stoppt die Maschine bei jeder Anbindung." %}</p>
+<p> </p>
+<p>{% trans "Die Option kann man auch für die Bearbeitung von [mehreren Figuren] die mit [einem] oder [mehreren Anbindungen] befestigt sind verwenden." %}</p>
+<p>{% trans "In diesem Fall wird jedoch [nur ein Stopp], nämlich bei der Entfernung der ersten Anbindung ausgegeben." %}</p>
+<p>{% trans "Bestimmt man aber für jede Bearbeitungsfigur [einen separaten Operationsstart], gibt das System für jede Figur bei der Entfernung der ersten Anbindung einen Stopp aus." %}</p>
+<p>{% trans "Ist die Option [Bei Anbindung entfernen nur einmal stoppen] [nicht] [aktiviert], wird für jede Anbindung ein Stopp ausgegeben." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

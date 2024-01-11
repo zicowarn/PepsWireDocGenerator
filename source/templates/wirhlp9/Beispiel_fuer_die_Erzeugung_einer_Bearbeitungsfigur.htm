@@ -1,0 +1,76 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Beispiel für die Erzeugung einer Bearbeitungsfigur" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    li.hcp2 { font-size:9pt; }
+    p.hcp3 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Beispiel für die Erzeugung einer Bearbeitungsfigur" %}</p><p>{% trans "Fast alle Bearbeitungsoperationen der Module [Erodieren ]/ [2,5D] [Fräsen / Drehen] basieren auf dem Geometrietyp [Bearbeitungsfigur]." %}</p>
+<p>{% trans "Sie sollten unbedingt mit der Erzeugung von Konstruktionen auf der Basis von C-Linien, C-Kreisen und Linien-/Bogenelementen vertraut sein, bevor Sie weiterlesen." %}</p>
+<p>{% trans "Um eine Bearbeitung, ausführen zu können, müssen Sie die vorhandenen Linien-/Bogenelemente zu einer Bearbeitungsfigur zusammenfassen. Dies geht wie folgt:" %}</p>
+<ul>
+	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Es soll aus der folgenden Geometrie (müssen Linien-/Bogenelemente sein) eine Bearbeitungsfigur erzeugt werden." %}</p></li>
+</ul>
+<p> </p>
+<p class="hcp3"><img src="../Fig_Create_1.gif" alt="Fig_Create_1.gif" width="237" height="187" border="0"/></p>
+<ul>
+	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Wählen Sie im Menü [Vorbereitung] den Befehl #[Linien/Bögen =&amp;gt; Bearbeitungsfigur]#." %}</p></li>
+	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Geben Sie im Feld [Startloch] die Position ein, an welcher der Draht einfädeln soll oder ermitteln Sie die Koordinaten in der Zeichnung mit Hilfe der Schaltfläche @." %}</p></li>
+</ul>
+<p class="hcp3"> </p>
+<p>{% trans "[Hinweis:]" %}</p>
+<p>{% trans "Die Startlochposition muss VOR der Geometrie liegen. Sie kann [innerhalb] (Matrize) oder [außerhalb] (Stempel) der Geometrie liegen." %}</p>
+<ul>
+	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf die Schaltfläche [Wähle Linien/Bögen &amp;gt;&amp;gt;], um festzulegen, aus welchen Geometrieelementen Sie die Bearbeitungsfigur erzeugen wollen." %}</p></li>
+	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Nach Wahl der Schaltfläche zeigt das System die [Standardauswahlabfrage] zur Auswahl der Geometrieelemente." %}</p></li>
+	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Wählen Sie die Option [Verbinden] ([rechte Maustaste] od. [horizontale Ikonenleiste]) und klicken Sie [ein] Geometrieelement an." %}</p></li>
+	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Beachten Sie, wie das System alle folgenden Geometrieelemente automatisch auswählt." %}</p></li>
+</ul>
+<p class="hcp3"> </p>
+<p><img src="../Fig_Create_2.gif" alt="Fig_Create_2.gif" width="320" height="213" border="0"/></p>
+<p class="hcp3"> </p>
+<ul>
+	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Beenden Sie die Auswahl mit der Option [Ende] [(siehe] [rechte Maustaste] [od.] [horizontale Ikonenleiste][).]" %}</p></li>
+	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "[Das folgende Bild zeigt die fertige Figur, nebst Startlochposition.]" %}</p></li>
+</ul>
+<p class="hcp3"> </p>
+<p><img src="../Fig_Create_3.gif" alt="Fig_Create_3.gif" width="312" height="220" border="0"/></p>
+<p class="hcp3"> </p>
+<ul>
+	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Erzeugen Sie weitere Bearbeitungsfiguren oder beenden Sie den Dialog mit der Schaltfläche [OK]." %}</p></li>
+</ul>
+
+{% endblock %}
+{% endlinebreakless %}

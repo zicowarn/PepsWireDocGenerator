@@ -1,0 +1,36 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Schräg einfädeln" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Schräg einfädeln" %}</p><p>{% trans "Wenn Matrizen unter großen Winkeln geschnitten werden, kann es passieren, dass ein senkrechtes Einfädeln des Drahtes nicht möglich ist." %}</p>
+<p>{% trans "Mit dieser Option können Sie den Draht schräg in die Startlochbohrung einfädeln. Beachten Sie, dass diese Option nicht für jede CNC-Maschine zur Verfügung steht." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

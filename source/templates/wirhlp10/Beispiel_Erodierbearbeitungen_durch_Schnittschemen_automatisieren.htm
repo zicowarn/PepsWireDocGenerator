@@ -1,0 +1,111 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Beispiel: Erodierbearbeitungen durch Schnittschemen automatisieren XXXCHANGED" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+    h2.hcp2 { margin-top:4.00pt;
+    margin-bottom:0.00pt; }
+    font.hcp3 { font-weight:bold; }
+    li.hcp4 { font-size:9pt; }
+    span.hcp5 { font-weight:bold; }
+    img.hcp6 { border:none; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Erodierbearbeitungen durch Schnittschemen automatisieren" %}</p><p>{% trans "Schnittschemen ermöglichen es, die Einstellungen einer Bearbeitung (Technologie, Anzahl der Schnitte, Anbindungslänge, Methode zur Entfernung der Anbindung, Einstellungen für Ein-/Ausfahren etc.) zu speichern und für folgende Programme zu verwenden." %}</p>
+<p>{% trans "Das folgende Beispiel soll zeigen, wie man ein Schnittschema speichert und es wieder aufruft." %}</p>
+<p class="hcp1"> </p>
+<h2 class="hcp2">{% trans "Schnittschema speichern" %}</h2>
+<ul>
+	<li><p class="Topic_Text_Bulleted">{% trans "Füllen Sie im Menü [Bearbeitung] den Dialog #[Operation starten]# aus." %}</p></li>
+	<li class="hcp4"><p class="Topic_Text_Bulleted">{% trans "Rufen Sie im Menü [Bearbeitung] einen der Befehle #[Standardkonturbearbeitung]#, #[Bundbearbeitung]# oder #[Regelflächenbearbeitung]# auf." %}</p></li>
+	<li class="hcp4"><p class="Topic_Text_Bulleted">{% trans "Stellen Sie [alle Bearbeitungsparameter] (Anzahl der Schnitte, Technologie, Anbindungslänge, Methode zur Entfernung der Anbindung, Einstellungen für Ein-/Ausfahren, Offset etc.) ein." %}</p></li>
+	<li class="hcp4"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf die Schaltfläche @, um die Einstellungen als [Schnittschema] abzuspeichern." %}</p></li>
+	<li class="hcp4"><p class="Topic_Text_Bulleted">{% trans "Der Dialog [Schnittschema speichern] wird aufgerufen." %}</p></li>
+	<li class="hcp4"><p class="Topic_Text_Bulleted">{% trans "Der Dialog ist voreinstellt mit dem aktuellen verwendetem [Material], [Materialhöhe], [Draht] etc. und [beschreibenden Texten] für das Schnittschema." %}</p></li>
+	<li class="hcp4"><p>{% trans "Beachten Sie, das man die beschreibenden Texte in den Feldern[ KNO Dateiname] (z.B. [St_30.0mm_BRH_0.25_1.kno]) [Kommentar] und [Beschreibung] verändern kann." %}</p></li>
+</ul>
+<p class="Topic_Text_Bulleted" style="color: #ff0000; font-style: italic;">{% trans "Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen." %}</p>
+<p> </p>
+<p><img src="../Schnittschema_speichern_Dialog.gif" alt="" usemap="#MAP622021691" border="0" class="hcp6"/>
+<map id="MAP622021691" name="MAP622021691">
+<area shape="rect" coords="1, 26, 491, 552" href="Schnittschema_speichern_Dialog_-_Parameter.htm" alt=""/>
+</map> </p>
+<ul>
+	<li class="hcp4"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf die Schaltfläche [@,] um das Schnittschema zu speichern." %}</p></li>
+</ul>
+<p> </p>
+<h2 class="hcp2">{% trans "Gespeichertes Schnittschema  aufrufen" %}</h2>
+<ul>
+	<li class="hcp4"><p class="Topic_Text_Bulleted">{% trans "Füllen Sie im Menü [Bearbeitung] den Dialog #[Operation starten]# aus." %}</p></li>
+	<li class="hcp4"><p class="Topic_Text_Bulleted">{% trans "Rufen Sie im Menü [Bearbeitung] den Befehl #[Standardkonturbearbeitung]# ,#[Bundbearbeitung]# oder #[Regelflächenbearbeitung]# auf." %}</p></li>
+	<li class="hcp4"><p class="Topic_Text_Bulleted">{% trans "Wählen Sie die zu bearbeitenden Figur(en) mit der Schaltfläche @." %}</p></li>
+	<li class="hcp4"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf die Schaltfläche @, um ein [Schnittschema] einzuladen." %}</p></li>
+</ul>
+<p class="Topic_Text_Bulleted">{% trans "Es wird der Dialog [Schnittschemen laden] aufgerufen:" %}</p>
+<p class="Topic_Text_Bulleted"> </p>
+<p class="Topic_Text_Bulleted" style="color: #ff0000; font-style: italic;">{% trans "Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen." %}</p>
+<p class="Topic_Text_Bulleted"> </p>
+<p><img src="../Schnittschema_laden_Dialog.gif" alt="Schnittschema_exa_2.gif" usemap="#MAP589311147" border="0"/>
+<map id="MAP589311147" name="MAP589311147">
+<area shape="rect" coords="-1, 29, 1026, 501" href="Schnittschema_laden_Dialog_-_Parameter.htm" alt=""/>
+</map> </p>
+<ul>
+	<li class="hcp4"><p class="Topic_Text_Bulleted">{% trans "Geben Sie in den Spalten rechts neben der Schaltfläche [@ ]die Suchkriterien ein, nach denen in der Schnittschemen-Datenbank gesucht werden soll." %}</p></li>
+</ul>
+<p><img src="../Schnittschema_laden_Filter.gif" alt="" border="0" class="hcp6"/></p>
+<ul>
+	<li class="hcp4"><p>{% trans "Im Beispiel oberhalb wird nach den Suchkriterien [Werkstückmaterial] (Stahl) und [Anzahl Schnitte] (3) und [Materialhöhe ](30) gesucht." %}</p></li>
+	<li class="hcp4"><p>{% trans "Direkt nach Eingabe der Suchkriterien, zeigt das System in der [Suchergebnis Liste] alle Schnittschemen an, die den o.g. Suchkriterien entsprechen." %}</p></li>
+</ul>
+<p><img src="../Schnittschema_laden_Ergebnisliste.gif" alt="" border="0" class="hcp6"/></p>
+<ul style="list-style: disc;">
+	<li>Wählen Sie das benötigte Schnittschema und übernehmen Sie die Auswahl 
+	 mit <span class="hcp5"><img src="../OK_button.gif" alt="" border="0" class="hcp6"/> </span>.</li>
+</ul>
+<p class="Topic_Text_Bulleted">{% trans "[Tipp:] Verwenden Sie die Schaltflächen [@,] um [ALLE] gespeicherten Schnittschemen aufzulisten." %}</p>
+<ul>
+	<li class="hcp4"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf die Schaltfläche [@,] um das Schnittschema zu laden." %}</p></li>
+</ul>
+<ul>
+	<li class="hcp4"><p class="Topic_Text_Bulleted">{% trans "Die im Schnittschema gespeicherten Technologien und Einstellungen werden eingeladen und die gewählten Figurgeometrien mit den Einstellungen bearbeitet." %}</p></li>
+	<li class="hcp4"><p class="Topic_Text_Bulleted">{% trans "Schließen Sie alle Dialoge mit [OK]." %}</p></li>
+	<li class="hcp4"><p class="Topic_Text_Bulleted">{% trans "Die Bearbeitungsoperation wird im #[Operationsmanager]# gespeichert." %}</p></li>
+</ul>
+<p>{% trans "@" %}</p>
+<p class="hcp1"> </p>
+<ul>
+	<li class="hcp4"><p class="Topic_Text_Bulleted">{% trans "Führen Sie eine #[Simulation]# der Bearbeitung durch." %}</p></li>
+</ul>
+
+{% endblock %}
+{% endlinebreakless %}

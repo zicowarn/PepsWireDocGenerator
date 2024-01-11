@@ -1,0 +1,44 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Verwende Modellplan der Steuerung" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Verwende Modellplan der Steuerung" %}</p><p>{% trans "Einige Maschinen des Erodiermaschinenherstellers [Makino] bieten die Möglichkeit, die Schneidreihenfolge über einen sog. [Modellplan] zu programmieren." %}</p>
+<p>{% trans "Aktiviert man die Option [Verwende Modellplan der Steuerung], dann wird für jede Bearbeitungsoperation nur 1 Schnitt ausgegeben und die Bearbeitungsstrategie an der Maschine, mit Hilfe des [Modellplans] programmiert." %}</p>
+<p class="Hinweis"> </p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "Diese Funktion ist nicht für alle Erodiermaschinen verfügbar." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

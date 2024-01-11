@@ -1,0 +1,56 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Unterer, oberer, mittlerer Bund" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Agievhlp.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    li.hcp1 { font-size:8pt; }
+    font.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Unterer, oberer, mittlerer Bund" %}</p><p>{% trans "In diesem Dialogbereich wird die Lage des Bundes (zylindrischer Teil) und der Winkel der umlaufenden Konik bestimmt, wenn man ein Konik mit Bund programmieren möchte." %}</p>
+<p class="Tip_Note_Heading" style="line-height: 12.00pt;">{% trans "Bundbearbeitung programmieren" %}</p>
+<ul style="list-style: square;">
+<li class="hcp1">
+<p class="Tip_Note_Text_Bulleted">{% trans "Klicken Sie zunächst eine der Ikonen @[Unterer Bund], @[Oberer Bund] oder @[Mittlerer Bund] an, um die Art der Bundbearbeitung festzulegen." %}</p>
+</li>
+<li class="hcp1">
+<p class="Tip_Note_Text_Bulleted">{% trans "Je nach gewählter Konik, schaltet das System bestimmte Felder zur Beschreibung der Bundhöhe ([Z1], [Z2]) und des Konikwinkels ([Alpha1], [Alpha2]) frei. Die Felder [Z1] und [Z2] beschreiben den Winkel der Konik. Der Wert [muß] [positiv] sein. Die Felder [Alpha1] und [Alpha2] beschreiben die Lage des Bundes bezogen auf die Materialoberkante. Der Wert [muß] [negativ] sein." %}</p>
+</li>
+<li class="hcp1">
+<p class="Tip_Note_Text_Bulleted">{% trans "Wählen Sie in den #[Listboxen für das Qualitätsziel]# die gewünschte Qualität für Konik und Bund." %}</p>
+</li>
+<li class="hcp1">
+<p class="Tip_Note_Text_Bulleted">{% trans "Wählen Sie im Feld #[Technologiedatenbank AGIEVISION]# ob Sie eine AGIE oder eine Benutzertechnologie verwenden wollen und vergeben Sie im Feld #[Qualitätszielname]# Namen für die Technologiedateien." %}</p>
+</li>
+</ul>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,64 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "NURB-Surface Register" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "NURBS-Surface Register" %}</p><p>{% trans "Dieses Register bietet die Möglichkeit eine Regelflächenbearbeitung aus einer 3D-Fläche von Typ [NURBS-Surface] zu erzeugen." %}</p><p>{% trans "Bei einer normalen Regelflächenbearbeitung liegen die untere bzw. obere Ebene einer Regelfläche auf der XY-Ebene, OHNE Abweichung in der Z-Ebene." %}</p>
+<p>{% trans "Die Option [NURBS-Surface schneiden] erlaubt die Bearbeitung von 3D-Regelflächen, deren obere bzw. untere Ebene aus einer 3D-NURBS-Kurve besteht. Das heißt, es sind Abweichungen in der Z-Achse vorhanden." %}</p>
+<p> </p>
+<p><img src="../NURBS.gif" alt="NURBS.gif" width="563" height="397" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "NURBS-Surfaces können von den meisten externen CAD-Systemen als IGES Datei ausgegeben werden." %}</p>
+<p>{% trans "Aus diesem Grunde kann man NURBS-Surfaces in PEPS einladen und bearbeiten." %}</p>
+<p>{% trans "Ist kein CAD-System vorhanden, kann man das NURBS-Surface mit dem Befehl [NURBS-Kurven und Surfaces] im Menü [CAD] erzeugen." %}</p>
+<p class="hcp2"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp2"> </p>
+<p><img src="../NURBTAB_shg.gif" usemap="#AreaMap0" alt="NURBTAB_shg.gif" width="314" height="189" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="6,3,58,21" href="Regelflaechenbearbeitung____.htm" alt=""/>
+<area shape="rect" coords="9,27,310,102" href="javascript:BSSCPopup('NURB_Surface.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="15,108,309,181" href="javascript:BSSCPopup('Startposition_NURB_SURFACE_schneiden.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="153, 1, 202, 20" href="Startloch_Register_Regelflaechenbearbeitung.htm" alt=""/>
+</map> </p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

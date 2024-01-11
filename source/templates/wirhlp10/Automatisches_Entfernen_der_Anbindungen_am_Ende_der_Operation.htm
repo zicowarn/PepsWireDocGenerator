@@ -1,0 +1,58 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Automatisches Entfernen der Anbindungen am Ende der Operation" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+    font.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Automatisches Entfernen der Anbindungen am Ende der Operation" %}</p><p> </p><p>{% trans "Ist diese Option gewählt, werden zunächst alle Schruppschnitte und falls vorhanden, alle Schlichtschnitte durchgeführt." %}</p>
+<p class="hcp1"> </p>
+<p><img src="../TAGMETH4.gif" alt="TAGMETH4.gif" width="434" height="233" border="0"/></p>
+<p class="hcp1"> </p>
+<p>{% trans "Erst am Ende der Operation trennt das System alle Anbindungen automatisch ab." %}</p>
+<p>{% trans "Die [Anzahl der Schnitte zum Entfernen der Anbindungen], [entspricht der Anzahl der programmierten Schrupp- und Schlichtschnitte]." %}</p>
+<p>{% trans "Will man die [Anbindung nur mit einem Schnitt entfernen] (z.B. Stempelbearbeitung), aktiviert man die Option #[1 Schnitt für Anbindungen entfernen]# in diesem Dialog." %}</p>
+<p> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
+<p>{% trans "@ [&lt;a href='../Strategie_4_Automatisches%20Entfernen%20der%20Anbindung%20am%20Ende%20der%20Operation.gif' id='a2'&gt;Zeige Beispielfilm zum o.g. Thema#]" %}</p>
+<p> </p>
+<script type="text/javascript" language="JavaScript1.2">
+//&lt;![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a1');
+//]]&gt;
+</script>
+
+{% endblock %}
+{% endlinebreakless %}

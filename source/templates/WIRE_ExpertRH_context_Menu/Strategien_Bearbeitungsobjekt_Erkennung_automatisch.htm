@@ -1,0 +1,60 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Strategien" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../WIRE_ExpertRH_context_Menu.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Strategien" %}</p><p>{% trans "Hier stellen Sie ein, welche Objekte die [Feature-Erkennung] erkennen soll." %}</p><p class="hcp2"> </p>
+<p>{% trans "[Neue Operation für jeden Body erzeugen]" %}</p>
+<p>{% trans "Ist diese Option aktiv und enthält die aktuelle Datei [mehrere Volumenkörper], erzeugt [WIRE-Expert] für jeden existierenden Volumenkörper eine separate #Operation# im #FeatureManager#. [Beispiel]:" %}</p>
+<p>{% trans "Existieren in einer Datei zwei Volumenkörper, so kann durch aktivieren der Option [Neue Operation für jeden Body erzeugen], für jeden Volumenkörper eine separate NC-Ausgabedatei erzeugt werden, da für jeden Körper eine eigene [Operation] im FeatureManager erzeugt wird." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Feature_Recognition_New_operation_for_each_Body.gif" alt="Feature_Recognition_New_operation_for_each_Body.gif" width="804" height="204" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "[Innere &amp;amp; Äussere Features]" %}</p>
+<p>{% trans "Die automatische [Feature-Erkennung] erkennt alle erodierbaren Geometrien [innerhalb des Volumenkörpers] plus die [Außengeometrie des Körpers]." %}</p>
+<p class="hcp2"> </p>
+<p>{% trans "[Nur Innere Features (Matritze)]" %}</p>
+<p>{% trans "Die automatische [Feature-Erkennung] erkennt ausschließlich alle erodierbaren Geometrien [innerhalb des Volumenkörpers]. Die Außengeometrie des Körpers bleibt unbearbeitet." %}</p>
+<p class="hcp2"> </p>
+<p>{% trans "[Nur Äußere Features (Stempel)]" %}</p>
+<p>{% trans "Die automatische [Feature-Erkennung] erkennt ausschließlich die Außengeometrie des Volumenkörpers. Dies ist die bevorzugte Einstellung für die Bearbeitung von Schneidstempeln." %}</p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a1');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

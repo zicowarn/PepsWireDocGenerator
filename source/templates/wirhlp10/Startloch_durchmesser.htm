@@ -1,0 +1,66 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Startlochdurchmesser &sol; Beliebiges Startloch" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+    h2.hcp3 { margin-top:4.00pt;
+    margin-bottom:0.00pt; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Startlochdurchmesser / Beliebiges Startloch" %}</p><p>{% trans "Dieser Dialogbereich ist mehrfach belegt und zeigt entweder [Rundes Startloch], [Unregelmäßiges Startloch] oder [Schlichtaufmaß] in Abhängigkeit davon, welche der Optionen [Verwende rundes Startloch], [Verwende unregelmäßiges Startloch] oder [Aufmaß schlichten] aktiviert wurde." %}</p>
+<p class="hcp2"> </p>
+<h2 class="hcp3">{% trans "Rundes Startloch" %}</h2>
+<p>{% trans "Das Feld [Rundes Startloch] wird angezeigt, wenn die Option [Verwende rundes Startloch] [aktiviert] wurde. Das Feld legt den Durchmesser der Startlochbohrung fest." %}</p>
+<p>{% trans "Zusätzlich bestimmt die Angabe, dass die Startlochbohrung vom Ausräumvorgang ausgenommen wird." %}</p>
+<p>{% trans "Der Durchmesser der Startlochbohrung sollte [kleiner] angegeben werden, als er tatsächlich ist. Dadurch wird Ausschuss bei Unrundheit der Bohrung und Bohrungsversatz vermieden." %}</p>
+<p>{% trans "Falls die Startlochbohrung in gezeichneter Form vorliegt, ist es möglich den Durchmesser der Bohrung aus einer Zeichnung zu ermitteln. Verwenden Sie dazu die Schaltfläche @." %}</p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "Das Feld [Rundes Startloch] spielt auch bei einer #[Solid-Simulation]# eine Rolle. Die Groesse des in der #[Solid-Simulation]# simulierten Startlochs wird hier eingestellt." %}</p>
+<p> </p>
+<h2 class="hcp3">{% trans "Unregelmäßiges Startloch" %}</h2>
+<p>{% trans "Dieses Feld ist aktiv, wenn Sie die Option [Verwende beliebiges Startloch] aktivieren." %}</p>
+<p>{% trans "Das Feld wird verwendet, wenn ein Startloch [KEINE runde Form] hat und [eine beliebige geometrische Form] als Startloch herangezogen werden soll und die Startlochgeometrie vom Ausräumvorgang ausgenommen werden soll." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../poc_bel.gif" alt="poc_bel.gif" width="480" height="260" border="0"/></p>
+<p class="hcp2"> </p>
+<h2 style="margin-top: 0.00pt; margin-bottom: 2.40pt;">{% trans "Schlichtaufmaß" %}</h2>
+<p>{% trans "Dieses Feld ist aktiv, wenn Sie die Option [Aufmaß schlichten] aktivieren. Das Feld [Schlichtaufmaß] bestimmt die Größe des Materialaufmaßes auf den zu bearbeitenden Durchbrüchen." %}</p>
+<p>{% trans "Die Option [Aufmaß schlichten] entfernt dieses Aufmaß durch eine Anzahl paralleler Schnitte." %}</p>
+<p>{% trans "Das folgende Bild zeigt eine Nut, bei der ein Aufmaß mit mehreren parallelen Schnitten entfernt wird:" %}</p>
+<p><img src="../poc_aufmass_schlichten.gif" alt="poc_aufmass_schlichten.gif" width="321" height="162" border="0"/></p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "Die Geometrie des Startlochs muss als Geometrietyp [Figur] vorliegen. Figuren kann man mit dem Befehl #[Linien/Boegen ==&amp;gt; Bearbeitungsfigur]# im Menue #[Vorbereitung]# erzeugen." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

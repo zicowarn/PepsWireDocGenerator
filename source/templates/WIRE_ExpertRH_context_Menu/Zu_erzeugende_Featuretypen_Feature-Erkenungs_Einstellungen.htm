@@ -1,0 +1,46 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Zu erzeugende Featuretypen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../WIRE_ExpertRH_context_Menu.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Zu erzeugende Featuretypen" %}</p><p>{% trans "Mit diesem Filter können Sie bestimmbare Featuretypen von der automatischen [Feature-Erkennung] ausschließen." %}</p>
+<p> </p>
+<p>{% trans "[Beispiel]:" %}</p>
+<p>{% trans "[De]aktiviert man die Option '[Zylindrische Innenform]', werden bei Anwendung der automatischen [Feature-Erkennung] alle zylindrischen Innenformen ignoriert." %}</p>
+<p>{% trans "Das folgende Beispiel zeigt ein Modell nach einer [Feature-Erkennung], bei der alle [zylindrischen Innenformen] ignoriert wurden." %}</p>
+<p> </p>
+<p><img src="../FR_Filter_Example_1.gif" alt="FR_Filter_Example_1.gif" width="532" height="352" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

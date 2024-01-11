@@ -1,0 +1,44 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Alle Solids ausblenden ausser diesem" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Operationsmanager.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    span.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Solid ausblenden / einblenden" %}</p><p> </p>
+<p>{% trans "Diese Funktion erlaubt, [alle] Solid-Bodies [außer dem aktuell gewähltem], mit nur einem Klick auszublenden." %}</p>
+<p> </p>
+<p><img src="../Hide_all_Solid_except_this_one.gif" alt="" style="border: none;" border="0"/></p>
+<p> </p>
+
+{% endblock %}
+{% endlinebreakless %}

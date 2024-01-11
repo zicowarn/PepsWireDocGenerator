@@ -1,0 +1,50 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Standardkonik" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Standardkonik" %}</p><p>{% trans "Mit diesen Schaltflächen legen Sie fest, welche Art von Bundbearbeitung programmiert werden soll." %}</p>
+<p>{% trans "Sie können zwischen [Bund oben], [Bund unten] oder [Bund in der Mitte] (Nur bestimmte Maschinen z.B. [AgieVision]) wählen." %}</p>
+<p>{% trans "Die Schaltflächen zeigen eine Grafik, welche die notwendigen Eingaben für [Höhe (Z)] des Bundes und den [Konkwinkel (Alpha)] verdeutlichen soll." %}</p>
+<p class="hcp2"> </p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "Bei den meisten NC-Maschinen bezieht sich die Eingabe für [Höhe (Z)] auf die [untere Bearbeitungsebene]." %}</p>
+<p>{% trans "Nur bei [AgieVision] Postprozessoren bezieht sich die Referenzhöheneingabe auf die [obere Ebene] und ist [negativ]." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../KONIK_L_AGIE_2.gif" alt="KONIK_L_AGIE_2.gif" width="329" height="245" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

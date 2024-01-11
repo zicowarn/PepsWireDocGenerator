@@ -1,0 +1,55 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Blickrichtung" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Operationsmanager.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Blickrichtung" %}</p><p> </p>
+<p>{% trans "Dieser Dialogbereich wird verwendet, um die Blickrichtung festzulegen, aus der die Umrissgeometrie erzeugt werden soll." %}</p>
+<p>{% trans "Das Feld [X], [Y] oder [Z] welches den Wert [1] enthält, bestimmt die Blickrichtung." %}</p>
+<p class="Tip_Note_Heading">{% trans "X-Richtung" %}</p>
+<p>{% trans "Der Umriss wird auf X0 in der YZ-Ebene projiziert." %}</p>
+<p class="Tip_Note_Heading">{% trans "Y-Richtung" %}</p>
+<p>{% trans "Der Umriss wird auf Y0 in der XZ-Ebene projiziert." %}</p>
+<p class="Tip_Note_Heading">{% trans "Z-Richtung" %}</p>
+<p>{% trans "Der Umriss wird auf Z0 in der XY-Ebene projiziert." %}</p>
+<p>{% trans "Das folgende Bild zeigt drei Umrissgeometrien (XY, ZY, ZX), [OHNE] die Eingabe von [Projektionspositionen] erzeugt wurden. Die Umrisse liegen deshalb auf den Ebenen [X0],[Y0] und [Z0]." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../OUTLINE_PROJEKTION.gif" alt="OUTLINE_PROJEKTION.gif" width="423" height="303" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "Das gleiche Beispiel [MIT] Eingabe von [Projektionswerten] finden Sie siehe [Projektion]." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

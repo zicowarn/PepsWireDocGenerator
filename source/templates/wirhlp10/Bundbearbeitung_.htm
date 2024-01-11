@@ -1,0 +1,81 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Bundbearbeitung" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Bundbearbeitung" %}</p><p>{% trans "Die Bundbearbeitung wird normalerweise verwendet, zur Programmierung von [konische Matrizen] mit [zylindrischem Bund]." %}</p><p class="hcp2"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Bundbearbeitung_1_shg.gif" usemap="#AreaMap0" alt="Bundbearbeitung_1_shg.gif" width="833" height="433" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="15, 56, 108, 73" href="Technologie_Register_Bundbearbeitung_.htm" alt=""/>
+<area shape="rect" coords="15, 71, 86, 92" href="Startloch_Register_Bundbearbeitung_.htm" alt=""/>
+<area shape="rect" coords="16, 91, 88, 113" href="Optionen_Register_Bundbearbeitung_.htm" alt=""/>
+<area shape="rect" coords="220, 49, 461, 295" href="javascript:BSSCPopup('Figurnamen_Std_Konturbea.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="304, 351, 384, 377" href="javascript:BSSCPopup('Aendern_Figurname_Figurauswahl_STD_Konturbea.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="384, 354, 462, 377" href="javascript:BSSCPopup('Neu_ordnen_Figurname_Figurauswahl_STD_Konturbea.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="490, 268, 801, 384" href="Eckenmodus.htm" alt=""/>
+<area shape="rect" coords="220, 351, 298, 376" href="javascript:BSSCPopup('Figurnamen_Std_Konturbea.htm',400,300);" id="area4" alt=""/>
+<area shape="rect" coords="455, 402, 529, 424" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area5" alt=""/>
+<area shape="rect" coords="532, 401, 608, 424" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area6" alt=""/>
+<area shape="rect" coords="617, 402, 733, 425" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area7" alt=""/>
+<area shape="rect" coords="750, 402, 823, 422" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area8" alt=""/>
+<area shape="rect" coords="484, 45, 807, 259" href="javascript:BSSCPopup('Standardkonik_Bundbearbeitung.htm',400,300);" id="area9" alt=""/>
+<area shape="rect" coords="221, 301, 344, 325" href="javascript:BSSCPopup('Nur_Figuren_waehlbar.htm',400,300);" id="area10" alt=""/>
+</map> </p>
+<p class="hcp2"> </p>
+<p>{% trans "Die folgende Abbildung zeigt ein Beispiel für konische Matrizen mit einem zylindrischen Bund." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Bund2.gif" alt="Bund2.gif" width="555" height="211" border="0"/></p>
+<p class="hcp2"> </p>
+<p style="text-align: justify;">{% trans "[So wird es gemacht:]" %}</p>
+<p>{% trans "#[Bundbearbeitung programmieren]#" %}</p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+	FilePopupInit('area3');
+	FilePopupInit('area4');
+	FilePopupInit('area5');
+	FilePopupInit('area6');
+	FilePopupInit('area7');
+	FilePopupInit('area8');
+	FilePopupInit('area9');
+	FilePopupInit('area10');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

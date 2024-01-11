@@ -1,0 +1,88 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Bohrungen gleichen Durchmessers suchen und automatisch Bearbeitungsfiguren erzeugen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    li.hcp1 { font-size:9pt; }
+    font.hcp2 { font-weight:bold; }
+    font.hcp3 { font-style:italic; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Tip_Note_Heading">{% trans "Bohrungen gleichen Durchmessers suchen und automatisch Bearbeitungsfiguren erzeugen" %}</p><ul>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Zeichnen Sie die Bohrungen." %}</p>
+</li>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Rufen Sie im Menü im Menü [Vorbereitung \ Diverses] den Befehl [Kreise/Bögen ==&amp;gt; Mehrfachfigur] auf." %}</p>
+</li>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Die erste Abfrage: [Wähle Kreis, Bogen oder Gruppe um Gruppe zu erzeugen] ermittelt automatisch den Radius von Bohrungen." %}</p>
+</li>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Klicken Sie die Bohrung an, deren Radius Sie ermitteln wollen." %}</p>
+</li>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Wählen Sie nun die Option [Suchen] (siehe [rechte Maustaste] od. [horizontale Ikonenleiste])." %}</p>
+</li>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Das System fragt [Eingabe auszuwählender Radius &amp;lt;10&amp;gt;:] und zeigt den ermittelten Radius als Vorgabe in eckigen Klammern." %}</p>
+</li>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Übernehmen Sie die Systemvorgabe mit der Taste RETURN." %}</p>
+</li>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Es folgt die Standard Auswahlabfrage [Wähle Objekte ....]" %}</p>
+</li>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Wählen Sie mit der Maus die Bohrungen die zusammengefasst werden sollen, oder verwenden Sie ein Auswahlfenster." %}</p>
+</li>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf die Option [Ende] (siehe [rechte Maustaste] od. [horizontale Ikonenleiste])." %}</p>
+</li>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Wählen Sie erneut die Option [Ende] (siehe [rechte Maustaste] od. [horizontale Ikonenleiste])." %}</p>
+</li>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Klicken Sie nun auf die Option [Loch] (siehe [rechte Maustaste] od. [horizontale Ikonenleiste])." %}</p>
+</li>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Das System fragt [Eingabe Lochdurchmesser &amp;lt;20&amp;gt;:] und zeigt den Durchmesser der Bohrungen als Vorgabe in eckigen Klammern." %}</p>
+</li>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Übernehmen Sie die Systemvorgabe mit der Taste RETURN." %}</p>
+</li>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Das System erzeugt nun automatisch eine Gruppe von identischen Bearbeitungsfiguren." %}</p>
+</li>
+</ul>
+
+{% endblock %}
+{% endlinebreakless %}

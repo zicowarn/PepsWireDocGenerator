@@ -1,0 +1,37 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Versatz zur Mitte" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Versatz zur Mitte" %}</p><p>{% trans "Spezielle Funktion um den Drehstahl zu optimieren. Es kommt vor, dass 'Rattermarken' am Werkstück sichtbar sind." %}</p>
+<p>{% trans "Um dieses Problem zu beheben, kann der Drehstahl beim Erstellen um einen gewissen Wert aus der Mitte versetzt werden." %}</p>
+<p>{% trans "Somit kann man das 'rattern' an der Maschine kompensieren." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

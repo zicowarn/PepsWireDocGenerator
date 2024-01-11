@@ -1,0 +1,42 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Technologie von Schnittschema" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Technologie von Schnittschema" %}</p><p>{% trans "Mit Hilfe von #[Schnittschemen]# können Sie [alle Einstellungen] des Dialoges [Standard Konturbearbeitung] abspeichern und für spätere Bearbeitungsprogrammierungen erneut verwenden." %}</p>
+<p>{% trans "Mit der Funktion [Technologie von Schnittschema] können Sie [ausschließlich] die [Technologiewerte] eines Schnittschemas importieren und verwenden." %}</p>
+<p>{% trans "Alle anderen Einstellungen des Schnittschemas (z.B. Anzahl der Schnitte, Haltestegbreite, Offsetwerte etc.) werden nicht importiert." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

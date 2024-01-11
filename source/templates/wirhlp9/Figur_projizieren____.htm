@@ -1,0 +1,78 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Figur projizieren oder skalieren" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+    font.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Figur projizieren oder skalieren" %}</p><p>{% trans "Der Befehl erlaubt es, von einer Figur deren Definition nicht parallel (schräg) zur XY-Ebene liegt, eine Projektion auf Z0 in der XY-Ebene zu erzeugen." %}</p><p>{% trans "Der Befehl erlaubt ebenfalls, das differentiale Skalieren (unterschiedliche Faktoren für X und Y) von Figuren." %}</p>
+<p class="hcp1"> </p>
+<p><img src="../fig_proj_1.gif" alt="fig_proj_1.gif" width="396" height="210" border="0"/></p>
+<p class="hcp1"> </p>
+<p>{% trans "Eine typische Anwendung des Projektions-Befehls findet sich im Modul Drahterosion, wenn z.B. eine Bohrung schräg durch ein Werkstück geschnitten werden muss (Schrägschieber)." %}</p>
+<p>{% trans "Hier wird zunächst die Figur der Bohrungsgeometrie auf der XY-Ebene erzeugt und diese anschließend um die benötigten Winkel rotiert." %}</p>
+<p>{% trans "Da es nicht möglich ist, die rotierte Figur (liegt im Raum) zu bearbeiten, ist eine Projektion der Figur auf die XY-Ebene erforderlich." %}</p>
+<p> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp1"> </p>
+<p><img src="../PROJECT_shg.gif" usemap="#AreaMap0" alt="PROJECT_shg.gif" width="439" height="300" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="14, 174, 150, 198" href="javascript:BSSCPopup('Maximale_Abweichung.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="13, 48, 202, 98" href="javascript:BSSCPopup('Zu_projizierende_Figur.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="14, 107, 204, 157" href="javascript:BSSCPopup('Neuer_Figurname_Projektion.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="305, 39, 380, 57" href="XYZ_Skalieren_Figur_projizieren_skalieren.htm" alt=""/>
+<area shape="rect" coords="210, 37, 302, 58" href="javascript:BSSCPopup('Normale_der_Figur_In_Z.htm',400,300);" id="area4" alt=""/>
+<area shape="rect" coords="16, 265, 148, 288" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area5" alt=""/>
+<area shape="rect" coords="156, 263, 288, 287" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area6" alt=""/>
+<area shape="rect" coords="291, 264, 427, 286" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area7" alt=""/>
+<area shape="rect" coords="216, 72, 428, 257" href="javascript:BSSCPopup('../Commdata/COMMON_Bild.htm',400,300);" id="area8" alt=""/>
+</map> </p>
+<p class="hcp1"> </p>
+<p>{% trans "Nach der Projektion können Sie die Figur mit der Funktion #[Standard Konturbearbeitung]# und der Option #[Schrägschieber bearbeiten]# bearbeiten." %}</p>
+<p class="hcp1"> </p>
+<p>{% trans "[So wird es gemacht: ]#[Figur unterschiedlich in X und Y skalieren]#" %}</p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+	FilePopupInit('area3');
+	FilePopupInit('area4');
+	FilePopupInit('area5');
+	FilePopupInit('area6');
+	FilePopupInit('area7');
+	FilePopupInit('area8');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

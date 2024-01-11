@@ -1,0 +1,61 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Schneidrichtung voreinstellen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../WIRE_ExpertRH_context_Menu.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+    p.hcp3 { text-align:center; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Schneidrichtung voreinstellen" %}</p><p>{% trans "XXX AUCH WIRE EXPERT ???? In diesem Dialogbereich können Sie voreinstellen, ob der Draht die Bearbeitungsgeometrien im [Uhrzeiger]- oder [Gegenuhrzeigersinn] bearbeitet." %}</p>
+<p>{% trans "Dabei lässt sich die Schneidrichtung unterschiedlich voreinstellen, für [Aussen-Features], [Innen-Features] oder [Offene-Features] (nicht in sich geschlossene Features)." %}</p>
+<p class="hcp2"> </p>
+<p>{% trans "Es gilt folgendes:" %}</p>
+<p class="hcp2"> </p>
+<p>{% trans "[Zielmaterial links zur Schneidrichtung]" %}</p>
+<p>{% trans "Bearbeitet man einen [Durchbruch] liegt das Material links und der Draht verfährt im [Uhrzeigersinn]." %}</p>
+<p>{% trans "Bearbeitet man einen [Stempel] liegt das Material links und der Draht im [Gegenuhrzeigersinn]." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Offset_left_side.gif" alt="Offset_left_side.gif" width="286" height="116" border="0"/></p>
+<p class="hcp3"> </p>
+<p>{% trans "[Zielmaterial rechts zur Schneidrichtung]" %}</p>
+<p>{% trans "Bearbeitet man einen [Durchbruch] liegt das Material rechts und der Draht verfährt im [Gegenuhrzeigersinn]." %}</p>
+<p>{% trans "Bearbeitet man einen [Stempel] liegt das Material rechts und der Draht im [Uhrzeigersinn]." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Offset_right_side.gif" alt="Offset_right_side.gif" width="285" height="110" border="0"/></p>
+<p class="hcp3"> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Schneidseite umkehren" %}</p>
+<p>{% trans "Macht aus einer [Innenbearbeitung] (Matrize) eine [Außenbearbeitung] (Stempel) und umgekehrt." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

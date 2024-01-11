@@ -1,0 +1,54 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Das Extras Menü" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Extra.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <h1 style="font-size: 12pt;">{% trans "Extras Menü" %}</h1><p> </p>
+<p>{% trans "In diesem Menü finden Sie nützliche Funktionen wie z.B. den Befehl #[NC-Daten editieren / kopieren]#, sowie optionale Sonderfunktionen, die nicht zum Standardlieferumfang des Systems gehören." %}</p>
+<p class="hcp1"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp1"> </p>
+<p><img src="../WIR11_shg.gif" usemap="#AreaMap0" alt="WIR11_shg.gif" width="615" height="117" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="108, -2, 214, 86" href="NC_Daten_editieren_kopieren.htm" alt=""/>
+<area shape="rect" coords="363, 3, 494, 101" href="Grafisches_Einrichteblatt.htm" alt=""/>
+<area shape="rect" coords="288, 7, 358, 96" href="Startloch_PP.htm" alt=""/>
+<area shape="rect" coords="6, 1, 106, 114" href="Common_049.chm::/CommonHelp0/Post_Prozessor_Lauf.htm" alt=""/>
+<area shape="rect" coords="218, 2, 279, 81" href="NC-Code_Datenbank.htm" alt=""/>
+<area shape="rect" coords="496, 6, 606, 93" href="Modul_Einstellungen_Dialog_-_Drahterodieren.htm" alt=""/>
+</map>  </p>
+
+{% endblock %}
+{% endlinebreakless %}

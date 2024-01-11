@@ -1,0 +1,46 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Draht einfädeln &sol; abschneiden" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Draht einfädeln / abschneiden" %}</p><p>{% trans "Dieser Dialog zeigt im oberen Abschnitt den [momentanen Drahtstatus] (eingefädelt / abgeschnitten)." %}</p>
+<p>{% trans "Ferner erlaubt sie, an beliebigen Positionen eine [separate Operation] zum [Einfädeln] oder [Abschneiden] des Drahtes zu programmieren." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><img src="../wirecont.gif" alt="wirecont.gif" width="376" height="169" border="0"/></p>
+<p style="text-align: center;"> </p>
+<p>{% trans "Das manuelle Einfädeln des Drahtes wird normalerweise angewendet, wenn komplexere Mehrfachaufspannungen geschnitten werden sollen und das automatische Draht einfädeln, unerwünschte NC-Codes für Einfädeln und Abschneiden erzeugen würde." %}</p>
+<p>{% trans "Ob der Draht automatisch Einfädeln soll oder nicht, wird mit der Option [Autom. einfädeln / abschneiden] im Register #[Optionen]# der Dialoge [Standard Konturbearbeitung] und [Regelflächenbearbeitung] abgeschaltet." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,41 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Simulation in einer Log-Datei speichern" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Simulation in einer Log-Datei speichern" %}</p><p>{% trans "Ist diese Option aktiv, erzeugt das System nach einer Simulation eine [Log-Datei] (Berichtsdatei)." %}</p>
+<p>{% trans "In der Datei ist notiert, welche Bearbeitungsoperationen simuliert wurden. Die Datei heißt [Sim.log] und liegt im Verzeichnis der simulierten *.vdm-Datei." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,43 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Verwende vorheriges" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-family:Arial; }
+    font.hcp2 { font-family:Arial;
+    font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Verwende vorheriges" %}</p><p class="footnote_text" style="margin-bottom: 0.00pt;">{% trans "[Die Option] [Verwende vorheriges] ist nur verfügbar, wenn [mehrere] #[Operationsstarts]# [existieren.]" %}</p>
+<p class="footnote_text" style="margin-bottom: 0.00pt;">{% trans "[Ist die Option aktiv, wird das in der] [vorigen] [Bearbeitungsoperation] [definierte Rohteil verwendet.]" %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

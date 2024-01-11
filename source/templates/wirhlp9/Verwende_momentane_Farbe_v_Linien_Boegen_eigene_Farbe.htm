@@ -1,0 +1,49 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Verwende momentane &sol; Farbe v. Linien&sol;Bögen &sol; eigene Farbe" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Verwende momentane / Farbe v. Linien/Bögen / eigene Farbe" %}</p><p>{% trans "Legt fest, in welcher Farbe die Bearbeitungsfigur erzeugt wird." %}</p>
+<p> </p>
+<p>{% trans "[Verwende momentane Farbe] " %}</p>
+<p>{% trans "Verwendet die Farbeinstellung des Dialogs [CAD Parameter]." %}</p>
+<p> </p>
+<p>{% trans "[Verwende Farbe von Linien/Bögen] " %}</p>
+<p>{% trans "Verwendet die Farbe der Linien-/Bogenelemente, aus der die Figur erzeugt wird." %}</p>
+<p> </p>
+<p>{% trans "[Verwende eigene Farbe] " %}</p>
+<p>{% trans "Verwendet bei der Figurerzeugung, die rechts neben dieser Option eingestellte Farbe." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

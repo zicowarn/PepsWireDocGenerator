@@ -1,0 +1,89 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Standard Simulation XXXALT" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Standard Simulation" %}</p><p> </p><p>{% trans "Programmsimulation OHNE [Simulation des Materialabtrags.] In dieser Simulationsform zeigt das System den Schneiddraht, die obere, untere Düse und das Rohteil als Solidmodell." %}</p>
+<p>{% trans "Im Unterschied zur #Solid-Simulation# wird der Materialabtrag NICHT dargestellt und es ist KEIN [Zielteilvergleich] und KEINE [Kollisionskontrolle] möglich." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Standard_Simu.gif" alt="Standard_Simu.gif" width="403" height="248" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "Die Simulation wird über einen beliebig verschiebbaren Dialog gesteuert." %}</p>
+<p class="hcp2"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen]" %}</p>
+<p class="hcp2"> </p>
+<p><img src="../simdialogue_Standard_SIM_shg.gif" usemap="#AreaMap0" alt="simdialogue_Standard_SIM_shg.gif" width="1011" height="134" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="247,51,500,104" href="javascript:BSSCPopup('Tranzparanz_fuer_Rohteildarstellung.htm');" id="area1" alt=""/>
+<area shape="rect" coords="589,45,681,104" href="javascript:BSSCPopup('Tempo_Button_Simulation.htm');" id="area2" alt=""/>
+<area shape="rect" coords="726,1,824,45" href="javascript:BSSCPopup('Stop_bei____.htm');" id="area3" alt=""/>
+<area shape="rect" coords="692,43,719,106" href="javascript:BSSCPopup('Simulationstyp_einstellen.htm');" id="area4" alt=""/>
+<area shape="rect" coords="726,54,880,95" href="javascript:BSSCPopup('Ansicht_der_Simulation_Solid_Simulation.htm');" id="area5" alt=""/>
+<area shape="rect" coords="20,105,752,130" href="javascript:BSSCPopup('Simulationsgeschwindigkeit.htm');" id="area6" alt=""/>
+<area shape="rect" coords="544,2,694,41" href="javascript:BSSCPopup('Aktuelle_Operation_Standard_Simulation.htm');" id="area7" alt=""/>
+<area shape="rect" coords="798,108,844,129" href="javascript:BSSCPopup('Logbuch_Standard_Simulation.htm');" id="area8" alt=""/>
+<area shape="rect" coords="850,105,897,129" href="Einstellungen_Simulation.htm" alt=""/>
+<area shape="rect" coords="902,107,952,129" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm');" id="area9" alt=""/>
+<area shape="rect" coords="955,106,1002,129" href="javascript:BSSCPopup('Schliessen_Simulation_beenden.htm');" id="area10" alt=""/>
+<area shape="rect" coords="547,70,570,94" href="javascript:BSSCPopup('Informationen_aus_Simulationsgrafik_abfragen_Standard_Simulation.htm');" id="area11" alt=""/>
+<area shape="rect" coords="755,101,795,128" href="javascript:BSSCPopup('Anzeige_der_Bearbeitungsrichtung.htm');" id="area12" alt=""/>
+<area shape="rect" coords="20,1,542,40" href="javascript:BSSCPopup('Auslenkungsanzeige_Standard_Sim.htm');" id="area13" alt=""/>
+</map> </p>
+<p class="hcp2"> </p>
+<p>{% trans "[So wird es gemacht:]" %}</p>
+<p>{% trans "[Kontrolle der Schneidtechnologie ]Während der Simulation zeigt das System zusätzlich den Dialog #[Registerkontrolle]#. Der Dialog zeigt die Technologieeinstellungen des momentan simulierten Schnitts. [Ändern der Simulationsansicht ]Während einer Solid-Simulation können Sie die gezeigte Ansicht beliebig mit Hilfe der Maus verändern." %}</p>
+<p>{% trans "Die Ansicht lässt sich Rotieren, Zoomen und Verschieben. Im Kapitel #[Interaktives Zoomen und Rotieren im PEPS Grafikfenster]# finden Sie Einzelheiten über die Vorgehensweise." %}</p>
+<p>{% trans "Bei geometrisch komplexen Werkstücken können Sie das Rotieren der Ansicht beschleunigen, indem Sie während des Rotierens die Taste [Strg] gedrückt halten." %}</p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+	FilePopupInit('area3');
+	FilePopupInit('area4');
+	FilePopupInit('area5');
+	FilePopupInit('area6');
+	FilePopupInit('area7');
+	FilePopupInit('area8');
+	FilePopupInit('area9');
+	FilePopupInit('area10');
+	FilePopupInit('area11');
+	FilePopupInit('area12');
+	FilePopupInit('area13');
+	FilePopupInit('a1');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

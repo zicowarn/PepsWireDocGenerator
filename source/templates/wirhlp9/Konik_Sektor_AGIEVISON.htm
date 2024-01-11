@@ -1,0 +1,44 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Konik (Sektor)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Konik (Sektor)" %}</p><p>{% trans "Diese Funktion erlaubt es, eine Konik für einen [Teilbereich] einer Bearbeitungsfigur zu bestimmen." %}</p>
+<p>{% trans "Beachten Sie, dass Sie Konikwechsel auch mit der PEPS Funktion #[Variable Konik]# programmieren können." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><img src="../Sektoren_AV2.gif" alt="Sektoren_AV2.gif" width="363" height="84" border="0"/></p>
+<p class="dialog" style="margin-top: 0; margin-bottom: 0;"> </p>
+
+{% endblock %}
+{% endlinebreakless %}

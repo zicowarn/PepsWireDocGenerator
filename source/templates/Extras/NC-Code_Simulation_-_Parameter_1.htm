@@ -1,0 +1,84 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "NC-Code Simulation - Parameter 1 XXX" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    img.hcp1 { border:none; }
+    span.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "NC-Code Simulation - Parameter 1" %}</p><p> </p>
+<p><img src="../NC_Code_Simulation_Dialog_oberer_Teil.gif" alt="" border="0" class="hcp1"/></p>
+<p> </p>
+<p><img src="../NC_Code_Simulation_NC_Datei_oeffnen.gif" alt="" border="0" class="hcp1"/> Eine beliebige NC-Datei in die NC-Simulation importieren.</p>
+<p class="Tip_Note_Heading"> </p>
+<p class="Tip_Note_Heading">{% trans "Kreisgröße" %}</p>
+<p>{% trans "Das [untere Drahtende] wird durch einen [Kreis] symbolisiert. Der Durchmesser dieses Kreises wird hier eingestellt." %}</p>
+<p class="Tip_Note_Heading">{% trans "Kreisskalierung - Schieber" %}</p>
+<p>{% trans "Der im Feld [Kreisgröße] bestimmte Kreis, kann mit diesem Schieber vergrößert oder verkleinert werden." %}</p>
+<p class="Tip_Note_Heading">{% trans "Simulationsfarbe" %}</p>
+<p>{% trans "Bestimmt die Farbe des simulierten Drahtsymbols." %}</p>
+<p> </p>
+<p class="Tip_Note_Heading">{% trans "Suchoptionen" %}</p>
+<p class="Tip_Note_Heading">{% trans "@" %}</p>
+<p>{% trans "Geben Sie in diesem Eingabefeld den zu suchenden NC-Code ein." %}</p>
+<p><img src="../NC_Code_Simulation_Suchoptionen_Ab_Anfang.gif" alt="" border="0" class="hcp1"/> Suchen ab Dateianfang.</p>
+<p><img src="../NC_Code_Simulation_Suchoptionen_Aktuelle_Position.gif" alt="" border="0" class="hcp1"/> Suchen ab aktueller 
+ Cursor Position.</p>
+<p> </p>
+<p>{% trans "@ Aufruf der #NC-Code Datenbank#. Hier können Sie sich über die Bedeutung der einzelnen NC-Codes informieren." %}</p>
+<p><img src="../NC_Code_Simulation_Dialog_verkleinern.gif" alt="" border="0" class="hcp1"/> Dialog verkleinern / vergrößern.</p>
+<p>{% trans "@ Modell im Grafikfenster zentrieren" %}</p>
+<p> </p>
+<p class="Tip_Note_Heading">{% trans "Fadenkreuz nicht löschen" %}</p>
+<p>XXX</p>
+<p> </p>
+<p><img src="../NC_Code_Simulation_Datei_editieren.gif" alt="" border="0" class="hcp1"/> Editieren der aktuell angezeigten NC-Datei.</p>
+<p>{% trans "@ Editierte NC-Datei neu berechnen. Notwendig nach Editieren einer NC-Datei." %}</p>
+<p> </p>
+<p class="Tip_Note_Heading">{% trans "Zeige Draht / Zeige oberes Kreuz / Zeige unteren Kreis" %}</p>
+<p>{% trans "Ein- und Ausblenden der Bestandteile des Drahtsymbols (Draht, oberes Kreuz und unterer Kreis)." %}</p>
+<p> </p>
+<p class="Tip_Note_Heading">{% trans "Zeige G92 (als Viereck)" %}</p>
+<p>{% trans "Ein- und Ausblenden der XY-Position des NC-Codes G92 ( Viereck-Symbol)." %}</p>
+<p class="Tip_Note_Heading">{% trans "Zeige Letzte Position" %}</p>
+<p>XXX </p>
+<p class="Tip_Note_Heading">{% trans "Zeige Simulationsfarbe" %}</p>
+<p>{% trans "Ein- und Ausblenden des Feldes '[Simulationsfarbe]' (Einstellen der Simulationsfarbe)." %}</p>
+<p class="Tip_Note_Heading"> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,50 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Einfügen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Operationsmanager.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Einfügen" %}</p><p> </p><p>{% trans "Die Option [Einfügen] kopiert eine oder mehrere Operation(en), die im Vorfeld mit den Optionen [Ausschneiden] oder #[Kopieren]# gewählt wurden, an eine andere Position des Operationsmanagers." %}</p>
+<p>{% trans "[Kopieren] &amp;amp; [Einfügen] führt zu einer Kopie und [Ausschneiden] &amp;amp; [Einfügen] zu einem Verschieben der gewählten Operation(en)." %}</p>
+<p>{% trans "An welcher Stelle des Operationsmanagers die gewählten Operation(en) einfügt werden sollen, legt man durch einen Mausklick fest. Die Operation(en) wird [NACH] der angeklickten Operation eingefügt." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
+<p class="Tip_Note_Heading">{% trans "#Bearbeitungsoperation kopieren#" %}</p>
+<p class="Tip_Note_Heading">{% trans "#Reihenfolge der Bearbeitungsoperationen ändern#" %}</p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a1');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,57 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Manuelle Faceauswahl" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../WIRE_ExpertRH_context_Menu.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    li.hcp2 { font-size:9pt; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Manuelle Faceauswahl" %}</p><p>{% trans "Diese Methode wird verwendet, wenn [Teilbereiche einer Geometrie] bearbeitet werden sollen und die automatischen Methoden zur Featureerkennung zuviele oder unerwünschte Flächen erkennen würden." %}</p>
+<p>{% trans "Bei Wahl dieser Option klickt man [nacheinander] alle [Faces] an, die bearbeitet werden sollen. Beachten Sie, dass die gewählten Faces miteinander verbunden sein müssen." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><img src="../Feature_Recognition_manual_Face_selection.gif" alt="Feature_Recognition_manual_Face_selection.gif" width="620" height="210" border="0"/></p>
+<p style="text-align: center;"> </p>
+<p>{% trans "[Vorgehensweise:]" %}</p>
+<ul>
+	<li class="hcp2"><p class="Tip_Note_Text_Bulleted">{% trans "Klicken Sie [nacheinander] alle Faces der zu bearbeitenden Geometrie an. Halten Sie während des Auswählens die [Strg]-Taste gedrückt. [WIRE-Expert] prüft dabei, ob die gewählten Faces erodierbar sind." %}</p></li>
+	<li class="hcp2"><p class="Tip_Note_Text_Bulleted">{% trans "Beenden Sie die Auswahl mit @." %}</p></li>
+	<li class="hcp2"><p>{% trans "Bestätigen Sie die Featureerzeugung mit @." %}</p></li>
+</ul>
+<ul>
+	<li class="hcp2"><p class="Tip_Note_Text_Bulleted">{% trans "Klicken Sie [nacheinander] alle Faces an, der [nächsten] zu bearbeitenden Geometrie." %}</p></li>
+	<li class="hcp2"><p class="Tip_Note_Text_Bulleted">{% trans "Beenden Sie auch die nächste Auswahl mit @." %}</p></li>
+	<li class="hcp2"><p class="Tip_Note_Text_Bulleted">{% trans "Bestätigen Sie die Featureerzeugung mit @." %}</p></li>
+	<li class="hcp2"><p class="Tip_Note_Text_Bulleted">{% trans "Beenden Sie den Dialog mit @." %}</p></li>
+</ul>
+
+{% endblock %}
+{% endlinebreakless %}

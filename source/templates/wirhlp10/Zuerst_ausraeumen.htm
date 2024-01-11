@@ -1,0 +1,55 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Zuerst ausräumenXXXCHANGED" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    span.hcp1 { font-weight:bold; }
+    font.hcp2 { font-weight:bold; }
+    img.hcp3 { border:none; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Zuerst ausräumen" %}</p><p>{% trans "Aktiviert die Funktion [Taschenerodieren]." %}</p>
+<p>{% trans "Ohne das Aktivieren dieser Option sind die Felder [Überlappung] und [Startlochdurchmesser] nicht aktiv." %}</p>
+<p> </p>
+<p class="dialog">{% trans "Standard Methode" %}</p>
+<p>{% trans "Bei dieser Ausräummethode sind die Bahnabstände immer identisch." %}</p>
+<p><img src="../Taschenerodieren_Standardmethode_Methode.gif" alt="" border="0" class="hcp3"/></p>
+<p> </p>
+<p class="dialog">{% trans "Alternative Methode" %}</p>
+<p>{% trans "Bei der [alternativen Methode] passt das System die Bahnabstände dynamisch an, so dass ein größtmöglicher Bahnabstand und somit weniger Schnitte entstehen." %}</p>
+<p>{% trans "Daraus folgt, dass in einigen Bereichen der Bahnabstand größer sein kann, als voreingestellt." %}</p>
+<p>{% trans "So beträgt beispielsweise die Länge des Schneidweges für das[ obere ]Beispiel [932] mm und für das [untere] nur [850] mm." %}</p>
+<p><img src="../Taschenerodieren_Alternative_Methode.gif" alt="" border="0" class="hcp3"/></p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "Beachten Sie, dass es bei Anwendung der [Alternativen Methode] zu 'Ausfallteilen' kommen kann." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

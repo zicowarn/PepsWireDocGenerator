@@ -1,0 +1,58 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Eckenmodus" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Eckenmodus" %}</p><p>{% trans "Der Eckenmodus legt fest, auf welche Weise sich die obere/unter Drahtführung bewegen, wenn sich der Draht um eine Werkstückecke bewegt." %}</p>
+<p>{% trans "Die folgenden Zeichnungen zeigen [scharfe] und [runde] Ecken, für [Innen]- und [Außenecken] bei allen vier möglichen Eckenmodi." %}</p>
+<p>{% trans "Die Zeichnungen zeigen nur Linie/Linie- und [tangentiale] Linie/Kreis/Linie Übergänge." %}</p>
+<p>{% trans "Für nicht tangentiale Übergänge Linie/Kreis bzw. Kreis/Kreis wird immer ein Drehspindelradius verwendet." %}</p>
+<p class="hcp2"> </p>
+<p class="dialog">{% trans "Drehspindel + Scharf" %}</p>
+<p><img src="../SQUARE.gif" alt="SQUARE.gif" width="589" height="151" border="0"/></p>
+<p class="dialog">{% trans "ISO + Drehspindel" %}</p>
+<p><img src="../ISO.gif" alt="ISO.gif" width="591" height="148" border="0"/></p>
+<p class="dialog">{% trans "ISO + Scharf" %}</p>
+<p><img src="../ISOSQR.gif" alt="ISOSQR.gif" width="585" height="144" border="0"/></p>
+<p class="dialog">{% trans "Nur Drehspindel" %}</p>
+<p><img src="../CONIC.gif" alt="CONIC.gif" width="586" height="148" border="0"/></p>
+<p class="hcp2"> </p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "ISO-Radien sind nur bei tangentialen Übergängen vom Typ Linie/Kreis/Linie möglich." %}</p>
+<p>{% trans "Ist diese Bedingung nicht gegeben und sind trotzdem ISO-Radien notwendig, können Sie den Befehl #[In ISO Linie/Bogen/Linie umwandeln]# im Menü [Vorbereitung \ Diverses] verwenden, um die Geometrie anzupassen." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

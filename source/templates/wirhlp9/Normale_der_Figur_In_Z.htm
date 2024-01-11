@@ -1,0 +1,46 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Normale der Figur &sol; In Z" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Normale der Figur / In Z" %}</p><p>{% trans "Legt die Projektionsart fest. Ist das Register [Normale zur Figur] aktiviert, erfolgt die [Projektion im rechten Winkel] zur der Figur auf die XY-Ebene." %}</p>
+<p>{% trans "Ist das Register [In Z] aktiviert, erfolgt die [Projektion lotrecht] von der Figur auf die XY-Ebene. (Siehe Zeichnung Option #[Maximale Abweichung]# )." %}</p>
+<p>{% trans "Die folgende Zeichnung zeigt die zwei möglichen Projektionstypen. Die obere zeigt eine Projektion bei aktiviertem Register [Normale der Figur]." %}</p>
+<p>{% trans "Hier erfolgt die Projektion im rechten Winkel von der Figur auf die XY-Ebene." %}</p>
+<p>{% trans "Die Zeichnung darunter zeigt das Ergebnis, wenn das Register [In Z] aktiviert ist. Dann erfolgt die Projektion lotrecht von der Figur auf die XY-Ebene." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><img src="../PRJ2.gif" alt="PRJ2.gif" width="494" height="327" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

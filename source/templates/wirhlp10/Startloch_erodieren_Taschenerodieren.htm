@@ -1,0 +1,55 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Startloch erodieren XXXNEU" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    span.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Startloch erodieren" %}</p><p>{% trans "Beim Schneiden von 'Stempelketten' ist es in einigen Fällen nötig, die Startlöcher durch ein Ausräumen zu erzeugen, anstatt diese im Vorfeld zu bohren." %}</p>
+<p>{% trans "Ist die Option '[Startloch erodieren]' aktiv, wird die Startlochlochgeometrien durch ein 'Ausräumen' erodiert." %}</p>
+<p>{% trans "Die Größe der Startlöcher wird bestimmt im Dialogbereich [Startloch &amp;gt; Durchmesser]." %}</p>
+<p> </p>
+<p>{% trans "Das folgende Bild zeigt, wie man eine Stempelkette ohne Einfädeln schneiden kann." %}</p>
+<p>{% trans "Die [Grünen Pfeile] zeigen die 3 Positionen an, denen die Startlöcher ausgeräumt werden." %}</p>
+<p><img src="../Sttarloch%20erodieren_Taschenerodieren.gif" alt="" style="border: none;" border="0"/></p>
+<p> </p>
+<p style="font-weight: bold;">{% trans "Ablauf zum Beispiel oberhalb:" %}</p>
+<p>{% trans "Der Draht fährt von Aussen an und räumt das Startloch aus." %}</p>
+<p>{% trans "Dann wird der erste Stempel geschnitten (z.B. pendelnd mit 3 Schnitten)." %}</p>
+<p>{% trans "Danach wird ohne ein Abschneiden zum Startpunkt des nächsten Stempels gefahren." %}</p>
+<p>{% trans "Nun wird das nächste Startloch ausgeräumt und der nächste Stempel geschnitten und so weiter ... ." %}</p>
+<p> </p>
+<p class="Hinweis">{% trans "Wichtiger Hinweis:" %}</p>
+<p>{% trans "Der Werkzeugweg für das Ausräumen der Startlöcher wird nur in der [#Standard-Simulation#] angezeigt." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

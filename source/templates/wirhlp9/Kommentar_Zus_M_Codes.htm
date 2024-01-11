@@ -1,0 +1,37 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Kommentar" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Kommentar" %}</p><p>{% trans "Ermöglicht die Eingabe von Kommentaren in die NC-Ausgabedatei." %}</p>
+<p>{% trans "Die Funktion wird üblicherweise genutzt, um dem NC-Maschinenbediener Bearbeitungsanweisungen (z.B. Teil entnehmen, Pratze Nr. 2 entfernen ...) zu übermitteln." %}</p>
+<p>{% trans "Der Code wird exakt an der Stelle ausgegeben, an der das NC-Codesymbol positioniert wurde." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

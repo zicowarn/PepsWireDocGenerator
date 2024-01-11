@@ -1,0 +1,53 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Stopp - Anbindung mit dem ersten Schnitt entfernen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Stopp - Anbindung mit dem ersten Schnitt entfernen" %}</p><p> </p>
+<p>{% trans "Diese Option kann sowohl bei einem [Einzelschnitt] als auch bei [Mehrfachschnitten] eingesetzt werden." %}</p>
+<p>{% trans "Ist die Option gewählt, hält die Maschine am Ende des ersten Schnittes am Stoppunkt (M01). Die Anbindung wird anschließend automatisch von System entfernt." %}</p>
+<p>{% trans "Es folgen die restlichen Schnitte OHNE einen Stopp." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../TAGMETH1.gif" alt="TAGMETH1.gif" width="487" height="204" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "Aus offensichtlichen Gründen kann diese Methode [nicht] für den [unbemannten Betrieb einsetzen], da der Bediener die NC-Maschine am Ende jeden [ersten Schnittes] neu starten muss, um den Abfall zu sichern." %}</p>
+<p> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
+<p>{% trans "@ [#Zeige Beispielfilm zum o.g. Thema#]" %}</p>
+<p> </p>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,7 @@
+output/*
+*.pyc
+.vscode/settings.json
+.vscode/launch.json
+*.pyc
+*.pyc
+*.pyc

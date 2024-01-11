@@ -1,0 +1,48 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Gruppieren XXXNEU BILD" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Operationsmanager.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Gruppieren" %}</p><p> </p>
+<p>{% trans "Mit dieser Option können Sie in der Operationsliste eine Anzahl von Bearbeitungsoperationen auswählen und diese zu einer gruppierten Operation zusammenfassen." %}</p>
+<p>{% trans "Gruppierte Operationen können an anderer Stelle beliebig oft wiederholt werden." %}</p>
+<p class="hcp1"> </p>
+<p><img src="../Gruppieren_OP_Man.gif" alt="Gruppieren_OP_Man.gif" width="528" height="410" border="0"/></p>
+<p class="hcp1"> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Siehe auch:" %}</p>
+<p>{% trans "#[Gruppierte Operationen aufrufen]#" %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

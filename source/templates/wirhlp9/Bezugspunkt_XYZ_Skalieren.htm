@@ -1,0 +1,36 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Bezugspunkt" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Bezugspunkt" %}</p><p>{% trans "In diesem Feld gibt man den Bezugspunkt für die Skaliervorgang entweder direkt ein oder ermittelt diesen mit Hilfe der Schaltfläche @ direkt aus der Konstruktionszeichnung." %}</p>
+<p>{% trans "Die #[Beispielzeichnung]# zeigt den Bezugspunkt an der rechten unteren Ecke einer Kontur." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

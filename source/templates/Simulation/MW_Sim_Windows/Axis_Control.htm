@@ -1,0 +1,86 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "XXX Manuelle Achsensteuerung Fenster" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../../MW_Sim_Windows.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+    span.hcp3 { font-weight:normal; }
+    span.hcp4 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <h1>{% trans "Manuelle Achsensteuerung" %}</h1><p> </p>
+<p>{% trans "Mit Hilfe der [Manuellen Achsensteuerung] können Sie die Linear- und Rotationsachsen der Maschine, manuell durch Tastatureingaben oder mit Schiebereglern bewegen und kontrollieren." %}</p>
+<p> </p>
+<p><img src="../../newUI_axis_control.gif" alt="newUI_axis_control.gif" width="555" height="489" border="0"/></p>
+<p class="hcp2"> </p>
+<p><strong class="">Hauptvorteile:</strong></p>
+<p>{% trans "Es ist überprüfbar, ob die Achsengrenzen korrekt eingestellt sind." %}</p>
+<p>{% trans "Es ist überprüfbar, ob die Kollisionsprüfung korrekt eingestellt ist." %}</p>
+<p> </p>
+<p><strong class="">Beschreibung:</strong></p>
+<p><strong class=""><span class="hcp3">Ermittelt die Achsen</span><span class="hcp3">grenzen.</span></strong></p>
+<p><strong class=""><span class="hcp3">Ermittelt die aktuelle 
+ Achsenposition. </span></strong></p>
+<p>{% trans "Verändern der Achsenwerte, entweder über Eingabefelder, verschieben der Schieberegler oder durch einen 'Rechtsklick' auf einen der Schieberegler, um die Eingaben in einem Dialog zu tätigen (Siehe Beschreibung unterhalb)." %}</p>
+<p>{% trans "Die Eingabefelder unterhalb der Schieberegler, zeigen den aktuellen Wert einer Achse und werden bei einer Simulation kontinuierlich aktualisiert." %}</p>
+<p>{% trans "Um von einem Feld von links nach rechts in das nächste zu springen, verwendet man die TAB-Taste. Um von einem Feld von rechts nach links in das nächste zu springen, verwendet man die SHIFT+TAB-Taste." %}</p>
+<p>{% trans "If you are jumping on a field that is not visible, the Axis Control tab is automatically scrolling to show the respective field." %}</p>
+<p>{% trans "XXX Wenn Sie auf ein unsichtbares Feld springen, XXX" %}</p>
+<p style="margin-left: 48px;"> </p>
+<p><strong class="">XXX Numeric stepper</strong> <strong class="">actions:</strong></p>
+<p>{% trans "The values can be copied pressing CTRL+C and paste command can be applied using CTRL+V (Windows standard keys)" %}</p>
+<p>{% trans "Die Werte lassen sich [kopieren] durch Drücken der Tastenkombination CTRL+C und wieder [einfügen] mit Hilfe der Tasten CTRL+V (MS-Windows Standardfunktionen)" %}</p>
+<p>{% trans "If upper and lower arrows from numeric steppers are used, these will increment with 0.1 for metric simulations and with 0.01 for inch simulations" %}</p>
+<p>XXX</p>
+<p>{% trans "If you want to apply Cut command (CTRL+X) in numeric stepper, after the value will disappear from the used field, 0 (zero) will be put instead." %}</p>
+<p>XXX</p>
+<p class="hcp2"> </p>
+<p style="font-weight: bold;">{% trans "Kontextmenü auf rechter Maustaste" %}</p>
+<p>{% trans "Klicken Sie mit der [rechten] Maustaste auf einen der Achsen-Schieber, um den folgenden Dialog zu öffnen. Der Dialog erlaubt eine bestimmte Achsenposition einzugeben oder die Achsenposition auf [0] zu setzen." %}</p>
+<p><img src="../../newUI_axis_control_1.gif" alt="newUI_axis_control_1.gif" width="327" height="298" border="0"/></p>
+<p> </p>
+<p><strong class="">Temporary Relative Jog Values:</strong> Mit dieser 
+ Option können Sie alle Achsenwerte auf 0 setzen ohne das Maschinenmodell 
+ zu bewegen. </p>
+<p>{% trans "Auf diese Weise können Sie das Maschinenmodell solange temporär auf einen bestimmten Wert bewegen, wie die Option aktiviert ist. Schließt man den Dialog wird der Effekt der Option beendet." %}</p>
+<p><strong class="">Alle auf 0:</strong> Mit dieser Option können Sie alle 
+ Achsen auf 0 zurücksetzen </p>
+<p><strong class="">Auf Anfangswerte zurücksetzen:</strong> Mit dieser 
+ Option können Sie alle Achsen auf deren ursprünglich eingestellten Werte 
+ zurücksetzen. Dies sind die der Maschinendefinitionsdatei gespeicherten 
+ Werte.</p>
+<p><strong class="">Alles in Zwischenablage kopieren:</strong> Mit dieser 
+ Option können Sie die Einstellwerte aller Achsen kopieren. </p>
+
+{% endblock %}
+{% endlinebreakless %}

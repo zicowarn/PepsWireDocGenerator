@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+{% load i18n %}
+{% load recoveryspan %}
+{% load recoveryatag %}
+{% load recoveryimgtag %}
+{% load linebreakless %}{% linebreakless %}
+{% block doc %}
+<!--
+    Copyright (c) 2018-2024 Camtek GmbH
+-->
+{% endblock %}
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset={{ encoding }}">
+	<meta charset="{{ encoding }}">
+	<meta name="web_author" content="Zhichao Wang, Developer, Zhichao.Wang@Camtek.de" />
+    <meta name="generator" content="Python + Django">
+<!--Head Title -->
+{% block headtitle %}
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+{% endblock %}
+<!--/ Head JavaScript -->
+<!-- Head Style -->
+{% block headstyle %}
+{% endblock %}
+<!--  &sol; Head Style -->
+</head>
+	{% block bodyshell %}
+	<!-- Body -->
+	{% recoveryimgtag %}
+	{% recoveryspan %}
+	{% recoveryatag %}
+	<body id='mbody'>
+	{% block mainbody %}
+	{% endblock %}
+	</body>
+	{% endrecoveryatag %}
+	{% endrecoveryspan %}
+	{% endrecoveryimgtag %}
+	<!--  &sol; Body -->
+	{% endblock %}
+</html>
+{% endlinebreakless %}

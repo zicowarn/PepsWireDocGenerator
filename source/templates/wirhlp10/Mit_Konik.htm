@@ -1,0 +1,41 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Mit Konik" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Mit Konik" %}</p><p>{% trans "Wurde eine Konik programmiert (Siehe #[Standard Konik]# oder #[Variable Konik]# ), wird die Konik nur geschnitten wenn die Felder unterhalb [Mit Konik] aktiv sind." %}</p>
+<p>{% trans "Auf diese Weise können Sie z.B. Schnitt 1 und 2 [ohne] und Schnitt 3 [mit einer Konik] schneiden (Bundbearbeitung)." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

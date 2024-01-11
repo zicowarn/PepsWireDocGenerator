@@ -1,0 +1,57 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Weitere Optionen 1 XXXNEU XXX" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Weitere Optionen 1" %}</p><p> </p>
+<p>{% trans "[[Erzeuge automatisch einen Operationsstart]] " %}</p>
+<p>{% trans "XXX Beschreibung in Arbeit ..." %}</p>
+<p> </p>
+<p>{% trans "[Start-/Endpunkt-Manager starten] " %}</p>
+<p>{% trans "XXX Beschreibung in Arbeit ..." %}</p>
+<p> </p>
+<p class="hcp2">{% trans "Erzeuge Rohteil vom Solid-Body" %}</p>
+<p>{% trans "Es wird automatisch eine Rohteilgeometrie erzeugt, die von dem zu bearbeitenden 3D-Modell abgeleitet wird. Das manuelle Erzeugen eines Rohteils entfällt." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="hcp2">{% trans "Bearbeitet Konik als Regelflächen" %}</p>
+<p>{% trans "Wird vom 3D-Modell eine [umlaufende] oder [variable Konik] abgeleitet, dann wird diese Konik als [4-Achsen Regelfläche] an [PEPS] übergeben. Ohne Aktivieren der Option wird die Konik, als umlaufende Konik oder Variable Konik an [PEPS] übergeben." %}</p>
+<p> </p>
+<p>{% trans "[Regelflächen in Rotationsachsen umwandeln] " %}</p>
+<p>{% trans "Wird vom Modell eine [4-Achsen Regelfläche] abgeleitet, dann wird diese als [#Regelfläche mit Rotationsachse#] an [PEPS] übergeben." %}</p>
+<p>{% trans "Auf diese Weise kann eine Regelfläche mit Hilfe einer oder zwei zusätzlichen Rotationsachsen bearbeitet werden (optional)." %}</p>
+<p> </p>
+
+{% endblock %}
+{% endlinebreakless %}

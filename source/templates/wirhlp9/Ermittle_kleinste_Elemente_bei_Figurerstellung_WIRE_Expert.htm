@@ -1,0 +1,46 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Ermittle kleinste Elemente bei FigurerstellungXXXNEU" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    span.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Ermittle kleinste Elemente bei Figurerstellung" %}</p><p>{% trans "Zeigt einen [Info]-Dialog, nachdem alle automatisch erzeugten Bearbeitungsoperationen an [PEPS] übergeben wurden." %}</p>
+<p> </p>
+<p><img src="../Ermittle%20kleinste%20Elemente%20bei%20Figurerstellung.gif" alt="" style="border: none;" border="0"/></p>
+<p> </p>
+<p>{% trans "Der Dialog informiert über den [kleinsten] und [größten Radius], sowie über die [kürzeste] und [längste] [Linie] in jeder erzeugten Bearbeitungsfigur." %}</p>
+<p> </p>
+<p> </p>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,45 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Punkt für Winkelwechsel" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Punkt für Winkelwechsel" %}</p><p>{% trans "Durch die Auswahl eines Punktes auf der Drehstahlfigur über die Schaltfläche können unterschiedliche seitliche Freiwinkel am Drehstahl programmiert werden." %}</p>
+<p>{% trans "Das Programm rechnet jeweils bis zum eingegebenen Punkt, danach kann ein neuer Punkt eingegeben werden. Wird kein weiterer Punkt definiert, so wird bis zum Ende durchgerechnet." %}</p>
+<p>{% trans "Fangen Sie den Winkelwechselpunkt mit Hilfe der Schaltfläche @ und anschließender Verwendung der Fangfunktionen [Endpunkt - Koordinaten]." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "Um geometrische Probleme zu vermeiden, sollten Winkelwechselpunkte [nur] auf [horizontalen Geraden] definiert werden." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

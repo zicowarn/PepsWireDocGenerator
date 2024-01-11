@@ -1,0 +1,62 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Konikwinkel unten" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+    p.hcp2 { margin-left:28.35pt; }
+    font.hcp3 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Konikwinkel unten" %}</p><p>{% trans "Die folgende Zeichnung zeigt einen Schnitt durch eine Matrize mit einer Konik am Boden des Werkstückes und die Einstellungen für beide Bearbeitungsoperationen (konisch und zylindrisch)." %}</p>
+<p class="hcp1"> </p>
+<p><img src="../TAPERCU2.gif" alt="TAPERCU2.gif" width="560" height="185" border="0"/></p>
+<p class="hcp1"> </p>
+<p class="hcp2">{% trans "[Konischen Abschnitt schneiden]" %}</p>
+<p class="hcp2">{% trans "Obere Führung z.B. 35" %}</p>
+<p class="hcp2">{% trans "Sekundärebene 0" %}</p>
+<p class="hcp2">{% trans "Referenzhöhe 19" %}</p>
+<p class="hcp2">{% trans "Untere Führung z.B. -10" %}</p>
+<p class="hcp1"> </p>
+<p class="hcp2">{% trans "[Zylindrischen Abschnitt schneiden]" %}</p>
+<p class="hcp2">{% trans "Obere Führung z.B. 35" %}</p>
+<p class="hcp2">{% trans "Sekundärebene 0" %}</p>
+<p class="hcp2">{% trans "Referenzhöhe 19" %}</p>
+<p class="hcp2">{% trans "Untere Führung z.B. -10" %}</p>
+<p class="hcp1"> </p>
+<p class="Block_Text">{% trans "Genau betrachtet machen Eingaben für die Referenz- und Sekundärebene bei der Bearbeitung des zylindrischen Abschnitts nicht allzu viel Sinn. Bei Eingabe der obigen Werte ist jedoch die Simulation korrekt." %}</p>
+<p class="hcp1"> </p>
+<p>{% trans "[Siehe auch:]" %}</p>
+<p>{% trans "#[Bundbearbeitung]#" %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

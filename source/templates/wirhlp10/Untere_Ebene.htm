@@ -1,0 +1,46 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Untere Ebene" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Untere Ebene" %}</p><p>{% trans "Name der Bearbeitungsfigur der [UNTEREN] Regelflächenebene. Der Figurname wird mit der Schaltfläche @ aus der Zeichnung ermittelt." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "Die Bearbeitungsfigur wird mit dem Befehl #[Linien/Bögen ==&amp;gt; Bearbeitunsfigur]#, [Parametrische Figuren] oder #[Auto. Matrize / Stempel]# im Menü [Vorbereitung] erzeugt." %}</p>
+<p>{% trans "Stellen Sie bei der Figurerzeugung sicher, dass die Bearbeitungsfigur keine Lücken aufweist." %}</p>
+<p>{% trans "Verwenden Sie bei der Elementauswahl die Option [Verbinden (Verketten)] um die Auswahl zu vereinfachen." %}</p>
+<p>{% trans "Weisen Sie den Bearbeitungsfiguren für die obere und untere Ebene, die gleiche Richtung und die gleichen Figurstartpunkte zu." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,45 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Synchronisationslinien" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Synchronisationslinien" %}</p><p>{% trans "Diese Checkbox ist normalerweise nicht aktiv, es sei denn den Regelflächenfiguren wurden [Synchronisationslinien] zugeordnet." %}</p>
+<p>{% trans "Synchronisationslinien werden über die Menüfolge Menü #[Vorbereitung]# [&amp;gt;] #[Synchronisationslinien]# definiert." %}</p>
+<p>{% trans "Wurden Synchronisationslinien definiert, so ist die Checkbox [Synchronisationslinien] aktiv, sie kann jedoch abgewählt werden, um die Synchronisationslinien zu ignorieren." %}</p>
+<p> </p>
+<p>{% trans "[@] #[Zeige Beispielfilm Synchronisationslinien erzeugen]#" %}</p>
+<p> </p>
+
+{% endblock %}
+{% endlinebreakless %}

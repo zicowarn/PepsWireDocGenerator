@@ -1,0 +1,67 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Auf eine Farbe begrenzen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../WIRE_ExpertRH_context_Menu.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+    p.hcp3 { text-align:center; }
+    li.hcp4 { font-size:9pt; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Auf eine Farbe begrenzen" %}</p><p>{% trans "Diese Methode wird eingesetzt, wenn man mit einem Klick aus allen [gleichfarbigen, miteinander verbundenen Flächen] ein Bearbeitungsfeature erzeugen möchte." %}</p>
+<p>{% trans "Bei Wahl dieser Option klickt man [ein] Face an und das System sucht alle mit dem gewählten Face verbundenen Faces, [die gleichfarbig] sind und erzeugt ein Bearbeitungsfeature daraus." %}</p>
+<p>{% trans "In dem folgenden Beispiel sehen Sie auf der Vorderseite des Modells, einige hell eingefärbte Flächen. Diese Flächen sollen mit einem Klick in ein Bearbeitungsfeature umgewandelt werden." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Man_FR_Rec_Color_1.gif" alt="Man_FR_Rec_Color_1.gif" width="343" height="221" border="0"/></p>
+<p class="hcp3"> </p>
+<p>{% trans "Das folgende Bild zeigt das Ergebnis bei Anwendung der Funktion [Manuell mit automatischer Verbindung (nach Farben)]." %}</p>
+<p>{% trans "Es ist deutlich zu sehen, dass das System ausschließlich die hell eingefärbten Flächen selektiert und ein 'Offenes Bearbeitungsfeature' erzeugt." %}</p>
+<p class="hcp3"> </p>
+<p><img src="../Man_FR_Rec_Color_3.gif" alt="Man_FR_Rec_Color_3.gif" width="368" height="230" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "Das folgende Bild soll den Unterschied zur Funktion #Manuell mit automatischer Verbindung# verdeutlichen." %}</p>
+<p>{% trans "Hier würde dass System alle miteinander verbundenen Flächen auswählen, so dass sich ein 'Geschlossenes' Bearbeitungsfeature ergäbe." %}</p>
+<p>{% trans "Zwischen den hell eingefärbten Flächen und den anderen Fläche würde nicht unterschieden. Das folgendes Bild zeigt das Ergebnis:" %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Man_FR_Rec_Color_2.gif" alt="Man_FR_Rec_Color_2.gif" width="361" height="241" border="0"/></p>
+<p class="hcp3"> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
+<ul>
+	<li class="hcp4"><p class="Tip_Note_Text_Bulleted">{% trans "Klicken Sie ein Face der zu bearbeitenden Geometrie an. Der [WIRE-Expert] findet automatisch alle mit dem gewählten Face verbunden Faces, sofern diese die [gleiche Flächenfarbe] aufweisen und erodierbar sind." %}</p></li>
+	<li class="hcp4"><p class="Tip_Note_Text_Bulleted">{% trans "Klicken Sie ein Face der nächsten zu bearbeitenden Geometrie an." %}</p></li>
+	<li class="hcp4"><p class="Tip_Note_Text_Bulleted">{% trans "Machen Sie wie oben beschrieben weiter bis alle Geometrien bearbeitet sind." %}</p></li>
+	<li class="hcp4"><p class="Tip_Note_Text_Bulleted">{% trans "Beenden Sie den Dialog mit @." %}</p></li>
+</ul>
+
+{% endblock %}
+{% endlinebreakless %}

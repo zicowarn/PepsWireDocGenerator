@@ -1,0 +1,36 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Draht auf Position der Überschreitung der maximalen Konik positionieren." %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog"><img src="../Position_der_Maximalkonik_zeigen.gif" alt="Position_der_Maximalkonik_zeigen.gif" width="27" height="31" border="0"/> Draht auf Position der Überschreitung der maximalen Konik positionieren.</p><p>{% trans "Diese Schaltfläche ist nur dann aktiv, wenn es im Zuge der Simulation zu einer Überschreitung des [maximal möglichen Konikwinkels] der Maschine kommt." %}</p>
+<p class="Block_Text">{% trans "Ein Klick auf die Schaltfläche @ positioniert die Drahtgrafik auf die Schneidposition, an der es zu der Überschreitung der maximal möglichen Konik kam." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

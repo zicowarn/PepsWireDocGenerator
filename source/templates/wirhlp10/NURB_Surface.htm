@@ -1,0 +1,36 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "NURB Surface" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "NURBS Surface" %}</p><p>{% trans "Der Name des NURBS-Surfaces wird normalerweise in dieses Textfeld eingegeben oder mit der Schaltfläche @ in der Zeichnung ausgewählt." %}</p>
+<p>{% trans "Es ist nicht möglich ein NURBS-Surface auszuwählen, wenn die Checkbox [NURBS-Surface schneiden] nicht aktiviert ist." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

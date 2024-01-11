@@ -1,0 +1,67 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Das WIRE-Expert Menü" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+    p.hcp3 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <h1>{% trans "Das WIRE-Expert Menü" %}</h1><p> </p>
+<p>{% trans "Mit Hilfe des Moduls [WIRE-Expert] (optional) können Sie die Erzeugung von NC-Daten für Drahterodiermaschinen, auf Basis von 3D-Volumenmodellen, weitgehend automatisieren." %}</p>
+<p>{% trans "Dabei ist der #[FeatureManager]# das zentrale Bedienelement der [WIRE-Expert] Software, dass auf der [linken] Seite des Grafikfensters angezeigt wird." %}</p>
+<p>{% trans "Im [FeatureManager] werden alle programmierten Bearbeitungsobjekte aufgelistet." %}</p>
+<p class="hcp2"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp2"> </p>
+<p><img src="../WIRE_Expert_Menu_shg.gif" usemap="#AreaMap0" alt="WIRE_Expert_Menu_shg.gif" width="528" height="117" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="166,0,277,78" href="../WIRE_ExpertRH_context_Menu/Automatische_Feature_Erkennung.htm" alt=""/>
+<area shape="rect" coords="280,0,382,77" href="../WIRE_ExpertRH_context_Menu/Manuelle_Feature_Erkennung.htm" alt=""/>
+<area shape="rect" coords="381,0,524,76" href="../WIRE_ExpertRH_context_Menu/Erzeuge_Figuren_Bearbeitungen_von_Bearbeitungsobjekten.htm" alt=""/>
+<area shape="rect" coords="0,64,167,96" href="Bearbeitungsparameter_Wire_Expert_konfigurieren.htm" alt=""/>
+<area shape="rect" coords="0,0,167,32" href="Geometrie_Parameter.htm" alt=""/>
+<area shape="rect" coords="0,33,166,63" href="Voreinstellungen_Wire_Expert_konfigurieren.htm" alt=""/>
+</map> </p>
+<p class="hcp2"> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Siehe auch:" %}</p>
+<p>{% trans "#[WIRE-Expert - Prinzip der automatisierten Bearbeitung]#" %}</p>
+<p>{% trans "#[Automatische Featureerkennung]#" %}</p>
+<p class="hcp3">{% trans "#Manuelle Featureerkennung#" %}</p>
+<p class="hcp3">{% trans "[#[A]utomatische Featureerkennung nach Flächenfarben#]" %}</p>
+<p class="hcp3">{% trans "#Figuren + Bearbeitungen von Features erzeugen#" %}</p>
+<p class="hcp3">{% trans "#Der Feature-Manager (WIRE-Expert)#" %}</p>
+<p>{% trans "#[Der Feature-Manager - Funktionen der rechten Maustaste]#" %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

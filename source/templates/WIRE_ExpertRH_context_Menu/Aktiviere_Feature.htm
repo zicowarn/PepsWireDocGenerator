@@ -1,0 +1,48 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Aktiviere Feature" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../WIRE_ExpertRH_context_Menu.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Aktiviere Feature" %}</p><p>{% trans "Nimmt Features die mit der Option #[Deaktiviere Feature]# aus der Bearbeitungsfolge herausgenommen wurden, wieder in die Bearbeitungsfolge auf." %}</p><p>{% trans "Die Kennzeichnung des Features @ (deaktiviertes Objekt) im [WIRE-Expert] #FeatureManager# wird zurückgenommen." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="Hinweis">{% trans "Tipp:" %}</p>
+<p>{% trans "Wählen Sie [mehrere aufeinander folgende] [Features] aus, indem Sie während des Auswählens die [Umschalt]-Taste gedrückt halten." %}</p>
+<p>{% trans "Wählen Sie [mehrere] [nicht] [aufeinander folgende] [Features] aus, indem Sie während des Auswählens die [Strg]-Taste gedrückt halten." %}</p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a1');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

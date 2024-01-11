@@ -1,0 +1,43 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Simulationstyp einstellen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "@ Simulationstyp einstellen" %}</p><p class="Block_Text">{% trans "Mit diesen Ikonen können Sie einstellen, ob obere und untere Düsengrafik die Verfahrbewegungen simulieren oder, ob sich das Werkstück bewegt und die Düsengrafik still steht." %}</p>
+<p class="Block_Text">{% trans "Folgende Optionen sind verfügbar:" %}</p>
+<p class="Block_Text"> </p>
+<p class="Block_Text"><img src="../Simulations_Kinematik_Wire_1.gif" alt="Simulations_Kinematik_Wire_1.gif" width="20" height="19" align="left" border="0"/>: 
+ Obere und untere Düse verfahren und das Werkstück bewegt sich nicht.</p>
+<p class="Block_Text"><img src="../Simulations_Kinematik_Wire_2.gif" alt="Simulations_Kinematik_Wire_2.gif" width="19" height="17" align="left" border="0"/>: 
+ Obere Düse wird im Grafikfenster zentriert und das Werkstück bewegt sich.</p>
+<p class="Block_Text"><img src="../Simulations_Kinematik_Wire_3.gif" alt="Simulations_Kinematik_Wire_3.gif" width="19" height="17" align="left" border="0"/>: 
+ Untere Düse wird im Grafikfenster zentriert und das Werkstück bewegt sich.</p>
+
+{% endblock %}
+{% endlinebreakless %}

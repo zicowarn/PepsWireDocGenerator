@@ -1,0 +1,167 @@
+﻿P {
+   margin-left:5.65pt;
+   margin-right:6.50pt;
+   margin-top:4.00pt;
+   margin-bottom:0.00pt;
+   text-align:left;
+   font-family:Arial;
+   font-size:9pt;
+}
+H1 {
+    margin-left:5.65pt;
+    margin-right:6.50pt;
+    margin-top:6.00pt;
+    margin-bottom:2.00pt;
+    text-align:left;
+    font-family:Arial;
+    font-size:12pt;
+    font-weight:bold;
+}
+H2 {
+    margin-left:5.65pt;
+    margin-right:6.50pt;
+    margin-top:6.00pt;
+    margin-bottom:2.00pt;
+    text-align:left;
+    font-family:Arial;
+    font-size:10pt;
+    font-weight:bold;
+}
+H3 {
+    margin-left:5.75pt;
+    margin-right:6.50pt;
+    margin-top:6.00pt;
+    margin-bottom:2.00pt;
+    text-align:left;
+    font-family:Arial;
+    font-size:8pt;
+    font-weight:bold;
+}
+P.Normal-Indent {
+                 margin-left:36.00pt;
+                 margin-right:6.50pt;
+                 margin-top:4.00pt;
+                 margin-bottom:0.00pt;
+                 text-align:left;
+                 font-family:Arial;
+                 font-size:9pt;
+}
+P.Tip-Note-Heading {
+                    margin-left:5.65pt;
+                    margin-right:6.50pt;
+                    margin-top:6.00pt;
+                    margin-bottom:0.00pt;
+                    text-align:left;
+                    font-family:Arial;
+                    font-size:9pt;
+                    font-weight:bold;
+}
+P.Tip-Note-Text {
+                 margin-left:15.10pt;
+                 margin-right:6.50pt;
+                 margin-top:4.00pt;
+                 margin-bottom:0.00pt;
+                 text-align:left;
+                 font-family:Arial;
+                 font-size:9pt;
+}
+P.Tip-Note-Text-Bulleted {
+                          margin-left:15.10pt;
+                          margin-right:6.50pt;
+                          margin-top:4.00pt;
+                          margin-bottom:0.00pt;
+                          text-indent:-9.35pt;
+                          text-align:left;
+                          font-family:Arial;
+                          font-size:9pt;
+}
+P.Topic-Text-Bulleted {
+                       margin-left:15.10pt;
+                       margin-right:6.50pt;
+                       margin-top:4.00pt;
+                       margin-bottom:0.00pt;
+                       text-indent:-9.35pt;
+                       text-align:left;
+                       font-family:Arial;
+                       font-size:9pt;
+}
+P.Topic-Text-Indent {
+                     margin-left:15.10pt;
+                     margin-right:6.50pt;
+                     margin-top:4.00pt;
+                     margin-bottom:0.00pt;
+                     text-align:left;
+                     font-family:Arial;
+                     font-size:9pt;
+}
+P.Topic-Text-Numbered {
+                       margin-left:15.10pt;
+                       margin-right:6.50pt;
+                       margin-top:4.00pt;
+                       margin-bottom:0.00pt;
+                       text-indent:-9.35pt;
+                       text-align:left;
+                       font-family:Arial;
+                       font-size:9pt;
+}
+P.Topic-Text-Onestep {
+                      margin-left:15.10pt;
+                      margin-right:6.50pt;
+                      margin-top:4.00pt;
+                      margin-bottom:0.00pt;
+                      text-indent:-9.35pt;
+                      text-align:left;
+                      font-family:Arial;
+                      font-size:9pt;
+}
+P.dialog {
+          margin-left:5.65pt;
+          margin-top:6.00pt;
+          margin-bottom:0.00pt;
+          text-align:justify;
+          font-family:Arial;
+          font-size:10pt;
+          font-weight:bold;
+}
+P.Prompts {
+           margin-left:5.65pt;
+           margin-top:6.00pt;
+           margin-bottom:6.00pt;
+           text-align:left;
+           font-family:Arial;
+           font-size:9pt;
+           font-style:italic;
+           text-decoration:underline;
+}
+P.Hinweis {
+           margin-left:5.65pt;
+           margin-right:6.50pt;
+           margin-top:3.00pt;
+           margin-bottom:0.00pt;
+           text-align:left;
+           font-family:Arial;
+           font-size:9pt;
+           color:blue;
+           font-weight:bold;
+}
+P.footnote-text {
+                 margin-left:5.65pt;
+                 margin-right:6.50pt;
+                 margin-top:4.00pt;
+                 margin-bottom:0.00pt;
+                 text-align:left;
+                 font-family:Arial;
+                 font-size:10pt;
+}
+P.Body-Text-2 {
+               margin-top:1.00pt;
+               margin-bottom:3.00pt;
+               text-align:left;
+               font-family:Arial;
+               font-size:10pt;
+}
+BODY {
+      font-family:Arial;
+      font-size:9pt;
+      background-color:white;
+}

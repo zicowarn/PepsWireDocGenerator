@@ -1,0 +1,48 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Verhältnisradius" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Verhältnisradius" %}</p><p>{% trans "In diesem Textfeld kann man einen Verhältnisradius für die Definition von konischen Werkstückecken bestimmen. Die Box wird nur angezeigt, wenn die Optionen [ISO + Drehspindel] oder [ISO + Scharf] aktiv sind. - Für die Variante [Drehspindel + Scharf] oder [Nur Drehspindel] existiert keine geometrische Lösung für einen Verhältnisradius." %}</p>
+<p>{% trans "Die folgende Zeichnung zeigt Winkelwechselsymbole an 5 verschiedenen Eckradien. Die Konik bleibt am gesamten Werkstück gleich, aber es wurden verschiedene Verhältnisradien angegeben." %}</p>
+<p>{% trans "Wird für eine Werkstückecke [kein] Verhältnisradius bestimmt und ist der Eckenmodus [ISO] eingestellt, erzeugt das System identische Radien für obere und untere Kontur." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../SECODANG.gif" alt="SECODANG.gif" width="414" height="239" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "Das obige Beispiel zeigt den Eckenmodus [ISO + Scharf]. Hätte man den Modus [ISO] eingestellt, wären die [äußeren scharfen Ecken] zu konische Ecken geworden und die [inneren scharfen Ecken] wären nicht akzeptabel da der Draht einen Hinterschnitt erzeugen würde." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

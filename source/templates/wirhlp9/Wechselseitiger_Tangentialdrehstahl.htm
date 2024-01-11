@@ -1,0 +1,72 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Wechselseitiger Tangentialdrehstahl XXXBILD" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { font-size:10.0pt;
+    font-family:Arial, sans-serif; }
+    span.hcp2 { font-weight:bold; }
+    b.hcp3 { mso-bidi-font-weight:normal; }
+    font.hcp4 { font-weight:bold; }
+    img.hcp5 { border:none; }
+    p.hcp6 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Wechselseitiger Tangentialdrehstahl" %}</p><p class="hcp1">{% trans "[Mit der Funktion [Tangentialdrehstahl] werden die Geometrien für Drehstähle erstellt, die Sie für stirnseitige und planseitige Drehbearbeitungen einsetzen können.]" %}</p><p> </p>
+<p class="hcp1">{% trans "Im Menü [Drehstahl] finden Sie die Einträge [#Einseitiger Tangentialdrehstahl#] und [[&lt;i&gt;Wechselseitiger&lt;/i&gt;]] [Tangentiald[rehstahl]]." %}</p>
+<p class="hcp1">{% trans "Der Unterschied besteht darin, dass beim [#Einseitigen Tangentialdrehstahl#] der Freiwinkel nur einmal eingegeben werden kann. Dieser Winkel ist dann in eine Richtung ausgerichtet." %}</p>
+<p class="hcp1">{% trans "Beim [[&lt;i&gt;Wechselseitiger&lt;/i&gt;]] [Tangentiald[rehstahl]] wechselt der Winkel immer in der Mitte, an den waagrechten Linien der Drehstahlgeometrie." %}</p>
+<p class="hcp1">{% trans "An den Wechselpunkten werden von System sogenannte Ereignispunkte (NCIs) erzeugt. Diese Ereignispunkte können nachträglich editiert werden." %}</p>
+<p class="hcp1">{% trans "Auf diese Weise kann der Winkel manipuliert werden. Dies geschieht dann mit der Dialogoption [Änderung des seitlichen Freiwinkels]." %}</p>
+<p class="Hinweis"> </p>
+<p class="dialog" style="font-style: normal;">{% trans "[&lt;i&gt;Beispiel:&lt;/i&gt;] [&lt;i&gt;Wechselseitiger&lt;/i&gt;] [&lt;i&gt;[Tangentialdrehstahl]&lt;/i&gt;]" %}</p>
+<p class="dialog" style="font-weight: normal;"><img src="../Wechselseitiger%20Tangentialdrehstahl.gif" alt="" border="0" class="hcp5"/></p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp6"> </p>
+<p class="hcp6"><img src="../DREHSTA_Wechselseitig_shg.gif" alt="" usemap="#MAP620238749" border="0" class="hcp5"/>
+<map id="MAP620238749" name="MAP620238749">
+<area shape="rect" coords="10, 31, 339, 496" href="Einseitiger_Wechselseitiger_Tangentialdrehstahl.htm" alt=""/>
+<area shape="rect" coords="84, 504, 161, 525" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="201, 501, 275, 525" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area2" alt=""/>
+</map> </p>
+<p class="Hinweis"> </p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "Die Funktion [[&lt;i&gt;Wechselseitiger&lt;/i&gt;]] [Tangentiald[rehstahl]] ist optional." %}</p>
+<p> </p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

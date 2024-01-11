@@ -1,0 +1,76 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Optionen Register (Bearbeitungsfigur erzeugen)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Optionen Register (Bearbeitungsfigur erzeugen)" %}</p><p>{% trans "Das Register [Optionen] wird normalerweise nur einmal verwendet, um die Vorlieben eines Anwenders für die Definition von Bearbeitungsfiguren einzustellen." %}</p><p class="hcp1"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp1"> </p>
+<p><img src="../CREPRFG1_shg.gif" usemap="#AreaMap0" alt="CREPRFG1_shg.gif" width="376" height="503" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="15, 68, 351, 116" href="javascript:BSSCPopup('Vorgabe_fuer_Figurnamen_Linien_Boegen_Bearbeitungsfigur.htm',400,500);" id="area1" alt=""/>
+<area shape="rect" coords="16, 114, 294, 167" href="javascript:BSSCPopup('Toleranz_fuer_Linien_Bogenverbindung_Linien_Boegen_Bearbeitungsfigur.htm',400,400);" id="area2" alt=""/>
+<area shape="rect" coords="18, 175, 297, 201" href="javascript:BSSCPopup('Linien_Boegen_loeschen_Linien_Boegen_Bearbeitungsfigur.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="18, 195, 292, 224" href="javascript:BSSCPopup('Zeige_Fehlerfigur_bei_offenen_Figuren.htm',400,600);" id="area4" alt=""/>
+<area shape="rect" coords="14, 221, 349, 298" href="javascript:BSSCPopup('Verwende_momentane_Farbe_v_Linien_Boegen_eigene_Farbe.htm',400,600);" id="area5" alt=""/>
+<area shape="rect" coords="18, 300, 348, 346" href="javascript:BSSCPopup('Tangenten_pruefen_Bearbeitungsfigur_erzeugen.htm',400,300);" id="area6" alt=""/>
+<area shape="rect" coords="6, 475, 108, 497" href="javascript:BSSCPopup('../Commdata/COMMON_Schliessen.htm',400,300);" alt="" id="area12"/>
+<area shape="rect" coords="129, 475, 244, 498" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area7" alt=""/>
+<area shape="rect" coords="248, 473, 360, 495" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area8" alt=""/>
+<area shape="rect" coords="17, 40, 93, 59" href="Linien_Boegen_Bearbeitungsfigur.htm" alt=""/>
+<area shape="rect" coords="153, 39, 192, 60" href="Report_anzeigen_Lin_Bof_Bea_figur.htm" alt=""/>
+<area shape="rect" coords="194, 42, 234, 61" href="Eject_Register_Lin_Bof_Bea_figur.htm" alt=""/>
+<area shape="rect" coords="19, 349, 348, 398" href="javascript:BSSCPopup('Linien_Boegen_Reduktion.htm',400,400);" id="area9" alt=""/>
+<area shape="rect" coords="19, 395, 292, 412" href="javascript:BSSCPopup('Schwerpunkt_anzeigen_Bearbeitungsfigur_erzeugen.htm',400,600);" id="area10" alt=""/>
+<area shape="rect" coords="18, 415, 354, 457" href="javascript:BSSCPopup('Geometrie_linearisieren_Bearbeitungsfigur_erzeugen.htm',400,300);" id="area11" alt=""/>
+</map> </p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+	FilePopupInit('area3');
+	FilePopupInit('area4');
+	FilePopupInit('area5');
+	FilePopupInit('area6');
+	FilePopupInit('area12');
+	FilePopupInit('area7');
+	FilePopupInit('area8');
+	FilePopupInit('area9');
+	FilePopupInit('area10');
+	FilePopupInit('area11');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

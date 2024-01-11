@@ -1,0 +1,43 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Fehlerpunkte anzeigen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Fehlerpunkte anzeigen" %}</p><p>{% trans "Bei sehr kleinen Verrundungsradien sind Verrundungsfehler nicht immer sichtbar." %}</p>
+<p>{% trans "Ist die Option [Fehlerpunkte anzeigen] aktiv, kennzeichnet das System Verrundungsfehler durch [C-Punkte]." %}</p>
+<p>{% trans "Das Kennzeichnen der Verrundungsfehler, erlaubt Ihnen, die Ursache der Fehler zu untersuchen und ggf. manuell zu korrigieren." %}</p>
+<p>{% trans "Die C-Punkte, welche die Fehlerstellen kennzeichnen, sind auf dem Layer [@@ BLEND-FAIL] abgelegt." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

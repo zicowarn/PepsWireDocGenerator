@@ -1,0 +1,55 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Nachschnitte in Reihenfolge 1, 2, 3 ..." %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Nachschnitte in Reihenfolge 1, 2, 3 ..." %}</p><p> </p><p>{% trans "Diese Option wird erst aktiviert, wenn Sie [vorher] die Option #[Zuerst ALLE Schruppschnitte]# wählen." %}</p>
+<p>{% trans "Die Option bestimmt, in [welcher Reihenfolge die Nachschnitte] bei Bearbeitungsoperationen mit mehreren Schnitten ausgeführt werden." %}</p>
+<p>{% trans "Ist die Option aktiv, wird der [erste Nachschnitt] an der Figur1, dann an der Figur2 und dann an der Figur3 etc. ... ausgeführt." %}</p>
+<p>{% trans "Die gleiche Bearbeitungsreihenfolge wird für den [zweiten], [dritten], [vierten] [Nachschnitt] etc. ausgeführt." %}</p>
+<p>{% trans "Die Option [Nachschnitte in Reihenfolge 1, 2, 3 ...] ist besonders vorteilhaft, wenn Sie Materialien bearbeiten, die sehr schnell korrodieren." %}</p>
+<p>{% trans "Die Option erzeugt eine Bearbeitungsfolge, welche die Zeit reduziert, in der die Schnittflächen einer Korrosion ausgesetzt sind." %}</p>
+<p>{% trans "Ist die Option [nicht] gewählt, wird an der Figur1 der [erste Nachschnitt] ausgeführt, dann der [zweite Nachschnitt], der [dritte Nachschnitt] etc.." %}</p>
+<p>{% trans "Anschließend werden die gleichen Nachschnitte an der Figur2 und dann an der Figur3 etc. ausgeführt. Dies würde allerdings zu einem höherem Korrosionsgrad an der Figur1 führen." %}</p>
+<p> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
+<p>{% trans "@ [#Zeige Beispielfilm zum o.g. Thema#]" %}</p>
+<p> </p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a1');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

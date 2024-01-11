@@ -1,0 +1,72 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Technologie speichern (Technologie Datenbank)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    li.hcp1 { font-size:9pt; }
+    font.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Technologie speichern (Technologie Datenbank)" %}</p><p>{% trans "Mit dieser Funktion können Sie die Technologieparameter der momentanen Bearbeitung abspeichern. Gehen Sie wie folgt vor:" %}</p><p class="Tip_Note_Heading">{% trans "Technologie in Technologiedatenbank speichern" %}</p>
+<ul>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Wählen Sie die Bearbeitungsstrategie und bestimmen Sie welche Figur(en) bearbeitet werden sollen. Legen Sie den Stoppunkt, das Offset und die Ein/Ausfahrstrategie fest." %}</p>
+</li>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf das Register #[Schnitte]#." %}</p>
+</li>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Legen Sie die [Anzahl der Schnitte] fest und bestimmen Sie ggf. ein Offset." %}</p>
+</li>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf die Schaltfläche [...] unterhalb des Bereiches [#Tech.#] und ordnen Sie den einzelnen Schnitten z.B. Stromstufe und Offsetregister (NC-Steuerungsabhängig) zu." %}</p>
+</li>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf das Register [#Datenbank#]." %}</p>
+</li>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "[Aktivieren] Sie die Checkboxen: [Filter Material], [Filter Dicke] und [Filter Oberflächengüte]. Wählen Sie das [Material], die [Dicke] und die [Oberflächengüte] aus für das Sie Ihre Technologie speichern wollen. Fehlt z.B. ein Material kann man dies in der Combobox links neben dem Feld [Filter Material] eingeben." %}</p>
+</li>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf die Schaltfläche [#Technologie speichern#]." %}</p>
+</li>
+</ul>
+<script type="text/javascript" language="JavaScript1.2">
+//&lt;![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a1');
+        FilePopupInit('a3');
+        FilePopupInit('a2');
+//]]&gt;
+</script>
+
+{% endblock %}
+{% endlinebreakless %}

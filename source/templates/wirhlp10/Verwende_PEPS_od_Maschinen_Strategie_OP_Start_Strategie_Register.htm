@@ -1,0 +1,47 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Verwende PEPS- od. Maschinen-Strategie" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Verwende PEPS- od. Maschinen-Strategie" %}</p><p>{% trans "[Verwende PEPS Strategie:]" %}</p>
+<p>{% trans "Aktiviert man die Option [Verwende PEPS Strategie] werden in der Listbox #Strategieart# alle verfügbaren PEPS Bearbeitungsstrategien aufgelistet. [Siehe auch:] #[Strategieart]#" %}</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;"> </p>
+<p>{% trans "[Verwende Strategie der Maschine:]" %}</p>
+<p>{% trans "Einige Drahterodiermaschinen (z.B. AGIEVISION) bieten eigene Bearbeitungsstrategien." %}</p>
+<p>{% trans "Aktiviert man die Option [Verwende Strategie der Maschine] werden in der Listbox [Strategiename] die verfügbaren Maschinenstrategien aufgelistet." %}</p>
+<p> </p>
+<p>{% trans "[Hinweis:][ ]Die Option [Verwende Strategie der Maschine] ist nur für einige Erodiermaschinen verfügbar." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

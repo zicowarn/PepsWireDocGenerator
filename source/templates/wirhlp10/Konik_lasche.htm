@@ -1,0 +1,64 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Konik Register" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+    font.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Konik Register" %}</p><p>{% trans "Dieses Register dient zur Programmierung von Werkstücken mit umlaufend gleicher und variabler Konik. Auch die Programmierung von Schrägschiebern ist möglich." %}</p>
+<p class="hcp1"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp1"> </p>
+<p><img src="../KONIK_L_shg.gif" usemap="#AreaMap0" alt="KONIK_L_shg.gif" width="331" height="416" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="47, 3, 170, 23" href="Taschenerodieren_1.htm" alt=""/>
+<area shape="rect" coords="247, 4, 302, 25" href="Optionen_Lasche_Standard_Konturbearbeitung.htm" alt=""/>
+<area shape="rect" coords="118, 140, 322, 220" href="Standard_Konik.htm" alt=""/>
+<area shape="rect" coords="226, 390, 318, 413" href="Variable_Konik_programmieren.htm" alt=""/>
+<area shape="rect" coords="27, 45, 213, 138" href="Konik_Ikonen_Konik_Register_Std_Konturbearb.htm" alt=""/>
+<area shape="rect" coords="227, 41, 320, 133" href="Schraegschieber_Ikone_Konik_Register_Std_Konturbearb.htm" alt=""/>
+<area shape="rect" coords="19, 235, 314, 367" href="Eckenmodus.htm" alt=""/>
+<area shape="rect" coords="173, 5, 247, 22" href="Rotationsachse_Register_Standard_Konturbearbeitung_.htm" alt=""/>
+</map> </p>
+<p class="hcp1"> </p>
+<p>{% trans "[So wird es gemacht:]#[ Umlaufend gleiche Konik programmieren]#" %}</p>
+<p class="hcp1"> </p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "Be den meisten NC-Maschinen bezieht sich die Eingabe für [Refenzhöhe (Z)] auf die [untere Bearbeitungsebene]." %}</p>
+<p>{% trans "Nur bei [AgieVision] Postprozessoren bezieht sich die Referenzhöheneingabe auf die [obere Ebene] und ist [negativ]." %}</p>
+<p class="hcp1"> </p>
+<p><img src="../KONIK_L_AGIE_1.gif" alt="KONIK_L_AGIE_1.gif" width="196" height="93" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

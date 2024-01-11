@@ -1,0 +1,47 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Boxauswahl verwenden" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../RH_Context_Menu.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    span.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Boxauswahl verwenden" %}</p><p> </p>
+<p>{% trans "Ist diese Option aktiviert, können Sie [VOR] dem Start der [Automatischen Featureerkennung] eine [Auswahlfenster] 'aufziehen'." %}</p>
+<p>{% trans "Mit Hilfe des [Auswahlfenster] können Sie einen Teilbereich im 3D Modell auswählen, in dem die [Automatischen Featureerkennung] ausgeführt werden soll." %}</p>
+<p> </p>
+<p>{% trans "Die folgenden Bilder zeigt links wie ein rotes [Auswahlfenster], mit dessen Hilfe zwei Bohrungen ausgewählt werden sollen." %}</p>
+<p>{% trans "Das rechte Bild zeigt das Ergebnis der [Automatischen Featureerkennung], nämlich zwei bearbeite Bohrungen." %}</p>
+<p> </p>
+<p><img src="../image/Boxauswahl%20verwenden.gif" alt="" style="border: none;" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

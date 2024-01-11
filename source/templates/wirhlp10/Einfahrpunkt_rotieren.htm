@@ -1,0 +1,52 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Einfahrpunkt rotieren" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    span.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Einfahrpunkt rotieren" %}</p><p>{% trans "Diese Funktion wird aktiviert, wenn man [Durchbrüche] mit mehreren Schnitten bearbeiten will und der Draht bei jedem Schnitt, eine andere Anfahrposition in der Bohrung anfahren soll." %}</p>
+<p class="Block_Text">{% trans "Die Funktion wird z.B. verwendet, wenn man sehr präzise Bohrungen schneiden möchte, bei denen eine konstante Anfahrposition zu Anfahrmarken führt." %}</p>
+<p class="Block_Text"> </p>
+<p class="Block_Text"><img src="../rotpoint_1.gif" alt="" style="border: none;" border="0"/></p>
+<p class="Block_Text"> </p>
+<p>{% trans "Mit den Optionen [Winkel] oder [Abstand] wird die Funktion und ein Eingabefeld freigeschaltet." %}</p>
+<p>{% trans "Ist [Winkel] eingestellt, gibt man im Eingabefeld den [Winkel] ein, um den die Einfahrposition bei jedem Schnitt verschoben werden soll." %}</p>
+<p>{% trans "Ist [Abstand ]eingestellt, gibt man im Eingabefeld den [Abstandswert] ein, um den die Einfahrposition bei jedem Schnitt verschoben werden soll." %}</p>
+<p> </p>
+<p>{% trans "Beachten Sie bei Bohrungen, dass der Draht in der Mitte der Bohrung eingefädelt sein sollte." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><img src="../rotpoint.gif" alt="rotpoint.gif" width="355" height="163" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

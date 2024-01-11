@@ -1,0 +1,68 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Mess Zyklen XXX ALLE TO DO" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Mess Zyklen" %}</p><p>{% trans "Mit den [Mess Zyklen] können Sie den Messtaster / Messsensor von Drahterodiermaschinen programmieren, um das Werkstück im Maschinenkoordinatensystem auszurichten." %}</p><p class="hcp1"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp1"> </p>
+<p><img src="../MEASURE_CYCLES_shg.gif" usemap="#AreaMap0" alt="MEASURE_CYCLES_shg.gif" width="524" height="379" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="10,140,518,242" href="Position_Mess_Zyklen.htm" alt=""/>
+<area shape="rect" coords="13,271,437,304" href="javascript:BSSCPopup('Relativ_zum_PEPS_Ursprung_Mess_Zyklen.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="19,342,119,364" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="128,343,225,366" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="234,343,336,367" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area4" alt=""/>
+<area shape="rect" coords="342,343,442,368" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area5" alt=""/>
+<area shape="rect" coords="333,26,517,135" href="Lage_in_der_Bearbeitungsebene_Mess_Zyklen.htm" alt=""/>
+<area shape="rect" coords="15, 304, 435, 333" href="javascript:BSSCPopup('Relativ_zur_linken_unteren_Werkstueckecke_Mess_Zyklen.htm',400,300);" id="area6" alt=""/>
+<area shape="rect" coords="12, 28, 195, 134" href="javascript:BSSCPopup('Raeumliche_Lage_Mess_Zyklen.htm',400,600);" id="area7" alt=""/>
+</map> </p>
+<p class="hcp1"> </p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "Die Funktion [Mess Zyklen] ist optional und nicht für jede Erodiermaschine verfügbar (Zur Zeit nur AGIEVISION, Mitsubishi und Charmilles Robofil)." %}</p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+	FilePopupInit('area3');
+	FilePopupInit('area4');
+	FilePopupInit('area5');
+	FilePopupInit('area6');
+	FilePopupInit('area7');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

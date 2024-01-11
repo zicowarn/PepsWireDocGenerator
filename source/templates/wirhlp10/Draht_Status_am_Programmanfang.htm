@@ -1,0 +1,41 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Draht-Status am Programmanfang" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Draht-Status am Programmanfang" %}</p><p>{% trans "Legt fest, welchen Status ([eingefädelt] oder [nicht eingefädelt]) der Schneiddraht am Beginn eines Programms hat." %}</p>
+<p class="Block_Text">{% trans "Die Funktion wird in einigen seltenen Fällen aktiviert, z.B. wenn der Draht schon vor dem Start eines Programms, manuell vom Bediener eingefädelt wurde." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

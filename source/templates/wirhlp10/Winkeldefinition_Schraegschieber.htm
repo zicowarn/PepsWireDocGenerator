@@ -1,0 +1,53 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Winkeldefinition XXXTO DO" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    span.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Winkeldefinition" %}</p><p>{% trans "Mit diesem Dialogfeld bestimmen Sie, unter welchem Winkel die Schrägschieberbearbeitung ausgeführt werden soll." %}</p>
+<p>{% trans "Der Winkel des Schiebers wird durch eine [Winkelangabe] oder durch eine [XY-Verschiebung] in mm festgelegt. Die XY-Verschiebung bezieht sich auf die untere Ebene." %}</p>
+<p> </p>
+<p class="Tip_Note_Heading">{% trans "XY-Verschiebung" %}</p>
+<p>{% trans "Ist diese Option aktiv, wird der Winkel des Schrägschiebers durch eine inkrementale [XY-Verschiebung] bestimmt." %}</p>
+<p>{% trans "Die Eingabe von positiven und negativen Verschiebewerten ist erlaubt, so dass eine Verschiebung in alle Richtungen möglich ist." %}</p>
+<p> </p>
+<p class="Tip_Note_Heading">{% trans "XY-Winkel" %}</p>
+<p>{% trans "Ist diese Option aktiv, wird der Winkel des Schrägschiebers durch [Winkelangaben] bezogen auf die Achsen X und Y bestimmt." %}</p>
+<p>{% trans "Auch hier ist die Eingabe von positiven und negativen Winkelwerten erlaubt, so dass eine Verschiebung in alle Richtungen möglich ist." %}</p>
+<p> </p>
+<p class="Tip_Note_Heading">{% trans "Keine Elemente reduzieren" %}</p>
+<p>XXX</p>
+
+{% endblock %}
+{% endlinebreakless %}

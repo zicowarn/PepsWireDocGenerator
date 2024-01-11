@@ -1,0 +1,79 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Matrizen Register" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Matrizen Register" %}</p><p>{% trans "Wählen Sie das Register [Matrizen], wenn die Geometrieelemente automatisch in Bearbeitungsfiguren vom Typ [Matrize] (Startloch [innerhalb] der Bearbeitungsfigur) umgewandelt werden sollen." %}</p><p>{% trans "Stellen Sie [vorher] die Optionen im Register #[Filter]# korrekt ein." %}</p>
+<p>{% trans "[Beachten Sie, dass das System bei der Elementauswahl unabhängig von den Einstellungen in dem Register] [#Filter#, zunächst alle gewählten Elemente markiert.]" %}</p>
+<p>{% trans "[Erst nach dem Beenden der Elementauswahl, konvertiert das System die in durch den Filter zugelassenen Formen zu Bearbeitungsfi][g][uren.]" %}</p>
+<p>{% trans "Die Schaltfläche [Wähle Matrizen &amp;gt;&amp;gt;] dient zur Auswahl der Elemente, die in Bearbeitungsfiguren vom Typ [Matrize] umgewandelt werden sollen." %}</p>
+<p class="hcp2"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp2"> </p>
+<p><img src="../QUI_D_P2_shg.gif" usemap="#AreaMap0" alt="QUI_D_P2_shg.gif" width="415" height="398" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="25, 88, 152, 116" href="javascript:BSSCPopup('Startloch_zentrieren_Auto_Mat_Stemp.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="25, 113, 231, 134" href="javascript:BSSCPopup('Einfahrabstand_Auto_Matritzen_Stempel.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="244, 85, 384, 218" href="javascript:BSSCPopup('../Commdata/COMMON_Bild.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="64, 44, 110, 62" href="Stempel_Auto_Matritzen_Stempel.htm" alt=""/>
+<area shape="rect" coords="112, 44, 152, 62" href="Filter_Auto_Matritzen_Stempel.htm" alt=""/>
+<area shape="rect" coords="24, 144, 231, 171" href="javascript:BSSCPopup('Winkel_zur_Normalen_Auto_Matritzen_Stempel.htm',400,300);" id="area4" alt=""/>
+<area shape="rect" coords="24, 177, 233, 206" href="javascript:BSSCPopup('Umfangs_Parameter_Auto_Matritzen_Stempel.htm',400,600);" id="area5" alt=""/>
+<area shape="rect" coords="237, 229, 387, 271" href="javascript:BSSCPopup('Matrizen_Stempeltyp_Auto_Mat_Stemp.htm',400,600);" id="area6" alt=""/>
+<area shape="rect" coords="11, 366, 115, 389" href="javascript:BSSCPopup('Waehle_Matrizen_Stempel_Auto_Mat_Stemp.htm',400,300);" id="area7" alt=""/>
+<area shape="rect" coords="22, 273, 384, 348" href="javascript:BSSCPopup('Schnittschemen_Auto_Matritzen_Stempel.htm',400,500);" id="area8" alt=""/>
+<area shape="rect" coords="120, 369, 209, 389" href="../Commdata/COMMON_Schliessen.htm" alt=""/>
+<area shape="rect" coords="213, 369, 306, 389" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area9" alt=""/>
+<area shape="rect" coords="312, 367, 400, 388" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area10" alt=""/>
+<area shape="rect" coords="23, 217, 231, 264" href="Startloch_Suchschema_Auto_Mat_Stemp.htm" alt=""/>
+<area shape="rect" coords="157, 42, 208, 59" href="Optionen_Auto_Matritzen_Stempel.htm" alt=""/>
+</map> </p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+	FilePopupInit('area3');
+	FilePopupInit('area4');
+	FilePopupInit('area5');
+	FilePopupInit('area6');
+	FilePopupInit('area7');
+	FilePopupInit('area8');
+	FilePopupInit('area9');
+	FilePopupInit('area10');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

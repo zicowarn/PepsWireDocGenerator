@@ -1,0 +1,57 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Rotationsachse konfigurieren" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Rotationsachse konfigurieren" %}</p><p>{% trans "Wenn die Drahterodiermaschine eine Rotationsachse ([A]-, [B]- od. [A+B]-Achse(n)) hat und diese programmiert werden soll, muss die Rotationsachse im Vorfeld eingestellt werden." %}</p><p class="hcp2"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Config_Rot_Axis_shg.gif" usemap="#AreaMap0" alt="Config_Rot_Axis_shg.gif" width="309" height="224" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="5,29,304,106" href="Einzelne_Rotationsachse_konfigurieren_Rotationsachse_konfigurieren.htm" alt=""/>
+<area shape="rect" coords="4,108,302,183" href="Erweiterte_Rotationsachse_konfigurieren_Rotationsachse_konfigurieren.htm" alt=""/>
+<area shape="rect" coords="178,192,297,216" href="javascript:BSSCPopup('../Commdata/COMMON_Schliessen.htm');" id="area1" alt=""/>
+</map> </p>
+<p> </p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "Die Programmierung von Rotationsachsen ist eine Option." %}</p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

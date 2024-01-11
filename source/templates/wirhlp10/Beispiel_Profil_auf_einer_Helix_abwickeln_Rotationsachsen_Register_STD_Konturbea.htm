@@ -1,0 +1,52 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Beispiel: Profil auf einer Helix abwickeln" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+    font.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Profil auf einer Helix abwickeln" %}</p><p>{% trans "Die zu schneidende Kontur wird in 2D geschnitten, wobei sich das Rohteil um die Rotationsachse dreht. Die Kontur wird dabei helikal auf einer weichen Kurve abgewickelt." %}</p>
+<p>{% trans "Das heißt, dass sich die Rotationsachse gleichzeitig mit den Schneiddüsen entlang der Rotationsachse bewegt." %}</p>
+<p>{% trans "Die Bilder unterhalb zeigen die zylindrische Bearbeitung eines Langlochs, bei gleichzeitiger Rotation der Rotationsachse." %}</p>
+<p class="hcp1"> </p>
+<p><img src="../Rotationsachse_Profil_auf_einer_Helix_abwickeln.gif" alt="Rotationsachse_Profil_auf_einer_Helix_abwickeln.gif" width="868" height="418" border="0"/></p>
+<p class="hcp1"> </p>
+<p>{% trans "Wurde die Option [Profil auf einer Helix abwickeln aktiviert], schaltet das System folgende Optionen frei:" %}</p>
+<p class="dialog">{% trans "Rotation, Grad pro mm" %}</p>
+<p>{% trans "Der Parameter [Rotation, Grad pro mm] definiert die Rotation der Rotationsachse (in Grad) pro jedem geschnittenen Millimeter." %}</p>
+<p class="dialog">{% trans "X-Position für Start der Helix" %}</p>
+<p>{% trans "Diese X-Positionskoordinate erlaubt es, die Schneidgeometrie entlang der X-Achse zu verschieben. Die helikale Form startet dann an der definierten X-Position." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

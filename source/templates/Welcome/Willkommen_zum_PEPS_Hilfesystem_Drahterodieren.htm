@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load linebreakless %}
+{% linebreakless %}
+<!-- Head Title -->
+{% block headtitle %}
+  <TITLE>
+    {% trans 'Willkommen zum PEPS Hilfesystem Drahterodieren' %}
+  </TITLE>
+{% endblock %}
+<!-- / Head Title -->
+<!-- Head CSS -->
+{% block headcss %}
+  <LINK rel="StyleSheet" href="../Welcome.css" />
+  <style title="hcp" type="text/css"></style>
+{% endblock %}
+<!-- / Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+  <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!-- / Head JavaScript -->
+{% block mainbody %}
+  <h1>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">欢迎使用 PEPS 线切割帮助系统</font>
+    </font>
+  </h1><p>&nbsp;</p>
+  <p>
+    <img src="../Logo.gif" alt="徽标.gif" width="280" height="280" border="0" />
+  </p>
+  <p>&nbsp;</p>
+  <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">要选择帮助主题：</font>
+    </font>
+  </p>
+  <ul>
+    <li class="hcp1">
+      <p class="Topic_Text_Bulleted">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">选择左上角的@选项卡。</font>
+        </font>
+      </p>
+    </li>
+    <li class="hcp1">
+      <p class="Topic_Text_Bulleted">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">双击所需的书籍符号@。</font>
+        </font>
+      </p>
+    </li>
+    <li class="hcp1">
+      <p class="Topic_Text_Bulleted">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">双击您需要的帮助主题，例如@。</font>
+        </font>
+      </p>
+    </li>
+  </ul>
+  <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+    <br /><font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">要在帮助系统显示对话框或菜单时获取帮助：</font>
+    </font>
+  </p>
+  <ul>
+    <li class="hcp1">
+      <p class="Topic_Text_Bulleted">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">将鼠标指针放在对话框或菜单上。</font>
+        </font>
+      </p>
+    </li>
+    <li class="hcp1">
+      <p class="Topic_Text_Bulleted">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">当鼠标光标变成手时，下面有一个帮助主题。</font>
+        </font><span>
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">左键</font>
+          </font>
+        </span><font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">单击</font>
+          <font style="vertical-align: inherit;">帮助主题即可访问它。</font>
+        </font>
+      </p>
+    </li>
+  </ul>
+  <p>
+    <img src="../Hilfeaufruf.gif" alt="寻求帮助.gif" width="773" height="209" border="0" />
+  </p>
+  <p style="font-weight: bold;">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">V2023-08</font>
+    </font>
+  </p>
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,50 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Position XXX MESSEN" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Position" %}</p><p>{% trans "Mit diesen sechs Schaltflächen können Sie die Position des Werkstücks im Maschinenkoordinatensystem ermitteln." %}</p>
+<p>{% trans "Mit einigen Funktionen kann man die Werkstückposition in einer Messoperation ermitteln, in anderen Fällen wählt man eine Kombination von zwei Messfunktionen." %}</p>
+<p>{% trans "Die Funktionen sind abhängig von der verwendeten CNC-Steuerung und nicht immer verfügbar." %}</p>
+<p class="hcp1"> </p>
+<p><img src="../MEASURE_CYCLES_Position.gif" alt="MEASURE_CYCLES_Position.gif" width="509" height="109" border="0"/></p>
+<p class="hcp1"> </p>
+<p>{% trans "Nach dem Aufruf einer Funktion zeigt das System einen Dialog, in dem nur die für den Messzyklus benötigten Eingabebereiche freigeschaltet sind." %}</p>
+<p>{% trans "Eine Bitmapgrafik zeigt an, welche Informationen in den Dialog einzugeben sind." %}</p>
+<p class="hcp1"> </p>
+<p><img src="../MEASURE_CYCLES_Position_1.gif" alt="MEASURE_CYCLES_Position_1.gif" width="377" height="608" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

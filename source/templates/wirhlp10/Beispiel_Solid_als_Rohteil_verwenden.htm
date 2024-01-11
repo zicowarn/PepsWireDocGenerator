@@ -1,0 +1,49 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Solid als Rohteil verwenden" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    li.hcp1 { font-size:9pt; }
+    font.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Tip_Note_Heading">{% trans "Solid als Rohteil verwenden" %}</p><ul>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Definieren Sie die Solidgeometrie des [Rohteils] (Solid importieren oder konstruieren)." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Rufen Sie im Menü #[Bearbeitung]# den Befehl #[Operation starten]# auf und klicken Sie im Dialog auf das Register [Rohteil]." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie im Dialogbereich [Rohteile] auf die Schaltfläche [&amp;gt;&amp;gt;]." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie das Solid mit der linken Maustaste an und beenden Sie die Auswahl mit der Option [Ende] (siehe: [rechte] Maustaste od. [horizontale Ikonenleiste])." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Schließen Sie den Dialog, programmieren Sie die Bearbeitung und führen Sie eine #[Solid-Simulation]# durch." %}</p></li>
+</ul>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><img src="../Simulation_mit_Solid_als_Rohteil.gif" alt="Simulation_mit_Solid_als_Rohteil.gif" width="485" height="315" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

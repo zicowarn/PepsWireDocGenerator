@@ -1,0 +1,84 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Ausfallteil Sicherung Typ 1" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    img.hcp1 { border:none; }
+    span.hcp2 { mso-layout-grid-align:none;
+    text-autospace:none; }
+    span.hcp3 { font-family:Arial, sans-serif; }
+    p.hcp4 { font-family:Arial, sans-serif; }
+    b.hcp5 { mso-bidi-font-weight:normal; }
+    span.hcp6 { font-weight:bold; }
+    span.hcp7 { font-family:Arial, sans-serif;
+    font-weight:bold; }
+    span.hcp8 { mso-spacerun:yes; }
+    span.hcp9 { mso-layout-grid-align:none;
+    text-autospace:none;
+    font-family:Arial, sans-serif; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Ausfallteil Sicherung TYP 1" %}</p><p> </p>
+<p class="dialog">{% trans "[[[Typ 1: Ausfallteilsicherung bei konischen und zylindrischen Schnittwerkzeugen]]]" %}</p>
+<p class="hcp4">{% trans "Dieses Sondermakro verhindert durch Markierungen in der Geometrie der Schnittplatte, dass während des Stanzvorgangs ausgestanzte Teile vom Schnittstempel aus der Schnittmatrize herausgezogen werden, sich vom Stempel lösen und das Werkzeug beschädigen." %}</p>
+<p>{% trans "[[Vorteil]][[:]] [Wesentlich höhere Standzeit des Schnittwerkzeuges, ohne Mehraufwand in der Konstruktion und bei der NC-Programmerstellung.]" %}</p>
+<p> </p>
+<p class="MsoNormal" style="mso-layout-grid-align: none; text-autospace: none;"><img src="../Ausfallteil_Sicherung_Typ1_Parameter.gif" alt="" border="0" class="hcp1"/></p>
+<p class="MsoNormal" style="mso-layout-grid-align: none; text-autospace: none;"> </p>
+<p class="hcp4">{% trans "[D]ie [Breite B1] und [Tiefe T1] beschreiben die Länge und die Tiefe der Ausfallteilsicherung." %}</p>
+<p class="hcp4">{% trans "Der Parameter [Radius R] definiert den Ein- und Auslaufradius der Ausfallteilsicherung." %}</p>
+<p class="hcp4">{% trans "Mit dem [Winkel A1] wird die Neigung der Ausfallteilsicherung in Richtung der Z-Achse [und mit dem ][Winkel A2][ die generelle Konizität in der Schnittplatte definiert.]" %}</p>
+<p class="hcp4">{% trans "Dieser Parameter kann bei zylindrischen Werkzeugen, oder bei Werkzeugen mit zylindrischem Bund auch mit Null angegeben werden." %}</p>
+<p> </p>
+<p class="dialog">{% trans "Ergänzung zu Typ 1:" %}</p>
+<p>{% trans "[Wenn man der] [Tiefe T1] [ein] [negativen] [Wert zuweist, erscheint ein weiteres Eingabefeld] [ ][Radius r], [das die Einfahrt ebenfalls mit einen Radius versieht.]" %}</p>
+<p> </p>
+<p>{% trans "Es existieren 4 weitere Typen von Ausfallteil Sicherungen:" %}</p>
+<p class="dialog" style="font-family: Arial, sans-serif;">{% trans "&lt;p class='dialog' style='font-family: Arial, sans-serif;'&gt;[#T[yp 2: Ausfallteilsicherung bei konischen und zylindrischen Schnittwerkzeugen]#]" %}</p>
+<p class="dialog" style="font-family: Arial, sans-serif;">{% trans "&lt;p class='dialog' style='font-family: Arial, sans-serif;'&gt;#[T][[yp 3: Ausfallteilführung]]#" %}</p>
+<p class="dialog1">{% trans "#[[T]][[yp 4:][ ][Ausfallteilsicherung][ ][mit Zylindrischen Bund und Vorweite]]#" %}</p>
+<p class="dialog" style="mso-bidi-font-weight: normal; mso-layout-grid-align: none;  text-autospace: none;">{% trans "[#Typ 5: Ausfallteilsicherung für konische Schneidmatrizen#]" %}</p>
+<p> </p>
+<p>{% trans "Das folgende Bild zeigt die [5 Typen der Ausfallteil Sicherung]:" %}</p>
+<p> </p>
+<p class="hcp4"><img src="../Ausfallteil_Sicherung_1.gif" alt="" border="0" class="hcp1"/></p>
+<p> </p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "Diese Funktion ist optional." %}</p>
+<p class="dialog">{% trans "So wird es gemacht:" %}</p>
+<p style="font-weight: bold;">{% trans "#Ausfallteilsicherung programmieren#" %}</p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,56 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Standard Simulation" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    span.hcp1 { font-weight:bold; }
+    a.hcp2 { font-weight:normal; }
+    font.hcp3 { font-weight:normal; }
+    img.hcp4 { border:none; }
+    span.hcp5 { font-weight:normal; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <h1 style="font-size: 12pt;"><img src="../Solid_Sim.gif" alt="Solid_Sim.gif" width="32" height="33" align="left" border="0"/> Standard Simulation</h1><p> </p>
+<p>{% trans "Die [ Standard Simulation] dient zur Simulation der programmierten Drahtbahnen MIT Simulation des Materialabtrages." %}</p>
+<p>{% trans "Die Simulation läuft in der Reihenfolge ab, wie sie im #[Operationsmanager]# programmiert wurde." %}</p>
+<p> </p>
+<p>{% trans "Je nachdem ob im Menü die Schaltfläche @ aktiv ist oder nicht, können Sie zwischen [zwei Simulationsmethoden] wählen:" %}</p>
+<p> </p>
+<p>{% trans "#[Solid Simulation]# Schaltfläche @ nicht aktiv." %}</p>
+<p>{% trans "oder" %}</p>
+<p>{% trans "#Maschinenraum Simulation# Schaltfläche @ ist aktiv." %}</p>
+<p> </p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "[[Zusätzlich zu den oberhalb beschriebenen Simulationsformen][ ][existiert im Menü ][Simulation][ ein weiterer Simulationsmodus die ]#Drahtmodell-Simulation#] @." %}</p>
+<p>{% trans "Hier erfolgt die Simulation der Drahtbahnen OHNE Materialabtrag." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

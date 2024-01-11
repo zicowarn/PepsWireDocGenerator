@@ -1,0 +1,67 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Solid - Projektions-Assistent - Schritt 2" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+    font.hcp3 { font-style:italic; }
+    font.hcp4 { font-weight:bold;
+    font-style:italic; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Solid - Projektions-Assistent - Schritt 2" %}</p><p>{% trans "Der [Schritt 2] des [Assistenten] wird verwendet, um von den ermittelten 2D-Geometrien, die auszuwählen, die verwendet werden sollen." %}</p><p>{% trans "Klicken Sie zur Auswahl [einzelne] Geometrien in der Liste an ([Linke] Maustaste + [Strg]-Taste erlaubt Mehrfachauswahl) oder verwenden Sie die Schaltfläche [Alle wählen], um [alle] Geometrien der Liste auszuwählen." %}</p>
+<p class="hcp2"> </p>
+<p>{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen. Klicken Sie auf die Schaltflächen] [&amp;lt; Zurück] [/] [Weiter &amp;gt;] [um den nächsten/vorherigen Dialog des Assistenten zu sehen.]" %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Solid_Proj_Assis_2_shg.gif" usemap="#AreaMap0" alt="Solid_Proj_Assis_2_shg.gif" width="495" height="357" border="0"/> <map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="146,320,222,342" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm');" id="area1" alt=""/>
+<area shape="rect" coords="11,33,137,307" href="javascript:BSSCPopup('../Commdata/COMMON_Bild.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="236,319,311,341" href="Solid_Projektions_Assistent.htm" alt=""/>
+<area shape="rect" coords="317,320,395,342" href="Solid_Projektions_Assistent_Schritt_3.htm" alt=""/>
+<area shape="rect" coords="408,317,485,341" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="146,114,284,300" href="javascript:BSSCPopup('Liste_der_gefundenen_Geometrien_Solid_Projektions_Assistent.htm',400,300);" id="area4" alt=""/>
+<area shape="rect" coords="289, 274, 478, 300" href="javascript:BSSCPopup('Alle_waehlen_Alle_loeschen_Solid_Projektions_Assistent.htm',400,300);" id="area5" alt=""/>
+<area shape="rect" coords="434, 231, 480, 269" href="Common_049.chm::/CommonHelp5/Neuzeichnen_Mag.htm" alt=""/></map></p>
+<script type="text/javascript" language="JavaScript1.2">
+//&lt;![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('area1');
+        FilePopupInit('area2');
+        FilePopupInit('area3');
+        FilePopupInit('area4');
+        FilePopupInit('area5');
+//]]&gt;
+</script>
+
+{% endblock %}
+{% endlinebreakless %}

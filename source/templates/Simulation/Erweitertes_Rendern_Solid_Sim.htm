@@ -1,0 +1,47 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Erweitertes Rendern" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Erweitertes Rendern" %}</p><p>{% trans "Aktiviert man die Option [Erweitertes Rendern] (Schattieren), verwendet das System die Einstellungen des Dialogs [Erweitertes Rendern]." %}</p>
+<p>{% trans "Zudem wird die Schaltfläche [Einstellungen] freigeschaltet." %}</p>
+<p>{% trans "Mit der Schaltfläche [Einstellungen] können Sie den Dialog [Erweitertes Rendern] aufrufen." %}</p>
+<p>{% trans "Mit diesem Dialog können Sie die [Hintergrundfarbe der Simulation] einstellen, sowie die Lichteinstellungen für das Rendern (Schattieren) und verschiedene weiter Renderingfunktionen beeinflussen." %}</p>
+<p> </p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "Das Einstellen der Renderingfunktionen richtet sich an versierte Anwender." %}</p>
+<p>{% trans "Im Normalfall sind diese Einstellungen Herstellerseitig voreingestellt und müssen nicht verändert werden." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

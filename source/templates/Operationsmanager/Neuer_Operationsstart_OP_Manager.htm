@@ -1,0 +1,55 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Neuer Operationsstart" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Operationsmanager.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    h2.hcp2 { margin-top:4.00pt;
+    margin-bottom:0.00pt; }
+    p.hcp3 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Neuer Operationsstart" %}</p><p> </p>
+<p>{% trans "Erzeugt einen Eintrag für einen neuen #[Operationsstart]#. Entweder am Anfang der Operationsliste, am Ende oder nach einem gewählten Operationsstart." %}</p>
+<p> </p>
+<p>{% trans "Folgende Optionen existieren:" %}</p>
+<h2 class="hcp2">{% trans "Neuer Operationsstart  am Programmanfang" %}</h2>
+<p>{% trans "Fügt einen neuen Operationsstart ein [am Anfang] der Operationsliste." %}</p>
+<p class="hcp3"> </p>
+<h2 class="hcp2">{% trans "Neuer Operationsstart  am Programmende" %}</h2>
+<p>{% trans "Fügt einen neuen Operationsstart ein [am Ende] der Operationsliste." %}</p>
+<p class="hcp3"> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Neuer Operationsstart nach diesem Operationsstart" %}</p>
+<p>{% trans "Fügt einen neuen Operationsstart ein [nach einem vorhandenen Operationsstart] der angeklickt werden muss." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

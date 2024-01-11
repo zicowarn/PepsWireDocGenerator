@@ -1,0 +1,42 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Sichtbare Faccettierung" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Sichtbare Facettierung" %}</p><p>{% trans "Diese Einstellung findet Anwendung, um die Simulationsgeschwindigkeit von komplexen Werkzeugen und Werkzeughaltern, die mit einem sehr kleinem [Facettierungswert] simuliert werden, zu verbessern." %}</p>
+<p>{% trans "Durch Erhöhen des Wertes für die [Sichtbare Facettierung], zeigt das System Werkzeuge/Halter mit weniger Facetten an, ohne das dies einen Einfluss auf einen #[Zielteilvergleich]# hätte." %}</p>
+<p>{% trans "Stellt man den Wert für die [Sichtbare Facettierung] auf [0] ein, verwendet das System die Facettierungseinstellungen für das Werkzeug und den Werkzeughalter." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

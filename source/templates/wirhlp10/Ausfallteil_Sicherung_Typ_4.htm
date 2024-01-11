@@ -1,0 +1,83 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Ausfallteil Sicherung Typ 4" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    img.hcp1 { border:none; }
+    b.hcp2 { mso-bidi-font-weight:normal; }
+    span.hcp3 { mso-layout-grid-align:none;
+    text-autospace:none;
+    font-family:Arial, sans-serif; }
+    span.hcp4 { font-family:Arial, sans-serif; }
+    p.hcp5 { font-family:Arial, sans-serif; }
+    span.hcp6 { mso-layout-grid-align:none;
+    text-autospace:none; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Ausfallteil Sicherung TYP 4" %}</p><p> </p>
+<p class="dialog1">{% trans "[[Typ 4:][ ][Ausfallteil Sicherung][ ][mit Zylindrischen Bund und Vorweite]]" %}</p>
+<p class="MsoNormal" style="mso-layout-grid-align: none; text-autospace: none;"> </p>
+<p>{% trans "[Bei diesem Typ wird die Schneidmatrize an den Positionen der Ausfallteilsicherung mit einer]" %}</p>
+<p class="hcp5">{% trans "Vorweite versehen. Dabei wird der Bereich der Abfallklemmung nicht vertieft, sondern entgegengesetzt geschnitten. Dadurch verringert sich der Schneidspalt beim Stanzen in diesen Bereichen." %}</p>
+<p>{% trans "[Dieser Typ wird häufig bei geringen Blechdicken aus Edelstahl eingesetzt.]" %}</p>
+<p> </p>
+<p>{% trans "[Vorteil:][ ]" %}</p>
+<p>{% trans "Der Butzen wird im Bereich der Vorweite gestaucht. Man erzielt dadurch einen höheren Klemmeffekt." %}</p>
+<p class="hcp5">{% trans "Dadurch, dass die Vorweite nur im Bereich der Ausfallteilsicherung angebracht wird, ist dieser Klemmeffekt auch nicht zu groß und mindert somit die Bruchgefahr der Matrize, im Gegensatz zu einer [umlaufenden Vorweite.]" %}</p>
+<p>{% trans "[Die Vorweite ist so angebracht, dass sie an der Schneidkontur ausläuft. Diese erhöht die Standzeit, da sich eine durchgängige Schneidkante ergibt.]" %}</p>
+<p> </p>
+<p><img src="../Ausfallteil_Sicherung_Typ4_Parameter.gif" alt="" border="0" class="hcp1"/></p>
+<p> </p>
+<p>{% trans "[[[B]earbeitungsablauf:]]" %}</p>
+<p> </p>
+<p>{% trans "[Zuerst wird ein zylindrischer Schnitt durchgeführt. Anschließend]" %}</p>
+<p>{% trans "[wird die umlaufende Konik und zum Schluss die Vorweite bearbeitet.]" %}</p>
+<p> </p>
+<p>{% trans "Es existieren 4 weitere Typen von Ausfallteil Sicherungen:" %}</p>
+<p class="dialog" style="font-family: Arial, sans-serif;">{% trans "&lt;p class='dialog' style='font-family: Arial, sans-serif;'&gt;[[#Typ 1: Ausfallteil Sicherung bei konischen und zylindrischen Schnittwerkzeugen#]]" %}</p>
+<p class="dialog" style="font-family: Arial, sans-serif;">{% trans "&lt;p class='dialog' style='font-family: Arial, sans-serif;'&gt;[#T[yp 2: Ausfallteil Sicherung bei konischen und zylindrischen Schnittwerkzeugen]#]" %}</p>
+<p class="dialog" style="font-family: Arial, sans-serif;">{% trans "&lt;p class='dialog' style='font-family: Arial, sans-serif;'&gt;#[T][[yp 3: Ausfallteilführung]]#" %}</p>
+<p class="dialog" style="mso-bidi-font-weight: normal;">{% trans "[[#Typ 5: Ausfallteil Sicherung für konische Schneidmatrizen#]]" %}</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">{% trans "Das folgende Bild zeigt die [5 Typen der Ausfallteil Sicherung]:" %}</p>
+<p> </p>
+<p class="hcp5"><img src="../Ausfallteil_Sicherung_1.gif" alt="" border="0" class="hcp1"/></p>
+<p> </p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "Diese Funktion ist optional." %}</p>
+<p class="dialog">{% trans "So wird es gemacht:" %}</p>
+<p style="font-weight: bold;">{% trans "#Ausfallteilsicherung programmieren#" %}</p>
+<p> </p>
+<p> </p>
+<p> </p>
+
+{% endblock %}
+{% endlinebreakless %}

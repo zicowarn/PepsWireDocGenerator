@@ -1,0 +1,36 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Zusätzlicher Stopp für Anbindung entfernen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Zusätzlicher Stopp für Anbindung entfernen" %}</p><p>{% trans "In einigen Fällen ist es erforderlich, bei der Entfernung der Anbindung einen zusätzlichen Stopp (M01) auszugeben, damit der Bediener das Ausfallteil sichern kann." %}</p>
+<p>{% trans "Im Feld [Abstand] bestimmt man, wie viel Millimeter vor dem Ende des Haltesteges, ein Stopp (M01) ausgegeben werden soll." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

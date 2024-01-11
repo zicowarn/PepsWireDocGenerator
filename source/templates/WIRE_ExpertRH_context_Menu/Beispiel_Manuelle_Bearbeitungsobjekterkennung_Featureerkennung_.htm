@@ -1,0 +1,83 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Manuelle Feature-Erkennung Example" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../WIRE_ExpertRH_context_Menu.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <a name="642b3b9347ca42c9b00b820c00c373fa=1"/><p class="dialog">{% trans "Manuelle Feature-Erkennung" %}</p><p>{% trans "Dieses Beispiel soll zeigen, wie man die Schneidbearbeitungen [halbautomatisch] erzeugt, indem man die zu bearbeitenden Flächen manuell, mit Hilfe der Maus auswählt." %}</p>
+<p class="hcp2"> </p>
+<p>{% trans "[Klicken] Sie mit der [rechten Maustaste] im [Feature Manager] auf den Zweig @." %}</p>
+<p>{% trans "Es klappt ein Kontextmenü auf. Wählen Sie den Befehl [Manuelle Feature-Erstellung]." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Example_Manual_Feature_Recognition_1.gif" alt="Example_Manual_Feature_Recognition_1.gif" width="510" height="133" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "Es wird der Dialog [Neues] [Feature] angezeigt. Aktivieren Sie im Dialog die Option [Manuell mit automatischer Flächenverbindung]." %}</p>
+<p class="hcp2"> </p>
+<p>{% trans "Bei Wahl dieser Option klickt man eine Fläche an und das System findet automatisch alle erodierbaren Flächen, die mit der gewählten Fläche verbunden sind." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Example_Manual_Feature_Recognition_2.gif" alt="Example_Manual_Feature_Recognition_2.gif" width="379" height="692" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "Klicken Sie [eine] Fläche des [inneren Durchbruchs] an." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Example_Manual_Feature_Recognition_3.gif" alt="Example_Manual_Feature_Recognition_3.gif" width="368" height="261" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "Das System erkennt automatisch alle Flächen die zum gewählten Durchbruch gehören." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Example_Manual_Feature_Recognition_4.gif" alt="Example_Manual_Feature_Recognition_4.gif" width="647" height="256" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "Klicken Sie [eine] Fläche der [äußeren Geometrie] an." %}</p>
+<p>{% trans "Das System erkennt wieder automatisch alle Flächen die zur Außenkontur gehören." %}</p>
+<p><img src="../Example_Manual_Feature_Recognition_5.gif" alt="Example_Manual_Feature_Recognition_5.gif" width="358" height="247" border="0"/></p>
+<p>{% trans "Übernehmen Sie die Auswahl mit @." %}</p>
+<p class="hcp2"> </p>
+<p>{% trans "Für jedes gewählte Objekt erzeugt das System ein [separates Feature] im [FeatureManager]. Da zwei Objekte gewählt wurden, müssten 2 Features existieren:" %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Example_Manual_Feature_Recognition_6.gif" alt="Example_Manual_Feature_Recognition_6.gif" width="250" height="103" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "Jetzt noch aus den Features [Bearbeitungsoperationen] und [Figuren] erzeugen." %}</p>
+<p class="hcp2"> </p>
+<p>{% trans "Klicken Sie mit der [rechten] Maustaste im [Feature Manager] auf den Zweig @ und wählen Sie im Kontextmenü [Erzeuge Figuren + Bearbeitungen von Features]." %}</p>
+<p>{% trans "Diese Funktion erzeugt [Bearbeitungsfiguren] (2D Bearbeitungsgeometrien) sowie [Bearbeitungen] und übergibt diese an die #Operationsliste#." %}</p>
+<p>{% trans "[Hinweis:] Sie können Sie auch [einzelne] Features auswählen." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Wire_Expert_Create_Figures_and_Operations_1.gif" alt="Wire_Expert_Create_Figures_and_Operations_1.gif" width="553" height="201" border="0"/></p>
+<p class="hcp2"> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Eigenes Weiterarbeiten ...." %}</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;"> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Siehe auch: #Erzeuge Figuren + Bearbeitungen von Features#" %}</p>
+<p class="Tip_Note_Heading"> </p>
+
+{% endblock %}
+{% endlinebreakless %}

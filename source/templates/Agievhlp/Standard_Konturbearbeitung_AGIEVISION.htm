@@ -1,0 +1,73 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Standard Konturbearbeitung ... (AGIEVISION)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Agievhlp.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kastoum" style="border-top: 1.50pt solid #0000ff; border-bottom: 1.50pt solid #0000ff; border-left: 1.50pt solid #0000ff; border-right: 1.50pt solid #0000ff;">{% trans "Standard Konturbearbeitung ... (AGIEVISION)" %}</p><p>{% trans "Der Dialog [Standard Konturbearbeitung] wurde für die AGIEVISION Maschine in einigen Bereichen geändert." %}</p><p>{% trans "Die Hilfeeinträge des unterhalb gezeigten Dialogs informieren über die Änderungen." %}</p>
+<p> </p>
+<p style="color: #ff0000; font-style: italic;">{% trans "Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen." %}</p>
+<p> </p>
+<p><img src="../STD_KOAV_shg.gif" usemap="#AreaMap0" alt="STD_KOAV_shg.gif" width="543" height="408" border="0"/> <map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="13,34,238,131" href="javascript:BSSCPopup('../wirhlp10/Figurnamen_Std_Konturbea.htm',400,600);" id="area1" alt=""/>
+<area shape="rect" coords="94,137,160,159" href="javascript:BSSCPopup('../wirhlp10/Aendern_Figurname_Figurauswahl_STD_Konturbea.htm',400,500);" id="area2" alt=""/>
+<area shape="rect" coords="165,134,229,157" href="javascript:BSSCPopup('../wirhlp10/Neu_ordnen_Figurname_Figurauswahl_STD_Konturbea.htm');" id="area3" alt=""/>
+<area shape="rect" coords="15,309,121,332" href="javascript:BSSCPopup('Mehrfachschnitt_AGIEVISION.htm',400,600);" id="area4" alt=""/>
+<area shape="rect" coords="17,334,119,361" href="javascript:BSSCPopup('Bundbearbeitung_AGIEVISION.htm',400,600);" alt="" id="area10"/>
+<area shape="rect" coords="126,313,230,332" href="Einstellungen_Einstellen_der_Schnittmethode_AGIEVISION.htm" alt=""/>
+<area shape="rect" coords="125,336,230,363" href="Qualitaet_Parameter_AGIEVISION.htm" alt=""/>
+<area shape="rect" coords="14,378,140,402" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area5" alt=""/>
+<area shape="rect" coords="144,378,272,401" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area6" alt=""/>
+<area shape="rect" coords="274,379,402,401" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area7" alt=""/>
+<area shape="rect" coords="408,378,532,402" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area8" alt=""/>
+<area shape="rect" coords="390,33,448,55" href="../wirhlp10/Optionen_Lasche_Standard_Konturbearbeitung.htm" alt=""/>
+<area shape="rect" coords="262,216,524,333" href="../wirhlp10/Eckenmodus.htm" alt=""/>
+<area shape="rect" coords="15,165,232,214" href="../wirhlp10/Schnittschemen.htm" alt=""/>
+<area shape="rect" coords="258,75,432,164" href="../wirhlp10/Standard_Konik.htm" alt=""/>
+<area shape="rect" coords="370,165,526,217" href="../wirhlp10/Standard_Konik.htm" alt=""/>
+<area shape="rect" coords="435,79,515,163" href="../wirhlp10/Schraegschieber_Ikone_Konik_Register_Std_Konturbearb.htm" alt=""/>
+<area shape="rect" coords="19,134,88,159" href="javascript:BSSCPopup('../wirhlp10/Figurnamen_Std_Konturbea.htm',400,600);" id="area9" alt=""/>
+<area shape="rect" coords="293,33,388,52" href="../wirhlp10/Taschenerodieren_1.htm" alt=""/></map></p>
+<script type="text/javascript" language="JavaScript1.2">
+//&lt;![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('area1');
+        FilePopupInit('area2');
+        FilePopupInit('area3');
+        FilePopupInit('area4');
+        FilePopupInit('area10');
+        FilePopupInit('area5');
+        FilePopupInit('area6');
+        FilePopupInit('area7');
+        FilePopupInit('area8');
+        FilePopupInit('area9');
+//]]&gt;
+</script>
+
+{% endblock %}
+{% endlinebreakless %}

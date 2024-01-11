@@ -1,0 +1,75 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Report Fenster</title>
+<link rel="StyleSheet" href="../../MW_Sim_Windows.css" type="text/css">
+
+<script language="JavaScript" title="onClick_onLoad" src="../../Funktionen_Camtek.js" type="text/javascript"></script>
+<style title="hcp" type="text/css">
+<!--
+font.hcp1 { font-weight:bold; }
+p.hcp2 { margin-top:0;
+margin-bottom:0; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Report Fenster</h1>
+<p>&#160;</p>
+<p>Das Report-Fenster sammelt alle besonderen Ereignisse (z.B. Kollisionen), 
+ die im Zuge einer Simulation auftreten. Der Report wird in Form einer 
+ Baumstruktur aufgelistet.</p>
+<p>Jeder Zweig der Baumstruktur beginnt mit der Operationsnummer, gefolgt 
+ von der Werkzeugnummer. Typische Ereignisse sind:</p>
+<p>Wertüberschreitungen</p>
+<p>Wertunterschreitungen</p>
+<p>Kollisionsereignisse zwischen den Achsengeometrien (z.B. Kollision zwischen 
+ C-Achse und Tisch)</p>
+<p>Kollisionsereignisse zwischen Werkzeug und Geometrien (z.B. Kollision 
+ zwischen Werkzeug und C-Achse)</p>
+<p>Kollisionsereignisse zwischen Werkzeug und Geometrien (z.B. Kollision 
+ zwischen Werkzeug und C-Achse)</p>
+<p>Kollisionsereignisse zwischen Werkzeug und Werkstück</p>
+<p>Kollisionsereignisse zwischen Rohteil und Werkzeugteilbereich (z.B. 
+ Kollision zwischen Rohteil und Werkzeugaufnahme)</p>
+<p>Kollisionsereignisse zwischen Rohteil und Werkzeugweg im Eilgang</p>
+<p>Annäherungsalarm (Fast-Kollision) zwischen Werkzeug und Rohteil oder 
+ Werkstück.</p>
+<p>Annäherungsalarm (Fast-Kollision) zwischen den Achsen-Geometrien.</p>
+<p>&#160;</p>
+<p><img src="../../newUI_report.gif" alt="newUI_report.gif" width="458" height="581" border="0"></p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">&#160;</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Hauptfunktionen:</p>
+<p>Die Tiefe der Kollision ist verfügbar, wenn das Werkzeug eine Kollision 
+ ausführt (XXX eg. range: more than 0.2).</p>
+<p>Verwenden Sie den Dialog <font class="hcp1">'Anzeigefeld 
+ Auswahl'</font> um die angezeigten Spalten im <font class="hcp1">Report</font>-Fensters 
+ anzupassen. Klicken Sie dazu mit der <font class="hcp1">rechten</font> 
+ Maustaste in das <font class="hcp1">Report</font>-Fenster 
+ und wählen Sie im Kontextmenü <font class="hcp1">'Anzeigefeld 
+ Auswahl'</font>.</p>
+<p><img src="../../newUI_field_chooser.gif" alt="newUI_field_chooser.gif" width="132" height="123" border="0"></p>
+<p><font class="hcp1">Typ</font> &#150; Zeigt den Ereignistyp 
+ an, symbolisiert durch eine Ikone.</p>
+<p><font class="hcp1">Werkzeug#</font> - Zeigt die in diesem 
+ Ereignis verwendete <font class="hcp1">Werkzeugnummer</font>.</p>
+<p><font class="hcp1">Op.Nr.</font> - Zeigt die in diesem 
+ Ereignis verwendete <font class="hcp1">Operationsnummer</font>.</p>
+<p><font class="hcp1">Block</font> &#150; Zeigt die Satznummer 
+ in der Satzliste für das aktuelle Ereignis.</p>
+<p><font class="hcp1">Kommentar</font> &#150; Zeigt den Operationskommentar 
+ des aktuellen Ereignisses.</p>
+<p class="hcp2">&#160;</p>
+<p><font class="hcp1">Hinweis</font>: Wenn Sie im Dialog 
+ auf eine Feldspalte (z.B. ID#) klicken, kann man die Spalte sortieren.</p>
+<p class="hcp2">&#160;</p>
+<p>Klick man im Dialog auf ein Ereignis, springt das Werkzeug auf die entsprechende 
+ Koordinate im Werkzeugweg.</p>
+</body>
+</html>

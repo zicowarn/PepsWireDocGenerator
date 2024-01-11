@@ -1,0 +1,73 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "WIRE-Expert Prinzip der automatisierten Bearbeitung" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../WIRE_Expert_FeatureManager.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+    span.hcp3 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "WIRE-Expert Prinzip der automatisierten Bearbeitung" %}</p><p> </p>
+<p>{% trans "Dieses Kapitel soll einen verkürzten Überblick geben über die Funktionsweise des Moduls [WIRE-Expert] (optional):" %}</p>
+<p class="hcp2"> </p>
+<p>{% trans "1.) 3D-Modell importieren ausrichten und Nullpunkt bestimmen." %}</p>
+<p><img src="../Example_WIRE_Expert_1.gif" alt="Example_WIRE_Expert_1.gif" width="345" height="283" border="0"/></p>
+<p style="text-align: center;"> </p>
+<p>{% trans "2.) Im Bereich @ des Operationsmanagers die [Automatische Feature-Erkennung] starten." %}</p>
+<p>{% trans "Es wird ein Dialog angezeigt. Den Dialog korrekt ausfüllen." %}</p>
+<p><img src="../Example_WIRE_Expert_2.gif" alt="Example_WIRE_Expert_2.gif" width="513" height="398" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "3.) Erodierbare Geometrien werden automatisch im 3D-Modell erkannt" %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Example_WIRE_Expert_3.gif" alt="Example_WIRE_Expert_3.gif" width="357" height="287" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "4.) Den Dialog beenden. Anschließend werden im Bereich @ des Operationsmanagers eine Liste der erkannten Bearbeitungsobjekte erzeugt." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Example_WIRE_Expert_4.gif" alt="Example_WIRE_Expert_4.gif" width="317" height="203" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "5.) Nun die erkannten Bearbeitungsobjekte an den PEPS Operationsmanager übergeben." %}</p>
+<p>{% trans "Mit den Optionen [Erzeuge Figuren + Bearbeitungen von Features] und [Erzeuge nur Figuren von Features], können Sie [Figuren und Bearbeitungen] erzeugen oder ausschließlich [Figuren]," %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Example_WIRE_Expert_5.gif" alt="Example_WIRE_Expert_5.gif" width="488" height="398" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "6.) Die Bearbeitungsobjekte werden umgewandelt in PEPS Bearbeitungsoperationen." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Example_WIRE_Expert_6.gif" alt="Example_WIRE_Expert_6.gif" width="450" height="313" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "7.) Für jede Bearbeitungsoperation werden zudem automatisch Bearbeitungsfiguren und die NC-Bearbeitungsgrafik erzeugt." %}</p>
+<p><img src="../Example_WIRE_Expert_7.gif" alt="Example_WIRE_Expert_7.gif" width="363" height="267" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "8.) Erzeugte Bearbeitungsoperationen überprüfen und ggf. die Schneidparameter anpassen und wie gewohnt weiter programmieren ... ." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

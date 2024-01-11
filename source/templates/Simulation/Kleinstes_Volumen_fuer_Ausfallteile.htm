@@ -1,0 +1,43 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Kleinstes Volumen für Ausfallteile" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Kleinstes Volumen für Ausfallteile" %}</p><p class="Block_Text">{% trans "In diesem Textfeld legen Sie einen Grenzwert fest, der bestimmt, ab welchem Volumen ein Ausfallteil groß genug ist, um die Simulation zu stoppen." %}</p>
+<p>{% trans "[Beispiel:] Bei einem Ausräumen von kleinen Durchbrüchen (Taschenerodieren/Vollabtragsschnitt) mit großen Drahtbahnabständen, kann es zu vielen kleinen Ausfallteilen kommen." %}</p>
+<p>{% trans "Diese Ausfallteile sind normalerweise kein Problem und sollten die Simulation auch nicht stoppen." %}</p>
+<p>{% trans "Ist der Parameter [Kleinstes Volumen für Ausfallteile] groß genug eingestellt, wird die Simulation auch nicht stoppen wenn die Ausfallteile kleiner sind, als das eingestellte Volumen." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

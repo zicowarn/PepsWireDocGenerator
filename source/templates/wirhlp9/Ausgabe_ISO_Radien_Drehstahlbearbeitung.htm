@@ -1,0 +1,37 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Ausgabe ISO Radien XXXBILD" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Ausgabe ISO Radien" %}</p><p>{% trans "Ist diese Checkbox aktiv, erzeugt das System bei der Drehstahlgeometrieerzeugung ISO-Eckradien (Radius der unteren Drehstahlgeometrie = Radius der oberen Geometrie)." %}</p>
+<p>{% trans "Ist die Checkbox nicht aktiv, erzeugt das System konische Eckenradien. Das Modul Drehstahlbearbeitung wurde hauptsächlich für die Verwendung von ISO-Radien entwickelt." %}</p>
+<p>{% trans "Wir empfehlen deshalb die Verwendung von ISO-Radien." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

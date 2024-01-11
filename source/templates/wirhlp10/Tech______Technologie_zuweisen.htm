@@ -1,0 +1,61 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Tech. ... (Technologie zuweisen) XXXBILDER ALT" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+    font.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Tech. ... (Technologie zuweisen)" %}</p><p> </p>
+<p style="color: #ff0000; font-style: italic;">{% trans "Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen." %}</p>
+<p class="hcp1"> </p>
+<p><img src="../MEHRFACH_shg.gif" alt="MEHRFACH_shg.gif" usemap="#MAP542981257" width="140" height="110" border="0"/>
+<map id="MAP542981257" name="MAP542981257">
+<area shape="rect" coords="3, 3, 43, 110" href="Tech______Technologie_zuweisen.htm" alt=""/>
+<area shape="rect" coords="46, 2, 137, 109" href="Extra_Techn_M_Cddes.htm" alt=""/>
+</map> </p>
+<p class="hcp1"> </p>
+<p>{% trans "Die Schaltfläche @ ruft einen Dialog auf, in der Sie jedem Schnitt Technologiewerte zuweisen können." %}</p>
+<p>{% trans "Beachten Sie, dass Sie die Technologiewerte mit der Option #Extra# dort [Techno]logie im Dialog, überschreiben können." %}</p>
+<p class="hcp1"> </p>
+<p><img src="../TECH_FIL.gif" alt="TECH_FIL.gif" width="240" height="185" border="0"/></p>
+<p class="hcp1"> </p>
+<p>{% trans "Die Optionen im Dialog können je nach verwendeter NC-Maschine unterschiedlich sein. Normalerweise finden Sie hier Einstellungen für [Stromstufe], [Offset], [Spülparameter], etc. ." %}</p>
+<p class="hcp1"> </p>
+<p class="Beispiel">{% trans "Beispiel:" %}</p>
+<p>{% trans "Die Option [Strom] ist an den meisten NC-Steuerungen verfügbar. Damit können Sie jedem Schnitt eine separate Stromstufe zuordnen (z.B. 506)." %}</p>
+<p>{% trans "Die Option [Offset] hingegen, weist jedem Schnitt ein Offsetregisternummer zu. Das heißt, die Eingabe von 0, 1 oder 2 im Dialog entsprächen z.B. D0, D1 oder D2 in der NC-Ausgabe." %}</p>
+<p>{% trans "Einmal bestimmt, können Sie Technologien in der Technologie Datenbank speichern. Verwenden Sie dazu den Befehl [Speichern ...] im Feld [Technologie] [Datenbank]." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

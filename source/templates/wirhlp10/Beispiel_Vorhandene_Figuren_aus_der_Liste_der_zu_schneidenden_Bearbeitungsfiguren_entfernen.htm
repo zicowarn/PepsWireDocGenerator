@@ -1,0 +1,48 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Beispiel: Vorhandene Figuren aus der Liste der zu schneidenden Bearbeitungsfiguren entfernen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    li.hcp1 { font-size:9pt; }
+    font.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Tip_Note_Heading">{% trans "Beispiel: Vorhandene Figuren aus der Liste der zu schneidenden Bearbeitungsfiguren entfernen" %}</p><ul>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Editieren Sie eine vorhandene Bearbeitung mit Hilfe des #[Operationsmanagers]#[.]" %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf die Schaltfläche [Ändern]. Das System schließt den Dialog und zeigt das Grafikfenster an." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Die momentan ausgewählten Bearbeitungsfiguren werden [hergehoben] angezeigt." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Positionieren Sie die Maus [auf] die zu löschende Bearbeitungsfigur und drücken Sie die Taste [D]'." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Die Auswahl der Figur wird dadurch aufgehoben. Wiederholen Sie den Vorgang für jede Figur die nicht mehr bearbeitet werden soll." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Beenden Sie die Auswahl mit der Option [Ende] (siehe [rechte Maustaste] oder [ horizontale Ikonenleiste])." %}</p></li>
+</ul>
+
+{% endblock %}
+{% endlinebreakless %}

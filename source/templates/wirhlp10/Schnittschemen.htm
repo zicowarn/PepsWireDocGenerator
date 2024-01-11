@@ -1,0 +1,67 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Schnittschemen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    a.hcp2 { font-weight:normal; }
+    span.hcp3 { font-weight:bold; }
+    font.hcp4 { font-weight:normal; }
+    p.hcp5 { margin-top:0;
+    margin-bottom:0; }
+    p.hcp6 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Schnittschemen" %}</p><p>{% trans "Schnittschemen ermöglichen es, die Einstellparameter eines Bearbeitungsdialoges zu speichern und für folgende Programme zu verwenden." %}</p>
+<p>{% trans "Alle Einstellungen die einer [Konturbearbeitung], [Bundbearbeitung] oder [Regelflächenbearbeitung] zugewiesen wurden, lassen sich als Schnittschema speichern." %}</p>
+<p>{% trans "Ein Schnittschema speichert Einstellungen wie: Technologie, Methode zur Entfernung der Anbindung, Einstellungen für Ein-/Ausfahren, Einstellungen für Offset etc." %}</p>
+<p> </p>
+<p>{% trans "Will man auf [vorhandene Schnittschemen zugreifen], klickt man auf die Schaltfläche @ #Schnittschema laden#" %}</p>
+<p>{% trans "Es folgt der[ Schnittschema laden] Dialog, in die Schnittschemen laden und verändern können." %}</p>
+<p>{% trans "Möchte man ein [neues Schnittschema speichern oder ein bestehendes verändern] verwendet man die Schaltfläche @[ ]#[[Sc]][[hnittschema speichern]]#" %}</p>
+<p>{% trans "Es folgt der Aufruf des [Schnittschema speichern ]Dialogs, in dem Sie dem Schnittschema einen Namen geben und es speichern können." %}</p>
+<p class="hcp5"> </p>
+<p>{% trans "Beispiele für typische Schnittschemen:" %}</p>
+<p class="hcp6">{% trans "Tasche ausräumen 1 Nachschnitt" %}</p>
+<p class="hcp6">{% trans "Einzelner Schruppschnitt" %}</p>
+<p class="hcp6">{% trans "3 Schnitte - Pendelschnitt" %}</p>
+<p class="hcp6">{% trans "2 Schnitte - 1mm Steg" %}</p>
+<p>{% trans "[Mehrfachstempel 3 Schnitte 0.5 mm Steg]" %}</p>
+<p class="hcp5"> </p>
+<p>{% trans "Folgende Optionen stehen zur Verfügung:" %}</p>
+<p>{% trans "@ #Schnittschema speichern#" %}</p>
+<p>{% trans "[@] #Schnittschema laden#" %}</p>
+<p class="hcp5"> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
+<p style="font-weight: normal;">{% trans "#[Erodierbearbeitungen durch Schnittschemen automatisieren]#" %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,46 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Besonderheiten bei der Programmierung von AGIEVISION NC-Maschinen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Agievhlp.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <h1>{% trans "Besonderheiten bei der Programmierung von AGIEVISION NC-Maschinen" %}</h1><p> </p>
+<p>{% trans "Dieses Teil des Hilfesystem beschreibt die Besonderheiten die es bei der Programmierung von [AGIEVISION] Drahterosionsmaschinen zu beachten gilt." %}</p>
+<p>{% trans "Um allen Möglichkeiten der [AGIEVISION] Maschinen gerecht zu werden, war es nötig das [Menü] #[Bearbeitung]#, das [Untermenue] #[Vorbereitung]# und sowie einige [Bearbeitungsdialoge] zu verändern." %}</p>
+<p>{% trans "Die geänderten Menüs und Dialogboxeinträge sind Gegenstand dieser speziellen Hilfedatei." %}</p>
+<p>{% trans "Die Konstruktionsfunktionen wurden nicht geändert, es gelten deshalb die Beschreibungen des Standard Hilfesystems." %}</p>
+<p>{% trans "Klicken Sie hier, um die Hilfe für das geänderte Menü #[Bearbeitung]# aufzurufen." %}</p>
+<p>{% trans "Klicken Sie hier, um die Hilfe für das geänderte Untermenü #[Vorbereitung]# aufzurufen." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

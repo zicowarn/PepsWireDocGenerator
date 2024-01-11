@@ -1,0 +1,44 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Parameter für die Rotationsachsenbearbeitung" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Parameter für die Rotationsachsenbearbeitung" %}</p><p>{% trans "Die Optionen in diesem Feld variieren, je nachdem ob die Option #[Profil auf einer Helix abwickeln]# oder #[Profil auf einem Zylinder abwickeln]# aktiviert wurde." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p>{% trans "Eine Erklärung der einzelnen Optionen finden Sie siehe:" %}</p>
+<p>{% trans "#[Profil auf einer Helix abwickeln]#" %}</p>
+<p>{% trans "#[Profil auf einem Zylinder abwickeln]#" %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

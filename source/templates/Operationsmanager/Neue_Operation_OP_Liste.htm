@@ -1,0 +1,65 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Neue Operation" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Operationsmanager.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    font.hcp2 { font-weight:bold;
+    text-decoration:underline; }
+    h2.hcp3 { margin-top:4.00pt;
+    margin-bottom:0.00pt; }
+    span.hcp4 { color:#008000;
+    font-weight:bold;
+    text-decoration:underline; }
+    p.hcp5 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Neue Operation" %}</p><p> </p>
+<p>{% trans "Mit der Option [Neue Operation] können Sie eine neue Bearbeitungsoperation programmieren. Entweder am Anfang eines [#Operationsstarts#], an dessen Ende oder nach einer gewählten Operation." %}</p>
+<p> </p>
+<p>{% trans "Folgende Optionen existieren:" %}</p>
+<h2 class="hcp3">{% trans "Neue Operation am  Anfang dieses Operationsstarts" %}</h2>
+<p>{% trans "Fügt eine neue Bearbeitungsoperation ein [am Anfang] des gewählten [[#Operationsstarts#]]." %}</p>
+<p class="hcp5"> </p>
+<h2 class="hcp3">{% trans "Neue Operation am  Ende dieses Operationsstarts" %}</h2>
+<p>{% trans "Fügt eine neue Bearbeitungsoperation ein [am Ende] des gewählten [[#Operationsstarts#]]." %}</p>
+<p class="hcp5"> </p>
+<h2 class="hcp3">{% trans "Neue Operation nach  dieser Operation" %}</h2>
+<p>{% trans "Fügt eine neue Bearbeitungsoperation ein [nach der gewählten Operation]." %}</p>
+<p> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
+<p>{% trans "#[Neue Bearbeitungsoperation erzeugen]#" %}</p>
+<p>{% trans "#[Neue Bearbeitungsoperationen NACH einer vorhandenen Operation einfügen]#" %}</p>
+<p class="Tip_Note_Heading">{% trans "#Bearbeitungsoperation kopieren#" %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

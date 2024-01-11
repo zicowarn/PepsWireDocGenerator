@@ -1,0 +1,42 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Startloch (Linien&sol;Bögen => Bearbeitungsfigur)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Startloch (Linien/Bögen =&gt; Bearbeitungsfigur)" %}</p><p>{% trans "In diesem Feld wird die [Startposition] einer Figurbearbeitung festgelegt. Dies kann das Zentrum einer Startlochbohrung sein oder eine andere Position, weit genug von der Bearbeitungsfigur entfernt." %}</p>
+<p>{% trans "Von dieser Position aus beginnt die Bearbeitung einer Figur mit einer Vorschubbewegung." %}</p>
+<p>{% trans "Die Startposition wird normalerweise direkt als [XY-Koordinate] eingegeben oder mit der Schaltfläche @ und mit Hilfe der [Fangfunktionen] [Endpunkt - Koordinaten] in der Zeichnung ermittelt." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

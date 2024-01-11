@@ -1,0 +1,40 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Vektorisierungs Toleranz" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Vektorisierungs Toleranz" %}</p><p>{% trans "Einige NC-Steuerungen können bei konischen Bearbeitungen keine zirkulare Interpolation (Radien) ausführen." %}</p>
+<p>{% trans "Bei diesen Steuerungen müssen konische Radien bei der NC-Ausgabe, in eine Anzahl von kleinen Geraden zerlegt werden." %}</p>
+<p>{% trans "Je kleiner die Geraden, umso feiner die Werkstückoberfläche. Im Feld [Vektorisierungs Toleranz] legt der Anwender die gewünschte Präzision der Oberfläche fest." %}</p>
+<p>{% trans "Je kleiner der Wert, desto genauer ist die Konturtreue. Beachten Sie, dass die Größe der NC-Ausgabedatei mit steigender Oberflächenpräzision zunimmt (mehr Geraden)." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><img src="../CUS1.gif" alt="CUS1.gif" width="382" height="197" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,49 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Bezugsebenen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { font-weight:bold; }
+    span.hcp2 { font-weight:normal; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Bezugsebenen" %}</p><p>{% trans "Diese Optionen legen fest auf welche Ebene sich die Eingaben für die Höhenänderung beziehen." %}</p>
+<p> </p>
+<p>{% trans "Folgende Optionen sind verfügbar:" %}</p>
+<p class="hcp1">{% trans "Absolute Höhe bezogen auf Z0" %}</p>
+<p class="hcp1">{% trans "Höhe bezogen auf Referenzhöhe" %}</p>
+<p style="font-weight: bold; text-indent: -28.35pt;">{% trans "[und] [und]" %}</p>
+<p class="hcp1">{% trans "[[Höhe bezogen auf Sekundärebene]]" %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><img src="../REFSEC.gif" alt="REFSEC.gif" width="433" height="309" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

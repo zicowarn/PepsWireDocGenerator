@@ -1,0 +1,37 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Figurname" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Figurname" %}</p><p>{% trans "Dieses Textfeld erlaubt dem Anwender den Namen der zu erzeugenden Bearbeitungsfigur zu beeinflussen." %}</p>
+<p>{% trans "Zunächst zeigt das System einen intern voreingestellten Namen für die Bearbeitungsfigur (Fig_000)." %}</p>
+<p>{% trans "Diesen kann man akzeptieren oder durch einen für den Anwender sinnvolleren Namen ersetzen." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

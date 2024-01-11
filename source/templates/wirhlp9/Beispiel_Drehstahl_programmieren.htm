@@ -1,0 +1,59 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Drehstahl programmieren" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    li.hcp1 { font-size:9pt; }
+    font.hcp2 { font-weight:bold; }
+    p.hcp3 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Drehstahl programmieren" %}</p><ul>	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Öffnen Sie eine Datei und erzeugen Sie die #[Bearbeitungsfigur]# des Drehteils." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Beachten Sie bitte, dass die Figur unbedingt aus programmtechnischen Gründen [unterhalb der X-Achse], im rechten XY-Quadranten liegen und die [Figu][r][richtung] von [links nach rechts] verlaufen muss." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Rufen Sie die Befehle [Programmstart] und #[Operation starten]# im Menü [Bearbeitung] auf. Füllen Sie die Dialoge korrekt aus." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Rufen Sie im Menü [Vorbereitung] den Menüpunkt [Drehstahlbearbeitung] auf. Es folgt ein Dialog:" %}</p></li>
+</ul>
+<p class="hcp3"> </p>
+<p><img src="../DREHSTA.gif" alt="DREHSTA.gif" width="460" height="509" border="0"/></p>
+<p class="hcp3"> </p>
+<ul>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Geben Sie die notwendigen Winkel sowie den Figurnamen ein und aktivieren ggf. weitere Optionen." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Es erfolgt die Berechnung und Erstellung der Geometrie. Ist die Option [#Bearbeitung erzeugen#] aktiviert, wird anschließend automatisch ein Regelflächenprogramm erzeugt." %}</p></li>
+</ul>
+<p> </p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a1');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

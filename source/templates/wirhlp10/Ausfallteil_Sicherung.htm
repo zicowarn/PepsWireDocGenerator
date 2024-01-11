@@ -1,0 +1,71 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Ausfallteil Sicherung" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    img.hcp1 { border:none; }
+    p.hcp2 { font-family:Arial, sans-serif; }
+    span.hcp3 { font-weight:bold; }
+    span.hcp4 { font-family:Arial, sans-serif; }
+    b.hcp5 { mso-bidi-font-weight:normal; }
+    span.hcp6 { mso-layout-grid-align:none;
+    text-autospace:none; }
+    span.hcp7 { mso-layout-grid-align:none;
+    text-autospace:none;
+    font-family:Arial, sans-serif; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Ausfallteil Sicherung" %}</p><p> </p>
+<p class="hcp2">{% trans "Dieses Sondermakro verhindert durch [Markierungen in der Geometrie] der Schnittplatte, dass während des Stanzvorgangs ausgestanzte Teile vom Schnittstempel aus der Schnittmatrize herausgezogen werden, sich von Stempel lösen und das Werkzeug beschädigen." %}</p>
+<p> </p>
+<p>{% trans "[[Vorteil]][[:]] [Wesentlich höhere Standzeit des Schnittwerkzeuges, ohne Mehraufwand in der Konstruktion und bei der NC-Programmerstellung.]" %}</p>
+<p> </p>
+<p>{% trans "Es existieren [5 verschiedene Typen] von Ausfallteil Sicherungen:" %}</p>
+<p class="dialog" style="font-family: Arial, sans-serif;">{% trans "&lt;p class='dialog' style='font-family: Arial, sans-serif;'&gt;[#Typ 1: Ausfallteil Sicherung bei konischen und zylindrischen Schnittwerkzeugen#]" %}</p>
+<p class="dialog" style="font-family: Arial, sans-serif;">{% trans "&lt;p class='dialog' style='font-family: Arial, sans-serif;'&gt;[#T[yp 2: Ausfallteil Sicherung bei konischen und zylindrischen Schnittwerkzeugen]#]" %}</p>
+<p class="dialog" style="font-family: Arial, sans-serif;">{% trans "&lt;p class='dialog' style='font-family: Arial, sans-serif;'&gt;#[T][[yp 3: Ausfallteilführung]]#" %}</p>
+<p class="dialog1">{% trans "#[[T]][[yp 4:][ ][Ausfallteil Sicherung][ ][mit Zylindrischen Bund und Vorweite]]#" %}</p>
+<p class="dialog" style="mso-bidi-font-weight: normal; mso-layout-grid-align: none; text-autospace: none;">{% trans "[#Typ 5: Ausfallteil Sicherung für konische Schneidmatrizen#]" %}</p>
+<p class="dialog" style="font-family: Arial, sans-serif;"> </p>
+<p>{% trans "Das folgende Bild zeigt die [5 Typen der Ausfallteil Sicherung]:" %}</p>
+<p> </p>
+<p class="hcp2"><img src="../Ausfallteil_Sicherung_1.gif" alt="" border="0" class="hcp1"/></p>
+<p> </p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "Diese Funktion ist optional." %}</p>
+<p> </p>
+<p class="dialog">{% trans "So wird es gemacht:" %}</p>
+<p style="font-weight: bold;">{% trans "#Ausfallteilsicherung programmieren#" %}</p>
+<p> </p>
+<p> </p>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,84 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Automatische Feature-Erkennung_Example" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../WIRE_ExpertRH_context_Menu.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+    img.hcp3 { border:none; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <a name="642b3b9347ca42c9b00b820c00c373fa=1"/><p class="dialog">{% trans "Automatische Feature-Erkennung" %}</p><p>{% trans "Dieses Beispiel soll zeigen, wie man die Schneidbearbeitungen automatisch erzeugt, mit Hilfe der [automatischen Feature-Erkennung]." %}</p>
+<p class="hcp2"> </p>
+<p>{% trans "Klicken Sie mit der [rechten Maustaste] im [Feature Manager] auf den Zweig [Operation1]." %}</p>
+<p class="hcp2"> </p>
+<p>{% trans "Es klappt ein Kontextmenü auf. Wählen Sie den Befehl [Automatische] [Feature-Erkennung]." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Example_Automatic_Feature_Recognition_1.gif" alt="Example_Automatic_Feature_Recognition_1.gif" width="507" height="162" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "Es wird der Dialog [Feature-Erkennung] angezeigt. In dem Dialog stellen Sie welche Objekte die automatische Erkennungsroutine erkennen soll." %}</p>
+<p>{% trans "Im folgenden Beispiel würde die Außenkontur des Modells nicht bearbeitet ([Nur innere Feature (Matrize]))." %}</p>
+<p><img src="../Example_Automatic_Feature_Recognition_2.gif" alt="" border="0" class="hcp3"/></p>
+<p> </p>
+<p class="hcp2">{% trans "Um die Feature-Erkennung einzustellen, klicken Sie auf die Schaltfläche [Feature-Erkennung Einstellungen]." %}</p>
+<p class="hcp2">{% trans "Dies öffnet einen Dialog, im Sie die Feature-Erkennung einstellen können." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Example_Automatic_Feature_Recognition_2a.gif" alt="" border="0" class="hcp3"/></p>
+<p class="hcp2"> </p>
+<p class="hcp2">{% trans "Stellen Sie sicher, dass identische Feature zusammengefasst werden zu einem Feature und aktivieren Sie [Identische Feature gruppieren]." %}</p>
+<p>{% trans "Übernehmen Sie die Einstellungen mit@ ." %}</p>
+<p>{% trans "Schließen Sie auch Dialog [Feature-Erkennung] mit@ ." %}</p>
+<p class="hcp2"> </p>
+<p>{% trans "Das System durchsucht den Volumenkörper nach allen erodierbaren Geometrien (Feature-Erkennung) und erzeugt einen Bearbeitungsvorschlag mit den im Vorfeld eingestellten Schneidparametern." %}</p>
+<p> </p>
+<p>{% trans "Das System durchsucht den Volumenkörper nach allen erodierbaren Geometrien (Featureerkennung)." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Example_Automatic_Feature_Recognition_3.gif" alt="Example_Automatic_Feature_Recognition_3.gif" width="740" height="239" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "Für jede erodierbare Geometrie erzeugt das System ein [separates Feature] im [FeatureManager]:" %}</p>
+<p class="hcp2"> </p>
+<p>{% trans "@" %}</p>
+<p class="hcp2"> </p>
+<p>{% trans "Jetzt noch aus den Features [Bearbeitungsoperationen] und [Figuren] erzeugen." %}</p>
+<p> </p>
+<p>{% trans "Klicken Sie mit der [rechten] Maustaste im [Feature Manager] auf den Zweig @ und wählen Sie im Kontextmenü [Erzeuge Figuren + Bearbeitungen von] [Feature]." %}</p>
+<p>{% trans "Diese Funktion erzeugt [Bearbeitungsfiguren] (2D Bearbeitungsgeometrien) sowie [Bearbeitungen] und übergibt diese an die #Operationsliste#." %}</p>
+<p>{% trans "[Hinweis:] Sie können Sie auch [einzelne] Feature auswählen." %}</p>
+<p class="hcp2"> </p>
+<p>{% trans "@" %}</p>
+<p class="hcp2"> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Eigenes Weiterarbeiten ...." %}</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;"> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Siehe auch: #Erzeuge Figuren + Bearbeitungen von Features#" %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

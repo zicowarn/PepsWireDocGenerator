@@ -1,0 +1,50 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Qualität &sol; Parameter" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Agievhlp.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Qualität / Parameter" %}</p><p>{% trans "Mit den Einstellungen in diesem Dialog legt man hauptsächlich das [Qualitätsziel] fest." %}</p>
+<p>{% trans "Aufgrund der Angaben für das Qualitätsziel im Register #[Qualität]# berechnet die AGIEVISION Steuerung die Anzahl der Schnitte, die nötigen Offsetwerte und Generatoreinstellungen." %}</p>
+<p> </p>
+<p>{% trans "Im Register #[Schnittluft/Ecken]# kann man Angaben über die Größe von [zusätzlicher Schnittluft/Trennspiel] eingeben, sowie das Verhalten des Drahtes an [Innen / Außenecken] einer Kontur festlegen." %}</p>
+<p>{% trans "XXX Das Register #Weitere Parameter \ Ereignisse# erlaubt XXX" %}</p>
+<p> </p>
+<p style="color: #ff0000; font-style: italic;">{% trans "Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen." %}</p>
+<p> </p>
+<p><img src="../QUA_AV0_shg.gif" usemap="#AreaMap0" alt="QUA_AV0_shg.gif" width="305" height="23" border="0"/> <map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="1,0,52,21" href="Qualitaet_Registerkarte_AGIEVISION.htm" alt=""/>
+<area shape="rect" coords="52,1,148,21" href="Schnittluft_Ecken_Registerkarte_AGIEVISION.htm" alt=""/></map></p>
+
+{% endblock %}
+{% endlinebreakless %}

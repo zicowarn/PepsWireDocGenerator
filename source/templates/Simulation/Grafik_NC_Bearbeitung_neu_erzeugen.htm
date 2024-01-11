@@ -1,0 +1,45 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Grafik NC-Bearbeitung neu erzeugen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kastoum" style="border-top: 1.50pt solid #0000ff; border-bottom: 1.50pt solid #0000ff; border-left: 1.50pt solid #0000ff; border-right: 1.50pt solid #0000ff;">{% trans "@ Grafik NC-Bearbeitung neu erzeugen" %}</p><p>{% trans "Diese Option baut die Drahtmodelle sämtlicher vorhandenen NC-Bearbeitungsgrafiken neu auf, falls diese mit dem Befehl @ #[Grafik NC-Bearbeitung löschen]# oder durch einen abgebrochenen Editiervorgang gelöscht wurden." %}</p>
+<p class="hcp1"> </p>
+<p><img src="../graf_nc.gif" alt="graf_nc.gif" width="581" height="203" border="0"/></p>
+<p class="hcp1"> </p>
+<p>{% trans "Das Drahtmodell der NC-Bearbeitung hat keinen Einfluss auf die NC-Datenausgabe." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

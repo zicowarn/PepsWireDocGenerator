@@ -1,0 +1,64 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Bearbeitungsparameter XXXNEU" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Bearbeitungsparameter" %}</p><p>{% trans "Mit dem Dialog [Bearbeitungsparameter] können Sie einstellen, auf welche Weise das Modul [WIRE-Expert] (optional) die automatisch erzeugten Bearbeitungsoperationen an [PEPS] übergeben soll." %}</p><p>{% trans "Nach Aufruf der Funktion folgt ein Dialog in dem Sie einstellen können, ob [Schnittschemen] zugewiesen werden sollen, was an die [PEPS] [Operationsliste] übergeben werden soll und wie die erzeugten Bearbeitungsoperationen grafisch dargestellt werden sollen." %}</p>
+<p>{% trans "Folgende Einstelloptionen sind verfügbar:" %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p style="text-align: center;"> </p>
+<p><img src="../Config_wire_expert_1_shg.gif" usemap="#AreaMap0" alt="Config_wire_expert_1_shg.gif" width="772" height="487" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="6, 30, 362, 259" href="Schnittschemen_Wire-Expert_konfigurieren.htm" alt=""/>
+<area shape="rect" coords="18, 260, 357, 338" href="Grafische_Darstellung_der_Bearbeitungen_Wire-Expert_konfigurieren.htm" alt=""/>
+<area shape="rect" coords="313, 453, 456, 481" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="386, 35, 757, 189" href="Weitere_Optionen_1_Wire-Expert_konfigurieren.htm" alt=""/>
+<area shape="rect" coords="158, 452, 302, 480" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" alt="" id="area4"/>
+<area shape="rect" coords="468, 455, 615, 477" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="28, 427, 240, 443" href="javascript:BSSCPopup('Zeige_diesen_Dialog_das_naechste_mal_nicht_mehr_Wire-Expert_konfigurieren.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="18, 341, 360, 396" href="javascript:BSSCPopup('Ermittle_kleinste_Elemente_bei_Figurerstellung_WIRE_Expert.htm',400,300);" id="area5" alt=""/>
+<area shape="rect" coords="387, 189, 758, 418" href="Weitere_Optionen_2_Wire-Expert_konfigurieren.htm" alt=""/>
+</map> </p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area4');
+	FilePopupInit('area2');
+	FilePopupInit('area3');
+	FilePopupInit('area5');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

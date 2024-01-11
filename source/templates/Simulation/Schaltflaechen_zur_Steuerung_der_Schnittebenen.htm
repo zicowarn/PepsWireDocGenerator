@@ -1,0 +1,37 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Schaltflächen zur Steuerung der Schnittebenen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "@ Schaltflächen zur Steuerung der Schnittebenen" %}</p><p>{% trans "Die Schaltflächen [Auf/Ab] &lt;img src='../Schnitt+-.gif' alt='Schnitt+-.gif' width='18' height='28' border='0'/&gt; werden verwendet, um die Schnittebene vom absoluten Nullpunkt an eine geeignete Stelle zu verschieben." %}</p>
+<p>{% trans "Die momentane Position wird in einem Textfeld @ angezeigt." %}</p>
+<p>{% trans "Kennt man die genaue Position einer Schnittebene, kann man diese direkt in das Textfeld eingeben. Ein Klick auf die Schaltflächen @ oder @ führt die Eingabe aus." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

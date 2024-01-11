@@ -1,0 +1,89 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Feature-Erkennung nach Flächenfarben Example" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Examples.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Feature-Erkennung nach Flächenfarben" %}</p><p> </p>
+<p>{% trans "In diesem Beispiel soll die automatische Feature-Erkennung [alle hellgrünen Flächen] im Modell erkennen und ausschließlich diese bearbeiten. (Die gesuchten Durchbrüche sind im folgenden Bild durch [Pfeilsymbole] gekennzeichnet)." %}</p>
+<p> </p>
+<p><img src="../image/Example_Color_Fea_Recogn_1.gif" alt="image\Example_Color_Fea_Recogn_1.gif" title="image\Example_Color_Fea_Recogn_1.gif" width="570" height="422" border="0"/></p>
+<p class="Tip-Note-Heading" style="margin-top: 4.00pt;">{% trans "Erstellen einer Farb-Suchliste" %}</p>
+<p class="hcp2"> </p>
+<p>{% trans "[Klicken] Sie mit der [rechten Maustaste] im [OPTICAM] FeatureManager auf den Zweig [Operation1] und wählen Sie den Befehl [Automatische] [Feature-Erkennung]" %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Example_Automatic_Feature_Recognition_1.gif" alt="image\Example_Automatic_Feature_Recognition_1.gif" title="image\Example_Automatic_Feature_Recognition_1.gif" border="0"/></p>
+<p class="hcp2"> </p>
+<p class="hcp2">{% trans "Dies öffnet den Dialog [Automatische Feature-Erkennung]." %}</p>
+<p class="hcp2"> </p>
+<p class="hcp2">{% trans "Wir erzeugen als erstes eine [Farb-Suchliste], in der wir die zu erkennenden Farbe(n) bestimmen." %}</p>
+<p>{% trans "Zur Erzeugung der [Farb-Suchliste] wählen Sie im Dialog die Schaltfläche &lt;img src='../image/Example_Color_Fea_Recogn_2a.gif' alt='image\Example_Color_Fea_Recogn_2a.gif' title='image\Example_Color_Fea_Recogn_2a.gif' width='247' height='25' border='0'/&gt;." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../image/Example_Color_Fea_Recogn_3.gif" alt="image\Example_Color_Fea_Recogn_3.gif" title="image\Example_Color_Fea_Recogn_3.gif" width="292" height="265" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "Es wird der Dialog [Farbeinstellungs-Dialog] angezeigt." %}</p>
+<p>{% trans "Geben Sie im Feld [Listenname] den Namen der Farbliste ein ([Hellgruen])." %}</p>
+<p>{% trans "Klicken Sie anschließend die Schaltfläche [Neue Liste erzeugen]." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../image/Example_Color_Fea_Recogn_4.gif" alt="image\Example_Color_Fea_Recogn_4.gif" title="image\Example_Color_Fea_Recogn_4.gif" width="811" height="370" border="0"/></p>
+<p class="hcp2"> </p>
+<p class="hcp2"> </p>
+<p>{% trans "Klicken Sie nun [eine] [hellgrüne Fläche] im Modell an." %}</p>
+<p>{% trans "Die Farbe der gewünschten Fläche wird an den Dialog übergeben und im Feld [Farben in Liste] eingetragen." %}</p>
+<p>{% trans "[Hinweis]: Weitere Flächen mit anderen Farben könnten ausgewählt werden, um eine [Farb-Suchliste] mit mehreren Farben zu erzeugen." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../image/Example_Color_Fea_Recogn_5.gif" alt="image\Example_Color_Fea_Recogn_5.gif" title="image\Example_Color_Fea_Recogn_5.gif" width="648" height="285" border="0"/></p>
+<p>{% trans "Übernehmen Sie die Farbeinstellungen mit &lt;img src='../image/OK.gif' alt='image\OK.gif' title='image\OK.gif' width='40' height='39' border='0'/&gt;." %}</p>
+<p class="hcp2"> </p>
+<p class="hcp2"> </p>
+<p class="Tip-Note-Heading" style="margin-top: 4.00pt;">{% trans "Automatische Feature-Erkennung nach Farben ausführen" %}</p>
+<p class="hcp2"> </p>
+<p>{% trans "Das System springt zurück in den Dialog zur automatischen Feature-Erkennung." %}</p>
+<p>{% trans "Wählen Sie im Dialogbereich [Farbliste] die eben erzeugte Liste [Hellgrün] aus." %}</p>
+<p>{% trans "Aktivieren Sie die Option [Farbliste verwenden], damit das System ausschließlich nach farbigen Flächen (in diesem Fall nur [hellgrüne] Flächen) sucht." %}</p>
+<p> </p>
+<p>{% trans "Stellen Sie sicher, dass der Dialog wie folgt ausgefüllt ist:" %}</p>
+<p class="hcp2"> </p>
+<p><img src="../image/Example_Color_Fea_Recogn_6.gif" alt="image\Example_Color_Fea_Recogn_6.gif" title="image\Example_Color_Fea_Recogn_6.gif" width="302" height="465" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "Übernehmen Sie die Einstellungen mit &lt;img src='../image/OK.gif' alt='image\OK.gif' title='image\OK.gif' width='40' height='39' border='0'/&gt;." %}</p>
+<p> </p>
+<p>{% trans "Die automatische Feature-Erkennung durchsucht den Volumenkörper nach [allen hellgrünen Geometrien], die erodierbar sind und erzeugt einen Bearbeitungsvorschlag mit den im Vorfeld eingestellten Schneidparametern." %}</p>
+<p>{% trans "Für jede erodierbare Geometrie erzeugt [OPTICAM] ein [separates Feature] im [FeatureManager]:" %}</p>
+<p class="hcp2"> </p>
+<p><img src="../image/Example_Color_Fea_Recogn_7.gif" alt="image\Example_Color_Fea_Recogn_7.gif" title="image\Example_Color_Fea_Recogn_7.gif" width="811" height="377" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

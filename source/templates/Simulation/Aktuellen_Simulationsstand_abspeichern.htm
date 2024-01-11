@@ -1,0 +1,57 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Aktuellen Simulationsstand abspeichern" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    li.hcp1 { font-size:9pt; }
+    font.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Aktuellen Simulationstand abspeichern" %}</p><p>{% trans "Normalerweise startet die Simulation immer am Programmanfang. Bei umfangreichen Programmen möchte mancher Anwender die Simulation jedoch an einer bestimmten Position beenden." %}</p>
+<p>{% trans "Beim nächsten Aufruf der Simulation soll die Simulation an dieser Stelle starten und nicht am Programmanfang." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
+<p class="Tip_Note_Heading">{% trans "Aktuellen Simulationstand abspeichern" %}</p>
+<ul>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Simulieren Sie das Programm bis ca. zur Mitte des Programms." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie im Dialogbereich [Speichern] auf die Schaltfläche [Simulation]." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Beenden Sie die Simulation mit der Schaltfläche [Ende]." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Starten Sie die Simulation erneut. Es erscheint eine Meldung." %}</p></li>
+</ul>
+<p><img src="../Simulationsstand_speichern_1.gif" alt="Simulationsstand_speichern_1.gif" width="777" height="119" border="0"/></p>
+<ul>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Bestätigen Sie mit [Ja]." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Die Simulation wird an die Stelle springen, an welcher der Simulationstand gespeichert wurde." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Starten Sie die Simulation. Sie werden feststellen, dass die Simulation an der Stelle startet, an welcher der Simulationstand gespeichert wurde." %}</p></li>
+</ul>
+
+{% endblock %}
+{% endlinebreakless %}

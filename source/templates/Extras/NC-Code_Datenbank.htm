@@ -1,0 +1,58 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "NC-Code Datenbank" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    img.hcp1 { border:none; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ NC-Code Datenbank" %}</p><p> </p><p>{% trans "Dieser Dialog zeigt passend zur aktuell gewählten Drahterodiermaschine, die zur Verfügung stehenden NC-Codes (G-Codes, M-Codes, und Hilfsfunktionen) und deren Bedeutung." %}</p>
+<p>{% trans "Auf diese Weise können Sie sich auf einfache Weise über die Bedeutung eines NC-Code informieren." %}</p>
+<p>{% trans "Die Liste der NC-Codes lässt sich beliebig anpassen und ergänzen." %}</p>
+<p> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p><img src="../NC_Code_Datenbank_Dialog.gif" alt="" usemap="#MAP603645747" border="0" class="hcp1"/>
+<map id="MAP603645747" name="MAP603645747">
+<area shape="rect" coords="16, 470, 87, 495" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="197, 473, 271, 493" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="108, 472, 182, 492" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="3, 31, 279, 463" href="NC-Code_Datenbank_-_Parameter.htm" alt=""/>
+</map></p>
+<p> </p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+	FilePopupInit('area3');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

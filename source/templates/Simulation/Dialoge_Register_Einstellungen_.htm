@@ -1,0 +1,68 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Dialoge Register (Einstellungen)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    span.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Dialoge Register (Einstellungen)" %}</p><p>{% trans "In diesem Dialog können Sie einstellen, ob die 4 Steuerdialoge ([Steuerdialog], [Ansichtsdialog], [Vergleichsdialog] und [Schnittdialog]) horizontal oder vertikal angezeigt werden" %}</p><p class="hcp2"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp2"> </p>
+<p><img src="../WireSimDialoge_shg.gif" usemap="#AreaMap0" alt="WireSimDialoge_shg.gif" width="349" height="457" border="0"/> <map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="55,82,295,285" href="javascript:BSSCPopup('Steuerdialoge_Solid_Simulation.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="21,420,96,442" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="102,420,178,444" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="183,423,259,445" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area4" alt=""/>
+<area shape="rect" coords="265,424,339,447" href="javascript:BSSCPopup('../Commdata/COMMON_Vorgaben.htm',400,300);" id="area5" alt=""/>
+<area shape="rect" coords="7,34,80,53" href="Solid_Register_Einstellungen_Simulation.htm" alt=""/>
+<area shape="rect" coords="85,35,173,55" href="Kollisionen_Register_Einstellungen.htm" alt=""/>
+<area shape="rect" coords="171,33,262,51" href="Toleranzen_Register_Einstellungen.htm" alt=""/>
+<area shape="rect" coords="264,33,339,52" href="Ansicht_Register_Einstellungen.htm" alt=""/>
+<area shape="rect" coords="7,51,88,71" href="Farben_Register_Einstellungen.htm" alt=""/>
+<area shape="rect" coords="171,54,263,72" href="Simulation_Register_Einstellungen_.htm" alt=""/>
+<area shape="rect" coords="264,54,339,73" href="Draht_Register_Einstellungen_.htm" alt=""/>
+<area shape="rect" coords="34, 301, 282, 356" href="Kurzhilfen_fuer_Dialogfelder_anzeigen.htm" alt=""/></map></p>
+<script type="text/javascript" language="JavaScript1.2">
+//&lt;![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('area1');
+        FilePopupInit('area2');
+        FilePopupInit('area3');
+        FilePopupInit('area4');
+        FilePopupInit('area5');
+//]]&gt;
+</script>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,45 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Schnittschemen (Auto Matrizen Stempel)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Schnittschemen (Auto Matrizen Stempel)" %}</p><p>{% trans "In diesem Dialogbereich kann man Matrizen und Stempelfiguren automatisch ein #[Schnittschema]# (Anzahl der Schnitt, Bearbeitungsart, Länge der Anbindung ...) zuweisen." %}</p>
+<p>{% trans "Schnittschemen werden im Dialog #[Standard Konturbearbeitung]# im Abschnitt [Schnittschemen] erzeugt." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="Hinweis">{% trans "Wichtiger Hinweis:" %}</p>
+<p>{% trans "Dieser Abschnitt des Dialoges hat [KEINE WIRKUNG], wenn der Dialog [Auto Matrizen und Stempel] mit dem Befehl [Auto Matrizen und Stempel] aus dem Menü [Vorbereitung] aufgerufen wurde." %}</p>
+<p>{% trans "Wird der Dialog jedoch mit dem Befehl #[Std. Konturb.+ Auto Matr./Stemp.]# im Menü [Bearbeitung] aufgerufen, kann man automatisch Matrizen oder Stempelfiguren erzeugen und diesen gleichzeitig ein [Schnittschema] (Anzahl der Schnitt, Bearbeitungsart, Länge der Anbindung ...) zuweisen." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

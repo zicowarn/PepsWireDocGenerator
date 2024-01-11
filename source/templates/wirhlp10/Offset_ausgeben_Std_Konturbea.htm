@@ -1,0 +1,47 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Offset ausgeben" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Offset ausgeben" %}</p><p>{% trans "Ist diese Option aktiv, werden die in den Feldern [#Offset#] eingegebenen Offsetwerte in die NC-Daten ausgegeben." %}</p><p>{% trans "Das heißt, das CAM System berechnet die Drahtbahnverschiebung und nicht die CNC-Steuerung der Maschine." %}</p>
+<p>{% trans "Die Möglichkeit den Offset auszugeben, statt die Radiuskorrektur der CNC-Maschine zu verwenden, kann von Vorteil sein, wenn die zu schneidende Geometrie spitze Ecken aufweist oder kleinste Linienelemente enthält, die kleiner sind als der programmierte Offset. Viele NC-Steuerungen reagieren mit Fehlermeldungen, wenn Sie die o. g. Fälle mit Aufruf der Radiuskorrektur schneiden." %}</p>
+<p>{% trans "Wenn Sie Option [Offset ausgegeben] eingestellt haben, gibt das CAM System die Drahtmittelpunktsbahn aus und nicht die Daten der bearbeiteten Kontur." %}</p>
+<p>{% trans "Beachten Sie, das der NC-Code deshalb nicht so einfach nachvollzogen werden kann." %}</p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a1');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

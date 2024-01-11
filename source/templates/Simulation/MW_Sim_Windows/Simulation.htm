@@ -1,0 +1,42 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Simulation Fenster" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../../MW_Sim_Windows.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <h1>{% trans "Simulation Fenster" %}</h1><p> </p>
+<p>{% trans "Im [Simulations]-Fenster können Sie einstellen, bei welchem Ereignis die Simulation stoppen soll. Dies kann sein:" %}</p>
+<p>{% trans "Bei einem [Werkzeugwechsel]." %}</p>
+<p>{% trans "Beim Erreichen einer bestimmten Position oberhalb des Werkstückes." %}</p>
+<p>{% trans "Bei einer bestimmten Bearbeitungs-Operation oder an einem bestimmten NC-Satz." %}</p>
+<p> </p>
+<p><img src="../../newUI_simulationtab.gif" alt="newUI_simulationtab.gif" width="407" height="462" border="0"/></p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+
+{% endblock %}
+{% endlinebreakless %}

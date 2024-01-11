@@ -1,0 +1,46 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Vorhandene Bearbeitungsoperationen deaktivieren&sol;aktivieren" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Operationsmanager.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    li.hcp1 { font-size:9pt; }
+    font.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Tip_Note_Heading">{% trans "Vorhandene Bearbeitungsoperationen deaktivieren/aktivieren" %}</p><ul>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie die zu deaktivierende/aktivierende Operation(en) mit der [rechten] Maustaste im #[Operationsmanager]# an." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Wählen Sie im Kontextmenü die Option [Deaktivieren] oder [Aktivieren]." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "[Deaktivierte] Operationen werden durch ein Symbol @ vor der Operation gekennzeichnet und nicht simuliert oder in die NC-Daten ausgegeben." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "[Aktiviert] man eine [de]aktivierte Operation wird das Symbol @ vor der Operation entfernt und die Operation wird simuliert und in die NC-Daten ausgegeben." %}</p></li>
+</ul>
+
+{% endblock %}
+{% endlinebreakless %}

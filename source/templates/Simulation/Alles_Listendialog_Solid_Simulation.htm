@@ -1,0 +1,43 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Alles (Listendialog)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Alles (Listendialog)" %}</p><p>{% trans "Ist diese Schaltfläche aktiv, zeigt das System alle 4 Listendialoge (#Positionsliste#, #Operationenliste#, #Kollisionsliste#, #Logbuch#) nebeneinander an." %}</p>
+<p>{% trans "Klickt man eine der Schaltflächen [Positionen], [Operationen], [Kollisionen] oder [Logbuch] an, wird nur die gewählte Liste angezeigt." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><img src="../Listen_Alles.gif" alt="Listen_Alles.gif" width="1072" height="356" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

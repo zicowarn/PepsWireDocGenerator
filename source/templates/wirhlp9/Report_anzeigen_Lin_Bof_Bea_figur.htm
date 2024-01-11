@@ -1,0 +1,52 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Report anzeigen XXXBILD ALT" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+    font.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Report anzeigen" %}</p><p>{% trans "Legt fest, ob das System nach der Figurerzeugung einen Report über Umfang, Fläche, Schwerpunkt, kleinster Radius etc. der Figur ausgeben soll." %}</p><p>{% trans "Der Report wird in folgenden Dialog angezeigt." %}</p>
+<p class="hcp1"> </p>
+<p><img src="../Fig_Cre_Rep.gif" alt="Fig_Cre_Rep.gif" width="399" height="190" border="0"/></p>
+<p class="hcp1"> </p>
+<p>{% trans "Welche Informationen der Report ausgibt, können Sie in den Feldern [#Bogenradius#], [#Elementlänge#] und [#Zusätzliche Report Optionen#] einstellen." %}</p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a1');
+	FilePopupInit('a2');
+	FilePopupInit('a3');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

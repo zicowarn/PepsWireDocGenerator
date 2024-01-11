@@ -1,0 +1,60 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "In ISO Linie&sol;Bogen&sol;Linie umwandeln ..." %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+    li.hcp3 { font-size:9pt; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ In ISO Linie/Bogen/Linie umwandeln" %}</p><p>{% trans "Es gibt Drahterosionsmaschinen, bei denen es nicht möglich ist, die Kombination [Bogen/Bogen] mit einer variablen Konik zu versehen." %}</p>
+<p>{% trans "Dieser Befehl erlaubt es, in einem [Bogen/Bogen] Übergang ein kleines Linienelement einzufügen, so dass die Kombination [Bogen/Linie/Bogen] entsteht." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../iso_konv.gif" alt="iso_konv.gif" width="265" height="208" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "Durch diesen Trick kann die Geometrie doch als variable Konik geschnitten werden." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../CORNCONV.gif" alt="CORNCONV.gif" width="504" height="427" border="0"/></p>
+<p class="Tip_Note_Heading">{% trans "So wird es gemacht:" %}</p>
+<ul>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Zeichnen Sie die Geometrie als Linien/Bogenelemente. Definieren Sie KEINE Bearbeitungsfigur." %}</p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Rufen Sie im Menü [Vorbereitung \ Diverses] den Befehl [In ISO Linie/Bogen/Linie umwandeln] auf." %}</p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Aktivieren Sie die Option [Radien modifizieren / Tangentialität erhalten] oder [de]aktivieren Sie die Option." %}</p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Bestimmen Sie im Feld [Länge der eingefügten Linie] die Länge der einzufügenden Linie." %}</p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf die Schaltfläche [&amp;gt;&amp;gt;] und wählen Sie die [2] Bogenelemente aus, zwischen denen die Linie eingefügt werden soll." %}</p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Beenden Sie den Auswahlmodus mit der Option [Ende] [(siehe] [rechte Maustaste] [od.] [horizontale Ikonenleiste][)]." %}</p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Verlassen Sie den Dialog und erzeugen Sie die Bearbeitungsfigur." %}</p></li>
+</ul>
+
+{% endblock %}
+{% endlinebreakless %}

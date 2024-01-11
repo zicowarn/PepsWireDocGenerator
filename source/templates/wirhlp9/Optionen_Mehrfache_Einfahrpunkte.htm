@@ -1,0 +1,51 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Optionen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    h2.hcp1 { margin-top:4.00pt;
+    margin-bottom:0.00pt; }
+    font.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Optionen" %}</p><p>{% trans "Diese Optionen legen fest, auf welche Weise die zusätzlichen Startpunkte zur Figur hinzugefügt werden sollen." %}</p>
+<p> </p>
+<h2 class="hcp1">{% trans "Punkt autom. hinzufügen" %}</h2>
+<p>{% trans "Ist diese Checkbox aktiviert, dann werden die Einfahrpunkte zur Bearbeitungsfigur hinzugefügt, ohne vorher auf die Schaltfläche [Hinzufügen] klicken zu müssen." %}</p>
+<p>{% trans "Ist die Option [nicht] aktiviert, können Sie noch Änderungen an der XY-Koordinate vornehmen und den Einfahrpunkt anschließend übernehmen." %}</p>
+<p> </p>
+<h2 class="hcp1">{% trans "Schnitt inkrementieren" %}</h2>
+<p>{% trans "Ist diese Checkbox aktiviert, dann wird jeder neuer Einfahrpunkt, automatisch dem nächsten Nachschnitt zugeordnet." %}</p>
+<p>{% trans "Das heißt, zusätzlicher Einfahrpunkt 1 wird Schnitt 2 zugeordnet. zusätzlicher Einfahrpunkt 2 wird Schnitt 3 zugeordnet, etc.." %}</p>
+<p>{% trans "Ist die Option nicht aktiviert, müssen Sie Schnittnummer manuell, mit Hilfe der Listbox @ zuordnen." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

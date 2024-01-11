@@ -1,0 +1,111 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Beispiel: Variable Konik programmieren" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+    li.hcp3 { font-size:9pt; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Beispielprogramm zur variablen Konik" %}</p><p>{% trans "Die folgende Beispielzeichnung zeigt ein symmetrisches Werkstück, dass mit der Funktion [variable Konik] bearbeitet werden soll." %}</p>
+<p>{% trans "Die Bearbeitungsfigur wurde im Uhrzeigersinn definiert. Der kleinere Umriss ist die untere Ebene, d.h. die obere Drahtführung muss nach außen auslenken." %}</p>
+<p>{% trans "Aus diesem Grunde geben wir die Konikwinkel [negativ] ein (vergl. Beschreibung [Standard] [Konik])." %}</p>
+<p class="hcp2"> </p>
+<p class="Tip_Note_Heading">{% trans "Variable Konik programmieren (Beispielprogramm):" %}</p>
+<p class="hcp2"> </p>
+<p><img src="../EX12VCON.gif" alt="EX12VCON.gif" width="357" height="381" border="0"/></p>
+<p class="hcp2"> </p>
+<ul>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Wählen Sie im Menü [Bearbeitung] den Befehl [Standard Konturbearbeitung] ." %}</p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Ermitteln Sie mit der Schaltfläche [&amp;gt;&amp;gt;] den Namen der Bearbeitungsfigur." %}</p></li>
+</ul>
+<p><img src="../Zylindrischer_Schnitt_exa_1.gif" alt="Zylindrischer_Schnitt_exa_1.gif" width="259" height="209" border="0"/></p>
+<ul>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Geben Sie [0] [Grad] im Feld [Winkel] als Startwinkel ein." %}</p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Wählen Sie im Feld #[Eckenmodus]# die Option [ISO + Scharf]." %}</p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf die Schaltfläche [Einstellungen], um den Dialogbox [Bearbeitung einstellen] aufzurufen:" %}</p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie das Register [Anbinden] an und definieren Sie einen Steg von [3 mm.]" %}</p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf das Register [Ein/Ausfahren]:" %}</p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Bestimmen Sie als [Ein-/Ausfahrstrategie] eine Gerade." %}</p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf das Register [Offset]:" %}</p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Aktivieren Sie im Feld [Innenkontur (Matrize)] die Option [Rechts (Uhrzeiger])." %}</p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Schließen Sie den [Offset] Dialog. Das System wechselt zurück in den Dialog [Standard Konturbearbeitung] . Klicken Sie dort auf die Schaltfläche [Variable Konik]." %}</p></li>
+</ul>
+<p>{% trans "Da als Startwinkel [0] Grad bestimmt wurde, wird keine Konik in der Bildschirmgrafik gezeigt." %}</p>
+<p class="Prompts">{% trans "Wähle Position in der Nähe des Elements :" %}</p>
+<ul>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Aktivieren Sie die Fangfunktion [Koordinaten] und klicken Sie mit der Maus auf die 45 Grad Linie nach dem Radius 1 mm (Siehe Position 1 in Zeichnung)." %}</p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Die gewählte Linie ist die Linie, auf welcher die Konik auf 2 Grad wechseln soll." %}</p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie im Dialog auf das Bild @ und bestimmen Sie [2] Grad als [Endwinkel]. Der Eckenmodus ist [ISO + Scharf]." %}</p></li>
+</ul>
+<p>{% trans "Die Bildschirmgrafik verändert sich und es wird die programmierte Konik gezeigt." %}</p>
+<p class="Prompts">{% trans "Wähle Position in der Nähe des Elements :" %}</p>
+<ul>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Digitalisieren Sie nun einen Punkt in der Mitte des Radius 10 mm, auf der rechten unteren Seite (Siehe Position 2 in Zeichnung)." %}</p></li>
+</ul>
+<p class="hcp2"> </p>
+<p><img src="../Variable_Konik_exa_2.gif" alt="Variable_Konik_exa_2.gif" width="145" height="230" border="0"/></p>
+<p class="hcp2"> </p>
+<ul>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Bestimmen Sie im Dialog [6] Grad als [Endwinkel]. Der Eckenmodus bleibt [ISO + Scharf]." %}</p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Beachten Sie, wie sich die Konik in der Bildschirmgrafik verändert." %}</p></li>
+</ul>
+<p>{% trans "Da unsere Beispielgeometrie [symmetrisch] ist, bietet sich die Möglichkeit die [Winkelwechselsymbole] zu [spiegeln]." %}</p>
+<p class="Prompts">{% trans "Wähle Position in der Nähe des Elements :" %}</p>
+<ul>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Wählen Sie die Option [Spiegeln] (siehe [rechte Maustaste] oder [ horizontale Ikonenleiste])." %}</p></li>
+</ul>
+<p class="Prompts">{% trans "Wähle Objekte o. S=Wähle D=Entferne ...................... :" %}</p>
+<ul>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Vergrößern Sie falls notwendig und wählen Sie die zwei Winkelwechselsymbole mit der Maus." %}</p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Beenden Sie mit der Option [Ende] (siehe rechte Maustaste oder horizontale Ikonenleiste) den Auswahlmodus." %}</p></li>
+</ul>
+<p class="Prompts">{% trans "Eingabe erster Punkt der Spiegelachse :" %}</p>
+<ul>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Fangen Sie mit der Fangfunktion [Schnittpunkt] eine Schnittpunkt auf der vertikalen C-Linie die durch X0 verläuft (Siehe Zeichnung)." %}</p></li>
+</ul>
+<p class="Prompts">{% trans "Eingabe zweiter Punkt der Spiegelachse :" %}</p>
+<ul>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Fangen Sie [einen anderen Schnittpunkt] auf der vertikalen C-Linie, die durch X0 verläuft (Siehe Zeichnung)." %}</p></li>
+</ul>
+<p>{% trans "Es folgt ein Dialog mit der Frage [Soll das Original vorhanden bleiben ?]. Klicken Sie auf die Schaltfläche [Ja]." %}</p>
+<ul>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Beenden Sie den Befehl mit der Option [Ende] ([rechte Maustaste] oder [horizontale Ikonenleiste])" %}</p></li>
+</ul>
+<p>{% trans "Die Befehlseingabe für die variable Konik ist nun beendet. Die Bildschirmanzeige sollte aussehen wie die Beispielzeichnung auf oben." %}</p>
+<p>{% trans "Beachten Sie, dass während der Programmierung die [Winkelwechselpunkte] als [kleine rote Kreissymbole] dargestellt werden." %}</p>
+<p>{% trans "Fehlerhafte Eingaben werden durch Löschen des Winkelwechselsymbol aufgehoben. Verwenden Sie dazu die Option [Lösche]." %}</p>
+<p>{% trans "Beachten Sie auch, dass die Option [Var. Konik editieren] ([rechte Maustaste] oder [horizontale Ikonenleiste]) eine Korrektur von fehlerhaften [Start/Endwinkel] Angaben oder ein Verändern der [Eckenart] erlaubt." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

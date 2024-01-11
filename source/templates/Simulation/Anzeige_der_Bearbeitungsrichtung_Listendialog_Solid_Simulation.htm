@@ -1,0 +1,44 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Anzeige der Bearbeitungsrichtung" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Anzeige der Bearbeitungsrichtung" %}</p><p>{% trans "Die Pfeilanzeige zeigt an, ob der aktuell simulierte Verfahrweg in [positiver Z-Achsenrichtung] (Pfeil nach oben) oder [negativer Z-Achsenrichtung] (Pfeil nach unten) ausgeführt wird." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "Diese Anzeige spielt im Modul [Drahterodieren] keine wichtige Rolle." %}</p>
+<p>{% trans "Im Gegensatz zum Modul [Fräsen], wo es wichtig sein kann, zu wissen, ob ein Werkzeug in der Z-Achse zustellt oder nicht." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,69 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Optionen Register (Standard Konturbearbeitung)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Optionen Register (Standard Konturbearbeitung)" %}</p><p>{% trans "Normalerweise stellt man die Optionen in diesem Register nur einmal ein, speichert diese und verändert sie nur, wenn spezielle Schnitttechniken erforderlich sind." %}</p><p class="hcp1"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp1"> </p>
+<p><img src="../OPTNPROF_shg.gif" usemap="#AreaMap0" alt="OPTNPROF_shg.gif" width="333" height="392" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="16,93,200,115" href="javascript:BSSCPopup('Autom__Einfaedeln_Abschneiden.htm',400,500);" id="area1" alt=""/>
+<area shape="rect" coords="13, 114, 236, 154" href="javascript:BSSCPopup('Mit_Bearbeitung.htm',400,500);" id="area2" alt=""/>
+<area shape="rect" coords="12,156,187,178" href="javascript:BSSCPopup('Zeige_alle_Figuren_Std_Konturbea.htm',400,500);" id="area3" alt=""/>
+<area shape="rect" coords="11,185,328,225" href="javascript:BSSCPopup('Anzahl_Schnittebenen.htm',400,600);" id="area4" alt=""/>
+<area shape="rect" coords="13,234,328,277" href="javascript:BSSCPopup('Vektorisierungs_Toleranz_Standardkonturbearbeitung.htm',400,600);" id="area5" alt=""/>
+<area shape="rect" coords="-1, 1, 44, 22" href="Konik_lasche.htm" alt=""/>
+<area shape="rect" coords="44, 1, 159, 21" href="Taschenerodieren_1.htm" alt=""/>
+<area shape="rect" coords="10,348,129,375" href="javascript:BSSCPopup('Kurzhilfen_anzeigen.htm',400,300);" id="area6" alt=""/>
+<area shape="rect" coords="14, 283, 319, 318" href="javascript:BSSCPopup('Rendern_Farbe_Material_Listbox.htm',400,300);" id="area7" alt=""/>
+<area shape="rect" coords="15,319,138,342" href="Operation_rendern.htm" alt=""/>
+<area shape="rect" coords="11,31,329,80" href="javascript:BSSCPopup('Eigene_Operationsbeschreibung_Std_Konturbea.htm',400,500);" id="area8" alt=""/>
+<area shape="rect" coords="164, 1, 247, 21" href="Rotationsachse_Register_Standard_Konturbearbeitung_.htm" alt=""/>
+</map> </p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+	FilePopupInit('area3');
+	FilePopupInit('area4');
+	FilePopupInit('area5');
+	FilePopupInit('area6');
+	FilePopupInit('area7');
+	FilePopupInit('area8');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

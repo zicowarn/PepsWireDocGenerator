@@ -1,0 +1,75 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Einfahren - Modi" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Einfahren Gerade" %}</p><p>{% trans "Führt zu einer linearen (geraden) Einfahrbewegung. Der Draht fährt gerade von der Startlochbohrungsposition, auf die Bearbeitungsstartposition einer Bearbeitungsfigur." %}</p><p> </p>
+<p> </p>
+<p class="dialog">{% trans "Einfahren Bogen mit Eckenmodus" %}</p>
+<p>{% trans "Führt zu einer [kreisförmigen tangentialen Einfahrbewegung] an die Bearbeitungsfigur." %}</p>
+<p>{% trans "Für diese Option muss man einen Einfahrradius programmieren. Der Radius der Einfahrbewegung muss [kleiner sein] als der [Abstand zwischen] der [Start(loch)position] und der [Bearbeitungsstartposition auf der Figur] und [größer sein] als der [Drahtradius + Offset]." %}</p>
+<p class="Block_Text">{% trans "Es existieren zwei Methoden für das kreisförmige Einfahren, nämlich:" %}</p>
+<p>{% trans "[Einfahren Bogen mit ISO] und [Einfahren Bogen mit Eckenmodus]" %}</p>
+<p>{% trans "Der [Unterschied] zwischen den Methoden wird [nur bei der Bearbeitung von Koniken] offensichtlich." %}</p>
+<p>{% trans "Normalerweise verwendet man die Einfahroption [Einfahren Bogen mit ISO]. Sie ist auch die einzig mögliche Methode wenn man Regelflächen bogenförmig anfahren möchte." %}</p>
+<p>{% trans "Die folgende Zeichnung zeigt die Methode [Einfahren Bogen mit ISO]." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../LEADISO.gif" alt="LEADISO.gif" width="283" height="179" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "Wird die Option [Einfahren Bogen mit Eckenmodus] aktiviert, wird je nach Einstellung des [#Eckenmodus#] im Dialog [Standard Konturbearbeitung] entweder ein ISO-Radius oder ein Drehspindelradius erzeugt." %}</p>
+<p>{% trans "Die Option [Einfahren Bogen mit Eckenmodus] ist nicht identisch mit der Einfahroption [Einfahren Bogen mit ISO]." %}</p>
+<p class="hcp2"> </p>
+<p>{% trans "[Einfahren Bogen mit: ISO Eckenmodus]" %}</p>
+<p><img src="../LEADISOC.gif" alt="LEADISOC.gif" width="279" height="176" border="0"/></p>
+<p>{% trans "[Einfahren Bogen mit: Drehspindel Eckenmodus]" %}</p>
+<p><img src="../LEADCONC.gif" alt="LEADCONC.gif" width="287" height="180" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "Die oben gezeigten Einfahrmethoden ([ISO] und [Drehspindel]) sollten man nur programmieren wenn die NC-Steuerung dies auch zulässt." %}</p>
+<p>{% trans "Verwenden Sie im Zweifelsfall die Option [Einfahren Bogen mit ISO]." %}</p>
+<p>{% trans "Beachten Sie ebenfalls, dass ein bogenförmigen Anfahren auf einem Radiuselement bei vielen Steuerungen zu Offsetfehlern führt." %}</p>
+<p>{% trans "Fahren Sie deshalb besser auf einem geraden Element an." %}</p>
+<p> </p>
+<p class="dialog">{% trans "Einfahren Bogen mit ISO" %}</p>
+<p>{% trans "Führt zu einer bogenförmigen Einfahrbewegung. Der Draht fährt im programmierten Radius von der Startlochbohrungsposition, auf die Bearbeitungsstartposition einer Bearbeitungsfigur." %}</p>
+<p>{% trans "[Ist eine Konik programmiert], bildet die Einfahrbewegung immer [einen ISO-Radius]." %}</p>
+<p>{% trans "Der [Radius] der Einfahrbewegung [muss angegeben werden]. Bei Radius 0 (Null) wird gerade angefahren." %}</p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a3');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

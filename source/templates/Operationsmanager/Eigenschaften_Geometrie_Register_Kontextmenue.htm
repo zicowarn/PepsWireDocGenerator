@@ -1,0 +1,48 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Eigenschaften" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Operationsmanager.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Eigenschaften" %}</p><p> </p>
+<p>{% trans "Die Eigenschaften einer Solid-Geometrie kann man ermitteln, indem man die Maus über eine Solid-Geometrie positioniert und dann die [rechte] Maustaste klickt. Man kann die Eigenschaften ebenfalls im Operationsmanager anzeigen lassen, indem man dort den Eintrag einer Solid-Geometrie anklickt und dann die [rechte] Maustaste klickt." %}</p>
+<p>{% trans "Die gezeigte Information ändert sich, je nachdem welches Solid-Element man anklickt. Das folgende Beispiel zeigt die Eigenschaften eines [Solid][-Bodies]." %}</p>
+<p class="hcp2"> </p>
+<p style="margin-right: 5.70pt;"><img src="../Get_Sheet_Info.gif" alt="Get_Sheet_Info.gif" width="382" height="198" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "Beachten Sie, dass Sie die gleichen Informationen mit Hilfe des Befehls [Element Info] @ erhalten können." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

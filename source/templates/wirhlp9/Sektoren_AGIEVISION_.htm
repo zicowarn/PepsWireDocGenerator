@@ -1,0 +1,75 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Sektoren (AGIEVISION) XXXBILD" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kastoum" style="border-top: 1.50pt solid #0000ff; border-bottom: 1.50pt solid #0000ff;  border-left: 1.50pt solid #0000ff; border-right: 1.50pt solid #0000ff;">{% trans "@ Sektoren (AGIEVISION)" %}</p><p>{% trans "Der Befehl [Sektoren] ist [nur für] AGIEVISION Maschinen verfügbar." %}</p><p>{% trans "Die Funktion findet Anwendung, wenn an bestimmten Positionen einer Bearbeitungsfigur, eine [zusätzliche Konik,] eine [Schnittluftänderung,] eine [Positionierbewegung] eingebracht oder die Eckenstrategie geändert werden soll." %}</p>
+<p>{% trans "Nach Aufruf des Befehls wird der Anwender aufgefordert die Bearbeitungsfigur anzuklicken, an die der [Sektor] eingebracht werden sollen." %}</p>
+<p>{% trans "Verwenden Sie anschließend die [Fangfunktionen], um die Start-/Endpositionen des [Sektors] festzulegen. Nach der Eingabe der Position erfolgt der Aufruf eines Dialogs." %}</p>
+<p>{% trans "Geben Sie dort ein, welches Ereignis (Konik, Schnittluftänderung etc.), mit welchen Parametern ausgeführt werden soll." %}</p>
+<p>{% trans "Jeder Sektor wird durch 2 [hellblaue Kreissymbole] symbolisiert." %}</p>
+<p class="hcp2"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp2"> </p>
+<p>{% trans "XXX &lt;img src='../Sektoren_AV1_shg.gif' usemap='#AreaMap0' alt='Sektoren_AV1_shg.gif' width='377' height='431' border='0'/&gt;&lt;map name='AreaMap0' id='AreaMap0'&gt;########&lt;/map&gt;" %}<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="5,52,365,138" href="javascript:BSSCPopup('Konik_Sektor_AGIEVISON.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="5,139,369,181" href="javascript:BSSCPopup('Schnittluft_Sektor_AGIEVISION.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="7,182,367,247" href="javascript:BSSCPopup('Positionierung_Sektor_AGIEVISION.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="8,248,370,391" href="javascript:BSSCPopup('Eckenfunktion_Sektor_AGIEVISION.htm',400,300);" id="area4" alt=""/>
+<area shape="rect" coords="12,396,121,419" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area5" alt=""/>
+<area shape="rect" coords="132,395,243,420" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area6" alt=""/>
+<area shape="rect" coords="254,397,364,420" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area7" alt=""/>
+<area shape="rect" coords="6,21,366,50" href="javascript:BSSCPopup('Sektor_Name_Sektor_AGIEVISION.htm',400,300);" id="area8" alt=""/>
+</map> </p>
+<p class="hcp2"> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
+<p style="font-weight: bold;">{% trans "#Sektoren programmieren (Nur AGIEVISION)#" %}</p>
+<p class="Hinweis">{% trans "Wichtiger Hinweis:" %}</p>
+<p>{% trans "Die Wirkung der Sektoren (z.B. Konik- oder Schnittluftänderung) wird in PEPS [nicht simuliert]." %}</p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+	FilePopupInit('area3');
+	FilePopupInit('area4');
+	FilePopupInit('area5');
+	FilePopupInit('area6');
+	FilePopupInit('area7');
+	FilePopupInit('area8');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

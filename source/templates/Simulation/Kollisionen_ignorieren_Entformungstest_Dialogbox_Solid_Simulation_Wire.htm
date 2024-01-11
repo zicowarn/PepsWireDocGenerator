@@ -1,0 +1,45 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Kollisionen ignorieren (Entformungstest Dialogbox)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Kollisionen ignorieren (Entformungstest Dialog)" %}</p><p>{% trans "Wenn das System einen Entformungstest ausführt, stoppt die Entformungssimulation, wenn es zu einer Kollision von Ausfallteil und Werkstück kommt." %}</p>
+<p>{% trans "Ist die Checkbox [Kollision ignorieren] aktiviert, stoppt die Entformungssimulation im Falle einer Kollision [nicht]." %}</p>
+<p>{% trans "Das Aktivieren dieser Checkbox ist besonders hilfreich, wenn Sie mit der Funktion [Entformungstest] experimentieren wollen." %}</p>
+<p> </p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "Vergessen Sie nicht die Checkbox [Kollision ignorieren] zu [de]aktivieren, wenn Sie einen echten Entformungstest durchführen wollen." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

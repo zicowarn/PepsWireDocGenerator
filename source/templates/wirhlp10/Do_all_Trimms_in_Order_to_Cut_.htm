@@ -1,0 +1,59 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Nachschnitte in Reihenfolge nach Schnitt Nr:" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    font.hcp2 { vertical-align:super; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Nachschnitte in Reihenfolge nach Schnitt Nr:" %}</p><p>{% trans "Diese Option wird erst aktiviert, wenn Sie [vorher] die Optionen #[Zuerst ALLE Schruppschnitte]# und #Nachschnitte in Reihenfolge 1, 2, 3# wählen." %}</p><p>{% trans "Die Option erlaubt es zu bestimmen, ab welchem Schnitt die Wirkung der Option #Nachschnitte in Reihenfolge 1, 2, 3# aufgehoben wird." %}</p>
+<p>{% trans "[Beispiel]: Programmiert man für die Geometrien des folgenden Bildes ([A],[B],[C] und [D]) einen Schrupp- und vier Nachschnitte und stellt die Option [Nachschnitte in Reihenfolge nach Schnitt Nr:] auf [3] ein, würde dies zu folgender Schneidreihenfolge führen:" %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><img src="../Nachschnitte_in_Reihenfolge_nach_Schnitt_Nr.gif" alt="Nachschnitte_in_Reihenfolge_nach_Schnitt_Nr.gif" width="666" height="240" border="0"/></p>
+<p>{% trans "[ Schruppen A], [Schruppen B], [Schruppen C], [Schruppen D]," %}</p>
+<p>{% trans "[1][ter] [Schlichtschnitt A], [1][ter] [Schlichtschnitt B], [1][ter] [Schlichtschnitt C], [1][ter] [Schlichtschnitt D]," %}</p>
+<p>{% trans "[2][ter] [Schlichtschnitt A], [2][ter] [Schlichtschnitt B], [2][ter] [Schlichtschnitt C], [2][ter] [Schlichtschnitt D]," %}</p>
+<p>{% trans "(Jetzt wird die Wirkung der Option #Nachschnitte in Reihenfolge 1, 2, 3# aufgehoben) [3][ter] [Schlichtschnitt A, 4][ter] [Schlichtschnitt A][,]" %}</p>
+<p>{% trans "[3][ter] [Schlichtschnitt B, 4][ter] [Schlichtschnitt B, ][3][ter] [Schlichtschnitt C, 4][ter] [Schlichtschnitt C,]" %}</p>
+<p>{% trans "[3][ter] [Schlichtschnitt D, 4][ter] [Schlichtschnitt D.]" %}</p>
+<script type="text/javascript" language="JavaScript1.2">
+//&lt;![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a1');
+        FilePopupInit('a2');
+        FilePopupInit('a3');
+        FilePopupInit('a4');
+//]]&gt;
+</script>
+
+{% endblock %}
+{% endlinebreakless %}

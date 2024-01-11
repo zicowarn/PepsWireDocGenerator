@@ -1,0 +1,44 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Draht-, Düsen- und Solid-Facetierung" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Draht-, Düsen- und Solid-Facetierung" %}</p><p>{% trans "Wird eine [Drahtgrafik], eine [Düsengrafik] oder eine [Rohteilgrafik] die Kreise oder Bögen enthält, als Solid dargestellt, nähert das System die Darstellung aller Kreise durch kleine Geraden an (Facettierung)." %}</p>
+<p>{% trans "Dieses Dialogfeld stellt ein, mit welcher Genauigkeit die Annäherung erfolgt. Der eingegebene Wert ist der Abstand in mm, zwischen der angenäherten Geraden und der wirklicher Oberfläche." %}</p>
+<p>{% trans "Der Wert ist vergleichbar mit dem PEPS #[Rauhtiefenbefehl]#." %}</p>
+<p>{% trans "In diesem Dialog können Sie der [Drahtgrafik], der [Düsengrafik] und in der Simulation verwendeten [Rohteilgrafik[,]] verschiedene Genauigkeiten zuweisen." %}</p>
+<p>{% trans "Da die [Düsengrafik] bei der Beurteilung des Materialabtrages keine hohe Genauigkeit erfordern, stellt man deren Genauigkeit normalerweise geringer ein, als die des Drahtes und der Rohteilgrafik." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

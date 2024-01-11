@@ -1,0 +1,42 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Endwinkel" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Endwinkel" %}</p><p>{% trans "Dieses Feld dient zur Eingabe des Konikwinkels für das gewählte Geometrieelement. Die Winkeleingabe ist immer positiv." %}</p>
+<p>{% trans "Die Richtung der Konik wird mit den Schaltflächen [Winkelrichtung] eingestellt." %}</p>
+<p>{% trans "Ordnen Sie anschließend der Konik einen #[Eckenmodus]# ([Drehspindel + Scharf], [ISO + Drehspindel], [ISO + Scharf] oder [Nur Drehspindel]) zu." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

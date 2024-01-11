@@ -1,0 +1,46 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "NC-Dateiname" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "NC-Dateiname" %}</p><p>{% trans "Ist der Dateiname der NC-Ausgabedatei. Beachten Sie die Einschränkungen der verwendeten NC-Steuerung." %}</p>
+<p>{% trans "Einige Steuerung verlangen den Namen der NC-Ausgabedatei z.B. als rein numerische Angabe, bei anderen darf der Dateiname z.B. nicht länger als 6 Zeichen sein." %}</p>
+<p>{% trans "Durch die Definition von mehreren Operationen (Befehl #[Operation starten]#), können Sie mit einem Programm, [mehrere] NC-Ausgabedateien erzeugen." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "An vorherige anhängen" %}</p>
+<p class="footnote_text" style="margin-bottom: 0.00pt; font-family: Arial;">{% trans "Existieren mehreren Operationen, wird für jede Operation normalerweise eine separate NC-Ausgabedatei erzeugt." %}</p>
+<p class="footnote_text" style="margin-bottom: 0.00pt;">{% trans "[Mit der Option] [An vorherige anhängen] können Sie die NC-Daten einer Operation stattdessen, an die [NC-Ausgabedatei der vorangegangenen Operation anhängen.]" %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,47 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Auf Punkt (UV)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Auf Punkt (UV)" %}</p><p>{% trans "In dieses Feld wird die [UV]-Position notiert, auf welche der Draht [im Vorschub] verfahren soll." %}</p>
+<p>{% trans "Die [UV]-Angabe ist nur dann erforderlich, wenn eine [schräge] [Vorschubbewegung] (schräge Drahtstellung) erfolgen soll." %}</p>
+<p>{% trans "Die [UV]-Position wird direkt in das Feld eingegeben. Es werden die [inkrementalen] [U]- und [V]-Koordinaten der Zielposition angegeben." %}</p>
+<p>{% trans "Alternativ kann die UV-Zielposition mit der Schaltfläche [UV &amp;gt;&amp;gt;] aus einer vorhandenen CAD-Zeichnung ermittelt werden." %}</p>
+<p>{% trans "Verwenden Sie in diesem Fall die Fangfunktionen [Endpunkt - Koordinaten]." %}</p>
+<p>{% trans "Der Dialog bezieht die inkrementale UV-Positionseingabe auf die momentane XY-Eingabe." %}</p>
+<p>{% trans "Aus diesem Grund muss die XY-Position [vor] der UV-Positionsangabe programmiert werden." %}</p>
+<p>{% trans "Für reine [2 Achsenbewungen] ist [KEINE Programmierung der UV-Position] notwendig." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

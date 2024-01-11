@@ -1,0 +1,73 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Grafisches Einrichteblatt - Parameter XXX" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    span.hcp1 { font-weight:bold; }
+    img.hcp2 { border:none; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Grafisches Einrichteblatt - Parameter" %}</p><p> </p>
+<p class="Tip_Note_Heading">{% trans "Textfelder des Einrichteblattes" %}</p>
+<p>{% trans "Hier bestimmen Sie, welche Informationen z.B. [Material], [Schneidhöhe], [Maschine] etc. in den oberen Teil des Einrichteblatts geschrieben werden sollen." %}</p>
+<p> </p>
+<p><img src="../Grafisches_Einrichteblatt_Textfelder.gif" alt="" border="0" class="hcp2"/></p>
+<p> </p>
+<p>{% trans "Das folgende Bild zeigt, das die Information [Material] (Aluminium) wie im Bild oberhalb bestimmt, in der [dritten] [Spalte] des Einrichteblatts angezeigt wird." %}</p>
+<p> </p>
+<p><img src="../Grafisches_Einrichteblatt_Textfelder_1.gif" alt="" border="0" class="hcp2"/></p>
+<p> </p>
+<p>{% trans "Bestimmte Informationen wie z.B. [ZeichnungsNr.], [Projekt-Nr]. oder [Kunde] werden nur angezeigt, wenn Sie die optionale Software [CAMMAN] (Programmverwaltung) verwenden." %}</p>
+<p class="Tip_Note_Heading">{% trans "Abmessungen" %}</p>
+<p>XXX</p>
+<p class="Tip_Note_Heading">{% trans "[Grafik automatisch einpassen]" %}</p>
+<p>{% trans "Ist die Option aktiv, wird die Grafik der Bearbeitungsgeometrien, automatisch größtmöglich, in das Einrichteblatt eingepasst." %}</p>
+<p>{% trans "Bei nicht aktivierter Option, wird die aktuelle Bildschirmansicht in das Einrichteblatt eingepasst." %}</p>
+<p class="Tip_Note_Heading">{% trans "[Startpunkte ausgeben]" %}</p>
+<p>{% trans "Zeigt für jede bearbeitete Figur, die Koordinaten des Startpunktes grafisch an." %}</p>
+<p class="Tip_Note_Heading">{% trans "[Figurnamen ausgeben]" %}</p>
+<p>{% trans "Zeigt für jede bearbeitete Figur, den der Bearbeitungsfigur grafisch an." %}</p>
+<p class="Tip_Note_Heading">{% trans "Nullpunkte ausgeben" %}</p>
+<p>{% trans "Zeigt die Position des Nullpunktes grafisch im Einrichteblatt an." %}</p>
+<p class="Tip_Note_Heading">{% trans "Farben" %}</p>
+<p>{% trans "Hier können Sie einstellen, im welchen Farben die [Bearbeitungsgeometrien] (Figuren), [Datenfelder] und der [Rahmen] des Einrichteblattes angezeigt werden sollen." %}</p>
+<p class="Tip_Note_Heading">{% trans "Standardwerte laden" %}</p>
+<p>{% trans "Setzt die Dialogeinstellung zurück auf die vom Systemhersteller gespeicherten Voreinstellungen." %}</p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+
+{% endblock %}
+{% endlinebreakless %}

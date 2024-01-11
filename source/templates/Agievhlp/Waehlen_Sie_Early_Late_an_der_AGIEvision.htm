@@ -1,0 +1,42 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Wählen Sie Early&sol;Late an der AGIEvision (Stop in SBL)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Agievhlp.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Wählen Sie Early/Late an der AGIEvision (Stop in SBL)" %}</p><p>{% trans "XXX Mit dieser Methode legt man fest, das die AGIEVISION Steuerung die Anbindungen, je nach gewählter Einstellung an der Steuerung, mit den Strategien [Early] oder [Late] entfernt." %}</p>
+<p>{% trans "1.) [Early]: Schnellst möglicher Eingriff durch den Bediener. [Schnittfolge] = Hauptschnitt, Trennschnitt, Nachschnitte. Je nach Auswahl der [Early]-Strategie auf der NC-Steuerung kann diese Schnittfolge auf einzelne Konturen oder das gesamte Werkstück bezogen sein." %}</p>
+<p>{% trans "2.) [Late]: Spätest möglicher Eingriff durch den Bediener. [Schnittfolge] = Hauptschnitt, Nachschnitte, Trennschnitt. Je nach Auswahl der [Late]-Strategie auf der NC-Steuerung kann diese Schnittfolge auf einzelne Konturen oder das gesamte Werkstück bezogen sein." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

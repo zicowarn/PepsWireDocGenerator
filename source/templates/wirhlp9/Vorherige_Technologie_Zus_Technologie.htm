@@ -1,0 +1,43 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Vorherige Technologie" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Vorherige Technologie" %}</p><p>{% trans "Die Schaltfläche [Vorherige Technologie] ist nicht aktiv (grau), [wenn nur ein einzelnes Technologiesymbol] editiert wird." %}</p>
+<p>{% trans "Für den Fall, dass mehrere Technologiesymbole editiert werden, ist die Schaltfläche aktiv und erlaubt das [schrittweise Editieren] der gewählten Technologiesymbole in [umgekehrter Reihenfolge ihrer Auswahl]." %}</p>
+<p>{% trans "Wurden die Symbole in einer bestimmten Reihenfolge ausgewählt, bestimmt dies auch die Editierreihenfolge." %}</p>
+<p>{% trans "Erfolgte die Auswahl durch ein Fenster, ist die Editierreihenfolge zufällig." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

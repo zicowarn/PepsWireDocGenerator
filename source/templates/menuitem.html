@@ -1,0 +1,13 @@
+{% load rendermenu %}
+{% for menulabel, menuvalue in menuvalue.items %}
+  <details>
+    <summary class="tree-item" data-url="{{ menuvalue.url }}" onclick="changeIframeSrc(this)">
+      {{ menulabel }}
+    </summary>
+    {% if menuvalue.children %}
+      {% with level=level|add:1 %}
+        {% rendermenu menulabel=menulabel menuvalue=menuvalue.children %}
+      {% endwith %}
+    {% endif %}
+  </details>
+{% endfor %}

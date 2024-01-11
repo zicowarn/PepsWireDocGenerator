@@ -1,0 +1,105 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Technologie laden (aus Technologie Datenbank)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+    li.hcp2 { font-size:9pt; }
+    font.hcp3 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Technologie laden (aus Technologie Datenbank)" %}</p><p>{% trans "Mit dieser Funktion können Sie einer Bearbeitung Technologieparameter (Anzahl der Schnitte, Stromstufe, verwendeter Offset usw.) aus der Technologiedatenbank zuweisen." %}</p><p class="hcp1"> </p>
+<p class="Tip_Note_Heading">{% trans "Technologie aus Datenbank laden:" %}</p>
+<ul>
+<li class="hcp2">
+<p class="Topic_Text_Bulleted">{% trans "Wählen Sie die Bearbeitungsstrategie und bestimmen Sie, welche Figur(en) bearbeitet werden sollen. Legen Sie die Anbindung, das Offset und die Ein/Ausfahrstrategie fest." %}</p>
+</li>
+<li class="hcp2">
+<p class="Topic_Text_Bulleted">{% trans "Sie auf das Register [#Datenbank#]. Es folgt ein neuer Dialog." %}</p>
+</li>
+<li class="hcp2">
+<p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf die Schaltfläche [#Liste neu aufbauen#] um alle vorhandenen Datenbankeinträge aufzulisten." %}</p>
+</li>
+<li class="hcp2">
+<p class="Topic_Text_Bulleted">{% trans "Wählen Sie einen Eintrag aus der Liste und prüfen Sie die zugeordneten Technologien mit der Schaltfläche [#Editieren#]." %}</p>
+</li>
+<li class="hcp2">
+<p class="Topic_Text_Bulleted">{% trans "Laden Sie die Technologien mit [#Technologie laden#]." %}</p>
+</li>
+</ul>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp1"> </p>
+<p><img src="../TECHN_LA_shg.gif" usemap="#AreaMap0" alt="TECHN_LA_shg.gif" width="362" height="512" border="0"/> <map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="12,39,61,55" href="Einstellungen_Einstellen_der_Schnittmethode.htm" alt=""/>
+<area shape="rect" coords="62,38,117,55" href="Anbinden_Lasche.htm" alt=""/>
+<area shape="rect" coords="120,36,197,55" href="Ein_Ausfahren_Lasche.htm" alt=""/>
+<area shape="rect" coords="197,37,238,55" href="Offset_Lasche.htm" alt=""/>
+<area shape="rect" coords="19,66,325,92" href="javascript:BSSCPopup('Filter_Material.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="17,92,323,114" href="javascript:BSSCPopup('Filter_Dicke.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="18,116,320,139" href="javascript:BSSCPopup('Filter_Oberflaechenguete.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="19,151,324,385" href="javascript:BSSCPopup('Technologie_Datenbank_Liste_der_Materialien.htm',400,300);" id="area4" alt=""/>
+<area shape="rect" coords="29,392,180,412" href="javascript:BSSCPopup('Liste_neu_aufbauen.htm',400,300);" id="area5" alt=""/>
+<area shape="rect" coords="193,392,332,413" href="javascript:BSSCPopup('Technologie_laden_aus_Technologie_Datenbank.htm',400,300);" id="area6" alt=""/>
+<area shape="rect" coords="24,420,101,442" href="javascript:BSSCPopup('Editieren_Technologie_Datenbank.htm',400,300);" id="area7" alt=""/>
+<area shape="rect" coords="104,422,180,442" href="javascript:BSSCPopup('Loeschen_Technologie_Datenbank.htm',400,300);" id="area8" alt=""/>
+<area shape="rect" coords="190,420,329,443" href="javascript:BSSCPopup('Technologie_speichern_Technologie_Datenbank.htm',400,300);" id="area9" alt=""/>
+<area shape="rect" coords="12,476,83,501" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area10" alt=""/>
+<area shape="rect" coords="92,478,168,504" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area11" alt=""/>
+<area shape="rect" coords="172,479,266,501" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area12" alt=""/>
+<area shape="rect" coords="271,479,347,503" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area13" alt=""/></map></p>
+<p style="text-align: center;"> </p>
+<p>{% trans "Wenn zu viele Einträge aufgelistet werden kann man mit den Checkboxen [Filter Material], [Filter Dicke] [und Filter Oberflächengüte] eine #[gefilterte Liste]# erzeugen." %}</p>
+<script type="text/javascript" language="JavaScript1.2">
+//&lt;![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a1');
+        FilePopupInit('a2');
+        FilePopupInit('a3');
+        FilePopupInit('a4');
+        FilePopupInit('area1');
+        FilePopupInit('area2');
+        FilePopupInit('area3');
+        FilePopupInit('area4');
+        FilePopupInit('area5');
+        FilePopupInit('area6');
+        FilePopupInit('area7');
+        FilePopupInit('area8');
+        FilePopupInit('area9');
+        FilePopupInit('area10');
+        FilePopupInit('area11');
+        FilePopupInit('area12');
+        FilePopupInit('area13');
+//]]&gt;
+</script>
+
+{% endblock %}
+{% endlinebreakless %}

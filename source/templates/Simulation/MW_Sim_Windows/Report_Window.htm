@@ -1,0 +1,70 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Report Fenster" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../../MW_Sim_Windows.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <h1>{% trans "Report Fenster" %}</h1><p> </p>
+<p>{% trans "Das Report-Fenster sammelt alle besonderen Ereignisse (z.B. Kollisionen), die im Zuge einer Simulation auftreten. Der Report wird in Form einer Baumstruktur aufgelistet." %}</p>
+<p>{% trans "Jeder Zweig der Baumstruktur beginnt mit der Operationsnummer, gefolgt von der Werkzeugnummer. Typische Ereignisse sind:" %}</p>
+<p>{% trans "Wertüberschreitungen" %}</p>
+<p>{% trans "Wertunterschreitungen" %}</p>
+<p>{% trans "Kollisionsereignisse zwischen den Achsengeometrien (z.B. Kollision zwischen C-Achse und Tisch)" %}</p>
+<p>{% trans "Kollisionsereignisse zwischen Werkzeug und Geometrien (z.B. Kollision zwischen Werkzeug und C-Achse)" %}</p>
+<p>{% trans "Kollisionsereignisse zwischen Werkzeug und Geometrien (z.B. Kollision zwischen Werkzeug und C-Achse)" %}</p>
+<p>{% trans "Kollisionsereignisse zwischen Werkzeug und Werkstück" %}</p>
+<p>{% trans "Kollisionsereignisse zwischen Rohteil und Werkzeugteilbereich (z.B. Kollision zwischen Rohteil und Werkzeugaufnahme)" %}</p>
+<p>{% trans "Kollisionsereignisse zwischen Rohteil und Werkzeugweg im Eilgang" %}</p>
+<p>{% trans "Annäherungsalarm (Fast-Kollision) zwischen Werkzeug und Rohteil oder Werkstück." %}</p>
+<p>{% trans "Annäherungsalarm (Fast-Kollision) zwischen den Achsen-Geometrien." %}</p>
+<p> </p>
+<p><img src="../../newUI_report.gif" alt="newUI_report.gif" width="458" height="581" border="0"/></p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;"> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Hauptfunktionen:" %}</p>
+<p>{% trans "Die Tiefe der Kollision ist verfügbar, wenn das Werkzeug eine Kollision ausführt (XXX eg. range: more than 0.2)." %}</p>
+<p>{% trans "Verwenden Sie den Dialog ['Anzeigefeld Auswahl'] um die angezeigten Spalten im [Report]-Fensters anzupassen. Klicken Sie dazu mit der [rechten] Maustaste in das [Report]-Fenster und wählen Sie im Kontextmenü ['Anzeigefeld Auswahl']." %}</p>
+<p><img src="../../newUI_field_chooser.gif" alt="newUI_field_chooser.gif" width="132" height="123" border="0"/></p>
+<p>{% trans "[Typ]  Zeigt den Ereignistyp an, symbolisiert durch eine Ikone." %}</p>
+<p>{% trans "[Werkzeug#] - Zeigt die in diesem Ereignis verwendete [Werkzeugnummer]." %}</p>
+<p>{% trans "[Op.Nr.] - Zeigt die in diesem Ereignis verwendete [Operationsnummer]." %}</p>
+<p>{% trans "[Block]  Zeigt die Satznummer in der Satzliste für das aktuelle Ereignis." %}</p>
+<p>{% trans "[Kommentar]  Zeigt den Operationskommentar des aktuellen Ereignisses." %}</p>
+<p class="hcp2"> </p>
+<p>{% trans "[Hinweis]: Wenn Sie im Dialog auf eine Feldspalte (z.B. ID#) klicken, kann man die Spalte sortieren." %}</p>
+<p class="hcp2"> </p>
+<p>{% trans "Klick man im Dialog auf ein Ereignis, springt das Werkzeug auf die entsprechende Koordinate im Werkzeugweg." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

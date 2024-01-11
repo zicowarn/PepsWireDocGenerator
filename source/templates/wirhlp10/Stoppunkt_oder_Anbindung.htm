@@ -1,0 +1,55 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Stoppunkt oder Anbindung" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Stoppunkt oder Anbindung" %}</p><p>{% trans "Bei vielen Bearbeitungen ist kurz vor dem Ende einer Bearbeitung ein Maschinenstopp (z.B. M01), um das Ausfallteil zu entnehmen." %}</p>
+<p>{% trans "Oder es soll eine Anbindung (Haltesteg) zur Fixierung des Ausfallteils erzeugt werden." %}</p>
+<p>{% trans "Die Position des Stopps (M01) bzw. die Größe der Anbindung (Haltesteg) können Sie mit folgenden Optionen festlegen:" %}</p>
+<p> </p>
+<p>{% trans "[1.) Anbindungslänge]" %}</p>
+<p>{% trans "Aktivieren Sie die Option [Anbindungslänge] und geben Sie an, wie viel Millimeter [vor dem Ende] der Bearbeitung der Stopp (M01) erfolgen soll oder wie groß die Anbindung (Haltesteg) sein soll." %}</p>
+<p> </p>
+<p>{% trans "[2.) XY-Koordinate]" %}</p>
+<p>{% trans "Klicken Sie auf die Schaltfläche [&amp;gt;&amp;gt;] und ermitteln Sie dann die X/Y-Koordinaten des Stoppunktes, durch Klicken in der Nähe des benötigten Stoppunktes." %}</p>
+<p>{% trans "Auch die direkte XY-Eingabe der Stoppunktkoordinaten ist möglich." %}</p>
+<p> </p>
+<p>{% trans "3.) [Keine]" %}</p>
+<p class="Block_Text">{% trans "Es wird kein Stopp (M01) ausgeben und keine Anbindung (Haltesteg) erzeugt." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p>{% trans "Ob und auf welche Weise die Anbindung entfernt wird, legt die Optionen im Dialogbereich [Methode zur Entfernung der Anbindung(en)] fest." %}</p>
+<p>{% trans "Ist [mehr als eine Anbindungen] erforderlich, werden diese mit dem Befehl #[Zusätzliche Anbindungen]# im Menü [Vorbereitung] erzeugt." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

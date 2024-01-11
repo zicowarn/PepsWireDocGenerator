@@ -1,0 +1,104 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Drahtmodell - Projektions-Assistent_Beispiel_2_Kurven" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    span.hcp1 { font-weight:bold; }
+    img.hcp2 { border:none; }
+    p.hcp3 { font-size:10pt; }
+    span.hcp4 { font-size:10pt; }
+    font.hcp5 { font-size:10pt; }
+    font.hcp6 { font-size:10pt;
+    font-weight:bold; }
+    a.hcp7 { font-weight:bold; }
+    span.hcp8 { font-size:10pt;
+    font-weight:bold; }
+    p.hcp9 { font-size:10pt;
+    font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Projektion von zwei 3D-Kurven" %}</p><p>{% trans "Das folgende Beispiel zeigt, wie man von [zwei 3D Kurven] zwei planare XY-Geometrien ableitet." %}</p><p><img src="../Wire_Projection_Wiz_2.gif" alt="" border="0" class="hcp2"/></p>
+<p class="hcp3"><img src="../Wire_Projection_Wiz_Exa_1_1.gif" alt="" border="0" class="hcp2"/></p>
+<p>{% trans "[[V]erwenden Sie die Schaltfläche] [Wähle Kurve &amp;gt;&amp;gt;] [u][nd selektieren Sie die Geometrien der [ersten] 3D Kurve.]" %}</p>
+<p class="hcp3">{% trans "[Hinweis]: Erlaubte Geometrietypen sind: [Linien/Bögen], [Kanten] und [NURBS-Kurven]." %}</p>
+<p>{% trans "[[Das] [Rote Ausrufezeichen [][verändert sich zu einem] [Grünen Haken] [der anzeigt, dass eine passende 3D Kurve gewählt wurde.]" %}</p>
+<p> </p>
+<p class="hcp3"><img src="../Wire_Projection_Wiz_Exa_1_2.gif" alt="" border="0" class="hcp2"/></p>
+<p>{% trans "[[Wählen Sie die Schaltfläche]] [Weiter &amp;gt;][, zum Aufruf des nächsten Dialogs:]" %}</p>
+<p> </p>
+<p><img src="../Wire_Projection_Wiz_Exa_1_3.gif" alt="" border="0" class="hcp2"/></p>
+<p>{% trans "[[V]erwenden Sie die Schaltfläche] [Wähle Kurve &amp;gt;&amp;gt;] [u][nd selektieren Sie die Geometrien der [zweiten] 3D Kurve.]" %}</p>
+<p> </p>
+<p><img src="../Wire_Projection_Wiz_Exa_1_4.gif" alt="" border="0" class="hcp2"/></p>
+<p class="hcp3">{% trans "Die Schaltfläche [Richtung umkehren] erlaubt es, die Richtung der Kurve (durch rote Pfeile angezeigt) zu ändern." %}</p>
+<p class="hcp3">{% trans "Die [Richtungen] beider Kurven [müssen identisch] sein." %}</p>
+<p> </p>
+<p><img src="../Wire_Projection_Wiz_Exa_1_5.gif" alt="" border="0" class="hcp2"/></p>
+<p>{% trans "Wählen Sie die Schaltfläche [Wähle Führung(en)] und wählen Sie [mindestens eine Führungslinie] ([Siehe:] Die senkrechte Linien i. d. Zeichnung oberhalb)." %}</p>
+<p>{% trans "[Führungslinien] sind vergleichbar mit den [#Synchronisationslinien#], die bei der #Programmierung von Regelflächen# verwendet werden ." %}</p>
+<p class="Hinweis">{% trans "Wichtiger Hinweis:" %}</p>
+<p>{% trans "Wenn [keine Führungen] verfügbar sind, müssen Sie die Schaltfläche [Zeichne Führung(en)] verwenden, und [mindestens eine Führungslinie] zu zeichnen." %}</p>
+<p>{% trans "Anschließend müssen Sie noch die gezeichneten Führungslinie(n) auswählen." %}</p>
+<p> </p>
+<p><img src="../Wire_Projection_Wiz_Exa_1_6.gif" alt="" border="0" class="hcp2"/></p>
+<p>{% trans "[[O]bere Projektion]" %}</p>
+<p class="hcp3">{% trans "Geben Sie in diesem Feld die [Z-Höhe] ein, auf welche die [oberen] [Regelflächengeometrie] projiziert werden soll." %}</p>
+<p>{% trans "[[Untere]Projektion]" %}</p>
+<p class="hcp3">{% trans "Geben Sie in diesem Feld die [Z-Höhe] ein, auf welche die [untere] [Regelflächengeometrie] projiziert werden soll." %}</p>
+<p class="hcp9">{% trans "[Bereiche mit gleicher Elementanzahl angleichen]" %}</p>
+<p class="hcp3">{% trans "Ist die Option aktiv, wird eine #proportionale Synchronisation# für die unter/obere Regelflächengeometrie ausgeführt." %}</p>
+<p class="hcp3">{% trans "Falls nicht, werden die Elementenden der unter/obere Regelflächengeometrie miteinander verbunden." %}</p>
+<p>{% trans "[Figuren erzeugen]" %}</p>
+<p class="hcp3">{% trans "Aktivieren Sie diese Option wenn [Figuren] anstatt [Linien/Bögen] erzeugt werden sollen." %}</p>
+<p>{% trans "[[Vorgabe für Figurnamen]]" %}</p>
+<p class="hcp3">{% trans "Falls [Figuren] erzeugt werden sollen, hier den Namen der Figur (z.B. [Fig_]) eingeben. Das System macht daraus [Fig_]001 und [Fig_]002." %}</p>
+<p class="hcp9">{% trans "Projektionstoleranz" %}</p>
+<p class="hcp3">{% trans "Steuert wie genau die Linien/Bögen der projizierten Geometrie werden." %}</p>
+<p class="hcp3">{% trans "Je kleiner der Wert, desto genau die projizierten Geometrien. Wir empfehlen einen Wert von 0.001." %}</p>
+<p> </p>
+<p class="hcp3">{% trans "Klicken Sie nun auf die Schaltfläche [Projezieren], um die beiden planaren Regelflächengeometrien abzuleiten." %}</p>
+<p class="hcp3"> </p>
+<p class="hcp3">{% trans "Das folgende Bild zeigt in der Mitte die beiden projizierten Regelflächengeometrie, plus Führungen und darüber/darunter die zu projizierenden 3D Geometrien." %}</p>
+<p class="hcp3"><img src="../Wire_Projection_Wiz_Exa_1_7.gif" alt="" border="0" class="hcp2"/></p>
+<p>{% trans "[[Beenden Sie den Dialog mit]] [Fertig][.]" %}</p>
+<p>{% trans "Die [beiden erzeugten planaren Regelflächengeometrien sollten jetzt noch in #Bearbeitungsfiguren# inkl. Startpunkten umgewandelt werden.]" %}</p>
+<p class="hcp3">{% trans "Anschließend können Sie die Bearbeitungsfiguren für die #Regelflächenprogrammierung# verwenden." %}</p>
+<p> </p>
+<p> </p>
+<script type="text/javascript" language="JavaScript1.2">
+//&lt;![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a1');
+//]]&gt;
+</script>
+
+{% endblock %}
+{% endlinebreakless %}

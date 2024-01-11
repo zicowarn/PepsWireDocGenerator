@@ -1,0 +1,36 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Draht einfädeln&sol;abschneiden (AGIEVISION)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Agievhlp.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kastoum" style="border-top: 1.50pt solid #0000ff; border-bottom: 1.50pt solid #0000ff; border-left: 1.50pt solid #0000ff; border-right: 1.50pt solid #0000ff;">{% trans "Draht einfädeln/abschneiden (AGIEVISION)" %}</p><p>{% trans "Dieser Dialog erlaubt es, an beliebigen Positionen eine separate Operation zum Einfädeln oder Abschneiden des Drahtes zu programmieren." %}</p>
+<p><img src="../WIRE_CUT_AV.gif" alt="WIRE_CUT_AV.gif" width="411" height="211" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

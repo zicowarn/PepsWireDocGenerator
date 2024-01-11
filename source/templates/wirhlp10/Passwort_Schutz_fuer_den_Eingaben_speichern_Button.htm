@@ -1,0 +1,65 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Passwort Schutz für die Schaltfläche Eingaben speichern" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Passwort Schutz für die Schaltfläche Eingaben speichern" %}</p><p>{% trans "Die meisten Systemeinstellungen können mit der Schaltfläche [Einstellungen] [speichern] als Systemvorgaben abgespeichert werden." %}</p><p>{% trans "Diese Einstellungen verändert die Funktionsweise der Software und können die NC-Ausgabe beeinflussen." %}</p>
+<p>{% trans "Es ist deshalb gefährlich, die Systemeinstellungen unkontrolliert zu verändern. Aus oben genannten Gründen wurde das Verändern der Systemeinstellungen durch ein PASSWORT geschützt." %}</p>
+<p>{% trans "Die Systemvoreinstellungen werden normalerweise nur durch eine Person festgelegt." %}</p>
+<p>{% trans "Mit den Voreinstellungen sollten alle häufig vorkommenden Programmieraufgaben gelöst werden." %}</p>
+<p>{% trans "Ist eine gelegentliche Veränderung der Systemvoreinstellung notwendig, so kann dies lokal in dem Dialog geschehen, OHNE die Systemvoreinstellungen zu verändern." %}</p>
+<p class="hcp2"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp2"> </p>
+<p><img src="../PASSWORD_shg.gif" usemap="#AreaMap0" alt="PASSWORD_shg.gif" width="325" height="232" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="6, 90, 321, 176" href="javascript:BSSCPopup('Passwort_aendern.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="83, 190, 156, 219" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="166, 191, 240, 214" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area3" alt=""/>
+</map> </p>
+<p class="hcp2"> </p>
+<p>{% trans "Müssen die Voreinstellungen jedoch generell neu festgelegt werden, so sollte das durch die Person geschehen, die das PASSWORT kennt und die Systemvoreinstellungen üblicherweise vornimmt." %}</p>
+<p>{% trans "Wurde kein eigenes Passwort vergeben (siehe [Passwort ändern]), gilt ein vom Hersteller voreingestelltes Passwort." %}</p>
+<p>{% trans "Wenn Sie das PASSWORT nicht kennen, wenden Sie sich bitte an Ihren Systemlieferanten oder den Hersteller [Camtek]." %}</p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+	FilePopupInit('area3');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

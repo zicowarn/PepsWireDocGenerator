@@ -1,0 +1,91 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Eckenfreimachung bestimmen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    li.hcp1 { font-size:9pt; }
+    font.hcp2 { font-weight:bold; }
+    font.hcp3 { font-style:italic; }
+    p.hcp4 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Eckenfreimachung bestimmen" %}</p><ul>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Erzeugen Sie eine Bearbeitungsfiguren aus der Geometrie, die Sie mit Eckenfreimachung versehen wollen." %}</p>
+</li>
+</ul>
+<p><img src="../Eckenfreimachungen_Exa_1.gif" alt="Eckenfreimachungen_Exa_1.gif" width="153" height="152" border="0"/></p>
+<ul>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Wählen Sie im Menü [Vorbereitung] den Befehl #[Eckenfreimachung]#." %}</p>
+</li>
+</ul>
+<p class="Prompts">{% trans "Wähle Figur:" %}</p>
+<ul>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Klicken Sie die Bearbeitungsfigur an." %}</p>
+</li>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Es folgt ein Dialog. Wählen Sie dort die Art der Freimachung (z.B. Schlitz) und geben Sie deren Maß(e) ein." %}</p>
+</li>
+</ul>
+<p><img src="../Eckenfreimach_dialog.gif" alt="Eckenfreimach_dialog.gif" width="213" height="524" border="0"/></p>
+<ul>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Sollen [alle Ecken mit der gleichen Freimachung], modifiziert werden, klickt man auf die Schaltfläche [Auf alle Ecken anwenden], schließt den Dialog mit [OK] und beendet die folgende Abfrage:" %}</p>
+</li>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "'[Eingabe Punkt für Eckenfreimachung]' mit der Option [Ende] (siehe [rechte Maustaste] od. [horizontale Ikonenleiste])." %}</p>
+</li>
+</ul>
+<ul>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Sollen [nur einzelne Ecken verändert] modifiziert werden, schließt man den Dialog mit [OK]. Es folgt die Abfrage '[Eingabe Punkt für Eckenfreimachung]'." %}</p>
+</li>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Aktivieren Sie die Fangfunktion [Endpunkt] und klicken Sie alle Ecken an, die freigemacht werden sollen." %}</p>
+</li>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Beenden Sie den Befehl mit der Option [Ende] (siehe: [rechte] Maustaste)." %}</p>
+</li>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Programmieren Sie nun eine #[Standard Konturbearbeitung]# und aktivieren Sie im Dialog #[Bearbeitung einstellen]# die Checkbox [Ecken Freimach]." %}</p>
+</li>
+</ul>
+<p><img src="../Eckenfreimach1.gif" alt="Eckenfreimach1.gif" width="122" height="61" border="0"/></p>
+<p class="hcp4"> </p>
+<p>{% trans "Die folgende Zeichnung zeigt das Ergebnis." %}</p>
+<p class="hcp4"> </p>
+<p><img src="../Eckenfreimachungen_Exa_2.gif" alt="Eckenfreimachungen_Exa_2.gif" width="166" height="162" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

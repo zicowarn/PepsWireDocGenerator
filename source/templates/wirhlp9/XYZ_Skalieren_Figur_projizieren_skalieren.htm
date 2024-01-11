@@ -1,0 +1,57 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "XY-Skalieren (Figur projizieren &sol; skalieren) XXXBILD ALT" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "XY-Skalieren (Figur projizieren / skalieren)" %}</p><p style="text-align: justify;">{% trans "Erlaubt die Skalierung (Verkleinern / Vergrößern) von Figuren wobei der Figur für die Achsen X und Y ein unterschiedlicher Skalierungsfaktor zugewiesen werden kann." %}</p><p class="hcp1"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp1"> </p>
+<p><img src="../XYZ_SKAL_shg.gif" usemap="#AreaMap0" alt="XYZ_SKAL_shg.gif" width="222" height="157" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="7,35,211,73" href="javascript:BSSCPopup('Bezugspunkt_XYZ_Skalieren.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="13,93,154,146" href="javascript:BSSCPopup('X_und_Y_Skalierfaktor.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="1,2,93,19" href="Normale_der_Figur_In_Z.htm" alt=""/>
+</map> </p>
+<p class="hcp1"> </p>
+<p style="font-weight: bold;">{% trans "So wird es gemacht:" %}</p>
+<p>{% trans "#[Figur unterschiedlich in X und Y skalieren]#" %}</p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

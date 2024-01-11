@@ -1,0 +1,47 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Startpunkt" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Startpunkt" %}</p><p>{% trans "Dieses Eingabefeld wird erst aktiviert, wenn Sie im Feld [Figurname] eine Figur bestimmt haben. In diesem Eingabefeld legen Sie fest, an welchen XY-Koordinaten die Einfahrpunkte liegen sollen." %}</p><p>{% trans "Je nachdem welche Sie #[Option]# eingestellt haben, wird der neue Einfahrpunkt automatisch oder manuell einem Nachschnitt zugeordnet." %}</p>
+<p>{% trans "Die XY-Koordinaten der Einfahrpunkte können Sie entweder direkt in das Eingabefeld eingeben oder mit Hilfe der Schaltfläche @ und den [Fangfunktionen] in der Zeichnung digitalisieren." %}</p>
+<p>{% trans "Ist die Option [Punkt autom. hinzufügen] [nicht] aktiv, lassen sich die XY-Koordinaten noch verändern, bevor diese übergeben werden." %}</p>
+<p>{% trans "Die Listbox @ wird verwendet, um die Einfahrpunkte einem bestimmten Nachschnitt zuzuweisen oder einen vorhandenen Einfahrpunkt auszuwählen und dessen Koordinaten zu verändern." %}</p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a1');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

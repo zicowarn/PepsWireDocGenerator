@@ -1,0 +1,41 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Bearbeitungen mit WKZ.-Farbe markieren" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Bearbeitungen mit WKZ.-Farbe markieren" %}</p><p>{% trans "Ist diese Checkbox [deaktiviert], zeigt das System den Materialabtrag in der Farbe des Rohteils an." %}</p>
+<p>{% trans "Ist sie [aktiviert], wird der Materialabtrag in der eingestellten Werkzeugfarbe (Drahtfarbe im Modul [Erodieren]) anzeigt." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

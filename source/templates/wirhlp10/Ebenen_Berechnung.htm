@@ -1,0 +1,45 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Ebenen Berechnung" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Ebenen Berechnung" %}</p><p>{% trans "Das Feld [Ebenen Berechnung] dient rein grafischen Zwecken und hat [keinen] Einfluss auf die NC-Ausgabe." %}</p>
+<p>{% trans "Es wird verwendet, um die Anzahl grafischer Schnittebenen durch die Regelflächendarstellung festzulegen." %}</p>
+<p>{% trans "Die Systemvorgabe [2] zeigt nur die obere und untere Schnittebene einer Regelfläche. Die Eingabe von [3] würde eine weitere Schnittebene in der Mitte der Regelfläche erzeugen." %}</p>
+<p>{% trans "Schnittebenen sind dann hilfreich, wenn obere und untere Regelflächengeometrie sehr von einander abweichen und Hinterschnitte zu erwarten sind." %}</p>
+<p>{% trans "Schnittebenen können Hinterschnitte grafisch veranschaulichen." %}</p>
+<p>{% trans "Die Option wird ebenfalls verwendet, wenn sehr #[hohe Matrizen in mehreren Schnittebenen bearbeitet]# werden müssen." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

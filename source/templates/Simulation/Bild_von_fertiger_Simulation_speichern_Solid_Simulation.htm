@@ -1,0 +1,42 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Bild von fertiger Simulation speichern" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Bild von fertiger Simulation speichern" %}</p><p>{% trans "Diese Option erzeugt am Ende einer Simulation eine [Jpeg]-Grafikdatei der aktuellen Simulationsansicht." %}</p>
+<p>{% trans "Die Datei wird im Verzeichnis der aktuellen *.vdm Datei gespeichert." %}</p>
+<p>{% trans "Der Name der Datei ist identisch mit der aktuellen *.vdm-Datei, wird aber erweitert um das Suffix '.[sim]'. Beispiel: Grundplatte[_sim].jpeg." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,50 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Wähle Linien&sol;Bögen >>" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Wähle Linien/Bögen &gt;&gt;" %}</p><p>{% trans "Mit der Schaltfläche [Wähle Linien/Bögen &amp;gt;&amp;gt;] legen Sie fest, aus welchen Geometrieelementen die Bearbeitungsfigur bestehen soll." %}</p>
+<p>{% trans "Nach Wahl der Schaltfläche zeigt das System die [Standardauswahlabfrage] zur Auswahl der Geometrieelemente." %}</p>
+<p>{% trans "Normalerweise wählt man die Elemente mit Hilfe der Option [Verbinden] ([rechte Maustaste] od. [horizontale Ikonenleiste]) ohne Beachtung einer Richtung aus." %}</p>
+<p>{% trans "Die oben gezeigte Vorgehensweise ist problemlos, wenn die Option [Richtung] [automatisch] im Register #[Offset]# des Dialogs #[Konturbearbeitung]# eingestellt ist." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p>{% trans "Es gibt allerdings Ausnahmen:" %}</p>
+<p>{% trans "Bei der Erzeugung von [offenen Bearbeitungsfiguren] oder wenn die Option [Offset wie Figurrichtung] im Register #[Offset]# des Dialogs [Konturbearbeitung] eingestellt ist." %}</p>
+<p>{% trans "In beiden Fällen muss man die Richtung der Bearbeitungsfigur selbst festlegen." %}</p>
+<p>{% trans "Die geht am besten, wenn man zunächst das nächste Element bezogen auf den Bearbeitungsstartpunkt anklickt." %}</p>
+<p>{% trans "Dann die Option [Verbinden] ([rechte Maustaste] od. [horizontale Ikonenleiste]) wählt und dann das nächste Geometrieelement anklickt." %}</p>
+<p>{% trans "Durch diese Vorgehensweise werden alle Figurelemente automatisch gewählt und die Figur bekommt eine definierte Richtung." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

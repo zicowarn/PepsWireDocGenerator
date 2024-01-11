@@ -1,0 +1,69 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Technologie Register (Operation starten)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog" style="text-align: left;">{% trans "Technologie Register (Operation starten)" %}</p><p>{% trans "In diesem Register bestimmen Sie das Material des Werkstückes und den verwendeten Schneiddraht." %}</p><p class="hcp1"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp1"> </p>
+<p><img src="../OP_START_TECH_shg.gif" usemap="#MAP612050887" alt="OP_START_TECH_shg.gif" width="788" height="577" border="0"/>
+<map name="MAP612050887" id="MAP612050887">
+<area shape="rect" coords="212, 43, 752, 96" href="javascript:BSSCPopup('Material.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="19, 34, 84, 57" href="Rohteile_Operation_starten_Rohteil_Register.htm" alt=""/>
+<area shape="rect" coords="15, 54, 105, 76" href="NC_Ausgabe_Register_Operation_starten_.htm" alt=""/>
+<area shape="rect" coords="23, 93, 94, 113" href="Strategie_Register_Operation_starten_.htm" alt=""/>
+<area shape="rect" coords="21, 109, 93, 132" href="Optionen_Register_Operation_starten.htm" alt=""/>
+<area shape="rect" coords="409, 536, 482, 559" href="javascript:BSSCPopup('OK_Button_Operation_starten.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="489, 536, 564, 562" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="570, 537, 697, 558" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area4" alt=""/>
+<area shape="rect" coords="701, 536, 774, 560" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area5" alt=""/>
+<area shape="rect" coords="554, 153, 758, 206" href="javascript:BSSCPopup('Globaler_Vorschub.htm',400,300);" id="area6" alt=""/>
+<area shape="rect" coords="218, 152, 545, 212" href="Drahtsorte.htm" alt=""/>
+<area shape="rect" coords="218, 120, 525, 152" href="javascript:BSSCPopup('Anderen_Draht_zum_Schlichten_verwenden.htm',400,600);" id="area7" alt=""/>
+<area shape="rect" coords="218, 218, 757, 386" href="Technologie_Technologie_Register_Operation_starten.htm" alt=""/>
+</map>  </p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+	FilePopupInit('area3');
+	FilePopupInit('area4');
+	FilePopupInit('area5');
+	FilePopupInit('area6');
+	FilePopupInit('area7');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

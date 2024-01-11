@@ -1,0 +1,41 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Dialog übersetzen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Commdata.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "@Dialog übersetzen" %}</p><p>{% trans "Ruft einen weiteren Dialog auf, zur Übersetzung der Texte des aktuellen Dialoges in die aktuell gewählte Landessprache." %}</p>
+<ul>
+<li style="font-size: 9pt;">
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+</li>
+</ul>
+<p>{% trans "Beachten Sie, dass diese Funktion in der Regel nur vom Systemhersteller verwendet wird." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

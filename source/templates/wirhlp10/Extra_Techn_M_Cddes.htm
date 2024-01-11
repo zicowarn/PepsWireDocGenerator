@@ -1,0 +1,68 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Extra (Technologien &sol; M-Codes)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Extra (Technologien / M-Codes)" %}</p><p>{% trans "Mit den Optionen im Feld [Extra], können Sie [zusätzliche Technologieinformationen] oder [M-Codes, o. ä.] in die NC-Daten ausgegeben." %}</p><p>{% trans "Zusätzliche Technologiewechsel werden im Menü #[Vorbereitung]# (dort Befehle #[Zusätzliche Technologien]# und #[Zusätzliche M-Codes, Kommentare u.a.]# ) bestimmt." %}</p>
+<p>{% trans "Bei Mehrfachschnitten können Sie wählen, welchem Schnitt die zusätzliche Information zugeordnet werden soll." %}</p>
+<p class="hcp2"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp2"> </p>
+<p><img src="../TECHN_2_shg.gif" usemap="#AreaMap0" alt="TECHN_2_shg.gif" width="318" height="114" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="2, -1, 42, 113" href="javascript:BSSCPopup('Schnitt_Nr_123.htm',400,600);" id="area1" alt=""/>
+<area shape="rect" coords="134, 1, 183, 115" href="javascript:BSSCPopup('Offset_im_Dialog_Bearbeitung_einstellen.htm',400,600);" id="area2" alt=""/>
+<area shape="rect" coords="187, 2, 231, 116" href="javascript:BSSCPopup('Techno__logien.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="242, -1, 269, 113" href="javascript:BSSCPopup('Techno__logien.htm',400,300);" id="area4" alt=""/>
+<area shape="rect" coords="47, 1, 81, 114" href="javascript:BSSCPopup('Mit_Konik.htm',400,300);" id="area5" alt=""/>
+<area shape="rect" coords="87, 3, 132, 113" href="javascript:BSSCPopup('Ecken_Strategie.htm',400,600);" id="area6" alt=""/>
+<area shape="rect" coords="277, 5, 312, 113" href="javascript:BSSCPopup('Codes_Zusaetzliche.htm',400,300);" id="area7" alt=""/>
+</map> </p>
+<p class="hcp2"> </p>
+<p>{% trans "Die Abbildung zeigt, dass bei [Schnitt 1 zusätzliche Technologien] und [M-Codes], bei [Schnitt 2] [nur zusätzliche Technologien] und bei [Schnitt 3 keine zusätzlichen Informationen] ausgegeben werden." %}</p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+	FilePopupInit('area3');
+	FilePopupInit('area4');
+	FilePopupInit('area5');
+	FilePopupInit('area6');
+	FilePopupInit('area7');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

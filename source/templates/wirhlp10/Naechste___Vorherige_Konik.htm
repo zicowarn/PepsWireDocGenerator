@@ -1,0 +1,42 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Nächste &sol; Vorherige Konik" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Nächste / Vorherige Konik" %}</p><p>{% trans "Die Schaltflächen [Nächste] [Konik] und [Vorherige] [Konik] erlauben das schrittweise Editieren der gewählten Winkelwechselsymbole." %}</p>
+<p>{% trans "Das momentan anstehende Winkelwechselsymbol wird in Zeichnung grafisch gekennzeichnet." %}</p>
+<p>{% trans "Wurden die Symbole in einer bestimmten Reihenfolge ausgewählt, bestimmt dies auch die Editierreihenfolge. Erfolgte die Auswahl durch ein Fenster, ist die Editierreihenfolge zufällig." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,63 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Satzliste Fenster" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../../MW_Sim_Windows.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+    font.hcp2 { font-weight:bold; }
+    font.hcp3 { font-size:12pt;
+    background-color:#ff0000; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <h1>{% trans "Satzliste" %}</h1><p> </p>
+<p>{% trans "Die Satzliste zeigt den aktuell simulierten NC-Code. Die hier angezeigten Werte beschreiben die XYZ-Position der Werkzeugspitze im absoluten Maschinenkoordinatensystem X, Y, Z (im Fall einer 3-Achsen Maschine) und zusätzlich A, B, C, etc. (im Fall einer 4- oder 5-Achsen Maschine)." %}</p>
+<p> </p>
+<p><img src="../../newUI_move_list.gif" alt="newUI_move_list.gif" width="409" height="464" border="0"/></p>
+<p class="hcp1"> </p>
+<p>{% trans "[Hauptvorteile]" %}</p>
+<p>{% trans "Identifikation der aktuellen Werkzeugposition" %}</p>
+<p>{% trans "Die Satzliste gibt einen Überblick über die aktuell programmierten NC-Sätze." %}</p>
+<p><img src="../../newUI_move_list.gif" alt="newUI_move_list.gif" width="409" height="464" border="0"/></p>
+<p class="hcp1"> </p>
+<p>{% trans "[Die wichtigsten Funktionen]" %}</p>
+<p>{% trans "Einfaches Navigieren durch den Bearbeitungsprozess durch Anwendung des [Schiebers] auf der [rechten Seite]." %}</p>
+<p>{% trans "Einfaches Navigieren durch den Bearbeitungsprozess durch Anwendung der Tastatur (Klick in die Satzliste. - Dann Anwendung der [Pfeiltasten] oder Tasten [Bild rauf] und [Bild runter])" %}</p>
+<p>{% trans "[Anklicken eines Satzes] in der Satzliste, lässt die Simulation zu dem gewählten Satz springen." %}</p>
+<p>{% trans "[Überfahren] der [Maschinen-Verfahrwegsgrenzen] wird markiert durch ein rotes Ausrufezeichen ([!]) vor dem NC-Satz." %}</p>
+<p>{% trans "[Kollisionen des Werkzeuges] mit Werkstück, Rohteil oder Maschinenteilen wird gekennzeichnet durch ein rotes Kreuz ([X]) vor dem NC-Satz." %}</p>
+<p class="hcp1"> </p>
+<p>{% trans "[Einstellungen]" %}</p>
+<p>{% trans "Ein Klick mit der rechten Maustaste in die Satzliste erlaubt das Einstellen der Anzahl angezeigten Nachkommastellen." %}</p>
+<p><img src="../../newUI_move_list_settings.gif" alt="newUI_move_list_settings.gif" width="250" height="135" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

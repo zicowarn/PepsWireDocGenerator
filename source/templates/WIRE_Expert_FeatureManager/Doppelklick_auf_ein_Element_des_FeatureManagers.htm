@@ -1,0 +1,46 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Doppelklick auf ein Element des FeatureManagers" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../WIRE_Expert_FeatureManager.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Doppelklick auf ein Element des FeatureManagers" %}</p><p>{% trans "Führt man einen [Doppelklick] auf einen Zweig des [FeatureManagers] aus, führt dies in der Regel zum Aufruf eines Dialogfeldes." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><img src="../Feature_Man_DoubleClick.gif" alt="Feature_Man_DoubleClick.gif" width="743" height="569" border="0"/></p>
+<p>{% trans "Wählen Sie im Dialog die benötigten Optionen oder geben Sie Werte ein." %}</p>
+<p> </p>
+<p>{% trans "[Siehe auch:]" %}</p>
+<p>{% trans "#WIRE-Expert Feature Manager#" %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

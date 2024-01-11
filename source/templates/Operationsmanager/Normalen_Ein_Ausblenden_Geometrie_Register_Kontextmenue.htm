@@ -1,0 +1,43 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Normalen Ein- &sol; Ausblenden" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Operationsmanager.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Normalen Ein- / Ausblenden" %}</p><p> </p>
+<p>{% trans "Diese Option wird verwendet, um die Richtungsnormalen (Pfeil) einer Geometrie vom Typ [Face] oder [Loop] anzuzeigen." %}</p>
+<p>{% trans "Die Funktion ist identisch mit dem Positionieren des Cursors über einem Geometrieelement und anschließender Auswahl der Option [Normalen ein- / ausblenden] im Kontextmenü auf der [rechten] Maustaste." %}</p>
+<p>{% trans "Die Anzeige der Richtungsnormalen wird nur von wenigen Befehlen benötigt, bei denen die Richtung der Richtungsnormale die Richtung von Flächenmodifikationen bestimmt." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

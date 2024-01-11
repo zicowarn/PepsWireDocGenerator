@@ -1,0 +1,45 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Automatisches Entfernen der Anbindungen am Ende der Figur" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Automatisches Entfernen der Anbindungen am Ende jeder Figur" %}</p><p>{% trans "Ist diese Option gewählt, wird an der [ersten gewählten Figur] zunächst der Schruppschnitt und alle Nachschnitte ausgeführt. Zum Schluss wird die Anbindung entfernt." %}</p>
+<p>{% trans "Dann werden die [nächsten gewählten Figuren] auf die gleiche Weise (Schruppen, Schlichten + Anbindung entfernen) bearbeitet." %}</p>
+<p> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
+<p>{% trans "@ [&lt;a href='../Strategie_2_Automatisches%20Entfernen%20der%20Anbindung%20am%20Ende%20jeder%20Figur.gif' id='a2'&gt;Zeige Beispielfilm zum o.g. Thema#]" %}</p>
+<p> </p>
+
+{% endblock %}
+{% endlinebreakless %}

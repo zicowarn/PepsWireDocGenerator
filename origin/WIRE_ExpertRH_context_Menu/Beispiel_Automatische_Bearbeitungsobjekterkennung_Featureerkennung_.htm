@@ -1,0 +1,100 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Automatische Feature-Erkennung_Example</title>
+<link rel="StyleSheet" href="../WIRE_ExpertRH_context_Menu.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+font.hcp1 { font-weight:bold; }
+p.hcp2 { margin-top:0;
+margin-bottom:0; }
+img.hcp3 { border:none; }
+-->
+</style>
+</head>
+
+<body><a name="642b3b9347ca42c9b00b820c00c373fa=1"></a>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<p class="dialog">Automatische Feature-Erkennung</p>
+<p>Dieses Beispiel soll zeigen, wie man die Schneidbearbeitungen automatisch 
+ erzeugt, mit Hilfe der <font class="hcp1">automatischen 
+ Feature-Erkennung</font>.</p>
+<p class="hcp2">&#160;</p>
+<p>Klicken Sie mit der <font class="hcp1">rechten Maustaste</font> 
+ im <font class="hcp1">Feature Manager</font> auf den Zweig 
+ <font class="hcp1">Operation1</font>.</p>
+<p class="hcp2">&#160;</p>
+<p>Es klappt ein Kontextmenü auf. Wählen Sie den Befehl <font class="hcp1">Automatische</font> 
+ <font class="hcp1">Feature-Erkennung</font>.</p>
+<p class="hcp2">&#160;</p>
+<p><img src="../Example_Automatic_Feature_Recognition_1.gif" alt="Example_Automatic_Feature_Recognition_1.gif" width="507" height="162" border="0"></p>
+<p class="hcp2">&#160;</p>
+<p>Es wird der Dialog <font class="hcp1">Feature-Erkennung</font> 
+ angezeigt. In dem Dialog stellen Sie welche Objekte die automatische Erkennungsroutine 
+ erkennen soll.</p>
+<p>Im folgenden Beispiel würde die Außenkontur des Modells nicht bearbeitet 
+ (<font class="hcp1">Nur innere Feature (Matrize</font>)).</p>
+<p><img src="../Example_Automatic_Feature_Recognition_2.gif" alt="" border="0" class="hcp3"></p>
+<p>&#160;</p>
+<p class="hcp2">Um die Feature-Erkennung einzustellen, 
+ klicken Sie auf die Schaltfläche <span style="font-weight: bold;">Feature-Erkennung 
+ Einstellungen</span>.<br>
+</p>
+<p class="hcp2">Dies öffnet einen Dialog, im 
+ Sie die Feature-Erkennung einstellen können.</p>
+<p class="hcp2">&#160;</p>
+<p><img src="../Example_Automatic_Feature_Recognition_2a.gif" alt="" border="0" class="hcp3"></p>
+<p class="hcp2">&#160;</p>
+<p class="hcp2">Stellen Sie sicher, dass identische 
+ Feature zusammengefasst werden zu einem Feature und aktivieren Sie <font class="hcp1">Identische Feature gruppieren</font>.</p>
+<p>Übernehmen Sie die Einstellungen mit<img src="../OK_button.gif" alt="" border="0" class="hcp3"> 
+ .</p>
+<p>Schließen Sie auch Dialog <font class="hcp1">Feature-Erkennung</font> 
+ &#160;mit<img src="../OK_button.gif" alt="" border="0" class="hcp3"> 
+ .</p>
+<p class="hcp2">&#160;</p>
+<p>Das System durchsucht den Volumenkörper nach allen erodierbaren Geometrien 
+ (Feature-Erkennung) und erzeugt einen Bearbeitungsvorschlag mit den im 
+ Vorfeld eingestellten Schneidparametern.</p>
+<p>&#160;</p>
+<p>Das System durchsucht den Volumenkörper nach allen erodierbaren Geometrien 
+ (Featureerkennung).</p>
+<p class="hcp2">&#160;</p>
+<p><img src="../Example_Automatic_Feature_Recognition_3.gif" alt="Example_Automatic_Feature_Recognition_3.gif" width="740" height="239" border="0"></p>
+<p class="hcp2">&#160;</p>
+<p>Für jede erodierbare Geometrie erzeugt das System ein <font class="hcp1">separates 
+ Feature</font> im <font class="hcp1">FeatureManager</font>:</p>
+<p class="hcp2">&#160;</p>
+<p>&#160;<img src="../Example_Automatic_Feature_Recognition_4.gif" alt="" border="0" class="hcp3"> </p>
+<p class="hcp2">&#160;</p>
+<p>Jetzt noch aus den Features <font class="hcp1">Bearbeitungsoperationen</font> 
+ und <font class="hcp1">Figuren</font> erzeugen.</p>
+<p>&#160;</p>
+<p>Klicken Sie mit der <font class="hcp1">rechten</font> 
+ Maustaste im <font class="hcp1">Feature Manager</font> auf 
+ den Zweig <img src="../Wire_Expert_Create_Figures_and_Operations_0.gif" alt="Wire_Expert_Create_Figures_and_Operations_0.gif" width="107" height="30" border="0"> und wählen Sie im 
+ Kontextmenü <font class="hcp1">Erzeuge Figuren + Bearbeitungen 
+ von</font> <font class="hcp1">Feature</font>.</p>
+<p>Diese Funktion erzeugt <font class="hcp1">Bearbeitungsfiguren</font> 
+ (2D Bearbeitungsgeometrien) sowie <font class="hcp1">Bearbeitungen</font> 
+ und übergibt diese an die <a href="../Operationsmanager/Bearbeitungs_Register_Operationsmanager.htm">Operationsliste</a>.</p>
+<p><font color="#0000FF" class="hcp1">Hinweis:</font> Sie 
+ können Sie auch <font class="hcp1">einzelne</font> Feature 
+ auswählen.</p>
+<p class="hcp2">&#160;</p>
+<p><img src="../Wire_Expert_Create_Figures_and_Operations_1.gif" alt="Wire_Expert_Create_Figures_and_Operations_1.gif" width="553" height="201" border="0"> </p>
+<p class="hcp2">&#160;</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Eigenes Weiterarbeiten 
+ .... </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">&#160;</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Siehe auch: <a 
+	 href="Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm">Erzeuge 
+ Figuren + Bearbeitungen von Features</a></p>
+</body>
+</html>

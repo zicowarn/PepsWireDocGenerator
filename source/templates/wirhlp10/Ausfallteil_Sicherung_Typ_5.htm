@@ -1,0 +1,77 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Ausfallteil Sicherung Typ 5" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    img.hcp1 { border:none; }
+    b.hcp2 { mso-bidi-font-weight:normal; }
+    span.hcp3 { font-family:Arial, sans-serif; }
+    span.hcp4 { mso-tab-count:1; }
+    p.hcp5 { font-family:Arial, sans-serif; }
+    span.hcp6 { font-weight:bold; }
+    span.hcp7 { mso-layout-grid-align:none;
+    text-autospace:none; }
+    span.hcp8 { mso-layout-grid-align:none;
+    text-autospace:none;
+    font-family:Arial, sans-serif; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Ausfallteil Sicherung TYP 5" %}</p><p> </p>
+<p class="dialog">{% trans "[[Typ 5: Ausfallteil Sicherung für konische Schneidmatrizen]]" %}</p>
+<p>{% trans "[Bei diesem Typ wird die Schneidmatrize ohne Bund bearbeitet. Im Bereich der Ausfallteilsicherung wird eine geringere Konik geschnitten.]" %}</p>
+<p>{% trans "[[Vorteil:]] [ ]" %}</p>
+<p class="hcp5">{% trans "Durchgängiger Schneidkantenverlauf. Dadurch erhöht sich die Standzeit. Ebenso ergibt sich an der Unterseite der Matrize ein durchgehender Verlauf." %}</p>
+<p class="MsoNormal" style="mso-layout-grid-align: none; text-autospace: none;">{% trans "[[ ]]" %}</p>
+<p class="MsoNormal" style="mso-layout-grid-align: none; text-autospace: none;"><img src="../Ausfallteil_Sicherung_Typ5_Parameter.gif" alt="" border="0" class="hcp1"/></p>
+<p class="MsoNormal" style="mso-layout-grid-align: none; text-autospace: none;"> </p>
+<p>{% trans "[[Bearbeitungsablauf:][ ]]" %}</p>
+<p> </p>
+<p>{% trans "Zunächst wird die umlaufende Konik geschnitten, inkl. den [Winkel A2]." %}</p>
+<p>{% trans "Anschließend wird eine offene Regelflächenbearbeitung durchgeführt, wobei sich am Ende wieder ein durchgängiger Kantenverlauf an der Unterseite ergibt." %}</p>
+<p> </p>
+<p>{% trans "Es existieren 4 weitere Typen von Ausfallteil Sicherungen:" %}</p>
+<p class="dialog" style="font-family: Arial, sans-serif;">{% trans "&lt;p class='dialog' style='font-family: Arial, sans-serif;'&gt;[[#Typ 1: Ausfallteil Sicherung bei konischen und zylindrischen Schnittwerkzeugen#]]" %}</p>
+<p class="dialog" style="font-family: Arial, sans-serif;">{% trans "&lt;p class='dialog' style='font-family: Arial, sans-serif;'&gt;[#T[yp 2: Ausfallteil Sicherung bei konischen und zylindrischen Schnittwerkzeugen]#]" %}</p>
+<p class="dialog" style="font-family: Arial, sans-serif;">{% trans "&lt;p class='dialog' style='font-family: Arial, sans-serif;'&gt;#[T][[yp 3: Ausfallteilführung]]#" %}</p>
+<p class="dialog1">{% trans "#[[T]][[yp 4:][ ][Ausfallteil Sicherung][ ][mit Zylindrischen Bund und Vorweite]]#" %}</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal">{% trans "Das folgende Bild zeigt die [5 Typen der Ausfallteil Sicherung]:" %}</p>
+<p> </p>
+<p class="hcp5"><img src="../Ausfallteil_Sicherung_1.gif" alt="" border="0" class="hcp1"/></p>
+<p> </p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "Diese Funktion ist optional." %}</p>
+<p class="dialog">{% trans "So wird es gemacht:" %}</p>
+<p style="font-weight: bold;">{% trans "#Ausfallteilsicherung programmieren#" %}</p>
+<p> </p>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,45 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Offset" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Offset" %}</p><p>{% trans "Dieser Dialogbereich ist nur für bestimmte NC-Maschinen freigeschaltet." %}</p>
+<p>{% trans "Die Option [Offset am Start zustellen] legt fest, dass die Radiuskorrektur (Offset) am Beginn der Verfahrbewegung eingeschaltet wird." %}</p>
+<p>{% trans "Der Offset kann [links] oder [rechts] bezogen auf die Schnittrichtung eingestellt werden." %}</p>
+<p>{% trans "Die Option [Offset am Ende aufheben] schaltet die Radiuskorrektur (Offset) vor der nächsten Verfahrbewegung aus." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><img src="../offset_cut.gif" alt="offset_cut.gif" width="534" height="201" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

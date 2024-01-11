@@ -1,0 +1,56 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Beispiel: Nachträgliches Verändern der Geometrie einer Bearbeitungsfigur" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    li.hcp1 { font-size:9pt; }
+    font.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Tip_Note_Heading">{% trans "Nachträgliches Verändern der Geometrie einer Bearbeitungsfigur" %}</p><ul>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Führen Sie einen [Doppelklick] auf die Figur aus. (Alternativ können Sie im Menü [Layer/Figuren] den Befehl [Figur editieren] aufrufen und dann die Figur anklicken, die es zu verändern gilt.)" %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Das System zeigt einen Dialog (nur bei Doppelklick auf Figur)." %}</p></li>
+</ul>
+<p><img src="../Figur_editieren.gif" alt="Figur_editieren.gif" width="244" height="212" border="0"/></p>
+<ul>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf die Schaltfläche [Figur editieren]." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Verändern Sie die Geometrie mit Hilfe der Konstruktionsbefehle." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Führen Sie einen Doppelklick auf das Feld @ (unten rechts im Grafikfenster) aus oder rufen Sie im Menü [Layer/Figuren] den Befehl [Figur editieren Ende] auf." %}</p></li>
+</ul>
+<p>{% trans "oder:" %}</p>
+<ul>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Lösen Sie die Bearbeitungsfigur mit dem Befehl [Figur auflösen] im Menü [Layer/Figuren] auf." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Verändern Sie die Geometrie mit Hilfe der Konstruktionsbefehle." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Erzeugen Sie die Bearbeitungsfigur erneut." %}</p></li>
+</ul>
+
+{% endblock %}
+{% endlinebreakless %}

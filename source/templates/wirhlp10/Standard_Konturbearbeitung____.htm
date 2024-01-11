@@ -1,0 +1,104 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Standard Konturbearbeitung" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+    p.hcp3 { text-align:justify; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Standard Konturbearbeitung" %}</p><p>{% trans "Mit diesem Dialog können Sie die Bearbeitungsfunktionen [zylindrische] [Bearbeitungen,] mit [konstanter Konik], mit [variabler Konik], [Taschenerodieren] sowie [Schrägschieber] programmieren." %}</p><p class="Block_Text">{% trans "Für konische Bearbeitungen, erlaubt der Dialog auch die Festlegung des Eckenmodus (scharf, ISO, ISO + scharf oder Drehspindel)." %}</p>
+<p class="Block_Text">{% trans "Beachten Sie, dass die Eckenmodi je nach verwendeter NC-Steuerung variieren können." %}</p>
+<p>{% trans "Sehr komplexe Eckengeometrien oder variable Koniken, welche die Grenzen der verwendeten NC-Steuerung überschreiten, müssen mit dem Befehl #[Regelflächenbearbeitung]# programmiert werden." %}</p>
+<p class="hcp2"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp2"> </p>
+<p><img src="../STD_KON_shg.gif" usemap="#AreaMap0" alt="STD_KON_shg.gif" width="611" height="497" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="287, 274, 584, 416" href="Eckenmodus.htm" alt=""/>
+<area shape="rect" coords="126, 396, 254, 420" href="Einstellungen_Einstellen_der_Schnittmethode.htm" alt=""/>
+<area shape="rect" coords="20, 56, 256, 183" href="Figurnamen_Std_Konturbea.htm" alt=""/>
+<area shape="rect" coords="394, 182, 585, 270" href="Standard_Konik.htm" alt=""/>
+<area shape="rect" coords="495, 430, 594, 456" href="Variable_Konik_programmieren.htm" alt=""/>
+<area shape="rect" coords="314, 43, 431, 64" href="Taschenerodieren_1.htm" alt=""/>
+<area shape="rect" coords="10, 253, 181, 297" href="Schnittschemen.htm" alt=""/>
+<area shape="rect" coords="182, 269, 254, 294" href="Schnittschema_laden_speichern.htm" id="area2" alt=""/>
+<area shape="rect" coords="519, 46, 572, 67" href="Optionen_Lasche_Standard_Konturbearbeitung.htm" alt=""/>
+<area shape="rect" coords="275, 43, 318, 65" href="Konik_lasche.htm" alt=""/>
+<area shape="rect" coords="12, 464, 151, 489" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="162, 466, 302, 490" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area4" alt=""/>
+<area shape="rect" coords="457, 470, 599, 492" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area5" alt=""/>
+<area shape="rect" coords="20, 192, 93, 218" href="Figurnamen_Std_Konturbea.htm" alt=""/>
+<area shape="rect" coords="100, 190, 172, 216" href="javascript:BSSCPopup('Aendern_Figurname_Figurauswahl_STD_Konturbea.htm',400,500);" id="area6" alt=""/>
+<area shape="rect" coords="182, 192, 248, 219" href="javascript:BSSCPopup('Neu_ordnen_Figurname_Figurauswahl_STD_Konturbea.htm',400,500);" id="area7" alt=""/>
+<area shape="rect" coords="312, 467, 442, 488" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area8" alt=""/>
+<area shape="rect" coords="294, 83, 479, 178" href="Konik_Ikonen_Konik_Register_Std_Konturbearb.htm" alt=""/>
+<area shape="rect" coords="495, 83, 577, 172" href="Schraegschieber_Ikone_Konik_Register_Std_Konturbearb.htm" alt=""/>
+<area shape="rect" coords="431, 44, 516, 65" href="Rotationsachse_Register_Standard_Konturbearbeitung_.htm" alt=""/>
+<area shape="rect" coords="15, 297, 252, 378" href="javascript:BSSCPopup('Technologie_STD_Konturbearbeitung.htm',400,600);" id="area9" alt=""/>
+<area shape="rect" coords="15, 218, 136, 239" href="javascript:BSSCPopup('Nur_Figuren_waehlbar.htm',400,300);" id="area10" alt=""/>
+</map>  XXXJUMP</p>
+<p class="hcp2"> </p>
+<p class="hcp3">{% trans "[Siehe auch:]" %}</p>
+<p class="hcp3">{% trans "#[Erzeugen einer Bearbeitungsfigur]#" %}</p>
+<p>{% trans "#[Beispiel für die Erzeugung einer Bearbeitungsfigur]#" %}</p>
+<p>{% trans "@ #[Zeige Beispielfilm für Erzeugung einer Bearbeitungsfigur]#" %}</p>
+<p class="hcp3">{% trans "#[Bearbeitungsparameter einstellen]#" %}</p>
+<p>{% trans "#[Ein/Ausfahrstrategien]#" %}</p>
+<p>{% trans "#[Offset bestimmen]#" %}</p>
+<p class="hcp3">{% trans "#[Technologiedatenbank]#" %}</p>
+<p class="hcp3">{% trans "#[Anbindungen festlegen]#" %}</p>
+<p class="hcp3">{% trans "#[Zylindrischen Schnitt programmieren]#" %}</p>
+<p>{% trans "@ #[Zeige Beispielfilm für zylindrischen Schnitt]#" %}</p>
+<p class="hcp3">{% trans "#[Standard Konik programmieren]#" %}</p>
+<p>{% trans "[XXX] @ [Zeige Beispielfilm für Standard Konik]" %}</p>
+<p class="hcp3">{% trans "#[Variable Konik programmieren]#" %}</p>
+<p class="hcp3">{% trans "#[Beispielprogramm zur variablen Konik]#" %}</p>
+<p class="hcp3">{% trans "#[Taschenerodieren]#" %}</p>
+<p>{% trans "@ #[Zeige Beispielfilm Taschenerodieren]#" %}</p>
+<p class="hcp3">{% trans "#[Schrägschieber programmieren]#" %}</p>
+<p>{% trans "#[Schnittschemen verwenden]#" %}</p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area3');
+	FilePopupInit('area4');
+	FilePopupInit('area5');
+	FilePopupInit('area6');
+	FilePopupInit('area7');
+	FilePopupInit('area8');
+	FilePopupInit('area9');
+	FilePopupInit('area10');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

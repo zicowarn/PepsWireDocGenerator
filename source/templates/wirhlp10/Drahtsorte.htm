@@ -1,0 +1,71 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Drahtsorte" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Drahtsorte" %}</p><p>{% trans "Legt den verwendeten Schneiddrahttyp und dessen Durchmesser fest. Der Drahtdurchmesser wird in der Regel nur zu Simulationszwecken verwendet. Es gibt jedoch Ausnahmen:" %}</p><p>{% trans "1.) Das System zieht den Drahtdurchmesser zur Berechnung der #[Taschenerodierfunktion]# heran." %}</p>
+<p>{% trans "2.) Auch zur Berechnung der Bahnverschiebung wird der Drahtdurchmesser verwendet und zwar dann, wenn der Offset in die NC-Daten ausgegeben werden soll." %}</p>
+<p>{% trans "Allerdings muss in diesem Fall die Option #[Offset ausgeben]# aktiv sein." %}</p>
+<p>{% trans "Die Liste der vorhandenen Drahtsorten wird durch einen Klick auf die Schaltfläche @ verändert. Dies ruft einen Dialog auf, in der Sie neue Drahtsorten hinzufügen oder löschen können." %}</p>
+<p class="hcp2"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp2"> </p>
+<p><img src="../DRAHTEDI_shg.gif" usemap="#AreaMap0" alt="DRAHTEDI_shg.gif" width="219" height="394" border="0"/> <map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="8,26,202,182" href="javascript:BSSCPopup('Momentane_Drahtsortenliste.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="118,186,143,209" href="javascript:BSSCPopup('Drahtsorte_loeschen.htm',400,500);" id="area2" alt=""/>
+<area shape="rect" coords="146,185,198,211" href="javascript:BSSCPopup('Reihenfolge_der_Drahttabelle_aendern.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="14,213,201,342" href="javascript:BSSCPopup('Drahtbeschreibung_Durchmesser.htm',400,500);" id="area4" alt=""/>
+<area shape="rect" coords="19,362,103,382" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area5" alt=""/>
+<area shape="rect" coords="108,359,192,383" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area6" alt=""/></map></p>
+<p class="hcp2"> </p>
+<p class="Tip_Note_Heading">{% trans "So wird es gemacht:" %}</p>
+<p>{% trans "#[Neue Drahtsorte hinzufügen]#" %}</p>
+<p>{% trans "#[Drahtsorte löschen]#" %}</p>
+<p>{% trans "#[Reihenfolge der Drahttabelle ändern]#" %}</p>
+<script type="text/javascript" language="JavaScript1.2">
+//&lt;![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('area1');
+        FilePopupInit('area2');
+        FilePopupInit('area3');
+        FilePopupInit('area4');
+        FilePopupInit('area5');
+        FilePopupInit('area6');
+//]]&gt;
+</script>
+
+{% endblock %}
+{% endlinebreakless %}

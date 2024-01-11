@@ -1,0 +1,88 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Beispiel: Mehrere Bearbeitungsoperationen zu einer Gruppierten Operation zusammenfassen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    li.hcp2 { font-size:9pt; }
+    p.hcp3 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Mehrere Bearbeitungsoperationen zu einer Gruppierten Operation zusammenfassen" %}</p><p>{% trans "Mehrere vorhandene Bearbeitungsoperationen sollen zu einer [Gruppierten Operation] zusammengefasst werden." %}</p><ul>
+	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie im Operationsmanager die Bearbeitungen an, die zur Gruppe gehören sollen. Verwenden Sie zur Mehrfachauswahl die Tasten [Strg] oder [Shift]." %}</p></li>
+</ul>
+<p>{% trans "@" %}</p>
+<ul>
+	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Klicken mit der [rechten Maustaste] auf eine der gewählten Operationen, um das Kontextmenü anzuzeigen." %}</p></li>
+</ul>
+<p>{% trans "@" %}</p>
+<ul>
+	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Wählen Sie im Kontextmenü die Option [Gruppieren]. Das System zeigt den Dialog [Neue Gruppenoperation erzeugen]." %}</p></li>
+	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Geben Sie einen Namen für die Gruppe ein und bestätigen Sie mit [OK]." %}</p></li>
+</ul>
+<p>{% trans "@" %}</p>
+<p class="hcp3"> </p>
+<p>{% trans "Das System zeigt nun den Dialog [Gruppenoperation aufrufen]." %}</p>
+<p>{% trans "In dem Dialog wird festgelegt, welche Gruppe auf welchen geometrischen Muster, z.B. auf einem Teilkreismuster, wiederholt werden soll." %}</p>
+<p class="hcp3"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp3"> </p>
+<p>{% trans "&lt;img src='../exa_Gruppieren_4_shg.gif' usemap='#AreaMap0' alt='exa_Gruppieren_4_shg.gif' width='266' height='214' border='0'/&gt;&lt;map name='AreaMap0' id='AreaMap0'&gt;########&lt;/map&gt;" %}<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="7, 25, 225, 65" href="javascript:BSSCPopup('Gruppenname_Gruppenoperation_aufrufen.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="21, 105, 172, 122" href="javascript:BSSCPopup('Lineares_Gitter_Gruppenoperation_aufrufen.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="21, 123, 172, 142" href="javascript:BSSCPopup('Kreismuster_Gruppenoperation_aufrufen.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="20, 143, 174, 160" href="javascript:BSSCPopup('Figuren_oder_auf_Punkten_Gruppenoperation_aufrufen.htm',400,300);" id="area4" alt=""/>
+<area shape="rect" coords="16, 178, 87, 202" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area5" alt=""/>
+<area shape="rect" coords="96, 177, 170, 202" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area6" alt=""/>
+<area shape="rect" coords="180, 179, 254, 202" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area7" alt=""/>
+<area shape="rect" coords="18, 84, 170, 105" href="javascript:BSSCPopup('Gruppe_spaeter_verwenden_Gruppenoperation_aufrufen.htm',400,300);" id="area8" alt=""/>
+</map> </p>
+<ul>
+	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Wählen Sie die Option [Gruppe später verwenden]." %}</p></li>
+</ul>
+<p class="Hinweis">{% trans "Wichtiger Hinweis:" %}</p>
+<p>{% trans "Eine Anleitung wie Sie die Gruppe an beliebigen Positionen wiederholen können, finden Sie siehe:" %}</p>
+<p class="Topic_Text_Bulleted">{% trans "#[Eine Gruppierte Operation aufrufen und an beliebigen anderen Positionen wiederholen]#" %}</p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+	FilePopupInit('area3');
+	FilePopupInit('area4');
+	FilePopupInit('area5');
+	FilePopupInit('area6');
+	FilePopupInit('area7');
+	FilePopupInit('area8');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

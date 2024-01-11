@@ -1,0 +1,55 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Gruppierung aufheben" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../WIRE_ExpertRH_context_Menu.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+    li.hcp3 { font-size:9pt; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Gruppierung aufheben" %}</p><p>{% trans "Im [WIRE-Expert] #Feature Manager# ist es möglich, [mehrere Features] zusammenzufassen zu einem gruppierten Feature." %}</p>
+<p>{% trans "Ist dies der Fall und soll ein gruppiertes Feature zurückverwandelt werden in einzelne Features, verwendet man die Funktion [Gruppierung aufheben]." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Ungroup_Features.gif" alt="Ungroup_Features.gif" width="547" height="150" border="0"/></p>
+<p style="text-align: center;"> </p>
+<p>{% trans "Das Bild oberhalb zeigt links ein gruppiertes Feature und rechts die durch Aufheben der Gruppierung entstandenen Features." %}</p>
+<p class="hcp2"> </p>
+<p>{% trans "[So wird es gemacht:]" %}</p>
+<ul>
+	<li class="hcp3"><p class="Tip_Note_Text_Bulleted">{% trans "Klicken Sie im #Feature Manager# das gruppierte Feature an, dessen Gruppierung aufgehoben werden soll." %}</p></li>
+	<li class="hcp3"><p class="Tip_Note_Text_Bulleted">{% trans "Klicken Sie die [rechte] Maustaste und wählen Sie im Menü die Option [Gruppierung aufheben]." %}</p></li>
+</ul>
+<p>{% trans "Das System löst das Feature auf in einzelne Features." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

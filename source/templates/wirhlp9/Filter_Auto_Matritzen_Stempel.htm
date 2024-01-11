@@ -1,0 +1,80 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Filter (Auto Matrizen Stempel)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+    p.hcp2 { margin-left:184.30pt;
+    text-indent:-141.75pt; }
+    font.hcp3 { font-weight:bold; }
+    span.hcp4 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Filter (Auto Matrizen Stempel)" %}</p><p>{% trans "Mit diesem Register kann der Anwender festlegen, welche geometrischen Formen in Bearbeitungsfiguren umgewandelt werden sollen." %}</p><p>{% trans "Das heißt, bei einer Elementauswahl werden nur zugelassenen Formen in Bearbeitungsfiguren umgewandelt." %}</p>
+<p class="hcp1"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp1"> </p>
+<p><img src="../QUI_D_P4_shg.gif" usemap="#AreaMap0" alt="QUI_D_P4_shg.gif" width="415" height="398" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="12, 45, 64, 63" href="Matrizen_Auto_Matritzen_Stempel.htm" alt=""/>
+<area shape="rect" coords="65, 43, 109, 62" href="Stempel_Auto_Matritzen_Stempel.htm" alt=""/>
+<area shape="rect" coords="121, 369, 209, 391" href="javascript:BSSCPopup('../Commdata/COMMON_Schliessen.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="219, 368, 310, 389" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="313, 361, 401, 386" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="157, 38, 209, 60" href="Optionen_Auto_Matritzen_Stempel.htm" alt=""/>
+<area shape="rect" coords="7, 361, 116, 391" href="javascript:BSSCPopup('Waehle_Matrizen_Stempel_Auto_Mat_Stemp.htm',400,300);" id="area4" alt=""/>
+</map> </p>
+<p style="text-align: center;"> </p>
+<p class="hcp2">{% trans "[Kreis] Ist diese Option aktiv, werden Kreisgeometrien in Bearbeitungsfiguren umgewandelt." %}</p>
+<p class="hcp2">{% trans "[Rechteck / Viereck] Ist diese Option aktiv, werden Rechteck- und Viereckgeometrien in Bearbeitungsfiguren umgewandelt." %}</p>
+<p class="hcp2">{% trans "[Verrundetes Rechteck / Viereck] Ist diese Option aktiv, werden verrundete Rechteck- und Viereckgeometrien in Bearbeitungsfiguren umgewandelt." %}</p>
+<p class="hcp2">{% trans "[Langloch] Ist diese Option aktiv, werden Langlöcher in Bearbeitungsfiguren umgewandelt." %}</p>
+<p class="hcp2">{% trans "[L-Form] Ist diese Option aktiv, werden L-förmige Geometrien in Bearbeitungsfiguren umgewandelt." %}</p>
+<p class="hcp2">{% trans "[D-Form / DD-Form] Ist diese Option aktiv, werden D- und DD-förmige Geometrien in Bearbeitungsfiguren umgewandelt." %}</p>
+<p class="hcp2">{% trans "[Kreis] Ist diese Option aktiv, werden Kreisgeometrien in Bearbeitungsfiguren umgewandelt." %}</p>
+<p class="hcp2">{% trans "[Beliebige Kontur] Ist diese Option aktiv, wandelt das System alle geschlossenen Konturen die nicht den obigen Kategorien entsprechen, in Bearbeitungsfiguren um." %}</p>
+<p class="hcp2"> </p>
+<p class="hcp2">{% trans "[Maske löschen / Maske invertieren]" %}</p>
+<p class="hcp2">{% trans "[Maske löschen] deaktiviert alle Häkchen vor den gemetrischen Formen (Kreis, Rechteck ...)" %}</p>
+<p class="hcp2">{% trans "[Maske invertieren] deaktiviert alle aktivierten Häkchen und aktiviert alle deaktivierten Häkchen." %}</p>
+<p>{% trans "[ Beachten Sie, dass das System bei der Elementauswahl unabhängig von den Einstellungen in dem Register] [#Filter#, zunächst alle gewählten Elemente markiert.]" %}</p>
+<p>{% trans "[Erst nach dem Beenden der Elementauswahl konvertiert das System die in durch den Filter zugelassenen Formen zu Bearbeitungsfi][g][uren.]" %}</p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+	FilePopupInit('area3');
+	FilePopupInit('area4');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

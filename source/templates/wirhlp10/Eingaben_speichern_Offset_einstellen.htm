@@ -1,0 +1,45 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Eingaben speichern" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Eingaben speichern" %}</p><p>{% trans "Speichert die aktuellen Dialogboxeinstellungen für die Verwendung in zukünftigen Programmen. Beachten Sie, dass das Speichern der Einstellungen durch ein #[Passwort]# geschützt ist." %}</p>
+<p>{% trans "Das System speichert die folgenden Parameter ab:" %}</p>
+<p> </p>
+<p>{% trans "Die [Methode zur Entfernung der Anbindung] und die [Größe der Anbindung]" %}</p>
+<p>{% trans "Die Einstellungen des Registers [Offset]" %}</p>
+<p>{% trans "Die Einstellungen des Registers [Ein/Ausfahren]." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

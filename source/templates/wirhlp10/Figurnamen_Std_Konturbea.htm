@@ -1,0 +1,54 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Figurname(n)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Figurname(n)" %}</p><p class="Block_Text">{% trans "In dieser Listbox geben Sie die Namen der zu schneidenden Bearbeitungsfiguren an." %}</p><p class="Block_Text">{% trans "Die Auswahl der Figuren geschieht durch Wahl der Schaltfläche @ und anschließendem Anklicken der Bearbeitungsfiguren." %}</p>
+<p class="Block_Text">{% trans "Die Reihenfolge der Bearbeitung legt die Reihenfolge der Figurauswahl fest." %}</p>
+<p class="Block_Text">{% trans "Ist eine Bearbeitungsfigur (z.B. Fig_002) mehrfach in der Zeichnung vorhanden, wird jede zu bearbeitende Figur separat gewählt." %}</p>
+<p>{% trans "Beachten Sie, dass bei der Figurauswahl auch eine Fensterauswahl (! Option #[Nur Figuren wählbar]# aktivieren) erlaubt ist." %}</p>
+<p>{% trans "Diese Variante wird besonders dann verwendet, wenn eine große Anzahl von Figuren bearbeitet werden soll." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Siehe auch:" %}</p>
+<p class="hcp1">{% trans "#Neue Figuren zur Liste der zu schneidenden Bearbeitungsfiguren hinzufügen#" %}</p>
+<p class="hcp1">{% trans "#Vorhandene Figuren aus der Liste der zu schneidenden Bearbeitungsfiguren entfernen#" %}</p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a1');
+	FilePopupInit('a2');
+	FilePopupInit('a3');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

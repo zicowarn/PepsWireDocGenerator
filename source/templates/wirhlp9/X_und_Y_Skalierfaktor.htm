@@ -1,0 +1,41 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "X- und Y-Skalierfaktor" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "X- und Y-Skalierfaktor" %}</p><p>{% trans "Tragen Sie in diese Textfelder die Skalierfaktoren für die X- und die Y-Achse ein (z.B. [0.5 = 50 %] kleiner oder [2 = 200 %] größer)." %}</p>
+<p>{% trans "Die #[Beispielzeichnung]# zeigt die Skalierung eines verrundeten Rechtecks mit den Faktoren [2] für die X-Achse und [1.5] für die Y-Achse." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

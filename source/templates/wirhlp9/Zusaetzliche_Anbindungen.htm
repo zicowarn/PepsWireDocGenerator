@@ -1,0 +1,67 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Zusätzliche Anbindungen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Zusätzliche Anbindungen" %}</p><p>{% trans "Der Befehl [Zusätzliche] [Anbindungen] findet Anwendung, wenn an eine Bearbeitungsfigur [mehrere] [Haltestege] (Anbindungen) angebracht werden müssen." %}</p>
+<p>{% trans "Ein [einzelner Haltesteg] (Anbindung) wird mit der Funktion #[Stoppunkt od. Anbindung]# im Dialog #[Bearbeitung einstellen]# erzeugt." %}</p>
+<p>{% trans "Nach Aufruf des Befehls wird der Anwender aufgefordert, die Bearbeitungsfigur zu wählen, an der die Anbindungen (Haltestege) angebracht werden sollen." %}</p>
+<p>{% trans "Verwenden Sie anschließend die [Fangfunktionen], um die Positionen der Startlochbohrungen für die Anbindungen (Haltestege) festzulegen." %}</p>
+<p>{% trans "Die Länge des Haltestege wird zu diesem Zeitpunkt noch nicht bestimmt. Die Position der Startlochbohrung wird für jede Anbindung (Haltesteg) durch ein kleines blaues Quadrat symbolisiert." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../zus_anbi.gif" alt="zus_anbi.gif" width="360" height="232" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "Die Länge der Anbindungen (Haltestege) wird im Dialog [Bearbeitung einstellen] im Register #[Anbinden]# festgelegt." %}</p>
+<p>{% trans "Aktivieren Sie dort die Checkbox #[Zusätzliche Anbindungen]#, um festzulegen, dass die zusätzlichen Anbindungen bei einer Bearbeitung berücksichtigt werden sollen." %}</p>
+<p>{% trans "Im Register [Anbinden] wird ebenfalls festgelegt, wann und auf welche Weise die Haltestege entfernt werden." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Anbd_opt.gif" alt="Anbd_opt.gif" width="162" height="102" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "Innerhalb des Befehls stehen drei Optionen zur Verfügung: [Steg kopieren + verschieben], [Steg kopieren + rotieren] und [Steg Spiegeln] (siehe [rechte Maustaste] od. [horizontale Ikonenleiste])." %}</p>
+<p>{% trans "Die Optionen finden bei symmetrischen Formen Verwendung, die das Kopieren von vorhandenen Haltestegsymbolen erlauben." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../BUT_ZUA.gif" alt="BUT_ZUA.gif" width="267" height="176" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "Beachten Sie auch die Option [Löschen] (siehe [rechte Maustaste] od. [horizontale Ikonenleiste]), diese ermöglicht das Löschen von fehlerhaften Haltestegsymbolen." %}</p>
+<p>{% trans "Zusätzliche Anbindungen (Haltestege) [sollten immer VOR] der Programmierung der Bearbeitungsstrategie bestimmt werden. Sie können diese aber [auch nachträglich] bestimmen." %}</p>
+<p>{% trans "Es ist im so einem Fall aber notwendig, die Bearbeitungsoperation mit dem Befehl #[Operation editieren]# zu editieren um die Länge der Anbindung zu bestimmen." %}</p>
+<p>{% trans "Falls das Drahtmodell der NC-Bearbeitung bei dem oben geschilderten Vorgang vom Bildschirm verschwindet, können Sie dieses mit den Befehl #[Grafik NC-Bearbeitung neu erzeugen]# erneut aufbauen." %}</p>
+<p class="hcp2"> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
+<p>{% trans "#[Zusätzliche Anbindungen definieren]#" %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

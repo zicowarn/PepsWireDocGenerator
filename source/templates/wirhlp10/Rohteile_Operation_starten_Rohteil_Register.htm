@@ -1,0 +1,59 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Rohteile XXX" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Rohteile" %}</p><p>{% trans "Dieses Dialogregister dient zum Erzeugen einer Rohteilgrafik." %}</p><p>{% trans "Eine Rohteilgrafik ist erforderlich, wenn die Bearbeitung in Form einer [#Solid-Simulation#] simuliert werden soll." %}</p>
+<p>{% trans "Sie können Rohteile auf Basis von [3D-Solidmodellen] definieren oder diese durch parametrische Eingaben beschreiben (Schaltfläche #[Neues Rohteil]#[)]." %}</p>
+<p class="hcp2"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Rohteile_shg.gif" usemap="#AreaMap0" alt="Rohteile_shg.gif" width="274" height="171" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="10, 116, 88, 139" href="Solid_s_OP_Start_Rohteil_Rohteile.htm" id="area1" alt=""/>
+<area shape="rect" coords="192, 115, 266, 136" href="Neues_Rohteil_OP_Start_Rohteil_Rohteile.htm" alt="" id="area2"/>
+</map> </p>
+<p class="hcp2"> </p>
+<p class="Tip_Note_Heading">{% trans "So wird es gemacht:" %}</p>
+<p>{% trans "#[Rechteckiges Rohteil definieren]#" %}</p>
+<p>{% trans "#[Solid als Rohteil verwenden]#" %}</p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a1');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

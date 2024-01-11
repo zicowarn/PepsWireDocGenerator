@@ -1,0 +1,42 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Geometrie linearisieren XXXNEU" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Radien linearisieren" %}</p><p>{% trans "Ersetzt alle Bogenelemente einer Bearbeitungsfigur durch kleine Geradenelemente." %}</p>
+<p> </p>
+<p class="dialog">{% trans "Radien und Linien linearisieren" %}</p>
+<p>{% trans "Ersetzt alle Bogen- und Linienelemente einer Bearbeitungsfigur durch kleine Geradenelemente." %}</p>
+<p style="font-weight: bold;">{% trans "Max. Splitlänge" %}</p>
+<p>{% trans "Maximale Länge der Geometrieelemente, die in kleine Geradenelemente aufgeteilt werden sollen." %}</p>
+<p>{% trans "Elemente die kürzer sind als die [Max. Splitlänge], werden nicht aufgeteilt." %}</p>
+<p> </p>
+
+{% endblock %}
+{% endlinebreakless %}

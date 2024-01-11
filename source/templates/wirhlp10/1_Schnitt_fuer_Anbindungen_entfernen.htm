@@ -1,0 +1,42 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "1 Schnitt für Anbindungen entfernen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "1 Schnitt für Anbindungen entfernen" %}</p><p>{% trans "Die Checkbox ist nur aktiviert, wenn die Methode #[Automatisches Entfernen der Anbindungen am Ende der Operation]# gewählt wurde." %}</p>
+<p>{% trans "Sie findet Anwendung, wenn der [Haltesteg mit nur einem Schnitt entfernt] werden soll (z.B. Stempelbearbeitung)." %}</p>
+<p>{% trans "Ist die Checkbox [nicht] aktiviert, entspricht die Anzahl der Schnitte für die Entfernung der Haltestege der Anzahl der Schnitte für die Figurbearbeitung." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

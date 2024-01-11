@@ -1,0 +1,74 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Auswahl der Projektionsmethode" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    h2.hcp2 { margin-top:4.00pt;
+    margin-bottom:0.00pt; }
+    p.hcp3 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Auswahl der Projektionsmethode" %}</p><p class="Block_Text">{% trans "Diese Option legen fest, welche Methode zum Ableiten der 2D-Geometrie verwendet werden soll." %}</p>
+<p class="Block_Text">{% trans "Die Ableitung kann [automatisch] (Option '[Erodiergeometrie automatisch erkennen]') oder [manuell] (die anderen Optionen) durch Selektieren einzelner 3D-Geometrien ([Faces od. Kanten]) erfolgen." %}</p>
+<p class="Block_Text"> </p>
+<h2 class="hcp2">{% trans "Erodiergeometrie  automatisch erkennen" %}</h2>
+<p>{% trans "Der Solid wird [automatisch] nach erodierbaren 2D-Geometrien durchsucht." %}</p>
+<p>{% trans "Die Option [Gesamte Zeichnung] wird verwendet, wenn [alle] vorhandenen Solids durchsucht werden sollen." %}</p>
+<p>{% trans "Ist die Option nicht aktiv, folgt eine Möglichkeit zur Auswahl des(r) Solids der(ie) durchsucht werden sollen." %}</p>
+<p class="hcp3"> </p>
+<p><img src="../Projektions_Assis_Automatisch_erkennen.gif" alt="Projektions_Assis_Automatisch_erkennen.gif" width="907" height="227" border="0"/></p>
+<p class="hcp3"> </p>
+<h2 class="hcp2">{% trans "Faces verbinden" %}</h2>
+<p>{% trans "Bei dieser Methode können Sie ein [vertikales Face] innerhalb des Solidmodells wählen." %}</p>
+<p>{% trans "Das System sucht dann automatisch alle mit dem gewählten Face verbundenen Faces und leitet daraus 2D-Geometrien ab." %}</p>
+<p class="hcp3"> </p>
+<p><img src="../Projektions_Assis_Faces_verbinden.gif" alt="Projektions_Assis_Faces_verbinden.gif" width="530" height="175" border="0"/></p>
+<p class="hcp3"> </p>
+<h2 class="hcp2">{% trans "Oberes Face" %}</h2>
+<p>{% trans "Bei dieser Methode können Sie [ein oder mehrere horizontale Faces] innerhalb des Solidmodells wählen." %}</p>
+<p>{% trans "Das System sucht alle erodierbaren Geometrien innerhalb der gewählten Faces und leitet daraus 2D-Geometrien ab." %}</p>
+<p class="hcp3"> </p>
+<p><img src="../Projektions_Assis_Oberes_Face.gif" alt="Projektions_Assis_Oberes_Face.gif" width="863" height="214" border="0"/></p>
+<p class="hcp3"> </p>
+<h2 class="hcp2">{% trans "Kanten" %}</h2>
+<p>{% trans "Bei dieser Methode können Sie [Kanten] innerhalb des Solidmodells wählen. Das System erzeugt aus den gewählten Kanten 2D-Geometrien." %}</p>
+<p class="hcp3"> </p>
+<p><img src="../Projektions_Assis_Kanten.gif" alt="Projektions_Assis_Kanten.gif" width="863" height="218" border="0"/></p>
+<p class="hcp3"> </p>
+<h2 class="hcp2">{% trans "Manuelle Auswahl" %}</h2>
+<p>{% trans "Bei dieser Methode können Sie [ein oder mehrere vertikale Faces] innerhalb des Solidmodells wählen. Das System erzeugt 2D-Geometrien aus den gewählten Faces." %}</p>
+<p class="hcp3"> </p>
+<p><img src="../Projektions_Assis_Manuelle_Auswahl.gif" alt="Projektions_Assis_Manuelle_Auswahl.gif" width="826" height="218" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,37 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Kleinster sichtbarer Drahtdurchmesser" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Kleinster sichtbarer Drahtdurchmesser" %}</p><p>{% trans "Wird der Schneiddraht mit seinem wirklichen Durchmesser angezeigt, kann der Draht bei starken Vergrößerungen unsichtbar werden." %}</p>
+<p>{% trans "Mit dieser Einstellung können Sie einen größeren Drahtdurchmesser einstellen, um das Problem zu lösen." %}</p>
+<p>{% trans "Das Verändern des dargestellten Drahtdurchmessers hat keinen Einfluss auf die Werkzeugwege und die NC-Daten." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

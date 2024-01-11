@@ -1,0 +1,53 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Allgemeine Einstellungen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../WIRE_ExpertRH_context_Menu.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Allgemeine Einstellungen" %}</p><p>{% trans "[Änderungen für vorhandene Features ausführen]" %}</p>
+<p>{% trans "Ist diese Option aktiv, und ändert man im Dialog [Startloch-Einstellungen] die Startloch-Einstellung für eine Standardform (z.B. ein Kreis), dann ändern sich automatisch die Startlochposition alle in der Zeichnung vorhandenen Kreis-Feature." %}</p>
+<p class="hcp2"> </p>
+<p>{% trans "[Startloch zentrieren wenn Durchmesser kleiner als]" %}</p>
+<p>{% trans "Bei Bohrungen mit großen Durchmessern soll das Startloch häufig [nicht] im Kreiszentrum liegen, sondern in einem einstellbaren Abstand zum Kreisdurchmesser." %}</p>
+<p class="Block-Text">{% trans "Bei Bohrungen mit kleinen Durchmessern, soll das Startloch jedoch im Kreiszentrum liegen. Hier können Sie einstellen, ab welchem Kreisdurchmesser das Startloch nicht mehr im Kreiszentrum liegt." %}</p>
+<p>{% trans "Das folgende Bild zeigt das Startloch [im Zentrum] der [zwei kleinen Bohrungen] aber [nicht] bei der [großen Bohrung], da deren Durchmesser kleiner ist als 30 mm." %}</p>
+<p><img src="../Dont_center_Starthole_with_large_diameter.gif" alt="Dont_center_Starthole_with_large_diameter.gif" width="343" height="170" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "[Einfahrabstand]" %}</p>
+<p>{% trans "An dieser Stelle können Sie den [generellen Startlochabstand] einstellen." %}</p>
+<p>{% trans "Dieser Abstand kommt zur Anwendung, wenn im Dialog [#Startloch-Einstellungen#] für ein Feature [kein] spezieller Startlochabstand vorgegeben wurde oder im Dialog[ #Feature Erkennungs Einstellungen#] die Option [#Startlocheinstellungen verwendenen# ]aktiviert wurde." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

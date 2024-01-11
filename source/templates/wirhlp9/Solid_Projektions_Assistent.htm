@@ -1,0 +1,69 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Solid - Projektions-Assistent XXXBILDER" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+    font.hcp3 { font-style:italic; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Solid - Projektions-Assistent" %}</p><p class="Block_Text">{% trans "Dieser #[Assistent]# erlaubt es, von einem [Solidmodell] alle 2D-Geometrien abzuleiten, die man theoretisch mit einer Drahterodiermaschine bearbeiten könnte." %}</p><p class="Block_Text">{% trans "Die Ableitung kann vollautomatisch oder manuell durch Selektieren von Geometrien erfolgen." %}</p>
+<p class="Block_Text">{% trans "Dabei erkennt der Assistent nicht nur [zylindrische] sondern auch [konische] Durchbrüche und Außengeometrien. Die abgeleiteten 2D-Geometrien werden auf zwei bestimmbare Z-Ebenen projiziert." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Solid_Projektion.gif" alt="Solid_Projektion.gif" width="839" height="307" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "Schritt [1] des #[Assistenten]# besteht aus der Auswahl der [Projektionsmethode]." %}</p>
+<p class="hcp2"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen. Klicken Sie auf die Schaltfläche] [Weiter &amp;gt;][, um den nächsten Dialog des Assistenten zu sehen.]" %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Solid_Proj_Assis_1_shg.gif" usemap="#AreaMap0" alt="Solid_Proj_Assis_1_shg.gif" width="495" height="357" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="146,318,220,338" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="237,318,313,341" href="javascript:BSSCPopup('../Commdata/COMMON_Nicht_verwendete_Funktion.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="318,318,393,342" href="Solid_Projektions_Assistent_Schritt_2.htm" alt=""/>
+<area shape="rect" coords="407,319,483,344" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="141,44,476,298" href="Auswahl_der_Projektionsmethode_Solid_Projektions_Assistent.htm" alt=""/>
+<area shape="rect" coords="17,34,136,307" href="javascript:BSSCPopup('../Commdata/COMMON_Bild.htm',400,300);" id="area4" alt=""/>
+</map> </p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a1');
+	FilePopupInit('a2');
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+	FilePopupInit('area3');
+	FilePopupInit('area4');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

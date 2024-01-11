@@ -1,0 +1,42 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Lückentoleranz für Zielteilvergleich" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Lückentoleranz für Zielteilvergleich" %}</p><p>{% trans "Bei einem #[Zielteilvergleich]# prüft die Simulationssoftware, ob die Solidgeometrie die das Werkstück bildet, [geschlossen ist oder nicht]." %}</p>
+<p>{% trans "Ist der Solid [offen] (z.B. wegen kleiner Flächenlücken), kann kein Zielteilvergleich ausgeführt werden." %}</p>
+<p>{% trans "Kleinere Lücken zwischen den Flächen eines Solids, können mit Hilfe der [Lückentoleranz] automatisch geschlossen werden." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

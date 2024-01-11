@@ -1,0 +1,139 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load rendermenu %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Main Menu" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+  <style title="hcp" type="text/css">
+    .main-container {
+      display: flex;
+      flex-direction: colunm;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .menu {
+      width: 20%;
+      height: 100%;
+      border-style: inset;
+    }
+
+    .content {
+      width: 80%;
+      height: 100%;
+      background-color: green;
+      border-style: inset;
+    }
+
+    .content-iframe {
+      width: 100%;
+      height: 100%;
+    }
+
+    .tree summary{
+      outline: 0;
+      padding-left: 30px;
+      list-style: none;
+      background: repeating-linear-gradient( 90deg, #999 0 1px,transparent 0px 2px) 0px 50%/20px 1px no-repeat;
+      /* background: linear-gradient(#999,#999) 0px 50%/20px 1px no-repeat; */
+    }
+    .tree details:last-child{
+        background-size: 1px 23px;
+    }
+    .tree>details:not(:last-child)>details:last-child{
+        background-size: 1px 100%;
+    }
+    .tree details{
+        padding-left: 40px;
+        background: repeating-linear-gradient( #999 0 1px,transparent 0px 2px) 40px 0px/1px 100% no-repeat;
+        /* background: linear-gradient(#999, #999) 40px 0px/1px 100% no-repeat; */
+    }
+    .tree>details{
+        background: none;
+        padding-left: 0;
+    }
+    .tree>details>summary{
+        background: none
+    }
+    .tree summary{
+        display: flex;
+        align-items: center;
+        height: 32px;
+        font-size: 12px;
+        line-height: 14px;
+        color: rgba(0, 0, 0, 0.85);
+        cursor: default;
+        user-select: none;  /* 防止文本选择 */
+    }
+    .tree summary::after{
+        content: '';
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        height: 28px;
+        background: #EEF2FF;
+        border-radius: 8px;
+        z-index: -1;
+        opacity: 0;
+        transition: .2s;
+    }
+    .tree summary:hover::after{
+        opacity: 1;
+    }
+
+    .selected-summary {
+      background-color: lightblue!important;
+    }
+
+    .tree summary:not(:only-child)::before{
+        content: '';
+        width: 14px;
+        height: 14px;
+        flex-shrink: 0;
+        margin-right: 8px;
+        border: 1px solid #999;
+        background: linear-gradient(#999, #999) 50%/1px 10px no-repeat,linear-gradient(#999, #999)  50%/10px 1px no-repeat;
+    }
+    .tree details[open]>summary::before{
+        background: linear-gradient(#999, #999) 50%/10px 1px no-repeat;
+    }
+  </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <div class="main-container">
+      <div class="menu">
+        <div class="tree" id="tree">
+          {% rendermenu menulabel="Root" menuvalue=menudata %}
+        </div>
+      </div>
+      <div class="content">
+        <iframe id="content-iframe" class="content-iframe" src="systemoverview/BASIC_PROGRAMMING_PROCEDURE.htm"></iframe>
+      </div>
+    </div>
+    <script>
+      function changeIframeSrc(summary) {
+        var itreeitems = document.getElementsByClassName('tree-item');
+        for (var i = 0; i < itreeitems.length; i++) {
+          itreeitems[i].classList.remove('selected-summary');
+        }
+        summary.classList.add('selected-summary');
+        var url = summary.getAttribute('data-url');
+        if (url !== '#') {
+          document.getElementById('content-iframe').src = url;
+        }
+      }
+    </script>
+{% endblock %}
+{% endlinebreakless %}

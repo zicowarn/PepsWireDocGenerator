@@ -1,0 +1,43 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Simulationsfarben zurücksetzen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Simulationsfarben zurücksetzen" %}</p><p>{% trans "Sämtlicher Materialabtrag wird in der [Sold-Simulation] farbig gekennzeichnet." %}</p>
+<p>{% trans "Das heißt, wird Material vom Rohteil entfernt, ändert sich die Farbe des Rohteiles an diesen Stellen." %}</p>
+<p>{% trans "Wenn Sie die Schaltfläche [Sim.] wählen, wird der Materialabtrag wieder in der Farbe des Rohteils angezeigt." %}</p>
+<p>{% trans "Auf diese Weise können Sie besser sehen, welches Material die nachfolgende Bearbeitungen entfernen." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

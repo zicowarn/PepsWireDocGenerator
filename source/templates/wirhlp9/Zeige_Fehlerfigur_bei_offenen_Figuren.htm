@@ -1,0 +1,58 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Zeige Fehlerfigur bei offenen Figuren" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+    font.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Zeige Fehlerfigur bei offenen Figuren" %}</p><p>{% trans "Ist diese Option aktiv und wird bei der Figurerzeugung eine Geometrielücke erkannt, dann erzeugt das System eine zusätzliche Figur, welche die Lücke durch zwei Punkte kennzeichnet." %}</p><p>{% trans "Zunächst erfolgt jedoch eine Warnung:" %}</p>
+<p class="hcp1"> </p>
+<p><img src="../Err_fig1.gif" alt="Err_fig1.gif" width="263" height="152" border="0"/></p>
+<p class="hcp1"> </p>
+<p>{% trans "Wird die Warnung mit [Ja] beantwortet, erzeugt das System eine offene Figur." %}</p>
+<p>{% trans "Bei [Nein] erzeugt das System die zusätzliche Figur (@@error) und legt diese ÜBER die Originalgeometrie, wobei es die Lücke mit zwei Punkten kennzeichnet." %}</p>
+<p class="hcp1"> </p>
+<p><img src="../Err_fig2.gif" alt="Err_fig2.gif" width="237" height="140" border="0"/></p>
+<p class="hcp1"> </p>
+<p>{% trans "Auf diese Weise können Sie kontrollieren, wo die Lücke ist und diese manuell schließen." %}</p>
+<p class="hcp1"> </p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "Die Fehlerfigur wird nur erzeugt, wenn die Lücke [größer ist], als der Wert im Feld #[Toleranz f. Linien-/Bogenverbindung]# im Dialogboxregister #[Optionen]#." %}</p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a1');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

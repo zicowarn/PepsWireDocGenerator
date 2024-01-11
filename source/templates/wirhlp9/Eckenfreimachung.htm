@@ -1,0 +1,69 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Eckenfreimachung" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Eckenfreimachung" %}</p><p>{% trans "Der Befehl [Eckenfreimachung] findet Anwendung, wenn in die Ecken von Stempelführungen Freimachungen eingebracht werden sollen, damit z.B. der Stempel nicht in den Führungsecken klemmt." %}</p>
+<p>{% trans "Der Befehl automatisiert den Vorgang und erspart das manuelle, nachträgliche Verändern der Führungsgeometrien." %}</p>
+<p>{% trans "Nach Aufruf des Befehls wird der Anwender aufgefordert die Bearbeitungsfigur zu wählen, an welche die Eckenfreimachung(en) eingebracht werden soll(en)." %}</p>
+<p>{% trans "Klicken Sie die Figur mit der linken Maustaste an. Nach Wahl der Figur erfolgt der Aufruf eines Dialogs." %}</p>
+<p>{% trans "Wählen Sie dort die Art der Eckenfreimachung (Schlitz, Quadrat, Kreis od. Schleife) und geben Sie die Maße ein." %}</p>
+<p>{% trans "Klicken Sie auf die Schaltfläche [Auf alle Ecken anwenden], wenn alle Ecken modifiziert werden sollen oder klicken Sie auf die Schaltfläche [OK], um einzelne Ecken auszuwählen. Jede Freimachung wird durch ein kleines magentafarbenes Rechteck symbolisiert." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Eckenfreimach.gif" alt="Eckenfreimach.gif" width="337" height="185" border="0"/></p>
+<p class="hcp2"> </p>
+<p><img src="../Eckenfreimach_dialog.gif" alt="Eckenfreimach_dialog.gif" width="203" height="524" border="0"/></p>
+<p class="hcp2"> </p>
+<p class="Block_Text">{% trans "[So wird es gemacht:]" %}</p>
+<p>{% trans "#[Eckenfreimachung bestimmen]#" %}</p>
+<p>{% trans "#[Eckenfreimachung nachträglich verändern]#" %}</p>
+<p> </p>
+<p>{% trans "Wird der Dialog mit [OK] beendet, stehen drei Optionen für Transformationen zur Verfügung:" %}</p>
+<p>{% trans "[Kopieren + verschieben], [Kopieren + rotieren] und [Spiegeln] (siehe [rechte Maustaste] od. [horizontale Ikonenleiste])." %}</p>
+<p>{% trans "Die Optionen finden bei symmetrischen Formen Verwendung, die das Kopieren von vorhandenen Eckenfreimachungssymbolen erlauben." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../BUTT_Eckenfreimach.gif" alt="BUTT_Eckenfreimach.gif" width="263" height="200" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "Beachten Sie auch die Option [Löschen] (siehe [rechte Maustaste] od. [horizontale Ikonenleiste]), die das Löschen von unerwünschten Eckenfreimachungssymbolen erlaubt." %}</p>
+<p>{% trans "Mit der Option [Editieren] können Sie vorhandene Eckenfreimachungssymbole editieren, um deren Parameter zu verändern." %}</p>
+<p class="hcp2"> </p>
+<p class="Hinweis">{% trans "Wichtiger Hinweis:" %}</p>
+<p>{% trans "Die Eckenfreimachungen werden [nur] in der [Simulationsgrafik angezeigt] und auch [nur dann], wenn Sie die Checkbox #[Ecken Freimach]# im Dialog [Bearbeitung einstellen] [aktivieren] (Siehe folgende Abbildung):" %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Eckenfreimach1.gif" alt="Eckenfreimach1.gif" width="122" height="61" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

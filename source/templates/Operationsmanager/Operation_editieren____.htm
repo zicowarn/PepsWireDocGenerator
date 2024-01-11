@@ -1,0 +1,64 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Der Operationsmanager" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Operationsmanager.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <h1>{% trans "Der Operationsmanager" %}</h1><p> </p>
+<p>{% trans "Der [Operationsmanager] listet alle vorhandenen Bearbeitungsoperationen auf, sowie alle vorhandenen Solidgeometrien." %}</p>
+<p>{% trans "Mit dem [Operationsmanager] können Sie neue Bearbeitungsoperationen definieren, vorhandene Operationen verändern, deren Reihenfolge verändern und vorhandene Solidgeometrien manipulieren." %}</p>
+<p>{% trans "Der [Operationsmanager] wird auf der [linken] Bildschirmseite angezeigt. Ob er angezeigt wird oder nicht, können Sie mit der Menüfolge [Ansicht / Operationsmanager] [AN/AUS] festlegen." %}</p>
+<p>{% trans "Die Breite des [Operationsmanagers] läst sich einstellen. Klicken Sie dazu mit [linken] Maustaste auf den rechten Rand des Operationsmanagers, halten Sie die Maustaste fest und ziehen Sie den Manager auf eine passende Größe." %}</p>
+<p>{% trans "Der [Operationsmanager] verfügt über vier Register - nämlich #[Geometrie]#, #[Bearbeitung]#, #[Features]# (optional) und #[Parameter]# (optional)." %}</p>
+<p>{% trans "Wählt man das Register #[Geometrie]# listet der [Operationsmanager] alle erzeugten oder importierten Solidgeometrien in der Form einer Baumstruktur auf." %}</p>
+<p>{% trans "Bei Wahl des Registers #[Bearbeitung]# werden alle vorhandenen [Bearbeitungsoperationen] aufgelistet." %}</p>
+<p>{% trans "Die Register #Features# und #Parameter# sind Bedienelemente des optionalen Moduls #WIRE-Expert# zur automatischen Featureerkennung." %}</p>
+<p class="hcp2"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp2"> </p>
+<p><img src="../work_space_editor_wir_tabs_shg.gif" usemap="#AreaMap0" alt="work_space_editor_wir_tabs_shg.gif" width="298" height="32" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="75, 0, 143, 32" href="Bearbeitungs_Register_Operationsmanager.htm" alt=""/>
+<area shape="rect" coords="4, 0, 70, 31" href="Geometrie_Register_Operationsmanager.htm" alt=""/>
+<area shape="rect" coords="220, 1, 295, 33" href="../WIRE_Expert_FeatureManager/WIRE_Expert_FeatureManager.htm" alt=""/>
+<area shape="rect" coords="143, 0, 217, 31" href="../WIRE_Expert_FeatureManager/Parameter_Register_Operationsmanager_.htm" alt=""/>
+</map> </p>
+<p class="hcp2"> </p>
+<p class="Hinweis">{% trans "Hinweise:" %}</p>
+<p>{% trans "Die Breite des [Operationsmanager], sowie ob dieser bei einem Neustart des Systems angezeigt wird oder nicht, können Sie abspeichern." %}</p>
+<p>{% trans "Wählen Sie dazu das Menü [Datei] und dort [Einstellungen] und dann [Einstellungen speichern]." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

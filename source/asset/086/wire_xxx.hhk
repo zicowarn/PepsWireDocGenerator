@@ -1,0 +1,2142 @@
+<html>
+<!-- Sitemap 1.0 -->
+<object type="text/site properties">
+  <param name="SiteType" value="index">
+</object>
+<ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Abstand der Ebenen  - Ebenen - Regelflächenbearbeitung">
+    <param name="Name" value="Abstand der Ebenen (Regelflächenbearbeitung)">
+    <param name="Local" value="wirhlp10/Abstand_der_Ebenen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Aktiviere Feature">
+    <param name="Name" value="Aktiviere Feature">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Aktiviere_Feature.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Alle VDM Einträge löschen">
+    <param name="Name" value="Alle Bearbeitungen löschen">
+    <param name="Local" value="wirhlp10/Alle_VDM_Eintraege_loeschen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Allgemeine Einstellungen">
+    <param name="Name" value="Allgemeine Einstellungen">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Allgemeine_Einstellungen_Startloch_Einstellungen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Allgemeine Einstellungen:Startlöcher einstellen">
+    <param name="Name" value="Allgemeine Einstellungen">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Allgemeine_Einstellungen_Startloch_Einstellungen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Alternative Vorgehensweisen wenn die WIRE-Expert Bearbeitungsobjekterkennung scheitert">
+    <param name="Name" value="Alternative Vorgehensweisen wenn die WIRE-Expert Bearbeitungsobjekterkennung scheitert">
+    <param name="Local" value="WIRE_Expert_FeatureManager/Alternative_Vorgehensweisen_wenn_die_WIRE-Expert_Featureerkennung_scheitert.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Anzahl der Schnitte zwischen jeder Anzeige">
+    <param name="Name" value="Anzahl der Schnitte zwischen jeder Anzeige">
+    <param name="Local" value="Simulation/Anzahl_der_Schnitte_zwischen_jeder_Anzeige.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Anzahl Schnitte 1">
+    <param name="Name" value="Schnitt Nr. 1 ,2, 3,  ....">
+    <param name="Local" value="wirhlp10/Schnitt_Nr_123.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Anzahl Schnitte 1:2: 3 ....">
+    <param name="Name" value="Schnitt Nr. 1 ,2, 3,  ....">
+    <param name="Local" value="wirhlp10/Schnitt_Nr_123.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Anzahl Schnitte 1:2: 3:  ....">
+    <param name="Name" value="Schnitt Nr. 1 ,2, 3,  ....">
+    <param name="Local" value="wirhlp10/Schnitt_Nr_123.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Anzahl Schnittebenen (Standard Konturbearbeitung)">
+    <param name="Name" value="Anzahl Schnittebenen">
+    <param name="Local" value="wirhlp10/Anzahl_Schnittebenen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Arbeiten mit dem FeatureManager">
+    <param name="Name" value="Arbeiten mit dem FeatureManager">
+    <param name="Local" value="WIRE_Expert_FeatureManager/Arbeiten_mit_dem_FeatureManager.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Auf Figur (Startpunkte)">
+    <param name="Name" value="Auf Figur (Startpunkte)">
+    <param name="Local" value="wirhlp9/Auf_Figur_Startpunkte.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Auf Punkt (UV)">
+    <param name="Name" value="Auf Punkt (UV)">
+    <param name="Local" value="wirhlp10/Auf_Punkt_UV_Im_Vorschub.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Auf Punkt (UV) (Im Eilgang)">
+    <param name="Name" value="Auf Punkt (UV)">
+    <param name="Local" value="wirhlp10/Auf_Punkt_UV_Im_Eilgang.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Auf Punkt (UV) (Im Vorschub)">
+    <param name="Name" value="Auf Punkt (UV)">
+    <param name="Local" value="wirhlp10/Auf_Punkt_UV_Im_Vorschub.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Auf Punkt (XY)">
+    <param name="Name" value="Auf Punkt (XY)">
+    <param name="Local" value="wirhlp10/Auf_Punkt_XY_Im_Vorschub.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Auf Punkt (XY) (Im Eilgang)">
+    <param name="Name" value="Auf Punkt (XY)">
+    <param name="Local" value="wirhlp10/Auf_Punkt_XY_Im_Eilgang.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Auf Punkt (XY) (Im Vorschub)">
+    <param name="Name" value="Auf Punkt (XY)">
+    <param name="Local" value="wirhlp10/Auf_Punkt_XY_Im_Vorschub.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Ausfahrabstand">
+    <param name="Name" value="Ausfahrabstand">
+    <param name="Local" value="wirhlp10/Ausfahrabstand.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Ausfahrabstand  (Std.-Konturbearbeitung)">
+    <param name="Name" value="Ausfahrabstand">
+    <param name="Local" value="wirhlp10/Ausfahrabstand.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Ausfahren Bogen mit Eckenmodus">
+    <param name="Name" value="Ausfahren Bogen mit Eckenmodus">
+    <param name="Local" value="wirhlp10/Ausfahren_Modi.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Ausfahren Bogen mit ISO">
+    <param name="Name" value="Ausfahren - Modi">
+    <param name="Local" value="wirhlp10/Ausfahren_Modi.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Ausfahren Gerade">
+    <param name="Name" value="Ausfahren - Modi">
+    <param name="Local" value="wirhlp10/Ausfahren_Modi.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Ausfahren im Eilgang">
+    <param name="Name" value="Ausfahren im Eilgang">
+    <param name="Local" value="wirhlp10/Ausfahren_im_Eilgang.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Ausfahren im Eilgang  (Ein/Ausfahrstrategie)">
+    <param name="Name" value="Ausfahren im Eilgang">
+    <param name="Local" value="wirhlp10/Ausfahren_im_Eilgang.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Ausfallteil aufteilen">
+    <param name="Name" value="Ausfallteil aufteilen">
+    <param name="Local" value="wirhlp9/Ausfallteil_aufteilen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Ausfallteil Überprüfung Dialogbox">
+    <param name="Name" value="Ausfallteilüberprüfung Dialogbox">
+    <param name="Local" value="Simulation/Ausfallteil_Ueberpruefung_Dialogbox_Solid_Simulation_Wire.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Ausfallteilentsorger der NC-Maschine verwenden">
+    <param name="Name" value="Ausfallteilentsorger der NC-Maschine verwenden">
+    <param name="Local" value="wirhlp10/Ausfallteilentsorger_der_NC_Maschine_verwenden.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Ausschneiden/Löschen">
+    <param name="Name" value="Ausschneiden">
+    <param name="Local" value="Operationsmanager/Ausschneiden_Operationsliste.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Ausschneiden/Verschieben">
+    <param name="Name" value="Einfügen">
+    <param name="Local" value="Operationsmanager/Einfuegen_Operationsliste.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Aussenkontur (Stempel)">
+    <param name="Name" value="Aussenkontur (Stempel)">
+    <param name="Local" value="wirhlp10/Aussenkontur_Stempel.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Aussenkontur (Stempel) (Offset einstellen)">
+    <param name="Name" value="Aussenkontur (Stempel)">
+    <param name="Local" value="wirhlp10/Aussenkontur_Stempel.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Auswahl von Solid-Geometrieelementen">
+    <param name="Name" value="Auswahl von Solid-Geometrieelementen">
+    <param name="Local" value="Operationsmanager/Auswahl_von_Solid_Geometrieelementen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Auto Matritzen und Stempel">
+    <param name="Name" value="Auto Matrizen und Stempel">
+    <param name="Local" value="wirhlp9/Auto_Matritzen_und_Stempel.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Auto Matrizen und Stempel">
+    <param name="Name" value="Auto Matrizen und Stempel">
+    <param name="Local" value="wirhlp9/Auto_Matritzen_und_Stempel.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Autom. Einfädeln / Abschneiden">
+    <param name="Name" value="Autom. Einfädeln / Abschneiden">
+    <param name="Local" value="wirhlp10/Autom__Einfaedeln_Abschneiden.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Automatische Feature-Erkennung">
+    <param name="Name" value="Automatische Feature-Erkennung">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm">
+    <param name="Name" value="Automatische Feature-Erkennung">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Automatische_Feature_Erkennung.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Automatisches Entfernen der Anbindungen am Ende der Figur">
+    <param name="Name" value="Automatisches Entfernen der Anbindungen am Ende der Figur">
+    <param name="Local" value="wirhlp10/Automatisches_Entfernen_der_Anbindungen_am_Ende_der_Figur.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Automatisches Entfernen der Anbindungen am Ende der Operation">
+    <param name="Name" value="Automatisches Entfernen der Anbindungen am Ende der Operation">
+    <param name="Local" value="wirhlp10/Automatisches_Entfernen_der_Anbindungen_am_Ende_der_Operation.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Automatisches Entfernen der Anbindungen NACH 1.ten Schnitten">
+    <param name="Name" value="Automatisches Entfernen der Anbindungen NACH 1.ten Schnitten">
+    <param name="Local" value="wirhlp10/Automatisches_Entfernen_der_Anbindungen_NACH_1ten_Schnitten.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Bearbeitungen mit WKZ.-Farbe markieren">
+    <param name="Name" value="Bearbeitungen mit WKZ.-Farbe markieren">
+    <param name="Local" value="Simulation/Bearbeitungen_mit_WKZ_Farbe_markieren.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Bearbeitungs Register Operationsmanager">
+    <param name="Name" value="Bearbeitungs Register (Operationsmanager)">
+    <param name="Local" value="Operationsmanager/Bearbeitungs_Register_Operationsmanager.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Bearbeitungsfigur abrunden">
+    <param name="Name" value="Bearbeitungsfigur abrunden">
+    <param name="Local" value="wirhlp9/Bearbeitungsfigur_abrunden____.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Bearbeitungsfigur erzeugen">
+    <param name="Name" value="Erzeugen einer Bearbeitungsfigur">
+    <param name="Local" value="wirhlp10/Erzeugen_einer_Bearbeitungsfigur.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Bearbeitungsfigur verändern">
+    <param name="Name" value="Erzeugen einer Bearbeitungsfigur">
+    <param name="Local" value="wirhlp10/Erzeugen_einer_Bearbeitungsfigur.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Bearbeitungsparameter">
+    <param name="Name" value="Bearbeitungsparameter">
+    <param name="Local" value="wirhlp9/Bearbeitungsparameter_Wire_Expert_konfigurieren.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Bearbeitungsparameter: Wire-Expert konfigurieren">
+    <param name="Name" value="Bearbeitungsparameter">
+    <param name="Local" value="wirhlp9/Bearbeitungsparameter_Wire_Expert_konfigurieren.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Bei Anbindung entfernen nur einmal stoppen">
+    <param name="Name" value="Bei Anbindung entfernen nur EINMAL stoppen">
+    <param name="Local" value="wirhlp10/Bei_Anbindung_entfernen_nur_einmal_stoppen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Bei Stop anhalten / Einzelsatz (Simulation)">
+    <param name="Name" value="Bei Stop anhalten / Weiter bis zum Ende etc. Listbox">
+    <param name="Local" value="Simulation/Bei_Stop_anhalten.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Beispielprogramm zur variablen Konik.">
+    <param name="Name" value="Beispielprogramm zur variablen Konik.">
+    <param name="Local" value="wirhlp10/Beispiel_Variable_Konik_programmieren.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Beschreibung">
+    <param name="Name" value="Beschreibung">
+    <param name="Local" value="WIRE_Expert_FeatureManager/Beschreibung_Programmstart_Feature_Man.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Bohrungen gleichen Durchmessers suchen">
+    <param name="Name" value="Bohrungen gleichen Durchmessers suchen und automatisch Bearbeitungsfiguren erzeugen">
+    <param name="Local" value="wirhlp9/Bohrungen_gleichen_Durchmessers_suchen_u_Bearbeitungsfiguren_erzeugen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Bund angleichen">
+    <param name="Name" value="Bund angleichen">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Bund_angleichen_WIRE_Expert.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Bundbearbeitung">
+    <param name="Name" value="Bundbearbeitung">
+    <param name="Local" value="wirhlp10/Bundbearbeitung_.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Bundbearbeitungen erkennen">
+    <param name="Name" value="Bundbearbeitungen erkennen">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Bundbearbeitungen_erkennen_Feature-Erkenungs_Einstellungen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Corner Radii">
+    <param name="Name" value="More information on Machine Technology">
+    <param name="Local" value="wirhlp10/More_information_on_Machine_Technology.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="CUS-Befehl (Rauhtiefe bestimmen)">
+    <param name="Name" value="Rauhtiefe">
+    <param name="Local" value="Simulation/Rauhtiefe.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Das Bearbeitung Menü">
+    <param name="Name" value="Das Bearbeitung Menü">
+    <param name="Local" value="wirhlp10/Das_Bearbeitungs_Menue.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Das Diverses Menü">
+    <param name="Name" value="Das Diverses Menü">
+    <param name="Local" value="wirhlp9/Das_Diverses_Men&uuml;.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Das Extras Menü">
+    <param name="Name" value="Das Extras Menü">
+    <param name="Local" value="Extras/Das_Extra_Men&uuml;.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Das Kommandoprogrammfenster">
+    <param name="Name" value="Das Kommandoprogrammfenster">
+    <param name="Local" value="wirhlp10/Das_Kommandoprogrammfenster_Job_Editor.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Das WIRE-Expert Menü">
+    <param name="Name" value="Das WIRE-Expert Menü">
+    <param name="Local" value="wirhlp9/Das_WIRE_Expert_Untermenue.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Datenbank für Technologie Lasche">
+    <param name="Name" value="Datenbank für Technologie Register">
+    <param name="Local" value="wirhlp10/Datenbank_fuer_Technologie_Lasche.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Deaktiviere Feature">
+    <param name="Name" value="Deaktiviere Feature">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Deaktiviere_Feature.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Dialog übersetzen">
+    <param name="Name" value="Dialog übersetzen">
+    <param name="Local" value="Commdata/Dialog_uebersetzen_Common.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Dialogeinstellungen speichern">
+    <param name="Name" value="Dialogeinstellungen speichern">
+    <param name="Local" value="Commdata/Dialogeinstellungen_speichern.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Doppelklick auf ein Element des FeatureManagers">
+    <param name="Name" value="Doppelklick auf ein Element des FeatureManagers">
+    <param name="Local" value="WIRE_Expert_FeatureManager/Doppelklick_auf_ein_Element_des_FeatureManagers.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Draht einfädeln / abschneiden">
+    <param name="Name" value="Draht einfädeln / abschneiden">
+    <param name="Local" value="wirhlp10/Draht_einfaedeln.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Draht VOR Ausfahren schneiden">
+    <param name="Name" value="Draht VOR Ausfahren schneiden">
+    <param name="Local" value="wirhlp10/Draht_VOR_Ausfahren_schneiden.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Drahtbahn bei Bewegungen von Figur zu Figur zeigen">
+    <param name="Name" value="Drahtbahn bei Bewegungen von Figur zu Figur zeigen">
+    <param name="Local" value="wirhlp10/Drahtbahn_bei_Bewegungen_von_Figur_zu_Figur_zeigen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Drahtbahn bei Figurbearbeitungen zeigen">
+    <param name="Name" value="Drahtbahn bei Figurbearbeitungen zeigen">
+    <param name="Local" value="wirhlp10/Drahtbahn_bei_Figurbearbeitungen_zeigen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Drahtbahnüberlappung (Taschenerodieren)">
+    <param name="Name" value="Abstand der Mittelpunktsbahnen">
+    <param name="Local" value="wirhlp10/Ueberlappung_Taschenerodieren.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Drahtmodell-Simulation">
+    <param name="Name" value="Drahtmodell-Simulation">
+    <param name="Local" value="Simulation/Drahtmodell_Simulation.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Drehstahlbearbeitung">
+    <param name="Name" value="Drehstahlbearbeitung">
+    <param name="Local" value="wirhlp9/Drehstahlbearbeitung____.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Ebene variabel">
+    <param name="Name" value="Ebene variabel">
+    <param name="Local" value="wirhlp10/Ebene_variabel.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Ebene variabel (Regelflächenbearbeitung)">
+    <param name="Name" value="Ebene variabel">
+    <param name="Local" value="wirhlp10/Ebene_variabel.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Ebenen Berechnung">
+    <param name="Name" value="Ebenen Berechnung">
+    <param name="Local" value="wirhlp10/Ebenen_Berechnung.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Ebenen Berechnung (Regelflächenbearbeitung)">
+    <param name="Name" value="Ebenen Berechnung">
+    <param name="Local" value="wirhlp10/Ebenen_Berechnung.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Ecken Strategie">
+    <param name="Name" value="Ecken Freimachung">
+    <param name="Local" value="wirhlp10/Ecken_Strategie.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Eckenfreimachung">
+    <param name="Name" value="Eckenfreimachung">
+    <param name="Local" value="wirhlp9/Eckenfreimachung.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Eckenmodus">
+    <param name="Name" value="Eckenmodus">
+    <param name="Local" value="wirhlp10/Eckenmodus.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Edit-Button (Variable Konik)">
+    <param name="Name" value="Editieren">
+    <param name="Local" value="wirhlp10/Edit_Variable_Konik.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Editieren (Technologie Datenbank)">
+    <param name="Name" value="Editieren (Technologie Datenbank)">
+    <param name="Local" value="wirhlp10/Editieren_Technologie_Datenbank.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Ein/Ausfahren Lasche">
+    <param name="Name" value="Ein/Ausfahren Register">
+    <param name="Local" value="wirhlp10/Ein_Ausfahren_Lasche.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Eine Bearbeitungsfigur auf eine Punktegruppe (G1 ...) verteilen">
+    <param name="Name" value="Eine Bearbeitungsfigur auf eine Punktegruppe (G1 ...) verteilen">
+    <param name="Local" value="wirhlp9/Eine_Bearbeitungsfigur_auf_eine_Punktegruppe_G1_____verteilen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Einfahrabstand  (Auto Matritzen Stempel)">
+    <param name="Name" value="Einfahrabstand  (Auto Matrizen Stempel)">
+    <param name="Local" value="wirhlp9/Einfahrabstand_Auto_Matritzen_Stempel.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Einfahren Bogen mit ISO">
+    <param name="Name" value="Einfahren - Modi">
+    <param name="Local" value="wirhlp10/Einfahren_Modi.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Einfahren Gerade">
+    <param name="Name" value="Einfahren - Modi">
+    <param name="Local" value="wirhlp10/Einfahren_Modi.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Einfahrpunkt rotieren">
+    <param name="Name" value="Einfahrpunkt rotieren">
+    <param name="Local" value="wirhlp10/Einfahrpunkt_rotieren.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Einfügeposition (Linien/Bögen =&gt; Bearbeitungsfigur)">
+    <param name="Name" value="Einfügeposition (Linien/Bögen =&gt; Bearbeitungsfigur)">
+    <param name="Local" value="wirhlp9/Einfuegeposition_Linien_Boegen_Bearbeitungsfigur.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Eingabeeinheiten">
+    <param name="Name" value="Eingabeeinheiten">
+    <param name="Local" value="wirhlp9/Eingabeeinheiten_Programmstart_Feature_Man.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Eingaben speichern (Offset einstellen)">
+    <param name="Name" value="Eingaben speichern">
+    <param name="Local" value="wirhlp10/Eingaben_speichern_Offset_einstellen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Einrichteblatt ausgeben">
+    <param name="Name" value="Einrichteblatt ausgeben">
+    <param name="Local" value="wirhlp10/Einrichteblatt_ausgeben_Postprozessor_konfigurieren.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Einstellungen">
+    <param name="Name" value="Einstellungen">
+    <param name="Local" value="Simulation/Einstellungen_Simulation.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Einstellungen (Einstellen der Schnittmethode)">
+    <param name="Name" value="Einstellungen (Einstellen der Schnittmethode)">
+    <param name="Local" value="wirhlp10/Einstellungen_Einstellen_der_Schnittmethode.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Einstellungen Button (Regelflächenbearbeitung)">
+    <param name="Name" value="Einstellungen Button (Regelflächenbearbeitung)">
+    <param name="Local" value="wirhlp10/Einstellungen_Button_Regelflaechenbearbeitung.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Einstellungen:Für die Simulation">
+    <param name="Name" value="Einstellungen">
+    <param name="Local" value="Simulation/Einstellungen_Simulation.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Einzelne Rotationsachse konfigurieren">
+    <param name="Name" value="Einzelne Rotationsachse konfigurieren">
+    <param name="Local" value="wirhlp10/Einzelne_Rotationsachse_konfigurieren_Rotationsachse_konfigurieren.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Elemente wählen">
+    <param name="Name" value="Elemente wählen">
+    <param name="Local" value="Commdata/COMMON_Elemente_waehlen_Button.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Endtechnologie">
+    <param name="Name" value="Endtechnologie">
+    <param name="Local" value="wirhlp10/Endtechnologie.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Endtechnologie  (Ein/Ausfahrstrategie)">
+    <param name="Name" value="Endtechnologie">
+    <param name="Local" value="wirhlp10/Endtechnologie.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Endwinkel">
+    <param name="Name" value="Endwinkel">
+    <param name="Local" value="wirhlp10/Endwinkel.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Entferne oder füge Flächen diesem Feature hinzu">
+    <param name="Name" value="Entferne oder füge Flächen diesem Feature hinzu">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Entferne_oder_fuege_Fl&auml;chen_diesem_Bearbeitungsobjekt_hinzu.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Entferne oder füge Kanten diesem Feature hinzu">
+    <param name="Name" value="Entferne oder füge Kanten diesem Feature hinzu">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Entferne_oder_fuege_Kanten_diesem_Bearbeitungsobjekt_hinzu.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Erweiterte Rotationsachse konfigurieren">
+    <param name="Name" value="Erweiterte Rotationsachse konfigurieren">
+    <param name="Local" value="wirhlp10/Erweiterte_Rotationsachse_konfigurieren_Rotationsachse_konfigurieren.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Erzeuge Figuren + Bearbeitungen von Features">
+    <param name="Name" value="Erzeuge Figuren + Bearbeitungen von Features">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm">
+    <param name="Name" value="Erzeuge Figuren + Bearbeitungen von Features">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Erzeuge_Figuren_Bearbeitungen_von_Bearbeitungsobjekten.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Erzeuge nur Figuren von Features">
+    <param name="Name" value="Erzeuge nur Figuren von Features">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Erzeuge_nur_Figuren_von_Features.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Erzeugen einer Bearbeitungsfigur">
+    <param name="Name" value="Erzeugen einer Bearbeitungsfigur">
+    <param name="Local" value="wirhlp10/Erzeugen_einer_Bearbeitungsfigur.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Extra (Technologien / M-Codes)">
+    <param name="Name" value="Extra (Technologien / M-Codes)">
+    <param name="Local" value="wirhlp10/Extra_Techn_M_Cddes.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Farben bearbeiten">
+    <param name="Name" value="Farben bearbeiten">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Farben_bearbeiten_Feature-Erkennung_nach_Fl&auml;chenfarben.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Farben einstellen">
+    <param name="Name" value="Farben Register (Einstellungen)">
+    <param name="Local" value="Simulation/Farben_Register_Einstellungen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Farben einstellen:Simulation">
+    <param name="Name" value="Farben Register (Einstellungen)">
+    <param name="Local" value="Simulation/Farben_Register_Einstellungen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Farben Lasche">
+    <param name="Name" value="Schnittfarbe">
+    <param name="Local" value="wirhlp10/Schnittfarbe_Standard_Konturbearbeitung.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Farbpallette für Simulation">
+    <param name="Name" value="Farbpalette für Simulation">
+    <param name="Local" value="Simulation/Farbpallette_fuer_Simulation.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Feature-Erkennung nach Flächenfarben">
+    <param name="Name" value="Feature-Erkennung nach Flächenfarben">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Feature_Erkennung_nach_Fl&auml;chenfarben.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Feature-Erkennungs Einstellungen">
+    <param name="Name" value="Feature-Erkennungs Einstellungen">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Feature_Erkenungs_Einstellungen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="FeatureManager Einstellungen">
+    <param name="Name" value="FeatureManager (Einstellungen)">
+    <param name="Local" value="wirhlp9/FeatureManager_Grund_Einstellungen_Dialog.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="FeatureManager: WIRE-Expert">
+    <param name="Name" value="WIRE-Expert FeatureManager">
+    <param name="Local" value="WIRE_Expert_FeatureManager/WIRE_Expert_FeatureManager.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Figur &gt;&gt; Auswahlbutton">
+    <param name="Name" value="Wähle Linien/Bögen &gt;&gt;">
+    <param name="Local" value="wirhlp9/Figur_Auswahlbutton_Linien_Boegen_Bearbeitungsfigur.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Figur erzeugen">
+    <param name="Name" value="Figur erzeugen">
+    <param name="Local" value="wirhlp9/Figur_erzeugen_Linien_Boegen_Bearbeitungsfigur.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Figur projizieren ...">
+    <param name="Name" value="Figur projizieren oder skalieren">
+    <param name="Local" value="wirhlp9/Figur_projizieren____.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Figurname">
+    <param name="Name" value="Figurname">
+    <param name="Local" value="wirhlp9/Figurname_Linien_Boegen_Bearbeitungsfigur.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Figurname(n)">
+    <param name="Name" value="Figurname(n)">
+    <param name="Local" value="wirhlp10/Figurnamen_Std_Konturbea.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Figurname(n) (Std.-Konturbearbeitung)">
+    <param name="Name" value="Figurname(n)">
+    <param name="Local" value="wirhlp10/Figurnamen_Std_Konturbea.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Filter">
+    <param name="Name" value="Filter (Auto Matrizen Stempel)">
+    <param name="Local" value="wirhlp9/Filter_Auto_Matritzen_Stempel.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Filter (Auto Matritzen Stempel)">
+    <param name="Name" value="Filter (Auto Matrizen Stempel)">
+    <param name="Local" value="wirhlp9/Filter_Auto_Matritzen_Stempel.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Filter Dicke">
+    <param name="Name" value="Filter Dicke">
+    <param name="Local" value="wirhlp10/Filter_Dicke.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Filter Material">
+    <param name="Name" value="Filter Material">
+    <param name="Local" value="wirhlp10/Filter_Material.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Filter Oberflächengüte">
+    <param name="Name" value="Filter Oberflächengüte">
+    <param name="Local" value="wirhlp10/Filter_Oberflaechenguete.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Füge Segment hinzu">
+    <param name="Name" value="Füge Segment hinzu">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/F&uuml;ge_Segment_hinzu_WIRE_Expert.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Genauigkeit für Solidsimulation-Zielteilvergleich">
+    <param name="Name" value="Genauigkeit für Solidsimulation-Zielteilvergleich">
+    <param name="Local" value="Simulation/Genauigkeit_fuer_Solidsimulation_Zielteilvergleich.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Geometrie Parameter">
+    <param name="Name" value="Geometrie Parameter">
+    <param name="Local" value="wirhlp9/Geometrie_Parameter.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Geometrie Register (Operationsmanager)">
+    <param name="Name" value="Geometrie Register (Operationsmanager)">
+    <param name="Local" value="Operationsmanager/Geometrie_Register_Operationsmanager.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Geometrie Register Operationsmanager">
+    <param name="Name" value="Geometrie Register (Operationsmanager)">
+    <param name="Local" value="Operationsmanager/Geometrie_Register_Operationsmanager.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Geometrie Toleranzen">
+    <param name="Name" value="Geometrie Toleranzen">
+    <param name="Local" value="wirhlp9/Geometrie_Toleranzen_Programmstart_Feature_Man.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Gespeicherte Dialogeinstellungen laden">
+    <param name="Name" value="Gespeicherte Dialogeinstellungen laden">
+    <param name="Local" value="Commdata/Gespeicherte_Dialogeinstellungen_laden.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Grafik NC-Bearbeitung löschen">
+    <param name="Name" value="Grafik NC-Bearbeitung löschen">
+    <param name="Local" value="Simulation/Grafik_NC_Bearbeitung_loeschen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Grafik NC-Bearbeitung neu erzeugen">
+    <param name="Name" value="Grafik NC-Bearbeitung neu erzeugen">
+    <param name="Local" value="Simulation/Grafik_NC_Bearbeitung_neu_erzeugen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Grafisches Einrichteblatt">
+    <param name="Name" value="Grafisches Einrichteblatt XXX JUMPS">
+    <param name="Local" value="Extras/Grafisches_Einrichteblatt.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Gruppiere Features">
+    <param name="Name" value="Gruppiere Features">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Gruppiere_Bearbeitungsobjekte.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Gruppierte Operationen aufrufen">
+    <param name="Name" value="Gruppierte Operationen aufrufen">
+    <param name="Local" value="wirhlp10/Gruppierte_Operationen_aufrufen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Gruppierung aufheben">
+    <param name="Name" value="Gruppierung aufheben">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Gruppierung_aufheben.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Höhe (untere Ebene)">
+    <param name="Name" value="Höhe (untere Ebene)">
+    <param name="Local" value="wirhlp10/Hoehe_untere_Ebene.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Identische Feature gruppieren">
+    <param name="Name" value="Identische Feature gruppieren">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Identische_Feature_gruppieren_Feature-Erkenungs_Einstellungen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Im Eilgang">
+    <param name="Name" value="Im Eilgang">
+    <param name="Local" value="wirhlp10/Im_Eilgang_.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Im Vorschub">
+    <param name="Name" value="Im Vorschub">
+    <param name="Local" value="wirhlp10/Im_Vorschub_Dialog.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Immer Werkzeugposition zusammen mit Kollisionsort anzeigen">
+    <param name="Name" value="Immer Werkzeugposition zusammen mit Kollisionsort anzeigen">
+    <param name="Local" value="Simulation/Immer_Werkzeugposition_zusammen_mit_Kollisionsort_anzeigen_Solid_Sim.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="In ISO Linie/Bogen/Linie umwandeln ...">
+    <param name="Name" value="In ISO Linie/Bogen/Linie umwandeln ...">
+    <param name="Local" value="wirhlp9/In_ISO_Linie_Bogen_Linie_umwandeln____.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Innenkontur (Matrize)">
+    <param name="Name" value="Innenkontur (Matrize)">
+    <param name="Local" value="wirhlp10/Innenkontur_Matrize.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Innenkontur (Matrize)  (Offset einstellen)">
+    <param name="Name" value="Innenkontur (Matrize)">
+    <param name="Local" value="wirhlp10/Innenkontur_Matrize.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Innere Matrize  / Äußere Stempel">
+    <param name="Name" value="Innere (Matrize) / Äußere (Stempel)">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Innere_Matrize_&Auml;u&szlig;ere_Stempel_Startloch_Einstellungen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Innere Matrize  / Äußere Stempel:Startloch-Einstellungen">
+    <param name="Name" value="Innere (Matrize) / Äußere (Stempel)">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Innere_Matrize_&Auml;u&szlig;ere_Stempel_Startloch_Einstellungen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Job- / Kommandodatei erzeugen">
+    <param name="Name" value="Job- / Kommandodatei erzeugen">
+    <param name="Local" value="wirhlp10/Job_Kommandodatei_erzeugen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Kein Entfernen der Anbindung am Ende der Operation">
+    <param name="Name" value="Kein Entfernen der Anbindung am Ende der Operation">
+    <param name="Local" value="wirhlp10/Kein_Entfernen_der_Anbindung_am_Ende_der_Operation.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Klick mit rechter Maustaste auf ein Element des FeatureManagers">
+    <param name="Name" value="Klick mit rechter Maustaste auf ein Element des FeatureManagers">
+    <param name="Local" value="WIRE_Expert_FeatureManager/Klick_mit_rechter_Maustaste_auf_ein_Element_des_FeatureManagers.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Kollisionen Register (Einstellungen)">
+    <param name="Name" value="Kollisionen Register (Einstellungen)">
+    <param name="Local" value="Simulation/Kollisionen_Register_Einstellungen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Kollisionserkennung">
+    <param name="Name" value="Kollisionserkennung">
+    <param name="Local" value="Simulation/Kollisionserkennung.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Konik">
+    <param name="Name" value="Konik Register">
+    <param name="Local" value="wirhlp10/Konik_lasche.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Konik Register">
+    <param name="Name" value="Konik Register">
+    <param name="Local" value="wirhlp10/Konik_lasche.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Konikwinkel oben">
+    <param name="Name" value="Konikwinkel oben">
+    <param name="Local" value="wirhlp10/Konikwinkel_oben.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Konikwinkel unten">
+    <param name="Name" value="Konikwinkel unten">
+    <param name="Local" value="wirhlp10/Konikwinkel_unten.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="KopRot-Button (Variable Konik)">
+    <param name="Name" value="Kopieren + Rotieren">
+    <param name="Local" value="wirhlp10/KopRot_Variable_Konik.htm">
+    <param name="Name" value="Kopieren + Verschieben">
+    <param name="Local" value="wirhlp10/KopTra_Variable_Konik.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Kreise/Bögen ==&gt; Mehrfachfigur">
+    <param name="Name" value="Kreise/Bögen ==&gt; Mehrfachfigur">
+    <param name="Local" value="wirhlp9/Kreise_Boegen_Mehrfachfigur.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Kurzhilfen anzeigen">
+    <param name="Name" value="Kurzhilfen anzeigen">
+    <param name="Local" value="wirhlp10/Kurzhilfen_anzeigen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Langsam gleitend zum Kollisionsort springen">
+    <param name="Name" value="Langsam gleitend zum Kollisionsort springen">
+    <param name="Local" value="Simulation/Langsam_gleitend_zum_Kollisionsort_springen_Solid_Sim.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Linien/Bögen =&gt; Bearbeitungsfigur">
+    <param name="Name" value="Linien/Bögen =&gt; Bearbeitungsfigur">
+    <param name="Local" value="wirhlp9/Linien_Boegen_Bearbeitungsfigur.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Linien/Bögen löschen">
+    <param name="Name" value="Linien/Bögen löschen">
+    <param name="Local" value="wirhlp9/Linien_Boegen_loeschen_Linien_Boegen_Bearbeitungsfigur.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Linien/Bögen Reduktion">
+    <param name="Name" value="Reduktion">
+    <param name="Local" value="wirhlp9/Linien_Boegen_Reduktion.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Links / Rechts / Kein Offset">
+    <param name="Name" value="Links / Rechts / Kein Offset">
+    <param name="Local" value="wirhlp10/Links_Rechts_Kein_Offset.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Links / Rechts / Kein Offset (Offset einstellen)">
+    <param name="Name" value="Links / Rechts / Kein Offset">
+    <param name="Local" value="wirhlp10/Links_Rechts_Kein_Offset.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Liste neu aufbauen">
+    <param name="Name" value="Liste neu aufbauen">
+    <param name="Local" value="wirhlp10/Liste_neu_aufbauen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Lösche Feature">
+    <param name="Name" value="Lösche Feature">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Loesche_Feature.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Lösche Operation">
+    <param name="Name" value="Lösche Operation">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Loesche_Operation.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Lösche-Button (Variable Konik)">
+    <param name="Name" value="Löschen">
+    <param name="Local" value="wirhlp10/Loesche_Variable_Konik.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Löschen (Technologie Datenbank)">
+    <param name="Name" value="Löschen (Technologie Datenbank)">
+    <param name="Local" value="wirhlp10/Loeschen_Technologie_Datenbank.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="M-Code einfügen">
+    <param name="Name" value="M-Code einfügen">
+    <param name="Local" value="wirhlp10/M_Code_einfuegen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="M-Codes zusätzliche">
+    <param name="Name" value="Codes">
+    <param name="Local" value="wirhlp10/Codes_Zusaetzliche.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Machine Technology">
+    <param name="Name" value="More information on Machine Technology">
+    <param name="Local" value="wirhlp10/More_information_on_Machine_Technology.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Machine Technology:more information">
+    <param name="Name" value="More information on Machine Technology">
+    <param name="Local" value="wirhlp10/More_information_on_Machine_Technology.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Manuell mit automatischer Verbindung">
+    <param name="Name" value="Manuell mit automatischer Verbindung">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Manuell_mit_automatischer_Verbindung_Neues_Bearbeitungsobjekt.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Manuelle Bundbearbeitung">
+    <param name="Name" value="Manuelle Bundbearbeitung">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Manuelle_Bundbearbeitung_WIRE_Expert.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Manuelle Faceauswahl">
+    <param name="Name" value="Manuelle Faceauswahl">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Manuelle_Faceauswahl_Neues_Bearbeitungsobjekt.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Manuelle Feature-Erkennung">
+    <param name="Name" value="Manuelle Feature-Erkennung">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm">
+    <param name="Name" value="Manuelle Feature Erkennung">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Manuelle_Feature_Erkennung.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Manuelle Kantenauswahl">
+    <param name="Name" value="Manuelle Kantenauswahl">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Manuelle_Kantenauswahl_Neues_Bearbeitungsobjekt.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Manuelles Entfernen der Anbindung am Ende der Operation">
+    <param name="Name" value="Kein Entfernen der Anbindung am Ende der Operation">
+    <param name="Local" value="wirhlp10/Kein_Entfernen_der_Anbindung_am_Ende_der_Operation.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Maschinen Simulation Einstellungen">
+    <param name="Name" value="Maschinen Simulation Einstellungen">
+    <param name="Local" value="Simulation/Maschinen_Simulation_Einstellungen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Maschinenanpassungs Optionen">
+    <param name="Name" value="Postprozessor konfigurieren">
+    <param name="Local" value="wirhlp10/Postprozessor_konfigurieren.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Maschinenraum-Simulation starten">
+    <param name="Name" value="Maschinenraum-Simulation starten">
+    <param name="Local" value="Simulation/Maschinenraum_Simulation_starten.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Materialhöhe">
+    <param name="Name" value="Materialhöhen">
+    <param name="Local" value="wirhlp10/H&ouml;he_OP_Start_Rohteil_Rohteile.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Materialhöhe: Rohteildefinition">
+    <param name="Name" value="Materialhöhen">
+    <param name="Local" value="wirhlp10/H&ouml;he_OP_Start_Rohteil_Rohteile.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Matrizen">
+    <param name="Name" value="Matrizen Register">
+    <param name="Local" value="wirhlp9/Matrizen_Auto_Matritzen_Stempel.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Matrizen Optionen">
+    <param name="Name" value="Matrizen Optionen">
+    <param name="Local" value="wirhlp9/Matrizen_Optionen_Auto_Matritzen_Stempel.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Max. Schnitteingriff vor Anzeige">
+    <param name="Name" value="Max. Schnitteingriff vor Anzeige">
+    <param name="Local" value="Simulation/Max_Schnitteingriff_vor_Anzeige.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Maximale Abweichung (Figur projizieren)">
+    <param name="Name" value="Maximale Abweichung">
+    <param name="Local" value="wirhlp9/Maximale_Abweichung.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Maximaler Drahtwinkel">
+    <param name="Name" value="Maximale Konizität / UV-Verfahrwege">
+    <param name="Local" value="wirhlp10/Maximale_Konizit&auml;t_UV-Verfahrwege.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Maßeinheit mm od. Inch  bestimmen">
+    <param name="Name" value="Maßeinheit (mm/Inch) bestimmen">
+    <param name="Local" value="wirhlp10/Ma&szlig;einheit_mm_Inch_bestimmen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Mehrere gleiche Regelflächen bearbeiten">
+    <param name="Name" value="Mehrere gleiche Regelflächen bearbeiten">
+    <param name="Local" value="wirhlp10/Mehrere_gleiche_Regelflaechen_bearbeiten.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Methode zur Entfernung der Anbindung(en)">
+    <param name="Name" value="Methode zur Entfernung der Anbindung(en)">
+    <param name="Local" value="wirhlp10/Methode_zur_Entfernung_der_Anbindung.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Mit Bearbeitung">
+    <param name="Name" value="Mit Bearbeitung von Figur zu Figur">
+    <param name="Local" value="wirhlp10/Mit_Bearbeitung.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Mit Konik">
+    <param name="Name" value="Mit Konik">
+    <param name="Local" value="wirhlp10/Mit_Konik.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Mit Neustart zur Operation springen falls schneller">
+    <param name="Name" value="Mit Neustart zur Operation springen falls schneller">
+    <param name="Local" value="Simulation/Mit_Neustart_zur_Operation_springen_falls_schneller.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Mit Pendelschnitt">
+    <param name="Name" value="Mit Pendelschnitt">
+    <param name="Local" value="wirhlp10/Mit_Pendelschnitt.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="More information on Machine Technology">
+    <param name="Name" value="More information on Machine Technology">
+    <param name="Local" value="wirhlp10/More_information_on_Machine_Technology.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Nachschnitte in Reihenfolge 1  2  3 ...">
+    <param name="Name" value="Nachschnitte in Reihenfolge 1, 2, 3 ...">
+    <param name="Local" value="wirhlp10/Nachschnitte_in_Reihenfolge_1_2_3_.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="NC-Ausgabe Register Operation starten">
+    <param name="Name" value="NC-Ausgabe Register (Operation starten)">
+    <param name="Local" value="wirhlp10/NC_Ausgabe_Register_Operation_starten_.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="NC-Dateiname">
+    <param name="Name" value="NC-Dateiname">
+    <param name="Local" value="wirhlp10/NC_Dateiname.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="NC-Daten editieren / kopieren">
+    <param name="Name" value="NC-Daten editieren / kopieren">
+    <param name="Local" value="Extras/NC_Daten_editieren_kopieren.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="NC-Verzeichnis ändern">
+    <param name="Name" value="Verzeichnis für NC-Daten">
+    <param name="Local" value="wirhlp10/Verzeichnis_f&uuml;r_NC-Daten.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Neue Bearbeitungsoperation erzeugen">
+    <param name="Name" value="Neue Bearbeitungsoperation erzeugen">
+    <param name="Local" value="Operationsmanager/Beispiel_Neue_Bearbeitungsoperation_erzeugen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Neue Operation">
+    <param name="Name" value="Neue Operation">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Neue_Operation.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Normale der Figur / In Z">
+    <param name="Name" value="Normale der Figur / In Z">
+    <param name="Local" value="wirhlp9/Normale_der_Figur_In_Z.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="NUR Anbindungen entfernen">
+    <param name="Name" value="NUR Anbindungen entfernen">
+    <param name="Local" value="wirhlp10/NUR_Anbindungen_entfernen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="NURB-Surface Lasche">
+    <param name="Name" value="NURB-Surface Register">
+    <param name="Local" value="wirhlp10/NURB_Surface_Lasche.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="NURB-Surface projizieren">
+    <param name="Name" value="NURB-Surface/Kurve projizieren">
+    <param name="Local" value="wirhlp9/NURB_Surface_Kurve_projizieren.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="NURB-Surface/Kurve projizieren">
+    <param name="Name" value="NURB-Surface/Kurve projizieren">
+    <param name="Local" value="wirhlp9/NURB_Surface_Kurve_projizieren.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Nächste / Vorherige Konik">
+    <param name="Name" value="Nächste / Vorherige Konik">
+    <param name="Local" value="wirhlp10/Naechste___Vorherige_Konik.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Obere Ebene (Regelflächenbearbeitung)">
+    <param name="Name" value="Obere Ebene">
+    <param name="Local" value="wirhlp10/Obere_Ebene.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Obere Führung">
+    <param name="Name" value="Obere / Untere Führung">
+    <param name="Local" value="wirhlp10/Obere_Untere_Fuehrung.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Offene Figuren bearbeiten">
+    <param name="Name" value="Offene Figuren bearbeiten">
+    <param name="Local" value="wirhlp9/Offene_Figuren_bearbeiten.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Offset (Std.-Konturbearbeitung)">
+    <param name="Name" value="Offset Register">
+    <param name="Local" value="wirhlp10/Offset_Lasche.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Offset ausgeben">
+    <param name="Name" value="Offset ausgeben">
+    <param name="Local" value="wirhlp10/Offset_ausgeben_Std_Konturbea.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Offset automatisch">
+    <param name="Name" value="Offset automatisch">
+    <param name="Local" value="wirhlp10/Offset_automatisch.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Offset automatisch (Offset einstellen)">
+    <param name="Name" value="Offset automatisch">
+    <param name="Local" value="wirhlp10/Offset_automatisch.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Offset Lasche">
+    <param name="Name" value="Offset Register">
+    <param name="Local" value="wirhlp10/Offset_Lasche.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Offset prüfen">
+    <param name="Name" value="Offset prüfen">
+    <param name="Local" value="wirhlp9/Offset_pruefen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Offsettierte Drahtbahnkurven bei Simulationsende behalten">
+    <param name="Name" value="Offsettierte Drahtbahnkurven bei Simulationsende behalten">
+    <param name="Local" value="Simulation/Offsettierte_Drahtbahnkurven_bei_Simulationsende_behalten_Solid_Simulation.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Operation editieren ...">
+    <param name="Name" value="Der Operationsmanager">
+    <param name="Local" value="Operationsmanager/Operation_editieren____.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Operation hervorheben aktivieren / deaktivieren">
+    <param name="Name" value="Operation hervorheben aktivieren / deaktivieren">
+    <param name="Local" value="Operationsmanager/Operation_hervorheben_aktivieren_deaktivieren.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Operation starten">
+    <param name="Name" value="Operation starten">
+    <param name="Local" value="wirhlp10/Operation_starten.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Operationsmanager">
+    <param name="Name" value="Der Operationsmanager">
+    <param name="Local" value="Operationsmanager/Operation_editieren____.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="OPTICAM FeatureManager - Optionen der rechten Maustaste">
+    <param name="Name" value="WIRE-Expert FeatureManager - Optionen der rechten Maustaste">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/OPTICAM_FeatureManager_Optionen_der_rechten_Maustaste.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Optimales Startloch ermitteln">
+    <param name="Name" value="Optimales Startloch ermitteln">
+    <param name="Local" value="wirhlp9/Optimales_Startloch_ermitteln.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Optionen Lasche (Standard Konturbearbeitung)">
+    <param name="Name" value="Optionen Register (Standard Konturbearbeitung)">
+    <param name="Local" value="wirhlp10/Optionen_Lasche_Standard_Konturbearbeitung.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Optionen Register">
+    <param name="Name" value="Optionen Register (Bearbeitungsfigur erzeugen)">
+    <param name="Local" value="wirhlp9/Optionen_Register_Linien_Boegen_Bearbeitungsfigur.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Parallel / Im Winkel ... ausfahren">
+    <param name="Name" value="Parallel zur Einfahrfahne / Im Winkel zur Konturnormalen ausfahren">
+    <param name="Local" value="wirhlp10/Parallel_zur_Einfahrfahne_Im_Winkel_____ausfahren.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Parallel zur Einfahrfahne / Im Winkel ... ausfahren  (Ein/Ausfahrstrategie)">
+    <param name="Name" value="Parallel zur Einfahrfahne / Im Winkel zur Konturnormalen ausfahren">
+    <param name="Local" value="wirhlp10/Parallel_zur_Einfahrfahne_Im_Winkel_____ausfahren.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Parameter Register Operationsmanager">
+    <param name="Name" value="Parameter Register (Operationsmanager)">
+    <param name="Local" value="WIRE_Expert_FeatureManager/Parameter_Register_Operationsmanager_.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Passwort Schutz für den Eingaben speichern Button">
+    <param name="Name" value="Passwort Schutz für die Schaltfläche Eingaben speichern">
+    <param name="Local" value="wirhlp10/Passwort_Schutz_f&uuml;r_den_Eingaben_speichern_Button.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Passwort ändern">
+    <param name="Name" value="Passwort ändern">
+    <param name="Local" value="wirhlp10/Passwort_aendern.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Passwortschutz für Einstellungen">
+    <param name="Name" value="Grafik NC-Bearbeitung neu erzeugen">
+    <param name="Local" value="Simulation/Grafik_NC_Bearbeitung_neu_erzeugen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Positionierung mit Draht - Im Eilgang">
+    <param name="Name" value="Positionierung mit Draht">
+    <param name="Local" value="wirhlp10/Draht_eingefaedelt_Im_Eilgang.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Positionierung mit Draht - Im Vorschub">
+    <param name="Name" value="Positionierung mit Draht">
+    <param name="Local" value="wirhlp10/Draht_eingefaedelt__Im_Vorschub.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Positionierung mit Draht - Zurück zur Startposition">
+    <param name="Name" value="Positionierung mit Draht">
+    <param name="Local" value="wirhlp10/Draht_eingefaedelt_Zurueck_z_Startpos.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Positionierung ohne Draht - Im Eilgang">
+    <param name="Name" value="Positionierung ohne Draht">
+    <param name="Local" value="wirhlp10/Draht_geschnitten_Im_Eilgang.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Positionierung ohne Draht - Im Vorschub">
+    <param name="Name" value="Positionierung ohne Draht">
+    <param name="Local" value="wirhlp10/Draht_geschnitten_Im_Vorschub.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Positionierung ohne Draht - Zurück zur Startposition">
+    <param name="Name" value="Positionierung ohne Draht">
+    <param name="Local" value="wirhlp10/Draht_geschnitten_Zurueck_z_Startpos.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Programm">
+    <param name="Name" value="Programm">
+    <param name="Local" value="WIRE_Expert_FeatureManager/Programmstart_Feature_Man.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="PROJECT THROUGH A SINGLE SHAPE BY A CONSTANT ANGLE">
+    <param name="Name" value="PROJECT THROUGH A SINGLE SHAPE BY A CONSTANT ANGLE">
+    <param name="Local" value="wirhlp9/PROJECT_THROUGH_A_SINGLE_SHAPE_BY_A_CONSTANT_ANGLE_prep.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="PROJECT THROUGH TWO SHAPES">
+    <param name="Name" value="PROJECT THROUGH TWO SHAPES">
+    <param name="Local" value="wirhlp9/PROJECT_THROUGH_TWO_SHAPES_prep.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Präzision der Regelfläche">
+    <param name="Name" value="Präzision der Regelfläche">
+    <param name="Local" value="wirhlp10/Praezision_der_Regelflaeche.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Rauhtiefe">
+    <param name="Name" value="Rauhtiefe">
+    <param name="Local" value="Simulation/Rauhtiefe.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Referenzhöhe">
+    <param name="Name" value="Referenzhöhe">
+    <param name="Local" value="wirhlp10/Referenzhoehe.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Regelfläche mit Rotationsachse">
+    <param name="Name" value="Regelfläche mit Rotationsachse">
+    <param name="Local" value="wirhlp10/Regelfl&auml;che_mit_Rotationsachse.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Regelflächen in mehreren Schnittebenen schneiden">
+    <param name="Name" value="Regelflächen in mehreren Schnittebenen schneiden">
+    <param name="Local" value="wirhlp10/Regelflaechen_in_mehreren_Schnittebenen_schneiden.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Regelflächenbearbeitung">
+    <param name="Name" value="Regelflächenbearbeitung">
+    <param name="Local" value="wirhlp10/Regelflaechenbearbeitung____.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Registerkontrolle (Simulation)">
+    <param name="Name" value="Registerkontrolle (Simulation)">
+    <param name="Local" value="Simulation/Registerkontrolle_Simulation.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Report Optionen">
+    <param name="Name" value="Report Optionen">
+    <param name="Local" value="wirhlp9/Report_Optionen_Optionen_Register_Auto_Matritze.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Richtung automatisch">
+    <param name="Name" value="Richtung automatisch">
+    <param name="Local" value="wirhlp10/Richtung_automatisch.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Richtung automatisch (Std.-Konturbearbeitung)">
+    <param name="Name" value="Richtung automatisch">
+    <param name="Local" value="wirhlp10/Richtung_automatisch.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Rotationsachse konfigurieren">
+    <param name="Name" value="Rotationsachse konfigurieren">
+    <param name="Local" value="wirhlp10/Rotationsachse_konfigurieren.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Rotationsachse Register Standard Konturbearbeitung">
+    <param name="Name" value="Rotationsachse Register (Standard Konturbearbeitung)">
+    <param name="Local" value="wirhlp10/Rotationsachse_Register_Standard_Konturbearbeitung_.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Rückgängig">
+    <param name="Name" value="Rückgängig">
+    <param name="Local" value="Commdata/COMMON_Rueckgaengig.htm">
+    <param name="Name" value="Rückgängig">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Rueckgaengig.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Rückgängig / Wiederholen">
+    <param name="Name" value="Rückgängig / Wiederholen">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/R&uuml;ckg&auml;ngig_Wiederholen_Feature-Erkennung_nach_Fl&auml;chenfarben.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Rückgängig / Wiederholen:Feature-Erkennung nach Flächenfarben">
+    <param name="Name" value="Rückgängig / Wiederholen">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/R&uuml;ckg&auml;ngig_Wiederholen_Feature-Erkennung_nach_Fl&auml;chenfarben.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="s">
+    <param name="Name" value="Strom Ein / Aus">
+    <param name="Local" value="wirhlp9/Strom_Ein_Aus_Zus_M_Codes.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Schaltflächen zur Steuerung der Schnittebenen">
+    <param name="Name" value="Schaltflächen zur Steuerung der Schnittebenen">
+    <param name="Local" value="Simulation/Schaltflaechen_zur_Steuerung_der_Schnittebenen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Schließen">
+    <param name="Name" value="Schließen">
+    <param name="Local" value="Commdata/COMMON_Schliessen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Schneidrichtung voreinstellen">
+    <param name="Name" value="Schneidrichtung voreinstellen">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Schneidrichtung_voreinstellen_Feature-Erkenungs_Einstellungen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Schnitt">
+    <param name="Name" value="Schnitt">
+    <param name="Local" value="Simulation/Schnitt_Simulation.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Schnitt 1">
+    <param name="Name" value="Schnitt 1, 2, 3, ...20 (Farbe einstellen)">
+    <param name="Local" value="wirhlp10/Schnitt_1_2_3_4_5_6_Farben.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Schnitt 1:2: 3: ...10 (Farbe einstellen)">
+    <param name="Name" value="Schnitt 1, 2, 3, ...20 (Farbe einstellen)">
+    <param name="Local" value="wirhlp10/Schnitt_1_2_3_4_5_6_Farben.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Schnitt 1:2: 3: ...10 (Farben bei Bearbeitungssimulation)">
+    <param name="Name" value="Schnitt 1, 2, 3, ...20 (Farbe einstellen)">
+    <param name="Local" value="wirhlp10/Schnitt_1_2_3_4_5_6_Farben.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Schnitt Nr. 1">
+    <param name="Name" value="Schnitt Nr. 1 ,2, 3,  ....">
+    <param name="Local" value="wirhlp10/Schnitt_Nr_123.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Schnitt Nr. 1:2: 3:  ....">
+    <param name="Name" value="Schnitt Nr. 1 ,2, 3,  ....">
+    <param name="Local" value="wirhlp10/Schnitt_Nr_123.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Schnitt:Simulation">
+    <param name="Name" value="Schnitt">
+    <param name="Local" value="Simulation/Schnitt_Simulation.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Schnittluftänderung">
+    <param name="Name" value="Schnittluftänderung">
+    <param name="Local" value="wirhlp9/Schnittluftaenderung____.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Schnittschemen">
+    <param name="Name" value="Schnittschemen">
+    <param name="Local" value="wirhlp10/Schnittschemen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Schnittschemen (Auto Matritzen Stempel)">
+    <param name="Name" value="Schnittschemen (Auto Matrizen Stempel)">
+    <param name="Local" value="wirhlp9/Schnittschemen_Auto_Matritzen_Stempel.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Schrittweite für Transformationen - Simulation">
+    <param name="Name" value="Faktor für Transformationen">
+    <param name="Local" value="Simulation/Faktor_fuer_Transformationen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Sekundärebene">
+    <param name="Name" value="Sekundärebene">
+    <param name="Local" value="wirhlp10/Sekundaerebene.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Sekundärfigur (TWIST) erzeugen">
+    <param name="Name" value="Sekundärfigur (TWIST) erzeugen">
+    <param name="Local" value="wirhlp9/Sekundaerfigur_TWIST_erzeugen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Sekundärfigur erzeugen">
+    <param name="Name" value="Sekundärfigur erzeugen">
+    <param name="Local" value="wirhlp9/Sekundaerfigur_erzeugen____.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Sichtbare Faccettierung - Solid Simulation">
+    <param name="Name" value="Sichtbare Faccettierung">
+    <param name="Local" value="Simulation/Sichtbare_Faccettierung.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Simulation der NC-Bearbeitung">
+    <param name="Name" value="Werkzeugweg Simulation">
+    <param name="Local" value="Simulation/_Standard_Simulation.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Simulation Starten / Stoppen">
+    <param name="Name" value="Simulation Starten / Stoppen">
+    <param name="Local" value="Simulation/Simulation_Starten_Stoppen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Small corner radii">
+    <param name="Name" value="More information on Machine Technology">
+    <param name="Local" value="wirhlp10/More_information_on_Machine_Technology.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="So erzeugt man eine gefilterte Liste (Technologie Datenbank)">
+    <param name="Name" value="So erzeugt man eine gefilterte Liste (Technologie Datenbank)">
+    <param name="Local" value="wirhlp10/So_erzeugt_man_eine_gefilterte_Liste_Technologie_Datenbank.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Solid - Projektions-Assistent">
+    <param name="Name" value="Solid - Projektions-Assistent">
+    <param name="Local" value="wirhlp9/Solid_Projektions_Assistent.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Solid Simulation">
+    <param name="Name" value="Solid Simulation">
+    <param name="Local" value="Simulation/Solid_Simulation.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Sonderfunktionen - Extras Menü">
+    <param name="Name" value="Sonderfunktionen (Extras Menü)">
+    <param name="Local" value="Extras/Sonderfunktionen_Extras_Menue.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Spanwinkel / front. Freiwinkel / seitlicher Freiwi.">
+    <param name="Name" value="Spanwinkel / frontaler Freiwinkel / seitlicher Freiwinkel">
+    <param name="Local" value="wirhlp9/Spanwinkel_frontaler_Freiwinkel_seitlicher_Freiwinkel_Drehstahlbearbeitung.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Speichern (Technologie Datenbank)">
+    <param name="Name" value="Technologie speichern (Technologie Datenbank)">
+    <param name="Local" value="wirhlp10/Technologie_speichern_Technologie_Datenbank.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Spiegeln-Button (Variable Konik)">
+    <param name="Name" value="Spiegeln">
+    <param name="Local" value="wirhlp10/Spiegeln_Variable_Konik.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Sprache">
+    <param name="Name" value="Sprache">
+    <param name="Local" value="wirhlp9/Sprache_Programmstart_Feature_Man.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Standard Konik">
+    <param name="Name" value="Standard Konik">
+    <param name="Local" value="wirhlp10/Standard_Konik.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Standard Konturbearbeitung">
+    <param name="Name" value="Standard Konturbearbeitung">
+    <param name="Local" value="wirhlp10/Standard_Konturbearbeitung____.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Standard Konturbearbeitung + Auto Matrize / Stempel">
+    <param name="Name" value="Standard Konturbearbeitung + Auto Matrize / Stempel">
+    <param name="Local" value="wirhlp10/Standard_Konturbearbeitung_Auto_Matrize_Stempel.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Standard Simulation">
+    <param name="Name" value="Standard Simulation">
+    <param name="Local" value="Simulation/Standard_Simulation.htm">
+    <param name="Name" value=" Standard Simulation">
+    <param name="Local" value="Simulation/_Standard_Simulation.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Startansicht">
+    <param name="Name" value="Startansicht">
+    <param name="Local" value="Simulation/Startansicht_Solid_Sim.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Startloch (Linien/Bögen =&gt; Bearbeitungsfigur)">
+    <param name="Name" value="Startloch (Linien/Bögen =&gt; Bearbeitungsfigur)">
+    <param name="Local" value="wirhlp9/Startloch__Linien_Boegen_Bearbeitungsfigur.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Startloch = Einfügeposition der Figur">
+    <param name="Name" value="Startloch = Einfügeposition der Figur">
+    <param name="Local" value="wirhlp9/Startloch_Einfuegeposition_der_Figur.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Startloch-Einstellungen">
+    <param name="Name" value="Startloch-Einstellungen">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Startloch_Einstellungen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Startlochdatei ausgeben">
+    <param name="Name" value="Startlochdatei ausgeben">
+    <param name="Local" value="wirhlp10/Startlochdatei_ausgeben_Postprozessor_konfigurieren.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Startlochdurchmesser (Taschenerodieren)">
+    <param name="Name" value="Startlochdurchmesser / Beliebiges Startloch">
+    <param name="Local" value="wirhlp10/Startloch_durchmesser.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Startlochgeometrien">
+    <param name="Name" value="Startlochgeometrien">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Startlochgeometrien_Startloch_Einstellungen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Startposition">
+    <param name="Name" value="Startposition">
+    <param name="Local" value="wirhlp10/Startposition.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Startposition für Taschenerodieren">
+    <param name="Name" value="Startposition für Taschenerodieren">
+    <param name="Local" value="wirhlp10/Startposition_fuer_Taschenerodieren.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Starttechnologie">
+    <param name="Name" value="Starttechnologie">
+    <param name="Local" value="wirhlp10/Starttechnologie.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Starttechnologie  (Ein/Ausfahrstrategie)">
+    <param name="Name" value="Starttechnologie">
+    <param name="Local" value="wirhlp10/Starttechnologie.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Stempel Optionen (Auto Matritzen Stempel)">
+    <param name="Name" value="Stempel Optionen (Auto Matrizen Stempel)">
+    <param name="Local" value="wirhlp9/Stempel_Optionen_Auto_Matritzen_Stempel.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Stopp - Anbindung mit dem ersten Schnitt entfernen">
+    <param name="Name" value="Stopp - Anbindung mit dem ersten Schnitt entfernen">
+    <param name="Local" value="wirhlp10/Stopp_Anbindung_mit_dem_ersten_Schnitt_entfernen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Stoppunkt oder Anbindung">
+    <param name="Name" value="Stoppunkt oder Anbindung">
+    <param name="Local" value="wirhlp10/Stoppunkt_oder_Anbindung.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Stoppunkt oder Anbindung (Std.-Konturbearbeitung)">
+    <param name="Name" value="Stoppunkt oder Anbindung">
+    <param name="Local" value="wirhlp10/Stoppunkt_oder_Anbindung.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Strategie Register Operation starten">
+    <param name="Name" value="Strategie Register (Operation starten)">
+    <param name="Local" value="wirhlp10/Strategie_Register_Operation_starten_.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Strom Ein / Aus">
+    <param name="Name" value="Strom Ein / Aus">
+    <param name="Local" value="wirhlp9/Strom_Ein_Aus_Zus_M_Codes.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Synchronisation bei gleicher Elementanzahl">
+    <param name="Name" value="Proportionale Synchronisation">
+    <param name="Local" value="wirhlp10/Proportionale_Synchronisation.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Synchronisationslinien">
+    <param name="Name" value="Synchronisationslinien">
+    <param name="Local" value="wirhlp9/Synchronisationslinien.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Synchronisationslinien Option in Regelflächenbearbeitungsdialogbox">
+    <param name="Name" value="Synchronisationslinien">
+    <param name="Local" value="wirhlp10/Synchronisationslinien_in_dialog_Regelflaeche.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Taschenerodieren / Vollabtragsschnitt">
+    <param name="Name" value="Taschenerodieren">
+    <param name="Local" value="wirhlp10/Taschenerodieren_1.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Technologie Datenbank">
+    <param name="Name" value="Datenbank für Technologie Register">
+    <param name="Local" value="wirhlp10/Datenbank_fuer_Technologie_Lasche.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Technologie Datenbank (Liste der Materialien)">
+    <param name="Name" value="Technologie Datenbank (Liste der Materialien)">
+    <param name="Local" value="wirhlp10/Technologie_Datenbank_Liste_der_Materialien.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Technologie laden (aus Technologie Datenbank)">
+    <param name="Name" value="Technologie laden (aus Technologie Datenbank)">
+    <param name="Local" value="wirhlp10/Technologie_laden_aus_Technologie_Datenbank.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Technologie peichern (Technologie Datenbank)">
+    <param name="Name" value="Technologie speichern (Technologie Datenbank)">
+    <param name="Local" value="wirhlp10/Technologie_speichern_Technologie_Datenbank.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Technologie speichern (Technologie Datenbank)">
+    <param name="Name" value="Technologie speichern (Technologie Datenbank)">
+    <param name="Local" value="wirhlp10/Technologie_speichern_Technologie_Datenbank.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Teilenummer">
+    <param name="Name" value="Teilenummer">
+    <param name="Local" value="wirhlp10/Teilenummer.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Tempo Button (Simulation)">
+    <param name="Name" value="Tempo (Drahtmodell-Simulation)">
+    <param name="Local" value="Simulation/Tempo_Button_Simulation.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Toleranz für Linien/Bogenverbindung">
+    <param name="Name" value="Toleranz für Linien/Bogenverbindung">
+    <param name="Local" value="wirhlp9/Toleranz_fuer_Linien_Bogenverbindung_Linien_Boegen_Bearbeitungsfigur.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Topologie von Solidgeometrien">
+    <param name="Name" value="Topologie von Solidgeometrien">
+    <param name="Local" value="Operationsmanager/Topologie_von_Solidgeometrien.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Transformieren auf aktuellen Nullpunkt">
+    <param name="Name" value="Maximale Abweichung">
+    <param name="Local" value="wirhlp9/Maximale_Abweichung.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Tranzparanz (für Rohteildarstellung) - Simulation">
+    <param name="Name" value="Transparenz">
+    <param name="Local" value="Simulation/Tranzparanz_fuer_Rohteildarstellung.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Umbenennen">
+    <param name="Name" value="Umbenennen">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Umbenennen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Umfangs Parameter">
+    <param name="Name" value="Umfangs Parameter">
+    <param name="Local" value="wirhlp9/Umfangs_Parameter_Auto_Matritzen_Stempel.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Umriss projizieren">
+    <param name="Name" value="Umriss projizieren">
+    <param name="Local" value="Operationsmanager/Umriss_projizieren.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Umriß projizeren Feature">
+    <param name="Name" value="Umriß projizeren Feature">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Umri&szlig;_projizeren_Feature_Neues_Bearbeitungsobjekt.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Untere Ebene">
+    <param name="Name" value="Untere Ebene">
+    <param name="Local" value="wirhlp10/Untere_Ebene.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Untere Ebene (Regelflächenbearbeitung)">
+    <param name="Name" value="Untere Ebene">
+    <param name="Local" value="wirhlp10/Untere_Ebene.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Variable Bearbeitungsebenen">
+    <param name="Name" value="Variable Bearbeitungsebenen">
+    <param name="Local" value="wirhlp9/Variable_Bearbeitungsebenen____.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Variable Konik programmieren">
+    <param name="Name" value="Variable Konik programmieren">
+    <param name="Local" value="wirhlp10/Variable_Konik_programmieren.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Variablen Konik">
+    <param name="Name" value="Beispielprogramm zur variablen Konik.">
+    <param name="Local" value="wirhlp10/Beispiel_Variable_Konik_programmieren.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Variablen Konik:Beipielprogramm">
+    <param name="Name" value="Beispielprogramm zur variablen Konik.">
+    <param name="Local" value="wirhlp10/Beispiel_Variable_Konik_programmieren.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Vektorisierungs Toleranz">
+    <param name="Name" value="Vektorisierungs Toleranz">
+    <param name="Local" value="wirhlp10/Vektorisierungs_Toleranz_Standardkonturbearbeitung.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Verfügbare Farblisten">
+    <param name="Name" value="Verfügbare Farblisten">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Verf&uuml;gbare_Farblisten_Feature-Erkennung_nach_Fl&auml;chenfarben.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Vergleich (Zielteilvergleich) - Solid Simulation">
+    <param name="Name" value="Vergleich (Zielteilvergleich)">
+    <param name="Local" value="Simulation/Vergleich_Zielteilvergleich.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Verhältnisradius">
+    <param name="Name" value="Verhältnisradius">
+    <param name="Local" value="wirhlp10/Verhaeltnisradius.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Verschieben">
+    <param name="Name" value="Einfügen">
+    <param name="Local" value="Operationsmanager/Einfuegen_Operationsliste.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Verwende beliebiges Startloch">
+    <param name="Name" value="Verwende unregelmäßiges Startloch">
+    <param name="Local" value="wirhlp10/Verwende_beliebiges_Startloch.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Voreinstellungen - WIRE-Expert">
+    <param name="Name" value="Voreinstellungen">
+    <param name="Local" value="wirhlp9/Voreinstellungen_Wire_Expert_konfigurieren.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Vorgabe für Figurnamen">
+    <param name="Name" value="Vorgabe für Figurnamen">
+    <param name="Local" value="wirhlp9/Vorgabe_fuer_Figurnamen_Linien_Boegen_Bearbeitungsfigur.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Vorhandene Bearbeitungsoperation ändern">
+    <param name="Name" value="Vorhandene Bearbeitungsoperation ändern">
+    <param name="Local" value="Operationsmanager/Beispiel_Vorhandene_Bearbeitungsoperation_&auml;ndern.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Vorhandene Bearbeitungsoperationen deaktivieren/aktivieren">
+    <param name="Name" value="Vorhandene Bearbeitungsoperationen deaktivieren/aktivieren">
+    <param name="Local" value="Operationsmanager/Beispiel_Vorhandene_Bearbeitungsoperationen_deaktivieren_aktivieren.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Vorlagen automatisch zuweisen">
+    <param name="Name" value="Vorlagen automatisch zuweisen">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Vorlagen_automatisch_zuweisen_Einstellungen_Feature-Erkenungs_Einstellungen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Weitere Optionen">
+    <param name="Name" value="Weitere Optionen">
+    <param name="Local" value="wirhlp9/Weitere_Optionen_1_Wire-Expert_konfigurieren.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Welcome">
+    <param name="Name" value="Welcome">
+    <param name="Local" value="Wire_049/Welcome.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Werkstücke mit Bund und Konik bearbeiten">
+    <param name="Name" value="Werkstücke mit Bund und Konik bearbeiten">
+    <param name="Local" value="wirhlp10/Werkstuecke_mit_Bund_und_Konik_bearbeiten.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Werkzeuge mit Bund und Konik bearbeiten">
+    <param name="Name" value="Werkstücke mit Bund und Konik bearbeiten">
+    <param name="Local" value="wirhlp10/Werkstuecke_mit_Bund_und_Konik_bearbeiten.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Wiederherstellen">
+    <param name="Name" value="Wiederherstellen">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Wiederherstellen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Wiederholen / Wiederherstellen">
+    <param name="Name" value="Wiederholen / Wiederherstellen">
+    <param name="Local" value="Commdata/COMMON_Wiederholen_Wiederherstellen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Willkommen zum PEPS Hilfesystem 2.5D Fräsen">
+    <param name="Name" value="Willkommen zum PEPS Hilfesystem Drahterodieren">
+    <param name="Local" value="Welcome/Willkommen_zum_PEPS_Hilfesystem_Drahterodieren.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Winkel zur Normalen (Auto Matritzen Stempel)">
+    <param name="Name" value="Winkel zur Normalen (Auto Matrizen Stempel)">
+    <param name="Local" value="wirhlp9/Winkel_zur_Normalen_Auto_Matritzen_Stempel.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Winkelinkrement für Rotationen - Simulation">
+    <param name="Name" value="Winkelinkrement für Rotationen">
+    <param name="Local" value="Simulation/Winkelinkrement_f&uuml;r_Rotationen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="WIRE-Expert FeatureManager">
+    <param name="Name" value="WIRE-Expert FeatureManager">
+    <param name="Local" value="WIRE_Expert_FeatureManager/WIRE_Expert_FeatureManager.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="WIRE-Expert Prinzip der automatisierten Bearbeitung">
+    <param name="Name" value="WIRE-Expert Prinzip der automatisierten Bearbeitung">
+    <param name="Local" value="WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="WIRE-Expert_Prinzip der automatisierten Bearbeitung">
+    <param name="Name" value="WIRE-Expert Prinzip der automatisierten Bearbeitung">
+    <param name="Local" value="WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Wizard-Dialogbox">
+    <param name="Name" value="Wizard-Dialogbox">
+    <param name="Local" value="Commdata/COMMON_Wizard.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="WKZ Register (Einstellungen)">
+    <param name="Name" value="Toleranzen Register (Einstellungen)">
+    <param name="Local" value="Simulation/Toleranzen_Register_Einstellungen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="X- und Y-Skalierfaktor">
+    <param name="Name" value="X- und Y-Skalierfaktor">
+    <param name="Local" value="wirhlp9/X_und_Y_Skalierfaktor.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="XY-Position und Winkelanzeige (Simulation)">
+    <param name="Name" value="XY-Position und Winkelanzeige (Drahtmodell-Simulation)">
+    <param name="Local" value="Simulation/XY_Position_und_Winkelanzeige_Simulation.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="XY-Skalieren (Figur projizieren / skalieren)">
+    <param name="Name" value="XY-Skalieren (Figur projizieren / skalieren)">
+    <param name="Local" value="wirhlp9/XYZ_Skalieren_Figur_projizieren_skalieren.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="XYZ-Skalieren (Figur projizieren / skalieren)">
+    <param name="Name" value="XY-Skalieren (Figur projizieren / skalieren)">
+    <param name="Local" value="wirhlp9/XYZ_Skalieren_Figur_projizieren_skalieren.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Zeige alle Figuren (Regelflächenbearbeitung)">
+    <param name="Name" value="Zeige alle Figuren">
+    <param name="Local" value="wirhlp10/Zeige_alle_Figuren.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Zeige alle Figuren (Std.-Konturbearbeitung)">
+    <param name="Name" value="Zeige alle Figuren">
+    <param name="Local" value="wirhlp10/Zeige_alle_Figuren_Std_Konturbea.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Zeige Komponenten am Kollisionsort innerhalb">
+    <param name="Name" value="Zeige Komponenten am Kollisionsort innerhalb">
+    <param name="Local" value="Simulation/Zeige_Komponenten_am_Kollisionsort_innerhalb_Solid_Simulation.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Zoom Faktor - Simulation">
+    <param name="Name" value="Faktor für Zoomen">
+    <param name="Local" value="Simulation/Faktor_f&uuml;r_Zoomen_Simulation.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Zu erzeugende Featuretypen">
+    <param name="Name" value="Zu erzeugende Featuretypen">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Zu_erzeugende_Featuretypen_Feature-Erkenungs_Einstellungen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Zuerst ALLE Schruppschnitte">
+    <param name="Name" value="Zuerst ALLE Schruppschnitte">
+    <param name="Local" value="wirhlp10/Zuerst_ALLE_Schruppschnitte.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Zuerst ausräumen">
+    <param name="Name" value="Zuerst ausräumen">
+    <param name="Local" value="wirhlp10/Zuerst_ausraeumen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Zurück zur Startposition">
+    <param name="Name" value="Zurück zur Startposition">
+    <param name="Local" value="wirhlp10/Zurueck_zur_Startposition____.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Zusätzliche Anbindungen">
+    <param name="Name" value="Zusätzliche Anbindungen">
+    <param name="Local" value="wirhlp10/Zusaetzliche_Anbindungen_in_Bearbeitung_dialog.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Zusätzliche M-Codes">
+    <param name="Name" value="Codes">
+    <param name="Local" value="wirhlp10/Codes_Zusaetzliche.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Zusätzliche M-Codes: Kommentare u.a. ...">
+    <param name="Name" value="Zusätzliche M-Codes, Kommentare u.a.">
+    <param name="Local" value="wirhlp9/Zusaetzliche_M_Codes_Kommentare_u_a_____.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Zusätzliche Technologien">
+    <param name="Name" value="Extra (Technologien / M-Codes)">
+    <param name="Local" value="wirhlp10/Extra_Techn_M_Cddes.htm">
+    <param name="Name" value="Zusätzliche Technologien">
+    <param name="Local" value="wirhlp9/Zusaetzliche_Technologien____.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Zusätzlicher Stopp für Anbindung entfernen">
+    <param name="Name" value="Zusätzlicher Stopp für Anbindung entfernen">
+    <param name="Local" value="wirhlp10/Zusaetzlicher_Stopp_fuer_Anbindung_entfernen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Zusätzliches Offset">
+    <param name="Name" value="Zusätzlicher Offset">
+    <param name="Local" value="wirhlp10/Zusaetzliches_Offset.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="1 Schnitt für Anbindungen entfernen">
+    <param name="Name" value="1 Schnitt für Anbindungen entfernen">
+    <param name="Local" value="wirhlp10/1_Schnitt_fuer_Anbindungen_entfernen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="3D Offset">
+    <param name="Name" value="3D Offset">
+    <param name="Local" value="wirhlp10/3D_Offset.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Überlappung">
+    <param name="Name" value="Abstand der Mittelpunktsbahnen">
+    <param name="Local" value="wirhlp10/Ueberlappung_Taschenerodieren.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Einseitiger Tangentialdrehstahl">
+    <param name="Name" value="Einseitiger Tangentialdrehstahl">
+    <param name="Local" value="wirhlp9/Einseitiger_Tangentialdrehstahl.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Einseitiger/Wechselseitiger Tangentialdrehstahl">
+    <param name="Name" value="Einseitiger/Wechselseitiger Tangentialdrehstahl">
+    <param name="Local" value="wirhlp9/Einseitiger_Wechselseitiger_Tangentialdrehstahl.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Wechselseitiger Tangentialdrehstahl">
+    <param name="Name" value="Wechselseitiger Tangentialdrehstahl">
+    <param name="Local" value="wirhlp9/Wechselseitiger_Tangentialdrehstahl.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Radienmanipulation">
+    <param name="Name" value="Radienmanipulation">
+    <param name="Local" value="wirhlp9/Radienmanipulation.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Teilefiguren erzeugen">
+    <param name="Name" value="Teilefiguren erzeugen">
+    <param name="Local" value="wirhlp10/Teilefiguren_erzeugen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Partielles Ausräumen">
+    <param name="Name" value="Partielles Ausräumen">
+    <param name="Local" value="wirhlp10/Partielles_Ausr&auml;umen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Ausfallteil Sicherung">
+    <param name="Name" value="Ausfallteil sicherung">
+    <param name="Local" value="wirhlp10/Ausfallteil_Sicherung.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Ausfallteil Sicherung Typ 3">
+    <param name="Name" value="Ausfallteil Sicherung Typ 3">
+    <param name="Local" value="wirhlp10/Ausfallteil_Sicherung_Typ_3.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Ausfallteil Sicherung Typ 1">
+    <param name="Name" value="Ausfallteil Sicherung Typ 1">
+    <param name="Local" value="wirhlp10/Ausfallteil_Sicherung_Typ1.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Ausfallteil Sicherung Typ 2">
+    <param name="Name" value="Ausfallteil Sicherung Typ 2">
+    <param name="Local" value="wirhlp10/Ausfallteil_Sicherung_Typ_2.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Ausfallteil Sicherung Typ 4">
+    <param name="Name" value="Ausfallteil Sicherung Typ 4">
+    <param name="Local" value="wirhlp10/Ausfallteil_Sicherung_Typ_4.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Ausfallteil Sicherung Typ 5">
+    <param name="Name" value="Ausfallteil Sicherung Typ 5">
+    <param name="Local" value="wirhlp10/Ausfallteil_Sicherung_Typ_5.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Drahtmodell - Projektions-Assistent">
+    <param name="Name" value="Drahtmodell - Projektions-AssistentXXX">
+    <param name="Local" value="wirhlp9/Drahtmodell_Projektions_Assistent.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="NC-Code Datenbank">
+    <param name="Name" value="NC-Code Datenbank">
+    <param name="Local" value="Extras/NC-Code_Datenbank.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Modul Einstellungen Dialog - Drahterodieren">
+    <param name="Name" value="Modul Einstellungen Dialog - Drahterodieren">
+    <param name="Local" value="Extras/Modul_Einstellungen_Dialog_-_Drahterodieren.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="NC-Code Simulation">
+    <param name="Name" value="NC-Code Simulation XXX TO DO">
+    <param name="Local" value="Extras/NC-Code_Simulation_XXX_TO_DO.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Alle Solids ausblenden ausser diesem">
+    <param name="Name" value="Alle Solids ausblenden ausser diesem">
+    <param name="Local" value="Operationsmanager/Alle_Solids_ausblenden_ausser_diesem.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Boxauswahl verwenden">
+    <param name="Name" value="Boxauswahl verwenden">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Boxauswahl_verwenden.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Flächen nicht verwenden kleiner als">
+    <param name="Name" value="Flächen nicht verwenden kleiner als">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Faces_deren_Fl&auml;che_kleiner_ist_nicht_erkennen_Feature-Erkenungs_Einstellungen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Auf eine Farbe begrenzen">
+    <param name="Name" value="Auf eine Farbe begrenzen">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Auf_eine_Farbe_begrenzen_Neues_Bearbeitungsobjekt.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Farbliste verwenden">
+    <param name="Name" value="Farbliste verwenden XXXCHECK">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Farbliste_verwenden_Bearbeitungsobjekt_Erkennung_automatisch.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Startloch Einstellungen verwenden">
+    <param name="Name" value="Startloch Einstellungen verwenden XXXCHECK">
+    <param name="Local" value="WIRE_ExpertRH_context_Menu/Startloch_Einstellungen_verwenden_Feature-Erkenungs_Einstellungen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="4 Achsen ausräumen - Beispiel">
+    <param name="Name" value="4 Achs Ausräumen Beispiel">
+    <param name="Local" value="wirhlp10/Beispiel_4_Achs_Ausr&auml;umen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Maschinenraum Simulation - Übersicht">
+    <param name="Name" value="Maschinenraum Simulation - Übersicht">
+    <param name="Local" value="Simulation/Maschinenraum-Simulation_Beschreibung_der_Benutzeroberfl&auml;che/Maschinenraum_Simulation_-_&Uuml;bersicht.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Maschinenraum-Simulation - ?Das Simulationsfenster">
+    <param name="Name" value="Maschinenraum-Simulation - ?Das Simulationsfenster">
+    <param name="Local" value="Simulation/Maschinenraum-Simulation_Beschreibung_der_Benutzeroberfl&auml;che/Machine_Simulation_Simulation_Window.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Maschinenraum Simulation - Datei Menü">
+    <param name="Name" value="Maschinenraum Simulation - Datei Menü">
+    <param name="Local" value="Simulation/Maschinenraum-Simulation_Beschreibung_der_Benutzeroberfl&auml;che/Maschinenraum_Simulation_-_Datei_Men&uuml;.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Maschinenraum-Simulation Optionen Dialog">
+    <param name="Name" value="Maschinenraum-Simulation Optionen Dialog">
+    <param name="Local" value="Simulation/Maschinenraum-Simulation_Beschreibung_der_Benutzeroberfl&auml;che/Machine_Simulator_Options.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Maschinenraum-Simulation - Schaltflächen der Menüzeile">
+    <param name="Name" value="Maschinenraum-Simulation - Schaltflächen der Menüzeile">
+    <param name="Local" value="Simulation/Maschinenraum-Simulation_Beschreibung_der_Benutzeroberfl&auml;che/Tool_bar_icons_1.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Maschinenraum Simulation - Schnellzugriffsleiste">
+    <param name="Name" value="Maschinenraum Simulation - Schnellzugriffsleiste">
+    <param name="Local" value="Simulation/Maschinenraum-Simulation_Beschreibung_der_Benutzeroberfl&auml;che/Maschinenraum_Simulation_-_Schnellzugriffsleiste.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Simulation Menü">
+    <param name="Name" value="Das Simulation Menü">
+    <param name="Local" value="Simulation/Das_Simulation_Men&uuml;.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Analyse (Rohteil)">
+    <param name="Name" value="XXX Analyse (Rohteil)">
+    <param name="Local" value="Simulation/MW_Sim_Windows/Stock_Analysis.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Einfahren Bogen mit Eckenmodus">
+    <param name="Name" value="Einfahren - Modi">
+    <param name="Local" value="wirhlp10/Einfahren_Modi.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Offset (im Dialog)">
+    <param name="Name" value="Beispiel: Offset (im Dialog: Bearbeitung einstellen) XXX TEXTE ANPASSEN">
+    <param name="Local" value="wirhlp10/Offset_im_Dialog_Bearbeitung_einstellen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Offset (im Dialog:Bearbeitung einstellen)">
+    <param name="Name" value="Beispiel: Offset (im Dialog: Bearbeitung einstellen) XXX TEXTE ANPASSEN">
+    <param name="Local" value="wirhlp10/Offset_im_Dialog_Bearbeitung_einstellen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Schnittschema laden, speichern">
+    <param name="Name" value="Schnittschema laden oder speichern  XXXCHANGED">
+    <param name="Local" value="wirhlp10/Schnittschema_laden_speichern.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Schnittschemen nachladen">
+    <param name="Name" value="Schnittschemen nachladen">
+    <param name="Local" value="wirhlp10/Schnittschemen_nachladen.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Freihand erodieren">
+    <param name="Name" value="Freihand erodieren">
+    <param name="Local" value="wirhlp10/Freihand_erodieren.htm">
+  </object>
+</ul>
+</html>

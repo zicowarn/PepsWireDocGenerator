@@ -1,0 +1,87 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Einstellungen (Einstellen der Schnittmethode)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Einstellungen (Einstellen der Schnittmethode)" %}</p><p>{% trans "Die Schaltfläche [Einstellungen] wird verwendet, um den Dialog [Bearbeitung einstellen] aufzurufen. In dieser kann man für eine Konturbearbeitung die Parameter für [Schnitte], [Anbindungen], [Ein/Ausfahren], [Offset], [Datenbank], [Farben] einstellen." %}</p><p class="hcp2"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp2"> </p>
+<p><img src="../CUTSETMU_shg.gif" usemap="#AreaMap0" alt="CUTSETMU_shg.gif" width="358" height="515" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="63, 38, 120, 60" href="Anbinden_Lasche.htm" alt=""/>
+<area shape="rect" coords="121, 41, 198, 62" href="Ein_Ausfahren_Lasche.htm" alt=""/>
+<area shape="rect" coords="199, 44, 241, 64" href="Offset_Lasche.htm" alt=""/>
+<area shape="rect" coords="240, 41, 288, 64" href="Datenbank_fuer_Technologie_Lasche.htm" alt=""/>
+<area shape="rect" coords="18, 91, 110, 110" href="javascript:BSSCPopup('Offset_ausgeben_Std_Konturbea.htm',400,500);" id="area1" alt=""/>
+<area shape="rect" coords="148, 89, 287, 109" href="Innere_Ecken_modifizieren.htm" alt=""/>
+<area shape="rect" coords="22, 111, 87, 131" href="javascript:BSSCPopup('../Commdata/COMMON_Nicht_verwendete_Funktion.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="151, 109, 313, 134" href="javascript:BSSCPopup('Zusaetzliches_Offset.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="22, 137, 58, 413" href="javascript:BSSCPopup('Schnitt_Nr_123.htm',400,500);" id="area4" alt=""/>
+<area shape="rect" coords="68, 136, 101, 407" href="javascript:BSSCPopup('Mit_Konik.htm',400,300);" id="area5" alt=""/>
+<area shape="rect" coords="103, 134, 144, 405" href="javascript:BSSCPopup('Ecken_Strategie.htm',400,600);" id="area6" alt=""/>
+<area shape="rect" coords="150, 135, 196, 414" href="javascript:BSSCPopup('Offset_im_Dialog_Bearbeitung_einstellen.htm',400,300);" id="area7" alt=""/>
+<area shape="rect" coords="207, 137, 246, 413" href="javascript:BSSCPopup('Tech______Technologie_zuweisen.htm',400,600);" id="area8" alt=""/>
+<area shape="rect" coords="250, 138, 325, 417" href="Extra_Techn_M_Cddes.htm" id="area9" alt=""/>
+<area shape="rect" coords="18, 422, 119, 445" href="javascript:BSSCPopup('Mit_Pendelschnitt.htm',400,300);" id="area10" alt=""/>
+<area shape="rect" coords="233, 446, 334, 469" href="javascript:BSSCPopup('Schnitt_Nr_123.htm',400,300);" id="area11" alt=""/>
+<area shape="rect" coords="13, 479, 78, 501" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area12" alt=""/>
+<area shape="rect" coords="91, 482, 158, 504" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area13" alt=""/>
+<area shape="rect" coords="264, 487, 331, 509" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area14" alt=""/>
+<area shape="rect" coords="164, 480, 268, 504" href="javascript:BSSCPopup('Eingaben_speichern_Offset_einstellen.htm',400,300);" id="area15" alt=""/>
+<area shape="rect" coords="17, 443, 113, 467" href="Schnittfarbe_Standard_Konturbearbeitung.htm" alt=""/>
+<area shape="rect" coords="19, 65, 330, 90" href="javascript:BSSCPopup('Technologie_von_Schnittschema_Std_Konturbea.htm',400,400);" id="area16" alt=""/>
+</map> </p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+	FilePopupInit('area3');
+	FilePopupInit('area4');
+	FilePopupInit('area5');
+	FilePopupInit('area6');
+	FilePopupInit('area7');
+	FilePopupInit('area8');
+	FilePopupInit('area10');
+	FilePopupInit('area11');
+	FilePopupInit('area12');
+	FilePopupInit('area13');
+	FilePopupInit('area14');
+	FilePopupInit('area15');
+	FilePopupInit('area16');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

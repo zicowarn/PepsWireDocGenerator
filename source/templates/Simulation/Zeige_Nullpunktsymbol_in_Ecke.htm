@@ -1,0 +1,38 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Zeige Nullpunktsymbol in Ecke" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Zeige Nullpunktsymbol in Ecke" %}</p><p>{% trans "Ist diese Option aktiv, wird ein Nullpunktsymbol gezeigt, dass die Lage der Achsen X, Y und Z zeigen soll." %}</p>
+<p>{% trans "Die Anzeige dient der besseren Orientierung, wenn die Bildschirmansicht interaktiv rotiert wird." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><img src="../Zeige_Nullpunktsymbol_Ecke_SIM.gif" alt="Zeige_Nullpunktsymbol_Ecke_SIM.gif" width="493" height="222" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

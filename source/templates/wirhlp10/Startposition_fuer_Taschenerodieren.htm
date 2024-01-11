@@ -1,0 +1,51 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Startposition für Taschenerodieren" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Startposition für Taschenerodieren" %}</p><p>{% trans "In den meisten Fällen ist die Position der Startlochbohrung vorgegeben, da die Bohrung schon im Werkstück eingebracht wurde." %}</p>
+<p>{% trans "Die Position wird bei der Erzeugung der Bearbeitungsfigur (Siehe Befehl #[Linien/Bögen =&amp;gt; Bearbeitungsfigur]# im Menü [Vorbereitung]) als Startposition verwendet." %}</p>
+<p>{% trans "Wenn noch keine Startlochbohrung im Werkstück vorhanden ist und Sie die optimale Position und Größe für die Bohrung ermitteln wollen, können Sie den Befehl #[Optimales Startloch ermitteln]# (Siehe Menü [Vorbereitung]) verwenden." %}</p>
+<p>{% trans "Dieser Befehl ermittelt die optimale Startposition und verändert die Startposition (C-Punkt) und die Anfahrposition auf der Geometrie (C-Punkt) der gewählten Bearbeitungsfigur. Durch die Ermittlung der optimalen Startlochposition und Größe kann die Bearbeitungszeit reduzieren. Das folgende Beispiel zeigt eine optimierte Startlochbohrung." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../POCKAPP2.gif" alt="POCKAPP2.gif" width="430" height="278" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "[Hinweis]: Das Startloch wird als Insel betrachtet und sollte nicht zu groß definiert werden." %}</p>
+<p>{% trans "Dies ist erforderlich, damit noch genügend Platz für den Draht vorhanden ist, um durch die Lücke zwischen der Insel und der Matrizenkante hindurch zu fahren." %}</p>
+<p>{% trans "Verkleinern Sie einfach den Wert für den Startlochdurchmesser, falls der Draht nicht durch die Lücke passt." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

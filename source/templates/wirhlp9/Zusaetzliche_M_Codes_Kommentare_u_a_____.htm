@@ -1,0 +1,88 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Zusätzliche M-Codes, Kommentare u.a. XXXBILD" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;"><img src="../extrmcod.gif" alt="extrmcod.gif" width="27" height="27" border="0"/>  Zusätzliche M-Codes, Kommentare u.a.</p><p>{% trans "Der Befehl [Zusätzliche M-Codes, Kommentare u.a. ...] findet Anwendung, wenn an bestimmten Positionen einer Bearbeitungsfigur [zusätzliche] NC-Codes eingebracht werden müssen." %}</p>
+<p>{% trans "Nach Aufruf des Befehls wird der Anwender aufgefordert die Bearbeitungsfigur zu wählen, an welche die [zusätzlichen] NC-Codes eingebracht werden sollen." %}</p>
+<p>{% trans "Verwenden Sie die Fangfunktionen um die Positionen der zusätzlichen NC-Codes festzulegen. Nach der Eingabe der Position erfolgt der Aufruf eines Dialogs." %}</p>
+<p>{% trans "Bestimmen Sie dort die zusätzliche M-Funktion, Kommentar oder Spezialfunktion welche in die NC-Daten ausgegeben werden soll." %}</p>
+<p>{% trans "Jeder zusätzlicher NC-Code wird durch ein kleines grünes Kreissymbol symbolisiert." %}</p>
+<p class="hcp2"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp2"> </p>
+<p><img src="../EXTR_M_C_shg.gif" usemap="#AreaMap0" alt="EXTR_M_C_shg.gif" width="304" height="250" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="111, 51, 286, 88" href="javascript:BSSCPopup('Stoppunkt_Optionaler_Stoppunkt_Zus_M_Codes.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="112, 89, 288, 137" href="javascript:BSSCPopup('Strom_Ein_Aus_Zus_M_Codes.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="16, 149, 288, 174" href="javascript:BSSCPopup('Kommentar_Zus_M_Codes.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="18, 181, 288, 205" href="javascript:BSSCPopup('Beliebiger_NC_Satz_Zus_M_Codes.htm',400,300);" id="area4" alt=""/>
+<area shape="rect" coords="21, 216, 101, 234" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area5" alt=""/>
+<area shape="rect" coords="107, 211, 195, 232" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area6" alt=""/>
+<area shape="rect" coords="201, 212, 287, 235" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area7" alt=""/>
+</map> </p>
+<p>{% trans "[Hinweis]: Dieser Dialog variiert je nach gewählter CNC-Maschine." %}</p>
+<p class="hcp2"> </p>
+<p>{% trans "Innerhalb des Befehls stehen drei Optionen für Transformationen zur Verfügung:" %}</p>
+<p>{% trans "[Codes kopieren + verschieben], [Codes kopieren + rotieren] und [Codes spiegeln] (siehe [rechte Maustaste] od. [horizontale Ikonenleiste])." %}</p>
+<p>{% trans "Die Optionen finden bei symmetrischen Formen Verwendung, die das Kopieren von vorhandenen NC-Codesymbolen erlauben." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../BUTT_ZUS_M.gif" alt="BUTT_ZUS_M.gif" width="261" height="198" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "Beachten Sie auch die Option [Löschen] (siehe [rechte Maustaste] od. [horizontale Ikonenleiste]), die das Löschen von fehlerhaften NC-Codesymbolen erlaubt." %}</p>
+<p>{% trans "Mit der Option [Codes editieren] können Sie vorhandene NC-Codesymbole editieren um die Parameter des Symbols zu verändern." %}</p>
+<p>{% trans "Zusätzliche NC-Codes [sollten immer VOR] der Programmierung der Bearbeitungsstrategie bestimmt werden. Sie können diese aber [auch nachträglich] bestimmen." %}</p>
+<p class="hcp2"> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
+<p>{% trans "#[Zusätzlichen M-Code, NC-Code usw. in eine Bearbeitung einbringen]#" %}</p>
+<p class="hcp2"> </p>
+<p class="Hinweis">{% trans "Wichtiger Hinweis:" %}</p>
+<p>{% trans "Die zusätzlichen [NC-Codes werden nur dann ausgegeben], wenn die Checkbox [Extra-Code] im Dialog [Bearbeitung einstellen] [aktiviert] ist (Siehe folgende Abbildung)." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../TECHN_2.gif" alt="TECHN_2.gif" width="319" height="115" border="0"/></p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+	FilePopupInit('area3');
+	FilePopupInit('area4');
+	FilePopupInit('area5');
+	FilePopupInit('area6');
+	FilePopupInit('area7');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

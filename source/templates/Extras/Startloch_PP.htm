@@ -1,0 +1,50 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Startloch PP" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Extra.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    img.hcp1 { border:none; }
+    span.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Startloch-PP (Postprozessoren)" %}</p><p> </p>
+<p>{% trans "Öffnet einen Dialog zur Auswahl von [Startlochpostprozessoren]." %}</p>
+<p>{% trans "[Startlochpostprozessoren] erlauben es, die XY-Koordinaten von Startlochbohrungen als NC-Daten lesbar, für CNC-gesteuerte Startlochbohrmaschinen auszugeben." %}</p>
+<p> </p>
+<p><img src="../Startloch_PP_Dialog.gif" alt="" border="0" class="hcp1"/></p>
+<p class="Hinweis"> </p>
+<p class="Hinweis">{% trans "Hinweise:" %}</p>
+<p>{% trans "1.) Diese Funktion ist optional." %}</p>
+<p>{% trans "2.) Weitere Postprozessoren sind auf Anfrage lieferbar." %}</p>
+<p> </p>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,46 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Einstellungen Button (Regelflächenbearbeitung)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Einstellungen Schaltfläche (Regelflächenbearbeitung)" %}</p><p>{% trans "Die Schaltfläche [Einstellungen] ruft den Dialog [Bearbeitung einstellen] auf." %}</p>
+<p>{% trans "Der Dialog ist identisch mit dem Dialog #[Bearbeitung einstellen]# des Befehls #[Standard Konturbearbeitung]#." %}</p>
+<p>{% trans "Beachten Sie, dass wenn [mehrere gleiche Regelflächen] an verschiedenen Positionen geschnitten werden soll, es ausreicht nur die [untere Figur der Regelfläche] an die entsprechende Position zu [kopieren]." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Siehe auch:" %}</p>
+<p>{% trans "#[Der Dialog: Bearbeitung einstellen]#" %}</p>
+<p>{% trans "#[Mehrere identische Regelflächen bearbeiten]#" %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

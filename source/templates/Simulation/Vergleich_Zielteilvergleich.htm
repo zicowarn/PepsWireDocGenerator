@@ -1,0 +1,62 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Vergleich (Zielteilvergleich)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Vergleich (Zielteilvergleich)" %}</p><p>{% trans "Mit dieser Schaltfläche können Sie einen [optischen Vergleich] zwischen dem Werkstück und der Simulationsgrafik ausführen." %}</p><p>{% trans "Auf diese Weise können Sie [unbearbeitete Werkstückbereiche] (Restmaterial) und [Hinterschnitte/Beschädigungen] (Gouges) sichtbar machen." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Zielteilvergleich.gif" alt="Zielteilvergleich.gif" width="503" height="285" border="0"/></p>
+<p class="hcp2"> </p>
+<p style="margin-left: 4.50pt;" class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Zielteilvergleich_dia_shg.gif" usemap="#AreaMap0" alt="Zielteilvergleich_dia_shg.gif" width="132" height="221" border="0"/> <map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="6,30,130,119" href="javascript:BSSCPopup('Optionen_Zielteilvergleich.htm',400,500);" id="area1" alt=""/>
+<area shape="rect" coords="4,122,126,188" href="javascript:BSSCPopup('Anzeigen_Zielteilvergleich.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="14,192,113,209" href="javascript:BSSCPopup('../Commdata/COMMON_Schliessen.htm',400,300);" id="area3" alt=""/></map></p>
+<p class="hcp2"> </p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "Zielteilvergleiche können nur ausgeführt werden, wenn Sie im Dialog #Operation starten# ein [Werkstück] (Zielteil) aus [Solids] oder [STL]-Daten definieren." %}</p>
+<script type="text/javascript" language="JavaScript1.2">
+//&lt;![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('area1');
+        FilePopupInit('area2');
+        FilePopupInit('area3');
+//]]&gt;
+</script>
+
+{% endblock %}
+{% endlinebreakless %}

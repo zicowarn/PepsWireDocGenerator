@@ -1,0 +1,69 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Ausfallteilüberprüfung Dialog" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Ausfallteilüberprüfung Dialog" %}</p><p>{% trans "Dieser Dialog wird angezeigt, wenn bei der Simulation einer Erodierbearbeitung ein Ausfallteil (Abfall) entsteht." %}</p><p>{% trans "Der Dialog erlaubt es, das gezeigte Ausfallteil zu löschen und die Simulation ohne Anzeige des Ausfallteils fortzusetzen." %}</p>
+<p>{% trans "Der Dialog wird ebenfalls verwendet, um Entformungstests auszuführen." %}</p>
+<p>{% trans "Mit einem Entformungstest können Sie überprüfen, ob man ein Ausfallteil aus dem Werkstück entfernen kann oder nicht." %}</p>
+<p><img src="../Ausfall_test1.gif" alt="Ausfall_test1.gif" width="895" height="261" border="0"/></p>
+<p class="hcp1"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp1"> </p>
+<p><img src="../Billet_Sep1_shg.gif" usemap="#AreaMap0" alt="Billet_Sep1_shg.gif" width="381" height="192" border="0"/> <map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="12,36,295,100" href="javascript:BSSCPopup('Momentan_markierter_Solid_Entformumgstest_Solid_Simulation_Wire.htm',400,600);" id="area1" alt=""/>
+<area shape="rect" coords="310,40,372,62" href="javascript:BSSCPopup('Entformen_Entformumgstest_Solid_Simulation_Wire.htm',400,600);" id="area2" alt=""/>
+<area shape="rect" coords="241,152,299,174" href="javascript:BSSCPopup('Abbruch_Entformumgstest_Solid_Simulation_Wire.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="309,153,370,175" href="javascript:BSSCPopup('../wirhlp10/OK_Button_Operation_starten.htm',400,300);" id="area4" alt=""/>
+<area shape="rect" coords="310,80,370,100" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area5" alt=""/>
+<area shape="rect" coords="13,108,257,126" href="javascript:BSSCPopup('Ausfallteil_bei_Entformung_automatisch_loeschen_Entformumgstest_Solid_Simulation_Wire.htm',400,300);" id="area6" alt=""/>
+<area shape="rect" coords="15,155,227,179" href="javascript:BSSCPopup('Markiertes_Ausfallteil_loeschen_u_weiter_Entformumgstest_Solid_Simulation_Wire.htm',400,300);" id="area7" alt=""/>
+<area shape="rect" coords="10,130,201,151" href="javascript:BSSCPopup('Bildschirm_auf_Ausfallteil_zentrieren_Entformumgstest_Solid_Simulation_Wire.htm',400,300);" id="area8" alt=""/></map></p>
+<script type="text/javascript" language="JavaScript1.2">
+//&lt;![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('area1');
+        FilePopupInit('area2');
+        FilePopupInit('area3');
+        FilePopupInit('area4');
+        FilePopupInit('area5');
+        FilePopupInit('area6');
+        FilePopupInit('area7');
+        FilePopupInit('area8');
+//]]&gt;
+</script>
+
+{% endblock %}
+{% endlinebreakless %}

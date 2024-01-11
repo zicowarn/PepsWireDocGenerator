@@ -1,0 +1,43 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Löschen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Löschen" %}</p><p>{% trans "Die [Löschen] Option dient zum Entfernen von Winkelwechselsymbolen und der damit verbundenen Konik." %}</p>
+<p>{% trans "Die grafische Darstellung der Bearbeitungsfigur verändert sich sofort nach dem Löschen von Winkelwechselsymbolen." %}</p>
+<p>{% trans "Bei der Auswahl der zu löschenden [Winkelwechselsymbole] kann [kein anderes Geometrieelement] gewählt werden, da das System nur die Auswahl von Winkelwechselsymbolen erlaubt." %}</p>
+<p>{% trans "Die Auswahl mehrerer Symbole durch eine Fensterauswahl ist erlaubt." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

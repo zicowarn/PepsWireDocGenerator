@@ -1,0 +1,95 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Datenbank für Technologie Register" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Datenbank für Technologie Register" %}</p><p>{% trans "Mit dem Register [Datenbank] können Sie Technologiedaten [Laden] oder [Speichern]." %}</p><p>{% trans "Als [Technologiedaten] bezeichnet man die Einstellungen für [Stromstufe], [Register], [Anzahl der Schnitte] etc. die man benötigt, um ein bestimmtes Material, mit einer bestimmten Dicke, mit einer bestimmten Oberflächengüte schneiden zu können." %}</p>
+<p class="hcp2"> </p>
+<p style="color: #ff0000; font-style: italic;">{% trans "Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen." %}</p>
+<p> </p>
+<p><img src="../TECHN_LA_shg.gif" usemap="#AreaMap0" alt="TECHN_LA_shg.gif" width="362" height="512" border="0"/> <map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="12,39,61,55" href="Einstellungen_Einstellen_der_Schnittmethode.htm" alt=""/>
+<area shape="rect" coords="62,38,117,55" href="Anbinden_Lasche.htm" alt=""/>
+<area shape="rect" coords="120,36,197,55" href="Ein_Ausfahren_Lasche.htm" alt=""/>
+<area shape="rect" coords="197,37,238,55" href="Offset_Lasche.htm" alt=""/>
+<area shape="rect" coords="19,66,325,92" href="javascript:BSSCPopup('Filter_Material.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="17,92,323,114" href="javascript:BSSCPopup('Filter_Dicke.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="18,116,320,139" href="javascript:BSSCPopup('Filter_Oberflaechenguete.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="19,151,324,385" href="javascript:BSSCPopup('Technologie_Datenbank_Liste_der_Materialien.htm',400,300);" id="area4" alt=""/>
+<area shape="rect" coords="29,392,180,412" href="javascript:BSSCPopup('Liste_neu_aufbauen.htm',400,300);" id="area5" alt=""/>
+<area shape="rect" coords="193,392,332,413" href="javascript:BSSCPopup('Technologie_laden_aus_Technologie_Datenbank.htm',400,300);" id="area6" alt=""/>
+<area shape="rect" coords="24,420,101,442" href="javascript:BSSCPopup('Editieren_Technologie_Datenbank.htm',400,300);" id="area7" alt=""/>
+<area shape="rect" coords="104,422,180,442" href="javascript:BSSCPopup('Loeschen_Technologie_Datenbank.htm',400,300);" id="area8" alt=""/>
+<area shape="rect" coords="190,420,329,443" href="javascript:BSSCPopup('Technologie_speichern_Technologie_Datenbank.htm',400,300);" id="area9" alt=""/>
+<area shape="rect" coords="12,476,83,501" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area10" alt=""/>
+<area shape="rect" coords="92,478,168,504" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area11" alt=""/>
+<area shape="rect" coords="172,479,266,501" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area12" alt=""/>
+<area shape="rect" coords="271,479,347,503" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area13" alt=""/></map></p>
+<p class="hcp2"> </p>
+<p>{% trans "Für jede Kombination von Material, Materialdicke und Oberflächengüte kann man eine Einstellung für [Stromstufe], [Register], [Anzahl der Schnitte] etc. festlegen, in der Datenbank speichern und bei Bedarf laden." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../GLOB_SET.gif" alt="GLOB_SET.gif" width="218" height="262" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "Lädt man Technologiedaten aus der Datenbank, weist das System deren Technologiewerte der aktuellen Bearbeitung zu." %}</p>
+<p>{% trans "Die Datenbank bietet Möglichkeiten um [vorhandenen Technologien zu verändern] oder [neue Technologien] zu [erzeugen]." %}</p>
+<p>{% trans "Die Datenbank enthält die folgenden Daten:" %}</p>
+<p>{% trans "[Materialbeschreibung]:" %}</p>
+<p>{% trans "Ist eine Beschreibung des Material das geschnitten werden soll. In vielen Fällen werden hier zusätzlich Informationen wie z.B. Härteangaben für das Material notiert." %}</p>
+<p>{% trans "[Materialdicke]:" %}</p>
+<p>{% trans "In diesem Feld wird die Dicke des Materials z.B. [20 mm] durch Eingabe eines Wertes oder durch Eingabe eines Bereichs von z.B. [20 - 30 mm] festgelegt." %}</p>
+<p>{% trans "[Oberflächengüte]" %}</p>
+<p>{% trans "Legt die Oberflächengüte fest (z.B. 10 RA)." %}</p>
+<script type="text/javascript" language="JavaScript1.2">
+//&lt;![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('area1');
+        FilePopupInit('area2');
+        FilePopupInit('area3');
+        FilePopupInit('area4');
+        FilePopupInit('area5');
+        FilePopupInit('area6');
+        FilePopupInit('area7');
+        FilePopupInit('area8');
+        FilePopupInit('area9');
+        FilePopupInit('area10');
+        FilePopupInit('area11');
+        FilePopupInit('area12');
+        FilePopupInit('area13');
+//]]&gt;
+</script>
+
+{% endblock %}
+{% endlinebreakless %}

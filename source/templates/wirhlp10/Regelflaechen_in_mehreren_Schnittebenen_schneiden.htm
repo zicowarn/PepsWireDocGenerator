@@ -1,0 +1,91 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Regelflächen in mehreren Schnittebenen schneiden" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+    font.hcp2 { font-weight:bold; }
+    li.hcp3 { font-size:9pt; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Regelflächen in mehreren Schnittebenen schneiden" %}</p><p>{% trans "Schnittebenen werden dann angewendet, wenn die Werkstückhöhe die physikalischen Grenzen der NC-Maschine überschreitet oder die maximal mögliche Drahtauslenkung überschritten wird." %}</p>
+<p>{% trans "In solchen Fällen wird das Werkstück aus mehreren Schnittplatten, die nacheinander geschnitten werden, zusammengebaut. Jede Schnittplatte wird dabei als separate Schnittebene betrachtet." %}</p>
+<p>{% trans "Die folgende Zeichnung zeigt ein 60 mm hohes Werkstück das in 3 Schnittplatten(ebenen) aufgeteilt ist." %}</p>
+<p>{% trans "In dem Beispiel wird angenommen, dass nur die Geometrie der unteren und obere Ebene (d.h. Z0 und Z60) bekannt sind." %}</p>
+<p> </p>
+<p class="Tip_Note_Heading">{% trans "Regelfläche in mehreren Schnittebenen schneiden:" %}</p>
+<p class="hcp1"> </p>
+<p><img src="../RULESEC.gif" alt="RULESEC.gif" width="457" height="217" border="0"/></p>
+<p>{% trans "[Schnitt 1] bearbeiten" %}</p>
+<ul>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Starten Sie eine Operation mit [Operation starten]" %}</p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Definieren Sie die [Referenzhöhe] auf [0] und die [Sekundärebene] auf [20] mm." %}</p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Bearbeiten Sie die Regelfläche mit:" %}</p></li>
+</ul>
+<p>{% trans "[Höhe untere Ebene] = [0] und" %}</p>
+<p class="Topic_Text_Bulleted" style="margin-left: 5.75pt;">{% trans "[ Abstand der Ebenen] [[=] 60]" %}</p>
+<ul>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Im Feld [Ebenen Berechnung] geben Sie bitte ein:" %}</p></li>
+</ul>
+<p>{% trans "[Starthöhe] = [0]" %}</p>
+<p>{% trans "[Endhöhe] = [60] und [Anzahl Ebenen] = [4]" %}</p>
+<p class="hcp1"> </p>
+<p>{% trans "[Schnitt 2] bearbeiten" %}</p>
+<ul>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Starten Sie eine Operation mit [Operation starten]" %}</p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Definieren Sie die [Referenzhöhe] auf [0] und die [Sekundärebene] auf [20] mm." %}</p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Bearbeiten Sie die Regelfläche mit:" %}</p></li>
+</ul>
+<p>{% trans "[Höhe untere Ebene] = -[20] und" %}</p>
+<p>{% trans "[Abstand der Ebenen] = [60]" %}</p>
+<ul>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Im Feld [Ebenen Berechnung] geben Sie bitte ein:" %}</p></li>
+</ul>
+<p>{% trans "[Starthöhe] = [0]" %}</p>
+<p>{% trans "[Endhöhe] = [60] und [Anzahl Ebenen] = [4]" %}</p>
+<p class="hcp1"> </p>
+<p>{% trans "[Schnitt 3] bearbeiten" %}</p>
+<ul>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Starten Sie eine weitere Operation mit [Operation starten]" %}</p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Definieren Sie die [Referenzhöhe] auf [0] und die [Sekundärebene] auf [20] mm." %}</p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Bearbeiten Sie die Regelfläche mit:" %}</p></li>
+</ul>
+<p>{% trans "[Höhe untere Ebene] = -[40] und" %}</p>
+<p>{% trans "[Abstand der Ebenen] = [60]" %}</p>
+<ul>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Im Feld [Ebenen Berechnung] geben Sie bitte ein:" %}</p></li>
+</ul>
+<p>{% trans "[Starthöhe] = [0]" %}</p>
+<p>{% trans "[Endhöhe] = [60] und [Anzahl Ebenen] = [4]" %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,42 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Bei Stop anhalten &sol; Weiter bis zum Ende etc. Listbox" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Bei Stop anhalten / Weiter bis zum Ende etc. Listbox" %}</p><p>{% trans "Mit dieser Listbox steuern Sie, in welchen Fällen die Simulation automatisch von PEPS angehalten werden soll." %}</p>
+<p>{% trans "Als Systemvoreinstellung ist die Option [Bei Stop halten] aktiv, was zu einem Stop der Simulation führt, wenn ein Stop (M00 od. M01) programmiert wurde." %}</p>
+<p>{% trans "Ist [Weiter bis zum Ende] eingestellt, läuft die Simulation ohne Stop, bis zum Programmende weiter." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

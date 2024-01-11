@@ -1,0 +1,56 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Werkstücke" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Werkstücke" %}</p><p>{% trans "Wählen Sie hier das(ie) Solid(s) aus, die das [Werkstück] bilden (auch [Zielteil] genannt)." %}</p><p>{% trans "Die Definition des [Werkstückes] ist erforderlich, wenn Sie im Zuge einer #[Solid-Simulation]# einen [Zielteilvergleich] ausführen wollen (Vergleich des bearbeiteten Rohteils mit der Werkstückgeometrie)." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Simulation_Zielteilvergleich_Erodieren.gif" alt="Simulation_Zielteilvergleich_Erodieren.gif" width="289" height="306" border="0"/></p>
+<p class="hcp2"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Werkstücke_shg.gif" alt="Werkstücke_shg.gif" usemap="#MAP748343943" width="275" height="199" border="0"/> <map id="MAP748343943" name="MAP748343943">
+<area shape="rect" coords="8, 164, 87, 186" href="Solid_s_Werkstuecke_OP_Start_Rohteil_Register.htm" alt=""/>
+<area shape="rect" coords="98, 162, 176, 188" href="javascript:BSSCPopup('Loeschen_OP_Start_Rohteil_Rohteile.htm',400,300);" id="area1" alt=""/></map></p>
+<script type="text/javascript" language="JavaScript1.2">
+//&lt;![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('area1');
+//]]&gt;
+</script>
+
+{% endblock %}
+{% endlinebreakless %}

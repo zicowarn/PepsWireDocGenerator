@@ -1,0 +1,47 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Farbpalette für Simulation" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Farbpalette für Simulation" %}</p><p><img src="../simcol_2.gif" alt="simcol_2.gif" width="222" height="324" border="0"/></p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p>{% trans "Diese Schaltfläche führt zu Aufruf des [Standard Windows Farbpaletten] Dialogs." %}</p>
+<p>{% trans "In dem Dialog können Sie eine von 48 Farben auswählen und für die Simulation verwenden." %}</p>
+<p>{% trans "Die Schaltfläche [Farben definieren &amp;gt;&amp;gt;] erlaubt das Mischen eigener Farben." %}</p>
+<p> </p>
+<h2 style="margin-top: 4.00pt; margin-bottom: 0.00pt;">{% trans "PEPS-Hintergrund verwenden" %}</h2>
+<p>{% trans "Verwendet als Hintergrundfarbe für das [Simulationsfenster] die gleiche Farbe wie für das [PEPS-Grafikfenster]." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

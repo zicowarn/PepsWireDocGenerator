@@ -1,0 +1,48 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Stop- &sol; Düsensymbole" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Stop- / Düsensymbole" %}</p><p>{% trans "[Stop-Symbole]: Ist diese Option aktiv, zeigt das System bei einer Simulation alle Stops (M00, M01) in der Form von Symbolen an." %}</p>
+<p> </p>
+<p><img src="../Stop_Symbole.gif" alt="Stop_Symbole.gif" width="198" height="131" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "[Düsen-Symbole]: Ist diese Option aktiv, zeigt das System bei einer Simulation die obere und untere Drahtführung symbolisch an, wenn der Draht eingefädelt ist." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Düsen_Symbole.gif" alt="Düsen_Symbole.gif" width="201" height="176" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,94 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Standard Konturbearbeitung + Auto Matrize &sol; Stempel" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+    li.hcp3 { font-size:9pt; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Standard Konturbearbeitung + Auto Matrize / Stempel" %}</p><p>{% trans "Dieser Befehl ist identisch mit dem Befehl #[Auto Matrize / Stempel]# des Menüs [Vorbereitung]." %}</p><p>{% trans "Der einzige Unterschied besteht darin, dass die Option #[Schnittschema]# in den Registern [Matrizen Optionen] und [Stempel Optionen] freigeschaltet ist." %}</p>
+<p>{% trans "Der Befehl #[Auto Matrize / Stempel]# im Menü [Vorbereitung] hat die Aufgabe, Linien/Bogengeometrien automatisch in Bearbeitungsfiguren umzuwandeln." %}</p>
+<p>{% trans "Nach diesem Vorgang bearbeitet man die Bearbeitungsfiguren mit Hilfe der Befehle [Standard Konturbearbeitung] oder [Regelflächenbearbeitung]." %}</p>
+<p>{% trans "Mit dem Befehl [Standard Konturbearbeitung + Auto Matrize / Stempel] ist es möglich, Linien-/Bogengeometrien automatisch in Bearbeitungsfiguren umzuwandeln und diesen ein gespeichertes #[Schnittschema]# zuzuweisen. Auf diese Weise kann man die Bearbeitungsprogrammierung weitgehend automatisieren." %}</p>
+<p class="hcp2"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp2"> </p>
+<p class="footnote_text"><img src="../QUI_D_P5_shg.gif" usemap="#AreaMap0" alt="QUI_D_P5_shg.gif" width="415" height="398" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="64, 40, 111, 58" href="../wirhlp9/Stempel_Auto_Matritzen_Stempel.htm" alt=""/>
+<area shape="rect" coords="115, 40, 155, 59" href="../wirhlp9/Filter_Auto_Matritzen_Stempel.htm" alt=""/>
+<area shape="rect" coords="29, 174, 232, 202" href="../wirhlp9/Umfangs_Parameter_Auto_Matritzen_Stempel.htm" id="area1" alt=""/>
+<area shape="rect" coords="25, 116, 229, 140" href="javascript:BSSCPopup('../wirhlp9/Einfahrabstand_Auto_Matritzen_Stempel.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="25, 145, 233, 171" href="javascript:BSSCPopup('../wirhlp9/Winkel_zur_Normalen_Auto_Matritzen_Stempel.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="27, 268, 386, 342" href="../wirhlp9/Schnittschemen_Auto_Matritzen_Stempel.htm" id="area4" alt=""/>
+<area shape="rect" coords="239, 232, 384, 275" href="../wirhlp9/Matrizen_Stempeltyp_Auto_Mat_Stemp.htm" id="area5" alt=""/>
+<area shape="rect" coords="14, 363, 120, 387" href="javascript:BSSCPopup('../wirhlp9/Waehle_Matrizen_Stempel_Auto_Mat_Stemp.htm',400,300);" id="area6" alt=""/>
+<area shape="rect" coords="26, 89, 157, 113" href="javascript:BSSCPopup('../wirhlp9/Startloch_zentrieren_Auto_Mat_Stemp.htm',400,300);" id="area7" alt=""/>
+<area shape="rect" coords="239, 75, 382, 213" href="javascript:BSSCPopup('../Commdata/COMMON_Bild.htm',400,300);" id="area8" alt=""/>
+<area shape="rect" coords="123, 362, 211, 387" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area9" alt=""/>
+<area shape="rect" coords="217, 363, 310, 386" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area10" alt=""/>
+<area shape="rect" coords="312, 361, 402, 388" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area11" alt=""/>
+<area shape="rect" coords="27, 231, 222, 259" href="../wirhlp9/Startloch_Suchschema_Auto_Mat_Stemp.htm" alt=""/>
+<area shape="rect" coords="158, 43, 209, 62" href="../wirhlp9/Optionen_Auto_Matritzen_Stempel.htm" alt=""/>
+</map> </p>
+<p class="hcp2"> </p>
+<p class="Tip_Note_Heading">{% trans "Automatisch Figuren erzeugen und ein Schnittschema zuweisen" %}</p>
+<ul>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Füllen Sie zunächst den Dialog #[Operation starten]# aus." %}</p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Die zu bearbeitenden Geometrien müssen als Linien/Bogenelemente bestehen und am Bildschirm sichtbar sein." %}</p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Rufen Sie den Befehl [Standard Konturbearbeitung + Auto Matrize / Stempel] auf." %}</p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Wählen Sie eines der Register @, um festzulegen, ob [Stempel] oder [Matrizen] erzeugt werden sollen." %}</p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Legen Sie durch die Eingaben in den Feldern @ fest, wo die Startlochposition der Bearbeitungsfiguren liegen sollen." %}</p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Laden Sie mit der Schaltfläche @ ein [#Schnittschema#], das den Bearbeitungsfiguren zugewiesen werden soll." %}</p></li>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf die Schaltfläche @, um die Geometrien auszuwählen, aus denen automatisch Bearbeitungsfiguren erzeugt und das gewählte Schnittschema zugewiesen werden soll." %}</p></li>
+</ul>
+<p class="hcp2"> </p>
+<p>{% trans "[Siehe auch:] #[Auto Matrize / Stempel]# im Menü #[Vorbereitung]#." %}</p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a1');
+	FilePopupInit('a2');
+	FilePopupInit('area2');
+	FilePopupInit('area3');
+	FilePopupInit('area6');
+	FilePopupInit('area7');
+	FilePopupInit('area8');
+	FilePopupInit('area9');
+	FilePopupInit('area10');
+	FilePopupInit('area11');
+	FilePopupInit('a3');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

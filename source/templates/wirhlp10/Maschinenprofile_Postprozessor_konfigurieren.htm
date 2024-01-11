@@ -1,0 +1,40 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Maschinenprofile" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Maschinenprofile" %}</p><p>{% trans "Für jeden unterstützten Maschinentyp eines Herstellers kann ein Profil erstellt werden." %}</p>
+<p>{% trans "Auf diese Weise können Sie für jeden Maschinentyp separate Einstellungen im Dialogregister #[NC-Ausgabe Optionen]# einstellen und als Profil abspeichern." %}</p>
+<p class="Block_Text">{% trans "Dies hat den Vorteil, dass man bei einem Postprozessorlauf (NC-Daten erzeugen), das Profil des Maschinentyps auswählen kann, für den die NC-Daten erzeugt werden sollen." %}</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;"> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
+<p class="Block_Text" style="font-weight: bold;">{% trans "#Ein Profil für einen Maschinentyp anlegen#" %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

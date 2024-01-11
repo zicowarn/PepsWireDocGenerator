@@ -1,0 +1,74 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Startloch-Einstellungen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../WIRE_ExpertRH_context_Menu.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Startloch-Einstellungen" %}</p><p class="Block_Text">{% trans "Wird eine Feature-Erkennung ausgeführt, erkennt der [WIRE-Expert] nicht nur erodierbare Geometrien, sondern legt auch die Position der Startlöcher fest." %}</p><p class="Block_Text">{% trans "Die Position der Startlöcher wird nach einem intern festgelegtem Regelwerk bestimmt. Auf die gleiche Weise wird auch die Anfahrposition auf der Schneidgeometrie automatisch bestimmt." %}</p>
+<p>{% trans "Mit Hilfe des Dialoges [Startloch-Einstellungen], können Sie das interne Regelwerk außer Kraft setzen und die Position der Startlöcher und deren Abstand zur Schneidgeometrie nach Ihren Vorstellungen einstellen." %}</p>
+<p>{% trans "Dabei können Sie beispielsweise für eine runde Bohrung bestimmen, dass das Startloch immer im Zentrum der Bohrung liegen soll und die Anfahrposition auf der Schneidgeometrie z.B. auf der 3 Uhr Position des Kreises (siehe folgendes Bild)." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Starthole_Presetting.gif" alt="Starthole_Presetting.gif" width="652" height="246" border="0"/></p>
+<p style="text-align: center;"> </p>
+<p class="Normal_(Web)" style="margin-left: 5.75pt; margin-right: 6.50pt;  margin-top: 4.00pt; margin-bottom: 0.00pt; color: #ff0000; font-size: 9pt;  font-style: italic;">{% trans "Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen" %}</p>
+<p class="Normal_(Web)" style="margin-left: 5.75pt; margin-right: 6.50pt;  margin-top: 4.00pt; margin-bottom: 0.00pt; color: #ff0000; font-size: 9pt;  font-style: italic;"> </p>
+<p class="Normal_(Web)" style="margin-left: 5.75pt; margin-right: 6.50pt;  margin-top: 4.00pt; margin-bottom: 0.00pt; color: #ff0000; font-size: 9pt;  font-style: italic;">{% trans "&lt;p class='Normal_(Web)' style='margin-left: 5.75pt; margin-right: 6.50pt; margin-top: 4.00pt; margin-bottom: 0.00pt; color: #ff0000; font-size: 9pt; font-style: italic;'&gt;f&lt;img src='../StartHole_Settings_Dialog_shg.gif' usemap='#MAP660569092' alt='StartHole_Settings_Dialog_shg.gif' width='795' height='705' border='0'/&gt;&lt;map name='MAP660569092' id='MAP660569092'&gt;###########&lt;/map&gt;" %}<map name="MAP660569092" id="MAP660569092">
+<area shape="rect" coords="115, 32, 150, 73" href="javascript:BSSCPopup('../Commdata/Dialogeinstellungen_speichern.htm');" id="area1" alt=""/>
+<area shape="rect" coords="151, 36, 184, 69" href="javascript:BSSCPopup('../Commdata/Gespeicherte_Dialogeinstellungen_laden.htm');" id="area2" alt=""/>
+<area shape="rect" coords="215, 429, 494, 603" href="Startlochgeometrien_Startloch_Einstellungen.htm" alt=""/>
+<area shape="rect" coords="499, 425, 776, 555" href="Allgemeine_Einstellungen_Startloch_Einstellungen.htm" alt=""/>
+<area shape="rect" coords="8, 128, 179, 143" href="Feature_Erkenungs_Einstellungen.htm" alt=""/>
+<area shape="rect" coords="8, 80, 134, 97" href="../wirhlp9/Voreinstellungen_Wire_Expert_konfigurieren.htm" alt=""/>
+<area shape="rect" coords="11, 97, 132, 112" href="Feature_Erkennung_nach_Flaechenfarben.htm" alt=""/>
+<area shape="rect" coords="215, 82, 773, 424" href="Innere_Matrize_Aeussere_Stempel_Startloch_Einstellungen.htm" alt=""/>
+<area shape="rect" coords="79, 38, 109, 74" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area4" alt=""/>
+<area shape="rect" coords="43, 38, 76, 74" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area5" alt=""/>
+<area shape="rect" coords="3, 38, 44, 75" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area6" alt=""/>
+</map> </p>
+<p> </p>
+<p class="hcp2"> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
+<p>{% trans "XXXTO DO Einfädelposition und Anfahrposition auf Schneidgeometrie voreinstellen" %}</p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+	FilePopupInit('area4');
+	FilePopupInit('area5');
+	FilePopupInit('area6');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

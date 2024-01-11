@@ -1,0 +1,37 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Ausfallteilentsorger der NC-Maschine verwenden" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Ausfallteilentsorger der NC-Maschine verwenden" %}</p><p>{% trans "Diese Option können Sie nur an NC-Maschinen verwenden, die über einen automatischen Ausfallteilentsorger verfügen." %}</p>
+<p>{% trans "Ist die Option gewählt, werden zunächst alle Schruppschnitte und falls vorhanden, alle Schlichtschnitte durchgeführt." %}</p>
+<p>{% trans "Am Ende der Operation werden die Ausfallteile automatisch durch den Ausfallteilentsorger entfernt." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

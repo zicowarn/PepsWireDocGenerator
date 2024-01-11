@@ -1,0 +1,79 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Sektoren programmieren (Nur AGIEVISION)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+    li.hcp2 { font-size:9pt; }
+    font.hcp3 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Sektoren programmieren (Nur AGIEVISION)" %}</p><p>{% trans "Ausgangssituation: Es ist eine Bearbeitungsfigur vorhanden. Diese soll in einem durch 2 Punkte definierten Sektor mit einer zusätzliche Schnittluft versehen werden." %}</p>
+<p class="hcp1"> </p>
+<p><img src="../Sektoren_Exa_1.gif" alt="Sektoren_Exa_1.gif" width="241" height="150" border="0"/></p>
+<p class="hcp1"> </p>
+<ul>
+	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Rufen Sie im Menü [Vorbereitung] den Befehl [Sektoren] auf." %}</p></li>
+</ul>
+<p class="Prompts">{% trans "Wähle Figur :" %}</p>
+<ul>
+	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie die Bearbeitungsfigur an, die mit einem Sektor versehen werden soll." %}</p></li>
+</ul>
+<p class="Prompts">{% trans "Eingabe Punkt für Sektorstart:" %}</p>
+<ul>
+	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Geben Sie die Position des Sektorstarts ein oder verwenden Sie die [Fangfunktionen]." %}</p></li>
+</ul>
+<p class="Topic_Text_Bulleted" style="margin-left: 5.75pt;">{% trans "Ein Richtungspfeil zeigt an, in welcher Richtung der 2te Punkte, das Sektorende definiert werden muss." %}</p>
+<p class="Topic_Text_Bulleted" style="margin-left: 5.75pt;">{% trans "Sie können die Richtung ändern mit Hilfe der Option [Richtung tauschen] (siehe [rechte Maustaste] od. [horizontale Ikonenleiste])." %}</p>
+<p class="hcp1"> </p>
+<p><img src="../Sektoren_Exa_2.gif" alt="Sektoren_Exa_2.gif" width="214" height="139" border="0"/></p>
+<p class="hcp1"> </p>
+<p class="Prompts">{% trans "Eingabe Punkt für Sektorende:" %}</p>
+<ul>
+	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Geben Sie die Position des Sektorendes ein oder verwenden Sie die [Fangfunktionen]." %}</p></li>
+	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Es folgt der [Sektoren]-Dialog in dem man die gewünschten Sektorparameter eingibt." %}</p></li>
+</ul>
+<p class="hcp1"> </p>
+<p><img src="../Sektoren_Exa_3.gif" alt="Sektoren_Exa_3.gif" width="372" height="178" border="0"/></p>
+<p class="hcp1"> </p>
+<ul>
+	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Beenden Sie den Dialog mit der Schaltfläche [OK]." %}</p></li>
+	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Der Sektorbereich wird durch zwei hellblaue Symbole gekennzeichnet." %}</p></li>
+</ul>
+<p class="hcp1"> </p>
+<p><img src="../Sektoren_Exa_4.gif" alt="Sektoren_Exa_4.gif" width="169" height="110" border="0"/></p>
+<ul>
+	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Beenden Sie den Befehl mit der Option [Ende] (siehe [rechte Maustaste] od. [horizontale Ikonenleiste])." %}</p></li>
+</ul>
+
+{% endblock %}
+{% endlinebreakless %}

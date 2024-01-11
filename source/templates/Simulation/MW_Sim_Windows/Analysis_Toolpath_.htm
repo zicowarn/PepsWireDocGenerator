@@ -1,0 +1,242 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Analyse (Werkzeugweg) Fenster" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../../MW_Sim_Windows.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { font-weight:normal; }
+    span.hcp3 { font-weight:bold; }
+    img.hcp4 { border:none; }
+    p.hcp5 { margin-top:0;
+    margin-bottom:0; }
+    p.hcp6 { font-weight:bold; }
+    font.hcp7 { font-family:Arial;
+    font-size:14pt;
+    font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <h1>{% trans "Analyse (Werkzeugweg)" %}</h1><p> </p>
+<p>{% trans "Die [Werkzeugweg]-[Analyse] färbt die angezeigten Werkzeugwege ein, so dass ein Anwender folgende Analysen der Werkzeugwege ausführen kann:" %}</p>
+<p> </p>
+<p><img src="../../newUI_Analyse_tool_Tab.gif" alt="newUI_Analyse_tool_Tab.gif" width="482" height="492" border="0"/></p>
+<p class="hcp2"> </p>
+<p class="hcp2"><strong class="" style="font-weight: normal;">Der 
+ Dialog bietet folgenden <span class="hcp3">Optionen</span>, 
+ <span class="hcp3">Einstellungen</span> und <span class="hcp3">Schaltflächen<img src="../../newUI_Analyse_tool_Tab_Button_Options.gif" alt="" border="0" class="hcp4"/> </span>:</strong></p>
+<p><strong class=""><img src="../../newUI_Analyse_tool_Tab_Button_Options_Refresh.gif" alt="" border="0" class="hcp4"/> Aktualisieren:</strong> 
+ Führt die letzte Einstellungsänderung des Anwenders aus.</p>
+<p><strong class=""><img src="../../newUI_Analyse_tool_Tab_Button_Options_Add.gif" alt="" border="0" class="hcp4"/> Hinzufügen:</strong> 
+ Fügt eine weitere Zeile in der Dialogliste ein</p>
+<p><strong class=""><img src="../../newUI_Analyse_tool_Tab_Button_Options_Remove.gif" alt="" border="0" class="hcp4"/> Entfernen:</strong> 
+ Löscht den gewählten Wert aus einer Zeile weitere Zeile in der Dialogliste 
+ ein</p>
+<p><strong class=""><img src="../../newUI_Analyse_tool_Tab_Button_Options_Adjust.gif" alt="" border="0" class="hcp4"/> Anpassen:</strong> 
+ Erlaubt dem Anwender eine angepasste Liste für eine eigene Analyse einzustellen</p>
+<p><strong class=""><img src="../../newUI_Analyse_tool_Tab_Button_Options_Auto_Adjust.gif" alt="" border="0" class="hcp4"/> Automatisches 
+ Anpassen:</strong> Zurücksetzen der Liste auf die Vorgaben des Herstellers 
+ </p>
+<p> </p>
+<p> </p>
+<h2>{% trans "Vorhandene Optionen" %}</h2>
+<p>{% trans "Es folgt eine Auflistung der vorhandenen Analyseoptionen:" %}</p>
+<p> </p>
+<h2>{% trans "Werkzeugnummer" %}</h2>
+<p>{% trans "Hier wird jedem [Werkzeug] eine eigene Werkzeugwegfarbe zugewiesen." %}</p>
+<p><img src="../../newUI_Analyse_tool_Tab_Werkzeugnummer.gif" alt="" border="0" class="hcp4"/></p>
+<p> </p>
+<p>{% trans "[Hauptvorteile:]" %}</p>
+<p>{% trans "Man kann erkennen, wie viele unterschiedliche Werkzeuge verwendet werden." %}</p>
+<p>{% trans "Anhand der Werkzeugwegfarbe kann man erkennen, welches Werkzeug zu einem Werkzeugweg gehört." %}</p>
+<p>{% trans "[Beispiel:]" %}</p>
+<p>{% trans "Das folgende Bild zeigt Bearbeitung mit verschiedenen Bearbeitungsoperationen. Die Werkzeugwege sind unterschiedlich eingefärbt, je nach verwendetem Werkzeug." %}</p>
+<p><img src="../../tp_analysis_opertaion_number.gif" alt="tp_analysis_opertaion_number.gif" width="489" height="424" border="0"/></p>
+<p class="hcp5"> </p>
+<h2>{% trans "Operationsnummer" %}</h2>
+<p>{% trans "Hier wird dem Werkzeugweg jeder vorhandenen [Bearbeitungsoperation] eine eigene Farbe zugewiesen." %}</p>
+<p><img src="../../newUI_Analyse_tool_Tab_Operationnummer.gif" alt="" border="0" class="hcp4"/></p>
+<p>{% trans "[Hauptvorteil:]" %}</p>
+<p>{% trans "Man kann erkennen, wie viele Bearbeitungsoperationen existieren." %}</p>
+<p>{% trans "Anhand der Werkzeugwegfarbe kann man erkennen, welche Bearbeitungsoperation es ist." %}</p>
+<p>{% trans "[Beispiel:]" %}</p>
+<p>{% trans "Das folgende Bild zeigt Bearbeitung mit verschiedenen Bearbeitungsoperationen. Jeder Bearbeitungsoperation wurde eine eigene Farbe zugewiesen." %}</p>
+<p><img src="../../tp_analysis_opertaion_number.gif" alt="tp_analysis_opertaion_number.gif" width="489" height="424" border="0"/></p>
+<p> </p>
+<h2>{% trans "Operation hervorheben" %}</h2>
+<p>{% trans "Der Werkzeugweg der [aktuell simulierten] Bearbeitungsoperation wird in einer anderen Farbe dargestellt als die restlichen Operationen." %}</p>
+<p class="hcp6"><strong class=""><font class="hcp1"><img src="../../newUI_Analyse_tool_Tab_Operation_hervorheben.gif" alt="" border="0" class="hcp4"/></font></strong></p>
+<p><strong class=""><font class="hcp1">Hauptvorteile</font>:</strong></p>
+<p>{% trans "Man kann den aktuell simulierten Werkzeugweg auf einfache Weise erkennen." %}</p>
+<p>{% trans "Es ist leicht zu erkennen, in welchem Bereich des Werkstücks die aktuelle Bearbeitungsoperation stattfindet." %}</p>
+<p> </p>
+<h2>{% trans "Sequenz" %}</h2>
+<p>{% trans "Der Werkzeugweg wird eingefärbt in einen Farbverlauf, den man beschreiben kann, von 'heiß (rot) nach kalt (blau)'." %}</p>
+<p><img src="../../newUI_Analyse_tool_Tab_Sequenz.gif" alt="" border="0" class="hcp4"/></p>
+<p>{% trans "[Hauptvorteile:]" %}</p>
+<p>{% trans "Schnelle Identifizierung des Start- und Endpunktes eines Werkzeugweges." %}</p>
+<p>{% trans "Identifizierung der Bearbeitungsmethode, z.B. ob im ZickZack- oder Einweg-Verfahren gefräst wird." %}</p>
+<p>{% trans "Identifizierung der Bearbeitungsreihenfolge, z.B. von Innen nach Außen oder von außen nach innen." %}</p>
+<p>{% trans "[Beispiel:]" %}</p>
+<p>{% trans "Das folgende Bild zeigt die Bearbeitung einer konkaven Halbkugel. Der Ablauf der Werkzeugwege verläuft von [rot] (heiß) nach [blau] (kalt)." %}</p>
+<p>{% trans "Daraus kann man ersehen, dass der Werkzeugweg außen beginnt und in der Halbkugelmitte endet. Zudem wird er im Einweg-Verfahren ausgeführt." %}</p>
+<p><img src="../../tp_analysis_sequence.gif" alt="tp_analysis_sequence.gif" width="202" height="230" border="0"/></p>
+<p class="hcp5"> </p>
+<h2>{% trans "1 Rotations-Achsenwert" %}</h2>
+<p>{% trans "Der Werkzeugweg wird je nach Rotationswinkel der Rotationsachse unterschiedlich eingefärbt." %}</p>
+<p class="hcp6"><img src="../../newUI_Analyse_tool_Tab_Rotation%20Axis%20Value.gif" alt="" border="0" class="hcp4"/></p>
+<p class="hcp6">{% trans "Hauptvorteil:" %}</p>
+<p>{% trans "Es ist erkennbar, in welchen Rotationswinkelbereich gefräst wird." %}</p>
+<p>{% trans "Es ist erkennbar, unter welchen Rotationswinkel bestimmte Werkstückbereiche bearbeitet werden." %}</p>
+<p>{% trans "Es ist erkennbar, wenn Verfahrgrenzen der Maschine überfahren werden." %}</p>
+<p>{% trans "[Beispiel:]" %}</p>
+<p>{% trans "Das folgende Bild zeigt die Bearbeitung einer konkaven Halbkugel. Sie können anhand der Farbe erkennen, ob die obere und die untere Hälfte mit unterschiedlichen Achsen-Kippwinkeln bearbeitet wird." %}</p>
+<p><img src="../../tp_analysis_value_1.gif" alt="tp_analysis_value_1.gif" width="222" height="244" border="0"/></p>
+<p> </p>
+<h2>{% trans "2 Rotations-Achsenwertänderung" %}</h2>
+<p>{% trans "Der Werkzeugweg wird eingefärbt, wenn sich der Rotationswinkel einer der Rotationsachsen (A, B oder C) verändert." %}</p>
+<p><img src="../../newUI_Analyse_tool_Tab_Rotation%20Axis%20Value%20Change.gif" alt="" border="0" class="hcp4"/></p>
+<p>{% trans "[Hauptvorteile:]" %}</p>
+<p>{% trans "Man erkennt an der dargestellten Werkzeugwegfarbe, unter welchem Rotionswinkel ein bestimmter Werkstückbereich bearbeitet wird." %}</p>
+<p> </p>
+<h2>{% trans "3 Rotations-Achsenumkehr" %}</h2>
+<p>{% trans "Hier werden die Werkzeugwege eingefärbt, wenn es zu einer Umkehrung der Rotationsachsenrichtung kommt. Das heißt, jedes Mal wenn sich die Richtung der Rotationsachse umkehrt, wird das entsprechende Werkzeugwegsegment seine Farbe verändern." %}</p>
+<p><img src="../../newUI_Analyse_tool_Tab_Rotation%20Axis%20Reversal.gif" alt="" border="0" class="hcp4"/></p>
+<p>{% trans "[Hauptvorteil:]" %}</p>
+<p>{% trans "Identifiziert die Werkstückbereiche in denen die Rotationsachse umkehrt und es deshalb möglicherweise zu Beeinflussungen des Bearbeitungsergebnisses und der Oberflächenqualität kommt." %}</p>
+<p>{% trans "[Beispiel:]" %}</p>
+<p>{% trans "Das folgende Bild zeigt die Bearbeitung einer Halbkugel. In der Mitte eines jeden Werkzeugweges kommt es an den rot eingefärbten Stellen, zu einer Umkehrung der Rotationsachsenrichtung." %}</p>
+<p><img src="../../tp_analysis_reversal_1.gif" alt="tp_analysis_reversal_1.gif" width="225" height="244" border="0"/></p>
+<p> </p>
+<h2>{% trans "Rotations-Geschwindigkeit" %}</h2>
+<p class="hcp2">{% trans "Der Werkzeugweg wird anders eingefärbt, je nach Geschwindigkeit mit der eine der Rotationsachsen (A, B oder C) verfährt." %}</p>
+<p><img src="../../newUI_Analyse_tool_Tab_Rotation%20axis%20speed.gif" alt="" border="0" class="hcp4"/></p>
+<p class="hcp6">{% trans "Hauptvorteile:" %}</p>
+<p>{% trans "Man erkennt die verwendete Rotationsgeschwindigkeit der Rotationsachsen." %}</p>
+<p>{% trans "Man erkennt, mit welcher Rotationsgeschwindigkeit (schnell - langsam) bestimmte Bereiche bearbeitet werden." %}</p>
+<p>{% trans "Die Rotationsgeschwindigkeit liefert Rückmeldungen über Bereiche, in denen die maximale Rotationsgeschwindigkeit überschritten und es deshalb zu Stabilitätsproblemen oder zu schlechten Werkstückoberflächen kommen kann." %}</p>
+<p>{% trans "[Beispiel:]" %}</p>
+<p>{% trans "Das folgende Bild zeigt die Bearbeitung eines Impellers. Die Farbskala verläuft von [grün] (langsame Rotationsbewegungen) nach [blau] (schnelle Rotationsbewegungen)" %}</p>
+<p>{% trans "Besonders im mittleren Teil des Impellers können Sie erkennen (blau), das die Rotationsbewegungen teilweise sehr schnell sind." %}</p>
+<p>{% trans "Wohingegen im unteren und oberen Bereich sind Rotationsbewegungen eher langsam (grün) sind." %}</p>
+<p><img src="../../tp_analysis_value_change.gif" alt="tp_analysis_value_change.gif" width="359" height="292" border="0"/></p>
+<p> </p>
+<h2>{% trans "Lineare Achsenumkehr" %}</h2>
+<p>{% trans "Der Werkzeugweg verändert jedes mal seine Farbe, wenn sich die Bewegungsrichtung einer linearen Achse umkehrt." %}</p>
+<p><img src="../../newUI_Analyse_tool_Tab_Linear%20Axis%20Reversal.gif" alt="" border="0" class="hcp4"/></p>
+<p><strong class=""><font class="hcp1">Hauptvorteil</font>:</strong></p>
+<p>{% trans "Man erkennt an welchen Stellen eine Richtungsumkehr einer linearen Achse stattfindet. Diese Information kann wichtig sein, da es an den Umkehrpunkten zu schlechteren Oberflächenqualitäten kommen kann." %}</p>
+<p class="hcp5"> </p>
+<h2>{% trans "Richtungsänderung" %}</h2>
+<p>{% trans "Der Werkzeugweg verändert jedes mal seine Farbe, wenn sich die Werkzeugwinkel-Ausrichtung zwischen 2 Werkzeugwegsegmenten verändert." %}</p>
+<p><img src="../../newUI_Analyse_tool_Tab_Orientation%20Change.gif" alt="" border="0" class="hcp4"/></p>
+<p>{% trans "[Hauptvorteil:]" %}</p>
+<p>{% trans "Man kann die Krümmung eines Werkzeugweges erkennen." %}</p>
+<p>{% trans "Auf diese Weise lassen sich Bereiche erkennen, in den der Werkzeugweg fließend und glatt verläuft, als auch Bereiche in denen der Werkzeugweg scharfkantig ist und einen negativen Einfluss auf die Oberflächenqualität haben kann." %}</p>
+<p>{% trans "[Beispiel:]" %}</p>
+<p>{% trans "Das folgende Beispiel zeigt die Bearbeitung einer konkav geformten Fläche. Der Werkzeugweg besteht aus einer spiralförmigen Bewegung." %}</p>
+<p>{% trans "Daraus folgt, dass in der Mitte die Radien im Werkzeugweg klein sind und Änderungen in der XXX Werkzeugwinkel-Ausrichtung große Auswirkungen haben." %}</p>
+<p>{% trans "Je weiter das man den Werkzeugweg in Richtung Außenkante verfolgt, Änderungen in der XXX Werkzeugwinkel-Ausrichtung kleinere Auswirkungen haben." %}</p>
+<p><img src="../../ori_change.gif" alt="ori_change.gif" width="283" height="279" border="0"/></p>
+<p class="hcp5"> </p>
+<p class="hcp5"> </p>
+<h2>{% trans "Segmentlänge" %}</h2>
+<p>{% trans "Der Werkzeugweg wird eingefärbt nach der Segmentlänge." %}</p>
+<p><img src="../../newUI_Analyse_tool_Tab_Segment%20Length.gif" alt="" border="0" class="hcp4"/></p>
+<p>{% trans "[Hauptvorteil:]" %}</p>
+<p>{% trans "Auf diese Weise kann man Bereiche erkennen, die lange lineare Verfahrbewegungen aufweisen, wie beispielsweise bei Schruppoperationen. Oder kurze Verfahrbewegungen, wie sie häufig bei Schlichtoperationen auftreten." %}</p>
+<p class="hcp6">{% trans "Beispiel:" %}</p>
+<p>{% trans "Das folgende Beispiel zeigt die Bearbeitung einer konkav geformten Fläche. Der Werkzeugweg besteht aus einer spiralförmigen Bewegung." %}</p>
+<p>{% trans "Es ist erkennbar, dass die Segmentlänge der Werkzeugwege in Richtung der inneren Spirale kürzer wird." %}</p>
+<p><img src="../../ori_change.gif" alt="ori_change.gif" width="283" height="279" border="0"/></p>
+<p class="hcp5"> </p>
+<p class="hcp5"> </p>
+<h2>{% trans "Kollisionen und Änderung" %}</h2>
+<p>{% trans "Der Werkzeugweg wird eingefärbt je nach Kollisionsstatus." %}</p>
+<p><img src="../../newUI_Analyse_tool_Tab_Collisions%20and%20Proximity.gif" alt="" border="0" class="hcp4"/></p>
+<p>{% trans "[Grau] bedeutet, dass der Werkzeugweg noch nicht überprüft wurde." %}</p>
+<p>{% trans "[Grün] bedeutet, dass der Werkzeugweg überprüft wurde und kollisionsfrei ist." %}</p>
+<p>{% trans "[Rot] bedeutet, dass das Werkzeug mit der Geometrie kollidiert." %}</p>
+<p>{% trans "[Gelb] bedeutet, dass das Werkzeug kurz vor einer Kollision steht, innerhalb eines Annäherungsbereiches. Der Annäherungsbereich wird bestimmt vom Werkzeugaufmaß oder einem einstellbaren Abstandswert." %}</p>
+<p>{% trans "[Beispiel:]" %}</p>
+<p>{% trans "Die folgende Animation zeigt die Bearbeitung einer tiefen Tasche." %}</p>
+<p>{% trans "Sie können sehen, dass sich die Farbe der Werkzeugwege verändert von [grau] (noch nicht überprüft) nach [grün] (geprüft und kollisionsfrei), dann nach [gelb] (Werkzeug steht sehr nahe am Werkstück - aber innerhalb eines Annäherungsbereiches) und letztendlich nach [rot] (Kollision entdeckt zwischen Werkzeug und Werkstück)." %}</p>
+<p> </p>
+<p class="hcp5"><img src="../../proximity%20and%20collisions.gif" alt="" onload="onImgLoad(this)" onclick="onImgClick(this)" title="Click to start movie" border="0" class="hcp4"/></p>
+<p class="hcp5"> </p>
+<p class="footnote_text">{% trans "[Zum Starten der Animation klicken]" %}</p>
+<p class="hcp5"> </p>
+<h3> </h3>
+<h2>{% trans "Vorschub" %}</h2>
+<p>{% trans "Der Werkzeugweg wird unterschiedlich eingefärbt, je nachdem, ob eine [Vorschub]-Bewegung oder eine Verfahrbewegung im [Eilgang] ausgeführt wird." %}</p>
+<p><img src="../../newUI_Analyse_tool_Tab_Feed%20Rate.gif" alt="" border="0" class="hcp4"/></p>
+<p>{% trans "[Blau] bedeutet, dass der Werkzeugweg im [Arbeitsvorschub] ausgeführt wird." %}</p>
+<p>{% trans "[Gelb] bedeutet, dass der Werkzeugweg im [Eilgang] ausgeführt wird." %}</p>
+<p>{% trans "[Beispiel:]" %}</p>
+<p>{% trans "Die folgende Animation zeigt die Bearbeitung eines Zylinders. Man kann an der Farbe erkennen, dass die erste Einfahrbewegung und die letzte Ausfahrbewegung im Eilgang ausgeführt werden." %}</p>
+<p> </p>
+<p class="hcp5"><img src="../../feed_rate.gif" alt="" onload="onImgLoad(this)" onclick="onImgClick(this)" title="Click to start movie" border="0" class="hcp4"/></p>
+<p class="hcp5"> </p>
+<p class="footnote_text">{% trans "[Zum Starten der Animation klicken]" %}</p>
+<p class="hcp5"> </p>
+<p> </p>
+<h2>{% trans "Tauchverhalten" %}</h2>
+<p>{% trans "Der Werkzeugweg wird eingefärbt, je nach Orientierung (Ausrichtung) des Werkzeuges zum Werkzeugweg. Die angezeigten Farben bedeuten folgendes:" %}</p>
+<p><img src="../../newUI_Analyse_tool_Tab_Height%20Change.gif" alt="" border="0" class="hcp4"/></p>
+<p>{% trans "[Rot]: Eintauchen in Werkzeugachsenrichtung." %}</p>
+<p>{% trans "[Orange]: Werkzeug ist nach vorne geneigt (Drückschnitt)" %}</p>
+<p>{% trans "[Grau]: Senkrechte Ausrichtung des Werkzeuges." %}</p>
+<p>{% trans "[Hell-Grün]: Werkzeug ist nach hinten geneigt (Ziehschnitt)" %}</p>
+<p>{% trans "[Grün]: Rückzugsbewegung entlang der Werkzeugachse." %}</p>
+<p>{% trans "[Hauptvorteile:]" %}</p>
+<p>{% trans "Man erkennt, ob ein Werkzeug entlang der Werkzeugachse eintaucht oder unter einem Winkel." %}</p>
+<p>{% trans "Man erkennt, ob ein Werkzeug einen Ziehschnitt (nach hinten geneigt) oder Drückschnitt (nach vorne geneigt) ausführt." %}</p>
+<p>{% trans "Es ist erkennbar, ob ein Werkzeug vom Werkstück zurückzieht, entlang der Werkzeugachse oder unter einem Winkel." %}</p>
+<p>{% trans "[Beispiel:]" %}</p>
+<p>{% trans "Das folgende Beispiel zeigt die Bearbeitung eines konvex geformten Flächenverbundes. Der Werkzeugweg wird in einem Zug, ohne Abhebebewegungen ausgeführt. Die verschiedenen Farben zeigen die verschiedenen Orientierungen des Werkzeuges, bezogen auf den Werkzeugweg." %}</p>
+<p><img src="../../height_change_tp.gif" alt="" border="0" class="hcp4"/></p>
+<p> </p>
+<h2>{% trans "Achsenpol" %}</h2>
+<p>{% trans "Der Werkzeugweg wird eingefärbt, um anzuzeigen, dass die 2 Rotationsachsen kollinear (geradlinig) zueinander stehen. Je weiter die Achsen kollinear zueinander stehen werden, desto roter werden die Werkzeugwege eingefärbt. Die Farbskala verläuft von blau nach rot." %}</p>
+<p><img src="../../newUI_Analyse_tool_Tab_Axis%20Pole.gif" alt="" border="0" class="hcp4"/></p>
+<p>{% trans "[Beispiel:]" %}</p>
+<p>{% trans "Das folgende Bild zeigt die Bearbeitung eines Impellers. Die Positionen an denen die 2 Rotationsachsen kollinear (geradlinig) zueinander stehen, sind [anders gefärbt]." %}</p>
+<p>{% trans "Es ist der Moment an denen beide Rotationsachsen die gleiche Ausrichtung haben." %}</p>
+<p> </p>
+<p><img src="../../Axis_pole.gif" alt="Axis_pole.gif" width="533" height="342" border="0"/> <img src="../../Axis_pole_1.gif" alt="Axis_pole_1.gif" width="534" height="263" border="0"/></p>
+<p> </p>
+<p> </p>
+<h2>{% trans "Einfarbig" %}</h2>
+<p>{% trans "Der Werkzeugweg wird [einfarbig] dargestellt" %}</p>
+<p><img src="../../newUI_Analyse_tool_Tab_Single%20Marking.gif" alt="" border="0" class="hcp4"/></p>
+<p><img src="../../newUI_Single_Marking_Toolpath.gif" alt="" border="0" class="hcp4"/></p>
+<p> </p>
+
+{% endblock %}
+{% endlinebreakless %}

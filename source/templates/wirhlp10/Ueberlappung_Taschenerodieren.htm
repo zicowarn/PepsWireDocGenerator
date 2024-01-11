@@ -1,0 +1,49 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Abstand der Mittelpunktsbahnen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Abstand der Mittelpunktsbahnen" %}</p><p>{% trans "Die Systemvoreinstellung der Überlappung beträgt der 50% des verwendeten Drahtdurchmessers." %}</p>
+<p>{% trans "Es besteht aber die Möglichkeit die Voreinstellung zu verändern und abzuspeichern." %}</p>
+<p>{% trans "Bei geometrisch einfachen Durchbrüchen darf die Drahtbahnüberlappung größer sein als 50%." %}</p>
+<p>{% trans "Beachten Sie aber, dass es dann bei Durchbrüchen mit spitzen Ecken zu Ausfallteilen kommen kann (Siehe folgende Zeichnung)." %}</p>
+<p class="hcp1"> </p>
+<p><img src="../POC.gif" alt="POC.gif" width="576" height="158" border="0"/></p>
+<p class="hcp1"> </p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "Um Ausfallteile zu vermeiden, empfehlen wir die [Drahtbahnüberlappung nicht größer als 50%] des Drahtdurchmesser zu programmieren." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

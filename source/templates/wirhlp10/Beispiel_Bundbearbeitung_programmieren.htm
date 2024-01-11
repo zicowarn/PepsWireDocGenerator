@@ -1,0 +1,111 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Beispiel: Bundbearbeitung programmieren XXX" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    li.hcp1 { font-size:9pt; }
+    font.hcp2 { font-weight:bold; }
+    p.hcp3 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Bundbearbeitung programmieren" %}</p><ul>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Zeichnen Sie die #[Bearbeitungsfigur(en)]# die bearbeitet werden soll." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Rufen im Menü [Bearbeitung] den Dialog #[Operation starten]# auf." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Bestimmen Sie im Dialog den [NC-Dateinamen] und die [Startposition]." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Geben Sie im Feld [Referenzhöhe] die Z-Lage des Bundes ein (Gilt nicht für [Agievision]-Maschinen) XXX." %}</p></li>
+</ul>
+<p>{% trans "@ (Beispiel für Materialhöhe 40 und 5 mm Bund oben )" %}</p>
+<ul>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Rufen Sie im Menü [Bearbeitung] den Befehl #Bundbearbeitung# auf." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Wählen Sie die zu bearbeitenden Figur(en) mit der Schaltfläche @." %}</p></li>
+</ul>
+<p><img src="../Bundbearbeitung_exa_1a.gif" alt="Zylindrischer_Schnitt_exa_1.gif" border="0"/></p>
+<p class="hcp3"> </p>
+<ul>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Legen Sie mit den grafischen Schaltflächen im Bereich [Standardkonik] fest, ob der Bund [oben] oder [unten] sein soll." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Anschließend in den Feldern [Winkel] den Grad der Konik ein (positiver Wert)." %}</p></li>
+</ul>
+<p><img src="../Bundbearbeitung_exa_2.gif" alt="Bundbearbeitung_exa_2.gif" width="326" height="223" border="0"/></p>
+<p class="hcp3"> </p>
+<ul>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Wählen Sie die Registerlasche [Technologie]." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie rechts neben dem Symbol @ auf die Schaltfläche #[Einstellungen]#." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Dies ruft den Dialog zur Einstellung der Bearbeitung des [zylindrischen Bereichs] auf." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Aktivieren Sie die Checkboxen unterhalb des Feldes [Schnitt Nr.], um die Anzahl der Schnitte festzulegen." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Geben Sie im Feld [Offset] das Schlichtaufmaß ein. Das Aufmaß wird normalerweise für die #[Simulation]# verwendet." %}</p></li>
+</ul>
+<p><img src="../Bundbearbeitung_exa_3.gif" alt="Bundbearbeitung_exa_3.gif" width="314" height="114" border="0"/></p>
+<ul>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Bestimmen Sie mit den Schaltflächen @ die Technologie für den(ie) Schnitt(e)." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf das Register #[Anbinden]#." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Aktivieren Sie [Anbindungslänge] und geben Sie im Textfeld die Breite der Anbindung ein, falls es ein Ausfallteil gibt und dieses gesichert werde soll." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Geben Sie [Keine] ein, wenn kein Ausfallteil zu erwarten ist." %}</p></li>
+</ul>
+<p><img src="../Bundbearbeitung_exa_4.gif" alt="Bundbearbeitung_exa_4.gif" width="329" height="152" border="0"/></p>
+<ul>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Wählen Sie im Bereich [Methode zur Entfernung der Anbindung] z.B. die Methode [Stopp Anbindung mit dem ersten Schnitt entfernen]." %}</p></li>
+</ul>
+<p><img src="../Bundbearbeitung_exa_5.gif" alt="Bundbearbeitung_exa_5.gif" width="327" height="179" border="0"/></p>
+<ul>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf das Register #[Ein-/Ausfahren]# und stellen Sie ein, wie die Bearbeitungsgeometrie(n) an-, bzw. abgefahren werden soll(en)." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf das Register #[Offset]#." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Aktivieren Sie Option [Richtung automatisch (Nur geschl. Figuren)] und stellen Sie ein, in welcher Richtung (Uhrzeiger- / Gegenuhrzeiger) die Bearbeitung ausgeführt werden soll." %}</p></li>
+</ul>
+<p><img src="../Zylindrischer_Schnitt_exa_5.gif" alt="Zylindrischer_Schnitt_exa_5.gif" width="341" height="235" border="0"/></p>
+<ul>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Schließen Sie den [Einstellungen] Dialog mit [OK]." %}</p></li>
+</ul>
+<p class="hcp3"> </p>
+<p>{% trans "Bearbeitungsparameter für die [konische Bearbeitung] einstellen." %}</p>
+<ul>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie rechts neben dem Symbol @ auf die Schaltfläche #[Einstellungen]#. Dies ruft den Dialog zur Einstellung der Bearbeitung des [konischen Bereichs] auf." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Stellen Sie die Bearbeitungsparameter [Anzahl der Schnitte], [Technologie], Anbindung etc. für die [konische Bearbeitung] ein. Gehen Sie vor, wie oberhalb beschrieben." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Schließen Sie den [Einstellungen] Dialog mit [OK]." %}</p></li>
+</ul>
+<ul>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Wählen Sie die Registerlasche [Optionen]." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Stellen Sie unter [Bearbeitungsoptionen] ein, mit welcher Strategie die Bundbearbeitung ausgeführt werden soll." %}</p></li>
+</ul>
+<p><img src="../Bundbearbeitung_exa_8.gif" alt="Bundbearbeitung_exa_8.gif" width="281" height="122" border="0"/></p>
+<ul>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Schließen Sie alle Dialoge mit [OK]." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Die Bearbeitungsoperation wird im #[Operationsmanager]# gespeichert." %}</p></li>
+</ul>
+<p><img src="../Bundbearbeitung_exa_6.gif" alt="Bundbearbeitung_exa_6.gif" width="282" height="97" border="0"/></p>
+<p class="hcp3"> </p>
+<ul>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Führen Sie eine #[Simulation]# der Bearbeitung durch." %}</p></li>
+</ul>
+<p><img src="../Bundbearbeitung_exa_7.gif" alt="Bundbearbeitung_exa_7.gif" width="451" height="330" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

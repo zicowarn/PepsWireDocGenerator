@@ -1,0 +1,45 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Figuren erzeugen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Figuren erzeugen" %}</p><p>{% trans "Normalerweise bestehen die projizierten Geometrien aus einzelnen [Linien-/Bogenelementen]." %}</p>
+<p>{% trans "Aktiviert man die Option [Figuren erzeugen] werden aus den projizierten Geometrien automatisch Geometrien vom Typ [Figur] erzeugt." %}</p>
+<p>{% trans "Im Feld [Vorgabe für Figurnamen] können Sie eine eigene Vorgabe für den Figurnamen einstellen." %}</p>
+<p> </p>
+<p style="font-weight: bold;">{% trans "Beispiel:" %}</p>
+<p>{% trans "[Fig] ergibt [Fig]001_prj, [Fig]002_prj, [Fig]003_prj etc." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

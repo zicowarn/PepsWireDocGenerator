@@ -1,0 +1,86 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Das Vorbereitung Menü" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+    font.hcp3 { font-family:Symbol;
+    font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <h1>{% trans "Das Vorbereitung Menü" %}</h1><p> </p><p>{% trans "Im Menü [Vorbereitung] finden Sie Befehle, um Bearbeitungsfiguren zu erzeugen und zu manipulieren sowie Befehle, um die eigentliche Bearbeitungsprogrammierung vorzubereiten." %}</p>
+<p class="hcp2"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp2"> </p>
+<p><img src="../WIR9_shg.gif" usemap="#AreaMap0" alt="WIR9_shg.gif" width="847" height="288" border="0"/> <map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="1, 29, 226, 59" href="Linien_Boegen_Bearbeitungsfigur.htm" alt=""/>
+<area shape="rect" coords="2, 59, 225, 88" href="Auto_Matritzen_und_Stempel.htm" alt=""/>
+<area shape="rect" coords="440, 32, 603, 63" href="Synchronisationslinien.htm" alt=""/>
+<area shape="rect" coords="614, 88, 840, 119" href="Variable_Bearbeitungsebenen____.htm" alt=""/>
+<area shape="rect" coords="614, 60, 839, 90" href="Zusaetzliche_M_Codes_Kommentare_u_a_____.htm" alt=""/>
+<area shape="rect" coords="608, 30, 834, 64" href="Zusaetzliche_Technologien____.htm" alt=""/>
+<area shape="rect" coords="446, 61, 613, 90" href="Zusaetzliche_Anbindungen.htm" alt=""/>
+<area shape="rect" coords="443, 90, 614, 127" href="Mehrfache_Einfahrpunkte.htm" alt=""/>
+<area shape="rect" coords="3, 200, 180, 233" href="Eckenfreimachung.htm" alt=""/>
+<area shape="rect" coords="1, 168, 181, 198" href="Schnittluftaenderung____.htm" alt=""/>
+<area shape="rect" coords="185, 233, 373, 266" href="Sektoren_AGIEVISION_.htm" alt=""/>
+<area shape="rect" coords="2, 234, 183, 265" href="Bearbeitungsfigur_abrunden____.htm" alt=""/>
+<area shape="rect" coords="183, 201, 370, 231" href="Optimales_Startloch_ermitteln.htm" alt=""/>
+<area shape="rect" coords="186, 166, 372, 200" href="Offset_pruefen.htm" alt=""/>
+<area shape="rect" coords="228, 93, 432, 127" href="NURB_Surface_Kurve_projizieren.htm" alt=""/>
+<area shape="rect" coords="226, 60, 435, 90" href="Drahtmodell_Projektions_Assistent.htm" alt=""/>
+<area shape="rect" coords="226, 30, 438, 65" href="Solid_Projektions_Assistent.htm" alt=""/>
+<area shape="rect" coords="2, 87, 184, 121" href="Offene_Figuren_bearbeiten.htm" alt=""/>
+<area shape="rect" coords="380, 166, 440, 279" href="Ausfallteil_aufteilen.htm" alt=""/>
+<area shape="rect" coords="441, 169, 492, 280" href="Das_Diverses_Menue.htm" alt=""/>
+<area shape="rect" coords="494, 174, 558, 279" href="Das_Drehstahl_Menue.htm" alt=""/>
+<area shape="rect" coords="560, 169, 612, 282" href="javascript:BSSCPopup('../Commdata/Hilfeaufruf_in_Arbeit.htm',400,300);" id="area1" alt=""/></map></p>
+<p class="hcp2"> </p>
+<p>{% trans "Sie finden Befehle um Regelflächenbearbeitungen durch Synchronisationslinien vorzubereiten, zusätzliche Haltestege zu definieren und beliebige Technologien oder NC-Codes in eine Bearbeitungsfigur einzubinden." %}</p>
+<p>{% trans "Ferner können Sie in diesem Menü variable Bearbeitungsebenen für die Regelflächenbearbeitungen und Sekundärfiguren, die ebenfalls bei der Regelflächenbearbeitung Verwendung finden, bestimmen." %}</p>
+<p>{% trans "Viele der o. g. Vorbereitungsfunktionen werden in der Grafik durch [farbige Symbole] angezeigt. Man unterscheidet:" %}</p>
+<p class="hcp2"> </p>
+<p class="Punkttaps">{% trans "[Blau] [ð] (Symbol: [Quadrat]) Anbindungen (Haltestege)" %}</p>
+<p class="Punkttaps">{% trans "[Magenta] [ð][ ](Symbol: [Quadrat]) Eckenstrategie" %}</p>
+<p class="Punkttaps">{% trans "[Magenta] [O] (Symbol: [Kreis]) Technologiewechselpunkte" %}</p>
+<p class="Punkttaps">{% trans "[Grün] [O] (Symbol: [Kreis]) M-Codes, beliebiger NC-Code" %}</p>
+<p class="Punkttaps">{% trans "[Magenta] [D] (Symbol: [Dreieck]) Variable Bearbeitungsebenen" %}</p>
+<script type="text/javascript" language="JavaScript1.2">
+//&lt;![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('area1');
+//]]&gt;
+</script>
+
+{% endblock %}
+{% endlinebreakless %}

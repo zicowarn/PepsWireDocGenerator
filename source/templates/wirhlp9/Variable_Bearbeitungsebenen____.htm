@@ -1,0 +1,87 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Variable Bearbeitungsebenen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Variable Bearbeitungsebenen" %}</p><p>{% trans "Bei Werkstücken mit unterschiedlichen Höhen entsteht bei der Bearbeitung mit Konik die Schwierigkeit, dass bei jeder sich ergebenden Höhenänderung, Referenz- und Sekundärhöhe neu angeglichen werden müssen." %}</p><p>{% trans "Eine Möglichkeit diese Problemstellung zu lösen, ist die Projektion des vorhandenen Höhenprofils auf die zu bearbeitende Kontur." %}</p>
+<p>{% trans "Da die Erstellung solcher projizierten Konturen bei entsprechenden Höhenprofilen sehr komplex sein kann, ist eine manuelle Erstellung nur bei einfachen Anwendungsfällen ratsam." %}</p>
+<p>{% trans "Für darüber hinausgehende Anwendungsgebiete wurde der Befehl [Variable Bearbeitungsebenen] entwickelt, der die Erstellung der projizierten Kontur nach Eingabe der Höhenwerte automatisch übernimmt." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../VARI_LAN.gif" alt="VARI_LAN.gif" width="605" height="327" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "Nach Aufruf des Befehls werden Sie aufgefordert die Bearbeitungsfigur zu wählen, auf der die [Höhenänderungen] eingebracht werden sollen." %}</p>
+<p>{% trans "Verwenden Sie die Fangfunktionen, um die Positionen der [Höhenänderung] festzulegen." %}</p>
+<p>{% trans "Nach der Eingabe der Position erfolgt der Aufruf eines Dialogs in dem Sie die [Bezugsebene] und die [Höhenänderung] eingeben." %}</p>
+<p class="hcp2"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p><img src="../VARIEBEN_shg.gif" usemap="#AreaMap0" alt="VARIEBEN_shg.gif" width="257" height="192" border="0"/> <map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="12,85,248,145" href="javascript:BSSCPopup('Bezugsebenen_Variable_Bearbeitungsebenen.htm',400,700);" id="area1" alt=""/>
+<area shape="rect" coords="82,44,236,66" href="javascript:BSSCPopup('Naechste_Vorherige_variable_Bearbeitungsebene.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="13,28,81,64" href="javascript:BSSCPopup('Hoehe_Variable_Bearbeitungsebenen.htm',400,300);" id="area3" alt=""/></map></p>
+<p class="hcp2"> </p>
+<p>{% trans "Bestimmen Sie im Dialog die Z-Höhe. Jede Höhenänderung wird durch ein [kleines Dreieck] in der Farbe [Magenta] symbolisiert." %}</p>
+<p>{% trans "Fahren Sie fort, bis alle Höhenänderungen bestimmt sind und bearbeiten Sie die Figuren als [Regelfläche]." %}</p>
+<p class="hcp2"> </p>
+<p>{% trans "Innerhalb des Befehls stehen Optionen für Transformationen zur Verfügung:" %}</p>
+<p>{% trans "[Var. Höhen kopieren + verschieben], [Var. Höhen kopieren + rotieren] und [Var. Höhen spiegeln] (siehe [rechte Maustaste] od. [horizontale Ikonenleiste])." %}</p>
+<p>{% trans "Die Optionen finden bei symmetrischen Formen Verwendung, die das Kopieren von vorhandenen Symbolen für variable Bearbeitungsebenen erlauben." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../EXTAGSBU.gif" alt="EXTAGSBU.gif" width="271" height="197" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "Beachten Sie auch die Option [Löschen] (siehe [rechte Maustaste] od. [horizontale Ikonenleiste]) die das Löschen von fehlerhaften Symbolen erlaubt." %}</p>
+<p>{% trans "Mit der Option [Var. Höhen editieren] können Sie vorhandene Symbole editieren, um die Höhe der Ebene zu verändern." %}</p>
+<p class="hcp2"> </p>
+<h2 style="margin-top: 4.00pt; margin-bottom: 0.00pt;">{% trans "So wird es gemacht" %}</h2>
+<p>{% trans "#[Variables Höhenprofil erodieren]#" %}</p>
+<p class="hcp2"> </p>
+<p class="Hinweis">{% trans "Wichtige Hinweise:" %}</p>
+<p>{% trans "1.) Zur Bearbeitung von variablen Bearbeitungsebenen [muss man eine] #[Regelflächenbearbeitung]# programmieren." %}</p>
+<p>{% trans "2.) [Variable Ebenen werden nur dann ausgeführt], wenn die Checkbox [Ebene variabel] im Dialog [Regelflächenbearbeitung] [aktiviert] ist." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../EXTAGS_EB_VAR.gif" alt="EXTAGS_EB_VAR.gif" width="230" height="81" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "3.) Je mehr Ebenen-Wechselpunkte in der Geometrie eingebracht werden, desto genauer ist das Ergebnis." %}</p>
+<script type="text/javascript" language="JavaScript1.2">
+//&lt;![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('area1');
+        FilePopupInit('area2');
+        FilePopupInit('area3');
+//]]&gt;
+</script>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,40 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Minimales Volumen das gespeichert werden soll XXX044" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Minimales Volumen das gespeichert werden soll" %}</p><p>{% trans "XXX Beschreibung in Arbeit ..." %}</p>
+<p>{% trans "Value sets the minimum volume of cut that is saved." %}</p>
+<p>{% trans "The volume of cut is saved so that when you go backwards and forwards through the simulation, it shows the most accurate removal of material." %}</p>
+<p>{% trans "If this value was set to a much larger value, as the user goes back through the simulation the material would not be drawn back where I should be." %}</p>
+<p>{% trans "The larger the value, the faster the simulation is." %}</p>
+<p> </p>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,37 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Bei Auswahl von Punkten ein Ergebnisfenster zeigenXXX" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Bei Auswahl von Punkten ein Ergebnisfenster zeigen" %}</p><p>{% trans "XXX Beschreibung in Arbeit ..." %}</p>
+<p>{% trans "This option is used to display\hide the progress windows. The progress windows are shown whilst using commands in the simulation." %}</p>
+<p>{% trans "Currently the only command to use the message window is plane type sectioning." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

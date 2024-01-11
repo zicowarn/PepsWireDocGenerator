@@ -1,0 +1,44 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Qualitätsziel (Bundbearbeitung)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Agievhlp.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Qualitätsziel (Bundbearbeitung)" %}</p><p>{% trans "Je nachdem welche der Ikonen @, @ oder @ für die Art der Bundbearbeitung gewählt wurde, schaltet das System [zwei] oder [drei Reihen] mit Listboxen zur Auswahl von separaten Qualitätszielen für Bund und Konik frei." %}</p>
+<p>{% trans "[Beispiel]: Es wurde die Option @ [Mittlerer Bund] gewählt." %}</p>
+<p class="Block_Text">{% trans "In diesem Fall schaltet das System drei Reihen mit Listboxen zur Auswahl der Qualitätsziele für die obere Konik, den mittleren Bund und die untere Konik frei." %}</p>
+<p style="text-align: center;"><img src="../QUAL_AV.gif" alt="QUAL_AV.gif" width="402" height="137" border="0"/></p>
+<p class="Block_Text">{% trans "Verändern Sie nun die Qualitätsziele nach Ihren Vorstellungen." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

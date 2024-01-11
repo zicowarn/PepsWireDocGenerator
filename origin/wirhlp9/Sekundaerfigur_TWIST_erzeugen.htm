@@ -1,0 +1,97 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Sekundärfigur (TWIST) erzeugen</title>
+<link rel="StyleSheet" href="../wirhlp9.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { margin-top:0;
+margin-bottom:0; }
+font.hcp2 { font-weight:bold; }
+li.hcp3 { font-size:9pt; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;"><img src="../twistfig.gif" alt="twistfig.gif" width="29" height="29" border="0"> Sekundärfigur (TWIST) erzeugen</p>
+<p>Dieser Befehl erzeugt eine Kopie (Sekundärfigur) von einer vorhandenen Figur. Anschließend besteht die Möglichkeit, die kopierte Sekundärfigur zu rotieren, transformieren und zu skalieren.</p>
+<p>Mit Hilfe dieses Befehls können Sie auf einfache Weise die z.B. untere Regelflächengeometrie für Schrägschieber oder verdrehte Schrägschieber (TWIST) erzeugen.</p>
+<p class="hcp1">&#160;</p>
+<p class="Hinweis">Wichtiger Hinweis:</p>
+<p>Dieser Befehl findet ab der Version 5 <font class="hcp2">kaum</font> noch Verwendung, da man <font class="hcp2">Schrägschieber</font> direkt programmieren kann, mit der Option <a href="../wirhlp10/Konik_lasche.htm"><font class="hcp2">Konik</font></a> des Bearbeitungsbefehls <a href="../wirhlp10/Standard_Konturbearbeitung____.htm"><font class="hcp2">Standard Konturbearbeitung</font></a>.</p>
+<p class="hcp1">&#160;</p>
+<p class="Tip_Note_Heading">Schrägschieber mit TWIST erzeugen und bearbeiten:</p>
+<p>In eine Schnittplatte soll eine 20 Grad schräge Bohrung (Schrägschieber) eingebracht werden.</p>
+<p class="hcp1">&#160;</p>
+<p><img src="../TWIST.gif" alt="TWIST.gif" width="229" height="369" border="0"></p>
+<ul>
+<li class="hcp3">
+<p class="Topic_Text_Bulleted">Zeichnen Sie den 20 mm Kreis und erzeugen Sie eine Bearbeitungsfigur.</p>
+</li>
+<li class="hcp3">
+<p class="Topic_Text_Bulleted">Rotieren Sie die Figur um 20 Grad um die Y-Achse. Verwenden Sie den Befehl <font class="hcp2">3D Rotieren</font> im Menü <font class="hcp2">Transformation</font>.</p>
+</li>
+<li class="hcp3">
+<p class="Topic_Text_Bulleted">Da wir eine rotierte Figur nicht schneiden können, müssen wir diese auf die XY-Ebene projizieren.</p>
+</li>
+<li class="hcp3">
+<p class="Topic_Text_Bulleted">Erzeugen Sie die Projektion mit dem Befehl <a href="Figur_projizieren____.htm"><font class="hcp2">Figur projizieren oder skalieren</font></a> im Menü <font class="hcp2">Vorbereitung \ Diverses</font>. Das Ergebnis der Projektion ist eine Ellipse.</p>
+</li>
+<li class="hcp3">
+<p class="Topic_Text_Bulleted">Der Schrägschieber wird als Regelfläche geschnitten, deshalb benötigen wir eine weitere, verschobene Figur für die untere (z-20) Regelfläche.</p>
+</li>
+<li class="hcp3">
+<p class="Topic_Text_Bulleted">Der Befehl <font class="hcp2">Sekundärfigur (TWIST) erzeugen</font> erzeugt eben diese zweite Figur (Sekundärfigur).</p>
+</li>
+<li class="hcp3">
+<p class="Topic_Text_Bulleted">Wählen Sie den Befehl <font class="hcp2">Sekundärfigur (TWIST) erzeugen</font> im Menü <font class="hcp2">Vorbereitung \ Diverses</font>.</p>
+</li>
+<li class="hcp3">
+<p class="Topic_Text_Bulleted">Klicken Sie zunächst die projizierte Figur an. Das System fragt nun:</p>
+</li>
+</ul>
+<p class="Prompts">Startposition od. Mittelpunkt für die Skalierung/Rotation/Spiegelung :</p>
+<ul>
+<li class="hcp3">
+<p class="Topic_Text_Bulleted">Fangen Sie die Position der Startlochbohrung.</p>
+</li>
+<li class="hcp3">
+<p class="Topic_Text_Bulleted">Das System fragt nun ob skaliert, transformiert oder rotiert werden soll. In unserem Fall benötigen wir eine Transformation.</p>
+</li>
+<li class="hcp3">
+<p class="Topic_Text_Bulleted">Wählen Sie auf die Option <font class="hcp2">Transformieren</font> (siehe <font class="hcp2">rechte Maustaste</font> od. <font class="hcp2">horizontale Ikonenleiste</font>).</p>
+</li>
+<li class="hcp3">
+<p class="Topic_Text_Bulleted">Die untere Regelflächenfigur muss <font class="hcp2">inkremental</font> (DX, DY) verschoben werden.<br>
+Die Formel lautet: &#160;<font class="hcp2">DX</font>,<font class="hcp2">Y</font> <font class="hcp2">tangens</font>(<font class="hcp2">Winkel</font>)&#160;<font class="hcp2">X</font>&#160;<font class="hcp2">Höhe</font></p>
+</li>
+<li class="hcp3">
+<p class="Topic_Text_Bulleted">Geben Sie ein: <font class="hcp2">DXtan(20)*20</font>. Beenden Sie den Befehl</p>
+</li>
+<li class="hcp3">
+<p class="Topic_Text_Bulleted">Editieren Sie die Figur und fügen Sie <font class="hcp2">2 C-Punkte</font> ein, welche die Startlochposition und die Bearbeitungsposition auf der Figur definieren.</p>
+</li>
+</ul>
+<p class="hcp1">&#160;</p>
+<p><font color="#0000FF" class="hcp2">Hinweis</font><font color="#0000FF">:</font> Es darauf zu achten, dass das <font class="hcp2">Startloch der unteren Figur in</font> <font class="hcp2">der Schnittmenge der beiden Figuren liegt</font>, damit der Draht eingefädelt werden kann.</p>
+<p>Ggf. muss die Figur nochmals editiert werden, um die Startlochposition zu verändern. Schneiden sich die Figuren nicht, muss der Draht schräg eingefädelt werden.</p>
+<p><br>
+<font class="hcp2">Figuren, die keine Schnittmenge aufweisen:</font><br>
+Wenn die Geometrie des Schrägschiebers sehr klein ist und/oder das Teil sehr hoch und/oder der Winkel sehr groß, kann es vorkommen, dass es keinen Bereich gibt, den beide Bearbeitungsfiguren einschließen.</p>
+<p>In diesem Fall sind folgende Regeln zu beachten:</p>
+<p>Weil das automatische Einfädeln und Abschneiden des Drahtes in der Regelflächenbearbeitung ausgeschaltet wird, muss der Befehl zum Draht Einfädeln <font class="hcp2">vor</font> der Regelflächenbearbeitung aufgerufen werden.</p>
+<p>Dies geschieht im Menü <font class="hcp2">Bearbeitung</font> mit dem Befehl <a href="../wirhlp10/Draht_einfaedeln.htm"><font class="hcp2">Draht abschneiden/einfädeln</font></a> oder mit der entsprechenden Ikone.</p>
+<ul>
+<li class="hcp3">
+<p class="Topic_Text_Bulleted">Bearbeiten Sie nun beide Figuren als Regelfläche.</p>
+</li>
+</ul>
+</body>
+</html>

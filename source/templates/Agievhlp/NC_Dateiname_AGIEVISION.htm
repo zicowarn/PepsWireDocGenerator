@@ -1,0 +1,41 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "NC-Dateiname" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Agievhlp.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "NC-Dateiname" %}</p><p>{% trans "Legt den Namen der NC-Ausgabedatei(en) fest. Als Vorgabe zeigt das System in diesem Feld den Dateinamen des momentanen Programms." %}</p>
+<p>{% trans "Es wird für jede geschnittene Bearbeitungsfigur eine separate NC-Datei erzeugt. Der Name der Dateien wird automatisch inkrementiert (Test.iso, Test[1].iso, Test[2].iso, Test[3].iso ...)." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

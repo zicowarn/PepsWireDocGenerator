@@ -1,0 +1,43 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Auswahl von Solid-Geometrieelementen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Operationsmanager.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <h2>{% trans "Auswahl von Solid-Geometrieelementen" %}</h2><p class="dialog"> </p>
+<p class="dialog">{% trans "Auswahl von Elementen" %}</p>
+<p>{% trans "Ruft man den Befehl [Element Info] @ auf und setzt man VOR der Geometrieauswahl [keinen] [Filter], zeigt das System nur generelle Informationen über Solid-Bodies, Sheet-Bodies oder Draht-Bodies) an." %}</p>
+<p>{% trans "Benötigte man Informationen über die Bestandteile von Solids (Kanten, Loops oder Faces), dann sollten Sie die Option [Filter] (siehe [rechte] Maustaste) verwenden und den Elementtyp einstellen über den Sie Informationen benötigen." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

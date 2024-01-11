@@ -1,0 +1,63 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Kopiere Feature - In gleiche &sol; neue Operation" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../RH_Context_Menu.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    span.hcp1 { font-weight:bold; }
+    img.hcp2 { border:none; }
+    font.hcp3 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Kopiere Feature - In gleiche / neue Operation" %}</p><p> </p>
+<p>{% trans "Mit dieser Funktion können Sie [ein oder mehrere Bearbeitungsfeature(s) kopieren]." %}</p>
+<p>{% trans "Sie können die Features in die [aktuelle Operation kopieren] oder die Features in eine [neue Operation kopieren]." %}</p>
+<p>{% trans "Die Option wird beispielsweise verwendet, um ein Feature zweimal, mit unterschiedlichen Schneidparametern zu bearbeiten." %}</p>
+<p> </p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "[Gruppierte Features] können zur Zeit NICHT kopiert werden." %}</p>
+<p> </p>
+<p class="Tip-Note-Heading">{% trans "Kopiere Feature in gleiche Operation" %}</p>
+<p>{% trans "Kopiert ein oder mehrere gewählte Bearbeitungsfeature(s) an das Ende der aktuellen Operation." %}</p>
+<p> </p>
+<p><img src="../image/Kopiere%20Feature%20in%20gleiche%20Operation.gif" alt="" border="0" class="hcp2"/></p>
+<p> </p>
+<p class="Tip-Note-Heading">{% trans "Kopiere Feature in neue Operation" %}</p>
+<p>{% trans "Erzeugt eine neue Operation und kopiert ein oder mehrere gewählte Bearbeitungsfeature(s) in die neue Operation" %}</p>
+<p> </p>
+<p><img src="../image/Kopiere%20Feature%20in%20neue%20Operation.gif" alt="" border="0" class="hcp2"/></p>
+<p> </p>
+<p class="Hinweis">{% trans "Tipp:" %}</p>
+<p>{% trans "Wählen Sie [mehrere aufeinander folgende] [Bearbeitungsfeature] aus, indem Sie während des Auswählens die [Umschalt]-Taste gedrückt halten." %}</p>
+<p>{% trans "Wählen Sie [nicht aufeinander folgende] [Bearbeitungsfeature] aus, indem Sie während des Auswählens die [Strg]-Taste gedrückt halten." %}</p>
+<p> </p>
+
+{% endblock %}
+{% endlinebreakless %}

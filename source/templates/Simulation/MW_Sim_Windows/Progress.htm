@@ -1,0 +1,50 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Fortschrittsanzeige" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../../MW_Sim_Windows.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <h1>{% trans "Fortschrittsanzeige" %}</h1><p> </p>
+<p>{% trans "Der Schieber [Fortschrittsanzeige] zeigt sowohl die Position der aktuellen Operation, als auch die Positionen aller Operationen. Der Schieber kann ebenfalls verwendet werden, um an eine bestimmte Position im Werkzeugweg zu springen, indem man den Schieber vorwärts oder rückwärts 'zieht' ([Hinweis]: Bei dieser Art der Navigation ist die Kollisionsprüfung und alle anderen Überprüfungs-Algorithmen ausgeschaltet." %}</p>
+<p>{% trans "Der Schieber erlaubt es, auf besonders schnelle Weise eine bestimmte Position im Werkzeugweg zu erreichen. Die einzelnen Bearbeitungsoperationen werden voneinander getrennt, durch unterschiedliche Farben und einem schwarzen Trennstrich." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><img src="../../newUI_progress.gif" alt="newUI_progress.gif" width="1051" height="104" border="0"/></p>
+<p> </p>
+<p>{% trans "Die 3 farbigen Fortschrittsanzeigen unterhalb des Schiebers, zeigen besondere Ereignisse im Werkzeugweg (z.B. Kollisionen) in [roter] Farbe grafisch an. Die Fortschrittsanzeigen haben folgende Funktion:" %}</p>
+<p> </p>
+<p>{% trans "[Erste Fortschrittsanzeige]: Maschinen-Verfahrgrenzen überschritten" %}</p>
+<p>{% trans "[Zweite Fortschrittsanzeige]: Kollisionsreport für die Maschine" %}</p>
+<p>{% trans "[Dritte Fortschrittsanzeige]: Kollisionsreport für die Simulation" %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

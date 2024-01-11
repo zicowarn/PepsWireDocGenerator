@@ -1,0 +1,126 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Synchronisationslinien erzeugen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+    li.hcp2 { font-size:9pt; }
+    font.hcp3 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Tip_Note_Heading">{% trans "Synchronisationslinien erzeugen" %}</p><p>{% trans "Ausgangssituation: Es sind zwei Bearbeitungsfiguren für eine Regelflächenbearbeitung vorhanden. Diese sollen durch Synchronisationslinien für eine Regelflächenbearbeitung vorbereitet werden." %}</p><p>{% trans "Ohne Synchronisationslinien würde es zu einem verzerrten Bearbeitungsergebnis kommen." %}</p>
+<p class="hcp1"> </p>
+<p><img src="../Synchronisationslinien_Exa_1.gif" alt="Synchronisationslinien_Exa_1.gif" width="764" height="245" border="0"/></p>
+<p class="hcp1"> </p>
+<ul>
+<li class="hcp2">
+<p class="Topic_Text_Bulleted">{% trans "Rufen Sie im Menü [Vorbereitung] den Befehl #[Synchronisationslinien]# auf." %}</p>
+</li>
+</ul>
+<p class="Prompts">{% trans "Wähle UNTERE Ebene :" %}</p>
+<ul>
+<li class="hcp2">
+<p class="Topic_Text_Bulleted">{% trans "Klicken Sie die Bearbeitungsfigur für die [untere] Regelflächenebene an." %}</p>
+</li>
+</ul>
+<p class="Prompts">{% trans "Wähle OBERE Ebene :" %}</p>
+<ul>
+<li class="hcp2">
+<p class="Topic_Text_Bulleted">{% trans "Klicken Sie die Bearbeitungsfigur für die [obere] Regelflächenebene an." %}</p>
+</li>
+</ul>
+<p class="Prompts">{% trans "Eingabe Beginn der Synchronisationslinie :" %}</p>
+<ul>
+<li class="hcp2">
+<p class="Topic_Text_Bulleted">{% trans "Bestimmen Sie den [Anfang] der ersten Synchronisationslinie mit der [Fangfunktion] [Endpunkt fangen]." %}</p>
+</li>
+</ul>
+<p class="Prompts">{% trans "Eingabe Beginn der Synchronisationslinie :" %}</p>
+<ul>
+<li class="hcp2">
+<p class="Topic_Text_Bulleted">{% trans "Bestimmen Sie das [Ende] der ersten Synchronisationslinie mit der [Fangfunktion] [Lot fangen]." %}</p>
+</li>
+</ul>
+<p class="hcp1"> </p>
+<p><img src="../Synchronisationslinien_Exa_2.gif" alt="Synchronisationslinien_Exa_2.gif" width="529" height="245" border="0"/></p>
+<p class="hcp1"> </p>
+<p class="Prompts">{% trans "Eingabe Beginn der Synchronisationslinie :" %}</p>
+<ul>
+<li class="hcp2">
+<p class="Topic_Text_Bulleted">{% trans "Bestimmen Sie die restlichen drei Synchronisationslinien auf die gleiche Art und Weise." %}</p>
+</li>
+</ul>
+<p class="hcp1"> </p>
+<p><img src="../Synchronisationslinien_Exa_3.gif" alt="Synchronisationslinien_Exa_3.gif" width="452" height="245" border="0"/></p>
+<p class="hcp1"> </p>
+<p>{% trans "[Tip]: Beachten Sie auch die Optionen im Kontextmenü auf der [rechten] Maustaste. Sie können damit vorhandene Synchronisationslinien [löschen], [kopieren], [spiegeln] usw. ." %}</p>
+<p class="hcp1"> </p>
+<p><img src="../BUTT_SYN_shg.gif" usemap="#AreaMap0" alt="BUTT_SYN_shg.gif" width="274" height="198" border="0"/> <map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="0,88,211,104" href="javascript:BSSCPopup('KopTra_Synchronisationslinien.htm');" id="area1" alt=""/>
+<area shape="rect" coords="0,110,211,127" href="javascript:BSSCPopup('KopRot_Synchronisationslinien.htm');" id="area2" alt=""/>
+<area shape="rect" coords="0,131,211,146" href="javascript:BSSCPopup('Spiegeln_Synchronisationslinien.htm');" id="area3" alt=""/>
+<area shape="rect" coords="0,68,211,84" href="javascript:BSSCPopup('Loesche_Synchronisationslinien.htm');" id="area4" alt=""/>
+<area shape="rect" coords="1,23,122,42" href="javascript:BSSCPopup('../CommonHelp3/Neuzei_Offset_erzeugen.htm');" id="area5" alt=""/>
+<area shape="rect" coords="1,44,110,66" href="javascript:BSSCPopup('../CommonHelp3/Rueckg_Klinkung.htm');" id="area6" alt=""/>
+<area shape="rect" coords="2, 149, 201, 168" href="Waehle_Synchronisations_Optionen_Synchronisationslinien.htm" alt=""/></map></p>
+<ul>
+<li class="hcp2">
+<p class="Topic_Text_Bulleted">{% trans "Beenden Sie den Befehl mit der Option [Ende] (siehe [rechte Maustaste] od. [horizontale Ikonenleiste])." %}</p>
+</li>
+<li class="hcp2">
+<p class="Topic_Text_Bulleted">{% trans "Erzeugen Sie eine #[Regelflaechenbearbeitung]# und aktivieren Sie im Dialog die Checkbox #[Synchronisationslinien]#." %}</p>
+</li>
+</ul>
+<p><img src="../Synchronisationslinien_Exa_4.gif" alt="Synchronisationslinien_Exa_4.gif" width="764" height="245" border="0"/></p>
+<ul>
+<li class="hcp2">
+<p class="Topic_Text_Bulleted">{% trans "Simulieren Sie die Bearbeitung z.B. mit der #[Solid-Simulation]#." %}</p>
+</li>
+</ul>
+<p><img src="../Synchronisationslinien_Exa_5.gif" alt="Synchronisationslinien_Exa_5.gif" width="240" height="289" border="0"/></p>
+<p class="hcp1"> </p>
+<p class="Topic_Text_Bulleted" style="text-indent: -9.45pt;">{% trans "[Hinweis]:" %}</p>
+<p>{% trans "Sie können Synchronisationslinien durch einen [Doppelklick] auf die [roten Synchronisationslinien] editieren und nachträglich verändern." %}</p>
+<script type="text/javascript" language="JavaScript1.2">
+//&lt;![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('area1');
+        FilePopupInit('area2');
+        FilePopupInit('area3');
+        FilePopupInit('area4');
+        FilePopupInit('area5');
+        FilePopupInit('area6');
+//]]&gt;
+</script>
+
+{% endblock %}
+{% endlinebreakless %}

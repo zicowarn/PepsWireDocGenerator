@@ -1,0 +1,56 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Bund angleichen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../WIRE_ExpertRH_context_Menu.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Bund angleichen" %}</p><p>{% trans "Es ist möglich, dass eine [Bundbearbeitung] im #FeatureManager# aufgeteilt in 2 Einträge (zylindrischer und konischer Teil) angezeigt wird." %}</p>
+<p>{% trans "Mit Hilfe dieser Funktion können Sie die beiden Einträge zusammenfassen zu einem Bearbeitungsfeature vom Typ [Bundbearbeitung]." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../image/Align_Collar_Feature.gif" alt="image\Align_Collar_Feature.gif" title="image\Align_Collar_Feature.gif" width="879" height="203" border="0"/></p>
+<p>{% trans "Das folgende Bild zeigt eine typische Bundbearbeitung der zylindrische Anteil ist oben und wird gefolgt vom konischen Bereich." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../image/Collar_Feature.gif" alt="image\Collar_Feature.gif" title="image\Collar_Feature.gif" width="258" height="194" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "[So wird es gemacht:]" %}</p>
+<ul>
+	<li class="p-Tip-Note-Text-Bulleted" style="font-size: 9pt;"><p class="Tip-Note-Text-Bulleted">{% trans "Klicken Sie im #FeatureManager# [nacheinander] die beiden Einträge für die Bundbearbeitung (zylindrischer und konischer Teil) an. Halten Sie während der Auswahl die [Umschalt]-Taste gedrückt." %}</p></li>
+	<li class="p-Tip-Note-Text-Bulleted" style="font-size: 9pt;"><p class="Tip-Note-Text-Bulleted">{% trans "Klicken Sie die [rechte] Maustaste und wählen Sie im Menü die Option [Bund angleichen]." %}</p></li>
+</ul>
+<p>{% trans "Das System fasst die beiden Einträge zusammen, zu einem Bearbeitungsfeature vom Typ [Bundbearbeitung]." %}</p>
+<p> </p>
+
+{% endblock %}
+{% endlinebreakless %}

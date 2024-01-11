@@ -1,0 +1,66 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Radienmanipulation" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    span.hcp1 { font-weight:bold; }
+    img.hcp2 { border:none; }
+    p.hcp3 { color:#ff0000;
+    font-style:italic; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Radienmanipulation" %}</p><p>{% trans "Um die Passgenauigkeit zwischen Stempeln und Matrizen zu verbessern, können Sie mit der Funktion [Radienmanipulation] die in einer Geometrie enthaltenen Radien „manipulieren“." %}</p><p>{% trans "Die Funktion erlaubt es, die inneren / äußeren Radien einer Bearbeitungsfigur zu [verändern] oder zu [ersetzen]." %}</p>
+<p><img src="../Radienmanipulation_Radien_verkleinern_vergroessern.gif" alt="" border="0" class="hcp2"/></p>
+<p class="hcp3">{% trans "Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen." %}</p>
+<p class="hcp3"> </p>
+<p><img src="../Radienmanipulation_Dialog.gif" alt="" usemap="#MAP563377115" border="0" class="hcp2"/>
+<map id="MAP563377115" name="MAP563377115">
+<area shape="rect" coords="3, 42, 362, 607" href="Radienmanipulation_Parameter.htm" alt=""/>
+<area shape="rect" coords="191, 650, 320, 674" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="52, 621, 183, 645" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="47, 649, 180, 673" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="185, 621, 321, 645" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area4" alt=""/>
+</map> </p>
+<p> </p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "Die Funktion [Radienmanipulation] ist optional." %}</p>
+<p> </p>
+<p> </p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+	FilePopupInit('area3');
+	FilePopupInit('area4');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,36 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Informationen aus Simulationsgrafik abfragen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "@ Informationen aus Simulationsgrafik abfragen" %}</p><p>{% trans "Mit Hilfe dieser Ikonen können Sie beliebige Objekte in der Simulationsgrafik anklicken, wobei das System Informationen über das gewählte Objekt liefert." %}</p>
+<p><img src="../Solid_Sim_Face_Info_1.gif" alt="Solid_Sim_Face_Info_1.gif" width="21" height="23" border="0"/> : Gibt allgemeine Informationen über die Art (z.B. Rohteil, Düse) des gewählten Objektes aus.</p>
+
+{% endblock %}
+{% endlinebreakless %}

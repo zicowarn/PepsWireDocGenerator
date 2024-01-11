@@ -1,0 +1,81 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Einstellungen (Einstellen der Schnittmethode AGIEVISION)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Agievhlp.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Einstellungen (Einstellen der Schnittmethode AGIEVISION)" %}</p><p>{% trans "Die Schaltfläche [Einstellungen] wird verwendet um den Dialog [Bearbeitung einstellen] aufzurufen." %}</p><p>{% trans "In diesem Dialog kann man für eine Konturbearbeitung die Parameter für [Schnitte]. [Anbindungen], [Ein/Ausfahren], [Offset], [Datenbank], [Farben] einstellen." %}</p>
+<p> </p>
+<p style="color: #ff0000; font-style: italic;">{% trans "Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen." %}</p>
+<p> </p>
+<p><img src="../CUTSETAV_shg.gif" usemap="#AreaMap0" alt="CUTSETAV_shg.gif" width="363" height="473" border="0"/> <map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="68,33,123,53" href="Anbinden_Register_AGIEVISION.htm" alt=""/>
+<area shape="rect" coords="124,34,201,53" href="../wirhlp10/Ein_Ausfahren_Lasche.htm" alt=""/>
+<area shape="rect" coords="203,34,243,52" href="../wirhlp10/Offset_Lasche.htm" alt=""/>
+<area shape="rect" coords="241,34,294,53" href="../wirhlp10/Datenbank_fuer_Technologie_Lasche.htm" alt=""/>
+<area shape="rect" coords="34,70,135,87" href="javascript:BSSCPopup('../wirhlp10/Offset_ausgeben_Std_Konturbea.htm',400,600);" id="area1" alt=""/>
+<area shape="rect" coords="154,89,308,115" href="javascript:BSSCPopup('../wirhlp10/Zusaetzliches_Offset.htm',400,600);" id="area2" alt=""/>
+<area shape="rect" coords="30,120,63,392" href="javascript:BSSCPopup('Anzahl_Schnitte_1_2_3_AGIEVISION.htm',400,600);" id="area3" alt=""/>
+<area shape="rect" coords="67,120,105,393" href="javascript:BSSCPopup('Mit_Konik_AGIEVISION.htm',400,300);" id="area4" alt=""/>
+<area shape="rect" coords="106,122,151,391" href="javascript:BSSCPopup('../wirhlp10/Ecken_Strategie.htm');" id="area5" alt=""/>
+<area shape="rect" coords="151,120,199,397" href="javascript:BSSCPopup('../wirhlp10/Offset_im_Dialog_Bearbeitung_einstellen.htm',400,600);" id="area6" alt=""/>
+<area shape="rect" coords="247,121,330,399" href="javascript:BSSCPopup('Extra_Codes_AGIEVISION.htm',400,600);" id="area7" alt=""/>
+<area shape="rect" coords="30,394,139,414" href="javascript:BSSCPopup('../wirhlp10/Mit_Pendelschnitt.htm',400,300);" id="area8" alt=""/>
+<area shape="rect" coords="33,93,110,112" href="../wirhlp10/3D_Offset.htm" alt=""/>
+<area shape="rect" coords="154,69,306,90" href="javascript:BSSCPopup('../wirhlp10/Innere_Ecken_modifizieren.htm',400,600);" id="area9" alt=""/>
+<area shape="rect" coords="206,121,245,384" href="Anzahl_Schnitte_1_2_3_AGIEVISION.htm" alt=""/>
+<area shape="rect" coords="12,439,86,462" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area10" alt=""/>
+<area shape="rect" coords="93,440,166,462" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area11" alt=""/>
+<area shape="rect" coords="173,441,274,463" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area12" alt=""/>
+<area shape="rect" coords="278,440,355,462" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area13" alt=""/></map></p>
+<script type="text/javascript" language="JavaScript1.2">
+//&lt;![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('area1');
+        FilePopupInit('area2');
+        FilePopupInit('area3');
+        FilePopupInit('area4');
+        FilePopupInit('area5');
+        FilePopupInit('area6');
+        FilePopupInit('area7');
+        FilePopupInit('area8');
+        FilePopupInit('area9');
+        FilePopupInit('area10');
+        FilePopupInit('area11');
+        FilePopupInit('area12');
+        FilePopupInit('area13');
+//]]&gt;
+</script>
+
+{% endblock %}
+{% endlinebreakless %}

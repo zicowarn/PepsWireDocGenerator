@@ -1,0 +1,83 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Draht Register (Einstellungen)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Draht Register (Einstellungen)" %}</p><p class="Block_Text">{% trans "In diesem Register stellt man Parameter ein, die sich auf die Simulation des Schneiddrahtes und der beim Drahterodieren entstehenden Ausfallteile beziehen." %}</p><p class="hcp1"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp1"> </p>
+<p><img src="../WireSimOp_shg.gif" usemap="#AreaMap0" alt="WireSimOp_shg.gif" width="349" height="457" border="0"/> <map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="26,80,259,97" href="javascript:BSSCPopup('Draht_einfaedeln_auf_Kollisionen_pruefen.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="39,301,299,321" href="javascript:BSSCPopup('Kleinstes_Volumen_fuer_Ausfallteile.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="42,280,301,300" href="javascript:BSSCPopup('Kleinster_sichtbarer_Drahtdurchmesser.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="23,422,95,442" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area4" alt=""/>
+<area shape="rect" coords="102,422,175,442" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area5" alt=""/>
+<area shape="rect" coords="184,421,257,443" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area6" alt=""/>
+<area shape="rect" coords="266,424,339,446" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area7" alt=""/>
+<area shape="rect" coords="12,34,81,53" href="Solid_Register_Einstellungen_Simulation.htm" alt=""/>
+<area shape="rect" coords="81,34,168,54" href="Kollisionen_Register_Einstellungen.htm" alt=""/>
+<area shape="rect" coords="169,33,261,53" href="Toleranzen_Register_Einstellungen.htm" alt=""/>
+<area shape="rect" coords="263,35,338,53" href="Ansicht_Register_Einstellungen.htm" alt=""/>
+<area shape="rect" coords="10,51,89,70" href="Farben_Register_Einstellungen.htm" alt=""/>
+<area shape="rect" coords="88,56,170,72" href="Dialoge_Register_Einstellungen_.htm" alt=""/>
+<area shape="rect" coords="170,49,263,69" href="Simulation_Register_Einstellungen_.htm" alt=""/>
+<area shape="rect" coords="20,211,249,229" href="javascript:BSSCPopup('Warnton_bei_Kollisionen_und_Ausfallteilen.htm,400,300');" id="area8" alt=""/>
+<area shape="rect" coords="21, 100, 296, 119" href="javascript:BSSCPopup('Auf_Ausfallteile_pruefen_und_Ausfallteil_Dialog_zeigen.htm',400,300);" id="area9" alt=""/>
+<area shape="rect" coords="34, 123, 330, 139" href="javascript:BSSCPopup('Bei_Ausfallteil_immer_das_kleinere_Solid_von_zwei_Solids_loeschen.htm',400,300);" id="area10" alt=""/>
+<area shape="rect" coords="30, 143, 321, 161" href="javascript:BSSCPopup('Bei_Ausfallteil_alle_Solids_loeschen_ausser_das_groesste_Solid.htm',400,300);" id="area11" alt=""/>
+<area shape="rect" coords="21, 166, 299, 188" href="javascript:BSSCPopup('Nach_Ausfallteil_entstandenes_Rohteil_grafisch_glaetten.htm',400,300);" id="area12" alt=""/>
+<area shape="rect" coords="47, 232, 292, 279" href="javascript:BSSCPopup('Simulationsmethode_Tempo_oder_Qualitaet.htm',400,300);" id="area13" alt=""/>
+<area shape="rect" coords="36, 325, 315, 415" href="Ausfallteil_pruefen.htm" alt=""/></map></p>
+<script type="text/javascript" language="JavaScript1.2">
+//&lt;![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('area1');
+        FilePopupInit('area2');
+        FilePopupInit('area3');
+        FilePopupInit('area4');
+        FilePopupInit('area5');
+        FilePopupInit('area6');
+        FilePopupInit('area7');
+        FilePopupInit('area8');
+        FilePopupInit('area9');
+        FilePopupInit('area10');
+        FilePopupInit('area11');
+        FilePopupInit('area12');
+        FilePopupInit('area13');
+//]]&gt;
+</script>
+
+{% endblock %}
+{% endlinebreakless %}

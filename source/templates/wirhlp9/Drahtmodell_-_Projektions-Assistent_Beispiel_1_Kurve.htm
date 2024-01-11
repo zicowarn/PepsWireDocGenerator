@@ -1,0 +1,95 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Drahtmodell - Projektions-Assistent_Beispiel_1_Kurve" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    span.hcp1 { font-weight:bold; }
+    img.hcp2 { border:none; }
+    span.hcp3 { font-size:10pt; }
+    font.hcp4 { font-size:10pt;
+    font-weight:bold; }
+    font.hcp5 { font-size:10pt; }
+    p.hcp6 { font-size:10pt; }
+    font.hcp7 { font-weight:bold; }
+    span.hcp8 { font-size:10pt;
+    font-weight:bold; }
+    a.hcp9 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Projektion einer Kurve unter einem konstanten Winkel" %}</p><p>{% trans "Das folgende Beispiel zeigt, wie man von [einer 3D Kurve] zwei XY-planare Regelflächengeometrien ableitet." %}</p><p>{% trans "Dies ermöglicht, die 3D Geometrie unter einer konstanten Konik, als Regelfläche zu schneiden." %}</p>
+<p><img src="../Wire_Projection_Wiz_1.gif" alt="" border="0" class="hcp2"/></p>
+<p><img src="../Wire_Projection_Wiz_Exa_2_1.gif" alt="" border="0" class="hcp2"/></p>
+<p>{% trans "[[Verwenden Sie die Schaltfläche]] [Wähle Kurve &amp;gt;&amp;gt;] [u][nd selektieren Sie die Geometrien der 3D Kurve.]" %}</p>
+<p class="hcp6">{% trans "[Hinweis]: Erlaubte Geometrietypen sind: [Linien/Bögen], [Kanten] und [NURBS-Kurven]." %}</p>
+<p>{% trans "[[Das] Rote Ausrufezeichen ][verändert sich zu einem] [Grünen Haken] [der anzeigt, dass eine passende 3D Kurve gewählt wurde.]" %}</p>
+<p> </p>
+<p><img src="../Wire_Projection_Wiz_Exa_2_2.gif" alt="" border="0" class="hcp2"/></p>
+<p>{% trans "[[Wählen Sie die Schaltfläche]] [Weiter &amp;gt;][, zum Aufruf des nächsten Dialogs:]" %}</p>
+<p> </p>
+<p><img src="../Wire_Projection_Wiz_Exa_2_3.gif" alt="" border="0" class="hcp2"/></p>
+<p>{% trans "Geben Sie im Feld [Winkel] den benötigten Konikwinkel ein" %}</p>
+<p>{% trans "Die beiden bebilderten Schaltflächen dienen zur Auswahl der [Konikrichtung]." %}</p>
+<p>{% trans "[Wählen Sie die Schaltfläche] [Weiter &amp;gt;&amp;gt;][, zum Aufruf des nächsten Dialogs:]" %}</p>
+<p> </p>
+<p><img src="../Wire_Projection_Wiz_Exa_2_4.gif" alt="" border="0" class="hcp2"/></p>
+<p> </p>
+<p>{% trans "[Obere Projektion]" %}</p>
+<p class="hcp6">{% trans "Geben Sie in diesem Feld die [Z-Höhe] ein, auf welche die [oberen] [Regelflächengeometrie] projiziert werden soll." %}</p>
+<p>{% trans "[[Untere]Projektion]" %}</p>
+<p class="hcp6">{% trans "Geben Sie in diesem Feld die [Z-Höhe] ein, auf welche die [untere] [Regelflächengeometrie] projiziert werden soll." %}</p>
+<p style="font-size: 10pt; font-weight: bold;">{% trans "Bereiche mit gleicher Elementanzahl angleichen" %}</p>
+<p class="hcp6">{% trans "Ist die Option aktiv, wird eine #proportionale Synchronisation# für die unter/obere Regelflächengeometrie ausgeführt." %}</p>
+<p class="hcp6">{% trans "Falls nicht, werden die Elementenden der unter/obere Regelflächengeometrie miteinander verbunden." %}</p>
+<p>{% trans "[Figuren erzeugen]" %}</p>
+<p class="hcp6">{% trans "Aktivieren Sie diese Option wenn [Figuren] anstatt [Linien/Bögen] erzeugt werden sollen." %}</p>
+<p>{% trans "[[Vorgabe für Figurnamen]]" %}</p>
+<p class="hcp6">{% trans "Falls [Figuren] erzeugt werden sollen, hier den Namen der Figur (z.B. [Fig_]) eingeben. Das System macht daraus [Fig_]001 und [Fig_]002." %}</p>
+<p>{% trans "[Projektionstoleranz]" %}</p>
+<p>{% trans "[[[S]]teuert wie genau die Linien/Bögen der projizierten Geometrie werden.]" %}</p>
+<p class="hcp6">{% trans "Je kleiner der Wert, desto genau die projizierten Geometrien. Wir empfehlen einen Wert von 0.001." %}</p>
+<p> </p>
+<p class="hcp6">{% trans "Klicken Sie nun auf die Schaltfläche [Projezieren], um die beiden planaren Geometrien abzuleiten." %}</p>
+<p class="hcp6">{% trans "Das folgende Bild zeigt in der Mitte die zu projizierende Geometrie und darüber/darunter die beiden projizierten Regelflächengeometrien." %}</p>
+<p> </p>
+<p><img src="../Wire_Projection_Wiz_Exa_2_5.gif" alt="" border="0" class="hcp2"/></p>
+<p> </p>
+<p>{% trans "[Beenden Sie den Dialog mit] [Fertig][.]" %}</p>
+<p> </p>
+<p>{% trans "Die [beiden projizierten Regelflächengeometrien sollten jetzt noch in #Bearbeitungsfiguren# inkl. Startpunkten umgewandelt werden.]" %}</p>
+<p class="hcp6">{% trans "Anschließend können Sie die Bearbeitungsfiguren für die #Regelflächenprogrammierung# verwenden." %}</p>
+<p> </p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a1');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

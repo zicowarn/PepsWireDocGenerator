@@ -1,0 +1,49 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Neue Bearbeitungsoperation erzeugen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Operationsmanager.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    li.hcp1 { font-size:9pt; }
+    font.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Neue Bearbeitungsoperation erzeugen" %}</p><ul>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie mit der [rechten] Maustaste im #[Operationsmanager]# auf den Eintrag [Operationsstart] und wählen Sie im Kontextmenü die Option [Neue Operation am Anfang dieses Operationsstarts]." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Wählen Sie im angezeigten Kontextmenü (siehe Abbildung) die zu erzeugende Bearbeitungsoperation aus" %}</p></li>
+</ul>
+<p><img src="../exa_neue_Operation.gif" alt="exa_neue_Operation.gif" width="797" height="350" border="0"/></p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<ul>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Es folgt der Aufruf der gewählten Bearbeitungsoperation. Füllen Sie den Dialog aus." %}</p></li>
+</ul>
+
+{% endblock %}
+{% endlinebreakless %}

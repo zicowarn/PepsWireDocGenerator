@@ -1,0 +1,45 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Anzeigeart für Werkstück rotieren" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Anzeigeart für Werkstück rotieren" %}</p><p>{% trans "Legt fest, wie das System Werkstück, Spannmittel etc. bei [interaktiven Rotationen] darstellt." %}</p>
+<p>{% trans "Besonders bei langsamen Computern und Rotationen von komplexen Werkstücken, bringt der Modus [Vereinfacht] Geschwindigkeitsvorteile." %}</p>
+<p>{% trans "Folgende Optionen sind verfügbar:" %}</p>
+<p>{% trans "[Vereinfacht] Alle Solids, Spannmittel etc. werden bei Rotationen als [vereinfachte Rechtecke] dargestellt." %}</p>
+<p>{% trans "[Drahtmodell] Alle Solids, Spannmittel etc. werden bei Rotationen als [Drahtmodell] dargestellt." %}</p>
+<p>{% trans "[Solid] Alle Solids, Spannmittel etc. werden bei Rotationen als [Solidmodell] dargestellt." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

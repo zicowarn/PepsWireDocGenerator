@@ -1,0 +1,81 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Postprozessor konfigurieren" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+    font.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Postprozessor konfigurieren" %}</p><p>{% trans "Mit diesem Befehl können Sie den verwendeten Postprozessor einstellen." %}</p><p>{% trans "Nach Wahl des Befehls wird ein Dialog aufgerufen, in dem Sie verschiedene Optionen frei schalten und Einstellungen tätigen können." %}</p>
+<p>{% trans "Die Optionen und Einstellungen sind je nach verwendeter NC-Maschine unterschiedlich." %}</p>
+<p class="hcp1"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp1"> </p>
+<p><img src="../PP_konfigurieren_Generell_shg.gif" usemap="#AreaMap0" alt="PP_konfigurieren_Generell_shg.gif" width="697" height="471" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="15, 41, 67, 59" href="NC_Ausgabe_Optionen_Postprozessor_konfigurieren_.htm" alt=""/>
+<area shape="rect" coords="68, 39, 179, 59" href="Simulation_Postprozessor_konfigurieren_.htm" alt=""/>
+<area shape="rect" coords="21, 66, 229, 176" href="javascript:BSSCPopup('Ausgabeeinheit_Postprozessor_konfigurieren.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="21, 174, 421, 231" href="javascript:BSSCPopup('Nachkommastellen_Postprozessor_konfigurieren.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="11, 229, 254, 331" href="javascript:BSSCPopup('Maschinenprofile_Postprozessor_konfigurieren.htm',400,600);" id="area3" alt=""/>
+<area shape="rect" coords="17, 332, 230, 398" href="javascript:BSSCPopup('Maschinenprofile_Postprozessor_konfigurieren.htm',400,600);" id="area4" alt=""/>
+<area shape="rect" coords="9, 441, 125, 465" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area5" alt=""/>
+<area shape="rect" coords="134, 442, 246, 462" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area6" alt=""/>
+<area shape="rect" coords="250, 439, 366, 461" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area7" alt=""/>
+<area shape="rect" coords="370, 441, 487, 462" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area8" alt=""/>
+<area shape="rect" coords="255, 288, 493, 347" href="Startlochdatei_ausgeben_Postprozessor_konfigurieren.htm" alt=""/>
+<area shape="rect" coords="256, 234, 502, 289" href="javascript:BSSCPopup('Einrichteblatt_ausgeben_Postprozessor_konfigurieren.htm',400,300);" id="area9" alt=""/>
+<area shape="rect" coords="182, 42, 241, 57" href="Simulation_Postprozessor_konfigurieren_.htm" alt=""/>
+</map> </p>
+<p class="hcp1"> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
+<p>{% trans "#[NC-Ausgabe für einen Maschinentyp anpassen]#" %}</p>
+<p class="Block_Text">{% trans "#[Ein Profil für einen Maschinentyp anlegen]#" %}</p>
+<p class="hcp1"> </p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "Die angezeigten Optionen können je nach verwendeter NC-Maschine unterschiedlich sein, dieses Hilfsystem beschreibt nur einige Beispiele." %}</p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+	FilePopupInit('area3');
+	FilePopupInit('area4');
+	FilePopupInit('area5');
+	FilePopupInit('area6');
+	FilePopupInit('area7');
+	FilePopupInit('area8');
+	FilePopupInit('area9');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

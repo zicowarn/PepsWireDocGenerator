@@ -1,0 +1,56 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "NC-Daten" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Extra.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "NC-Daten" %}</p><p> </p>
+<p>{% trans "Mit diesen Ikonen können Sie die [NC-Datendateien] des momentanen Programmes anzeigen/editieren, ausdrucken und auf einen Datenträger kopieren (z.B. eine Diskette), ohne den [Windows Explorer] aufrufen zu müssen." %}</p>
+<p>{% trans "@ [Kopiere Datei auf Zielverzeichnis]" %}</p>
+<p>{% trans "Diese Schaltfläche kopiert die NC-Datendatei des [momentanen] Programms in ein bestimmbares Laufwerk / Verzeichnis  Einstellbar mit der Schaltfläche #Optionen#)." %}</p>
+<p> </p>
+<p>{% trans "@ [Zeige Datei]" %}</p>
+<p>{% trans "Mit dieser Schaltfläche können Sie die NC-Daten des [momentanen] Programmes in einem Editor aufrufen. Welcher Editor (Voreinstellung = [Windows Notepad Editor]) verwendet wird, können Sie mit der Schaltfläche #Optionen# einstellen." %}</p>
+<p> </p>
+<p>{% trans "@ [Zeige Einrichteblatt]" %}</p>
+<p>{% trans "Mit dieser Schaltfläche können Sie die Einrichteblattdatei (PDF-Datei) des [momentanen] Programms über einen Viewer anzeigen." %}</p>
+<p> </p>
+<p>{% trans "@ [Kopiere Datei auf Zielverzeichnis 2]" %}</p>
+<p>{% trans "Diese Schaltfläche kopiert die NC-Datendatei des [momentanen] Programms auf ein [zweites, alternatives] Laufwerk (Einstellbar mit der Schaltfläche #Optionen#)." %}</p>
+<p> </p>
+<p> </p>
+<p>{% trans "@ [NC-Code Simulation]" %}</p>
+<p>{% trans "Diese Schaltfläche startet die# NC-Code Simulation#." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

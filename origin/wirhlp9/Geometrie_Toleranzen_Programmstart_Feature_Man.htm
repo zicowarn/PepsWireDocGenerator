@@ -1,0 +1,87 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Geometrie Toleranzen</title>
+<link rel="StyleSheet" href="../WIRE_Expert_FeatureManager.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+font.hcp1 { font-weight:bold; }
+img.hcp2 { border:none; }
+span.hcp3 { font-weight:bold; }
+p.hcp4 { margin-top:0;
+margin-bottom:0; }
+p.hcp5 { mso-fareast-font-family:Times New Roman;
+font-family:Arial, sans-serif; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<p class="dialog">Geometrie Toleranzen</p>
+<p>Bei Verwendung der Funktionen <a href="../WIRE_ExpertRH_context_Menu/Automatische_Feature_Erkennung.htm">Automatische 
+ Feature-Erkennung</a> und <a href="../WIRE_ExpertRH_context_Menu/Manuelle_Feature_Erkennung.htm">Manuelle 
+ Feature-Erkennen</a> , führt das System eine Untersuchung der zu bearbeitenden 
+ Flächen und Kanten durch. Hier wird überprüft, ob die Flächen und Kanten 
+ erodierbar sind oder nicht.</p>
+<p>Im Dialogbereich <font class="hcp1">Geometrie Toleranzen</font> 
+ stellen Sie ein, mit welcher Genauigkeit die Flächen und Kanten eines 
+ Modells untersucht werden.</p>
+<p>Flächenübergänge und Kanten die außerhalb der eingestellten Toleranzen 
+ liegen, werden als nicht erodierbar eingestuft und folglich werden für 
+ diese Elemente auch keine Bearbeitungsfeatures erzeugt.</p>
+<p>Durch Anpassen der <font class="hcp1">Geometrie Toleranzen</font> 
+ können Sie die das Ergebnis der Feature-Erkennung für bauchige Flächen 
+ und Kanten und lückenhafte Flächenübergänge verbessern.</p>
+<p>Folgende Einstellparameter stehen zur Verfügung:</p>
+<p>&#160;</p>
+<p><img src="../Programstart_Geo_Toler_Feature_Man.gif" alt="" border="0" class="hcp2"></p>
+<p>&#160;</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Position</p>
+<p class="Block-Text"><span class="hcp3">XY</span>-Positionsdaten 
+ deren Unterschied kleiner ist als dieser Wert, werden als identisch betrachtet. 
+ Und Abstände die kleiner sind als dieser Wert, werden als Null betrachtet.</p>
+<p class="hcp4">&#160;</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Kurven / Regelflächen-Linearität</p>
+<p>Sind die Kantenübergänge von Fläche zu Fläche bauchiger (Kante ist nicht 
+ gerade sondern konvex od. konkav) als die hier eingestellte <font class="hcp1">Kurven 
+ / Regelflächen-Linearität</font>, werden diese als nicht erodierbar eingestuft.</p>
+<p>Durch Erhöhen des Toleranzwertes für die <font class="hcp1">Kurven 
+ / Regelflächen-Linearität</font>, kann man erreichen, dass auch bauchige 
+ Kantenübergänge als erodierbar eingestuft werden.</p>
+<p>&#160;</p>
+<p><img src="../Geometry_Tolerances_1.gif" alt="Geometry_Tolerances_1.gif" width="222" height="219" border="0"></p>
+<p class="hcp4">&#160;</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Regelflächen-Toleranz</p>
+<p>Wenn das System eine Regelfläche erzeugt, werden alle Geometrieelemente 
+ der oberen und unteren Regelflächengeometrie untersucht, ob man deren 
+ Geometrie vereinfachen kann.</p>
+<p>Dies wäre beispielsweise der Fall, wenn ein Kreis aus vielen kleinen 
+ Linienelementen bestünde, anstatt aus einem Bogenelement.<br>
+Hier versucht System innerhalb des vom Parameter <font class="hcp1">Regelflächen-Toleranz</font> 
+ vorgegebenen Genauigkeit aus den Linienelemente einen oder mehrere Bogenelemente 
+ zu erzeugen.</p>
+<p>Der Tolerantwert bestimmt dabei die erlaubte Abweichung von der Originalgeometrie.</p>
+<p>&#160;</p>
+<p class="Tip_Note_Heading">Maximale Kantenabweichung</p>
+<p class="hcp5">Im 
+ Bild unterhalb ist ein BSURFACE (Parametrische Fläche) zu sehen, deren 
+ interne Parameter-Linien (die <span class="hcp3">gelben</span> 
+ Linien) die <span class="hcp3">rot</span> gekennzeichnete 
+ Flächenkante überschneiden.</p>
+<p class="hcp5">Theoretisch 
+ würde der Schneiddraht diesen gelben Parameter-Linien folgen. Was jedoch 
+ ein unerwünschtes Schneidergebnis zur Folge hätte.</p>
+<p class="hcp5">Ändert 
+ man die Voreinstellung des Parameters <span class="hcp3">Maximale 
+ Kantenabweichung</span> von 5 Grad auf z.B. 25 Grad, würde dies in unserem 
+ Beispiel zu einem besseren Schneidergebnis führen. &#160;&#160;</p>
+<p class="hcp5"><img src="../Max_Kantenabweichung.gif" alt="" border="0" class="hcp2"></p>
+</body>
+</html>

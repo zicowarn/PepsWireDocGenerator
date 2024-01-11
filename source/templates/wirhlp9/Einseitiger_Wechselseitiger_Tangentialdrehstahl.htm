@@ -1,0 +1,73 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Einseitiger&sol;Wechselseitiger Tangentialdrehstahl Parameter" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { font-family:Arial, sans-serif; }
+    p.hcp2 { font-family:Arial, sans-serif;
+    mso-bidi-font-weight:normal; }
+    span.hcp3 { font-weight:bold; }
+    p.hcp4 { font-family:Arial, sans-serif;
+    mso-tab-count:1; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p>{% trans "[[Drehstahl um Schaftmitte gedreht]]" %}</p><p class="hcp1">{% trans "Die Drehstahlgeometrie wird um die Schaftmitte des Drehstahls gedreht, ansonsten wird die Drehstahlgeometrie um den kleinsten Durchmesser der zu erzeugenden Geometrie gedreht." %}</p>
+<p class="hcp1"> </p>
+<p class="hcp2">{% trans "[Frontaler Freiwinkel durch Vorrichtung]" %}</p>
+<p class="hcp1">{% trans "Spezielle Vorrichtung auf der Maschine. Der zu bearbeitende Drehstahl wird schräg aufgespannt. Der Winkel der Vorrichtung wird hier eingeben." %}</p>
+<p class="hcp1"> </p>
+<p class="hcp2">{% trans "[Frontaler Freiwinkel durch Maschine]" %}</p>
+<p class="hcp1">{% trans "Winkeleingabe des [frontalen Freiwinkels], den die Maschine bearbeiten muss." %}</p>
+<p class="hcp1"> </p>
+<p class="hcp2">{% trans "[Seitlicher Freiwinkel]" %}</p>
+<p class="hcp1">{% trans "Winkeleingabe des [seitlichen Freiwinkels] (positive und negative Eingabe)." %}</p>
+<p class="hcp1"> </p>
+<p class="hcp2">{% trans "[Änderung des seitlichen Freiwinkels]" %}</p>
+<p class="hcp1">{% trans "Wird nur aktiv bei [Wechselseitigen Tangentialdrehstahl] und beschreibt die Position, an dem der seitliche Freiwinkel geändert werden soll." %}</p>
+<p class="hcp1">{% trans "Man kann die Ereignispunkte (NCIs) anwählen und den Freiwinkel ändern. Diese Ereignispunkte entstehen aber nur bei [Wechselseitigen Tangentialdrehstahl]." %}</p>
+<p class="hcp1"> </p>
+<p class="hcp2">{% trans "[Seitlicher Freiwinkel neu initialisieren]" %}</p>
+<p class="hcp1">{% trans "Wird nur aktiv bei [Wechselseitigen Tangentialdrehstahl]. Neuerzeugung des seitlichen Freiwinkel." %}</p>
+<p class="hcp1"> </p>
+<p class="hcp2">{% trans "[Max. Winkel]" %}</p>
+<p class="hcp4">{% trans "Maximale Eingabe des Winkels der Geraden bei einem Winkelwechsel." %}</p>
+<p class="hcp4"> </p>
+<p class="hcp2">{% trans "[Zu bearbeitende Figur]" %}</p>
+<p class="hcp4">{% trans "Auswahl der Bearbeitungsfigur, [die bearbeitet werden soll.]" %}</p>
+<p class="hcp4"> </p>
+<p class="hcp2">{% trans "[Technologie]" %}</p>
+<p class="hcp1">{% trans "Technologieeingabe. Anwahl eines Schnittschemas, die beim Erzeugen der Regelflächenbearbeitung geladen wird." %}</p>
+<p class="hcp1"> </p>
+<p class="hcp2">{% trans "[Pendelschnitt]" %}</p>
+<p class="hcp1">{% trans "Anwahl Pendelschnitt, der beim Erzeugen der Regelflächenbearbeitung berücksichtigt wird." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

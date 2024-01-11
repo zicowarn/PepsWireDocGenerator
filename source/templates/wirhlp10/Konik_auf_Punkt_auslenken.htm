@@ -1,0 +1,39 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Konik auf Punkt auslenken" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Konik auf Punkt auslenken" %}</p><p>{% trans "Als Systemvoreinstellung wird die Konik kontinuierlich auf einem gewählten Element zugestellt." %}</p>
+<p>{% trans "Mit der Option [Konik auf Punkt auslenken], können Sie die Konik auf einer bestimmbaren Punktposition zustellen." %}</p>
+<p>{% trans "Die folgende Abbildung zeigt eine variable Konik, bei der die Konik an drei Positionen auf einem Punkt ausgelenkt." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><img src="../Taper_immediately.gif" alt="Taper_immediately.gif" width="348" height="291" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

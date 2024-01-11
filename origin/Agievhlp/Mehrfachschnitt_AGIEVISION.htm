@@ -1,0 +1,36 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Mehrfachschnitt</title>
+<link rel="StyleSheet" href="../Agievhlp.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+font.hcp1 { font-weight:bold; }
+li.hcp2 { font-size:8pt; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<p class="dialog">Mehrfachschnitt</p>
+<p>Die Option <font class="hcp1">Mehrfachschnitt</font> legt die Anzahl der Schnitte für die Bearbeitung einer Figur fest.</p>
+<p>Die Option wird für AGIEVISION Maschinen normalerweise nicht verwendet, da die NC-Steuerung aufgrund der <a href="Qualitaet_Registerkarte_AGIEVISION.htm"><font class="hcp1">Qualitätszielangabe</font></a> die Anzahl der Schnitte selbst berechnet.</p>
+<p>Es gibt jedoch <font class="hcp1">zwei Ausnahmen</font> bei der man die Option <font class="hcp1">Mehrfachschnitt</font> wählt und die Anzahl der Schnitte selbst festlegt:</p>
+<ol>
+<li class="hcp2">
+<p>Ein Anwender kennt die Anzahl der Schnitte und die Größe des Offsets und möchte beides in der PEPS Simulation darstellen. In diesem Fall <font class="hcp1">aktiviert</font> man die Option <font class="hcp1">Mehrfachschnitt</font> und trägt die Anzahl der Schnitte, sowie den Offset für jeden Schnitt in den Bereichen <font class="hcp1">Schnitt Nr.</font> und <font class="hcp1">Offset</font> des Registers <font class="hcp1">Schnitte</font> ein.<br>
+Die Option <font class="hcp1">Offset ausgeben</font> im Register <font class="hcp1">Schnitte</font> <font class="hcp1">muß</font> in diesem Fall <font style="font-weight: bold; font-style: italic;">DEAKTIVIERT</font> sein, da sonst die Anzahl der Schnitte sowie der Offset in die NC-Daten ausgegeben wird.</p>
+</li>
+<li class="hcp2">
+<p>Ein Anwender möchte die Größe des Offsets pro Schnitt sowie die Anzahl der Schnitte selbst festlegen und diese Daten in die NC-Datendatei ausgeben. In diesem Fall <font class="hcp1">aktiviert</font> man die Option <font class="hcp1">Mehrfachschnitt</font> und trägt die Anzahl der Schnitte, sowie den Offset für jeden Schnitt in den Bereichen <font class="hcp1">Schnitt Nr.</font> und <font class="hcp1">Offset</font> des Registers <font class="hcp1">Schnitte</font> ein.<br>
+Die Option <font class="hcp1">Offset ausgeben</font> im Register <font class="hcp1">Schnitte</font> <font class="hcp1">muß</font> in diesem Fall <font class="hcp1">AKTIVIERT</font> sein, damit das System die Anzahl der Schnitte und die Offsetwerte in die NC-Daten ausgibt.</p>
+</li>
+</ol>
+</body>
+</html>

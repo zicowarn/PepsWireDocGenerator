@@ -1,0 +1,78 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Zylindrischen Schnitt programmieren" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    li.hcp1 { font-size:9pt; }
+    font.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Tip_Note_Heading">{% trans "Zylindrischen Schnitt programmieren" %}</p><ul>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Zeichnen Sie die #[Bearbeitungsfigur(en)]# die bearbeitet werden soll." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Füllen Sie im Menü [Bearbeitung] den Dialog #[Operation starten]# aus." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Rufen Sie im Menü [Bearbeitung] den Befehl #[Standardkonturbearbeitung]# auf." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Wählen Sie die zu bearbeitenden Figur(en) mit der Schaltfläche @." %}</p></li>
+</ul>
+<p><img src="../Zylindrischer_Schnitt_exa_1.gif" alt="Zylindrischer_Schnitt_exa_1.gif" width="259" height="209" border="0"/></p>
+<ul>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie im Feld [Schnittparameter] auf die Schaltfläche #[Einstellungen]#. Dies ruft den Dialog zur Einstellung der Bearbeitung auf." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Aktivieren Sie die Checkboxen unterhalb des Feldes [Schnitt Nr.], um die Anzahl der Schnitte festzulegen." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Geben Sie im Feld [Offset] das Schlichtaufmaß. Das Aufmaß wird normalerweise für die #[Simulation]# verwendet." %}</p></li>
+</ul>
+<p><img src="../Zylindrischer_Schnitt_exa_2.gif" alt="Zylindrischer_Schnitt_exa_2.gif" width="318" height="115" border="0"/></p>
+<ul>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Bestimmen Sie mit den Schaltflächen @ die Technologie für den(ie) Schnitt(e)." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf das Register #[Anbinden]#." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Aktivieren Sie die Option [Anbindungslänge] und geben Sie im Textfeld die Breite der Anbindung ein, mit der das Ausfallteil gesichert werden soll." %}</p></li>
+</ul>
+<p><img src="../Zylindrischer_Schnitt_exa_3.gif" alt="Zylindrischer_Schnitt_exa_3.gif" width="165" height="151" border="0"/></p>
+<ul>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Wählen Sie im Bereich [Methode zur Entfernung der Anbindung] z.B. die Methode [Automatisches Entfernen der Anbindung am Ende der Operation]." %}</p></li>
+</ul>
+<p><img src="../Zylindrischer_Schnitt_exa_4.gif" alt="Zylindrischer_Schnitt_exa_4.gif" width="327" height="177" border="0"/></p>
+<ul>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf das Register #[Ein-/Ausfahren]#." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Stellen Sie ein, wie die Bearbeitungsgeometrie(n) an-, bzw. abgefahren werden soll(en)." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf das Register #[Offset]#." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Aktivieren Sie Option [Richtung automatisch (Nur geschl. Figuren)] und stellen Sie ein, in welcher Richtung (Uhrzeiger- / Gegenuhrzeiger) die Bearbeitung ausgeführt werden soll." %}</p></li>
+</ul>
+<p><img src="../Zylindrischer_Schnitt_exa_5.gif" alt="Zylindrischer_Schnitt_exa_5.gif" width="336" height="226" border="0"/></p>
+<ul>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Schließen Sie alle Dialogbe mit [OK]." %}</p></li>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Die Bearbeitungsoperation wird im #[Operationsmanager]# gespeichert." %}</p></li>
+</ul>
+<p><img src="../Op_Manager_Eintrag_exa_1.gif" alt="Op_Manager_Eintrag_exa_1.gif" width="319" height="107" border="0"/></p>
+<ul>
+	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Führen Sie eine #[Simulation]# der Bearbeitung durch." %}</p></li>
+</ul>
+
+{% endblock %}
+{% endlinebreakless %}

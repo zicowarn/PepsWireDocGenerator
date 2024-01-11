@@ -1,0 +1,65 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Entformen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+    font.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Entformen" %}</p><p>{% trans "Diese Schaltfläche öffnet einen weiteren Dialog, in der Sie durch einen Entformungstest prüfen können, ob sich das Ausfallteil aus dem Werkstück entnehmen lässt." %}</p><p class="hcp1"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp1"> </p>
+<p><img src="../Billet_Sep2_shg.gif" usemap="#AreaMap0" alt="Billet_Sep2_shg.gif" width="381" height="192" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="7,69,81,186" href="javascript:BSSCPopup('Richtung_Entformungstest_Dialogbox_Solid_Simulation_Wire.htm',400,600);" id="area1" alt=""/>
+<area shape="rect" coords="301,79,361,99" href="javascript:BSSCPopup('Testen_Entformungstest_Dialogbox__Solid_Simulation_Wire.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="298,115,358,137" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="95,66,278,163" href="javascript:BSSCPopup('Offset_Winkel_Entformungstest_Dialogbox_Solid_Simulation_Wire.htm',400,600);" id="area4" alt=""/>
+<area shape="rect" coords="94,166,275,187" href="javascript:BSSCPopup('Kollisionen_ignorieren_Entformungstest_Dialogbox_Solid_Simulation_Wire.htm',400,300);" id="area5" alt=""/>
+<area shape="rect" coords="299,152,361,173" href="javascript:BSSCPopup('../Commdata/COMMON_Schliessen.htm',400,300);" id="area6" alt=""/>
+</map> </p>
+<p class="hcp1"> </p>
+<p>{% trans "Die Anzahl der durchgeführten Entformungstests, deren Schrittweite sowie die Geschwindigkeit der Entformungssimulation können Sie in Abschnitt #[Ausfallteil prüfen]# der Registerlasche #[Draht]# des Dialogs #[Simulations Einstellungen]# festlegen." %}</p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+	FilePopupInit('area3');
+	FilePopupInit('area4');
+	FilePopupInit('area5');
+	FilePopupInit('area6');
+	FilePopupInit('a1');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,67 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Standard Konik" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Standard Konik" %}</p><p>{% trans "Wenn Sie eine konstante (umlaufend gleiche) Konik erodieren wollen, müssen Sie den Grad der Konizität in das Feld [Winkel] eingeben." %}</p>
+<p>{% trans "Da die Richtung der Konik mit den Schaltflächen eingestellt wird, gibt man im Feld [Winkel] immer [positive Winkelangaben] ein." %}</p>
+<p>{% trans "Damit Sie die Konik auf einer beliebigen Z-Höhe programmieren können, existiert der Parameter [Referenzhöhe (Z)]." %}</p>
+<p>{% trans "Bei den meisten Postprozessoren bezieht sich die Referenzhöheneingabe auf die [untere Ebene] und ist [positiv]." %}</p>
+<p class="Hinweis"><img src="../Konik_ikonen.gif" alt="Konik_ikonen.gif" align="left" width="195" height="92" border="0"/></p>
+<p class="Hinweis"> </p>
+<p class="Hinweis"> </p>
+<p class="Hinweis"> </p>
+<p class="Hinweis"> </p>
+<p class="Hinweis"> </p>
+<p class="Hinweis"> </p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "Bei [AgieVision] Postprozessoren bezieht sich die Referenzhöheneingabe auf die [obere Ebene] und ist [negativ]." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../KONIK_L_AGIE_1.gif" alt="KONIK_L_AGIE_1.gif" width="196" height="93" border="0"/></p>
+<p class="hcp2"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp2"> </p>
+<p><img src="../STD_KON1_shg.gif" usemap="#AreaMap0" alt="STD_KON1_shg.gif" width="331" height="416" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="16, 221, 318, 378" href="Eckenmodus.htm" alt=""/>
+<area shape="rect" coords="120, 138, 325, 220" href="Standard_Konik.htm" id="area1" alt=""/>
+<area shape="rect" coords="232, 28, 320, 131" href="Schraegschieber_Ikone_Konik_Register_Std_Konturbearb.htm" alt=""/>
+<area shape="rect" coords="20, 26, 211, 140" href="Konik_Ikonen_Konik_Register_Std_Konturbearb.htm" id="area2" alt=""/>
+<area shape="rect" coords="226, 386, 326, 412" href="Variable_Konik_programmieren.htm" alt=""/>
+</map> </p>
+
+{% endblock %}
+{% endlinebreakless %}

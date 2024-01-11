@@ -1,0 +1,163 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Messungen Fenster" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../../MW_Sim_Windows.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    span.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+    font.hcp3 { font-weight:bold; }
+    font.hcp4 { font-weight:bold;
+    font-style:italic; }
+    p.hcp5 { font-weight:bold; }
+    img.hcp6 { border:none; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <h1>{% trans "Messungen" %}</h1><p> </p>
+<p>{% trans "Der [Messungen] Dialog verfügt über verschiedene Funktionen, um das angezeigte Rohteil oder andere Elemente zu vermessen." %}</p>
+<p>{% trans "Zudem bietet der Dialog Funktionen, um Ausfallteile anzuzeigen und diese zu entfernen." %}</p>
+<p> </p>
+<p><img src="../../newUI_measure.gif" alt="newUI_measure.gif" width="562" height="494" border="0"/></p>
+<p class="hcp2"> </p>
+<p class="hcp2"> </p>
+<h2><font class="hcp3">Punkte</font></h2>
+<p>{% trans "Die [Punkt]-Funktion liefert Information über die aktuell angeklickte (! [mittlere] Maustaste verwenden) Koordinate. Es wird die XYZ-Koordinate, das verwendete Werkzeug und das Materialaufmaß (engl. Deviation) angezeigt." %}</p>
+<p class="hcp5"><img src="../../newUI_measure_Tab_Punkte.gif" alt="" border="0" class="hcp6"/></p>
+<p class="hcp5">{% trans "Beispiel:" %}</p>
+<p><img src="../../newUI_point.gif" alt="newUI_point.gif" width="589" height="456" border="0"/></p>
+<p>{% trans "Bewegen Sie den Cursor auf die gewünschte Position. Klicken Sie mit der [mittleren] Maustaste. Es wird eine kleine Infobox mit Informationen über den angeklickten Punkt gezeigt. Die Informationen werden zusätzlich im [Messen]-Dialog in einer Liste notiert." %}</p>
+<p>{% trans "Folgende Informationen werden angezeigt:" %}</p>
+<p>{% trans "[Position]: Sind die X-, Y- und Z-Koordinaten des angeklickten Punktes." %}</p>
+<p>{% trans "[Abweichung (Deviation)]: Zeigt die Dicke des Aufmaßes, das heißt die Abweichung des Restmaterials vom [Zielteil (Werkstück)]. In unserem Beispiel beträgt das gemessene Aufmaß dies 0.0015 mm" %}</p>
+<p>{% trans "[Wkz. Nummer (Tool number)]: Zeigt die Nummer des verwendeten Werkzeugs." %}</p>
+<p>{% trans "[Satznummer (Move number)]: Satznummer in der Liste der NC-Sätze." %}</p>
+<p>{% trans "[Ziel ID (Target ID)]: Zeigt die interne Nummer der Zielteilgeometrie" %}</p>
+<p><img src="../../newUI_point_1.gif" alt="newUI_point_1.gif" width="604" height="461" border="0"/></p>
+<p>{% trans "[Hinweis]: Um das Restmaterial farblich zu kennzeichnen, müssen Sie in den Dialog #[Rohteilanalyse] / [Abweichung]#[ ]wechseln." %}</p>
+<p>{% trans "[[Abweichung]]: Ist die Abweichung des Restmaterials vom Zielteil. In dem Beispielbild oberhalb beträgt die Abweichung 0.0015 mm" %}</p>
+<p class="hcp2"> </p>
+<p class="hcp2"> </p>
+<h2>{% trans "Distanzen" %}</h2>
+<p>{% trans "Die Funktion [Distanzen] misst den 3D-Abstand, zwischen zwei auf dem Rohteil gemessenen Punkten." %}</p>
+<p><img src="../../newUI_measure_Tab_Distanzen.gif" alt="" border="0" class="hcp6"/></p>
+<p>{% trans "[Beispiel:]" %}</p>
+<p><img src="../../newUI_distance.gif" alt="newUI_distance.gif" width="500" height="461" border="0"/></p>
+<p>{% trans "Bewegen Sie den Cursor auf die gewünschte Position. Klicken Sie [zweimal] mit der [mittleren] Maustaste, um den Startpunkt und den Endpunkt auszuwählen." %}</p>
+<p>{% trans "Es wird eine kleine Infobox mit dem gemessenen Abstandswert angezeigt. Die Infobox zeigt den 3D-Abstand, zwischen zwei auf dem Rohteil gemessenen Punkten." %}</p>
+<p class="hcp2"> </p>
+<p class="hcp2"> </p>
+<h2><span>Bereich vergrößern</span></h2>
+<p>{% trans "Hier können Sie einen Teilbereich des Rohteils mittels eines rechteckigen Auswahlfensters auszuwählen und auszuschneiden. Das Material [außerhalb] des Fensters wird entfernt." %}</p>
+<p>{% trans "Der Bereich [innerhalb] des Fensters wird neu berechnet und mit einer höheren Darstellungs-Genauigkeit angezeigt." %}</p>
+<p class="hcp5"><img src="../../newUI_measure_Tab_Bereich_vergroessern.gif" alt="" border="0" class="hcp6"/></p>
+<p class="hcp5">{% trans "Beispiel:" %}</p>
+<p><img src="../../newUI_zoom_box.gif" alt="newUI_zoom_box.gif" width="466" height="430" border="0"/></p>
+<p>{% trans "Bewegen Sie den Cursor auf die gewünschte Position. Klicken Sie mit der [mittleren] Maustaste, um den [oberen linken Punkt] des Auswahlfensters zu definieren. Klicken Sie erneut die [mittlere] Maustaste, um den [unteren rechten Punkt] des Auswahlfensters zu definieren." %}</p>
+<p>{% trans "Klicken Sie im Dialog auf die [Dynamisch vergrößern] @ Schaltfläche, um den Prozess zu starten." %}</p>
+<p>{% trans "Klicken Sie im Dialog auf die [Dynamisch vergrößern zurücksetzen] @ Schaltfläche, um den Prozess zu beenden." %}</p>
+<p><img src="../../newUI_zoomed.gif" alt="newUI_zoomed.gif" width="505" height="488" border="0"/></p>
+<p> </p>
+<p> </p>
+<h2><font class="hcp3"><span class="hcp1">Lösche 
+ Teil </span>(Auswahl)</font></h2>
+<p><img src="../../newUI_measure_Loesche_Teil_Auswahl.gif" alt="" border="0" class="hcp6"/></p>
+<p>{% trans "Mit dieser Funktion kann der Benutzer interaktiv die Ausfallteile löschen, die losgelöst vom Werkstück angezeigt werden." %}</p>
+<p>{% trans "Klicken Sie einfach das zu löschende Ausfallteil an (! [mittlere] Maustaste verwenden)." %}</p>
+<p>{% trans "Beachten Sie bitte, dass das System die Ausfallteile nur dann in unterschiedlichen Farben anzeigt, wenn im Vorfeld die Rohteilanalysefunktion [#Teile markieren#] aktiviert wurde." %}</p>
+<p> </p>
+<p>{% trans "[Beispiel]: Das folgende Bild zeigt links ein gefrästes Werkstück mit mehreren Ausfallteilen. Das violette Ausfallteil wurde mit der[ mittleren Maustaste] angeklickt, um es zu löschen. Das rechte Bild zeigt das Ergebnis." %}</p>
+<p><img src="../../newUI_Lösche_Teil_Auswahl.gif" alt="" border="0" class="hcp6"/></p>
+<p> </p>
+<p> </p>
+<h2><span class="hcp1">Lösche alle Teile</span><font class="hcp3"> (behalte 
+ nur 1)</font></h2>
+<p><img src="../../newUI_measure_Loesche_Alle_Teile_behalte_nur_1.gif" alt="" border="0" class="hcp6"/></p>
+<p>{% trans "Diese Funktion löscht [alle] vorhandenen Ausfallteile [außer] dem aktuell, mit der ! [mittleren] Maustaste ausgewähltem Ausfallteil." %}</p>
+<p>{% trans "Beachten Sie bitte, dass das System die Ausfallteile nur dann in unterschiedlichen Farben anzeigt, wenn im Vorfeld die Rohteilanalysefunktion [#Teile markieren#] aktiviert wurde." %}</p>
+<p> </p>
+<p>{% trans "[Beispiel]: Das folgende Bild zeigt links ein gefrästes Werkstück mit mehreren Ausfallteilen. Das orangefarbene Werkstück Ausfallteil wurde mit der[ mittleren Maustaste] angeklickt, um es zu behalten und alle anderen Ausfallteile zu entfernen. Das rechte Bild zeigt das Ergebnis." %}</p>
+<p><img src="../../newUI_Lösche_alle_Teile.gif" alt="" border="0" class="hcp6"/></p>
+<p> </p>
+<p> </p>
+<h2><span class="hcp1">Lösche Teile</span> <font class="hcp3">(automatisch)</font></h2>
+<p><img src="../../newUI_measure_Loesche_Teil_Automatisch.gif" alt="" border="0" class="hcp6"/></p>
+<p>{% trans "Dieser Funktion behält alle Ausfallteile, die nach einer Simulation mit der ! [mittleren] Maustaste ausgewählt wurden." %}</p>
+<p>{% trans "Klickt man die Ausfallteile an, wird die Auswahl durch ein kleines 'Fähnchen' angezeigt (Siehe Beispiel unterhalb) . Klicken Sie anschließend auf die Schaltfläche [Anwenden], um die Auswahl auszuführen." %}</p>
+<p>{% trans "Dies führt dazu, dass nur die ausgewählten Ausfallteile übrig bleiben." %}</p>
+<p>{% trans "[Beispiel]: Das folgende Bild zeigt links ein gefrästes Werkstück mit mehreren Ausfallteilen. Es wurden 3 Ausfallteile mit der[ mittleren Maustaste] angeklickt, die übrig bleiben sollen, der Rest wird automatisch gelöscht, wenn man die Schaltfläche [Anwenden ]klickt. Das rechte Bild zeigt das Ergebnis." %}</p>
+<p><img src="../../newUI_Lösche_Teile_automatisch.gif" alt="" border="0" class="hcp6"/></p>
+<p>{% trans "Mit dieser Funktion kann der Anwender ausgewählte Ausfallteile vom Löschvorgang ausnehmen. Die Auswahl findet statt, indem man auf jedem [nicht] zu löschenden Ausfallteil eine Punktposition mit der [mittleren Maustaste ]anklickt. Alle anderen Ausfallteile werden gelöscht." %}</p>
+<p>{% trans "Die Ausfallteile werden gelöscht, wenn sie während der Simulation entstehen (wenn man vorher die Punktpositionen gewählt halt) oder jedes mal, wenn man auf die Schaltfläche [Anwenden] klickt." %}</p>
+<p>{% trans "Beachten Sie bitte, dass das System die Ausfallteile nur dann in unterschiedlichen Farben anzeigt, wenn im Vorfeld die Rohteilanalysefunktion [#Teile markieren#] aktiviert wurde." %}</p>
+<p> </p>
+<p> </p>
+<h2><font class="hcp3">Entferne Elemente (mit Test)</font></h2>
+<p><img src="../../newUI_measure_Entferne_Elemente_mit_Test.gif" alt="" border="0" class="hcp6"/></p>
+<p>{% trans "Mit dieser Funktion können Sie testen, ob sich Ausfallteile überhaupt entnehmen lassen. Es existieren Situationen, in denen sich beispielsweise beim [Drahterodieren] eines konischen Durchbruchs, dass sich das Ausfallteil nicht oder nur in eine bestimmte Richtung entnehmen lässt. Das folgende Beispiel soll so eine Situation zeigen:" %}</p>
+<p>{% trans "[Beispiel]: Das folgende Bild zeigt einen konischen Durchbruch und das Ergebnis eines Tests auf Ausfallteile. Das Ergebnis des Tests zeigt, dass das Ausfallteil (grüner Volumenkörper) nur nach unten in Richtung (Z-) entnommen werden kann. Ein Herausziehen des Ausfallteils nach oben (Z+) ist nicht möglich." %}</p>
+<p><img src="../../newUI_Ausfallteil_Test.gif" alt="" border="0" class="hcp6"/></p>
+<p> </p>
+<p>{% trans "[Vorgehensweise]:" %}</p>
+<p>{% trans "Alle Ausfallteile werden im Zuge der Simulation in dem Dialog aufgelistet." %}</p>
+<p>{% trans "Um den Test für ein Ausfallteil durchzuführen, aktiviert man das Ausfallteil in der Liste der Ausfallteile und drückt die Schaltfläche [@Test]. Dies führt den Test aus." %}</p>
+<p> </p>
+<p class="hcp5">{% trans "Schaltflächen" %}</p>
+<p>{% trans "[@ Test]:" %}</p>
+<p>{% trans "Diese Funktion verschiebt die gewählten Ausfallteile in die Achsenrichtung, die im unteren Dialogbereich [Zum Testen wähle Richtung] eingestellt wurde." %}</p>
+<p>{% trans "Die Funktion [Test] betrachtet auch den eingestellten [Offset Winkel ]der Richtungsachse und um die Richtungsachse herum." %}</p>
+<p>{% trans "[@ Entferne ausgewähltes Bauteil]" %}</p>
+<p>{% trans "Diese Schaltfläche löscht alle in der Liste gewählten Ausfallteile." %}</p>
+<p class="hcp5">{% trans "@ Stop wenn neuer Chip (Ausfallteil) erkannt wird" %}</p>
+<p>{% trans "Ist diese Schaltfläche gewählt, erscheint jedes mal ein Hinweisfenster, wenn das System ein Ausfallteil entdeckt." %}</p>
+<p>{% trans "Die Dialogparameter '[Von Richtungsachse]' und '[Um Richtungsachse]' ermöglichen es, Ausfallteiltests in jeder beliebigen Richtung auszuführen." %}</p>
+<p>{% trans "Die beiden oberhalb genannten Parameter, erweitern das Spektrum der erlaubten Richtungen für Ausfallteiltests, weil man Tests in einer offsettierten Richtung zur Hauptachse oder in einer offsettierten Richtung um die Hauptachse herum ausführen kann. Die Offsetwerte müssen durch den Anwender bestimmt werden." %}</p>
+<p><img src="../../newUI_Ausfallteil.gif" alt="" border="0" class="hcp6"/></p>
+<p> </p>
+<p> </p>
+<h2><span class="hcp1">Chips löschen automatisch (automatisch 
+ basierend auf Volumen)</span></h2>
+<p><img src="../../newUI_measure_Chips_Loeschen_automatisch.gif" alt="" border="0" class="hcp6"/></p>
+<p>{% trans "Mit diesen Funktionen kann der Anwender die Ausfallteile basierend auf deren Volumen. Folgende Kriterien stehen zur Verfügung:" %}</p>
+<p class="hcp5">{% trans "Entferne kleine Bauteile und behalte die Größten" %}</p>
+<p>{% trans "[Entferne kleine Bauteile unter einem Volumen von] (Volumengröße durch den Anwender bestimmbar)" %}</p>
+<p class="hcp5">{% trans "Automatisch alle kleinen Chips löschen und nur den großen behalten" %}</p>
+<p>{% trans "Durch das Aktivieren der Option '[Automatisch alle kleinen Chips löschen und nur den großen behalten]', lassen sich die Ausfallteile im Zuge einer Simulation automatisch löschen." %}</p>
+<p>{% trans "Ist die Option NICHT aktiv, kann man die Schaltfläche [Ausführen] zum Löschen der Ausfallteile verwenden." %}</p>
+<p> </p>
+<p> </p>
+<h2>{% trans "Aus " %}</h2>
+<p><img src="../../newUI_measure_Tab_Aus.gif" alt="" border="0" class="hcp6"/></p>
+<p>{% trans "Mit dieser Option wird die Verwendung der Mauskombination (Klick mit [mittlerer Maustaste]) deaktiviert, die bei den meisten Messfunktionen Verwendung findet.." %}</p>
+<p>{% trans "Die Option löscht ebenfalls alle Markierungen von gemessenen Punkten und die Grafik des Auswahlfensters der Funktion '[Bereich vergrößern]'." %}</p>
+<p>{% trans "Zudem wird das Rohteil auf seine ursprüngliche Größe zurückgesetzt." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

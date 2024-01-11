@@ -1,0 +1,45 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Toleranz für Linien-&sol;Bogenverbindung" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Toleranz für Linien-/Bogenverbindung" %}</p><p>{% trans "In diesem Textfeld stellt man einen Korrekturwert für die Endpunktverbindung ein." %}</p>
+<p>{% trans "Die Option wird normalerweise nur dann gesetzt oder verändert, wenn importierte CAD-Daten kleinste Lücken aufweisen." %}</p>
+<p>{% trans "Der eingegebene Wert legt fest, dass Lücken die kleiner oder gleich dem Wert sind, automatisch geschlossen werden." %}</p>
+<p>{% trans "Das Feld [muss] immer einen Wert [größer als Null (0)] (z.B. 0.001) enthalten und wird vom Feld [Geometrie Toleranz] des Dialogs [Geometrie Optionen] im Menü [Datei \ Einstellungen \] [Systemeinstellungen] voreingestellt." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p>{% trans "Die Qualität von 2D CAD-Daten kann auch mit dem Befehl [Zeichnung reparieren] im Menü [Ändern &amp;gt;] [Hilfsfunktionen] beeinflusst werden." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,52 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Auswahl beenden &sol; löschen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../WIRE_ExpertRH_context_Menu.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    span.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Auswahl beenden / löschen" %}</p><p>{% trans "[Auswahl löschen] " %}</p>
+<p>{% trans "Löscht die aktuelle Flächen-/Kantenauswahl." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p style="font-weight: bold;">{% trans "Auswahl beenden" %}</p>
+<p>{% trans "Führt die aktuelle Flächen-/Kantenauswahl aus. Dabei überprüft [WIRE-Expert], ob aus den gewählten Flächen/Kanten ein erodierbares Feature erzeugt werden kann." %}</p>
+<p>{% trans "Falls nicht, wird im Dialog eine Fehlermeldung angezeigt." %}</p>
+<p> </p>
+<p>{% trans "[Auswahl vervollständigen] – Diese Schaltfläche steht nur zur Verfügung, wenn im Dialog die Option #Manuelle Flächenauswahl# oder #Manuelle Kantenauswahl# aktiviert wurde." %}</p>
+<p>{% trans "Die Schaltfläche wird verwendet, wenn eine [größere Anzahl] miteinander verbundener Flächen / Flächenkanten ausgewählt werden sollen." %}</p>
+<p>{% trans "Anstatt jede einzelne Fläche auszuwählen, wählt man die [erste] und die [letzte Fläche / Kante] und klickt anschließend auf die Schaltfläche [Feature abschließen]." %}</p>
+<p>{% trans "Anschließend wählt das System [alle Flächen zwischen] der [ersten] und der [letzten Fläche / Kante] automatisch aus." %}</p>
+<p> </p>
+
+{% endblock %}
+{% endlinebreakless %}

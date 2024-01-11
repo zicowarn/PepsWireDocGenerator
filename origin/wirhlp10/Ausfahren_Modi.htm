@@ -1,0 +1,84 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Ausfahren - Modi</title>
+<link rel="StyleSheet" href="../wirhlp10.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+font.hcp1 { font-weight:bold; }
+p.hcp2 { margin-top:0;
+margin-bottom:0; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="dialog">Ausfahren Gerade</p>
+<p>Führt zu einer linearen (geraden) Ausfahrbewegung.</p>
+<p>&#160;</p>
+<p class="dialog">Ausfahren Bogen mit Eckenmodus</p>
+<p>Führt zu einer <font class="hcp1">kreisförmigen tangentialen 
+ Ausfahrbewegung</font> an die Bearbeitungsfigur.</p>
+<p>Für diese Option muss man einen Ausfahrradius programmieren.</p>
+<p>Der Radius der Ausfahrbewegung muss kleiner sein als der Abstand zwischen 
+ der Start(loch)position und der Bearbeitungsstartposition auf der Figur 
+ und größer sein als der Drahtradius plus Offset.</p>
+<p>Es existieren zwei Methoden für das kreisförmige Ausfahren, nämlich:</p>
+<p><font class="hcp1">Ausfahren Bogen mit ISO</font> und 
+ <font class="hcp1">Ausfahren Bogen mit Eckenmodus</font></p>
+<p>Der <font class="hcp1">Unterschied</font> zwischen den 
+ Methoden wird <font class="hcp1">nur bei der Bearbeitung 
+ von Koniken</font> offensichtlich.</p>
+<p>Normalerweise verwendet man die Ausfahroption <font class="hcp1">Ausfahren 
+ Bogen mit ISO</font>. Sie ist auch die einzig mögliche Methode wenn man 
+ Regelflächen bogenförmig an/abfahren möchte.</p>
+<p>Die folgende Zeichnung zeigt die Methode <font class="hcp1">Ausfahren 
+ Bogen mit ISO</font>.</p>
+<p class="hcp2">&#160;</p>
+<p><img src="../LEADISO.gif" alt="LEADISO.gif" width="283" height="179" border="0"></p>
+<p class="hcp2">&#160;</p>
+<p>Wird die Option <font class="hcp1">Ausfahren Bogen mit 
+ Eckenmodus</font> aktiviert, wird je nach Einstellung des <a href="javascript:void(0);" id="a3" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('Eckenmodus.htm');return false;"><font class="hcp1">Eckenmodus</font></a> im 
+ Dialog <font class="hcp1">Standard Konturbearbeitung</font> 
+ entweder ein ISO-Radius oder ein Drehspindelradius erzeugt.</p>
+<p>Die Option <font class="hcp1">Ausfahren Bogen mit Eckenmodus</font> 
+ ist nicht identisch mit der Ausfahroption <font class="hcp1">Ausfahren 
+ Bogen mit ISO</font>.</p>
+<p class="hcp2">&#160;</p>
+<p><font class="hcp1">Ausfahren Bogen mit: ISO Eckenmodus</font></p>
+<p><img src="../LEADISOC.gif" alt="LEADISOC.gif" width="279" height="176" border="0"></p>
+<p>&#160;</p>
+<p><font class="hcp1">Ausfahren Bogen mit: Drehspindel Eckenmodus</font></p>
+<p><img src="../LEADCONC.gif" alt="LEADCONC.gif" width="287" height="180" border="0"></p>
+<p class="hcp2">&#160;</p>
+<p>Die oben gezeigten Ausfahrmethoden (<font class="hcp1">ISO</font> 
+ und <font class="hcp1">Drehspindel</font>) sollten man nur 
+ programmieren wenn die NC-Steuerung dies auch zulässt.</p>
+<p>Verwenden Sie im Zweifelsfall die Option <font class="hcp1">Ausfahren 
+ Bogen mit ISO</font>.</p>
+<p>Beachten Sie ebenfalls, dass ein bogenförmigen An/Ausfahren auf einem 
+ Radiuselement bei vielen Steuerungen zu Offsetfehlern führt.</p>
+<p>Fahren Sie deshalb besser auf einem geraden Element an/aus.</p>
+<p>&#160;</p>
+<p class="dialog">Ausfahren Bogen mit ISO</p>
+<p>Führt zu einer bogenförmigen Ausfahrbewegung.</p>
+<p>Der Draht fährt im programmierten Radius von der Bearbeitungsfigur weg. 
+ <font class="hcp1">Ist eine Konik programmiert</font>, bildet 
+ die Ausfahrbewegung immer <font class="hcp1">einen ISO-Radius</font>.</p>
+<p>Der <font class="hcp1">Radius</font> der Ausfahrbewegung 
+ <font class="hcp1">muss angegeben werden</font>. Bei Radius 
+ 0 (Null) wird gerade weggefahren.</p>
+<p>&#160;</p>
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a3');
+//]]></script>
+</body>
+</html>

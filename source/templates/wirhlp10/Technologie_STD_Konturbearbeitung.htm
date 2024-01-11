@@ -1,0 +1,47 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Technologie" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Technologie" %}</p><p>{% trans "[Bearbeitungshöhe]" %}</p>
+<p class="Block_Text">{% trans "In diesem Dialogbereich bestimmen Sie die Schneidhöhe der aktuellen Bearbeitung." %}</p>
+<p class="Block_Text">{% trans "Beachten Sie, dass dieser Wert nicht für jede Drahterodiermaschine in die NC-Daten ausgegeben wird." %}</p>
+<p class="Block_Text" style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="Block_Text">{% trans "[Wähle Technologie]" %}</p>
+<p>{% trans "Für viele Drahterodiermaschinen, jedoch nicht für alle, existieren optional Technologiedatenbanken, die Sie mit der Schaltfläche [Wähle Technologie] aufrufen können." %}</p>
+<p>{% trans "Beachten Sie, dass die Verwendung von Technologiedatenbanken optional ist und lizenziert werden muss." %}</p>
+<p>{% trans "Ist keine Lizenz für die Technologiedatenbank verfügbar, ist die Schaltfläche [Wähle Technologie] nicht verfügbar[.]" %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

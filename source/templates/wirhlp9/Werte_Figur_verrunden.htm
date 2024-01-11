@@ -1,0 +1,54 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Werte" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Werte" %}</p><p>{% trans "Geben Sie hier die Größe für die inneren und äußeren Eckradien ein. Die Eingabe von [0] ist erlaubt und führt zu scharfen Ecken." %}</p>
+<p> </p>
+<p>{% trans "[Innerer Radius] und [Äußerer Radius]" %}</p>
+<p>{% trans "Diese Felder werden je nach gewählter Verrundungsmethode, aktiviert oder deaktiviert." %}</p>
+<p class="Block_Text">{% trans "[Hinweis:] Die Eingabe von negativen Radiuswerten ist erlaubt und führt zu Schleifenbildungen an den Ecken." %}</p>
+<p class="Block_Text"> </p>
+<p>{% trans "[Kleinste Linie]" %}</p>
+<p>{% trans "Wird verwendet, um die kleinste erlaubte Elementlänge festzulegen, die nach einer Verrundungsoperation übrig bleiben darf." %}</p>
+<p>{% trans "Der Wert sollte so klein wie möglich und so eingestellt werden, dass die CNC-Steuerung beim Bearbeiten der Geometrie keine Geometriefehler anzeigt." %}</p>
+<p> </p>
+<p>{% trans "[Winkeltoleranz]" %}</p>
+<p>{% trans "Steuert, ab welchem Winkelgrad eine Ecke verrundet werden darf. Ist der Winkel einer Ecke, bezogen auf eine Gerade, kleiner als die Winkeltoleranz, dann wird diese Ecke nicht verrundet." %}</p>
+<p>{% trans "Das System gibt dabei keine Fehlermeldung aus. Die folgenden Abbildung soll den Parameter [Winkeltoleranz] erläutern (Aus Gründen der Übersichtlichkeit wurden die Winkel übertrieben dargestellt):" %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><img src="../winkel_toler.gif" alt="winkel_toler.gif" width="451" height="129" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

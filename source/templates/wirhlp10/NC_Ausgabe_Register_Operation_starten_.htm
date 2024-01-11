@@ -1,0 +1,60 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "NC-Ausgabe Register (Operation starten)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+    p.hcp2 { color:#ff0000;
+    font-style:italic; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "NC-Ausgabe Register (Operation starten)" %}</p><p class="Block_Text">{% trans "Mit diesem Register können Sie festlegen, in welchem Verzeichnis die NC-Daten nach einem Postprozessorlauf gespeichert werden sollen." %}</p><p class="Block_Text">{% trans "Zudem können Sie die Startposition der Bearbeitung bestimmen und die Z-Höhen der Bearbeitungsebenen (Sekundärebene/Referenzhöhe) festlegen." %}</p>
+<p class="hcp1"> </p>
+<p class="hcp2">{% trans "Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen" %}</p>
+<p class="hcp2"> </p>
+<p class="hcp2">{% trans "[&lt;img src='../OP_START_OPT_shg.gif' usemap='#MAP704533243' alt='OP_START_OPT_shg.gif' width='788' height='577' border='0'/&gt;&lt;map name='MAP704533243' id='MAP704533243'&gt;################&lt;/map&gt; ]" %}</p>
+<p class="hcp1"> </p>
+<p>  </p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+	FilePopupInit('area3');
+	FilePopupInit('area4');
+	FilePopupInit('area5');
+	FilePopupInit('area6');
+	FilePopupInit('area7');
+	FilePopupInit('area8');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

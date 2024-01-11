@@ -1,0 +1,67 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Report Register" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+    font.hcp2 { font-style:italic; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Report Register" %}</p><p>{% trans "In diesem Dialogregister können Sie einstellen, ob nach einer Figurerzeugung ein Report über Umfang, Fläche, Schwerpunkt, kleinster Radius etc. der Figur ausgeben werden soll." %}</p><p>{% trans "Zusätzlich können Sie Geometrieelemente farblich kennzeichnen die kleiner oder größer sind als ein bestimmter Wert." %}</p>
+<p class="hcp1"> </p>
+<p>{% trans "[Klicken Sie auf die einzelnen Bereiche des folge][n][den Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp1"> </p>
+<p><img src="../creprfg4_shg.gif" usemap="#MAP696149760" alt="creprfg4_shg.gif" width="376" height="503" border="0"/>
+<map name="MAP696149760" id="MAP696149760">
+<area shape="rect" coords="14, 63, 289, 89" href="javascript:BSSCPopup('Report_anzeigen_Lin_Bof_Bea_figur.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="9, 93, 361, 231" href="Bogenradius_Lin_Bof_Bea_figur.htm" alt=""/>
+<area shape="rect" coords="15, 235, 347, 323" href="javascript:BSSCPopup('Elementlaenge_Lin_Bof_Bea_figur.htm',400,600);" id="area2" alt=""/>
+<area shape="rect" coords="12, 328, 341, 420" href="javascript:BSSCPopup('Zusaetzliche_Report_Optionen_Lin_Bof_Bea_figur.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="11, 477, 120, 496" href="javascript:BSSCPopup('../Commdata/COMMON_Schliessen.htm',400,300);" id="area4" alt=""/>
+<area shape="rect" coords="131, 472, 242, 497" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area5" alt=""/>
+<area shape="rect" coords="251, 472, 366, 495" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area6" alt=""/>
+<area shape="rect" coords="14, 42, 94, 59" href="Linien_Boegen_Bearbeitungsfigur.htm" alt=""/>
+<area shape="rect" coords="95, 41, 149, 60" href="Optionen_Register_Linien_Boegen_Bearbeitungsfigur.htm" alt=""/>
+<area shape="rect" coords="194, 39, 230, 58" href="Eject_Register_Lin_Bof_Bea_figur.htm" alt=""/>
+</map>  </p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+	FilePopupInit('area3');
+	FilePopupInit('area4');
+	FilePopupInit('area5');
+	FilePopupInit('area6');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

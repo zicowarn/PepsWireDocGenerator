@@ -1,0 +1,53 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Aussenkontur (Stempel)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Aussenkontur (Stempel)" %}</p><p>{% trans "Diese Option wird automatisch freigeschaltet, wenn Sie die Option [#Richtung automatisch#] wählen." %}</p><p>{% trans "Sie stellt automatisch sicher, dass die Richtung einer Bearbeitungsfigur korrekt ist, so dass eine [Aussenkontur (Stempel)] immer mit [linkem] oder [rechtem] [Offset] geschnitten wird." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../WIREOFF1.gif" alt="WIREOFF1.gif" width="221" height="226" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "Für [Offset links] muss die Bearbeitungsfigur [im Uhrzeigersinn] und für [Offset rechts] im [Gegenuhrzeigersinn] definiert sein." %}</p>
+<p>{% trans "Die Option ermittelt und ändert ggf. die Richtung von Bearbeitungsfiguren automatisch." %}</p>
+<script type="text/javascript" language="JavaScript1.2">
+//&lt;![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a1');
+//]]&gt;
+</script>
+
+{% endblock %}
+{% endlinebreakless %}

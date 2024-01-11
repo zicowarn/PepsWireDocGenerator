@@ -1,0 +1,46 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Deaktiviere Feature" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../WIRE_ExpertRH_context_Menu.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Deaktiviere Feature" %}</p><p>{% trans "Die im [WIRE-Expert] #FeatureManager# gewählten Features werden nicht verwendet." %}</p>
+<p> </p>
+<p>{% trans "Das System kennzeichnet alle deaktivierten Features grafisch @." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="Hinweis">{% trans "Tipp:" %}</p>
+<p>{% trans "Wählen Sie [mehrere aufeinander folgende] [Features] aus, indem Sie während des Auswählens die [Umschalt]-Taste gedrückt halten." %}</p>
+<p>{% trans "Wählen Sie [mehrere] [nicht] [aufeinander folgende] [Features] aus, indem Sie während des Auswählens die [Strg]-Taste gedrückt halten." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

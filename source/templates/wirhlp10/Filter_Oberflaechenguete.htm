@@ -1,0 +1,49 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Filter Oberflächengüte" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Filter Oberflächengüte" %}</p><p>{% trans "Um in der Datenbank nach einer bestimmten Oberflächengüte zu suchen oder eine neue Oberflächengüte einzutragen, [aktiviert] man zunächst die Checkbox [Filter Oberflächengüte]." %}</p><p>{% trans "Dies schaltet die daneben liegende Combobox frei, so dass man diese öffnen kann. Das System zeigt in der Combobox alle in der Datenbank gespeicherten Oberflächengüten." %}</p>
+<p>{% trans "Wählen Sie nun die Oberflächengüte nach der gesucht werden soll oder geben Sie eine neue Oberflächengüte ein." %}</p>
+<p>{% trans "Klicken Sie jetzt auf die Schaltfläche [#Liste neu aufbauen#] um die gesuchte Materialdicke aufzulisten oder verwenden Sie die Schaltflaeche [#Technologie speichern#] um eine neu eingegebene Oberflächengüte zu speichern." %}</p>
+<script type="text/javascript" language="JavaScript1.2">
+//&lt;![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a1');
+        FilePopupInit('a2');
+//]]&gt;
+</script>
+
+{% endblock %}
+{% endlinebreakless %}

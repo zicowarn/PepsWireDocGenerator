@@ -1,0 +1,79 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Beispiel: Gruppierte Operationen auf Figuren wiederholen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+    li.hcp3 { font-size:9pt; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Gruppierte Operationen auf Figuren wiederholen" %}</p><p>{% trans "Mit dieser Funktion können Sie eine gruppierte Operation auf beliebigen Positionen (in der Zeichnung durch [Bearbeitungsfiguren] gekennzeichnet) wiederholen." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Figuren_oder_auf_Punkten_Figuren.gif" alt="Figuren_oder_auf_Punkten_Figuren.gif" width="296" height="450" border="0"/></p>
+<p class="hcp2"> </p>
+<h2 style="margin-top: 0.00pt; margin-bottom: 2.40pt;">{% trans "Gruppenname" %}</h2>
+<p>{% trans "Wird verwendet, um den Namen der Gruppe auszuwählen, falls mehrere Gruppen existieren." %}</p>
+<ul>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Aktivieren Sie die Option [Verwende Bearbeitungsfigur]." %}</p></li>
+</ul>
+<p>{% trans "Die beiden Objekte [unten links] in der Zeichnung sind die gruppierten Operationen, die wiederholt werden sollen (nicht auswählen)." %}</p>
+<p><img src="../Gruppe_auf_Figuren.gif" alt="Gruppe_auf_Figuren.gif" width="294" height="290" border="0"/></p>
+<ul>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf die Schaltfläche @." %}</p></li>
+</ul>
+<ul>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Wählen Sie im Grafikfenster die Figuren aus, auf denen die gruppierten Operationen wiederholt werden sollen." %}</p></li>
+</ul>
+<p><img src="../Gruppe_auf_Figuren_1.gif" alt="Gruppe_auf_Figuren_1.gif" width="297" height="287" border="0"/></p>
+<ul>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Beenden Sie die Auswahl mit der Option [Ende] ([rechte Maustaste] od. [horizontale Ikonenleiste)]." %}</p></li>
+</ul>
+<p>{% trans "Das System schreibt die Informationen zurück in den Dialog." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Gruppe_auf_Figuren_a.gif" alt="Gruppe_auf_Figuren_a.gif" width="296" height="450" border="0"/></p>
+<p> </p>
+<p class="Tip_Note_Heading" style="margin-top: 0.00pt;">{% trans "Zeige/Simuliere diese gruppierten Operationen." %}</p>
+<p>{% trans "Wenn aktiv, werden bei einer Bearbeitungssimulation alle Gruppenpositionen simuliert. Wenn nicht, wird nur die erste Gruppenoperation simuliert." %}</p>
+<ul>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Schließen Sie den Dialog mit [OK]." %}</p></li>
+</ul>
+<p>{% trans "Der Befehl wird ausgeführt und im Operationsmanager angezeigt." %}</p>
+<p class="hcp2"> </p>
+<p>{% trans "@" %}</p>
+<ul>
+	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Simulieren Sie das Programm, um das Ergebnis zu überprüfen." %}</p></li>
+</ul>
+<p>{% trans "@" %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,63 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Eine Bearbeitungsfigur auf eine Punktegruppe (G1 ...) verteilen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    li.hcp1 { font-size:9pt; }
+    font.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Eine Bearbeitungsfigur auf eine Punktegruppe (G1 ...) verteilen" %}</p><ul>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Zeichnen Sie die Bearbeitungsfigur" %}</p>
+</li>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Bestimmen Sie die Positionen auf welcher die Bearbeitungsfigur kopiert werden soll, mit Hilfe des Registers [Gruppe] der Dialogbox [NURBS-Kurven und Surfaces]." %}</p>
+</li>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Der Befehl erzeugt eine Punktegruppe (G1 ..)." %}</p>
+</li>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Rufen Sie im Menü [Vorbereitung \ Diverses] den Befehl [Kreise/Bögen ==&amp;gt; Mehrfachfigur] auf." %}</p>
+</li>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Klicken Sie zuerst die Punktegruppe (G1 ..) an und anschließend die zu kopierende Bearbeitungsfigur." %}</p>
+</li>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Das System nimmt die gewählte Figur und kopiert diese auf die vorhandenen Punktegruppe (G1 ..)." %}</p>
+</li>
+<li class="hcp1">
+<p class="Topic_Text_Bulleted">{% trans "Beachten Sie, dass die Start(loch)position der Figur deckungsgleich auf den Gruppenpunkten liegt." %}</p>
+</li>
+</ul>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,46 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Suchschema nicht verwenden" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "@Suchschema nicht verwenden" %}</p><p> </p>
+<p>{% trans "Ein Klick auf diese Ikone führt dazu, dass [kein] [Suchschema ausgeführt wird]. Die Funktion löscht den Eintrag des momentan aktiven Suchschemas." %}</p>
+<p> </p>
+<p><img src="../startloch_Such_Schema1.gif" alt="startloch_Such_Schema1.gif" width="315" height="25" align="left" border="0"/></p>
+<p> </p>
+<p> </p>
+<p>{% trans "Die Parameter [Startloch zentrieren] / [Einfahrabstand] und [Umfangs Parameter] sind aktiv und es werden Bearbeitungsfiguren ohne Berücksichtigung von Startlochgeometrien erzeugt." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

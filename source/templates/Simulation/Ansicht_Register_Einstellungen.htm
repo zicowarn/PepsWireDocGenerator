@@ -1,0 +1,80 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Ansicht Register (Einstellungen)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Ansicht Register (Einstellungen)" %}</p><p>{% trans "Mit diesem Register stellen Sie ein, mit welcher Schrittweite und in welcher Anzeigequalität, Veränderungen der Bildschirmansicht durch Rotationen, Verschiebungen oder Zoomen dargestellt werden." %}</p><p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p style="color: #FF0000; font-style: italic;">{% trans "Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen." %}</p>
+<p> </p>
+<p style="margin-right: 19.85pt;"><img src="../viewopt_w_shg.gif" usemap="#AreaMap0" alt="viewopt_w_shg.gif" width="349" height="457" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="12,56,81,71" href="Solid_Register_Einstellungen_Simulation.htm" alt=""/>
+<area shape="rect" coords="82,50,170,69" href="Kollisionen_Register_Einstellungen.htm" alt=""/>
+<area shape="rect" coords="9,36,89,54" href="Farben_Register_Einstellungen.htm" alt=""/>
+<area shape="rect" coords="46,114,301,135" href="javascript:BSSCPopup('Faktor_fuer_Transformationen.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="35,327,280,347" href="javascript:BSSCPopup('Bei_Drahtmodell_nur_wichtigste_Kanten_zeigen.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="21,420,100,442" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="104,420,180,441" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area4" alt=""/>
+<area shape="rect" coords="185,421,260,441" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area5" alt=""/>
+<area shape="rect" coords="264,421,340,442" href="javascript:BSSCPopup('../Commdata/COMMON_Vorgaben.htm',400,300);" id="area6" alt=""/>
+<area shape="rect" coords="170,53,264,70" href="Toleranzen_Register_Einstellungen.htm" alt=""/>
+<area shape="rect" coords="26,171,336,218" href="javascript:BSSCPopup('Anzeigeart_fuer_Werkstueck_rotieren.htm',400,300);" id="area7" alt=""/>
+<area shape="rect" coords="263,34,337,52" href="Draht_Register_Einstellungen_.htm" alt=""/>
+<area shape="rect" coords="36,269,256,288" href="Perspektivische_Ansicht_verwenden.htm" alt=""/>
+<area shape="rect" coords="38,370,301,387" href="javascript:BSSCPopup('Verwende_OpenGL_Vertex_Buffer_Objekte.htm',400,300);" id="area8" alt=""/>
+<area shape="rect" coords="90,31,171,53" href="Dialoge_Register_Einstellungen_.htm" alt=""/>
+<area shape="rect" coords="172,30,261,52" href="Simulation_Register_Einstellungen_.htm" alt=""/>
+<area shape="rect" coords="37,388,310,408" href="javascript:BSSCPopup('../Commdata/COMMON_Nicht_verwendete_Funktion.htm',400,300);" id="area9" alt=""/>
+<area shape="rect" coords="37,291,277,309" href="javascript:BSSCPopup('Linien_der_Werkzeugweggrafik_dicker_anzeigen.htm',400,300);" id="area10" alt=""/>
+<area shape="rect" coords="36,308,284,327" href="javascript:BSSCPopup('../Commdata/COMMON_Nicht_verwendete_Funktion.htm',400,300);" id="area11" alt=""/>
+<area shape="rect" coords="40,220,267,259" href="Startansicht_Solid_Sim.htm" alt=""/>
+<area shape="rect" coords="41, 87, 302, 111" href="javascript:BSSCPopup('Winkelinkrement_fuer_Rotationen.htm',400,300);" id="area12" alt=""/>
+<area shape="rect" coords="36, 135, 307, 165" href="javascript:BSSCPopup('Faktor_fuer_Zoomen_Simulation.htm',400,300);" id="area13" alt=""/>
+<area shape="rect" coords="32, 350, 300, 369" href="javascript:BSSCPopup('Schnellste_Methode_fuer_Bildneuaufbau_verwenden.htm',400,300);" id="area14" alt=""/>
+</map> </p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+	FilePopupInit('area3');
+	FilePopupInit('area4');
+	FilePopupInit('area5');
+	FilePopupInit('area6');
+	FilePopupInit('area7');
+	FilePopupInit('area8');
+	FilePopupInit('area9');
+	FilePopupInit('area10');
+	FilePopupInit('area11');
+	FilePopupInit('area12');
+	FilePopupInit('area13');
+	FilePopupInit('area14');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,75 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Solid - Projektions-Assistent - Schritt 3" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+    font.hcp3 { font-style:italic; }
+    font.hcp4 { font-weight:bold;
+    font-style:italic; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Solid - Projektions-Assistent - Schritt 3" %}</p><p class="Block_Text">{% trans "Der letzte [Schritt 3] des [Assistenten] wird verwendet, um die im [Schritt 2] ausgewählten Geometrien, auf eine untere und eine obere Z-Ebene zu projizieren." %}</p><p class="Block_Text">{% trans "Die Projektion selbst wird mit der Schaltfläche [Projizieren] ausgeführt." %}</p>
+<p class="hcp2"> </p>
+<p>{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p>{% trans "[Klicken Sie auf die Schaltflächen] [&amp;lt; Zurück] [/] [Weiter &amp;gt;] [um den nächsten/vorherigen Dialog des Assistenten zu sehen.]" %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Solid_Proj_Assis_3_shg.gif" usemap="#AreaMap0" alt="Solid_Proj_Assis_3_shg.gif" width="495" height="357" border="0"/> <map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="11,29,135,313" href="javascript:BSSCPopup('../Commdata/COMMON_Bild.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="152,275,272,295" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="146, 316, 220, 346" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="410,318,484,343" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area4" alt=""/>
+<area shape="rect" coords="318,318,394,342" href="javascript:BSSCPopup('../Commdata/COMMON_Schliessen.htm',400,300);" id="area5" alt=""/>
+<area shape="rect" coords="341,272,468,294" href="javascript:BSSCPopup('Projizieren_Solid_Projektions_Assistent.htm',400,300);" id="area6" alt=""/>
+<area shape="rect" coords="147,182,475,230" href="javascript:BSSCPopup('Figuren_erzeugen_Solid_Projektions_Assistent.htm',400,300);" id="area7" alt=""/>
+<area shape="rect" coords="233,317,311,343" href="javascript:BSSCPopup('Solid_Projektions_Assistent_Schritt_2.htm',400,300);" alt="" id="area8"/>
+<area shape="rect" coords="265, 234, 474, 262" href="javascript:BSSCPopup('Toleranz_fuer_die_Projektion_Solid_Projektions_Assistent.htm',400,300);" id="area9" alt=""/>
+<area shape="rect" coords="144, 111, 471, 181" href="javascript:BSSCPopup('Obere_Untere_Projektionshoehe_Solid_Projektions_Assistent.htm',400,300);" id="area10" alt=""/></map></p>
+<script type="text/javascript" language="JavaScript1.2">
+//&lt;![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('area1');
+        FilePopupInit('area2');
+        FilePopupInit('area3');
+        FilePopupInit('area4');
+        FilePopupInit('area5');
+        FilePopupInit('area6');
+        FilePopupInit('area7');
+        FilePopupInit('area8');
+        FilePopupInit('area9');
+        FilePopupInit('area10');
+//]]&gt;
+</script>
+
+{% endblock %}
+{% endlinebreakless %}

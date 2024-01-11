@@ -1,0 +1,44 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Geometrie Parameter" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Geometrie Parameter" %}</p><p>{% trans "Diese Option ruft einen Dialog auf, mit dem Sie die Geometrie-Eigenschaften von [Flächen], [Kanten] und [Vertexe] überprüfen können." %}</p>
+<p>{% trans "Auf diese Weise kann man beispielsweise den Start-\Endpunkt oder den Winkel einer Modellkante überprüfen." %}</p>
+<p>{% trans "Zudem wird analysiert, ob eine Kante oder Fläche erodierbar ist oder nicht." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><img src="../Geometry_Properties.gif" alt="Geometry_Properties.gif" width="337" height="534" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

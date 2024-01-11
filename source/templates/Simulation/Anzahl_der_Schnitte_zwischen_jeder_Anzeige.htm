@@ -1,0 +1,39 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Anzahl der Schnitte zwischen jeder Anzeige" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Anzahl der Schnitte zwischen jeder Anzeige" %}</p><p>{% trans "Wird das System nicht anders eingestellt, baut das System die Bildschirmanzeige nach jedem Schnitt neu auf." %}</p>
+<p>{% trans "Bei der Bearbeitung von sehr kurzen Elementen ist ein Bildneuaufbau nach jeden Schnitt jedoch nicht akzeptabel." %}</p>
+<p>{% trans "Wird beispielsweise ein Kreis bearbeitet, teilt das Simulationssystem den Kreis in kleine Geraden (Facetten) auf. Jede Facette gilt als ein Schnitt." %}</p>
+<p>{% trans "Damit das System nicht nach jedem Schnitt den Bildschirm neu aufbaut, kann man hier die Anzahl der Schnitte festlegen, nach denen ein Bildschirmneuaufbau geschehen soll. Dies kann bei einem Kreis sinnvoll sein, bei der Bearbeitung von mehreren langen Geraden, ist ein Neuaufbau der Grafik nach z.B. 20 Schnitten störend." %}</p>
+<p>{% trans "Diesen Effekt kann man mit der Option (siehe #[Max. Schnitteingriff vor Anzeige]#) unterdrücken." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

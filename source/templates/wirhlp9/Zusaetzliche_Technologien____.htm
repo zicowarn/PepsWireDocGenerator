@@ -1,0 +1,89 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Zusätzliche Technologien" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Zusätzliche Technologien" %}</p><p>{% trans "Der Befehl [Zusätzliche] [Technologien] findet Anwendung, wenn in eine Bearbeitungsfigur zusätzliche Technologieinformationen eingebracht werden müssen." %}</p><p>{% trans "Wenn die Figur nur mit einer globalen Technologie pro Schnitt geschnitten oder wenn nur die Start/Endtechnologie bestimmt werden muss, verwendet man den Befehl [Zusätzliche] [Technologien] nicht." %}</p>
+<p>{% trans "Im Gegensatz zur Definition von Start/Endtechnologien, wo der Technologiewechsel nur am Anfang bzw. Ende einer Bearbeitungsfigur stattfindet, erlaubt der Befehl [Zusätzliche] [Technologien] das Einfügen von beliebig vielen [Technologiewechseln, an jeder beliebigen Stelle] der Figur." %}</p>
+<p>{% trans "Nach Aufruf des Befehls wird der Anwender aufgefordert, die Bearbeitungsfigur zu wählen, an der die Technologiewechsel eingebracht werden sollen." %}</p>
+<p>{% trans "Verwenden Sie anschließend die [Fangfunktionen], um die Positionen der Technologiewechselpunkte festzulegen." %}</p>
+<p>{% trans "Nach der Eingabe der Position eines Technologiewechselpunktes, erfolgt der Aufruf eines Dialogs in dem die neuen Technologien z.B. Offsetregister oder Stromstufen zugewiesen werden." %}</p>
+<p>{% trans "Jede Technologiewechsel wird durch ein kleines Kreissymbol in der Farbe [Magenta] symbolisiert." %}</p>
+<p class="Block_Text">{% trans "Der Dialog für einen Technologiewechsel ist CNC-Maschinen und CNC-Steuerungsabhängig." %}</p>
+<p class="Block_Text">{% trans "Der folgende Dialog soll als Beispiel dienen und erlaubt die Eingabe von Stromstufe und Offsetregister:" %}</p>
+<p class="hcp2"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp2"> </p>
+<p><img src="../EXTR_TEC_shg.gif" usemap="#AreaMap0" alt="EXTR_TEC_shg.gif" width="262" height="204" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="19, 135, 135, 167" href="javascript:BSSCPopup('Strom_Zus_Technologie.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="18, 167, 134, 198" href="javascript:BSSCPopup('Offset_Zus_Technologie.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="151, 95, 259, 120" href="javascript:BSSCPopup('Naechste_Technologie_Zus_Technologie.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="148, 166, 254, 190" href="javascript:BSSCPopup('Vorherige_Technologie_Zus_Technologie.htm',400,300);" id="area4" alt=""/>
+<area shape="rect" coords="148, 44, 253, 67" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area5" alt=""/>
+<area shape="rect" coords="151, 132, 257, 155" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area6" alt=""/>
+</map> </p>
+<p>{% trans "[Hinweis]: Dieser Dialog variiert je nach gewählter CNC-Maschine." %}</p>
+<p> </p>
+<p>{% trans "Innerhalb des Befehls stehen drei Optionen für Transformationen zur Verfügung:" %}</p>
+<p>{% trans "[Technologie kopieren + verschieben], [Technologie kopieren + rotieren] und [Technologie spiegeln] (siehe [rechte Maustaste] od. [horizontale Ikonenleiste])." %}</p>
+<p>{% trans "Die Optionen finden bei symmetrischen Formen Verwendung, die das Kopieren von vorhandenen Technologiesymbolen erlauben." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../BUTT_EXTR_TEC.gif" alt="BUTT_EXTR_TEC.gif" width="336" height="200" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "Beachten Sie auch die Option [Löschen], diese ermöglicht das Löschen von fehlerhaften Technologiesymbolen." %}</p>
+<p>{% trans "Mit der Option [Technologie editieren] können Sie vorhandene Technologiesymbole editieren, um die Technologieparameter des Symbols zu verändern." %}</p>
+<p>{% trans "Technologieparameter [sollten immer VOR] der Programmierung der Bearbeitungsstrategie bestimmt werden. Sie können diese aber [auch nachträglich] bestimmen." %}</p>
+<p class="hcp2"> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
+<p>{% trans "#[Zusätzliche Technologieaufrufe in eine Bearbeitung einbringen]#" %}</p>
+<p class="hcp2"> </p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "Zusätzliche Technologien werden nur dann ausgegeben, wenn die Checkbox [Extra - Tech.] im Dialog [Bearbeitung einstellen] aktiv ist (Siehe folgende Abbildung)." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../TECHN_2.gif" alt="TECHN_2.gif" width="319" height="115" border="0"/></p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+	FilePopupInit('area3');
+	FilePopupInit('area4');
+	FilePopupInit('area5');
+	FilePopupInit('area6');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

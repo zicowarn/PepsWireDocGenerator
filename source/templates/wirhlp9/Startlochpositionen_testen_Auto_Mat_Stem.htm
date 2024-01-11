@@ -1,0 +1,36 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Startlochpositionen testen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "@Startlochpositionen testen" %}</p><p>{% trans "Zeigt Ihnen, welche Startlöcher das System finden würde, ohne jedoch Bearbeitungsfiguren zu erzeugen." %}</p>
+<p>{% trans "Nach Wahl der Ikone zieht man ein Auswahlfenster über die Geometrien. Anschließend kennzeichnet das System die Startlochpositionen durch blaue C-Punkte." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

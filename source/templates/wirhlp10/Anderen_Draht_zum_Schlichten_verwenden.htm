@@ -1,0 +1,42 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Anderen Draht zum Schlichten verwenden" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Anderen Draht zum Schlichten verwenden" %}</p><p>{% trans "Einige Drahterodiermaschinen bieten die Möglichkeit zum Drahtwechsel während der Bearbeitung." %}</p>
+<p>{% trans "Dabei kann für die Schlichtschnitte ein anderer Draht (z.B. 0.1) verwendet werden als für die Schruppschnitte (z.B. 0.25)." %}</p>
+<p>{% trans "Wenn Sie die Option [Anderen Draht zum Schlichten verwenden] aktiveren, schaltet dies die Listbox [Draht zum Schlichten frei], so dass Sie hier Schneiddraht für die Schlichtoperationen auswählen können." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

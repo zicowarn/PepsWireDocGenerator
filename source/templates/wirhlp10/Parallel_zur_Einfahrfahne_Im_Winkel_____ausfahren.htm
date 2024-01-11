@@ -1,0 +1,52 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Parallel zur Einfahrfahne &sol; Im Winkel zur Konturnormalen ausfahren" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    img.hcp2 { border:none; }
+    p.hcp3 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Parallel zur Einfahrfahne / Im Winkel zur Konturnormalen ausfahren" %}</p><p>{% trans "[Parallel zur Einfahrfahne]" %}</p>
+<p>{% trans "Bedeutet, dass die Ausfahrbewegung parallel zur Einfahrbewegung ist." %}</p>
+<p> </p>
+<p><img src="../Parallel%20zur%20Einfahrfahne.gif" alt="" border="0" class="hcp2"/></p>
+<p class="hcp3"> </p>
+<p class="hcp3">{% trans "Im Winkel zur Konturnormalen" %}</p>
+<p>{% trans "In einigen Anwendungsfällen wird eine Ausfahrbewegung benötigt, die in einem bestimmbaren Winkel zur Einfahrbewegung erfolgen soll." %}</p>
+<p>{% trans "Wird eine Ausfahrbewegung im Winkel programmiert, muss die Größe des Winkels im Feld [[Im Winkel zur Konturnormalen]] eingegeben werden." %}</p>
+<p>{% trans "Das folgende Bild zeigt eine Ausfahrbewegung unter 45 Grad:" %}</p>
+<p> </p>
+<p><img src="../Im%20Winkel%20zur%20Konturnormalen.gif" alt="" border="0" class="hcp2"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

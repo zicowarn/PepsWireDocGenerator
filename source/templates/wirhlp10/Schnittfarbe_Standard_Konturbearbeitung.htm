@@ -1,0 +1,62 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Schnittfarbe" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Schnittfarbe" %}</p><p>{% trans "Ein Klick auf diese Schaltfläche führt Sie in einen weiteren Dialog. Hier können Sie jedem Schnitt eine eigene Farbe zuweisen." %}</p><p>{% trans "Wenn Sie anschließend die Bearbeitungssimulation starten, führt dies dazu, dass jeder Schnitt einer Mehrfachbearbeitung mit einer eindeutigen Farbe gekennzeichnet wird." %}</p>
+<p class="hcp1"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp1"> </p>
+<p><img src="../FARB_LA_shg.gif" usemap="#MAP712995168" alt="FARB_LA_shg.gif" width="305" height="399" border="0"/>
+<map name="MAP712995168" id="MAP712995168">
+<area shape="rect" coords="8, 44, 226, 62" href="javascript:BSSCPopup('Drahtbahn_bei_Figurbearbeitungen_zeigen.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="7, 69, 253, 87" href="javascript:BSSCPopup('Drahtbahn_bei_Bewegungen_von_Figur_zu_Figur_zeigen.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="5, 94, 296, 361" href="javascript:BSSCPopup('Schnitt_1_2_3_4_5_6_Farben.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="11, 364, 98, 384" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area4" alt=""/>
+<area shape="rect" coords="105, 364, 195, 385" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area5" alt=""/>
+<area shape="rect" coords="201, 363, 291, 387" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area6" alt=""/>
+</map>  </p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+	FilePopupInit('area3');
+	FilePopupInit('area4');
+	FilePopupInit('area5');
+	FilePopupInit('area6');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

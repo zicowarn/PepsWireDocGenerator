@@ -1,0 +1,37 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Zeige Nullpunktsymbol auf X0Y0" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Zeige Nullpunktsymbol auf X0Y0" %}</p><p>{% trans "Ist diese Option aktiv, wird der absolute Nullpunkt ([X0 Y0 Z0]) in der Form eines Nullpunktsymbols angezeigt." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><img src="../Zeige_Nullpunktsymbol_X0Y0Z0_SIM.gif" alt="Zeige_Nullpunktsymbol_X0Y0Z0_SIM.gif" width="367" height="187" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

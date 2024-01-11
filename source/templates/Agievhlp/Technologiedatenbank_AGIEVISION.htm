@@ -1,0 +1,49 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Technologiedatenbank AGIEVISION" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Agievhlp.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Technologiedatenbank AGIEVISION" %}</p><p>{% trans "Die AGIEVISION Steuerung verfügt über zwei Technologiedatenbanken, nämlich die [AGIE Technologiedatenbank] und die [Benutzer Technologiedatenbank]." %}</p>
+<p> </p>
+<p class="dialog">{% trans "[AGIE Technologie(datenbank)]" %}</p>
+<p>{% trans "Enthält alle von AGIE mitgelieferten Technologiedateien." %}</p>
+<p> </p>
+<p class="dialog">{% trans "Benutzer Technologie(datenbank)" %}</p>
+<p>{% trans "Enthält die vom Anwender erzeugten, unter eigenen Namen abgelegten Technologiedateien, welche alle auf Erfahrungswerten basierenden Parameter enthalten." %}</p>
+<p> </p>
+<p class="dialog">{% trans "Automatische Technologie" %}</p>
+<p>{% trans "Ist [Automatische Technologie] gewählt, so wird die ausgewählte Qualität oder Technologie an der NC-Maschine [ohne] Einblendung der Technologieauswahldialogbox übernommen (Sollte als Systemvorgabe mit dem Button [Eingabe speichern] abgespeichert werden)." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

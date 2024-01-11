@@ -1,0 +1,61 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "NC-Code Simulation - Parameter 2 XXX" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    span.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "NC-Code Simulation - Parameter 2" %}</p><p> </p>
+<p><img src="../NC_Code_Simulation_Parameter_2.gif" alt="" style="border: none;" border="0"/></p>
+<p> </p>
+<p class="Tip_Note_Heading">{% trans "NC-Datei" %}</p>
+<p>{% trans "Zeigt den Namen und Dateipfad der aktuelle geladenen NC-Datei." %}</p>
+<p> </p>
+<p class="Tip_Note_Heading">{% trans "NC-Satzliste" %}</p>
+<p>{% trans "In der Liste der NC-Sätze können Sie einzelne Sätze anklicken oder sich mit Hilfe der Tasten '[Pfeil nach unten]' und '[Pfeil nach oben]' durch die Liste navigieren." %}</p>
+<p> </p>
+<p class="Tip_Note_Heading">{% trans "In NC-Zeile" %}</p>
+<p>{% trans "Zeigt die Koordinate des aktuell gewählten NC-Satzes." %}</p>
+<p> </p>
+<p class="Tip_Note_Heading">{% trans "Absolut" %}</p>
+<p>{% trans "Ist der aktuell gewählte NC-Satz eine inkrementale Bewegung (z.B. G91 aktiv), zeigt dieses Feld die umgerechnete, absolute (G90) Koordinate an," %}</p>
+<p> </p>
+<p class="Tip_Note_Heading">{% trans "CAM Y,Y,Z" %}</p>
+<p>XXX</p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+
+{% endblock %}
+{% endlinebreakless %}

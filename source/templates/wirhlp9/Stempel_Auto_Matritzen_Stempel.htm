@@ -1,0 +1,78 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Stempel Register" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Stempel Register" %}</p><p>{% trans "Wählen Sie das Register [Stempel], wenn die Geometrieelemente automatisch in Bearbeitungsfiguren vom Typ [Stempel] (Startloch [außerhalb] der Bearbeitungsfigur) umgewandelt werden sollen." %}</p><p>{% trans "Stellen Sie [vorher] die Optionen im Register #[Filter]# korrekt ein." %}</p>
+<p>{% trans "[Beachten Sie, dass das System bei der Elementauswahl unabhängig von den Einstellungen in dem Register] [#Filter#, zunächst alle gewählten Elemente markiert. ]" %}</p>
+<p>{% trans "[Erst nach dem Beenden der Elementauswahl, konvertiert das System die in durch den Filter zugelassenen Formen zu Bearbeitungsfi][g][uren.]" %}</p>
+<p>{% trans "Die Schaltfläche [Wähle Stempel &amp;gt;&amp;gt;] dient zur Auswahl der Elemente, die in Bearbeitungsfiguren vom Typ [Stempel] umgewandelt werden sollen." %}</p>
+<p class="hcp2"> </p>
+<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp2"> </p>
+<p><img src="../QUI_D_P3_shg.gif" usemap="#AreaMap0" alt="QUI_D_P3_shg.gif" width="415" height="398" border="0"/>
+<map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="16, 41, 64, 61" href="Matrizen_Auto_Matritzen_Stempel.htm" alt=""/>
+<area shape="rect" coords="115, 46, 152, 64" href="Filter_Auto_Matritzen_Stempel.htm" alt=""/>
+<area shape="rect" coords="20, 112, 228, 138" href="javascript:BSSCPopup('Einfahrabstand_Auto_Matritzen_Stempel.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="20, 141, 230, 174" href="javascript:BSSCPopup('Winkel_zur_Normalen_Auto_Matritzen_Stempel.htm',400,300);" id="area2" alt=""/>
+<area shape="rect" coords="20, 176, 228, 207" href="javascript:BSSCPopup('Umfangs_Parameter_Auto_Matritzen_Stempel.htm',400,600);" id="area3" alt=""/>
+<area shape="rect" coords="26, 213, 234, 268" href="Startloch_Suchschema_Auto_Mat_Stemp.htm" alt=""/>
+<area shape="rect" coords="238, 226, 387, 268" href="javascript:BSSCPopup('Matrizen_Stempeltyp_Auto_Mat_Stemp.htm',400,300);" id="area4" alt=""/>
+<area shape="rect" coords="22, 269, 385, 341" href="javascript:BSSCPopup('Schnittschemen_Auto_Matritzen_Stempel.htm',400,500);" id="area5" alt=""/>
+<area shape="rect" coords="11, 363, 115, 384" href="javascript:BSSCPopup('Waehle_Matrizen_Stempel_Auto_Mat_Stemp.htm',400,300);" id="area6" alt=""/>
+<area shape="rect" coords="121, 364, 209, 382" href="javascript:BSSCPopup('../Commdata/COMMON_Schliessen.htm',400,300);" id="area7" alt=""/>
+<area shape="rect" coords="214, 364, 307, 383" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area8" alt=""/>
+<area shape="rect" coords="313, 362, 401, 386" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area9" alt=""/>
+<area shape="rect" coords="241, 79, 379, 217" href="javascript:BSSCPopup('../Commdata/COMMON_Bild.htm',400,300);" id="area10" alt=""/>
+<area shape="rect" coords="154, 43, 210, 60" href="Optionen_Auto_Matritzen_Stempel.htm" alt=""/>
+</map> </p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+	FilePopupInit('area3');
+	FilePopupInit('area4');
+	FilePopupInit('area5');
+	FilePopupInit('area6');
+	FilePopupInit('area7');
+	FilePopupInit('area8');
+	FilePopupInit('area9');
+	FilePopupInit('area10');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

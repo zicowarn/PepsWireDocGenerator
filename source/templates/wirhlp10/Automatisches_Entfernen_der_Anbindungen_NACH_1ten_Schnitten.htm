@@ -1,0 +1,75 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Automatisches Entfernen der Anbindungen NACH 1.ten Schnitten" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+    p.hcp3 { margin-left:198.45pt;
+    text-indent:-198.45pt; }
+    p.hcp4 { margin-left:255.15pt;
+    text-indent:-198.45pt; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Automatisches Entfernen der Anbindungen NACH 1.ten Schnitten" %}</p><p> </p><p>{% trans "Diese Option ähnelt der Methode [Stopp - Anbindung mit dem ersten Schnitt entfernen] bei aktivierter Option [#Zuerst ALLE Schruppschnitte#[.]]" %}</p>
+<p>{% trans "Mit der Ausnahme, dass hier [ALLE] Anbindungen [nach] Ausführung aller ersten Schnitte entfernt werden - siehe Gegenüberstellung unterhalb:" %}</p>
+<p class="hcp2"> </p>
+<p class="hcp3">{% trans "[Stopp - Anbindung mit dem ersten Schnitt entfernen ]" %}</p>
+<p class="hcp4">{% trans "Erster Schnitt Figur 1" %}</p>
+<p class="hcp4">{% trans "[Stopp], dann Anbindung entfernen" %}</p>
+<p class="hcp4">{% trans "Erster Schnitt Figur 2" %}</p>
+<p class="hcp4">{% trans "[Stopp], dann Anbindung entfernen" %}</p>
+<p class="hcp4">{% trans "Erster Schnitt Figur 3" %}</p>
+<p class="hcp4">{% trans "[Stopp], dann Anbindung entfernen" %}</p>
+<p class="hcp2"> </p>
+<p class="hcp3">{% trans "[Autom. Entfernen der Anbindungen NACH 1.ten Schnitten]" %}</p>
+<p class="hcp4">{% trans "Erster Schnitt Figur 1" %}</p>
+<p class="hcp4">{% trans "Erster Schnitt Figur 2" %}</p>
+<p class="hcp4">{% trans "Erster Schnitt Figur 3" %}</p>
+<p class="hcp4">{% trans "[Stopp], dann Anbindung Figur 3 entfernen" %}</p>
+<p class="hcp4">{% trans "[Stopp], dann Anbindung Figur 2 entfernen" %}</p>
+<p class="hcp4">{% trans "[Stopp], dann Anbindung Figur 1 entfernen" %}</p>
+<p class="hcp2"> </p>
+<p>{% trans "Diese Option liefert eine gute Oberflächenqualität in den Haltestegbereichen und reduziert die Eingriffszeit des Maschinenbedieners, da alle Operationen für die Haltestegentfernung eng beieinander liegen." %}</p>
+<p> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
+<p>{% trans "@ [&lt;a href='../Strategie_5_Automatisches%20Entfernen%20NACH%201ten%20Schnitt%20mit%20Zuerst%20alle%20Schruppschnitte.gif' id='a2'&gt;Zeige Beispielfilm zum o.g. Thema#]" %}</p>
+<p> </p>
+<script type="text/javascript" language="JavaScript1.2">
+//&lt;![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a1');
+//]]&gt;
+</script>
+
+{% endblock %}
+{% endlinebreakless %}

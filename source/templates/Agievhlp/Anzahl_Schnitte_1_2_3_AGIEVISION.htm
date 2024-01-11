@@ -1,0 +1,48 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Schnitt Nr. 1 ,2, 3, ....(AGIEVISION)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Agievhlp.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Schnitt Nr. 1, 2 , 3, ....(AGIEVISION)" %}</p><p>{% trans "Die Checkboxen [1, 2, 3 ...] bis [10] sind nur aktiv, wenn vorher die Option [Mehrfachschnitt] gewählt wurde." %}</p>
+<p>{% trans "Die Checkboxen legen Sie die Anzahl der benötigten Schnitte fest. Wurde [Einzelschnitt] gewählt, ist nur das Feld [1] aktivierbar." %}</p>
+<p> </p>
+<p class="Hinweis">{% trans "Wichtiger Hinweis:" %}</p>
+<p>{% trans "Die Checkboxen [Schnitt Nr. 1, 2, 3, ...] werden für AGIEVISION Maschinen [normalerweise nicht verwendet], da die NC-Steuerung aufgrund der #[Qualitätszielangabe]# die Anzahl der Schnitte selbst berechnet." %}</p>
+<p>{% trans "Es gibt jedoch [eine Ausnahme] bei der man die Anzahl der Schnitte selbst festlegen möchte:" %}</p>
+<p>{% trans "Ein Anwender möchte die Anzahl der Schnitte, die Größe des Offsets pro Schnitt und die verwendete Technologie selbst festlegen und diese Daten in die NC-Datendatei ausgeben." %}</p>
+<p>{% trans "In diesem Fall [aktiviert] man die Option [Mehrfachschnitt] und trägt die Anzahl der Schnitte, die Offsetgröße und die Namen der verwendeten Technologiedateien für jeden Schnitt in den Bereichen [Schnitt Nr. 1, 2, 3 ...], [Offset] und @ der Dialogbox ein. Die Option [Offset ausgeben] im Register [Schnitte] [muß] in diesem Fall [AKTIVIERT] sein, damit das System die Anzahl der Schnitte und die Offsetwerte auch in die NC-Daten ausgibt." %}</p>
+<p>{% trans "Beachten Sie unbedingt, daß man [jedem einzelnen Schnitt] eine [separate Benutzertechnologie] zuweisen muss und diese Technologien auch in der Benutzertechnologiedatenbank der NC-Steuerung vorhanden sein müssen. In den verwendeten Benutzertechnologien [müssen alle Offsetwerte auf 0] gesetzt sein." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,43 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Autom. Einfädeln &sol; Abschneiden" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Autom. Einfädeln / Abschneiden" %}</p><p>{% trans "Ist die Option [aktiviert], gibt das CAM System bei NC-Maschinen mit automatischer Drahteinfädel-/abschneideeinrichtung die NC-Codes zum automatischen Einfädeln oder Abschneiden des Drahtes aus." %}</p>
+<p>{% trans "Bei NC-Maschinen ohne automatisches Drahthandling, gibt das System CNC-Codes aus, welche die Maschine stoppen (z.B. M01), damit der Draht manuell eingefädelt oder abgeschnitten werden kann." %}</p>
+<p>{% trans "Obwohl die meisten Bearbeitungen bei [aktivierter] Option [Autom. Einfädeln / Einfädeln] ausgeführt werden, ist es in einigen Fällen nötig die Option zu [deaktivieren]." %}</p>
+<p>{% trans "Dies könnte der Fall sein, wenn man die Befehle für den Maschinenstop, das Draht einfädeln und das Draht abschneiden, an bestimmten Positionen manuell programmieren will." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

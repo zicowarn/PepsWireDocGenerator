@@ -1,0 +1,56 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "NC-Daten für AGIEVISION NC-Maschinen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Agievhlp.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    font.hcp2 { font-weight:bold;
+    font-style:italic; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <h1>{% trans "NC-Daten für AGIEVISION NC-Maschinen" %}</h1><p>{% trans "Folgende Dateien werden bei einem Postprozessorlauf erzeugt:" %}</p>
+<p>{% trans "[Scriptdatei] (Dateiendung *.[sbl])" %}</p>
+<p>{% trans "Diese Datei enthält Angaben über das Material, die Materialhöhe, das Qualitätsziel sowie die Bearbeitungsstrategie." %}</p>
+<p>{% trans "Aufgrund der Angaben in der [Scriptdatei] berechnet die AGIEVISION Steuerung die Einstellung für Offset, Spülung und Generator automatisch." %}</p>
+<p> </p>
+<p><img src="../AV_SBL.gif" alt="AV_SBL.gif" width="726" height="136" border="0"/></p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p>{% trans "[NC-Datendatei(en)] (Dateiendung *.[iso])" %}</p>
+<p>{% trans "Enthält die Geometriedaten. Für jede einzelne Bearbeitungsfigur erzeugt das System eine separate NC-Datei. Die Namen der Dateien werden inkrementiert (z.B. Bei4[01], Bei4[02], Bei4[03], ... )." %}</p>
+<p> </p>
+<p><img src="../AV_ISO.gif" alt="AV_ISO.gif" width="335" height="160" border="0"/></p>
+<p style="text-align: center;"> </p>
+<p>{% trans "[Übertragungsdatei] (Dateiendung *.[sbr])" %}</p>
+<p>{% trans "Bei einer Datenübertragung (Diskette oder ON-LINE) nutzt die AGIEVISION Steuerung die SBR-Datei um in Erfahrung zu bringen, welche ISO-Dateien übertragen werden müssen." %}</p>
+<p><img src="../AV_SBR.gif" alt="AV_SBR.gif" width="333" height="38" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

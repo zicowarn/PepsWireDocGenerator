@@ -1,0 +1,41 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Startposition" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Startposition" %}</p><p>{% trans "An dieser Stelle muss die [XY-Startposition] einer Bearbeitung (Bezugsposition) bestimmt werden. In den NC-Daten entspricht dies in der Regel dem Befehl G92 (CNC-Steuerungsabhängig)." %}</p>
+<p>{% trans "Beachten Sie, dass Sie die Lage der Startposition mit der Schaltfläche [XY &amp;gt;&amp;gt;] aus einer vorhandenen Zeichnung ermitteln können." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

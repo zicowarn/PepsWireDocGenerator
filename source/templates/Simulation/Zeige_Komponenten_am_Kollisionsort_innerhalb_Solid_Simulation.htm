@@ -1,0 +1,45 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Zeige Komponenten am Kollisionsort innerhalb" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    span.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Zeige Komponenten am Kollisionsort innerhalb:" %}</p><p>{% trans "[Einer prozentuale Toleranz von, die nicht überschreitet eine Distanz von:]" %}</p>
+<p style="font-weight: bold;">{% trans "Eine lineare Positionstoleranz von und eine Winkelposition von:" %}</p>
+<p> </p>
+<p>{% trans "Der Kollisionsort ist der Punkt, an dem die Kollision stattfindet." %}</p>
+<p>{% trans "Der Parameter kann als [Prozentsatz] oder tatsächlicher [linearer Wert] definiert werden Wert und legt fest, wie nahe der gemeldete Kollisionsort an der tatsächlichen Kollision liegt." %}</p>
+<p>{% trans "Wenn Sie hier kleine Werte einstellen, wird die Simulation langsamer, da das System Kollisionen häufiger prüfen muss." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

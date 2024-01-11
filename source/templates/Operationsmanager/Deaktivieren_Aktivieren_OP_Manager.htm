@@ -1,0 +1,48 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Deaktivieren &sol; Aktivieren" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Operationsmanager.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Deaktivieren / Aktivieren" %}</p><p> </p>
+<p>{% trans "[Deaktivieren ]Die gewählte Operation wird nicht simuliert und nicht in die NC-Daten ausgegeben." %}</p>
+<p>{% trans "Das System fügt vor dem Operationsnamen das Symbol @ ein, um die nicht Ausführung der Operation zu kennzeichnen." %}</p>
+<p> </p>
+<p>{% trans "[Aktivieren ]Nimmt eine Operation die mit der Option [Deaktivieren] aus der Bearbeitungsfolge herausgenommen wurde, wieder in die Bearbeitungsfolge auf." %}</p>
+<p>{% trans "Das Symbol @ vor der Operation wird zurückgenommen." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
+<p>{% trans "#[Vorhandene Bearbeitungsoperationen deaktivieren/aktivieren]#" %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

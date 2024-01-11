@@ -1,0 +1,73 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Schnitt" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-left:4.50pt; }
+    font.hcp2 { font-weight:bold; }
+    p.hcp3 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "@ Schnitt" %}</p><p class="hcp1">{% trans "Mit der Schaltfläche [Schnitt] können Sie an beliebigen Positionen, [X]-, [Y]- oder [Z]-Ebenenschnitte durch das Rohteil legen." %}</p><p class="hcp3"> </p>
+<p class="hcp1"><img src="../Sol_Sim_Slice.gif" alt="Sol_Sim_Slice.gif" width="550" height="260" border="0"/></p>
+<p class="hcp3"> </p>
+<p class="hcp1">{% trans "Mit Hilfe von Schnitten können Sie Bereiche des Werkstückes überprüfen, die ohne einen Schnitt nicht oder nur undeutlich sichtbar wären." %}</p>
+<p class="hcp3"> </p>
+<p class="hcp1 pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
+<p class="hcp3"> </p>
+<p class="hcp1"><img src="../SECTION_shg.gif" usemap="#AreaMap0" alt="SECTION_shg.gif" width="132" height="170" border="0"/> <map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="4, 92, 121, 115" href="javascript:BSSCPopup('3_Punkte_Schaltflaeche.htm',400,300);" id="area1" alt=""/>
+<area shape="rect" coords="101,121,123,137" href="javascript:BSSCPopup('Schnitt_wiederholen.htm');" id="area2" alt=""/>
+<area shape="rect" coords="9,37,49,88" href="javascript:BSSCPopup('Schnittebenenauswahl_Solid_Simulation.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="72,64,123,85" href="javascript:BSSCPopup('Schnitt_ausfuehren.htm',400,300);" id="area4" alt=""/>
+<area shape="rect" coords="58,26,129,56" href="javascript:BSSCPopup('Schaltflaechen_zur_Steuerung_der_Schnittebenen.htm',400,300);" id="area5" alt=""/>
+<area shape="rect" coords="68,143,127,162" href="javascript:BSSCPopup('../Commdata/COMMON_Schliessen.htm',400,300);" id="area6" alt=""/>
+<area shape="rect" coords="6,140,66,160" href="javascript:BSSCPopup('Reset_Schnittebene_Solid_Simulation.htm',400,300);" id="area7" alt=""/>
+<area shape="rect" coords="70, 118, 96, 136" href="javascript:BSSCPopup('Schnitt_rueckgaengig_.htm',400,300);" id="area8" alt=""/>
+<area shape="rect" coords="7, 119, 67, 138" href="javascript:BSSCPopup('Temporaer_Permanent.htm',400,300);" id="area9" alt=""/></map></p>
+<script type="text/javascript" language="JavaScript1.2">
+//&lt;![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('area1');
+        FilePopupInit('area2');
+        FilePopupInit('area3');
+        FilePopupInit('area4');
+        FilePopupInit('area5');
+        FilePopupInit('area6');
+        FilePopupInit('area7');
+        FilePopupInit('area8');
+        FilePopupInit('area9');
+//]]&gt;
+</script>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,50 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Ausfahren auf" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Ausfahren auf" %}</p><p>{% trans "Die Felder im Abschnitt [Endpunkt] sind optional und müssen nicht unbedingt ausgefüllt werden." %}</p>
+<p>{% trans "Das Feld [Ausfahren] [auf] wird normalerweise nur bei der Bearbeitung von [offenen Figuren] verwendet [oder] wenn bei einer [geschlossenen Figur] die [Ausfahrposition ungleich] der [Startlochposition] sein soll." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../ausf_auf.gif" alt="ausf_auf.gif" width="490" height="329" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "Die Position legt fest, welche [XY-Ausfahrposition] der Draht im Vorschub anfahren soll, wenn er sich von der Bearbeitungsfigur wegbewegt." %}</p>
+<p>{% trans "Die [Ausfahrposition] wird normalerweise direkt als [XY-Koordinate] eingegeben oder mit der Schaltfläche @ und mit Hilfe der [Fangfunktionen] [Endpunkt - Koordinaten] in der Zeichnung ermittelt." %}</p>
+<p class="hcp2"> </p>
+<p>{% trans "[Siehe auch]: #[Beispiel für eine Bearbeitungsfigur mit Endpunkt]#" %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

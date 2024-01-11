@@ -1,0 +1,41 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Regler für die Simulationsgeschwindigkeit" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Regler für die Simulationsgeschwindigkeit" %}</p><p>{% trans "Kontrolliert Sie die Geschwindigkeit der Drahtbahnsimulation. Man verwendet dazu den Schieber @ (schneller und langsamer)." %}</p>
+<p>{% trans "Die momentane Simulationsgeschwindigkeit wird in einem speziellen Bereich @ des Dialogs angezeigt. Der Wert für die maximale Geschwindigkeit beträgt [100] für die minimale [1]." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,46 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Neue Operation" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../WIRE_ExpertRH_context_Menu.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Neue Operation" %}</p><p>{% trans "Diese Funktion wird verwendet, um einen Eintrag für eine [neue Operation] im [WIRE-Expert] #Feature Manager# zu erzeugen." %}</p>
+<p>{% trans "Jede neue Operation erzeugt eine separate NC-Ausgabedatei und enthält Features." %}</p>
+<p>{% trans "Durch das Erstellen von mehreren Operationen können Sie innerhalb [eines] [WIRE-Expert] Programms [mehrere separate NC-Ausgabedateien] erzeugen." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><img src="../New_Operation_Feature_Man.gif" alt="New_Operation_Feature_Man.gif" width="336" height="187" border="0"/></p>
+<p> </p>
+<p>{% trans "Das Bild oberhalb zeigt zwei Operationen." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

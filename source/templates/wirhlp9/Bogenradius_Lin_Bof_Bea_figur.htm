@@ -1,0 +1,53 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Bogenradius" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Bogenradius" %}</p><p>{% trans "Soll das System Bögen die [kleiner] sind, als ein bestimmbarer Radius, bei der Figurerzeugung [farblich kennzeichnen], dann können Sie dies mit den Optionen [Zeige Radien kleiner als] und [Graphisch in ...] einstellen." %}</p><p>{% trans "Wenn Sie einen [#Report#] über kleine Radien ausgegeben wollen, müssen Sie die Option [In Report] aktivieren." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../Fig_Cre_check_Rad.gif" alt="Fig_Cre_check_Rad.gif" width="253" height="129" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "Mit den Optionen im Feld [Zeige Radien größer als], können Sie Bögen die [größer] sind, als ein bestimmbarer Radius farblich kennzeichnen und in den [#Report#] einbeziehen." %}</p>
+<script type="text/javascript" language="JavaScript1.2">
+//&lt;![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a1');
+        FilePopupInit('a2');
+//]]&gt;
+</script>
+
+{% endblock %}
+{% endlinebreakless %}

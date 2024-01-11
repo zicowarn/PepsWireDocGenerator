@@ -1,0 +1,50 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Starttechnologie" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    font.hcp2 { font-weight:bold;
+    font-style:italic; }
+    p.hcp3 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Starttechnologie" %}</p><p>{% trans "Es ist häufig erforderlich, die Bearbeitung mit einer reduzierten Generatorstufe zu beginnen. Mit der Checkbox [Starttechnologie] kann diese Generatorstufe programmiert werden." %}</p>
+<p>{% trans "Der Wert im Feld [Abstand] bezieht sich auf den [Startpunkt] [auf] [der Bearbeitungsfigur]. Der Wert kann [positiv] oder [negativ] sein." %}</p>
+<p>{% trans "Ein [positiver Wert] legt fest, dass der Technologiewechsel [auf] [der] [Bearbeitungsfigur] stattfindet. Ein [negativer Wert] legt den Technologiewechsel [auf] [die] [Anschnittgeometrie]." %}</p>
+<p class="hcp3"> </p>
+<p><img src="../STENDTEC.gif" alt="STENDTEC.gif" width="482" height="282" border="0"/></p>
+<p class="hcp3"> </p>
+<p>{% trans "Verwenden Sie anschließend die Schaltfläche [Starttechnologie] um die Technologieparameter festzulegen." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

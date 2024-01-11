@@ -1,0 +1,49 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Topologie von Solidgeometrien" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Operationsmanager.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <h2>{% trans "Topologie von Solidgeometrien" %}</h2><p class="dialog"> </p>
+<p class="dialog">{% trans "Sheet-Body" %}</p>
+<p>{% trans "Ein [Sheet-Body] besteht immer aus einem oder mehreren [Faces]. Jedes [Face] innerhalb eines Sheet-Bodies besteht aus einem äußerem [Loop] und kann innere [Loops] enthalten." %}</p>
+<p>{% trans "Jedes [Loop] besteht aus einer oder mehreren [Kanten]. Jede Kante ist ein einzelnes Geometrieelement z.B. ein Bogen, eine Linie oder eine NURBS-Kurve." %}</p>
+<p class="dialog"> </p>
+<p class="dialog">{% trans "Solid-Body" %}</p>
+<p>{% trans "Ein Solid-Body besteht immer aus einer Anzahl von [Faces]. Diese Faces können wiederum in einzelne Geometrien aufgelöst werden (siehe [Sheet-Body] oberhalb)." %}</p>
+<p class="dialog"> </p>
+<p class="dialog">{% trans "Draht-Body" %}</p>
+<p>{% trans "Ein [Draht-Body] kann offen oder geschlossen sein und besteht aus einer oder mehreren [Kanten]." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

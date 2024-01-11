@@ -1,0 +1,63 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Erzeugen einer Bearbeitungsfigur" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Erzeugen einer Bearbeitungsfigur" %}</p><p>{% trans "Fast alle Bearbeitungsoperationen des Moduls Drahterosion basieren auf dem Geometrietyp [Bearbeitungsfigur]." %}</p>
+<p>{% trans "Sie sollten unbedingt mit der Erzeugung von Konstruktionen auf der Basis von C-Linien, C-Kreisen und Linien- /Bogenelementen vertraut sein, bevor Sie weiterlesen." %}</p>
+<p>{% trans "Um eine Konturbearbeitung, Regelflächenbearbeitung oder eine Taschenerodierbearbeitung ausführen zu können, müssen Sie die vorhandenen Linien-/Bogenelemente zu einer Bearbeitungsfigur zusammenfassen." %}</p>
+<p>{% trans "Dies geschieht durch Anwendung der Befehle #[Linien/Boegen ==&amp;gt; Figur]#, [Parametrische Figuren] und #[Auto. Matritzen / Stempel]# im Menü [Vorbereitung]." %}</p>
+<p class="Tip_Note_Heading">{% trans "Jede Bearbeitungsfigur muss folgende Einzelheiten beinhalten:" %}</p>
+<p class="Tip_Note_Heading"> </p>
+<p>{% trans "[- Eine Start(loch)position] - definiert als Punkt [VOR] der Figur." %}</p>
+<p>{% trans "[- Eine Bearbeitungsstartposition] - definiert als Punkt [AUF] der Figur. Wird keine Bearbeitungsstartposition angegeben, verwendet das System die [nächste Position AUF] der Figur, bezogen auf die Start(loch)position." %}</p>
+<p>{% trans "[- Eine Anzahl von Linien/Bogenelementen] - welche die zu schneidenden Bearbeitungsfigur bilden. Der Anwender muss sicherstellen, dass die Geometrie der Bearbeitungsfigur von guter Qualität, d.h. maßgenau ist und kein Lücken aufweist." %}</p>
+<p> </p>
+<p>{% trans "Auch eine [OFFENE] Bearbeitungsfigur muss eine [Start(loch)position] und eine [Bearbeitungsstartposition] aufweisen." %}</p>
+<p>{% trans "Bei einer [Regelflächenbearbeitung] benötigt normalerweise nur die Figur, welche die obere Ebene bildet, eine Startposition." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../FIGURE.gif" alt="FIGURE.gif" width="461" height="331" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "Sollte es notwendig sein, die Geometrie einer Bearbeitungsfigur zu einem späteren Zeitpunkt zu verändern, geschieht dies folgendermaßen." %}</p>
+<p>{% trans "[Siehe]: #[Nachträgliches Verändern der Geometrie einer Bearbeitungsfigur]#." %}</p>
+<p class="hcp2"> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Siehe auch:" %}</p>
+<p>{% trans "#[Beispiel für die Erzeugung einer Bearbeitungsfigur]#" %}</p>
+<p>{% trans "@# [Zeige Beispielfilm zur Erzeugung einer Bearbeitungsfigur]#" %}</p>
+<p>{% trans "#[Nachträgliches Ändern der Startposition einer Bearbeitungsfigur]#" %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

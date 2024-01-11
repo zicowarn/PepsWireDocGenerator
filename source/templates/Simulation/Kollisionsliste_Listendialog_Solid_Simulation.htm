@@ -1,0 +1,45 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Kollisionsliste" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Kollisionsliste" %}</p><p>{% trans "Diese Liste informiert über eventuell aufgetretene Kollisionen." %}</p>
+<p class="hcp1"> </p>
+<p><img src="../Listen_Kollisionsliste.gif" alt="Listen_Kollisionsliste.gif" width="511" height="134" border="0"/></p>
+<p class="hcp1"> </p>
+<p>{% trans "[Hinweis: ]Beachten Sie, dass Sie jeden Listeneintrag anklicken können. Die Simulation springt anschließend zurück / vor zum gewählten Eintrag." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

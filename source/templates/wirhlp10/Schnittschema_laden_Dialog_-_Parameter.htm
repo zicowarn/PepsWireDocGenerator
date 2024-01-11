@@ -1,0 +1,99 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Schnittschema laden Dialog - Parameter XXXCHANGED" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    span.hcp1 { font-weight:bold; }
+    img.hcp2 { border:none; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "@ Schnittschema laden - Parameter" %}</p><p>{% trans "Diese Schaltfläche@ ruft den Dialog[ Schnittschema laden] auf, mit dessen Hilfe Sie ein Schnittschema auswählen und der aktuell gewählten Bearbeitungsoperation zuweisen können." %}</p>
+<p>{% trans "[Siehe auch:] #Erodierbearbeitungen durch Schnittschemen automatisieren#" %}</p>
+<p> </p>
+<p class="dialog">{% trans "Haupt-Ikonenleiste" %}</p>
+<p class="Tip_Note_Heading">{% trans "Haupt-Ikonenleiste - Standardfunktionen" %}</p>
+<p><img src="../Schnittschema_laden_Hauptikonenleiste.gif" alt="" border="0" class="hcp2"/></p>
+<p> </p>
+<p>{% trans "[@ OK]: Schließt den Dialog und übernimmt den gewählten Datensatz." %}</p>
+<p>{% trans "[@ Abbrechen]: Schließt den Dialog." %}</p>
+<p> </p>
+<p>{% trans "[&lt;img src='../Schnittschema_laden_Ico_Daten%20bearbeiten.gif' alt='' border='0' class='hcp2'/&gt; Daten bearbeiten Ein/Aus]: Es ist möglich, den Inhalt einzelner Spalten zu verändern (z.B. die Spalte '[Kommentar]')." %}</p>
+<p>{% trans "Dazu müssen Sie zunächst den Modus '[Daten bearbeiten]' einschalten mit &lt;img src='../Schnittschema_laden_Ico_Daten%20bearbeiten_EIN.gif' alt='' border='0' class='hcp2'/&gt;." %}</p>
+<p>{% trans "Ändern Sie danach den Spalteninhalt und schalten Sie den Modus '[Daten bearbeiten]' wieder aus mit &lt;img src='../Schnittschema_laden_Ico_Daten%20bearbeiten_AUS.gif' alt='' border='0' class='hcp2'/&gt;." %}</p>
+<p>{% trans "[Wichtiger Hinweis]: Nicht alle Spalteninhalte lassen sich verändern. Verwenden Sie die Schaltfläche @ um festzulegen, welche Spalten angepasst werden dürfen." %}</p>
+<p> </p>
+<p>{% trans "[&lt;img src='../Schnittschema_laden_Ico_Löschen.gif' alt='' border='0' class='hcp2'/&gt; Löschen]: Diese Option löscht einen oder mehrere gewählte Datensätze aus der [Suchergebnis Liste]." %}</p>
+<p>{% trans "Verwenden Sie zur Auswahl der Datensätze die Standard MS-Windows Auswahltechniken." %}</p>
+<p> </p>
+<p>{% trans "[@ Schriftart]: Einstellen der verwendeten Schriftart für diesen Dialog." %}</p>
+<p> </p>
+<p>{% trans "[&lt;img src='../Schnittschema_laden_Ico_Spaltengröße%20anpassen.gif' alt='' border='0' class='hcp2'/&gt; Spaltengröße anpassen]: Breite der Spalten und Spalten-Überschriften automatisch anpassen. Zwei Modi sind verfügbar: Linker Mausklick auf Schaltfläche [&lt;img src='../Schnittschema_laden_Ico_Spaltengröße%20anpassen.gif' alt='' border='0' class='hcp2'/&gt;]: Spaltenbreite an [Überschriften] und [Werte] in Spalten anpassen." %}</p>
+<p>{% trans "Rechter Mausklick auf Schaltfläche [&lt;img src='../Schnittschema_laden_Ico_Spaltengröße%20anpassen.gif' alt='' border='0' class='hcp2'/&gt;]: Spaltenbreite nur an [Werte] in Spalten anpassen." %}</p>
+<p> </p>
+<p>{% trans "[@ Einstellungen]: Anpassen der Datenbank-Einstellungen." %}</p>
+<p>{% trans "[Hinweis:] Verfügbar nur für Fachpersonal. Freischaltung über Passwort nötig. Bitte wenden Sie sich an den Hersteller." %}</p>
+<p> </p>
+<p>{% trans "[@ Verwendeter Postprozessor]: Zeigt den Kurzbezeichnung des aktuell verwendeten Postprozessors (z.B. [Robofil])." %}</p>
+<p> </p>
+<p class="Tip_Note_Heading">{% trans "Haupt-Ikonenleiste - Schnellfilter" %}</p>
+<p><img src="../Schnittschema_laden_Schnellfilter.gif" alt="" border="0" class="hcp2"/></p>
+<p>{% trans "[Schnellsuche] auf Basis der aktuell im Dialog #Operationsstart# eingestellten Werte für [Material], [Materialhöhe], [Drahtsorte] und [Drahtdurchmesser]." %}</p>
+<p>{% trans "[Beispiel]: Ein Klick auf die Schaltfläche [Materialhöhe] sucht nach allen Datensätzen, mit der[ ]im Dialog #Operationsstart# eingestellten Höhe." %}</p>
+<p>{% trans "Beachten Sie das eine Kombination der Schaltflächen (z.B. [Material] und [Materialhöhe]) möglich ist." %}</p>
+<p> </p>
+<p>{% trans "[Höhentoleranz]:" %}</p>
+<p>{% trans "In der Regel definiert man nicht für jede [Materialhöhe] ein eigenes Schnittschema, sondern staffelt die Schnittschemen z.B. in 5mm Schritten von 0-5mm, 5-10,15-20 usw. ." %}</p>
+<p>{% trans "Die [Schnellsuche] sucht jedoch nach der aktuell im Dialog #Operationsstart# eingestellten [Materialhöhe] und würde bei eine Höhe von z.B. [21 ]keinen Datensatz finden. Hier hilft der [Höhenfilter]." %}</p>
+<p>{% trans "[Beispiel]: Die aktuelle [Materialhöhe] beträgt z.B. [21] mm und die [Höhentoleranz] ist [5]. Eine [Schnellsuche] würde alle Datensätze zwischen [15 ]und [25] mm [Materialhöhe] anzeigen." %}</p>
+<p>{% trans "Der Anwender kann nun ein Schnittschema für eine [Materialhöhe] von [20] mm wählen." %}</p>
+<p> </p>
+<p>{% trans "[@ Filter Drahtsorte]: Schnellsuchte nach dem der aktuell in diesem Programm einstellte [Drahtsorte]." %}</p>
+<p>{% trans "[@ Filter Drahtdurchmesser]: Schnellsuchte nach dem der aktuell in diesem Programm einstellten [Drahtdurchmesser]." %}</p>
+<p>{% trans "[@ Filter Material]: Schnellsuchte nach dem aktuell in diesem Programm einstellten [Material]." %}</p>
+<p>{% trans "[&lt;img src='../Schnittschema_laden_Ico_Filter_Höhe.gif' alt='' border='0' class='hcp2'/&gt; Filter Höhe]: Schnellsuchte nach dem der aktuell in diesem Programm einstellte [Materialhöhe]." %}</p>
+<p> </p>
+<p class="dialog">{% trans "Suchfilter" %}</p>
+<p><img src="../Schnittschema_laden_Filter.gif" alt="" border="0" class="hcp2"/></p>
+<p> </p>
+<p>{% trans "Mit dem [Filter] stellen Sie ein, wonach in der Schnittschemen-Datenbank gesucht werden soll." %}</p>
+<p>{% trans "Im Beispiel oberhalb wird nach den Suchkriterien [Werkstückmaterial] (Stahl) und [Anzahl Schnitte] (3) und [Materialhöhe ](30) gesucht." %}</p>
+<p>{% trans "Direkt nach Eingabe der Suchkriterien, zeigt das System in der [Suchergebnis Liste] alle Schnittschemen an, die den o.g. Suchkriterien entsprechen." %}</p>
+<p> </p>
+<p>{% trans "[@ Such-Filterkriterien ausschalten]: Mit dieser Schaltfläche können Sie die aktuell eingestellten Suchkriterien [ausschalten]." %}</p>
+<p>{% trans "[Beispiel]: Es wurde eine Suche nach einer [Materialhöhe] von [30] mm ausgeführt, Das System zeigt in der [Suchergebnis Liste] alle der Suche entsprechenden Schnittsschemen an. Verwenden Sie die Schaltfläche [@], um wieder[ ALLE Datensätze] anzuzeigen." %}</p>
+<p> </p>
+<p class="dialog">{% trans "Suchergebnis Liste" %}</p>
+<p><img src="../Schnittschema_laden_Ergebnisliste.gif" alt="" border="0" class="hcp2"/></p>
+<p>{% trans "Die [Suchergebnis Liste] zeigt das Ergebnis einer Suche nach Schnittschemen an. Wählen Sie das benötigte Schnittschema und übernehmen Sie die Auswahl mit [@ ]." %}</p>
+<p> </p>
+
+{% endblock %}
+{% endlinebreakless %}

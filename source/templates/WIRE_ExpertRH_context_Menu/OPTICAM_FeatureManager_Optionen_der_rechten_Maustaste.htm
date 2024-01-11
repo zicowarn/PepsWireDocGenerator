@@ -1,0 +1,84 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "WIRE-Expert FeatureManager - Optionen der rechten Maustaste" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../WIRE_ExpertRH_context_Menu.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <h1>{% trans "WIRE-Expert FeatureManager - Optionen der rechten Maustaste" %}</h1><p> </p><p>{% trans "Klickt man mit der [rechten Maustaste] auf einen Zweig im [WIRE-Expert] #FeatureManager#, zeigt das System ein Kontextmenü mit Optionen." %}</p>
+<p class="hcp2"> </p>
+<p class="Normal_(Web)" style="margin-left: 5.75pt; margin-right: 6.50pt;  margin-top: 4.00pt; margin-bottom: 0.00pt; color: #ff0000; font-size: 9pt;  font-style: italic;">{% trans "Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen." %}</p>
+<p class="Normal_(Web)" style="margin-left: 5.75pt; margin-right: 6.50pt;  margin-top: 4.00pt; margin-bottom: 0.00pt; color: #ff0000; font-size: 9pt;  font-style: italic;"> </p>
+<p class="hcp2"><img src="../RH_Menu_shg.gif" usemap="#MAP731771936" alt="RH_Menu_shg.gif" width="407" height="480" border="0"/>
+<map name="MAP731771936" id="MAP731771936">
+<area shape="rect" coords="-1, -2, 406, 25" href="Neue_Operation.htm" alt=""/>
+<area shape="rect" coords="0, 29, 407, 56" href="Automatische_Feature_Erkennung.htm" alt=""/>
+<area shape="rect" coords="0, 134, 407, 157" href="javascript:BSSCPopup('Aktiviere_Feature.htm',400,500);" id="area1" alt=""/>
+<area shape="rect" coords="-1, 113, 405, 137" href="javascript:BSSCPopup('Deaktiviere_Feature.htm',400,500);" id="area2" alt=""/>
+<area shape="rect" coords="0, 57, 407, 84" href="Manuelle_Feature_Erkennung.htm" alt=""/>
+<area shape="rect" coords="-1, 287, 406, 310" href="Entferne_oder_fuege_Kanten_diesem_Bearbeitungsobjekt_hinzu.htm" alt=""/>
+<area shape="rect" coords="-4, 373, 403, 396" href="Gruppiere_Bearbeitungsobjekte.htm" alt=""/>
+<area shape="rect" coords="-1, 340, 406, 368" href="javascript:BSSCPopup('Rueckgaengig.htm',400,300);" id="area3" alt=""/>
+<area shape="rect" coords="-1, 314, 406, 340" href="javascript:BSSCPopup('Wiederherstellen.htm',400,300);" id="area4" alt=""/>
+<area shape="rect" coords="7, 450, 414, 478" href="Loesche_Operation.htm" alt=""/>
+<area shape="rect" coords="5, 418, 412, 445" href="javascript:BSSCPopup('Umbenennen.htm',400,300);" id="area5" alt=""/>
+<area shape="rect" coords="0, 84, 407, 114" href="javascript:BSSCPopup('Loesche_Feature.htm',400,500);" id="area6" alt=""/>
+<area shape="rect" coords="-1, 213, 404, 238" href="Erzeuge_Figuren_Bearbeitungen_von_Bearbeitungsobjekten.htm" alt=""/>
+<area shape="rect" coords="-2, 236, 402, 262" href="Erzeuge_nur_Figuren_von_Features.htm" alt=""/>
+<area shape="rect" coords="-1, 266, 402, 289" href="Entferne_oder_fuege_Flaechen_diesem_Bearbeitungsobjekt_hinzu.htm" alt=""/>
+<area shape="rect" coords="4, 395, 407, 417" href="javascript:BSSCPopup('Gruppierung_aufheben.htm',400,300);" id="area7" alt=""/>
+<area shape="rect" coords="3, 158, 407, 211" href="Kopiere_Feature_in_gleiche_Od_neue_Operation.htm" alt=""/>
+</map>  </p>
+<p> </p>
+<p class="dialog">{% trans "Siehe auch:" %}</p>
+<p>{% trans "#WIRE-Expert Prinzip der automatisierten Bearbeitung#" %}</p>
+<p>{% trans "#Automatische Feature-Erkennung#" %}</p>
+<p>{% trans "#Manuelle Feature-Erkennung#" %}</p>
+<p>{% trans "#Figuren + Bearbeitungen von Features erzeugen#" %}</p>
+<p class="hcp2"> </p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "Bitte beachten Sie, dass je nach im [WIRE-Expert] FeatureManager gewähltem Zweig, nicht alle verfügbaren Menüoptionen angezeigt werden." %}</p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+	FilePopupInit('area3');
+	FilePopupInit('area4');
+	FilePopupInit('area5');
+	FilePopupInit('area6');
+	FilePopupInit('area7');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}

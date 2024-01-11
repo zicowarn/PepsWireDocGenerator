@@ -1,0 +1,53 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Optimales Startloch ermitteln" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+    li.hcp2 { font-size:9pt; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Optimales Startloch ermitteln" %}</p><p>{% trans "Dieser Befehl ermittelt die günstigste Start(loch)position, sowie den maximal möglichen Startlochradius für eine vorhandene Bearbeitungsfigur." %}</p>
+<p>{% trans "Der Befehl verändert die Start(loch)position und die Bearbeitungsstartposition einer Bearbeitungsfigur." %}</p>
+<p>{% trans "Der Befehl findet besonders dann Anwendung, wenn bei einem Taschenerosionsvorgang die größtmögliche Startlochbohrung und deren optimale Position ermittelt werden soll." %}</p>
+<p class="hcp1"> </p>
+<p><img src="../STARTLO.gif" alt="STARTLO.gif" width="495" height="358" border="0"/></p>
+<p class="hcp1"> </p>
+<p class="Tip_Note_Heading">{% trans "Vorgehensweise:" %}</p>
+<ul>
+	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie die Figur an deren Start(loch)position verändert werden soll (! muss Bearbeitungsfigur sein !)." %}</p></li>
+	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Das System berechnet automatisch eine neue Start(loch)position und verschiebt ggf. die Bearbeitungsstartposition auf der Figur." %}</p></li>
+	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Nach Ausführung des Befehls wird die neue Start(loch)position und der maximal mögliche Radius für das Startloch im [Ausgabefenster] anzeigt." %}</p></li>
+</ul>
+
+{% endblock %}
+{% endlinebreakless %}

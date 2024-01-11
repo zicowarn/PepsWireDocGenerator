@@ -1,0 +1,43 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Draht, Verdeckte Kanten, Solid ohne Kanten, Solid mit Kanten" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "@ Draht, Verdeckte Kanten, Solid ohne Kanten, Solid mit Kanten" %}</p><p>{% trans "Mit den Schaltflächen [Draht] @[, Verdeckte Kanten] @[, Solid ohne Kanten] @[, Solid mit Kanten] @ können Sie die Darstellungsart der [Solid-Simulation] verändern." %}</p>
+<p>{% trans "Das folgende Bild zeigt die Wirkung der verschiedenen Modi:" %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><img src="../Simulations_Modi1.gif" alt="Simulations_Modi1.gif" width="689" height="409" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

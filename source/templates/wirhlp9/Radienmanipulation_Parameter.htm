@@ -1,0 +1,60 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Radienmanipulation_Parameter" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    span.hcp1 { font-weight:bold; }
+    span.hcp2 { font-style:italic; }
+    img.hcp3 { border:none; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <h1>{% trans "Radienmanipulation Dialogparameter" %}</h1><p> </p>
+<p class="dialog">{% trans "Figur(en)" %}</p>
+<p>{% trans "Wählen Sie hier die Bearbeitungsfigur oder Figuren die manipuliert werden sollen." %}</p>
+<p> </p>
+<p class="dialog">{% trans "Zu ersetzende Radien von / bis" %}</p>
+<p>{% trans "Bestimmt welche Radien, z.B. alle Radien von [R2] bis [R6], manipuliert werden sollen." %}</p>
+<p> </p>
+<p class="dialog">{% trans "Unterscheidung zwischen Aussen und Innenradien" %}</p>
+<p>{% trans "Mit dieser Option können Sie [innere] und [äußere Radien] unterschiedlich [verkleinern / vergrößern]." %}</p>
+<p>{% trans "Das Bild unterhalb zeigt links die Originalgeometrie und rechts die gleiche Geometrie, bei der alle Innen- und Aussenradien zwischen [R5] und [R6] verkleinert / vergrößert wurden." %}</p>
+<p>{% trans "Die zwei [äußeren Radien 6] wurden [vergrößert] um 0.01 auf [R6.01] und die beiden [inneren] [Radien 5] [verkleinert] um 0.02 auf [R4.98]." %}</p>
+<p><img src="../Radienmanipulation_Radien_verkleinern_vergroessern.gif" alt="" border="0" class="hcp3"/></p>
+<p> </p>
+<p class="dialog">{% trans "Alle zu ersetzenden Radien mit gleichem Radius ersetzen" %}</p>
+<p>{% trans "Verwenden Sie diese Option, wenn Sie bestimmte Radien, z.B. alle Radien der Größer [ab] [R2 bis R6], durch [einen anderen Radius ersetzen] wollen." %}</p>
+<p>{% trans "Das Bild unterhalb zeigt links die Originalgeometrie und rechts die gleiche Geometrie, bei der alle Radien zwischen [R1] und [R2] durch dem [Radius 5] ersetzt wurden." %}</p>
+<p><img src="../Radienmanipulation_Radien_ersetzen.gif" alt="" border="0" class="hcp3"/></p>
+<p> </p>
+<p> </p>
+
+{% endblock %}
+{% endlinebreakless %}

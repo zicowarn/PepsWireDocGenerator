@@ -1,0 +1,53 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Verschiedenes" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Verschiedenes" %}</p><p class="Tip_Note_Heading">{% trans "Kommentar mit jedem Schnitt ausgeben:" %}</p><p>{% trans "Ist diese Option aktiviert, gibt das System Kommentare in die NC-Daten aus." %}</p>
+<p class="Block_Text" style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="Tip_Note_Heading">{% trans "Maschinentyp vor PP-Lauf auswählen:" %}</p>
+<p>{% trans "Es ist möglich, für unterschiedliche Maschinentypen eines Herstellers, Maschinenprofile anzulegen (siehe #[Maschinenprofile]# in diesem Dialog)." %}</p>
+<p>{% trans "Ist die Option [Maschinentyp vor PP-Lauf auswählen] aktiviert, zeigt das System bei einem Postprozessorlauf (NC-Daten erzeugen) einen Dialog, in der Sie auswählen können, für welchen Maschinentyp die NC-Daten erzeugt werden sollen." %}</p>
+<p> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
+<p class="Block_Text">{% trans "#[Ein Profil für einen Maschinentyp anlegen]#" %}</p>
+<script type="text/javascript" language="JavaScript1.2">
+//&lt;![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a1');
+//]]&gt;
+</script>
+
+{% endblock %}
+{% endlinebreakless %}

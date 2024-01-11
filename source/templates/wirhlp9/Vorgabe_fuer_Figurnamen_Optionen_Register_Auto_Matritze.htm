@@ -1,0 +1,50 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Vorgabe für Figurnamen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    span.hcp2 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Vorgabe für Figurnamen" %}</p><p>{% trans "Mit Hilfe dieses Feldes können Sie die Systemvoreinstellung für die Namen der erzeugten Bearbeitungsfiguren ([ExpShape]) zu verändern." %}</p>
+<p>{% trans "Verwenden Sie die Schaltfläche [Eingaben speichern], um eine neue Vorgabe für den Figurnamen zu speichern." %}</p>
+<p>{% trans "Erzeugt das System mehrere Bearbeitungsfiguren, werden die Figurnamen automatisch nummeriert ([ExpShape _001], [ExpShape_002], [ExpShape_003] ...)." %}</p>
+<p> </p>
+<h2 style="margin-top: 4.00pt; margin-bottom: 0.00pt;">{% trans "Benutze Konturform  als Namen" %}</h2>
+<p>{% trans "Ist diese Option aktiv, und erzeugt das System aus einer [Standardgeometrie] (z.B. Rechteck, Kreis, Langloch ...) eine Bearbeitungsfigur." %}</p>
+<p>{% trans "Dabei wird die interne Kennung der [Standardgeometrie] (z.B. Rechteck, Kreis, Langloch ...) als[ Figurname] verwendet." %}</p>
+<p>{% trans "Zudem hängt das System an den Figurnamen die Maße der Standardgeometrie an." %}</p>
+<p class="dialog">{% trans "Beispiel:" %}</p>
+<p>{% trans "Aus einem [Rechteck 20 X 10 mm] würde sich eine Bearbeitungsfigur mit dem Namen '[Rechteck_20.0x10.0]' ergeben." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

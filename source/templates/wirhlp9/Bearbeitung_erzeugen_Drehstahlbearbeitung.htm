@@ -1,0 +1,36 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Bearbeitung erzeugen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Bearbeitung erzeugen" %}</p><p>{% trans "Bei Aktivierung dieser Option wird im Anschluss an die Berechnung der Profilverzerrung, automatisch eine #[Regelflächenbearbeitung]# erzeugt." %}</p>
+<p>{% trans "Es ist jedoch unerlässlich, die Regelflächenbearbeitung hinsichtlich Anbindungslänge, Ausfahrabstand und Technologie zu editieren." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

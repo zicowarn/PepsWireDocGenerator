@@ -1,0 +1,37 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "XY-Position und Winkelanzeige (Drahtmodell-Simulation)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "XY-Position und Winkelanzeige (Drahtmodell-Simulation)" %}</p><p>{% trans "Zeigt die momentane und maximale Drahtauslenkung in Winkelgrad, sowie die momentane und maximale Auslenkung der UV-Achsen an." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><img src="../sim_wink.gif" alt="sim_wink.gif" width="295" height="166" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

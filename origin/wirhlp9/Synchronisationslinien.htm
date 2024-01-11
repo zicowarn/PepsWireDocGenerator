@@ -1,0 +1,93 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>Synchronisationslinien</title>
+<link rel="StyleSheet" href="../wirhlp9.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+font.hcp1 { font-weight:bold; }
+p.hcp2 { margin-top:0;
+margin-bottom:0; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;"><img src="../rulecons.gif" alt="rulecons.gif" width="28" height="27" border="0"> Synchronisationslinien</p>
+<p>Der Befehl <a href="../wirhlp10/Regelflaechenbearbeitung____.htm"><font class="hcp1">Regelflächenbearbeitung</font></a> im Menü <font class="hcp1">Bearbeitung</font> hat den Zweck, eine 4-Achsenbearbeitung zwischen zwei Bearbeitungsfiguren auszuführen, wobei die eine Figur die untere und die andere die obere Form bildet.</p>
+<p>Wenn die zwei die Regelfläche bildenden Figuren symmetrisch, mit einer identischen Anzahl von Geometrieelementen sind, so ist die Regelfläche welche PEPS automatisch erzeugt, für viele Anwendungen ausreichend.</p>
+<p>Bei nicht symmetrischen Regelflächen, deren obere und untere Figuren sich deutlich unterscheiden, kann der Anwender eingreifen, um die Regelfläche in die gewünschte Form zu bringen.</p>
+<p class="Block_Text">Die folgende Zeichnung zeigt zwei einfache Figuren, welche obwohl sie symmetrisch sind, zwei völlig unterschiedliche Regelflächen bilden können.</p>
+<p class="Block_Text">Die Figuren können so miteinander verbunden werden, dass sich entweder konische oder zylindrische Ecken bilden.</p>
+<p class="Block_Text">In solchen Fällen bietet PEPS die Möglichkeit, die wichtigsten Verbindungspunkte zwischen 2 Figuren eindeutig festzulegen - diese Verbindung nennt man Synchronisation oder auch Synchronisationslinie.</p>
+<p class="hcp2">&#160;</p>
+<p><img src="../KUR1.gif" alt="KUR1.gif" width="576" height="310" border="0"></p>
+<p class="hcp2">&#160;</p>
+<h2 style="margin-top: 4.00pt; margin-bottom: 0.00pt;">So wird es gemacht</h2>
+<p><a href="Beispiel_Synchronisationslinien_erzeugen.htm"><font class="hcp1">Synchronisationslinien erzeugen</font></a></p>
+<p><img src="../MOVIE.gif" alt="MOVIE.gif" width="27" height="27" border="0"> <a href="../Videos/Video__Synchronisationslinien_f&uuml;r_Regelfl&auml;che_erzeugen_V8.htm"><font class="hcp1">Zeige Beispielfilm zum o.g. Thema</font></a></p>
+<p style="font-weight: bold;"><a href="Beispiel_Vorhandene_Synchronisationslinien_editieren.htm">Vorhandene Synchronisationslinien editieren</a></p>
+<p>&#160;</p>
+<p>Synchronisationslinien werden immer dann angewendet, wenn die automatische Synchronisation des Systems nicht den Wünschen des Anwenders entspricht und dieser an ganz bestimmten Stellen Verbindungspunkte zwischen den 2 Regelflächengeometrien definieren möchte.</p>
+<p>Synchronisationslinien können entweder in der XY-Ebene (<font class="hcp1">2D-Synchronisation</font>) oder zwischen zwei Figuren, von denen eine Figur in Z auf die korrekte Z-Höhe verschoben wurde <font class="hcp1">(3D-Synchronisation</font>), bestimmt werden.</p>
+<p>Bei der <font class="hcp1">3D-Synchronisation</font> werden die Synchronisationslinien von einer Figur zu der anderen gezeichnet, wobei die Fangfunktionen <font class="hcp1">Endpunkt</font>, <font class="hcp1">Schnittpunkt</font>, <font class="hcp1">Mitte von</font> <font class="hcp1">Zentrum</font>, <font class="hcp1">Quadrant</font> und <font class="hcp1">Lot</font> Verwendung finden.</p>
+<p><font class="hcp1">2D-Synchronisationslinien</font> dürfen auch über die Figur(en) hinausgehen, so dass auch ungefähre Punktpositionen mit der Fangfunktion <font class="hcp1">Koordinaten</font> digitalisiert werden können.</p>
+<p>Natürlich werden bei einer <font class="hcp1">2D-Synchronisation</font> auch die anderen Fangfunktionen <font class="hcp1">Endpunkt</font>, <font class="hcp1">Schnittpunkt</font>, <font class="hcp1">Mitte von</font>, <font class="hcp1">Zentrum</font>, <font class="hcp1">Quadrant</font> und <font class="hcp1">Lot</font> verwendet.</p>
+<p>Die Methode <font class="hcp1">3D-Synchronisation</font> erlaubt die Synchronisation von sehr komplexen Formen mit Hinterschnitten, welche mit einer <font class="hcp1">2D-Synchronisation</font> nicht synchronisiert werden können.</p>
+<p class="hcp2">&#160;</p>
+<p class="Hinweis">Wichtiger Hinweis:</p>
+<p><font class="hcp1">Es ist zu vermeiden, dass der Draht in einer Ebene (z.B. obere) keine Bewegung ausführt, während er sich in der anderen Ebene (z.B. untere) bewegt. Aus diesem Grunde dürfen 2 Synchronisationslinien sich niemals schneiden oder berühren.</font></p>
+<p class="hcp2">&#160;</p>
+<p>Bei der Konstruktion von Synchronisationslinien ist es ratsam die Fangfunktion <font class="hcp1">Koordinaten</font> zu verwenden, wenn die Fangfunktionen <font class="hcp1">Endpunkt</font>, <font class="hcp1">Schnittpunkt</font>, <font class="hcp1">Zentrum</font>, <font class="hcp1">Quadrant</font> und <font class="hcp1">Lot</font> auf keiner der beiden Figuren angewendet werden können.</p>
+<p>Die Funktion <font class="hcp1">Koordinaten</font> erlaubt es, einen beliebigen Punkt in der Nähe des Start/Endpunktes einer Synchronisationslinie zu digitalisieren. Die Synchronisationslinie wird bei dieser Vorgehensweise automatisch getrimmt.</p>
+<p>Für den unwahrscheinlichen Fall, dass mit keiner der oben geschilderten Methoden Synchronisationslinien erzeugt werden können, ist es möglich die Bearbeitungsfigur mit dem Befehl <font class="hcp1">Figur editieren</font> in Linien/Bogenelemente umzuwandeln.</p>
+<p>Anschließend werden die Linien/Bogenelemente an den relevanten Stellen aufgebrochen (Siehe Befehl <font class="hcp1">Aufbrechen</font>).</p>
+<p>Verwandeln Sie anschließend die Linien/Bogenelemente mit dem Befehl <font class="hcp1">Figur editieren Ende</font> zurück in die Bearbeitungsfigur und setzen Sie die Synchronisationslinien mit der Fangfunktion <font class="hcp1">Endpunkt</font> auf die Bruchpunkte.</p>
+<p class="hcp2">&#160;</p>
+<p><img src="../CONSTR2.gif" alt="CONSTR2.gif" width="346" height="275" border="0"></p>
+<p class="hcp2">&#160;</p>
+<p>Die obige Zeichnung zeigt zwei nicht symmetrische Figuren, von denen die äußere Figur mehr Geometrieelemente hat als die innere. Mit dem Befehl <font class="hcp1">Synchronisationslinien</font> wurden 7 Synchronisationslinien gezeichnet. 2 mit der Fangfunktion <font class="hcp1">Lot</font>, 2 mit <font class="hcp1">Koordinaten</font> und die anderen 3 mit der Funktion <font class="hcp1">Endpunkt</font>. Die folgende Zeichnung zeigt die fertige Regelfläche.</p>
+<p><img src="../CONSTR3.gif" alt="CONSTR3.gif" width="429" height="407" border="0"></p>
+<p class="hcp2">&#160;</p>
+<p>Die folgende Zeichnung zeigt einen Teil einer Extrusionsmatrize, die aus zwei Bearbeitungsfiguren besteht. Die äußere Figur bildet die Eintrittsöffnung der Matrize, die innere Figur die Austrittsöffnung.</p>
+<p class="hcp2">&#160;</p>
+<p><img src="../DEMOW3.gif" alt="DEMOW3.gif" width="576" height="401" border="0"></p>
+<p class="hcp2">&#160;</p>
+<p>Es ist deutlich sichtbar, dass die äußere Figur weniger Geometrieelemente aufweist als die innere Figur. Die Zeichnung zeigt ebenfalls die Synchronisationslinien.</p>
+<p>Ohne die Synchronisationslinien hätte die Matrize nicht geschnitten werden können.</p>
+<p>Nach der Wahl des Befehl <font class="hcp1">Synchronisationslinien</font> stehen drei Optionen (siehe <font class="hcp1">rechte Maustaste</font> od. <font class="hcp1">horizontale Ikonenleiste</font>) zur Verfügung: <a href="javascript:void(0);" id="a1" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('KopRot_Synchronisationslinien.htm');return false;"><font class="hcp1">Kopieren + Verschieben</font></a> , <a href="javascript:void(0);" id="a2" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('KopRot_Synchronisationslinien.htm');return false;"><font class="hcp1">Kopieren + Rotieren</font></a> und <a href="javascript:void(0);" id="a3" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('Spiegeln_Synchronisationslinien.htm');return false;"><font class="hcp1">Spiegeln</font></a> . Die Optionen finden bei symmetrischen Formen Verwendung, die das Kopieren von vorhandenen Synchronisationslinien erlauben.</p>
+<p>Beachten Sie auch die Option <a href="javascript:void(0);" id="a4" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('Loesche_Synchronisationslinien.htm');return false;"><font class="hcp1">Löschen</font></a> , diese ermöglicht das Löschen fehlerhafter Synchronisationslinien.</p>
+<p class="hcp2">&#160;</p>
+<p><font style="font-style: italic;" color="#FF0000">Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.</font></p>
+<p class="hcp2">&#160;</p>
+<p><img src="../BUTT_SYN_shg.gif" usemap="#AreaMap0" alt="BUTT_SYN_shg.gif" width="274" height="198" border="0"> <map name="AreaMap0" id="AreaMap0">
+<area shape="rect" coords="0,88,211,104" href="javascript:BSSCPopup('KopTra_Synchronisationslinien.htm');" id="area1" alt="">
+<area shape="rect" coords="0,110,211,127" href="javascript:BSSCPopup('KopRot_Synchronisationslinien.htm');" id="area2" alt="">
+<area shape="rect" coords="0,131,211,146" href="javascript:BSSCPopup('Spiegeln_Synchronisationslinien.htm');" id="area3" alt="">
+<area shape="rect" coords="0,68,211,84" href="javascript:BSSCPopup('Loesche_Synchronisationslinien.htm');" id="area4" alt="">
+<area shape="rect" coords="1,23,122,42" href="javascript:BSSCPopup('../CommonHelp3/Neuzei_Offset_erzeugen.htm');" id="area5" alt="">
+<area shape="rect" coords="1,44,110,66" href="javascript:BSSCPopup('../CommonHelp3/Rueckg_Klinkung.htm');" id="area6" alt="">
+<area shape="rect" coords="1, 149, 191, 167" href="Wähle_Synchronisations_Optionen_Synchronisationslinien.htm" alt=""></map></p>
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a1');
+        FilePopupInit('a2');
+        FilePopupInit('a3');
+        FilePopupInit('a4');
+        FilePopupInit('area1');
+        FilePopupInit('area2');
+        FilePopupInit('area3');
+        FilePopupInit('area4');
+        FilePopupInit('area5');
+        FilePopupInit('area6');
+//]]>
+</script>
+</body>
+</html>

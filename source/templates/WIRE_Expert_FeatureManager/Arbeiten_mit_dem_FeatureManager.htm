@@ -1,0 +1,39 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Arbeiten mit dem FeatureManager" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../WIRE_Expert_FeatureManager.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <h1>{% trans "Arbeiten mit dem FeatureManager" %}</h1><p> </p>
+<p>{% trans "Im folgenden finden Sie einige Hinweise zum Arbeiten mit dem [WIRE-Expert] #FeatureManager#:" %}</p>
+<p> </p>
+<p>{% trans "#Doppelklick auf ein Element des FeatureManagers#" %}</p>
+<p>{% trans "#Klick mit rechter Maustaste auf ein Element des FeatureManagers#" %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

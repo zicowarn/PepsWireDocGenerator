@@ -1,0 +1,36 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Parasolid-Attribute bei Soliderzeugung verwenden" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Simulation.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Parasolid-Attribute bei Soliderzeugung verwenden" %}</p><p>{% trans "Startet man die Simulation konvertiert das System alle Parasolid-Elemente (Solid-Bodies der Rohteile, Zielteile, Spannmittel, etc...) die in der Simulation verwendet werden." %}</p>
+<p>{% trans "Das Aktivieren dieser Option führt dazu, dass die Eigenschaften der Parasolid-Elemente (Namen, Farben etc. der Solid-Bodies) von der Simulation verwendet werden." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

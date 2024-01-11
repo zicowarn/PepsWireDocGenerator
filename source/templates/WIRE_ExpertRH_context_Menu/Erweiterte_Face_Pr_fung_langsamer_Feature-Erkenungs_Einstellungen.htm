@@ -1,0 +1,52 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Erweiterte Erkennung (langsamer)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../RH_Context_Menu.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    span.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Erweiterte Erkennung (langsamer)" %}</p><p> </p>
+<p>{% trans "Bei einer #automatischen Feature-Erkennung# kann es passieren, das OPTICAM Feature erkennt (z.B. Sackbohrungen auf der Bauteilunterseite), die eigentlich nicht erkannt werden sollten." %}</p>
+<p>{% trans "Das folgende Bild soll eine solche Situation zeigen. Links das Ergebnis OHNE die Option [Erweiterte Erkennung (langsamer)] und rechts mit." %}</p>
+<p>{% trans "Die [fünf roten Pfeile] kennzeichnen die unerwünschten Feature (Sackbohrungen auf der Bauteilunterseite)." %}</p>
+<p>{% trans "Der [blaue Kreis] markiert die Ausschnittsvergrößerung im dritten Bild." %}</p>
+<p><img src="../image/Erweiterte_Flächenpueüfung_verwenden_1.gif" alt="" style="border: none;" border="0"/></p>
+<p> </p>
+<p>{% trans "Die Option [Erweiterte Erkennung (langsamer)] kann in solchen Fällen helfen." %}</p>
+<p>{% trans "Die [Erweiterte Erkennung (langsamer)] führt bei einer automatischen Feature-Erkennung, zusätzliche interne Tests aus, die unerwünschte Features entfernen oder deren Anzahl reduziert." %}</p>
+<p> </p>
+<p class="Hinweis">{% trans "Hinweis:" %}</p>
+<p>{% trans "Das Anwenden der [Erweiterten Erkennung] kann die Berechnungszeit der automatischen Feature-Erkennung deutlich erhöhen." %}</p>
+<p> </p>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,36 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+ <meta name="generator" content="Adobe RoboHelp 2019">
+<title>3D Offset</title>
+<link rel="StyleSheet" href="../wirhlp10.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+font.hcp1 { font-weight:bold; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="dialog">3D Offset</p>
+<p>Diese Option ist <font class="hcp1">nur</font> aktivierbar, wenn eine <a href="Regelflaechenbearbeitung____.htm"><font class="hcp1">Regelflächenbearbeitung</font></a> durchgeführt wird und gleichzeitig die Option <a href="javascript:void(0);" id="a1" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('Offset_ausgeben_Std_Konturbea.htm');return false;"><font class="hcp1">Offset ausgeben</font></a> angeschaltet ist.</p>
+<p>Ist die <font class="hcp1">3D Offset</font> nicht aktiv, wird der Offset beim Schneiden einer Regelfläche bezogen auf die XY-Ebene berechnet (Siehe Zeichnung).</p>
+<p>Dies kann beim Schneiden sehr hoher Regelflächen zu Maßabweichungen führen. Wählt man die Option <font class="hcp1">3D Offset</font> rechnet das System den echten 3D-Offset.</p>
+<p>Allerdings ist die NC-Ausgabe dann vektorisiert (Folge = lange NC-Programme) und ein Schneiden mit der NC-Radiuskorrektur (G41/G42) ist nicht mehr möglich.</p>
+<p>Da die NC-Radiuskorrektur nicht ausgegeben wird, muss man in den Feldern <a href="javascript:void(0);" id="a2" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('Offset_im_Dialog_Bearbeitung_einstellen.htm');return false;"><font class="hcp1">Offset</font></a> den <font class="hcp1">Drahtradius</font> + <font class="hcp1">Funkenspalt</font> eingeben.</p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p class="footnote_text"><img src="../OFFGEOM.gif" alt="OFFGEOM.gif" width="438" height="352" border="0"></p>
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a1');
+        FilePopupInit('a2');
+//]]>
+</script>
+</body>
+</html>

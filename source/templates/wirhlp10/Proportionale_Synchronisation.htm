@@ -1,0 +1,57 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Proportionale Synchronisation" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp10.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+    font.hcp2 { font-weight:bold; }
+    font.hcp3 { font-weight:bold;
+    font-style:italic; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Proportionale Synchronisation" %}</p><p>{% trans "Bei der Regelflächenbearbeitung erfolgt die Synchronisation der Regelfläche zunächst automatisch." %}</p>
+<p>{% trans "Dies geschieht, indem das System den Umfang der unteren Figur, mit dem Umfang der oberen Figur ins Verhältnis setzt und intern Synchronisationslinien setzt." %}</p>
+<p>{% trans "Dies kann jedoch in einigen Fällen zu unbefriedigenden Ergebnissen führen." %}</p>
+<p>{% trans "Eine einfache Regelfläche bestehend aus zwei Figuren, mit jeweils vier Elementen, soll dies erläutern." %}</p>
+<p class="hcp1"> </p>
+<p><img src="../sych_eq1.gif" alt="sych_eq1.gif" width="193" height="170" border="0"/></p>
+<p class="hcp1"> </p>
+<p>{% trans "Ist die Option [Proportionale Synchronisation] [aktiviert], erfolgt eine proportionale Synchronisation:" %}</p>
+<p class="hcp1"> </p>
+<p><img src="../sych_eq2.gif" alt="sych_eq2.gif" width="196" height="178" border="0"/></p>
+<p class="hcp1"> </p>
+<p>{% trans "Ist die Option [Proportionale Synchronisation] [nicht] [aktiviert], wird intern von Elementende zu Elementende, eine Synchronisationslinie gelegt:" %}</p>
+<p class="hcp1"> </p>
+<p><img src="../sych_eq3.gif" alt="sych_eq3.gif" width="195" height="181" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

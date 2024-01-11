@@ -1,0 +1,38 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Linien&sol;Bögen löschen" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+        <style type="text/css">
+        span {
+                font-weight: bold;
+            }
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Linien/Bögen löschen" %}</p><p>{% trans "Diese Checkbox dient dazu, die Linien-/Bogenelemente zu löschen, welche die Bearbeitungsfigur bilden." %}</p>
+<p>{% trans "In den meisten Fällen ist es besser die Linien-/Bogenelemente zu löschen, da diese sonst unterhalb der Bearbeitungsfigur liegen und stören können." %}</p>
+<p>{% trans "In einigen Fallen ist es aber ratsam, die Linien-/Bogenelemente [nicht] zu löschen." %}</p>
+<p>{% trans "Dies ist dann der Fall, wenn beispielsweise die Linien-/Bogenelemente für weitere Figuren / Konstruktionen benötigt werden." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

@@ -1,0 +1,58 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Matrizen- &sol; Stempeltyp" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+    p.hcp2 { margin-left:170.10pt;
+    text-indent:-113.40pt; }
+    font.hcp3 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Matrizen- / Stempeltyp" %}</p><p>{% trans "Diese Listbox enthält die Geometrieformen, die das System bei der automatischen Erzeugung von Stempel- und Matrizenfiguren erkennt." %}</p>
+<p>{% trans "Jeder Geometrieform können Sie separate Einstellungen für die Startlochposition zuordnen. Bei der Auswahl einer Geometrieform zeigt das System ein Bitmap das die Form, eine typische Startlochposition und deren Parameter Position grafisch anzeigt." %}</p>
+<p class="hcp1"> </p>
+<p>{% trans "Folgende Geometrieformen existieren:" %}</p>
+<p> </p>
+<p class="hcp2">{% trans "[Rund] kreisrunde Stempel/Matrizen" %}</p>
+<p class="hcp2">{% trans "[Rechteck] rechteckige Stempel/Matrizen" %}</p>
+<p class="hcp2">{% trans "[Rechteck rund] an den vier Ecken verrundete rechteckige Stempel/Matrizen" %}</p>
+<p class="hcp2">{% trans "[Langloch] Geometrien von Typ Langloch" %}</p>
+<p class="hcp2">{% trans "[L-Form] L-förmige Stempel/Matrizen" %}</p>
+<p class="hcp2">{% trans "[D-Form / DD-Form] D- und DD-förmige Stempel/Matrizen" %}</p>
+<p class="hcp2">{% trans "[Beliebige Kontur] jede andere geschlossene Form" %}</p>
+<p class="hcp1"> </p>
+<p>{% trans "Beachten Sie, dass die Einstellungen für jede Form mit der Schaltfläche [Einstellungen] [speichern] für spätere PEPS Sitzungen gespeichert werden können." %}</p>
+<p>{% trans "(Diese Option ist bei Verwendung eines [Suchschemas] nicht aktiv)." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

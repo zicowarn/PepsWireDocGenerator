@@ -1,0 +1,56 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Kreise&sol;Bögen ==> Mehrfachfigur" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    p.hcp2 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Kreise/Bögen ==&amp;gt; Mehrfachfigur" %}</p><p>{% trans "Dieser Befehl hat zwei Aufgaben:" %}</p>
+<p>{% trans "1.) #[Bohrungen gleichen Durchmessers suchen und Bearbeitungsfiguren erzeugen]#." %}</p>
+<p class="Block_Text">{% trans "In einigen Fällen kann die Situation auftreten, dass eine größere Anzahl von Bohrungen mit gleichen Durchmessern geschnitten werden müssen." %}</p>
+<p class="Block_Text">{% trans "Normalerweise ist es dabei notwendig, aus jeder Bohrung eine separate Bearbeitungsfigur zu erzeugen. Dies kann bei einer größeren Anzahl gleicher Bohrungen recht zeitaufwendig sein." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../MEHR_GRP.gif" alt="MEHR_GRP.gif" width="657" height="403" border="0"/></p>
+<p class="hcp2"> </p>
+<p>{% trans "Dieser Befehl erlaubt es, eine beliebige Anzahl Bohrungen gleichen Durchmessers mit einem Befehlsaufruf, automatisch in Bearbeitungsfiguren umzuwandeln." %}</p>
+<p>{% trans "2.) #[Eine Bearbeitungsfigur auf eine Punktegruppe (G1 ...) verteilen]#." %}</p>
+<p>{% trans "Manchmal soll eine vorhandene Bearbeitungsfigur auf einer Anzahl von Punktposition vervielfältigt werden." %}</p>
+<p>{% trans "Normalerweise ist es dabei notwendig, an jeder Position eine separate Bearbeitungsfigur zu erzeugen." %}</p>
+<p class="hcp2"> </p>
+<p><img src="../MEHR_GR2.gif" alt="MEHR_GR2.gif" width="422" height="288" border="0"/></p>
+<p class="hcp2"> </p>
+<p style="text-align: justify;">{% trans "Mit dem Befehl ist es möglich, eine vorhandene Bearbeitungsfigur über eine [Punktegruppe] zu verteilen (Siehe Register [Gruppe] im Dialog [CAD] \ [3D-Geometrie erzeugen] \ [NURBS-Kurven und Surfaces])." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

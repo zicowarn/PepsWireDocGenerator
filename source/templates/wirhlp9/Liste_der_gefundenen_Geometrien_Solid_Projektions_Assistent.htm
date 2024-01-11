@@ -1,0 +1,43 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Liste der gefundenen Geometrien" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Liste der gefundenen Geometrien" %}</p><p>{% trans "Diese Liste zeigt alle gefundenen 2D-Geometrien an. Nun können Sie auswählen, welche der Geometrien benötigt werden." %}</p>
+<p>{% trans "Klicken Sie zur Auswahl [einzelne] Geometrien in der Liste an ([Linke] Maustaste + [Strg]-Taste erlaubt Mehrfachauswahl)." %}</p>
+<p>{% trans "Oder verwenden Sie die Schaltfläche [Alle wählen], um [alle] Geometrien der Liste auszuwählen." %}</p>
+<p>{% trans "Die gewählten Geometrien werden im Grafikfenster [rot markiert]." %}</p>
+
+{% endblock %}
+{% endlinebreakless %}

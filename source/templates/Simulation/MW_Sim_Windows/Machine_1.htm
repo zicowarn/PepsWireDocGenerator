@@ -1,0 +1,178 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Maschinen Fenster" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../../MW_Sim_Windows.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    p.hcp1 { margin-top:0;
+    margin-bottom:0; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <h1>{% trans "Maschinen Fenster" %}</h1><p class="hcp1"> </p>
+<h2>{% trans "How to create a new machine" %}</h2>
+<p>{% trans "There is a set of different files which are necessary to run a machine properly." %}</p>
+<p class="hcp1"> </p>
+<h3>{% trans "Machine Model Files (STL)" %}</h3>
+<p>{% trans "STL files define the geometric components of the machine. The names of the STL files are used in the xml to assign them to the appropriate axis. Usually you have several STL files since your machine consists of many axes." %}</p>
+<p>{% trans "Important here is that the machine geometry is aligned to the absolute center point (0, 0, 0). That means that the absolute center point is located in the tool fixing holder of the machine. In that point the tool holder will be put. Usually (but not necessary) that point should correspond with the top face center point of the table. With other words, the tool fixing holder and top face center point of the table should touch in the same point, which is the 0,0,0 point of the CAD software from where the STL files where created. The rest of the machine parts should also refer to this point further on." %}</p>
+<p>{% trans "So move the machine and the spindle to the right position in your CAD model. After this you can simple save the single parts to STL files. Then they already have the right position." %}</p>
+<p>{% trans "The machine which will be used for the tutorial already is aligned in the right way." %}</p>
+<p class="hcp1"> </p>
+<h3>{% trans "Reflection Texture (BMP)" %}</h3>
+<p>{% trans "This is used for the texture of the reflections. Note that only the .bmp file format are permitted (no .jpg, . gif etc.)." %}</p>
+<p>{% trans "The following tutorial describes the necessary steps to create a machine. The necessary machine model files (STL files) and the reflection texture (tablereflection.bmp) can be found in the new_machine.zip archive." %}</p>
+<p class="hcp1"> </p>
+<h3>{% trans "Creating a new machine" %}</h3>
+<p>{% trans "A new machine will be created in the kinematics tree window. So if you have loaded the machine simulation, switch to the machine window. You usually have already selected a machine to get into the machine simulation. This machine is listed in the tree." %}</p>
+<p>{% trans "To create a new machine hit the 'New machine' button from the icon bar." %}</p>
+<p><img src="../../setup_new_machine.gif" alt="setup_new_machine.gif" width="312" height="530" border="0"/></p>
+<p>{% trans "The existing machine will be deleted and a new, empty unnamed machine appears instead. Now enable machine editing (if not already selected). This will allow you to modify items in the tree." %}</p>
+<p><img src="../../setup_edit_machine.gif" alt="setup_edit_machine.gif" width="312" height="530" border="0"/></p>
+<p>{% trans "Click the 'unnamed machine'. Name option appears in the bottom of window." %}</p>
+<p>{% trans "Change the name of the machine with 'new_machine'. This name is the name of your new machine." %}</p>
+<p><img src="../../setup_ID.gif" alt="setup_ID.gif" width="312" height="530" border="0"/></p>
+<p>{% trans "Remember: the machine ID name and the folder name of the machine data have to be identically. In this case we call the machine 'new_machine'. Hit the 'Save machine as..' button. Save the 'new_machine.xml' to 'new_machine' folder." %}</p>
+<p><img src="../../setup_saveas.gif" alt="setup_saveas.gif" width="312" height="530" border="0"/></p>
+<p class="hcp1"> </p>
+<h3>{% trans "Attaching the housing" %}</h3>
+<p>{% trans "The housing is considered as a fixed part of the machine. Fixed means, that the housing doesn't move and stands still since it is not attached to a linear or rotational axis." %}</p>
+<p>{% trans "Go to the machine window. There hit the 'Edit machine' button to change to edit mode." %}</p>
+<p><img src="../../setup_edit_machine.gif" alt="setup_edit_machine.gif" width="312" height="530" border="0"/></p>
+<p>{% trans "First thing to do is to give a name to your machine." %}</p>
+<p><img src="../../setup_housing.gif" alt="setup_housing.gif" width="312" height="530" border="0"/></p>
+<p>{% trans "Right click the 'new_machine' in the kinematics tree and choose 'Add Geometry' from the drop down window. Select the 'HOUSING.STL' from the 'new_machine'directory." %}</p>
+<p><img src="../../setup_add_geo.gif" alt="setup_add_geo.gif" width="338" height="468" border="0"/></p>
+<p>{% trans "There is a special setting about the housing. When you are running machine simulation you have the opportunity to blank out the machine housing by pushing that button." %}</p>
+<p><img src="../../machinehousing.gif" alt="machinehousing.gif" width="31" height="30" border="0"/></p>
+<p>{% trans "These blank able parts will be defined when you add to your name the prefix 'mh_'. So, all parts with the prefix mh_ will be blanked out. In our case the name would be 'mh_housing'." %}</p>
+<p>{% trans "Properties for new geometry are displayed in bottom of window. Change the ID with 'mh_housing' and also you can set up the color. Pick any colour." %}</p>
+<p>{% trans "After setting up the housing, you machine tree looks like this:" %}</p>
+<p><img src="../../ms_housing.gif" alt="ms_housing.gif" width="312" height="530" border="0"/></p>
+<p>{% trans "Save the machine. This time use the 'Save Machine' button. That simply saves the changes without bringing the file browser." %}</p>
+<p><img src="../../setup_save.gif" alt="setup_save.gif" width="312" height="530" border="0"/></p>
+<p class="hcp1"> </p>
+<h3>{% trans "Attaching the kinematic axes" %}</h3>
+<p>{% trans "As like the housing, the axes will be added into the kinematic tree and its subbranches. The structure of the machine parts is hierarchically. The dependence of an tree item always start from the top item of a branch. The main branch itself is the machine top item which has the housing attached." %}</p>
+<p>{% trans "To give an example we look at our 'new_machine'. The 'new_machine' is a so called 'table table' machine. That means that both rotation axes (A and C) lie in the table of the machine. The A axis (blue) and C axis (purple) axis are attached to the Y axis (grey). The table is independent from the linear axes X (green) and Z (orange). Accordingly the Y axis and the X axis build a new branch for themselves." %}</p>
+<p><img src="../../setup_full.gif" alt="setup_full.gif" width="306" height="369" border="0"/></p>
+<p>{% trans "To add a kinematic axis you have to do 2 things:" %}</p>
+<p>{% trans "Add the kinematic description" %}</p>
+<p>{% trans "Attach the machine model part" %}</p>
+<p class="hcp1"> </p>
+<h3>{% trans "Adding the kinematic description" %}</h3>
+<p>{% trans "Right click on the 'new_machine', go to 'add Transl. Axis' and select 'Y Axis'. The property window opens automatically." %}</p>
+<p><img src="../../setup_Y.gif" alt="setup_Y.gif" width="435" height="468" border="0"/></p>
+<p>{% trans "The new Y axis is added. When you select it from the tree, the properties menu appears in bottom of window. The properties for 'ID', 'Direction', 'Limits' are setup by default." %}</p>
+<p>{% trans "The first thing you can change here is ID name. Due to its definition the kinematic axes ID's can't be named randomly (like 'Y axis')." %}</p>
+<p class="hcp1"> </p>
+<p>{% trans "The next thing to be changed is the kinematic orientation, which is the direction the linear axis should move. Here the direction must be expressed by a vector which is described in the coordinates X Y and Z. To let the linear axis move in Y, setup value 1 for Y." %}</p>
+<p>{% trans "Last option that can be changed is the limit for that axis. Setup minimum limit -80 and maximum limit 100." %}</p>
+<p>{% trans "The Y axis appeared in a new branch underneath the machine." %}</p>
+<p><img src="../../setup_Y_1.gif" alt="setup_Y_1.gif" width="312" height="567" border="0"/></p>
+<p>{% trans "The next thing to do is to attach the A axis onto the Y axis. Right click on the Y axis, go to 'Add rotation axis' and select 'A Axis'." %}</p>
+<p><img src="../../setup_add_rot.gif" alt="setup_add_rot.gif" width="388" height="526" border="0"/></p>
+<p>{% trans "Properties menu from the bottom of window are setup by default." %}</p>
+<p>{% trans "Center point must be changed from default value. This center point defines the position where this axis rotates around. Due to its definition you have give that information to the kinematic. The distance will be measured in X, Y and Z to the absolute center point. The A axis is shifted, so you have to add the shift distance accordingly. In our case it is -106 mm in Z. Our direction is Y 1, X and Z 0 (it's turning around Y axis)." %}</p>
+<p>{% trans "The limits now will be expressed by angles since it is a rotation axis. Enter the range from -90 to 90." %}</p>
+<p>{% trans "Set up the kinematic tree like this:" %}</p>
+<p><img src="../../setup_add_complete.gif" alt="setup_add_complete.gif" width="312" height="567" border="0"/></p>
+<p class="hcp1"> </p>
+<p>{% trans "The other axis settings:" %}</p>
+<p class="hcp1"> </p>
+<h3>{% trans "C axis:" %}</h3>
+<p>{% trans "Right click on the A axis in the kinematics tree" %}</p>
+<p>{% trans "Select 'Add rot. axis'" %}</p>
+<p>{% trans "Add 'C' axis" %}</p>
+<p>{% trans "Transformation direction is Z 1 (it is turning around Z axis)" %}</p>
+<p>{% trans "Center point is 0 for X, Y and Z" %}</p>
+<p>{% trans "Limits are -9999 and 9999" %}</p>
+<p class="hcp1"> </p>
+<h3>{% trans "X axis:" %}</h3>
+<p>{% trans "Right click on the 'new_machine'" %}</p>
+<p>{% trans "Add 'X' axis" %}</p>
+<p>{% trans "Transformation is X 1, Y and Z 0" %}</p>
+<p>{% trans "Limits are -120 and 120" %}</p>
+<p class="hcp1"> </p>
+<h3>{% trans "Z axis:" %}</h3>
+<p>{% trans "Right click on the 'X Axis'" %}</p>
+<p>{% trans "Add 'Z' axis" %}</p>
+<p>{% trans "Transformation is X0, Y 0 and Z 1" %}</p>
+<p>{% trans "Limits are -100 and 200" %}</p>
+<p class="hcp1"> </p>
+<h3>{% trans "Attaching the machine model part" %}</h3>
+<p>{% trans "Right click the desired kinematic axis in the kinematic tree. Then choose 'Add Geometry' from the drop down window. Enter a random ID to the geometry and select the geometry file. The files can be found in the 'new_machine.zip', so make sure you take the right geometry. Attach following geometries:" %}</p>
+<p class="hcp1"> </p>
+<p>{% trans "A axis (tilt axis), 'A_AXIS.STL'." %}</p>
+<p>{% trans "C axis (rotation axis), 'C_AXIS.STL'." %}</p>
+<p>{% trans "X axis (linear axis), 'X_AXIS.STL'." %}</p>
+<p>{% trans "Y axis (linear axis), 'Y_AXIS.STL'." %}</p>
+<p>{% trans "Z axis (linear axis), 'Z_AXIS.STL'." %}</p>
+<p class="hcp1"> </p>
+<p class="hcp1"> </p>
+<h3>{% trans "Attaching the workpiece set" %}</h3>
+<p>{% trans "The workpiece, toolpath, stock and initial stock are so called dynamic elements. That means that they can be changed during simulation and don't stay static like the axes geometries." %}</p>
+<p>{% trans "In order to attach the elements onto the table, you have to define a certain coordination transformation." %}</p>
+<p>{% trans "Now right click on the C axis, select branch 'Add Dynamic Element' and add workpiece set. This option added a group of options : workpiece, stock, initial stock and toolpath. Also you can add those options manually." %}</p>
+<p><img src="../../setup_add_coord_transform.gif" alt="setup_add_coord_transform.gif" width="484" height="635" border="0"/></p>
+<p class="hcp1"> </p>
+<h3>{% trans "Attaching the tool" %}</h3>
+<p>{% trans "The tool also is a dynamic element. It changes during simulation and doesn't stay static like the axes geometries." %}</p>
+<p>{% trans "In order to attach the spindle, you have to define a certain coordination transformation." %}</p>
+<p>{% trans "Right click on the Z axis (which in this case is the spindle), select branch 'Add Dynamic Element' and add 'Tool Set'." %}</p>
+<p><img src="../../setup_add_coord_transform_tool.gif" alt="setup_add_coord_transform_tool.gif" width="484" height="635" border="0"/></p>
+<p class="hcp1"> </p>
+<h3>{% trans "Defining the collision pairs" %}</h3>
+<p>{% trans "For the machine simulation it is very important that collisions will be recognized. Therefore you can set collision control sets for machine parts." %}</p>
+<p>{% trans "Important here is to find the right dependency between the single parts. Eg. It would make no sense to make a collision checking between the Y axis and the housing. The Y axis would never harm the housing because it's moving on top. Important is the collision checking between the translation axes and rotation axes, between the work piece and the rotation and translation axes and of course the collision checking between the tool and the work piece" %}</p>
+<p class="hcp1"> </p>
+<p>{% trans "Right click on the 'new_machine' machine and select 'add collcheck'." %}</p>
+<p><img src="../../setup_add_collcheck.gif" alt="setup_add_collcheck.gif" width="514" height="545" border="0"/></p>
+<p class="hcp1"> </p>
+<p>{% trans "When CollisionCheck is selected the properties menu appears in bottom of window." %}</p>
+<p>{% trans "You define the collision checking by setting two groups . Between the two groups the collision will be checked." %}</p>
+<p>{% trans "So in the left group you can add the workpiece with all geometries which they belong and in the right side group, add tool and also with all geometries." %}</p>
+<p class="hcp1"> </p>
+<p>{% trans "A collision check set will be add in the machine tree." %}</p>
+<p>{% trans "When CollisionCheck is selected the properties menu appears in bottom of window." %}</p>
+<p>{% trans "To click on '+' or 'x' buttons to add or remove an object." %}</p>
+<p><img src="../../machine_cc1.gif" alt="machine_cc1.gif" width="481" height="707" border="0"/></p>
+<p class="hcp1"> </p>
+<p>{% trans "A collision checking set eg. would look like this." %}</p>
+<p><img src="../../setup_add_collcheck_1.gif" alt="setup_add_collcheck_1.gif" width="514" height="591" border="0"/></p>
+<p class="hcp1"> </p>
+<p>{% trans "Important note related to replaceable components support: objects declared in the magazine should not be directly referenced in the machines collision groups definitions. Only the mounting adapters (points) should appear there. For instance, lets say we have mounting point 'head_adapter', checked against 'geo1', 'geo2', 'workpiece'. When a replaceable component is added under this adapter, all its objects will be automatically checked against the three ones mentioned above." %}</p>
+<p class="hcp1"> </p>
+<h3>{% trans "Finshing Setup" %}</h3>
+<p>{% trans "In the properties of the geometry elements you can change the colors and then you can define a reflection in case you want to make an element look metallic." %}</p>
+<p>{% trans "The finished machine should look like this now:" %}</p>
+<p><img src="../../setup_full.gif" alt="setup_full.gif" width="306" height="369" border="0"/> <img src="../../setup_result.gif" alt="setup_result.gif" width="249" height="457" border="0"/></p>
+
+{% endblock %}
+{% endlinebreakless %}

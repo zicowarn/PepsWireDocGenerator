@@ -1,0 +1,47 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Bearbeitungsoperation kopieren" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../Operationsmanager.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+    li.hcp2 { font-size:9pt; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Bearbeitungsoperation kopieren" %}</p><p> </p>
+<p>{% trans "Klicken Sie die zu kopierenden Operation(en) im #[Operationsmanager]# an. Verwenden Sie zur Auswahl der Operationen die Standard Windows Auswahltechniken." %}</p>
+<ul>
+	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie mit der [rechten] Maustaste auf eine der gewählten Operationen und wählen Sie im Kontextmenü die Option [Kopieren]." %}</p></li>
+	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie nun in der Operationsliste mit der [rechten] Maustaste auf die Operation, [hinter] der die kopierten Operationen eingefügt werden sollen." %}</p></li>
+	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Wählen Sie im Kontextmenü die Option [Einfügen]." %}</p></li>
+</ul>
+
+{% endblock %}
+{% endlinebreakless %}

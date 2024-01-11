@@ -1,0 +1,49 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Auf Figur (Endpunkte)" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+    <LINK rel="StyleSheet" href="../wirhlp9.css"/>
+    <style title="hcp" type="text/css">
+    <!--
+    font.hcp1 { font-weight:bold; }
+        
+        span {
+                font-weight: bold;
+            }
+        
+        .pitalic { 
+            margin-top:0; 
+            margin-bottom:0; 
+            font-style: italic;
+            color:#FF0000;
+        }
+    -->
+    </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block mainbody %}
+    <p class="dialog">{% trans "Auf Figur (Endpunkte)" %}</p><p>{% trans "Die Felder im Abschnitt [Endpunkt] sind optional und müssen nicht unbedingt ausgefüllt werden." %}</p><p>{% trans "Das Feld [Auf] [Figur] wird erst freigeschaltet, wenn man die Option [Lotrecht auf nächstes Figurelement ausfahren] [de]aktiviert." %}</p>
+<p>{% trans "Dieses Feld legt fest, von welcher Position AUF der Figur aus, der Draht die [#XY-Ausfahrposition#] anfahren soll." %}</p>
+<p>{% trans "In den meisten Fällen wird der Anwender die Option [Lotrecht auf nächstes Figurelement ausfahren] aktivieren, so dass der Draht den kürzesten Weg (LOT) hin zur XY-Ausfahrposition fährt." %}</p>
+<p>{% trans "Der [Endpunkt auf der Figur] wird normalerweise direkt als [XY-Koordinate] eingegeben oder mit der Schaltfläche @ und mit Hilfe der [Fangfunktionen] [Endpunkt - Koordinaten] in der Zeichnung ermittelt." %}</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p>{% trans "[Siehe auch:] #[Beispiel für eine Bearbeitungsfigur mit Endpunkt]#" %}</p>
+<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a1');
+//]]&gt;</script>
+
+{% endblock %}
+{% endlinebreakless %}
