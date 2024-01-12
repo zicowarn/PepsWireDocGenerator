@@ -38,26 +38,167 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <h1>{% trans "Satzliste" %}</h1><p> </p>
-<p>{% trans "Die Satzliste zeigt den aktuell simulierten NC-Code. Die hier angezeigten Werte beschreiben die XYZ-Position der Werkzeugspitze im absoluten Maschinenkoordinatensystem X, Y, Z (im Fall einer 3-Achsen Maschine) und zusätzlich A, B, C, etc. (im Fall einer 4- oder 5-Achsen Maschine)." %}</p>
-<p> </p>
-<p><img src="../../newUI_move_list.gif" alt="newUI_move_list.gif" width="409" height="464" border="0"/></p>
-<p class="hcp1"> </p>
-<p>{% trans "[Hauptvorteile]" %}</p>
-<p>{% trans "Identifikation der aktuellen Werkzeugposition" %}</p>
-<p>{% trans "Die Satzliste gibt einen Überblick über die aktuell programmierten NC-Sätze." %}</p>
-<p><img src="../../newUI_move_list.gif" alt="newUI_move_list.gif" width="409" height="464" border="0"/></p>
-<p class="hcp1"> </p>
-<p>{% trans "[Die wichtigsten Funktionen]" %}</p>
-<p>{% trans "Einfaches Navigieren durch den Bearbeitungsprozess durch Anwendung des [Schiebers] auf der [rechten Seite]." %}</p>
-<p>{% trans "Einfaches Navigieren durch den Bearbeitungsprozess durch Anwendung der Tastatur (Klick in die Satzliste. - Dann Anwendung der [Pfeiltasten] oder Tasten [Bild rauf] und [Bild runter])" %}</p>
-<p>{% trans "[Anklicken eines Satzes] in der Satzliste, lässt die Simulation zu dem gewählten Satz springen." %}</p>
-<p>{% trans "[Überfahren] der [Maschinen-Verfahrwegsgrenzen] wird markiert durch ein rotes Ausrufezeichen ([!]) vor dem NC-Satz." %}</p>
-<p>{% trans "[Kollisionen des Werkzeuges] mit Werkstück, Rohteil oder Maschinenteilen wird gekennzeichnet durch ein rotes Kreuz ([X]) vor dem NC-Satz." %}</p>
-<p class="hcp1"> </p>
-<p>{% trans "[Einstellungen]" %}</p>
-<p>{% trans "Ein Klick mit der rechten Maustaste in die Satzliste erlaubt das Einstellen der Anzahl angezeigten Nachkommastellen." %}</p>
-<p><img src="../../newUI_move_list_settings.gif" alt="newUI_move_list_settings.gif" width="250" height="135" border="0"/></p>
-
+<h1>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">句子列表</font>
+    </font>
+  </h1>
+  <p>&nbsp;</p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">记录列表显示当前模拟的NC代码。</font>
+      <font style="vertical-align: inherit;">此处显示的值描述了绝对机床坐标系 X、Y、Z（在 3 轴机床的情况下）以及 A、B、C 等（在情况下）中刀尖的 XYZ 位置4 轴或 5 轴机器）。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p><img alt="newUI_move_list.gif" border="0" height="464" src="../../newUI_move_list.gif" width="409" /></p>
+  <p class="hcp1">&nbsp;</p>
+  <p>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">主要优点</font>
+      </font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">识别当前刀具位置</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">块列表提供了当前编程的 NC 块的概览。</font>
+    </font>
+  </p>
+  <p><img alt="newUI_move_list.gif" border="0" height="464" src="../../newUI_move_list.gif" width="409" /></p>
+  <p class="hcp1">&nbsp;</p>
+  <p>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">最重要的功能</font>
+      </font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">使用右侧的</font>
+      <font class="hcp2">
+        <font style="vertical-align: inherit;">滑块</font>
+      </font>
+    </font>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">轻松</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">浏览编辑过程
+      </font>
+      <font style="vertical-align: inherit;">。</font>
+    </font>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;"></font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">使用键盘轻松浏览编辑过程（单击句子列表。 - 然后使用</font>
+    </font>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">箭头键</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+        或</font>
+    </font>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">向上</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">翻页和</font>
+    </font>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">向下翻页键</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">）</font>
+    </font>
+  </p>
+  <p>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">单击</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">句子列表中的句子会使模拟跳转到所选句子。</font>
+    </font>
+  </p>
+  <p>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">超过</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">机器</font>
+    </font>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">行程限制时，</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;"> NC 块前面</font>
+      <font style="vertical-align: inherit;">
+        会标有红色感叹号 ( </font>
+    </font>
+    <font class="hcp3" size="4">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">! )。</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+  </p>
+  <p>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">刀具与工件、毛坯或机器零件的碰撞</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">在 NC 块前面</font>
+      <font style="vertical-align: inherit;">用红十字 ( </font>
+    </font>
+    <font class="hcp3" size="4">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">X ) 标记。</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+  </p>
+  <p class="hcp1">&nbsp;</p>
+  <p>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">设置</font>
+      </font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">在句子列表中右键单击可以设置显示的小数位数。</font>
+    </font>
+  </p>
+  <p>
+    <img alt="newUI_move_list_settings.gif" border="0" height="135" src="../../newUI_move_list_settings.gif" width="250" />
+  </p>
 {% endblock %}
 {% endlinebreakless %}

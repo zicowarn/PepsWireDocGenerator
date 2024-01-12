@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,33 +28,101 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Startloch Einstellungen verwenden" %}</p><p>{% trans "Ist diese Option aktiv, werden die im Dialog #Startloch-Einstellungen# festgelegten Regeln zur Positionierung des Startloches verwendet." %}</p><p>{% trans "Ist die Option NICHT aktiv, wird das interne Regelwerk (nicht vom Anwender anpassbar) verwendet." %}</p>
-<p> </p>
-<p>{% trans "Das folgende Bild zeigt den Dialog #Startloch-Einstellungen#." %}</p>
-<p class="Normal_(Web) pitalic" style="margin-left: 5.75pt; margin-right: 6.50pt;  margin-top: 4.00pt; margin-bottom: 0.00pt;">{% trans "&lt;p class='Normal_(Web)' style='margin-left: 5.75pt; margin-right: 6.50pt; margin-top: 4.00pt; margin-bottom: 0.00pt;'&gt;[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="Normal_(Web)"> </p>
-<p><img src="../StartHole_Settings_Dialog_shg.gif" usemap="#AreaMap0" alt="StartHole_Settings_Dialog_shg.gif" width="795" height="738" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="8, 101, 130, 118" href="Feature_Erkennung_nach_Flaechenfarben.htm" alt=""/>
-<area shape="rect" coords="116, 37, 151, 80" href="javascript:BSSCPopup('../Commdata/Dialogeinstellungen_speichern.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="158, 41, 191, 75" href="javascript:BSSCPopup('../Commdata/Gespeicherte_Dialogeinstellungen_laden.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="217, 448, 496, 622" href="Startlochgeometrien_Startloch_Einstellungen.htm" alt=""/>
-<area shape="rect" coords="498, 445, 764, 637" href="Allgemeine_Einstellungen_Startloch_Einstellungen.htm" alt=""/>
-<area shape="rect" coords="10, 132, 181, 149" href="Feature_Erkenungs_Einstellungen.htm" alt=""/>
-<area shape="rect" coords="9, 82, 187, 103" href="../wirhlp9/Voreinstellungen_Wire_Expert_konfigurieren.htm" alt=""/>
-<area shape="rect" coords="216, 85, 785, 445" href="Innere_Matrize_Aeussere_Stempel_Startloch_Einstellungen.htm" alt=""/>
-<area shape="rect" coords="76, 40, 109, 81" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="43, 41, 75, 80" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area4" alt=""/>
-<area shape="rect" coords="5, 39, 39, 81" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area5" alt=""/>
-</map> </p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用起始孔设置
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <a href="Startloch_Einstellungen.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     如果此选项处于活动状态，则将使用“起始孔设置”
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框中指定的规则
+   </font>
+   <font style="vertical-align: inherit;">
+    来定位起始孔。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果该选项未激活，则使用内部规则（用户不可自定义）。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图显示了
+   </font>
+  </font>
+  <a href="Startloch_Einstellungen.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “起始孔设置”
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框。
+   </font>
+  </font>
+ </p>
+ <p class="Normal_(Web)" style="margin-left: 5.75pt; margin-right: 6.50pt; 
+	 margin-top: 4.00pt; margin-bottom: 0.00pt;">
+  <font color="#FF0000" face="Arial" size="2" style="font-family: Arial; 
+														 font-size: 9pt; 
+														 font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="Normal_(Web)">
+ </p>
+ <p>
+  <img alt="StartHole_Settings_Dialog_shg.gif" border="0" height="738" src="../StartHole_Settings_Dialog_shg.gif" usemap="#AreaMap0" width="795"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="8, 101, 130, 118" href="Feature_Erkennung_nach_Flaechenfarben.htm" shape="rect"/>
+   <area alt="" coords="116, 37, 151, 80" href="javascript:BSSCPopup('../Commdata/Dialogeinstellungen_speichern.htm',400,300);" id="area1" shape="rect"/>
+   <area alt="" coords="158, 41, 191, 75" href="javascript:BSSCPopup('../Commdata/Gespeicherte_Dialogeinstellungen_laden.htm',400,300);" id="area2" shape="rect"/>
+   <area alt="" coords="217, 448, 496, 622" href="Startlochgeometrien_Startloch_Einstellungen.htm" shape="rect"/>
+   <area alt="" coords="498, 445, 764, 637" href="Allgemeine_Einstellungen_Startloch_Einstellungen.htm" shape="rect"/>
+   <area alt="" coords="10, 132, 181, 149" href="Feature_Erkenungs_Einstellungen.htm" shape="rect"/>
+   <area alt="" coords="9, 82, 187, 103" href="../wirhlp9/Voreinstellungen_Wire_Expert_konfigurieren.htm" shape="rect"/>
+   <area alt="" coords="216, 85, 785, 445" href="Innere_Matrize_Aeussere_Stempel_Startloch_Einstellungen.htm" shape="rect"/>
+   <area alt="" coords="76, 40, 109, 81" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area3" shape="rect"/>
+   <area alt="" coords="43, 41, 75, 80" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area4" shape="rect"/>
+   <area alt="" coords="5, 39, 39, 81" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area5" shape="rect"/>
+  </map>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('area1');
 	FilePopupInit('area2');
 	FilePopupInit('area3');
 	FilePopupInit('area4');
 	FilePopupInit('area5');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

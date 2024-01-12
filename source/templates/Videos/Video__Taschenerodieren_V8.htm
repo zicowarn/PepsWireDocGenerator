@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,10 +34,31 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@Video: Taschenerodieren" %}</p><p class="hcp1"><img src="../Taschenerodieren_V8.gif" alt="" onload="onImgLoad(this)" onclick="onImgClick(this)" title="Click to start movie" style="border: none;" border="0"/></p>
-<p class="hcp1"> </p>
-<p class="footnote_text">{% trans "[Zum Starten der Animation klicken]" %}</p>
-<p> </p>
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <img alt="视频.gif" border="0" height="32" src="../video.gif" width="39"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    视频：袖珍电火花加工机
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+  <img alt="" border="0" onclick="onImgClick(this)" onload="onImgLoad(this)" src="../preview.gif" style="border: none;" title="点击开始电影"/>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p class="footnote_text">
+  <font face="Arial" size="4" style="font-family: Arial; font-size: 14pt; font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     点击开始动画
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

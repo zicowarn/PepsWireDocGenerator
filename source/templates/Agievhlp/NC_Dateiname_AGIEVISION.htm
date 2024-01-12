@@ -34,8 +34,46 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "NC-Dateiname" %}</p><p>{% trans "Legt den Namen der NC-Ausgabedatei(en) fest. Als Vorgabe zeigt das System in diesem Feld den Dateinamen des momentanen Programms." %}</p>
-<p>{% trans "Es wird für jede geschnittene Bearbeitungsfigur eine separate NC-Datei erzeugt. Der Name der Dateien wird automatisch inkrementiert (Test.iso, Test[1].iso, Test[2].iso, Test[3].iso ...)." %}</p>
-
+<p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">数控文件名</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">设置 NC 输出文件的名称。</font>
+      <font style="vertical-align: inherit;">默认情况下，系统在此字段中显示当前程序的文件名。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">为每个切削加工图形创建一个单独的 NC 文件。</font>
+      <font style="vertical-align: inherit;">文件的名称会自动递增（Test.iso、Test </font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">1</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;"> .iso、Test </font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">2</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;"> .iso、Test </font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">3</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;"> .iso...）。</font>
+    </font>
+  </p>
 {% endblock %}
 {% endlinebreakless %}

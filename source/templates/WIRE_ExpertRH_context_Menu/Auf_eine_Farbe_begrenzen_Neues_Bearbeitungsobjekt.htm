@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -38,30 +37,235 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Auf eine Farbe begrenzen" %}</p><p>{% trans "Diese Methode wird eingesetzt, wenn man mit einem Klick aus allen [gleichfarbigen, miteinander verbundenen Flächen] ein Bearbeitungsfeature erzeugen möchte." %}</p>
-<p>{% trans "Bei Wahl dieser Option klickt man [ein] Face an und das System sucht alle mit dem gewählten Face verbundenen Faces, [die gleichfarbig] sind und erzeugt ein Bearbeitungsfeature daraus." %}</p>
-<p>{% trans "In dem folgenden Beispiel sehen Sie auf der Vorderseite des Modells, einige hell eingefärbte Flächen. Diese Flächen sollen mit einem Klick in ein Bearbeitungsfeature umgewandelt werden." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Man_FR_Rec_Color_1.gif" alt="Man_FR_Rec_Color_1.gif" width="343" height="221" border="0"/></p>
-<p class="hcp3"> </p>
-<p>{% trans "Das folgende Bild zeigt das Ergebnis bei Anwendung der Funktion [Manuell mit automatischer Verbindung (nach Farben)]." %}</p>
-<p>{% trans "Es ist deutlich zu sehen, dass das System ausschließlich die hell eingefärbten Flächen selektiert und ein 'Offenes Bearbeitungsfeature' erzeugt." %}</p>
-<p class="hcp3"> </p>
-<p><img src="../Man_FR_Rec_Color_3.gif" alt="Man_FR_Rec_Color_3.gif" width="368" height="230" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Das folgende Bild soll den Unterschied zur Funktion #Manuell mit automatischer Verbindung# verdeutlichen." %}</p>
-<p>{% trans "Hier würde dass System alle miteinander verbundenen Flächen auswählen, so dass sich ein 'Geschlossenes' Bearbeitungsfeature ergäbe." %}</p>
-<p>{% trans "Zwischen den hell eingefärbten Flächen und den anderen Fläche würde nicht unterschieden. Das folgendes Bild zeigt das Ergebnis:" %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Man_FR_Rec_Color_2.gif" alt="Man_FR_Rec_Color_2.gif" width="361" height="241" border="0"/></p>
-<p class="hcp3"> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
-<ul>
-	<li class="hcp4"><p class="Tip_Note_Text_Bulleted">{% trans "Klicken Sie ein Face der zu bearbeitenden Geometrie an. Der [WIRE-Expert] findet automatisch alle mit dem gewählten Face verbunden Faces, sofern diese die [gleiche Flächenfarbe] aufweisen und erodierbar sind." %}</p></li>
-	<li class="hcp4"><p class="Tip_Note_Text_Bulleted">{% trans "Klicken Sie ein Face der nächsten zu bearbeitenden Geometrie an." %}</p></li>
-	<li class="hcp4"><p class="Tip_Note_Text_Bulleted">{% trans "Machen Sie wie oben beschrieben weiter bis alle Geometrien bearbeitet sind." %}</p></li>
-	<li class="hcp4"><p class="Tip_Note_Text_Bulleted">{% trans "Beenden Sie den Dialog mit @." %}</p></li>
-</ul>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    限制为一种颜色
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果您想通过一次单击从所有
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     相同颜色的连接曲面
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    创建编辑特征，则可以使用此方法。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果选择此选项，则单击
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     一个
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    面，系统会搜索与所选面关联且具有相同颜色的所有面
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     ，
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    并从中创建编辑特征。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在下面的示例中，您可以看到模型正面的一些浅色区域。
+   </font>
+   <font style="vertical-align: inherit;">
+    只需单击一下即可将这些区域转换为编辑功能。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="Man_FR_Rec_Color_1.gif" border="0" height="221" src="../Man_FR_Rec_Color_1.gif" width="343"/>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图显示了使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     带有自动连接（按颜色）功能的手册
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    时的结果。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    可以清楚地看到，系统仅选择浅色区域并创建“开放编辑功能”。
+   </font>
+  </font>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p>
+  <img alt="Man_FR_Rec_Color_3.gif" border="0" height="230" src="../Man_FR_Rec_Color_3.gif" width="368"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图旨在说明
+   </font>
+  </font>
+  <a href="Manuell_mit_automatischer_Verbindung_Neues_Bearbeitungsobjekt.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     手动功能与自动连接
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    的区别。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在这里，系统将选择所有连接的曲面，从而产生“封闭”的编辑功能。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    浅色区域和其他区域之间不会有任何区别。
+   </font>
+   <font style="vertical-align: inherit;">
+    下图显示了结果：
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="Man_FR_Rec_Color_2.gif" border="0" height="241" src="../Man_FR_Rec_Color_2.gif" width="361"/>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    它是这样完成的：
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp4">
+   <p class="Tip_Note_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      单击要编辑的几何体的面。
+     </font>
+     <font style="vertical-align: inherit;">
+      WIRE
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       -Expert
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      会自动查找与所选面相连的所有面，只要它们具有
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       相同的表面颜色
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      并且可腐蚀。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp4">
+   <p class="Tip_Note_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      单击要编辑的下一个几何体的面。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp4">
+   <p class="Tip_Note_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      继续如上所述，直到编辑完所有几何图形。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp4">
+   <p class="Tip_Note_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      用 结束对话框
+     </font>
+    </font>
+    <img alt="确定按钮.gif" border="0" height="25" src="../OK_button.gif" width="26"/>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+
 
 {% endblock %}
 {% endlinebreakless %}

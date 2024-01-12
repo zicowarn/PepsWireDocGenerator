@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -37,17 +36,125 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Bearbeitungsoperationen NACH einer vorhandenen Operation einfügen" %}</p><ul>
-	<li class="hcp1"><p class="Tip_Note_Text_Bulleted">{% trans "Klicken Sie im #[Operationsmanager]# mit der [rechten] Maustaste die [Operation] an, NACH der die neue Operation eingefügt werden soll." %}</p></li>
-	<li class="hcp1"><p class="Tip_Note_Text_Bulleted">{% trans "Wählen Sie im Kontextmenü die Option [Neue Operation nach dieser Operation]." %}</p></li>
-	<li class="hcp1"><p class="Tip_Note_Text_Bulleted">{% trans "Wählen Sie in dem folgenden Kontextmenü (siehe Abbildung) die Bearbeitungsoperation aus, die [hinter] der gewählten Operation eingefügt werden soll." %}</p></li>
-</ul>
-<p class="hcp3"> </p>
-<p><img src="../exa_Operation_einfügen.gif" alt="exa_Operation_einfügen.gif" width="689" height="309" border="0"/></p>
-<p class="hcp3"> </p>
-<ul>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Es folgt der Aufruf der gewählten Bearbeitungsoperation. Füllen Sie den Dialog aus." %}</p></li>
-</ul>
+<body id="mbody">
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在现有操作之后插入编辑操作
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp1">
+   <p class="Tip_Note_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      在 #
+     </font>
+    </font>
+    <span>
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       Operations Manager
+      </font>
+     </font>
+    </span>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      # 中，右键
+     </font>
+    </font>
+    <span>
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       单击
+      </font>
+     </font>
+    </span>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      应在其后插入新操作的
+     </font>
+    </font>
+    <span>
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       操作
+      </font>
+     </font>
+    </span>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Tip_Note_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      从上下文菜单中，选择
+     </font>
+    </font>
+    <span>
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       此操作后的新操作
+      </font>
+     </font>
+    </span>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Tip_Note_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      在下面的上下文菜单中（见图），选择应插入到
+     </font>
+     <font style="vertical-align: inherit;">
+      所选操作
+     </font>
+    </font>
+    <span>
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       之后的编辑操作。
+      </font>
+     </font>
+    </span>
+    <font style="vertical-align: inherit;">
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p class="hcp3">
+ </p>
+ <p>
+  <img alt="exa_Operation_insert.gif" border="0" height="309" src="../exa_Operation_einfuegen.gif" width="689"/>
+ </p>
+ <p class="hcp3">
+ </p>
+ <ul>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      然后调用所选的加工操作。
+     </font>
+     <font style="vertical-align: inherit;">
+      完成对话框。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+
 
 {% endblock %}
 {% endlinebreakless %}

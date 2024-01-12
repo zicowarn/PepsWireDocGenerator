@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,12 +33,97 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Richtung (Entformungstest Dialog)" %}</p><p>{% trans "In diesem Dialogabschnitt legen Sie fest, in welcher Richtungsachse der Entformungstest ausgeführt werden soll." %}</p>
-<p>{% trans "Normalerweise ist die Achse für den Entformungstest [+Z] oder -[Z]." %}</p>
-<p>{% trans "Das System führt nach Aufruf des Dialogs einen vorläufigen Entformungstest aus und kennzeichnet die Achsen in denen eine Entnahme des Ausfallteils möglich ist, in der Farbe [Grün]." %}</p>
-<p>{% trans "In Situationen in denen die Entnahme des Abfallteiles nur entlang mehrerer Achsen möglich ist (z.B. Schrägschieber), müssen Sie die Achsen selbst bestimmen und den Entformungswinkel im Feld #[Offset Winkel]# eingeben." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p><img src="../Ausfall_test2.gif" alt="Ausfall_test2.gif" width="435" height="251" border="0"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    方向（脱模测试对话框）
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在此对话框部分中，您可以指定应在哪个方向轴上进行脱模测试。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通常脱模测试的轴为
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     +Z
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     -Z
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1" color="#00FF00">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     调出该对话框后，系统会进行初步脱模测试，并以绿色
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    标记可以移除故障零件的轴
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在只能沿多个轴（例如倾斜推杆）移除废料零件的情况下，您必须自行确定轴并在“
+   </font>
+  </font>
+  <a href="Offset_Winkel_Entformungstest_Dialogbox_Solid_Simulation_Wire.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      偏移角”
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    字段中输入拔模角。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <img alt="failure_test2.gif" border="0" height="251" src="../Ausfall_test2.gif" width="435"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

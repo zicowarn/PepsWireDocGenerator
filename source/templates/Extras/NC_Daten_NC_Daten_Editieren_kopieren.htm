@@ -34,23 +34,174 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "NC-Daten" %}</p><p> </p>
-<p>{% trans "Mit diesen Ikonen können Sie die [NC-Datendateien] des momentanen Programmes anzeigen/editieren, ausdrucken und auf einen Datenträger kopieren (z.B. eine Diskette), ohne den [Windows Explorer] aufrufen zu müssen." %}</p>
-<p>{% trans "@ [Kopiere Datei auf Zielverzeichnis]" %}</p>
-<p>{% trans "Diese Schaltfläche kopiert die NC-Datendatei des [momentanen] Programms in ein bestimmbares Laufwerk / Verzeichnis  Einstellbar mit der Schaltfläche #Optionen#)." %}</p>
-<p> </p>
-<p>{% trans "@ [Zeige Datei]" %}</p>
-<p>{% trans "Mit dieser Schaltfläche können Sie die NC-Daten des [momentanen] Programmes in einem Editor aufrufen. Welcher Editor (Voreinstellung = [Windows Notepad Editor]) verwendet wird, können Sie mit der Schaltfläche #Optionen# einstellen." %}</p>
-<p> </p>
-<p>{% trans "@ [Zeige Einrichteblatt]" %}</p>
-<p>{% trans "Mit dieser Schaltfläche können Sie die Einrichteblattdatei (PDF-Datei) des [momentanen] Programms über einen Viewer anzeigen." %}</p>
-<p> </p>
-<p>{% trans "@ [Kopiere Datei auf Zielverzeichnis 2]" %}</p>
-<p>{% trans "Diese Schaltfläche kopiert die NC-Datendatei des [momentanen] Programms auf ein [zweites, alternatives] Laufwerk (Einstellbar mit der Schaltfläche #Optionen#)." %}</p>
-<p> </p>
-<p> </p>
-<p>{% trans "@ [NC-Code Simulation]" %}</p>
-<p>{% trans "Diese Schaltfläche startet die# NC-Code Simulation#." %}</p>
-
+<p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">数控数据</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">通过这些图标，您可以显示/编辑当前程序的</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">NC 数据文件</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+        ，将其打印出来并将其复制到数据介质（例如软盘），而无需</font>
+      <font style="vertical-align: inherit;">打开</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">Windows 资源管理器。</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+  </p>
+  <p><img alt="Edi_Copy_to_disk_Wire.gif" border="0" height="41" src="../Edi_Copy_to_disk_Wire.gif" width="42" />
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">复制文件到目标目录</font>
+      </font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;"></font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">此按钮将当前</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">程序的 NC 数据文件复制</font>
+      <font style="vertical-align: inherit;">
+        到特定驱动器/目录 - 可使用</font>
+    </font><a href="Optionen_Dialog_NC-Daten_editieren_kopieren.htm">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">“选项”</font>
+      </font>
+    </a>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">按钮进行调整）。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p><img alt="Edi_Show_NC_Data_Wire.gif" border="0" height="44" src="../Edi_Show_NC_Data_Wire.gif" width="41" />
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">显示文件</font>
+      </font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">使用此按钮可以</font>
+      <font style="vertical-align: inherit;">
+        在编辑器中调用</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">当前程序的 NC 数据。</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;"><a href="Optionen_Dialog_NC-Daten_editieren_kopieren.htm">
+        <font style="vertical-align: inherit;">您可以使用“选项”</font>
+      </a>
+      <font style="vertical-align: inherit;">按钮设置使用</font>
+      <font style="vertical-align: inherit;">哪个编辑器（默认设置 =
+      </font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">Windows 记事本编辑器</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">）
+        。</font>
+    </font><a href="Optionen_Dialog_NC-Daten_editieren_kopieren.htm">
+      <font style="vertical-align: inherit;"></font>
+    </a>
+    <font style="vertical-align: inherit;"></font>
+  </p>
+  <p>&nbsp;</p>
+  <p><img alt="Edi_Show_Setup_wire.gif" border="0" height="45" src="../Edi_Show_Setup_wire.gif" width="41" />
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">显示设置表</font>
+      </font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">此按钮允许您通过查看器</font>
+      <font style="vertical-align: inherit;">查看</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">当前程序的设置表文件（PDF 文件）。</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+  </p>
+  <p>&nbsp;</p>
+  <p><img alt="Edi_Copy_to_Disk_Wire_2.gif" border="0" height="29" src="../Edi_Copy_to_Disk_Wire_2.gif" width="32" />
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">将文件复制到目标目录2</font>
+      </font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;"></font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">此按钮将当前</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">程序的 NC 数据文件复制</font>
+      <font style="vertical-align: inherit;">
+        到</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">第二个备用驱动器（可以使用</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;"></font><a href="Optionen_Dialog_NC-Daten_editieren_kopieren.htm">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">选项</font>
+      </font>
+    </a>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">按钮
+        进行设置</font>
+      <font style="vertical-align: inherit;">）。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p><img alt="Edi_Copy_to_Disk_Wire_2.gif" border="0" src="../Edi_Simulate_NC_Code.gif" /> <span style="font-weight: bold;">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">NC 代码模拟</font>
+      </font>
+    </span></p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">该按钮启动</font>
+    </font><a href="NC-Code_Simulation_XXX_TO_DO.htm">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">
+          NC 代码模拟</font>
+      </font>
+    </a>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">。</font>
+    </font>
+  </p>
 {% endblock %}
 {% endlinebreakless %}

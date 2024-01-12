@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,10 +33,118 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Optionen (Zielteilvergleich)" %}</p><p>{% trans "[Bearbeitetes Rohteil]: Schaltet die Anzeige der [Rohteilgrafik] an oder aus." %}</p>
-<p>{% trans "[Zielteil]: Schaltet die Anzeige der [Zielteilgrafik] (Werkstück) an oder aus." %}</p>
-<p>{% trans "[Restmaterial]: Schaltet die Anzeige des errechneten [Restmaterials] an oder aus." %}</p>
-<p>{% trans "[Gouges]: Schaltet die Anzeige der [Modellbeschädigungen (Gouges)] an oder aus." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项（目标部分比较）
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     加工毛坯
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：打开或关闭
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     毛坯图形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    的显示。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     目标零件
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：打开或关闭
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     目标零件图形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    （工件）的显示。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     剩余材料：打开或关闭计算的
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     剩余材料
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    的显示
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     凿痕
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：打开或关闭
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     模型损坏（凿痕）
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    的显示。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

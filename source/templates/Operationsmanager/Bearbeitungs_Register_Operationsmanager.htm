@@ -36,93 +36,245 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <h1>{% trans "Bearbeitungs Register (Operationsmanager)" %}</h1><p> </p><p>{% trans "Mit dem Register [Bearbeitung] können Sie neue Bearbeitungsoperationen definieren, vorhandene Operationen verändern und deren Reihenfolge verändern." %}</p>
-<p>{% trans "Alle Bearbeitungsoperationen eines Programms werden im [Operationsmanager] in Form einer Baumstruktur aufgelistet." %}</p>
-<p>{% trans "Jeder Eintrag für einen #[Operationsstart]# enthält einzelne Bearbeitungsoperationen." %}</p>
-<p>{% trans "Sie können die einzelnen Bearbeitungsoperationen durch einen Klick auf das Zeichen @ auflisten und durch einen Klick auf das Zeichen @ wieder ausblenden." %}</p>
-<p>{% trans "Die folgende Operationsliste zeigt die Operationsstarts [1][1] und [11a]." %}</p>
-<p>{% trans "Durch einen Klick auf das Zeichen @ wurden die einzelnen Bearbeitungsoperationen innerhalb der Operationsstarts [11] und [11a] aufgelistet." %}</p>
-<p class="hcp2"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp2"> </p>
-<p><img src="../work_space_editor_wir_machining_shg.gif" usemap="#AreaMap0" alt="work_space_editor_wir_machining_shg.gif" width="1033" height="949" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="701, 168, 1032, 198" href="../Simulation/Grafik_NC_Bearbeitung_neu_erzeugen.htm" alt=""/>
-<area shape="rect" coords="703, 200, 1032, 229" href="../Simulation/Grafik_NC_Bearbeitung_loeschen.htm" alt=""/>
-<area shape="rect" coords="701, 268, 1036, 294" href="javascript:BSSCPopup('Drahtmodell_Simulation_Operationsliste.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="698, 327, 1032, 360" href="../wirhlp10/Alle_VDM_Eintraege_loeschen.htm" alt=""/>
-<area shape="rect" coords="55, 368, 422, 427" href="javascript:BSSCPopup('Deaktivieren_Aktivieren_OP_Manager.htm',400,600);" id="area2" alt=""/>
-<area shape="rect" coords="57, 434, 422, 461" href="javascript:BSSCPopup('Ausschneiden_Operationsliste.htm',400,600);" id="area3" alt=""/>
-<area shape="rect" coords="56, 464, 424, 493" href="javascript:BSSCPopup('Kopieren_Operationsliste.htm',400,500);" id="area4" alt=""/>
-<area shape="rect" coords="56, 621, 353, 678" href="javascript:BSSCPopup('Deaktivieren_Aktivieren_OP_Manager.htm',400,600);" id="area5" alt=""/>
-<area shape="rect" coords="55, 745, 352, 776" href="javascript:BSSCPopup('Ausschneiden_Operationsliste.htm',400,500);" id="area6" alt=""/>
-<area shape="rect" coords="55, 776, 352, 813" href="javascript:BSSCPopup('Kopieren_Operationsliste.htm',400,500);" id="area7" alt=""/>
-<area shape="rect" coords="1, 913, 75, 949" href="Geometrie_Register_Operationsmanager.htm" alt=""/>
-<area shape="rect" coords="74, 916, 148, 946" href="Bearbeitungs_Register_Operationsmanager.htm" alt=""/>
-<area shape="rect" coords="419, 236, 687, 260" href="../wirhlp10/Standard_Konturbearbeitung____.htm" alt=""/>
-<area shape="rect" coords="420, 293, 687, 321" href="../wirhlp10/Regelflaechenbearbeitung____.htm" alt=""/>
-<area shape="rect" coords="420, 322, 686, 351" href="../wirhlp10/Im_Vorschub_Dialog.htm" alt=""/>
-<area shape="rect" coords="421, 350, 686, 381" href="../wirhlp10/Im_Eilgang_.htm" alt=""/>
-<area shape="rect" coords="421, 380, 686, 411" href="../wirhlp10/Zurueck_zur_Startposition____.htm" alt=""/>
-<area shape="rect" coords="421, 411, 687, 442" href="../wirhlp10/Draht_einfaedeln.htm" alt=""/>
-<area shape="rect" coords="422, 441, 685, 473" href="../wirhlp10/M_Code_einfuegen.htm" alt=""/>
-<area shape="rect" coords="352, 550, 621, 583" href="../wirhlp10/Standard_Konturbearbeitung____.htm" alt=""/>
-<area shape="rect" coords="354, 614, 622, 644" href="../wirhlp10/Regelflaechenbearbeitung____.htm" alt=""/>
-<area shape="rect" coords="355, 647, 623, 671" href="../wirhlp10/Im_Vorschub_Dialog.htm" alt=""/>
-<area shape="rect" coords="354, 674, 622, 704" href="../wirhlp10/Im_Eilgang_.htm" alt=""/>
-<area shape="rect" coords="352, 702, 623, 737" href="../wirhlp10/Zurueck_zur_Startposition____.htm" alt=""/>
-<area shape="rect" coords="353, 735, 622, 767" href="../wirhlp10/Draht_einfaedeln.htm" alt=""/>
-<area shape="rect" coords="352, 765, 623, 793" href="../wirhlp10/M_Code_einfuegen.htm" alt=""/>
-<area shape="rect" coords="701, 102, 1028, 137" href="../wirhlp10/Postprozessor_konfigurieren.htm" alt=""/>
-<area shape="rect" coords="421, 472, 689, 501" href="../wirhlp10/Mess_Zyklen.htm" alt=""/>
-<area shape="rect" coords="351, 794, 623, 821" href="../wirhlp10/Mess_Zyklen.htm" alt=""/>
-<area shape="rect" coords="700, 4, 1031, 65" href="javascript:BSSCPopup('Neuer_Operationsstart_OP_Manager.htm',400,600);" id="area9" alt=""/>
-<area shape="rect" coords="57, 298, 419, 332" href="javascript:BSSCPopup('Neuer_Operationsstart_OP_Manager.htm',400,600);" id="area10" alt=""/>
-<area shape="rect" coords="62, 235, 419, 295" href="javascript:BSSCPopup('Neue_Operation_OP_Liste.htm',400,600);" id="area11" alt=""/>
-<area shape="rect" coords="60, 553, 356, 580" href="javascript:BSSCPopup('Neue_Operation_OP_Liste.htm',400,600);" id="area12" alt=""/>
-<area shape="rect" coords="57, 845, 353, 877" href="Gruppieren_OP_Liste.htm" alt=""/>
-<area shape="rect" coords="422, 501, 689, 536" href="../wirhlp10/Gruppierte_Operationen_aufrufen.htm" alt=""/>
-<area shape="rect" coords="353, 822, 622, 856" href="../wirhlp10/Gruppierte_Operationen_aufrufen.htm" alt=""/>
-<area shape="rect" coords="419, 264, 686, 289" href="../wirhlp10/Bundbearbeitung_.htm" alt=""/>
-<area shape="rect" coords="355, 582, 622, 611" href="../wirhlp10/Bundbearbeitung_.htm" alt=""/>
-<area shape="rect" coords="701, 134, 1030, 167" href="../wirhlp10/Rotationsachse_konfigurieren.htm" alt=""/>
-<area shape="rect" coords="704, 232, 1029, 259" href="Operation_hervorheben_aktivieren_deaktivieren.htm" id="area13" alt=""/>
-<area shape="rect" coords="222, 920, 301, 945" href="../WIRE_Expert_FeatureManager/WIRE_Expert_FeatureManager.htm" alt=""/>
-<area shape="rect" coords="146, 919, 223, 944" href="../WIRE_Expert_FeatureManager/Parameter_Register_Operationsmanager_.htm" alt=""/>
-<area shape="rect" coords="701, 64, 1030, 103" href="../wirhlp10/Masseinheit_mm_Inch_bestimmen.htm" alt=""/>
-<area shape="rect" coords="703, 295, 1034, 323" href="../Simulation/Solid_Simulation.htm" alt=""/>
-<area shape="rect" coords="56, 334, 420, 368" href="Aendern_OP_Manager.htm" alt=""/>
-<area shape="rect" coords="55, 498, 421, 527" href="javascript:BSSCPopup('Loeschen_OP_Manager.htm',400,300);" alt="" id="area14"/>
-<area shape="rect" coords="57, 811, 353, 839" href="javascript:BSSCPopup('Loeschen_OP_Manager.htm',400,500);" alt="" id="area15"/>
-<area shape="rect" coords="54, 589, 352, 618" href="Aendern_OP_Manager.htm" alt=""/>
-<area shape="rect" coords="56, 679, 353, 710" href="../Simulation/Grafik_NC_Bearbeitung_neu_erzeugen.htm" alt=""/>
-<area shape="rect" coords="57, 710, 353, 742" href="../Simulation/Grafik_NC_Bearbeitung_loeschen.htm" alt=""/>
-</map> </p>
-<p class="hcp2"> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
-<p>{% trans "#[Neue Bearbeitungsoperation erzeugen]#" %}</p>
-<p>{% trans "#[Vorhandene Bearbeitungsoperation ändern]#" %}</p>
-<p class="Tip_Note_Heading">{% trans "#Bearbeitungsoperation kopieren#" %}</p>
-<p>{% trans "#[Vorhandene Bearbeitungsoperationen deaktivieren/aktivieren]#" %}</p>
-<p class="Tip_Note_Heading">{% trans "#Reihenfolge der Bearbeitungsoperationen ändern#" %}</p>
-<p>{% trans "#[Bearbeitungsoperationen NACH einer vorhandenen Operation einfügen]#" %}</p>
-<p>{% trans "#[Vorhandene Bearbeitungsoperation(en) löschen]#" %}</p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
-	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
-	FilePopupInit('area1');
-	FilePopupInit('area2');
-	FilePopupInit('area3');
-	FilePopupInit('area4');
-	FilePopupInit('area5');
-	FilePopupInit('area6');
-	FilePopupInit('area7');
-	FilePopupInit('area9');
-	FilePopupInit('area10');
-	FilePopupInit('area11');
-	FilePopupInit('area12');
-	FilePopupInit('area14');
-	FilePopupInit('area15');
-//]]&gt;</script>
-
+<h1>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">处理寄存器（操作管理器）</font>
+    </font>
+  </h1>
+  <p>&nbsp;</p>
+  <p>
+    <font style="vertical-align: inherit;"></font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">“编辑”</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">选项卡</font>
+      <font style="vertical-align: inherit;">
+        允许您定义新的加工操作、修改现有操作以及更改其顺序。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">程序的所有编辑操作都</font>
+      <font style="vertical-align: inherit;">
+        以树形结构的形式列在</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">Operations Manager中。</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;"></font><a href="../wirhlp10/Operation_starten.htm">
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">操作开始</font>
+        </font>
+      </font>
+    </a>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">的每个条目都</font>
+      <font style="vertical-align: inherit;">包含单独的编辑操作。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">您可以通过单击该字符列出各个编辑操作</font>
+    </font><img alt="ebx_487367465.gif" border="0" height="24" src="../ebx_487367465.gif" width="48" />
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">，并通过单击该字符再次隐藏它们</font>
+    </font><img alt="ebx_922806730.gif" border="0" height="23" src="../ebx_922806730.gif" width="47" />
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">下面</font>
+      </font>
+      <font style="vertical-align: inherit;">的操作列表显示了操作开始</font>
+    </font><span style="font-weight: bold;">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">11</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">和</font>
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">11a</font>
+      </font>
+      <font style="vertical-align: inherit;">。</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;"></font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;"></font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">通过单击该符号，会列出</font>
+    </font><img alt="ebx_487367465.gif" border="0" height="24" src="../ebx_487367465.gif" width="48" />
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+        操作开始
+      </font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">11</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">和</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">11a</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">中的各个处理操作
+        。</font>
+    </font>
+  </p>
+  <p class="hcp2">&nbsp;</p>
+  <p>
+    <font color="#FF0000" style="font-style: italic;">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">单击下图的各个区域可访问帮助文本。</font>
+      </font>
+    </font>
+  </p>
+  <p class="hcp2">&nbsp;</p>
+  <p><img alt="work_space_editor_wir_machining_shg.gif" border="0" height="949" src="../work_space_editor_wir_machining_shg.gif" usemap="#AreaMap0" width="1033" />
+    <map id="AreaMap0" name="AreaMap0">
+      <area alt="" coords="701, 168, 1032, 198" href="../Simulation/Grafik_NC_Bearbeitung_neu_erzeugen.htm" shape="rect" />
+      <area alt="" coords="703, 200, 1032, 229" href="../Simulation/Grafik_NC_Bearbeitung_loeschen.htm" shape="rect" />
+      <area alt="" coords="701, 268, 1036, 294" href="javascript:BSSCPopup('Drahtmodell_Simulation_Operationsliste.htm',400,300);" id="area1" shape="rect" />
+      <area alt="" coords="698, 327, 1032, 360" href="../wirhlp10/Alle_VDM_Eintraege_loeschen.htm" shape="rect" />
+      <area alt="" coords="55, 368, 422, 427" href="javascript:BSSCPopup('Deaktivieren_Aktivieren_OP_Manager.htm',400,600);" id="area2" shape="rect" />
+      <area alt="" coords="57, 434, 422, 461" href="javascript:BSSCPopup('Ausschneiden_Operationsliste.htm',400,600);" id="area3" shape="rect" />
+      <area alt="" coords="56, 464, 424, 493" href="javascript:BSSCPopup('Kopieren_Operationsliste.htm',400,500);" id="area4" shape="rect" />
+      <area alt="" coords="56, 621, 353, 678" href="javascript:BSSCPopup('Deaktivieren_Aktivieren_OP_Manager.htm',400,600);" id="area5" shape="rect" />
+      <area alt="" coords="55, 745, 352, 776" href="javascript:BSSCPopup('Ausschneiden_Operationsliste.htm',400,500);" id="area6" shape="rect" />
+      <area alt="" coords="55, 776, 352, 813" href="javascript:BSSCPopup('Kopieren_Operationsliste.htm',400,500);" id="area7" shape="rect" />
+      <area alt="" coords="1, 913, 75, 949" href="Geometrie_Register_Operationsmanager.htm" shape="rect" />
+      <area alt="" coords="74, 916, 148, 946" href="Bearbeitungs_Register_Operationsmanager.htm" shape="rect" />
+      <area alt="" coords="419, 236, 687, 260" href="../wirhlp10/Standard_Konturbearbeitung____.htm" shape="rect" />
+      <area alt="" coords="420, 293, 687, 321" href="../wirhlp10/Regelflaechenbearbeitung____.htm" shape="rect" />
+      <area alt="" coords="420, 322, 686, 351" href="../wirhlp10/Im_Vorschub_Dialog.htm" shape="rect" />
+      <area alt="" coords="421, 350, 686, 381" href="../wirhlp10/Im_Eilgang_.htm" shape="rect" />
+      <area alt="" coords="421, 380, 686, 411" href="../wirhlp10/Zurueck_zur_Startposition____.htm" shape="rect" />
+      <area alt="" coords="421, 411, 687, 442" href="../wirhlp10/Draht_einfaedeln.htm" shape="rect" />
+      <area alt="" coords="422, 441, 685, 473" href="../wirhlp10/M_Code_einfuegen.htm" shape="rect" />
+      <area alt="" coords="352, 550, 621, 583" href="../wirhlp10/Standard_Konturbearbeitung____.htm" shape="rect" />
+      <area alt="" coords="354, 614, 622, 644" href="../wirhlp10/Regelflaechenbearbeitung____.htm" shape="rect" />
+      <area alt="" coords="355, 647, 623, 671" href="../wirhlp10/Im_Vorschub_Dialog.htm" shape="rect" />
+      <area alt="" coords="354, 674, 622, 704" href="../wirhlp10/Im_Eilgang_.htm" shape="rect" />
+      <area alt="" coords="352, 702, 623, 737" href="../wirhlp10/Zurueck_zur_Startposition____.htm" shape="rect" />
+      <area alt="" coords="353, 735, 622, 767" href="../wirhlp10/Draht_einfaedeln.htm" shape="rect" />
+      <area alt="" coords="352, 765, 623, 793" href="../wirhlp10/M_Code_einfuegen.htm" shape="rect" />
+      <area alt="" coords="701, 102, 1028, 137" href="../wirhlp10/Postprozessor_konfigurieren.htm" shape="rect" />
+      <area alt="" coords="421, 472, 689, 501" href="../wirhlp10/Mess_Zyklen.htm" shape="rect" />
+      <area alt="" coords="351, 794, 623, 821" href="../wirhlp10/Mess_Zyklen.htm" shape="rect" />
+      <area alt="" coords="700, 4, 1031, 65" href="javascript:BSSCPopup('Neuer_Operationsstart_OP_Manager.htm',400,600);" id="area9" shape="rect" />
+      <area alt="" coords="57, 298, 419, 332" href="javascript:BSSCPopup('Neuer_Operationsstart_OP_Manager.htm',400,600);" id="area10" shape="rect" />
+      <area alt="" coords="62, 235, 419, 295" href="javascript:BSSCPopup('Neue_Operation_OP_Liste.htm',400,600);" id="area11" shape="rect" />
+      <area alt="" coords="60, 553, 356, 580" href="javascript:BSSCPopup('Neue_Operation_OP_Liste.htm',400,600);" id="area12" shape="rect" />
+      <area alt="" coords="57, 845, 353, 877" href="Gruppieren_OP_Liste.htm" shape="rect" />
+      <area alt="" coords="422, 501, 689, 536" href="../wirhlp10/Gruppierte_Operationen_aufrufen.htm" shape="rect" />
+      <area alt="" coords="353, 822, 622, 856" href="../wirhlp10/Gruppierte_Operationen_aufrufen.htm" shape="rect" />
+      <area alt="" coords="419, 264, 686, 289" href="../wirhlp10/Bundbearbeitung_.htm" shape="rect" />
+      <area alt="" coords="355, 582, 622, 611" href="../wirhlp10/Bundbearbeitung_.htm" shape="rect" />
+      <area alt="" coords="701, 134, 1030, 167" href="../wirhlp10/Rotationsachse_konfigurieren.htm" shape="rect" />
+      <area alt="" coords="704, 232, 1029, 259" href="Operation_hervorheben_aktivieren_deaktivieren.htm" id="area13" shape="rect" />
+      <area alt="" coords="222, 920, 301, 945" href="../WIRE_Expert_FeatureManager/WIRE_Expert_FeatureManager.htm" shape="rect" />
+      <area alt="" coords="146, 919, 223, 944" href="../WIRE_Expert_FeatureManager/Parameter_Register_Operationsmanager_.htm" shape="rect" />
+      <area alt="" coords="701, 64, 1030, 103" href="../wirhlp10/Masseinheit_mm_Inch_bestimmen.htm" shape="rect" />
+      <area alt="" coords="703, 295, 1034, 323" href="../Simulation/Solid_Simulation.htm" shape="rect" />
+      <area alt="" coords="56, 334, 420, 368" href="Aendern_OP_Manager.htm" shape="rect" />
+      <area alt="" coords="55, 498, 421, 527" href="javascript:BSSCPopup('Loeschen_OP_Manager.htm',400,300);" id="area14" shape="rect" />
+      <area alt="" coords="57, 811, 353, 839" href="javascript:BSSCPopup('Loeschen_OP_Manager.htm',400,500);" id="area15" shape="rect" />
+      <area alt="" coords="54, 589, 352, 618" href="Aendern_OP_Manager.htm" shape="rect" />
+      <area alt="" coords="56, 679, 353, 710" href="../Simulation/Grafik_NC_Bearbeitung_neu_erzeugen.htm" shape="rect" />
+      <area alt="" coords="57, 710, 353, 742" href="../Simulation/Grafik_NC_Bearbeitung_loeschen.htm" shape="rect" />
+    </map>
+  </p>
+  <p class="hcp2">&nbsp;</p>
+  <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">它是这样完成的：</font>
+    </font>
+  </p>
+  <p><a href="Beispiel_Neue_Bearbeitungsoperation_erzeugen.htm">
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">创建新的加工操作</font>
+        </font>
+      </font>
+    </a></p>
+  <p><a href="Beispiel_Vorhandene_Bearbeitungsoperation_aendern.htm">
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">修改现有加工操作</font>
+        </font>
+      </font>
+    </a></p>
+  <p class="Tip_Note_Heading"><a href="Beispiel_Bearbeitungsoperation_kopieren.htm">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">仿形加工操作</font>
+      </font>
+    </a></p>
+  <p><a href="Beispiel_Vorhandene_Bearbeitungsoperationen_deaktivieren_aktivieren.htm">
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">禁用/启用现有编辑操作</font>
+        </font>
+      </font>
+    </a></p>
+  <p class="Tip_Note_Heading"><a href="Beispiel_Reihenfolge_der_Bearbeitungsoperationen_aendern.htm">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">更改加工操作顺序</font>
+      </font>
+    </a></p>
+  <p><a href="Beispiel_Bearbeitungsoperationen_NACH_einer_vorhandenen_Operation_einfuegen.htm">
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">在现有操作之后插入编辑操作</font>
+        </font>
+      </font>
+    </a></p>
+  <p><a href="Beispiel_Vorhandene_Bearbeitungsoperation_en_loeschen.htm">
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">删除现有的加工操作。</font>
+        </font>
+      </font>
+    </a></p>
+  <script language="JavaScript1.2" type="text/javascript">//<![CDATA[
+    if (typeof (FilePopupInit) != 'function') FilePopupInit = new Function();
+    FilePopupInit('area1');
+    FilePopupInit('area2');
+    FilePopupInit('area3');
+    FilePopupInit('area4');
+    FilePopupInit('area5');
+    FilePopupInit('area6');
+    FilePopupInit('area7');
+    FilePopupInit('area9');
+    FilePopupInit('area10');
+    FilePopupInit('area11');
+    FilePopupInit('area12');
+    FilePopupInit('area14');
+    FilePopupInit('area15');
+    //]]></script>
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,17 +35,130 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Momentan markierter Solid" %}</p><p>{% trans "Während der Simulation einer Drahterodierbearbeitung, werden eventuelle Ausfallteile als Solids angezeigt." %}</p>
-<p>{% trans "Normalerweise entsteht nur ein Ausfallteil, es kann jedoch zu Situationen kommen, in denen mehrere Ausfallteile entstehen." %}</p>
-<p>{% trans "Für die Simulationssoftware ist es dann nicht einfach festzustellen, welcher der gezeigten Solids, das Werkstück und welche Solids die Ausfallteile darstellen." %}</p>
-<p>{% trans "Wenn die Simulationssoftware das Werkstück/Rohteil irrtümlich in der Farbe der Ausfallteile zeigt, können Sie im Feld [Nummer] festlegen, welcher Solid das Werkstück/Rohteil ist." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Ausfall_test3.gif" alt="Ausfall_test3.gif" width="729" height="261" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Mit der Schaltfläche [Löschen] können Sie den Solid des Ausfallteiles löschen." %}</p>
-<p>{% trans "Falls Sie irrtümlich den falschen Solid gelöscht haben, können Sie den Löschvorgang mit der Option [Rückg]. aufheben." %}</p>
-<p>{% trans "Wenn Sie sicher sind, dass das System die richtigen Ausfallteil-Solids löscht, können Sie die Schaltfläche #[Markiertes Ausfallteil löschen u. weiter]# verwenden." %}</p>
-<p>{% trans "Diese Schaltfläche löscht die Solids der Ausfallteile automatisch und startet die Simulation erneut." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    目前标记为实心
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在模拟线切割加工过程中，任何失败的零件都会显示为实心。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通常只发生一个故障部分，但也可能出现多个故障部分发生的情况。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    那么，仿真软件就不容易确定所显示的哪些实体代表工件以及哪些实体代表故障零件。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果模拟软件错误地以失败零件的颜色显示工件/毛坯，您可以在
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “编号”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    字段中指定工件/毛坯属于哪个实体。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="failure_test3.gif" border="0" height="261" src="../Ausfall_test3.gif" width="729"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    您可以使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “删除”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮删除失败零件的实体。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果您不小心删除了错误的实体，可以使用“撤消”选项
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     撤消
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    删除操作。
+   </font>
+   <font style="vertical-align: inherit;">
+    举起。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果您确定系统正在删除正确的失效零件实体，则可以
+   </font>
+  </font>
+  <a href="Markiertes_Ausfallteil_loeschen_u_weiter_Entformumgstest_Solid_Simulation_Wire.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      继续
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用删除标记的失效零件按钮。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此按钮会自动删除失败零件的实体并重新启动模拟。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

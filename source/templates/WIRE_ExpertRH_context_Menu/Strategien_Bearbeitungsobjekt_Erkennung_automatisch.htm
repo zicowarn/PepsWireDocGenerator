@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,25 +35,293 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Strategien" %}</p><p>{% trans "Hier stellen Sie ein, welche Objekte die [Feature-Erkennung] erkennen soll." %}</p><p class="hcp2"> </p>
-<p>{% trans "[Neue Operation für jeden Body erzeugen]" %}</p>
-<p>{% trans "Ist diese Option aktiv und enthält die aktuelle Datei [mehrere Volumenkörper], erzeugt [WIRE-Expert] für jeden existierenden Volumenkörper eine separate #Operation# im #FeatureManager#. [Beispiel]:" %}</p>
-<p>{% trans "Existieren in einer Datei zwei Volumenkörper, so kann durch aktivieren der Option [Neue Operation für jeden Body erzeugen], für jeden Volumenkörper eine separate NC-Ausgabedatei erzeugt werden, da für jeden Körper eine eigene [Operation] im FeatureManager erzeugt wird." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Feature_Recognition_New_operation_for_each_Body.gif" alt="Feature_Recognition_New_operation_for_each_Body.gif" width="804" height="204" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "[Innere &amp;amp; Äussere Features]" %}</p>
-<p>{% trans "Die automatische [Feature-Erkennung] erkennt alle erodierbaren Geometrien [innerhalb des Volumenkörpers] plus die [Außengeometrie des Körpers]." %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "[Nur Innere Features (Matritze)]" %}</p>
-<p>{% trans "Die automatische [Feature-Erkennung] erkennt ausschließlich alle erodierbaren Geometrien [innerhalb des Volumenkörpers]. Die Außengeometrie des Körpers bleibt unbearbeitet." %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "[Nur Äußere Features (Stempel)]" %}</p>
-<p>{% trans "Die automatische [Feature-Erkennung] erkennt ausschließlich die Außengeometrie des Volumenkörpers. Dies ist die bevorzugte Einstellung für die Bearbeitung von Schneidstempeln." %}</p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    策略
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     您可以在此处设置特征识别
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    应识别
+   </font>
+   <font style="vertical-align: inherit;">
+    哪些对象。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     为每个主体创建新操作
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果此选项处于活动状态并且当前文件包含
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     多个实体
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     WIRE-Expert
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    会 
+ 在
+   </font>
+   <a href="../WIRE_Expert_FeatureManager/WIRE_Expert_FeatureManager.htm">
+    <font style="vertical-align: inherit;">
+     FeatureManager
+    </font>
+   </a>
+   <font style="vertical-align: inherit;">
+    设计树中为每个现有实体创建 
+ 一个单独的
+   </font>
+  </font>
+  <a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('Neue_Operation.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     操作
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     例子
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    ：
+   </font>
+  </font>
+  <a href="../WIRE_Expert_FeatureManager/WIRE_Expert_FeatureManager.htm">
+   <font style="vertical-align: inherit;">
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+  <br/>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果文件中存在两个实体，则可以通过激活选项为每个实体
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     生成新操作为
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    每个实体创建单独的 NC 输出文件，因为 
+ 会为 FeatureManager 设计树中的每个实体创建
+   </font>
+   <font style="vertical-align: inherit;">
+    单独的
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     操作。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="Feature_Recognition_New_operation_for_each_Body.gif" border="0" height="204" src="../Feature_Recognition_New_operation_for_each_Body.gif" width="804"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     内部和外部特征
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    自动
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     特征检测可检测
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     实体内
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    所有可腐蚀的几何形状
+   </font>
+   <font style="vertical-align: inherit;">
+    以及
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     实体的外部几何形状
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     仅内部特征（矩阵）
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    自动
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     特征检测
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    专门检测
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     固体内
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    所有易腐蚀的几何形状。
+   </font>
+   <font style="vertical-align: inherit;">
+    车身的外部几何形状保持未处理。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     仅外部特征（邮票）
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    自动
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     特征识别
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    仅检测实体的外部几何形状。
+   </font>
+   <font style="vertical-align: inherit;">
+    这是加工切削模具的首选设置。
+   </font>
+  </font>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('a1');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

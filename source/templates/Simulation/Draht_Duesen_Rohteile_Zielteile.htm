@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,7 +33,69 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Draht / Düsen / Rohteile / Zielteile" %}</p><p class="Block_Text">{% trans "Mit diesen Checkboxen können Sie festlegen, ob der [Draht], die [Düsen], das [Rohteil] oder ein eventuell vorhandenes [Zielteil] bei der Simulation angezeigt werden soll oder nicht." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    线材/喷嘴/毛坯件/目标件
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通过这些复选框，您可以指定是否
+   </font>
+   <font style="vertical-align: inherit;">
+    应在模拟中显示
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     导线
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     喷嘴
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     毛坯
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或任何现有
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     目标零件。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,48 +35,507 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <a name="642b3b9347ca42c9b00b820c00c373fa=1"/><p class="dialog">{% trans "Manuelle Feature-Erkennung" %}</p><p>{% trans "Dieses Beispiel soll zeigen, wie man die Schneidbearbeitungen [halbautomatisch] erzeugt, indem man die zu bearbeitenden Flächen manuell, mit Hilfe der Maus auswählt." %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "[Klicken] Sie mit der [rechten Maustaste] im [Feature Manager] auf den Zweig @." %}</p>
-<p>{% trans "Es klappt ein Kontextmenü auf. Wählen Sie den Befehl [Manuelle Feature-Erstellung]." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Example_Manual_Feature_Recognition_1.gif" alt="Example_Manual_Feature_Recognition_1.gif" width="510" height="133" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Es wird der Dialog [Neues] [Feature] angezeigt. Aktivieren Sie im Dialog die Option [Manuell mit automatischer Flächenverbindung]." %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "Bei Wahl dieser Option klickt man eine Fläche an und das System findet automatisch alle erodierbaren Flächen, die mit der gewählten Fläche verbunden sind." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Example_Manual_Feature_Recognition_2.gif" alt="Example_Manual_Feature_Recognition_2.gif" width="379" height="692" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Klicken Sie [eine] Fläche des [inneren Durchbruchs] an." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Example_Manual_Feature_Recognition_3.gif" alt="Example_Manual_Feature_Recognition_3.gif" width="368" height="261" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Das System erkennt automatisch alle Flächen die zum gewählten Durchbruch gehören." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Example_Manual_Feature_Recognition_4.gif" alt="Example_Manual_Feature_Recognition_4.gif" width="647" height="256" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Klicken Sie [eine] Fläche der [äußeren Geometrie] an." %}</p>
-<p>{% trans "Das System erkennt wieder automatisch alle Flächen die zur Außenkontur gehören." %}</p>
-<p><img src="../Example_Manual_Feature_Recognition_5.gif" alt="Example_Manual_Feature_Recognition_5.gif" width="358" height="247" border="0"/></p>
-<p>{% trans "Übernehmen Sie die Auswahl mit @." %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "Für jedes gewählte Objekt erzeugt das System ein [separates Feature] im [FeatureManager]. Da zwei Objekte gewählt wurden, müssten 2 Features existieren:" %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Example_Manual_Feature_Recognition_6.gif" alt="Example_Manual_Feature_Recognition_6.gif" width="250" height="103" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Jetzt noch aus den Features [Bearbeitungsoperationen] und [Figuren] erzeugen." %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "Klicken Sie mit der [rechten] Maustaste im [Feature Manager] auf den Zweig @ und wählen Sie im Kontextmenü [Erzeuge Figuren + Bearbeitungen von Features]." %}</p>
-<p>{% trans "Diese Funktion erzeugt [Bearbeitungsfiguren] (2D Bearbeitungsgeometrien) sowie [Bearbeitungen] und übergibt diese an die #Operationsliste#." %}</p>
-<p>{% trans "[Hinweis:] Sie können Sie auch [einzelne] Features auswählen." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Wire_Expert_Create_Figures_and_Operations_1.gif" alt="Wire_Expert_Create_Figures_and_Operations_1.gif" width="553" height="201" border="0"/></p>
-<p class="hcp2"> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Eigenes Weiterarbeiten ...." %}</p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;"> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Siehe auch: #Erzeuge Figuren + Bearbeitungen von Features#" %}</p>
-<p class="Tip_Note_Heading"> </p>
+ <a name="642b3b9347ca42c9b00b820c00c373fa=1">
+ </a>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    手动特征检测
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此示例旨在展示如何
+   </font>
+   <font style="vertical-align: inherit;">
+    通过使用鼠标手动选择要加工的表面来
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     半自动创建切削操作。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     右键
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     单击
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     功能管理器
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    中
+   </font>
+   <font style="vertical-align: inherit;">
+    的
+   </font>
+   <font style="vertical-align: inherit;">
+    主题
+   </font>
+  </font>
+  <img alt="Wire_Expert_Create_Figures_and_Operations_0.gif" border="0" height="30" src="../Wire_Expert_Create_Figures_and_Operations_0.gif" width="107"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    将打开上下文菜单。
+   </font>
+   <font style="vertical-align: inherit;">
+    选择
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     手动特征创建
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="Example_Manual_Feature_Recognition_1.gif" border="0" height="133" src="../Example_Manual_Feature_Recognition_1.gif" width="510"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     将显示“新
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     功能”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+   <font style="vertical-align: inherit;">
+    在对话框中，激活
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “手动使用自动表面连接”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果选择此选项，则单击曲面，系统会自动查找连接到所选曲面的所有易蚀曲面。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="Example_Manual_Feature_Recognition_2.gif" border="0" height="692" src="../Example_Manual_Feature_Recognition_2.gif" width="379"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    单击
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     内部开口
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    的
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     区域
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="Example_Manual_Feature_Recognition_3.gif" border="0" height="261" src="../Example_Manual_Feature_Recognition_3.gif" width="368"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    系统自动识别属于所选突破的所有区域。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="Example_Manual_Feature_Recognition_4.gif" border="0" height="256" src="../Example_Manual_Feature_Recognition_4.gif" width="647"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    单击
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     外部几何体
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    的
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     曲面
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    系统自动识别属于外轮廓的所有区域。
+   </font>
+  </font>
+ </p>
+ <p>
+  <img alt="Example_Manual_Feature_Recognition_5.gif" border="0" height="247" src="../Example_Manual_Feature_Recognition_5.gif" width="358"/>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    用 接受选择
+   </font>
+  </font>
+  <img alt="好的.gif" border="0" height="24" src="../OK.gif" width="23"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对于每个选定的对象，系统会
+   </font>
+   <font style="vertical-align: inherit;">
+    在
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     FeatureManager 设计树中创建一个
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单独的特征
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+   <font style="vertical-align: inherit;">
+    由于选择了两个对象，因此应该存在 2 个特征：
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="Example_Manual_Feature_Recognition_6.gif" border="0" height="103" src="../Example_Manual_Feature_Recognition_6.gif" width="250"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    现在根据特征创建
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     加工操作
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     图形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     右键
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    单击
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “特征管理器”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    中的
+   </font>
+   <font style="vertical-align: inherit;">
+    分支
+   </font>
+  </font>
+  <img alt="Wire_Expert_Create_Figures_and_Operations_0.gif" border="0" height="30" src="../Wire_Expert_Create_Figures_and_Operations_0.gif" width="107"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，然后从上下文菜单中选择
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “创建图形 + 特征编辑”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此功能创建
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     加工图形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    （2D 加工几何形状）以及
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     加工操作
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    并将它们传输到
+   </font>
+  </font>
+  <a href="../Operationsmanager/Bearbeitungs_Register_Operationsmanager.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     操作列表
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp1" color="#0000FF">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     注意：
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    您还可以选择
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单独的
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    功能。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="Wire_Expert_Create_Figures_and_Operations_1.gif" border="0" height="201" src="../Wire_Expert_Create_Figures_and_Operations_1.gif" width="553"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    继续自己打工……
+   </font>
+  </font>
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    另请参阅：
+   </font>
+  </font>
+  <a href="Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     创建角色+编辑特征
+    </font>
+   </font>
+  </a>
+ </p>
+ <p class="Tip_Note_Heading">
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

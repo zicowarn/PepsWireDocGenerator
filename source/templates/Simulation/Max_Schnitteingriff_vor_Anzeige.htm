@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,10 +33,87 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Max. Schnitteingriff vor Anzeige" %}</p><p>{% trans "Diese Einstellung überschreibt die Einstellung #[Anzahl der Schnitte zwischen jeder Anzeige]#, wenn lange Geometrieelemente bearbeitet werden." %}</p>
-<p>{% trans "[Beispiel]: Angenommen die [Anzahl der Schnitte zwischen jeder Anzeige] ist auf 20 eingestellt und die nächsten 20 Schnitte sind jeweils 1 mm lang." %}</p>
-<p>{% trans "Dies würde heißen, die Simulationsgrafik würde erst nach 20 mm neu aufgebaut." %}</p>
-<p>{% trans "Ist die [Max. Schnitteingriff vor Anzeige] jedoch auf z.B. 5 mm eingestellt, würde ein Neuaufbau der Simulationsgrafik in 5 mm Intervallen erfolgen." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    显示前最大切削干预量
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    编辑长几何特征时，
+   </font>
+   <font style="vertical-align: inherit;">
+    此设置会覆盖
+   </font>
+  </font>
+  <a href="Anzahl_der_Schnitte_zwischen_jeder_Anzeige.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      每个显示之间的切削次数设置。
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     示例
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：假设
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     每个显示器之间的切割次数
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    设置为 20，接下来的 20 个切割长度均为 1 毫米。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这意味着模拟图形只能在 20 毫米后重建。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    然而，例如，如果
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     将显示前的最大切削干预
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    设置为5毫米，则将以5毫米的间隔重建模拟图形。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

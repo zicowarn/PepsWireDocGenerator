@@ -36,29 +36,286 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <h1>{% trans "Der Operationsmanager" %}</h1><p> </p>
-<p>{% trans "Der [Operationsmanager] listet alle vorhandenen Bearbeitungsoperationen auf, sowie alle vorhandenen Solidgeometrien." %}</p>
-<p>{% trans "Mit dem [Operationsmanager] können Sie neue Bearbeitungsoperationen definieren, vorhandene Operationen verändern, deren Reihenfolge verändern und vorhandene Solidgeometrien manipulieren." %}</p>
-<p>{% trans "Der [Operationsmanager] wird auf der [linken] Bildschirmseite angezeigt. Ob er angezeigt wird oder nicht, können Sie mit der Menüfolge [Ansicht / Operationsmanager] [AN/AUS] festlegen." %}</p>
-<p>{% trans "Die Breite des [Operationsmanagers] läst sich einstellen. Klicken Sie dazu mit [linken] Maustaste auf den rechten Rand des Operationsmanagers, halten Sie die Maustaste fest und ziehen Sie den Manager auf eine passende Größe." %}</p>
-<p>{% trans "Der [Operationsmanager] verfügt über vier Register - nämlich #[Geometrie]#, #[Bearbeitung]#, #[Features]# (optional) und #[Parameter]# (optional)." %}</p>
-<p>{% trans "Wählt man das Register #[Geometrie]# listet der [Operationsmanager] alle erzeugten oder importierten Solidgeometrien in der Form einer Baumstruktur auf." %}</p>
-<p>{% trans "Bei Wahl des Registers #[Bearbeitung]# werden alle vorhandenen [Bearbeitungsoperationen] aufgelistet." %}</p>
-<p>{% trans "Die Register #Features# und #Parameter# sind Bedienelemente des optionalen Moduls #WIRE-Expert# zur automatischen Featureerkennung." %}</p>
-<p class="hcp2"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp2"> </p>
-<p><img src="../work_space_editor_wir_tabs_shg.gif" usemap="#AreaMap0" alt="work_space_editor_wir_tabs_shg.gif" width="298" height="32" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="75, 0, 143, 32" href="Bearbeitungs_Register_Operationsmanager.htm" alt=""/>
-<area shape="rect" coords="4, 0, 70, 31" href="Geometrie_Register_Operationsmanager.htm" alt=""/>
-<area shape="rect" coords="220, 1, 295, 33" href="../WIRE_Expert_FeatureManager/WIRE_Expert_FeatureManager.htm" alt=""/>
-<area shape="rect" coords="143, 0, 217, 31" href="../WIRE_Expert_FeatureManager/Parameter_Register_Operationsmanager_.htm" alt=""/>
-</map> </p>
-<p class="hcp2"> </p>
-<p class="Hinweis">{% trans "Hinweise:" %}</p>
-<p>{% trans "Die Breite des [Operationsmanager], sowie ob dieser bei einem Neustart des Systems angezeigt wird oder nicht, können Sie abspeichern." %}</p>
-<p>{% trans "Wählen Sie dazu das Menü [Datei] und dort [Einstellungen] und dann [Einstellungen speichern]." %}</p>
-
+<h1>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">操作管理</font>
+    </font>
+  </h1>
+  <p>&nbsp;</p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">操作</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">管理</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">列出了所有现有的加工操作以及所有现有的实体几何形状。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">使用</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">操作管理器</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">，您可以定义新的加工操作、修改现有操作、更改其顺序以及操作现有实体几何形状。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">操作</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">管理器</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">出现在</font>
+      <font style="vertical-align: inherit;">屏幕左侧</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">。</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">您可以使用菜单序列View / Operations Manager </font>
+      </font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">ON/OFF</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">指定是否显示它</font>
+      <font style="vertical-align: inherit;">
+        。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;"></font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">操作管理器</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">的宽度</font>
+      <font style="vertical-align: inherit;">
+        可以调整。</font>
+      <font style="vertical-align: inherit;">为此，请用鼠标</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">左键</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">单击
+        操作管理器的右边缘，按住鼠标按钮并将管理器拖动到适当的大小。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">Operations </font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">Manager</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">有四个选项卡 - 即</font>
+    </font><a href="Geometrie_Register_Operationsmanager.htm">
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">“几何”</font>
+        </font>
+      </font>
+    </a>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">、</font>
+    </font><a href="Bearbeitungs_Register_Operationsmanager.htm">
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">“编辑”</font>
+        </font>
+      </font>
+    </a>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">、</font>
+    </font><a href="../WIRE_Expert_FeatureManager/WIRE_Expert_FeatureManager.htm">
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">“特征</font>
+        </font>
+      </font>
+    </a>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">”（可选）和</font>
+    </font><a href="../WIRE_Expert_FeatureManager/Parameter_Register_Operationsmanager_.htm">
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">“参数</font>
+        </font>
+      </font>
+    </a>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">”（可选）。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">如果选择</font>
+    </font><a href="Geometrie_Register_Operationsmanager.htm">
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">几何选项</font>
+        </font>
+      </font>
+    </a>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">卡， Operations </font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">Manager</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">将以
+        树结构的形式列出所有创建或导入的实体几何。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">当您选择</font>
+    </font><a href="Bearbeitungs_Register_Operationsmanager.htm">
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">“加工”</font>
+        </font>
+      </font>
+    </a>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">选项卡时，将列出所有现有的
+      </font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">加工操作</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">“</font>
+    </font><a href="../WIRE_Expert_FeatureManager/WIRE_Expert_FeatureManager.htm">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">功能”</font>
+      </font>
+    </a>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+        和</font>
+    </font><a href="../WIRE_Expert_FeatureManager/Parameter_Register_Operationsmanager_.htm">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">“参数”</font>
+      </font>
+    </a>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">选项卡
+        是可选</font>
+    </font><a href="../WIRE_Expert_FeatureManager/WIRE_Expert_FeatureManager.htm">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">WIRE-Expert</font>
+      </font>
+    </a>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">模块的控制元素
+        ，用于自动功能识别。</font>
+    </font>
+  </p>
+  <p class="hcp2">&nbsp;</p>
+  <p>
+    <font color="#FF0000" style="font-style: italic;">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">单击下图的各个区域可访问帮助文本。</font>
+      </font>
+    </font>
+  </p>
+  <p class="hcp2">&nbsp;</p>
+  <p><img alt="work_space_editor_wir_tabs_shg.gif" border="0" height="32" src="../work_space_editor_wir_tabs_shg.gif" usemap="#AreaMap0" width="298" />
+    <map id="AreaMap0" name="AreaMap0">
+      <area alt="" coords="75, 0, 143, 32" href="Bearbeitungs_Register_Operationsmanager.htm" shape="rect" />
+      <area alt="" coords="4, 0, 70, 31" href="Geometrie_Register_Operationsmanager.htm" shape="rect" />
+      <area alt="" coords="220, 1, 295, 33" href="../WIRE_Expert_FeatureManager/WIRE_Expert_FeatureManager.htm" shape="rect" />
+      <area alt="" coords="143, 0, 217, 31" href="../WIRE_Expert_FeatureManager/Parameter_Register_Operationsmanager_.htm" shape="rect" />
+    </map>
+  </p>
+  <p class="hcp2">&nbsp;</p>
+  <p class="Hinweis">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">提示：</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">您可以保存</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">Operations Manager</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">的宽度，以及系统重新启动时是否显示。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">为此，请选择</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">“文件”</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">菜单
+        ，然后选择</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">“设置”</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">，然后选择
+      </font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">“保存设置”</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">。</font>
+    </font>
+  </p>
 {% endblock %}
 {% endlinebreakless %}

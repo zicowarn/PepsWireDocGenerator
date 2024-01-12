@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,10 +33,87 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "@ Draht, Verdeckte Kanten, Solid ohne Kanten, Solid mit Kanten" %}</p><p>{% trans "Mit den Schaltflächen [Draht] @[, Verdeckte Kanten] @[, Solid ohne Kanten] @[, Solid mit Kanten] @ können Sie die Darstellungsart der [Solid-Simulation] verändern." %}</p>
-<p>{% trans "Das folgende Bild zeigt die Wirkung der verschiedenen Modi:" %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p><img src="../Simulations_Modi1.gif" alt="Simulations_Modi1.gif" width="689" height="409" border="0"/></p>
+ <p class="dialog">
+  <img alt="模拟_Modi1a.gif" border="0" height="22" src="../Simulations_Modi1a.gif" width="106"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    线材、隐藏边缘、无边缘实心、有边缘实心
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    您可以使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “线”
+    </font>
+   </font>
+  </font>
+  <img alt="模拟_Modi1a1.gif" border="0" height="19" src="../Simulations_Modi1a1.gif" width="22"/>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     、“隐藏边”
+    </font>
+   </font>
+  </font>
+  <img alt="模拟_Modi1a2.gif" border="0" height="19" src="../Simulations_Modi1a2.gif" width="23"/>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     、“无边实体”
+    </font>
+   </font>
+  </font>
+  <img alt="模拟_Modi1a3.gif" border="0" height="18" src="../Simulations_Modi1a3.gif" width="22"/>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     、“带边实体”按钮来更改
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     实体模拟
+    </font>
+   </font>
+  </font>
+  <img alt="模拟_Modi1a3.gif" border="0" height="18" src="../Simulations_Modi1a3.gif" width="22"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    的显示类型
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图展示了不同模式的效果：
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <img alt="模拟_Modi1.gif" border="0" height="409" src="../Simulations_Modi1.gif" width="689"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

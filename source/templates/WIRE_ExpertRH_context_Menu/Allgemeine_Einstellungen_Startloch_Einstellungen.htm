@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,18 +35,245 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Allgemeine Einstellungen" %}</p><p>{% trans "[Änderungen für vorhandene Features ausführen]" %}</p>
-<p>{% trans "Ist diese Option aktiv, und ändert man im Dialog [Startloch-Einstellungen] die Startloch-Einstellung für eine Standardform (z.B. ein Kreis), dann ändern sich automatisch die Startlochposition alle in der Zeichnung vorhandenen Kreis-Feature." %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "[Startloch zentrieren wenn Durchmesser kleiner als]" %}</p>
-<p>{% trans "Bei Bohrungen mit großen Durchmessern soll das Startloch häufig [nicht] im Kreiszentrum liegen, sondern in einem einstellbaren Abstand zum Kreisdurchmesser." %}</p>
-<p class="Block-Text">{% trans "Bei Bohrungen mit kleinen Durchmessern, soll das Startloch jedoch im Kreiszentrum liegen. Hier können Sie einstellen, ab welchem Kreisdurchmesser das Startloch nicht mehr im Kreiszentrum liegt." %}</p>
-<p>{% trans "Das folgende Bild zeigt das Startloch [im Zentrum] der [zwei kleinen Bohrungen] aber [nicht] bei der [großen Bohrung], da deren Durchmesser kleiner ist als 30 mm." %}</p>
-<p><img src="../Dont_center_Starthole_with_large_diameter.gif" alt="Dont_center_Starthole_with_large_diameter.gif" width="343" height="170" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "[Einfahrabstand]" %}</p>
-<p>{% trans "An dieser Stelle können Sie den [generellen Startlochabstand] einstellen." %}</p>
-<p>{% trans "Dieser Abstand kommt zur Anwendung, wenn im Dialog [#Startloch-Einstellungen#] für ein Feature [kein] spezieller Startlochabstand vorgegeben wurde oder im Dialog[ #Feature Erkennungs Einstellungen#] die Option [#Startlocheinstellungen verwendenen# ]aktiviert wurde." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    常规设置
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     对现有功能进行更改
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     如果此选项处于活动状态，并且您在“起始孔设置”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框中更改标准形状（例如圆形）的起始孔设置
+   </font>
+   <font style="vertical-align: inherit;">
+    ，则绘图中所有圆形特征的起始孔位置将自动更改。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     如果直径小于，请居中起始孔
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对于大直径的孔，起始孔通常不应
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     位于
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    圆的中心，而应位于距圆直径可调节的距离处。
+   </font>
+  </font>
+ </p>
+ <p class="Block-Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    然而，对于小直径的孔，起始孔应位于圆的中心。
+   </font>
+   <font style="vertical-align: inherit;">
+    您可以在此处设置起始孔不再位于圆中心的圆直径。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图所示的起始孔位于
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     两个小孔
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    的
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     中心
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，但
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     不在
+    </font>
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     大孔
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    中
+   </font>
+   <font style="vertical-align: inherit;">
+    ，因为其直径小于 30 毫米。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <img alt="Dont_center_Starthole_with_large_diameter.gif" border="0" height="170" src="../Dont_center_Starthole_with_large_diameter.gif" width="343"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     进入距离
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此时即可设定
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     一般起始孔距
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <a href="Startloch_Einstellungen.htm">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      如果在“起始孔设置”
+     </font>
+    </font>
+   </a>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     对话框中没有
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    为特征指定特定的起始孔距离
+   </font>
+   <font style="vertical-align: inherit;">
+    ，或者在
+   </font>
+   <span style="font-weight: bold;">
+    <a href="Feature_Erkenungs_Einstellungen.htm" style="font-weight: bold;">
+     <font style="vertical-align: inherit;">
+      “特征识别设置”对话框中激活了
+     </font>
+    </a>
+   </span>
+   <font class="hcp1">
+    <a href="Startloch_Einstellungen_verwenden_Feature-Erkenungs_Einstellungen.htm">
+     <font style="vertical-align: inherit;">
+      “使用起始孔
+     </font>
+    </a>
+   </font>
+   <font style="vertical-align: inherit;">
+    设置”选项
+   </font>
+   <font style="vertical-align: inherit;">
+    ，则使用此距离
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <span style="font-weight: bold;">
+   <a href="Feature_Erkenungs_Einstellungen.htm" style="font-weight: bold;">
+    <font style="vertical-align: inherit;">
+    </font>
+   </a>
+  </span>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <a href="Startloch_Einstellungen_verwenden_Feature-Erkenungs_Einstellungen.htm">
+    <font style="vertical-align: inherit;">
+    </font>
+   </a>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

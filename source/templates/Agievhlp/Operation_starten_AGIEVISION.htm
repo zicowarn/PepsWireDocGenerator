@@ -34,38 +34,87 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kastoum" style="border-top: 1.50pt solid #0000ff; border-bottom: 1.50pt solid #0000ff; border-left: 1.50pt solid #0000ff; border-right: 1.50pt solid #0000ff;">{% trans "Operation starten ... (AGIEVISION)" %}</p><p>{% trans "Dieser Dialog ist immer die erste Bearbeitungsanweisung. In dem Dialog werden der Name der NC-Ausgabedatei und andere Parameter festgelegt, die für die NC-Daten benötigt werden." %}</p><p>{% trans "Falls der [Programmstart] Dialog noch nicht ausgefüllt wurde, ruft das System diese Box automatisch auf und erst anschließend den Dialog [Operation starten]." %}</p>
-<p>{% trans "Jede neue Operation führt zu einem weiteren Eintrag in der [Operationsliste] und zu einer neuen NC-Ausgabedatei." %}</p>
-<p>{% trans "Auf diese Weise können Sie mit einem Programm mehrere NC-Ausgabedateien erzeugen." %}</p>
-<p> </p>
-<p style="color: #ff0000; font-style: italic;">{% trans "Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen." %}</p>
-<p> </p>
-<p><img src="../OP_STaAV_shg.gif" usemap="#AreaMap0" alt="OP_STaAV_shg.gif" width="384" height="345" border="0"/> <map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="15,105,363,176" href="javascript:BSSCPopup('Messpunkt_AGIEVISION.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="16,51,366,106" href="javascript:BSSCPopup('NC_Dateiname_AGIEVISION.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="14,176,368,228" href="javascript:BSSCPopup('../wirhlp10/Referenzposition_OP_Start.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="20,237,181,262" href="javascript:BSSCPopup('Sekundaerebene_AGIEVISION.htm',400,300);" id="area4" alt=""/>
-<area shape="rect" coords="21,265,181,295" href="javascript:BSSCPopup('Referenzhoehe_AGIEVISION.htm',400,300);" id="area5" alt=""/>
-<area shape="rect" coords="10,312,85,334" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area6" alt=""/>
-<area shape="rect" coords="90,313,173,335" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area7" alt=""/>
-<area shape="rect" coords="179,312,281,335" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area8" alt=""/>
-<area shape="rect" coords="287,314,370,334" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area9" alt=""/>
-<area shape="rect" coords="67,32,118,50" href="../wirhlp10/Optionen_Register_Operation_starten.htm" alt=""/>
-<area shape="rect" coords="202,31,275,52" href="Technologie_Register_Operation_starten_AGIEVISION.htm" alt=""/></map></p>
-<script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
-        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
-        FilePopupInit('area1');
-        FilePopupInit('area2');
-        FilePopupInit('area3');
-        FilePopupInit('area4');
-        FilePopupInit('area5');
-        FilePopupInit('area6');
-        FilePopupInit('area7');
-        FilePopupInit('area8');
-        FilePopupInit('area9');
-//]]&gt;
-</script>
-
+<p class="Kastoum" style="border-top: 1.50pt solid #0000ff; border-bottom: 1.50pt solid #0000ff; border-left: 1.50pt solid #0000ff; border-right: 1.50pt solid #0000ff;">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">开始运行... (AGIEVISION)</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">该对话框始终是第一个处理指令。</font>
+      <font style="vertical-align: inherit;">NC 输出文件的名称和 NC 数据所需的其他参数在对话框中指定。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">如果</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">程序启动</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">对话框尚未填写，系统会自动打开此框，然后才会出现</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">启动操作</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">对话框。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;"></font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">每个新操作都会在操作列表</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">中生成另一个条目</font>
+      <font style="vertical-align: inherit;">和一个新的 NC 输出文件。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">这允许您使用一个程序创建多个 NC 输出文件。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p style="color: #ff0000; font-style: italic;">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">单击下图的各个区域可访问帮助文本。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p><img alt="OP_STAAV_shg.gif" border="0" height="345" src="../OP_STaAV_shg.gif" usemap="#AreaMap0" width="384" /> <map id="AreaMap0" name="AreaMap0">
+      <area alt="" coords="15,105,363,176" href="javascript:BSSCPopup('Messpunkt_AGIEVISION.htm',400,300);" id="area1" shape="rect" />
+      <area alt="" coords="16,51,366,106" href="javascript:BSSCPopup('NC_Dateiname_AGIEVISION.htm',400,300);" id="area2" shape="rect" />
+      <area alt="" coords="14,176,368,228" href="javascript:BSSCPopup('../wirhlp10/Referenzposition_OP_Start.htm',400,300);" id="area3" shape="rect" />
+      <area alt="" coords="20,237,181,262" href="javascript:BSSCPopup('Sekundaerebene_AGIEVISION.htm',400,300);" id="area4" shape="rect" />
+      <area alt="" coords="21,265,181,295" href="javascript:BSSCPopup('Referenzhoehe_AGIEVISION.htm',400,300);" id="area5" shape="rect" />
+      <area alt="" coords="10,312,85,334" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area6" shape="rect" />
+      <area alt="" coords="90,313,173,335" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area7" shape="rect" />
+      <area alt="" coords="179,312,281,335" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area8" shape="rect" />
+      <area alt="" coords="287,314,370,334" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area9" shape="rect" />
+      <area alt="" coords="67,32,118,50" href="../wirhlp10/Optionen_Register_Operation_starten.htm" shape="rect" />
+      <area alt="" coords="202,31,275,52" href="Technologie_Register_Operation_starten_AGIEVISION.htm" shape="rect" /></map></p>
+  <script language="JavaScript1.2" type="text/javascript">
+    //<![CDATA[
+    if (typeof (FilePopupInit) != 'function') FilePopupInit = new Function();
+    FilePopupInit('area1');
+    FilePopupInit('area2');
+    FilePopupInit('area3');
+    FilePopupInit('area4');
+    FilePopupInit('area5');
+    FilePopupInit('area6');
+    FilePopupInit('area7');
+    FilePopupInit('area8');
+    FilePopupInit('area9');
+    //]]>
+  </script>
 {% endblock %}
 {% endlinebreakless %}

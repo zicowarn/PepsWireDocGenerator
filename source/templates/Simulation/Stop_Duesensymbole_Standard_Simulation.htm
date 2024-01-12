@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,13 +35,54 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Stop- / Düsensymbole" %}</p><p>{% trans "[Stop-Symbole]: Ist diese Option aktiv, zeigt das System bei einer Simulation alle Stops (M00, M01) in der Form von Symbolen an." %}</p>
-<p> </p>
-<p><img src="../Stop_Symbole.gif" alt="Stop_Symbole.gif" width="198" height="131" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "[Düsen-Symbole]: Ist diese Option aktiv, zeigt das System bei einer Simulation die obere und untere Drahtführung symbolisch an, wenn der Draht eingefädelt ist." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Düsen_Symbole.gif" alt="Düsen_Symbole.gif" width="201" height="176" border="0"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    停止/喷射符号
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     停止符号
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：如果此选项处于活动状态，则系统在模拟期间以符号的形式显示所有停止（M00、M01）。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <img alt="Stop_Symbols.gif" border="0" height="131" src="../Stop_Symbole.gif" width="198"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     喷嘴符号
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：如果此选项处于活动状态，系统会在模拟过程中穿线时以符号方式显示上部和下部导丝器。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="喷嘴_符号.gif" border="0" height="176" src="../Duesen_Symbole.gif" width="201"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -28,8 +27,24 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <h1>{% trans "Preview_Window_Dont_Delete" %}</h1><p>{% trans "Thementext hier eingeben." %}</p>
-<p><img src="../preview.gif" alt="" style="border: none;" border="0"/></p>
+ <h1>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    预览窗口不删除
+   </font>
+  </font>
+ </h1>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    主题文本如下。
+   </font>
+  </font>
+ </p>
+ <p>
+  <img alt="" border="0" src="../preview.gif" style="border: none;"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,12 +28,39 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Wiederherstellen" %}</p><p>{% trans "Hebt die Wirkung der Funktion #Rückgängig# auf." %}</p><script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    恢复
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('Rueckgaengig.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     取消撤消
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    功能的效果
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
         if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
         FilePopupInit('a1');
-//]]&gt;
-</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,19 +33,168 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Erweiterte Erkennung (langsamer)" %}</p><p> </p>
-<p>{% trans "Bei einer #automatischen Feature-Erkennung# kann es passieren, das OPTICAM Feature erkennt (z.B. Sackbohrungen auf der Bauteilunterseite), die eigentlich nicht erkannt werden sollten." %}</p>
-<p>{% trans "Das folgende Bild soll eine solche Situation zeigen. Links das Ergebnis OHNE die Option [Erweiterte Erkennung (langsamer)] und rechts mit." %}</p>
-<p>{% trans "Die [fünf roten Pfeile] kennzeichnen die unerwünschten Feature (Sackbohrungen auf der Bauteilunterseite)." %}</p>
-<p>{% trans "Der [blaue Kreis] markiert die Ausschnittsvergrößerung im dritten Bild." %}</p>
-<p><img src="../image/Erweiterte_Flächenpueüfung_verwenden_1.gif" alt="" style="border: none;" border="0"/></p>
-<p> </p>
-<p>{% trans "Die Option [Erweiterte Erkennung (langsamer)] kann in solchen Fällen helfen." %}</p>
-<p>{% trans "Die [Erweiterte Erkennung (langsamer)] führt bei einer automatischen Feature-Erkennung, zusätzliche interne Tests aus, die unerwünschte Features entfernen oder deren Anzahl reduziert." %}</p>
-<p> </p>
-<p class="Hinweis">{% trans "Hinweis:" %}</p>
-<p>{% trans "Das Anwenden der [Erweiterten Erkennung] kann die Berechnungszeit der automatischen Feature-Erkennung deutlich erhöhen." %}</p>
-<p> </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    高级检测（较慢）
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通过
+   </font>
+  </font>
+  <a href="Bearbeitungsobjekt_Erkennung_automatisch_.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     自动特征识别
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，OPTICAM 可能会识别出实际上不应识别的特征（例如组件底部的盲孔）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图就是为了展示这种情况。
+   </font>
+   <font style="vertical-align: inherit;">
+    左边是不使用
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     高级检测选项（速度较慢）的
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    结果，右边是使用高级检测选项的结果。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    五个
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     红色箭头
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    表示不需要的功能（组件底部的盲孔）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    蓝色
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     圆圈
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    标记了第三张图像中放大的细节。
+   </font>
+  </font>
+ </p>
+ <p>
+  <img alt="" border="0" src="../image/Erweiterte_Flaechenpueuefung_verwenden_1.gif" style="border: none;"/>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    高级
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     检测（较慢）
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项可以在这种情况下提供帮助。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    高级
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     检测（较慢）
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在自动功能检测期间执行额外的内部测试，以删除或减少不需要的功能的数量。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一个通知：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    应用
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     高级检测
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    可以显着增加自动特征检测的计算时间。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

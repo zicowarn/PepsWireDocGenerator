@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,9 +33,97 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Sichtbare Facettierung" %}</p><p>{% trans "Diese Einstellung findet Anwendung, um die Simulationsgeschwindigkeit von komplexen Werkzeugen und Werkzeughaltern, die mit einem sehr kleinem [Facettierungswert] simuliert werden, zu verbessern." %}</p>
-<p>{% trans "Durch Erhöhen des Wertes für die [Sichtbare Facettierung], zeigt das System Werkzeuge/Halter mit weniger Facetten an, ohne das dies einen Einfluss auf einen #[Zielteilvergleich]# hätte." %}</p>
-<p>{% trans "Stellt man den Wert für die [Sichtbare Facettierung] auf [0] ein, verwendet das System die Facettierungseinstellungen für das Werkzeug und den Werkzeughalter." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    可见刻面
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此设置用于提高以非常小的
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     刻面值
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    模拟的复杂刀具和刀柄的模拟速度。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通过增加
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     可见刻
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    面值，系统将显示具有较少刻面的工具/夹具，而不影响
+   </font>
+  </font>
+  <a href="Vergleich_Zielteilvergleich.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      目标零件比较
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果将
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     可见刻面值
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    设置为
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     0
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，系统将使用刀具和刀架的刻面设置。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

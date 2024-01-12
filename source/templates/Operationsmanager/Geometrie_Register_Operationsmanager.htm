@@ -37,44 +37,206 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <h1>{% trans "Geometrie Register (Operationsmanager)" %}</h1><p> </p><p>{% trans "Das Register [Geometrie] wird verwendet, um alle Solidgeometrieelemente aufzulisten ([Solids], [Sheet-Bodies], [Draht-Bodies] und [Baugruppen]) die erzeugt, importiert oder abgeleitet wurden." %}</p>
-<p>{% trans "Sie können die gezeigt Liste verwenden, um eine Solidgeometrie zu identifizieren. Klickt man auf ein Symbol für eine Solidgeometrie, dann zeigt das System die gewählte Geometrie hervorgehoben im Grafikfenster an." %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "@" %}</p>
-<p class="hcp2"> </p>
-<p class="hcp3">{% trans "Ein Klick mit der [rechten] Maustaste auf einen Eintrag im Operationsmanager, führt zum Aufruf eines Kontextmenüs." %}</p>
-<p class="hcp3">{% trans "Die Optionen [Löschen], [Umbenennen] und [Eigenschaften] dienen zum Löschen, Umbenennen oder Anzeigen der Eigenschaften (Schwerpunkt, Fläche, Masse ....) der gewählten Solidgeometrie." %}</p>
-<p>{% trans "Da es aber oftmals nötig ist, z.B. die Kanten einer Solidgeometrie abzuleiten, verfügt das System im Kontextmenü über eine Konvertierroutine (Option [Konvertieren]), mit der man die benötigten Geometrieelemente ableiten kann." %}</p>
-<p>{% trans "Siehe Befehl [Geometrien konvertieren] im Menü [Ändern]." %}</p>
-<p>{% trans "Nähere Informationen über eine Solid-Geometrie kann ebenfalls ermitteln, indem man die Maus über eine Solid-Geometrie positioniert und dann die [rechte] Maustaste klickt." %}</p>
-<p class="hcp2"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp2"> </p>
-<p class="hcp3"><img src="../geomedit_shg.gif" usemap="#AreaMap0" alt="geomedit_shg.gif" width="393" height="258" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="105, 43, 398, 68" href="javascript:BSSCPopup('Eigenschaften_Geometrie_Register_Kontextmenue.htm',400,400);" id="area1" alt=""/>
-<area shape="rect" coords="104, 68, 393, 89" href="javascript:BSSCPopup('Umbenennen_Geometrie_Register_Kontextmenue.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="106, 112, 396, 139" href="javascript:BSSCPopup('Solid_ausblenden_einblenden_Geometrie_Register_Kontextmenue.htm',400,500);" id="area3" alt=""/>
-<area shape="rect" coords="102, 162, 391, 185" href="javascript:BSSCPopup('Konvertieren_Geometrie_Register_Kontextmenue.htm',400,500);" id="area4" alt=""/>
-<area shape="rect" coords="106, 87, 395, 112" href="javascript:BSSCPopup('Loeschen_Geometrie_Register_Kontextmenue.htm',400,300);" id="area5" alt=""/>
-<area shape="rect" coords="102, 205, 387, 228" href="Common_049.chm::/CommonHelp5/Rendering_fuer_Solids_einstellen.htm" alt=""/>
-<area shape="rect" coords="103, 185, 392, 206" href="Common_049.chm::/CommonHelp3/Umriss_projizieren_CAD_Menue.htm" alt=""/>
-<area shape="rect" coords="106, 230, 396, 257" href="javascript:BSSCPopup('Solid_ausblenden_einblenden_Geometrie_Register_Kontextmenue.htm',400,300);" id="area6" alt=""/>
-<area shape="rect" coords="103, 139, 390, 162" href="javascript:BSSCPopup('Alle_Solids_ausblenden_ausser_diesem.htm',400,600);" id="area7" alt=""/>
-</map>  </p>
-<p class="hcp2"> </p>
-<p>{% trans "[Siehe auch:] #[Auswahl von Solid-Geometrieelementen]#" %}</p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
-	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
-	FilePopupInit('area1');
-	FilePopupInit('area2');
-	FilePopupInit('area3');
-	FilePopupInit('area4');
-	FilePopupInit('area5');
-	FilePopupInit('area6');
-	FilePopupInit('area7');
-	FilePopupInit('a1');
-//]]&gt;</script>
-
+<h1>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">几何管理器（操作管理器）</font>
+    </font>
+  </h1>
+  <p>&nbsp;</p>
+  <p>
+    <font style="vertical-align: inherit;"></font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">“几何”</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">选项卡</font>
+      <font style="vertical-align: inherit;">用于列出</font>
+      <font style="vertical-align: inherit;">已创建、导入或派生的所有实体几何元素（</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">实体</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">、
+      </font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">片体</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">、</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">线体</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+        和</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">装配体）。</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">您可以使用显示的列表来识别实体几何图形。</font>
+      <font style="vertical-align: inherit;">如果单击实体几何图形的符号，系统会在图形窗口中突出显示所选几何图形。</font>
+    </font>
+  </p>
+  <p class="hcp2">&nbsp;</p>
+  <p><img alt="geomtabwsm.gif" border="0" height="221" src="../geomtabwsm.gif" width="341" /> </p>
+  <p class="hcp2">&nbsp;</p>
+  <p class="hcp3">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">右键</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">单击</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+        操作管理器中的条目将打开上下文菜单。</font>
+    </font>
+  </p>
+  <p class="hcp3">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">删除</font>
+      <font style="vertical-align: inherit;">、
+      </font>
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">重命名</font>
+      </font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">和</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">属性</font>
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">选项</font>
+      </font>
+      <font style="vertical-align: inherit;">
+        用于删除、重命名或显示所选实体几何的属性（重心、面积、质量...）。</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;"></font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;"></font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">然而，例如，由于通常需要导出实体几何的边，因此系统在上下文菜单（
+      </font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">“转换”</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">选项）中有一个转换例程，您可以使用它导出所需的几何元素。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">请参见</font>
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">“修改”</font>
+      </font>
+      <font style="vertical-align: inherit;">
+        菜单上的</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">“转换几何图形”</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">命令。</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;"></font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">您还可以通过将鼠标放在实体几何上然后单击
+      </font>
+      <font style="vertical-align: inherit;">鼠标</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">右键来查找有关实体几何的更多信息。</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+  </p>
+  <p class="hcp2">&nbsp;</p>
+  <p>
+    <font color="#FF0000" style="font-style: italic;">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">单击下图的各个区域可访问帮助文本。</font>
+      </font>
+    </font>
+  </p>
+  <p class="hcp2">&nbsp;</p>
+  <p class="hcp3"><img alt="geomedit_shg.gif" border="0" height="258" src="../geomedit_shg.gif" usemap="#AreaMap0" width="393" />
+    <map id="AreaMap0" name="AreaMap0">
+      <area alt="" coords="105, 43, 398, 68" href="javascript:BSSCPopup('Eigenschaften_Geometrie_Register_Kontextmenue.htm',400,400);" id="area1" shape="rect" />
+      <area alt="" coords="104, 68, 393, 89" href="javascript:BSSCPopup('Umbenennen_Geometrie_Register_Kontextmenue.htm',400,300);" id="area2" shape="rect" />
+      <area alt="" coords="106, 112, 396, 139" href="javascript:BSSCPopup('Solid_ausblenden_einblenden_Geometrie_Register_Kontextmenue.htm',400,500);" id="area3" shape="rect" />
+      <area alt="" coords="102, 162, 391, 185" href="javascript:BSSCPopup('Konvertieren_Geometrie_Register_Kontextmenue.htm',400,500);" id="area4" shape="rect" />
+      <area alt="" coords="106, 87, 395, 112" href="javascript:BSSCPopup('Loeschen_Geometrie_Register_Kontextmenue.htm',400,300);" id="area5" shape="rect" />
+      <area alt="" coords="102, 205, 387, 228" href="Common_049.chm::/CommonHelp5/Rendering_fuer_Solids_einstellen.htm" shape="rect" />
+      <area alt="" coords="103, 185, 392, 206" href="Common_049.chm::/CommonHelp3/Umriss_projizieren_CAD_Menue.htm" shape="rect" />
+      <area alt="" coords="106, 230, 396, 257" href="javascript:BSSCPopup('Solid_ausblenden_einblenden_Geometrie_Register_Kontextmenue.htm',400,300);" id="area6" shape="rect" />
+      <area alt="" coords="103, 139, 390, 162" href="javascript:BSSCPopup('Alle_Solids_ausblenden_ausser_diesem.htm',400,600);" id="area7" shape="rect" />
+    </map> &nbsp;
+  </p>
+  <p class="hcp2">&nbsp;</p>
+  <p>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">另请参见：</font>
+      </font>
+    </font> <a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('Auswahl_von_Solid_Geometrieelementen.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">选择实体几何元素</font>
+        </font>
+      </font>
+    </a>
+  </p>
+  <script language="JavaScript1.2" type="text/javascript">//<![CDATA[
+    if (typeof (FilePopupInit) != 'function') FilePopupInit = new Function();
+    FilePopupInit('area1');
+    FilePopupInit('area2');
+    FilePopupInit('area3');
+    FilePopupInit('area4');
+    FilePopupInit('area5');
+    FilePopupInit('area6');
+    FilePopupInit('area7');
+    FilePopupInit('a1');
+    //]]></script>
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,12 +33,256 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Transparenz" %}</p><p>{% trans "Hier können Sie die [Transparenz] (Durchsichtigkeit) für die Simulationsgrafiken [Rohteile], [Zielteile], [Düsen] und [Draht] einstellen." %}</p>
-<p>{% trans "Aktivieren Sie dazu die Option [Aktivieren]. Dies schaltet eine Liste frei, in der Sie auswählen können, welche Simulationsgrafik ([Rohteile], [Zielteile], [Düsen] oder der [Draht]) transparent dargestellt werden soll." %}</p>
-<p>{% trans "Verwenden Sie anschließend den Schieber @, um den Transparenzgrad für die gewählte Simulationsgrafik einzustellen." %}</p>
-<p>{% trans "Der Wert kann zwischen [0] und [100] liegen, wobei [0] die Simulationsgrafik als [Solid] und [100] die Grafik völlig [transparent] (durchsichtig) anzeigt." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p><img src="../Sol_Sim_Transp.gif" alt="Sol_Sim_Transp.gif" width="742" height="234" border="0"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    透明度
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在这里可以设置
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     原始零件
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     目标零件
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     喷嘴
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     焊丝
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    的模拟图形的
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     透明度
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    （透明度） 。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    为此，请选中
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “启用”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项。
+   </font>
+   <font style="vertical-align: inherit;">
+    这将解锁一个列表，您可以在其中选择应透明显示
+   </font>
+   <font style="vertical-align: inherit;">
+    的模拟图形（
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     原始零件
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     目标零件
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     喷嘴
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     电线）。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    然后使用滑块
+   </font>
+  </font>
+  <img alt="反式按钮.gif" border="0" height="24" src="../trans_buttons.gif" width="110"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    设置所选模拟图形的透明度级别。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该值可以在
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     0
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    到
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     100
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    之间，其中
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     0
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    表示模拟图形为
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     实心
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     100
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    表示图形完全
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     透明
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <img alt="Sol_Sim_Transp.gif" border="0" height="234" src="../Sol_Sim_Transp.gif" width="742"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

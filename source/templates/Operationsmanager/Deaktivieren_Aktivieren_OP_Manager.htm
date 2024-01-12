@@ -34,15 +34,70 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Deaktivieren / Aktivieren" %}</p><p> </p>
-<p>{% trans "[Deaktivieren ]Die gewählte Operation wird nicht simuliert und nicht in die NC-Daten ausgegeben." %}</p>
-<p>{% trans "Das System fügt vor dem Operationsnamen das Symbol @ ein, um die nicht Ausführung der Operation zu kennzeichnen." %}</p>
-<p> </p>
-<p>{% trans "[Aktivieren ]Nimmt eine Operation die mit der Option [Deaktivieren] aus der Bearbeitungsfolge herausgenommen wurde, wieder in die Bearbeitungsfolge auf." %}</p>
-<p>{% trans "Das Symbol @ vor der Operation wird zurückgenommen." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
-<p>{% trans "#[Vorhandene Bearbeitungsoperationen deaktivieren/aktivieren]#" %}</p>
-
+<p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">禁用启用</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">停用</font>
+      </font><br />
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">不模拟所选操作，也不在 NC 数据中输出。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">系统在操作名称前插入 符号</font>
+    </font><img alt="隐藏_操作.gif" border="0" height="24" src="../Hide_Operation.gif" width="48" />
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+        ，表示该操作未执行。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">激活将使用</font>
+      </font><br />
+    </font>
+    <font style="vertical-align: inherit;"></font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">“停用”</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">选项从处理序列中删除的操作返回</font>
+      <font style="vertical-align: inherit;">
+        到处理序列。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;"></font><img alt="隐藏_操作.gif" border="0" height="24" src="../Hide_Operation.gif" width="48" />
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">操作前的</font>
+      <font style="vertical-align: inherit;">符号被撤销。</font>
+    </font>
+  </p>
+  <p style="margin-top: 0; margin-bottom: 0;">&nbsp;</p>
+  <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">它是这样完成的：</font>
+    </font>
+  </p>
+  <p><a href="Beispiel_Vorhandene_Bearbeitungsoperationen_deaktivieren_aktivieren.htm">
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">禁用/启用现有编辑操作</font>
+        </font>
+      </font>
+    </a>
+  </p>
 {% endblock %}
 {% endlinebreakless %}

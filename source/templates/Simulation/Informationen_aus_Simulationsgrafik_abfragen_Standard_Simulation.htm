@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,8 +28,30 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "@ Informationen aus Simulationsgrafik abfragen" %}</p><p>{% trans "Mit Hilfe dieser Ikonen können Sie beliebige Objekte in der Simulationsgrafik anklicken, wobei das System Informationen über das gewählte Objekt liefert." %}</p>
-<p><img src="../Solid_Sim_Face_Info_1.gif" alt="Solid_Sim_Face_Info_1.gif" width="21" height="23" border="0"/> : Gibt allgemeine Informationen über die Art (z.B. Rohteil, Düse) des gewählten Objektes aus.</p>
+ <p class="dialog">
+  <img alt="Solid_Sim_Face_Info_Staat_Sim.gif" border="0" height="28" src="../Solid_Sim_Face_Info_Std_Sim.gif" width="60"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    从模拟图形中查询信息
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    借助这些图标，您可以单击模拟图形中的任何对象，系统由此提供有关所选对象的信息。
+   </font>
+  </font>
+ </p>
+ <p>
+  <img alt="Solid_Sim_Face_Info_1.gif" border="0" height="23" src="../Solid_Sim_Face_Info_1.gif" width="21"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：输出有关所选对象类型（例如毛坯、喷嘴）的一般信息。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

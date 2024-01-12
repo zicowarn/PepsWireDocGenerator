@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -38,19 +37,208 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <h1 style="font-size: 12pt;"><img src="../Solid_Sim.gif" alt="Solid_Sim.gif" width="32" height="33" align="left" border="0"/> Standard Simulation</h1><p> </p>
-<p>{% trans "Die [ Standard Simulation] dient zur Simulation der programmierten Drahtbahnen MIT Simulation des Materialabtrages." %}</p>
-<p>{% trans "Die Simulation läuft in der Reihenfolge ab, wie sie im #[Operationsmanager]# programmiert wurde." %}</p>
-<p> </p>
-<p>{% trans "Je nachdem ob im Menü die Schaltfläche @ aktiv ist oder nicht, können Sie zwischen [zwei Simulationsmethoden] wählen:" %}</p>
-<p> </p>
-<p>{% trans "#[Solid Simulation]# Schaltfläche @ nicht aktiv." %}</p>
-<p>{% trans "oder" %}</p>
-<p>{% trans "#Maschinenraum Simulation# Schaltfläche @ ist aktiv." %}</p>
-<p> </p>
-<p class="Hinweis">{% trans "Hinweis:" %}</p>
-<p>{% trans "[[Zusätzlich zu den oberhalb beschriebenen Simulationsformen][ ][existiert im Menü ][Simulation][ ein weiterer Simulationsmodus die ]#Drahtmodell-Simulation#] @." %}</p>
-<p>{% trans "Hier erfolgt die Simulation der Drahtbahnen OHNE Materialabtrag." %}</p>
+ <h1 style="font-size: 12pt;">
+  <img align="left" alt="Solid_Sim.gif" border="0" height="33" src="../Solid_Sim.gif" width="32"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    标准模拟
+   </font>
+  </font>
+ </h1>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    标准
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     模拟
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    用于模拟编程的走丝路径以及模拟材料去除。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    模拟按照
+   </font>
+  </font>
+  <a class="hcp2" href="../Operationsmanager/Bearbeitungs_Register_Operationsmanager.htm">
+   <font class="hcp3">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      操作管理器
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    中编程的顺序运行。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    根据按钮
+   </font>
+  </font>
+  <img alt="" border="0" class="hcp4" src="../Aktuelle_Simulation_aktiv.gif"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在菜单中是否处于活动状态，您可以在
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     两种模拟方法
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    之间进行选择：
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <a class="hcp2" href="Solid_Simulation.htm">
+   <font class="hcp3">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      实体模拟
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮
+   </font>
+  </font>
+  <img alt="" border="0" class="hcp4" src="../Aktuelle_Simulation_nicht_aktiv.gif"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    未激活。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或者
+   </font>
+  </font>
+ </p>
+ <p>
+  <a href="Maschinenraum-Simulation_Beschreibung_der_Benutzeroberflaeche/Maschinenraum_Simulation_-_Uebersicht.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     机舱模拟
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮
+   </font>
+  </font>
+  <img alt="" border="0" class="hcp4" src="../Aktuelle_Simulation_aktiv.gif"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    处于活动状态。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一个通知：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="font-weight: bold;">
+   <span class="hcp5">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      除了上面介绍的模拟形式外，
+     </font>
+    </font>
+   </span>
+   <font style="vertical-align: inherit;">
+    <span class="hcp1">
+     <font style="vertical-align: inherit;">
+      Simulation
+     </font>
+    </span>
+    <span class="hcp5">
+     <font style="vertical-align: inherit;">
+      菜单中还有
+     </font>
+    </span>
+    <span class="hcp5">
+     <font style="vertical-align: inherit;">
+      另一种模拟模式：
+     </font>
+    </span>
+    <a class="hcp2" href="Drahtmodell_Simulation.htm">
+     <font style="vertical-align: inherit;">
+      线框模拟
+     </font>
+    </a>
+   </font>
+   <span class="hcp1">
+   </span>
+   <span class="hcp5">
+    <font style="vertical-align: inherit;">
+    </font>
+   </span>
+   <span class="hcp1">
+    <font style="vertical-align: inherit;">
+    </font>
+   </span>
+   <span class="hcp5">
+    <font style="vertical-align: inherit;">
+    </font>
+   </span>
+   <a class="hcp2" href="Drahtmodell_Simulation.htm">
+    <font style="vertical-align: inherit;">
+    </font>
+   </a>
+  </font>
+  <img alt="Sim_Standard.gif" border="0" height="30" src="../Sim_Standard.gif" width="31"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此处模拟导线路径，无需去除材料。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

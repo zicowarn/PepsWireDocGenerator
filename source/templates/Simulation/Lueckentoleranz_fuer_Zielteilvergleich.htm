@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,9 +33,85 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Lückentoleranz für Zielteilvergleich" %}</p><p>{% trans "Bei einem #[Zielteilvergleich]# prüft die Simulationssoftware, ob die Solidgeometrie die das Werkstück bildet, [geschlossen ist oder nicht]." %}</p>
-<p>{% trans "Ist der Solid [offen] (z.B. wegen kleiner Flächenlücken), kann kein Zielteilvergleich ausgeführt werden." %}</p>
-<p>{% trans "Kleinere Lücken zwischen den Flächen eines Solids, können mit Hilfe der [Lückentoleranz] automatisch geschlossen werden." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    用于目标零件比较的间隙公差
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在
+   </font>
+  </font>
+  <a href="Vergleich_Zielteilvergleich.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      比较目标零件
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    时，仿真软件会检查构成工件的实体几何形状
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     是否闭合
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果实体是
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     开放的
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    （例如由于表面间隙较小），则无法进行目标零件比较。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    实体表面之间的较小间隙可以使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     间隙公差
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    自动闭合。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

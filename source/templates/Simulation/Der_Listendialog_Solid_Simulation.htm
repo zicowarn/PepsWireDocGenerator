@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,32 +34,124 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Der Listendialog" %}</p><p>{% trans "Dieser Dialog zeigt 4 verschiedene Listen. Die #Positionsliste# zeigt alle simulierten Verfahrbewegungen und die #Operationenliste# die simulierten Operationen." %}</p><p>{% trans "Die #Kollisionsliste# informiert über eventuell aufgetretene Kollisionen und das #Logbuch# listet alle besonderen Simulationsereignisse auf (Ausfallteile, Kollisionen etc.)." %}</p>
-<p>{% trans "Zudem informieren weitere Felder, ob eine Eilgang- oder Vorschubbewegung ausgeführt wird und welche maximale und minimale Drahtauslenkung simuliert wurde." %}</p>
-<p class="hcp1"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen]" %}</p>
-<p class="hcp1"> </p>
-<p><img src="../Listen_Dia_Solid_Sim_shg.gif" usemap="#AreaMap0" alt="Listen_Dia_Solid_Sim_shg.gif" width="1080" height="129" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="11,2,278,96" href="Positionsliste_Listendialog_Solid_Simulation.htm" alt=""/>
-<area shape="rect" coords="12,97,100,122" href="Positionsliste_Listendialog_Solid_Simulation.htm" alt=""/>
-<area shape="rect" coords="277,4,545,90" href="Operationenliste_Listendialog_Solid_Simulation.htm" alt=""/>
-<area shape="rect" coords="101,99,185,121" href="Operationenliste_Listendialog_Solid_Simulation.htm" alt=""/>
-<area shape="rect" coords="185,100,268,120" href="Kollisionsliste_Listendialog_Solid_Simulation.htm" alt=""/>
-<area shape="rect" coords="545,0,809,90" href="Kollisionsliste_Listendialog_Solid_Simulation.htm" alt=""/>
-<area shape="rect" coords="269,99,353,120" href="Logbuch_Listendialog_Solid_Simulation.htm" alt=""/>
-<area shape="rect" coords="814,1,1077,88" href="Logbuch_Listendialog_Solid_Simulation.htm" alt=""/>
-<area shape="rect" coords="356,97,436,121" href="javascript:BSSCPopup('Alles_Listendialog_Solid_Simulation.htm',400,600);" id="area1" alt=""/>
-<area shape="rect" coords="441,95,473,126" href="javascript:BSSCPopup('Vorschub_Eilgang_Listendialog_Solid_Simulation.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="474,94,504,125" href="javascript:BSSCPopup('Anzeige_der_Bearbeitungsrichtung_Listendialog_Solid_Simulation.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="505, 93, 1074, 126" href="Auslenkungs_und_Bearbeitungshoehenanzeige_Simulation.htm" alt=""/>
-</map> </p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    列表对话框
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此对话框显示 4 个不同的列表。
+   </font>
+   <font style="vertical-align: inherit;">
+    位置
+   </font>
+  </font>
+  <a href="Positionsliste_Listendialog_Solid_Simulation.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     列表
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    显示所有模拟的移动动作，
+   </font>
+  </font>
+  <a href="Operationenliste_Listendialog_Solid_Simulation.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     操作列表
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    显示模拟的操作。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    碰撞
+   </font>
+  </font>
+  <a href="Kollisionsliste_Listendialog_Solid_Simulation.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     列表
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    提供有关可能发生的任何碰撞的信息，
+   </font>
+  </font>
+  <a href="Logbuch_Listendialog_Solid_Simulation.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     日志
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    列出所有特殊模拟事件（故障部件、碰撞等）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    其他字段还提供有关是否正在执行快速移动或进给运动以及模拟的最大和最小焊丝偏转的信息。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域以访问帮助文本
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="Listen_Dia_Solid_Sim_shg.gif" border="0" height="129" src="../Listen_Dia_Solid_Sim_shg.gif" usemap="#AreaMap0" width="1080"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="11,2,278,96" href="Positionsliste_Listendialog_Solid_Simulation.htm" shape="rect"/>
+   <area alt="" coords="12,97,100,122" href="Positionsliste_Listendialog_Solid_Simulation.htm" shape="rect"/>
+   <area alt="" coords="277,4,545,90" href="Operationenliste_Listendialog_Solid_Simulation.htm" shape="rect"/>
+   <area alt="" coords="101,99,185,121" href="Operationenliste_Listendialog_Solid_Simulation.htm" shape="rect"/>
+   <area alt="" coords="185,100,268,120" href="Kollisionsliste_Listendialog_Solid_Simulation.htm" shape="rect"/>
+   <area alt="" coords="545,0,809,90" href="Kollisionsliste_Listendialog_Solid_Simulation.htm" shape="rect"/>
+   <area alt="" coords="269,99,353,120" href="Logbuch_Listendialog_Solid_Simulation.htm" shape="rect"/>
+   <area alt="" coords="814,1,1077,88" href="Logbuch_Listendialog_Solid_Simulation.htm" shape="rect"/>
+   <area alt="" coords="356,97,436,121" href="javascript:BSSCPopup('Alles_Listendialog_Solid_Simulation.htm',400,600);" id="area1" shape="rect"/>
+   <area alt="" coords="441,95,473,126" href="javascript:BSSCPopup('Vorschub_Eilgang_Listendialog_Solid_Simulation.htm',400,300);" id="area2" shape="rect"/>
+   <area alt="" coords="474,94,504,125" href="javascript:BSSCPopup('Anzeige_der_Bearbeitungsrichtung_Listendialog_Solid_Simulation.htm',400,300);" id="area3" shape="rect"/>
+   <area alt="" coords="505, 93, 1074, 126" href="Auslenkungs_und_Bearbeitungshoehenanzeige_Simulation.htm" shape="rect"/>
+  </map>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('area1');
 	FilePopupInit('area2');
 	FilePopupInit('area3');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

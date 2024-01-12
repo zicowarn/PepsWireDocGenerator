@@ -35,29 +35,138 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "NC-Code Datenbank - Parameter" %}</p><p> </p>
-<p class="Tip_Note_Heading">{% trans "Speichernamen" %}</p>
-<p>{% trans "Die Liste zeigt alle aktuell vorhandenen NC-Codes an." %}</p>
-<p>{% trans "Die 4 Schaltflächen unterhalb der Liste dienen zum Navigieren in der NC-Codeliste." %}</p>
-<p> </p>
-<p class="Tip_Note_Heading">{% trans "Name zum Laden / Speichern / Löschen" %}</p>
-<p>{% trans "Zeigt den aktuell in der Liste gewählten NC-Code an." %}</p>
-<p> </p>
-<p class="Tip_Note_Heading">{% trans "Bemerkung" %}</p>
-<p>{% trans "Zeigt die Bedeutung des aktuell gewählten NC-Codes an." %}</p>
-<p> </p>
-<p class="Tip_Note_Heading">{% trans "Funktionsschaltflächen" %}</p>
-<p>{% trans "Die Schaltflächen @ haben folgende Bedeutung:" %}</p>
-<p>{% trans "@ : [Suchen] in der NC-Code Datenbank." %}</p>
-<p>{% trans "@ : [Neuen NC-Code] zur Liste hinzufügen" %}</p>
-<p>{% trans "@ : Gewählten [NC-Code ]in die MS-Windows [Zwischenablage kopieren]." %}</p>
-<p>{% trans "@ : Gewählten [NC-Code verändern.]" %}</p>
-<p>{% trans "@ : Gewählten [NC-Code löschen.]" %}</p>
-<p>{% trans "@ : Ruft einen [Einstell-Dialog] auf mit verschiedenen Einstellparametern:" %}</p>
-<p> </p>
-<p><img src="../NC_Code_Datenbank_Settings_Dialog.gif" alt="" border="0" class="hcp1"/></p>
-<p> </p>
-<p> </p>
-
+<p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">NC 代码数据库 - 参数</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p class="Tip_Note_Heading">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">存储名称</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">该列表显示所有当前存在的 NC 代码。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">列表下方的 4 个按钮用于在 NC 代码列表中导航。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p class="Tip_Note_Heading">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">要加载/保存/删除的名称</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">显示当前在列表中选择的 NC 代码。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p class="Tip_Note_Heading">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">评论</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">显示当前选择的 NC 代码的含义。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p class="Tip_Note_Heading">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">功能按钮</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">按钮的</font>
+    </font><img alt="" border="0" class="hcp1" src="../NC_Code_Datenbank_Iconenliste.gif" />
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">含义如下：</font>
+    </font>
+  </p>
+  <p>&nbsp;<img alt="" border="0" class="hcp1" src="../NC_Code_Datenbank_Iconenliste_1.gif" />
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">：</font>
+      <font style="vertical-align: inherit;">
+        在NC代码数据库中</font>
+    </font><span class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">搜索。</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;"></font>
+  </p>
+  <p>&nbsp;<img alt="" border="0" class="hcp1" src="../NC_Code_Datenbank_Iconenliste_2.gif" />
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">：将</font>
+    </font><span class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">新的 NC 代码</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">添加到列表中</font>
+    </font>
+  </p>
+  <p>&nbsp;<img alt="" border="0" class="hcp1" src="../NC_Code_Datenbank_Iconenliste_3.gif" />
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">：将选定的</font>
+    </font><span class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">NC 代码&nbsp;</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;"></font><span class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">复制</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">到 MS Windows剪贴板</font>
+      <font style="vertical-align: inherit;">。</font>
+    </font>
+  </p>
+  <p>&nbsp;<img alt="" border="0" class="hcp1" src="../NC_Code_Datenbank_Iconenliste_4.gif" />
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">：</font>
+    </font><span class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">更改选定的 NC 代码。</font>
+      </font>
+    </span>
+  </p>
+  <p>&nbsp;<img alt="" border="0" class="hcp1" src="../NC_Code_Datenbank_Iconenliste_5.gif" />
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">：</font>
+    </font><span class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">删除选定的NC 代码。</font>
+      </font>
+    </span>
+  </p>
+  <p>&nbsp;<img alt="" border="0" class="hcp1" src="../NC_Code_Datenbank_Iconenliste_6.gif" />
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">：打开</font>
+      <font style="vertical-align: inherit;">
+        带有各种设置参数的</font>
+    </font><span class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">设置对话框：</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;"></font>
+  </p>
+  <p>&nbsp;</p>
+  <p><img alt="" border="0" class="hcp1" src="../NC_Code_Datenbank_Settings_Dialog.gif" /></p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
 {% endblock %}
 {% endlinebreakless %}

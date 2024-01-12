@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -37,52 +36,575 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <a name="642b3b9347ca42c9b00b820c00c373fa=1"/><p class="dialog">{% trans "Erzeuge Figuren + Bearbeitungen von Features" %}</p><p>{% trans "Klicken Sie mit der [rechten] Maustaste auf @ und wählen Sie im Kontextmenü [Erzeuge Figuren + Bearbeitungen von Features]." %}</p>
-<p>{% trans "Diese Funktion erzeugt [Bearbeitungsfiguren] (2D Bearbeitungsgeometrien) sowie [Bearbeitungsoperationen] und übergibt diese an die #Operationsliste#." %}</p>
-<p>{% trans "[Hinweis:] Sie können Sie auch [einzelne] Features auswählen." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Wire_Expert_Create_Figures_and_Operations_1.gif" alt="Wire_Expert_Create_Figures_and_Operations_1.gif" width="553" height="201" border="0"/></p>
-<p class="hcp3"> </p>
-<p>{% trans "Bevor die Bearbeitungsfiguren und Bearbeitungen erzeugt werden, zeigt das System normalerweise (ist abschaltbar) einen [Konfigurations]-Dialog." %}</p>
-<p>{% trans "In diesem Dialog können Sie einstellen, ob Schnittschemen zugewiesen werden sollen, was an die [PEPS] [Operationsliste] übergeben werden soll und wie die erzeugten Bearbeitungsoperationen dargestellt werden sollen." %}</p>
-<p>{% trans "Stellen Sie den Dialog beispielsweise wie folgt ein:" %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Wire_Expert_Create_Figures_and_Operations_2.gif" alt="Wire_Expert_Create_Figures_and_Operations_2.gif" width="772" height="487" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Klicken Sie auf die Schaltfläche [OK]. Das System erzeugt nun [Bearbeitungsfiguren] und [Bearbeitungsoperationen] und übergibt diese an die #Operationsliste#." %}</p>
-<p>{% trans "Überprüfen der automatisch erzeugten Bearbeitungen" %}</p>
-<p>{% trans "Klicken Sie im Operationsmanager auf das Register @." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Wire_Expert_Create_Figures_and_Operations_3.gif" alt="Wire_Expert_Create_Figures_and_Operations_3.gif" width="303" height="34" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Das eben erzeugte Feature wurde an das Register [Bearbeitung] übergeben. In der Operationsliste wurden ein [Operationsstart] und eine [Bearbeitungsoperation] erzeugt." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Wire_Expert_Create_Figures_and_Operations_4.gif" alt="Wire_Expert_Create_Figures_and_Operations_4.gif" width="397" height="87" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Klicken Sie mit der [rechten] Maustaste auf das 3D-Modell und blenden sie das Modell aus." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Wire_Expert_Create_Figures_and_Operations_5.gif" alt="Wire_Expert_Create_Figures_and_Operations_5.gif" width="616" height="290" border="0"/></p>
-<p class="hcp3"> </p>
-<p>{% trans "Sie sollten deutlich sehen, dass der [WIRE-Expert] automatisch ein [Rohteil], [Bearbeitungsfiguren] und die [NC-Bearbeitungsgrafik] erzeugt hat." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Wire_Expert_Create_Figures_and_Operations_7.gif" alt="Wire_Expert_Create_Figures_and_Operations_7.gif" width="572" height="287" border="0"/></p>
-<p class="hcp2"> </p>
-<p><img src="../Wire_Expert_Create_Figures_and_Operations_6.gif" alt="Wire_Expert_Create_Figures_and_Operations_6.gif" width="489" height="112" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Editieren Sie nun in der Operationsliste den Eintrag @ und überprüfen Sie die automatisch erzeugten Dialogeinträge. Passen Sie die Dialogeinträge gegebenenfalls an." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Wire_Expert_Create_Figures_and_Operations_8.gif" alt="Wire_Expert_Create_Figures_and_Operations_8.gif" width="788" height="577" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans ". [Eigenständiges Weiterarbeiten] ." %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "Editieren Sie auch den Eintrag @. Überprüfen Sie die automatisch erzeugten Dialogeinträge." %}</p>
-<p>{% trans "Passen Sie die Einstellungen für [Technologie], [Anbindung] und die anderen [Schneidparameter] an." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Wire_Expert_Create_Figures_and_Operations_9.gif" alt="Wire_Expert_Create_Figures_and_Operations_9.gif" width="611" height="497" border="0"/></p>
-<p class="hcp3"> </p>
-<p>{% trans "... [Eigenständiges Weiterarbeiten] .... ." %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "Simulieren Sie die Bearbeitung @ und erzeugen Sie das NC-Programm @." %}</p>
+ <a name="642b3b9347ca42c9b00b820c00c373fa=1">
+ </a>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    创建角色+编辑特征
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     右键
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    单击
+   </font>
+   <font style="vertical-align: inherit;">
+    并从上下文菜单中
+   </font>
+  </font>
+  <img alt="Wire_Expert_Create_Figures_and_Operations_0.gif" border="0" height="30" src="../Wire_Expert_Create_Figures_and_Operations_0.gif" width="107"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选择
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “创建图形 + 特征编辑”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此功能创建
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     加工图形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    （2D 加工几何形状）以及
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     加工操作
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    并将它们传输到
+   </font>
+  </font>
+  <a href="../Operationsmanager/Bearbeitungs_Register_Operationsmanager.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     操作列表
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp1" color="#0000FF">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     注意：
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    您还可以选择
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单独的
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    功能。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="Wire_Expert_Create_Figures_and_Operations_1.gif" border="0" height="201" src="../Wire_Expert_Create_Figures_and_Operations_1.gif" width="553"/>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在创建编辑图形和编辑之前，系统通常会显示一个
+   </font>
+  </font>
+  <span style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     配置
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框（可以关闭）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在此对话框中，您可以设置是否应分配切割方案、
+   </font>
+   <font style="vertical-align: inherit;">
+    应将哪些内容传输到
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     PEPS
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     操作列表以及如何显示生成的加工操作。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    例如，设置对话框如下：
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="Wire_Expert_Create_Figures_and_Operations_2.gif" border="0" height="487" src="../Wire_Expert_Create_Figures_and_Operations_2.gif" width="772"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    单击
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “确定”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮。
+   </font>
+   <font style="vertical-align: inherit;">
+    系统现在创建
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     加工数据
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     加工操作
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    并将它们传输到
+   </font>
+  </font>
+  <a href="../Operationsmanager/Bearbeitungs_Register_Operationsmanager.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     操作列表
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    查看自动生成的编辑
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在 Operations Manager 中，单击选项卡
+   </font>
+  </font>
+  <img alt="Wire_Expert_Create_Figures_and_Operations_2a.gif" border="0" height="29" src="../Wire_Expert_Create_Figures_and_Operations_2a.gif" width="69"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="Wire_Expert_Create_Figures_and_Operations_3.gif" border="0" height="34" src="../Wire_Expert_Create_Figures_and_Operations_3.gif" width="303"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    新创建的特征已转移到
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “编辑”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项卡 
+ 。
+   </font>
+   <font style="vertical-align: inherit;">
+    在操作列表中创建了
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     操作启动
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     编辑操作
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="Wire_Expert_Create_Figures_and_Operations_4.gif" border="0" height="87" src="../Wire_Expert_Create_Figures_and_Operations_4.gif" width="397"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     右键
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    单击
+   </font>
+   <font style="vertical-align: inherit;">
+    3D 模型并隐藏模型。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="Wire_Expert_Create_Figures_and_Operations_5.gif" border="0" height="290" src="../Wire_Expert_Create_Figures_and_Operations_5.gif" width="616"/>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    您应该清楚地看到
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     WIRE-Expert
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    已经 
+ 自动生成了
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     毛坯
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     加工图形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     NC加工图形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="Wire_Expert_Create_Figures_and_Operations_7.gif" border="0" height="287" src="../Wire_Expert_Create_Figures_and_Operations_7.gif" width="572"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="Wire_Expert_Create_Figures_and_Operations_6.gif" border="0" height="112" src="../Wire_Expert_Create_Figures_and_Operations_6.gif" width="489"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    现在编辑操作列表中的条目
+   </font>
+  </font>
+  <img alt="Wire_Expert_Create_Figures_and_Operations_6a.gif" border="0" height="29" src="../Wire_Expert_Create_Figures_and_Operations_6a.gif" width="131"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    并检查自动生成的对话框条目。
+   </font>
+  </font>
+  <br/>
+  <br/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如有必要，调整对话框条目。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="Wire_Expert_Create_Figures_and_Operations_8.gif" border="0" height="577" src="../Wire_Expert_Create_Figures_and_Operations_8.gif" width="788"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ……
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     继续独立工作
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ...
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    同时编辑条目
+   </font>
+  </font>
+  <img alt="Wire_Expert_Create_Figures_and_Operations_8a.gif" border="0" height="23" src="../Wire_Expert_Create_Figures_and_Operations_8a.gif" width="185"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+   <font style="vertical-align: inherit;">
+    检查自动生成的对话框条目。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     调整工艺
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     连接
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和其他
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     切割参数
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    的设置
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="Wire_Expert_Create_Figures_and_Operations_9.gif" border="0" height="497" src="../Wire_Expert_Create_Figures_and_Operations_9.gif" width="611"/>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ...
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     继续独立工作
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ......
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    模拟加工
+   </font>
+  </font>
+  <img alt="Solid_Sim.gif" border="0" height="38" src="../Solid_Sim.gif" width="42"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    并生成 NC 程序
+   </font>
+  </font>
+  <img alt="后处理.gif" border="0" height="39" src="../postproi.gif" width="41"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

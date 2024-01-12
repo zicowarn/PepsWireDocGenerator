@@ -29,16 +29,51 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Ausschneiden" %}</p><p> </p><p>{% trans "Diese Option entfernt (ausschneiden) eine oder mehrere gewählte Operationen aus der Operationsliste und fügt Sie in die MS-Windows Zwischenablage ein." %}</p>
-<p>{% trans "Anschließend könnten Sie die ausgeschnittenen Operation(en) mit der Option #[Einfügen]# an anderer Stelle des Operationsmanagers einfügen." %}</p>
-<p>{% trans "Verwenden Sie zur Auswahl der Operationen die Standard Windows Auswahltechniken." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
-<p class="Tip_Note_Heading">{% trans "#Reihenfolge der Bearbeitungsoperationen ändern#" %}</p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
-	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
-	FilePopupInit('a1');
-//]]&gt;</script>
-
+<p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">剪下</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">此选项从操作列表中删除（剪切）一个或多个选定的操作并将它们粘贴到 MS-Windows 剪贴板。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">然后，您可以使用</font>
+    </font><a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('Einfuegen_Operationsliste.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+      <font style="font-weight: bold;">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">“粘贴”</font>
+        </font>
+      </font>
+    </a>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">选项
+        将剪切操作粘贴到操作管理器中的其他位置。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">使用标准 Windows 选择技术来选择操作。</font>
+    </font>
+  </p>
+  <p style="margin-top: 0; margin-bottom: 0;">&nbsp;</p>
+  <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">它是这样完成的：</font>
+    </font>
+  </p>
+  <p class="Tip_Note_Heading"><a href="Beispiel_Reihenfolge_der_Bearbeitungsoperationen_aendern.htm">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">更改加工操作顺序</font>
+      </font>
+    </a></p>
+  <script language="JavaScript1.2" type="text/javascript">//<![CDATA[
+    if (typeof (FilePopupInit) != 'function') FilePopupInit = new Function();
+    FilePopupInit('a1');
+    //]]></script>
 {% endblock %}
 {% endlinebreakless %}

@@ -35,22 +35,199 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Unterer, oberer, mittlerer Bund" %}</p><p>{% trans "In diesem Dialogbereich wird die Lage des Bundes (zylindrischer Teil) und der Winkel der umlaufenden Konik bestimmt, wenn man ein Konik mit Bund programmieren möchte." %}</p>
-<p class="Tip_Note_Heading" style="line-height: 12.00pt;">{% trans "Bundbearbeitung programmieren" %}</p>
-<ul style="list-style: square;">
-<li class="hcp1">
-<p class="Tip_Note_Text_Bulleted">{% trans "Klicken Sie zunächst eine der Ikonen @[Unterer Bund], @[Oberer Bund] oder @[Mittlerer Bund] an, um die Art der Bundbearbeitung festzulegen." %}</p>
-</li>
-<li class="hcp1">
-<p class="Tip_Note_Text_Bulleted">{% trans "Je nach gewählter Konik, schaltet das System bestimmte Felder zur Beschreibung der Bundhöhe ([Z1], [Z2]) und des Konikwinkels ([Alpha1], [Alpha2]) frei. Die Felder [Z1] und [Z2] beschreiben den Winkel der Konik. Der Wert [muß] [positiv] sein. Die Felder [Alpha1] und [Alpha2] beschreiben die Lage des Bundes bezogen auf die Materialoberkante. Der Wert [muß] [negativ] sein." %}</p>
-</li>
-<li class="hcp1">
-<p class="Tip_Note_Text_Bulleted">{% trans "Wählen Sie in den #[Listboxen für das Qualitätsziel]# die gewünschte Qualität für Konik und Bund." %}</p>
-</li>
-<li class="hcp1">
-<p class="Tip_Note_Text_Bulleted">{% trans "Wählen Sie im Feld #[Technologiedatenbank AGIEVISION]# ob Sie eine AGIE oder eine Benutzertechnologie verwenden wollen und vergeben Sie im Feld #[Qualitätszielname]# Namen für die Technologiedateien." %}</p>
-</li>
-</ul>
-
+<p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">下、上、中腰带</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">如果要对带轴环的锥度进行编程，则在此对话框区域中确定轴环（圆柱形零件）的位置和周围锥度的角度。</font>
+    </font>
+  </p>
+  <p class="Tip_Note_Heading" style="line-height: 12.00pt;">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">程序线圈加工</font>
+    </font>
+  </p>
+  <ul style="list-style: square;">
+    <li class="hcp1">
+      <p class="Tip_Note_Text_Bulleted">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">首先单击</font>
+        </font><img alt="ebx_1121438868.gif" border="0" height="88" src="../ebx_1121438868.gif" width="87" />
+        <font class="hcp2">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">“下品丝”</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">、</font>
+        </font><img alt="ebx_-583318459.gif" border="0" height="87" src="../ebx_-583318459.gif" width="91" />
+        <font class="hcp2">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">“上品丝”</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">或</font>
+        </font><img alt="ebx_-381418086.gif" border="0" height="86" src="../ebx_-381418086.gif" width="88" />
+        <font class="hcp2">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">“中品丝”</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">图标之一来指定品丝处理的类型。</font>
+        </font>
+      </p>
+    </li>
+    <li class="hcp1">
+      <p class="Tip_Note_Text_Bulleted">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">根据所选的锥度，系统激活某些字段来描述轴环高度（</font>
+        </font>
+        <font class="hcp2">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Z1</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">、</font>
+        </font>
+        <font class="hcp2">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Z2</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">）和锥角（</font>
+        </font>
+        <font class="hcp2">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Alpha1</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">、</font>
+        </font>
+        <font class="hcp2">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Alpha2</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">）。</font>
+        </font><br />
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">
+            字段</font>
+        </font>
+        <font class="hcp2">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Z1</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">和</font>
+        </font>
+        <font class="hcp2">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Z2</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">描述锥度角度。</font>
+          <font style="vertical-align: inherit;">该值</font>
+        </font>
+        <font class="hcp2">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">必须是</font>
+          </font>
+        </font>
+        <font class="hcp2">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">正值</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">。</font>
+        </font><br />
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">
+            字段</font>
+        </font>
+        <font class="hcp2">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Alpha1</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">和</font>
+        </font>
+        <font class="hcp2">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Alpha2</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">描述了轴环相对于材料顶部边缘的位置。</font>
+          <font style="vertical-align: inherit;">该值</font>
+        </font>
+        <font class="hcp2">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">必须为</font>
+          </font>
+        </font>
+        <font class="hcp2">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">负数</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">。</font>
+        </font>
+      </p>
+    </li>
+    <li class="hcp1">
+      <p class="Tip_Note_Text_Bulleted">
+        <font style="vertical-align: inherit;"></font><a href="Qualitaetsziel_Bundbearbeitung_AGIEVISION.htm">
+          <font class="hcp2">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">在质量目标列表框中，</font>
+            </font>
+          </font>
+        </a>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">选择</font>
+          <font style="vertical-align: inherit;">锥度和轴环所需的质量。</font>
+        </font>
+      </p>
+    </li>
+    <li class="hcp1">
+      <p class="Tip_Note_Text_Bulleted">
+        <font style="vertical-align: inherit;"></font><a href="Technologiedatenbank_AGIEVISION.htm">
+          <font class="hcp2">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">在AGIEVISION 技术数据库</font>
+            </font>
+          </font>
+        </a>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">字段中，选择</font>
+          <font style="vertical-align: inherit;">是否要使用 AGIE 还是用户技术，并在</font>
+        </font><a href="Qualitaetszielname_Bundbearbeitung_AGIEVISION.htm">
+          <font class="hcp2">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">质量目标名称</font>
+            </font>
+          </font>
+        </a>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">字段中为技术文件指定名称。</font>
+        </font>
+      </p>
+    </li>
+  </ul>
 {% endblock %}
 {% endlinebreakless %}

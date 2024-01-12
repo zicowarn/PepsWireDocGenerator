@@ -1601,6 +1601,36 @@ def fix_filenames_in_hhp(hhp_fullpath=""):
     print("\n".join(tocheck_lines))
     with open(hhp_fullpath, "w", encoding="utf-8") as brs:
         brs.writelines(backup_lines)
+        
+
+########################################
+# FIX HHC：remove the german characters# 
+########################################
+def fix_filenames_in_hhc(hhc_fullpath=""):
+    """[summary]
+
+    Args:
+        hhc_fullpath (str, optional): [description]. Defaults to "".
+    """
+    html_content = ''
+    with open(hhc_fullpath, 'r', encoding="utf-8") as hhc:
+        html_content = hhc.read()
+    if html_content == '':
+        return False
+    
+    def fix_name_local(input_string=''):
+        nodechar = input_string.replace("ä", "ae")
+        nodechar = nodechar.replace("Ä", "Ae")
+        nodechar = nodechar.replace("ö", "oe")
+        nodechar = nodechar.replace("Ö", "Oe")
+        nodechar = nodechar.replace("ü", "ue")
+        nodechar = nodechar.replace("Ü", "Ue")
+        nodechar = nodechar.replace("ß", "ss")
+        return nodechar
+
+    html_content 
+    with open(hhc_fullpath, "w", encoding="utf-8") as hhc:
+        hhc.write(str(soup.prettify()))
 
 
 ########################################
@@ -1989,6 +2019,12 @@ def main(args):
         elif len(args) == 3 and "hhp" in args:
             hhp_file_path = args[2]
             fix_filenames_in_hhp(hhp_fullpath=hhp_file_path)
+        if len(args) == 2 and "hhc" in args:
+            hhc_file_path = os.path.join(CHM_EXTRA_BASE_PATH, "086\\wire_xxx.hhc")
+            fix_filenames_in_hhc(hhc_fullpath=hhc_file_path)
+        elif len(args) == 3 and "hhc" in args:
+            hhc_file_path = args[2]
+            fix_filenames_in_hhc(hhc_fullpath=hhc_file_path)
         else:
             print("python executor.py fix hhp")
             print("python executor.py fix hhp <hhp relative path of source folder>")
@@ -2213,8 +2249,12 @@ def main(args):
         print("python executor.py transcode step <relative path (subfolder) of template folder>")
         print("python executor.py transcode folder <relative path (subfolder) of template folder>")
         print("python executor.py transcode full <relative path (subfolder) of template folder>")
+        print("python executor.py fix hhp")
+        print("python executor.py fix hhp <hhp relative path of source folder>")
         print("python executor.py fix brs")
         print("python executor.py fix brs <brs file's relative path of source folder>")
+        print("python executor.py fix hhc")
+        print("python executor.py fix hhc <hhp relative path of source folder>")
         print("python executor.py fixname step <relative path (subfolder) of template folder>")
         print("python executor.py fixname folder <relative path (subfolder) of template folder>")
         print("python executor.py fixname full <relative path (subfolder) of template folder>")

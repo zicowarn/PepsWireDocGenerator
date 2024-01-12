@@ -34,8 +34,44 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Ausfallteil bei Entformung automatisch löschen" %}</p><p>{% trans "Ist diese Option aktiviert, löscht das System das angezeigte Ausfallteil automatisch und setzt die Simulation fort." %}</p>
-<p>{% trans "Ist die Option [nicht] aktiv, müssen Sie die Schaltflächen [Löschen] oder [Markiertes Ausfallteil löschen u. weiter] verwenden, um die Simulation nach dem Entfernen des Ausfallteils fortzuführen." %}</p>
-
+<p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">脱模时自动删除失败零件</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">如果激活此选项，系统会自动删除显示的失败部分并继续模拟。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">&nbsp;如果该选项</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">未</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">激活，则必须使用</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">删除</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">或</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">删除标记的故障部件并继续</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">按钮在删除故障部件后继续模拟。</font>
+    </font>
+  </p>
 {% endblock %}
 {% endlinebreakless %}

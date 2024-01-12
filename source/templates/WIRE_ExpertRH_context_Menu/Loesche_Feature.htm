@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,12 +33,148 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Lösche Feature" %}</p><p>{% trans "Löscht die aktuell im [WIRE-Expert] #FeatureManager# gewählten Features." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p class="Hinweis">{% trans "Tipp:" %}</p>
-<p>{% trans "Sie können Feature im #FeatureManager# auswählen, indem Sie auf deren Namen klicken." %}</p>
-<p>{% trans "Wählen Sie [mehrere aufeinander folgende] [Features] aus, indem Sie während des Auswählens die [Umschalt]-Taste gedrückt halten." %}</p>
-<p>{% trans "Wählen Sie [nicht aufeinander folgende] [Features] aus, indem Sie während des Auswählens die [Strg]-Taste gedrückt halten." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    删除特征
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     删除当前在WIRE-Expert
+    </font>
+   </font>
+  </font>
+  <a href="../WIRE_Expert_FeatureManager/WIRE_Expert_FeatureManager.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     FeatureManager 设计树
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    中选定的特征
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    提示：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    您可以通过单击特征名称来
+   </font>
+   <font style="vertical-align: inherit;">
+    选择
+   </font>
+  </font>
+  <a href="../WIRE_Expert_FeatureManager/WIRE_Expert_FeatureManager.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     FeatureManager 设计树中的特征。
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通过在选择时按住
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     Shift
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    键来
+   </font>
+   <font style="vertical-align: inherit;">
+    选择
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     多个连续
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     要素。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通过在选择时按住
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     Ctrl
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    键来
+   </font>
+   <font style="vertical-align: inherit;">
+    选择
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     不连续的
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     要素。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

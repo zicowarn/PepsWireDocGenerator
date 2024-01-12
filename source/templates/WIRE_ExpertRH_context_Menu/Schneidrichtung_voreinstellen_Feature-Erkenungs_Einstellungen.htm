@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -37,25 +36,296 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Schneidrichtung voreinstellen" %}</p><p>{% trans "XXX AUCH WIRE EXPERT ???? In diesem Dialogbereich können Sie voreinstellen, ob der Draht die Bearbeitungsgeometrien im [Uhrzeiger]- oder [Gegenuhrzeigersinn] bearbeitet." %}</p>
-<p>{% trans "Dabei lässt sich die Schneidrichtung unterschiedlich voreinstellen, für [Aussen-Features], [Innen-Features] oder [Offene-Features] (nicht in sich geschlossene Features)." %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "Es gilt folgendes:" %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "[Zielmaterial links zur Schneidrichtung]" %}</p>
-<p>{% trans "Bearbeitet man einen [Durchbruch] liegt das Material links und der Draht verfährt im [Uhrzeigersinn]." %}</p>
-<p>{% trans "Bearbeitet man einen [Stempel] liegt das Material links und der Draht im [Gegenuhrzeigersinn]." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Offset_left_side.gif" alt="Offset_left_side.gif" width="286" height="116" border="0"/></p>
-<p class="hcp3"> </p>
-<p>{% trans "[Zielmaterial rechts zur Schneidrichtung]" %}</p>
-<p>{% trans "Bearbeitet man einen [Durchbruch] liegt das Material rechts und der Draht verfährt im [Gegenuhrzeigersinn]." %}</p>
-<p>{% trans "Bearbeitet man einen [Stempel] liegt das Material rechts und der Draht im [Uhrzeigersinn]." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Offset_right_side.gif" alt="Offset_right_side.gif" width="285" height="110" border="0"/></p>
-<p class="hcp3"> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Schneidseite umkehren" %}</p>
-<p>{% trans "Macht aus einer [Innenbearbeitung] (Matrize) eine [Außenbearbeitung] (Stempel) und umgekehrt." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    预设切割方向
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    XXX 也是电线专家？？？
+   </font>
+   <font style="vertical-align: inherit;">
+    在此对话框区域中，您可以预设线是否以
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     顺时针
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     逆时针方向
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    处理加工几何形状。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     对于外部特征
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     内部特征
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     开放特征
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    （非独立特征），
+   </font>
+   <font style="vertical-align: inherit;">
+    可以以不同方式预设切割方向。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    以下适用：
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     目标材料位于切割方向左侧
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果您致力于
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     突破
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，则材料位于左侧，而金属丝则
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     顺时针
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    移动。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果您制作印章
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     ，
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    则材料位于左侧，而金属丝则为
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     逆时针方向
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="左偏移量.gif" border="0" height="116" src="../Offset_left_side.gif" width="286"/>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     目标材料位于切削方向右侧
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果您致力于
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     突破
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，则材料位于右侧，而金属丝则
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     逆时针
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    移动。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果您正在制作印章
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     ，
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    则材料位于右侧，金属线为
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     顺时针方向
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="右偏移量.gif" border="0" height="110" src="../Offset_right_side.gif" width="285"/>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    反切面
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     将内部加工
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    （冲模）转变
+   </font>
+   <font style="vertical-align: inherit;">
+    为
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     外部加工
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    （冲压），反之亦然。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

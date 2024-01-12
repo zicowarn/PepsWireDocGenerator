@@ -35,12 +35,97 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Tip_Note_Heading">{% trans "Vorhandene Bearbeitungsoperationen deaktivieren/aktivieren" %}</p><ul>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie die zu deaktivierende/aktivierende Operation(en) mit der [rechten] Maustaste im #[Operationsmanager]# an." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Wählen Sie im Kontextmenü die Option [Deaktivieren] oder [Aktivieren]." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "[Deaktivierte] Operationen werden durch ein Symbol @ vor der Operation gekennzeichnet und nicht simuliert oder in die NC-Daten ausgegeben." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "[Aktiviert] man eine [de]aktivierte Operation wird das Symbol @ vor der Operation entfernt und die Operation wird simuliert und in die NC-Daten ausgegeben." %}</p></li>
-</ul>
-
+<p class="Tip_Note_Heading">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">禁用/启用现有编辑操作</font>
+    </font>
+  </p>
+  <ul>
+    <li class="hcp1">
+      <p class="Topic_Text_Bulleted">
+        <font style="vertical-align: inherit;"></font>
+        <font class="hcp2">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">右键</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">单击要在</font>
+        </font><a href="Bearbeitungs_Register_Operationsmanager.htm">
+          <font class="hcp2">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">Operations Manager</font>
+            </font>
+          </font>
+        </a>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">中禁用/启用的操作</font>
+          <font style="vertical-align: inherit;">。</font>
+        </font>
+      </p>
+    </li>
+    <li class="hcp1">
+      <p class="Topic_Text_Bulleted">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">从上下文菜单中选择</font>
+        </font>
+        <font class="hcp2">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">“禁用”</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">
+            或</font>
+        </font>
+        <font class="hcp2">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">“启用”</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">。</font>
+        </font>
+      </p>
+    </li>
+    <li class="hcp1">
+      <p class="Topic_Text_Bulleted">
+        <font class="hcp2">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">取消激活的</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;"></font><img alt="隐藏_操作.gif" border="0" height="24" src="../Hide_Operation.gif" width="48" />
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">操作由操作前面的</font>
+          <font style="vertical-align: inherit;">
+            符号指示，并且不会被模拟或输出到 NC 数据。</font>
+        </font>
+      </p>
+    </li>
+    <li class="hcp1">
+      <p class="Topic_Text_Bulleted">
+        <font class="hcp2">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">如果激活</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;"></font>
+        <font class="hcp2">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">已取消激活的</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">
+            操作</font>
+          <font style="vertical-align: inherit;">，则该操作之前的符号</font>
+        </font><img alt="隐藏_操作.gif" border="0" height="24" src="../Hide_Operation.gif" width="48" />
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">将被删除，并且该操作将被模拟并在 NC 数据中输出。</font>
+        </font>
+      </p>
+    </li>
+  </ul>
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,23 +34,244 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Manuelle Faceauswahl" %}</p><p>{% trans "Diese Methode wird verwendet, wenn [Teilbereiche einer Geometrie] bearbeitet werden sollen und die automatischen Methoden zur Featureerkennung zuviele oder unerwünschte Flächen erkennen würden." %}</p>
-<p>{% trans "Bei Wahl dieser Option klickt man [nacheinander] alle [Faces] an, die bearbeitet werden sollen. Beachten Sie, dass die gewählten Faces miteinander verbunden sein müssen." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p><img src="../Feature_Recognition_manual_Face_selection.gif" alt="Feature_Recognition_manual_Face_selection.gif" width="620" height="210" border="0"/></p>
-<p style="text-align: center;"> </p>
-<p>{% trans "[Vorgehensweise:]" %}</p>
-<ul>
-	<li class="hcp2"><p class="Tip_Note_Text_Bulleted">{% trans "Klicken Sie [nacheinander] alle Faces der zu bearbeitenden Geometrie an. Halten Sie während des Auswählens die [Strg]-Taste gedrückt. [WIRE-Expert] prüft dabei, ob die gewählten Faces erodierbar sind." %}</p></li>
-	<li class="hcp2"><p class="Tip_Note_Text_Bulleted">{% trans "Beenden Sie die Auswahl mit @." %}</p></li>
-	<li class="hcp2"><p>{% trans "Bestätigen Sie die Featureerzeugung mit @." %}</p></li>
-</ul>
-<ul>
-	<li class="hcp2"><p class="Tip_Note_Text_Bulleted">{% trans "Klicken Sie [nacheinander] alle Faces an, der [nächsten] zu bearbeitenden Geometrie." %}</p></li>
-	<li class="hcp2"><p class="Tip_Note_Text_Bulleted">{% trans "Beenden Sie auch die nächste Auswahl mit @." %}</p></li>
-	<li class="hcp2"><p class="Tip_Note_Text_Bulleted">{% trans "Bestätigen Sie die Featureerzeugung mit @." %}</p></li>
-	<li class="hcp2"><p class="Tip_Note_Text_Bulleted">{% trans "Beenden Sie den Dialog mit @." %}</p></li>
-</ul>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    手动面部选择
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    当需要编辑
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     几何图形的部分区域
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    并且自动特征识别方法会检测到太多或不需要的区域时，可以使用此方法。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果选择此选项，则
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     依次
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    单击要编辑的
+   </font>
+   <font style="vertical-align: inherit;">
+    所有
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     面。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    请注意，所选面必须相互连接。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <img alt="Feature_Recognition_manual_Face_selection.gif" border="0" height="210" src="../Feature_Recognition_manual_Face_selection.gif" width="620"/>
+ </p>
+ <p style="text-align: center;">
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     方法：
+    </font>
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp2">
+   <p class="Tip_Note_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       依次
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      单击
+     </font>
+     <font style="vertical-align: inherit;">
+      要编辑的几何体的所有面。
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       按住Ctrl
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      键的同时选择
+     </font>
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       WIRE-Expert
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      检查所选面是否可腐蚀。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp2">
+   <p class="Tip_Note_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      用 结束选择
+     </font>
+    </font>
+    <img alt="结束_选择_按钮.gif" border="0" height="28" src="../End_Selection_button.gif" width="181"/>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp2">
+   <p>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      使用 确认特征创建
+     </font>
+    </font>
+    <img alt="结束_选择_按钮.gif" border="0" src="../Example_Feature_abschliessen.gif"/>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+    <br/>
+   </p>
+  </li>
+ </ul>
+ <ul>
+  <li class="hcp2">
+   <p class="Tip_Note_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       依次
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      单击所有面
+     </font>
+     <font style="vertical-align: inherit;">
+      ，即
+     </font>
+     <font style="vertical-align: inherit;">
+      要编辑的下一个几何体
+     </font>
+    </font>
+    <span style="font-weight: bold;">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       。
+      </font>
+     </font>
+    </span>
+    <font style="vertical-align: inherit;">
+    </font>
+   </p>
+  </li>
+  <li class="hcp2">
+   <p class="Tip_Note_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      也以 结束下一个选择
+     </font>
+    </font>
+    <img alt="结束_选择_按钮.gif" border="0" height="28" src="../End_Selection_button.gif" width="181"/>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp2">
+   <p class="Tip_Note_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      使用 确认特征创建
+     </font>
+    </font>
+    <img alt="结束_选择_按钮.gif" border="0" src="../Example_Feature_abschliessen.gif"/>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp2">
+   <p class="Tip_Note_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      用 结束对话框
+     </font>
+    </font>
+    <img alt="确定按钮.gif" border="0" height="25" src="../OK_button.gif" width="26"/>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+
 
 {% endblock %}
 {% endlinebreakless %}

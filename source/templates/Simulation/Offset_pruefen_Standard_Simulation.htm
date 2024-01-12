@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,11 +33,68 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Offset prüfen" %}</p><p>{% trans "Diese Option überprüft, ob die simulierten Bearbeitungsfigur Radien aufweist, die kleiner sind als die simulierte Offsetbahn (d.h. der Radius ist kleiner als Drahtradius + Offset)." %}</p>
-<p>{% trans "Eventuelle Problemstellen werden durch [kleine blaue Symbole] gekennzeichnet und ein Warnhinweis informiert über die Größe des Radius." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p class="Hinweis">{% trans "Hinweis:" %}</p>
-<p>{% trans "Die Option [Offset prüfen] wird erst nach einem Neustart der Simulation aktiv." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    检查偏移量
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该选项检查模拟加工图形的半径是否小于模拟偏移路径（即半径小于线半径+偏移）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    任何问题区域都会用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     蓝色小符号
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    标记，并且会出现警告，告知您半径的大小。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一个通知：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “检查偏移”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项
+   </font>
+   <font style="vertical-align: inherit;">
+    仅在仿真重新启动后才变为活动状态。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

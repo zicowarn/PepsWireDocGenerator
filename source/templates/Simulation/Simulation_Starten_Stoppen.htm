@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,7 +28,34 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Simulation Starten / Stoppen @" %}</p><p>{% trans "Die Simulation hält man mit der Schaltfläche @ an und startet Sie erneut mit der Schaltfläche @." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    开始/停止模拟
+   </font>
+  </font>
+  <img alt="star_sto.gif" border="0" height="34" src="../star_sto.gif" width="80"/>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    可以
+   </font>
+  </font>
+  <img alt="Sim_Sto.gif" border="0" height="33" src="../Sim_Sto.gif" width="37"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用 按钮停止模拟，然后使用 按钮重新开始模拟
+   </font>
+  </font>
+  <img alt="Sim_Sta.gif" border="0" height="30" src="../Sim_Sta.gif" width="34"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

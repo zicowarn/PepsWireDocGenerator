@@ -34,17 +34,108 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Einfügen" %}</p><p> </p><p>{% trans "Die Option [Einfügen] kopiert eine oder mehrere Operation(en), die im Vorfeld mit den Optionen [Ausschneiden] oder #[Kopieren]# gewählt wurden, an eine andere Position des Operationsmanagers." %}</p>
-<p>{% trans "[Kopieren] &amp;amp; [Einfügen] führt zu einer Kopie und [Ausschneiden] &amp;amp; [Einfügen] zu einem Verschieben der gewählten Operation(en)." %}</p>
-<p>{% trans "An welcher Stelle des Operationsmanagers die gewählten Operation(en) einfügt werden sollen, legt man durch einen Mausklick fest. Die Operation(en) wird [NACH] der angeklickten Operation eingefügt." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
-<p class="Tip_Note_Heading">{% trans "#Bearbeitungsoperation kopieren#" %}</p>
-<p class="Tip_Note_Heading">{% trans "#Reihenfolge der Bearbeitungsoperationen ändern#" %}</p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
-	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
-	FilePopupInit('a1');
-//]]&gt;</script>
-
+<p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">插入</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">“</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">粘贴”选项将先前使用</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">“剪切”</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">或</font>
+    </font><a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('Kopieren_Operationsliste.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">“复制”</font>
+        </font>
+      </font>
+    </a>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">选项选择的一个或多个操作复制</font>
+      <font style="vertical-align: inherit;">到 Operations Manager 中的另一个位置。</font>
+    </font>
+  </p>
+  <p>&nbsp;<font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">复制</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">和</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">粘贴</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+        导致复制，</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">剪切</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+        和</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">粘贴</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">导致选定操作的移动。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">您可以通过单击鼠标来确定应在操作管理器中的何处插入所选操作。</font>
+      <font style="vertical-align: inherit;">操作将被插入到</font>
+      <font style="vertical-align: inherit;">单击的操作</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">之后。</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+  </p>
+  <p style="margin-top: 0; margin-bottom: 0;">&nbsp;</p>
+  <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">它是这样完成的：</font>
+    </font>
+  </p>
+  <p class="Tip_Note_Heading"><a href="Beispiel_Bearbeitungsoperation_kopieren.htm">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">仿形加工操作</font>
+      </font>
+    </a></p>
+  <p class="Tip_Note_Heading"><a href="Beispiel_Reihenfolge_der_Bearbeitungsoperationen_aendern.htm">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">更改加工操作顺序</font>
+      </font>
+    </a></p>
+  <script language="JavaScript1.2" type="text/javascript">//<![CDATA[
+    if (typeof (FilePopupInit) != 'function') FilePopupInit = new Function();
+    FilePopupInit('a1');
+    //]]></script>
 {% endblock %}
 {% endlinebreakless %}

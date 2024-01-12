@@ -34,13 +34,44 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Wähle vorhandene Qualität" %}</p><p>{% trans "Ist diese Option aktiv, kann man eine in der Auswahlbox Qualitätsziel der AGIE-Steuerung [bereits namentlich vorhandene] Qualität aufrufen." %}</p><p>{% trans "Der Name der Qualität wird im Feld #[Qualitätszielname]# eingegeben. Bei dem Qualitätszielnamen ist auf korrekte Groß- und Kleinschreibung zu achten." %}</p>
-<script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
-        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
-        FilePopupInit('a1');
-//]]&gt;
-</script>
-
+<p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">选择现有品质</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">如果此选项处于活动状态，您可以调用AGIE 控件的质量目标选择框中</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">已按名称存在的</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">质量。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">质量名称在</font>
+    </font><a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('Qualitaetszielname_AGIEVISION.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">质量目标名称</font>
+        </font>
+      </font>
+    </a>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">字段中输入。</font>
+      <font style="vertical-align: inherit;">请确保质量目标名称正确区分大小写。</font>
+    </font>
+  </p>
+  <script language="JavaScript1.2" type="text/javascript">
+    //<![CDATA[
+    if (typeof (FilePopupInit) != 'function') FilePopupInit = new Function();
+    FilePopupInit('a1');
+    //]]>
+  </script>
 {% endblock %}
 {% endlinebreakless %}

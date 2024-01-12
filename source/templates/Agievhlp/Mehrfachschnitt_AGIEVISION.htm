@@ -35,17 +35,219 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Mehrfachschnitt" %}</p><p>{% trans "Die Option [Mehrfachschnitt] legt die Anzahl der Schnitte für die Bearbeitung einer Figur fest." %}</p>
-<p>{% trans "Die Option wird für AGIEVISION Maschinen normalerweise nicht verwendet, da die NC-Steuerung aufgrund der #[Qualitätszielangabe]# die Anzahl der Schnitte selbst berechnet." %}</p>
-<p>{% trans "Es gibt jedoch [zwei Ausnahmen] bei der man die Option [Mehrfachschnitt] wählt und die Anzahl der Schnitte selbst festlegt:" %}</p>
-<ol>
-<li class="hcp2">
-<p>{% trans "Ein Anwender kennt die Anzahl der Schnitte und die Größe des Offsets und möchte beides in der PEPS Simulation darstellen. In diesem Fall [aktiviert] man die Option [Mehrfachschnitt] und trägt die Anzahl der Schnitte, sowie den Offset für jeden Schnitt in den Bereichen [Schnitt Nr.] und [Offset] des Registers [Schnitte] ein. Die Option [Offset ausgeben] im Register [Schnitte] [muß] in diesem Fall [DEAKTIVIERT] sein, da sonst die Anzahl der Schnitte sowie der Offset in die NC-Daten ausgegeben wird." %}</p>
-</li>
-<li class="hcp2">
-<p>{% trans "Ein Anwender möchte die Größe des Offsets pro Schnitt sowie die Anzahl der Schnitte selbst festlegen und diese Daten in die NC-Datendatei ausgeben. In diesem Fall [aktiviert] man die Option [Mehrfachschnitt] und trägt die Anzahl der Schnitte, sowie den Offset für jeden Schnitt in den Bereichen [Schnitt Nr.] und [Offset] des Registers [Schnitte] ein. Die Option [Offset ausgeben] im Register [Schnitte] [muß] in diesem Fall [AKTIVIERT] sein, damit das System die Anzahl der Schnitte und die Offsetwerte in die NC-Daten ausgibt." %}</p>
-</li>
-</ol>
-
+<p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">多重切割</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;"></font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">“多重切割</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">”选项</font>
+      <font style="vertical-align: inherit;">设置编辑图形时的切割次数。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">该选项通常不用于 AGIEVISION 机器，因为 NC 控制系统会根据</font>
+    </font><a href="Qualitaet_Registerkarte_AGIEVISION.htm">
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">质量目标</font>
+        </font>
+      </font>
+    </a>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">自行计算切割次数。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">但是，有</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">两种例外情况</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">，您可以选择</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">多次剪切</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">选项并自行确定剪切次数：</font>
+    </font>
+  </p>
+  <ol>
+    <li class="hcp2">
+      <p>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">用户知道切割次数和偏移大小，并希望在 PEPS 模拟中显示这两者。</font>
+          <font style="vertical-align: inherit;">在这种情况下，</font>
+        </font>
+        <font class="hcp1">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">请激活</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;"></font>
+        <font class="hcp1">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">“多重切割”</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">选项，并在</font>
+          <font class="hcp1">
+            <font style="vertical-align: inherit;">“切割”</font>
+          </font>
+          <font style="vertical-align: inherit;">选项卡的</font>
+        </font>
+        <font class="hcp1">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">“切割编号”</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">和</font>
+        </font>
+        <font class="hcp1">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">“偏移”</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">区域中输入切割次数以及每次切割的偏移</font>
+          <font style="vertical-align: inherit;">。</font>
+          <font style="vertical-align: inherit;">在这种情况下，</font>
+          <font class="hcp1">
+            <font style="vertical-align: inherit;">必须</font>
+          </font>
+          <font style="font-weight: bold; font-style: italic;">
+            <font style="vertical-align: inherit;">禁用</font>
+          </font>
+          <font class="hcp1">
+            <font style="vertical-align: inherit;">“切割”</font>
+          </font>
+          <font style="vertical-align: inherit;">选项卡中的</font>
+          <font class="hcp1">
+            <font style="vertical-align: inherit;">“输出偏移”</font>
+          </font>
+          <font style="vertical-align: inherit;">
+            选项</font>
+          <font style="vertical-align: inherit;">，否则切割次数和偏移将在 NC 数据中输出。</font>
+        </font>
+        <font class="hcp1">
+          <font style="vertical-align: inherit;"></font>
+        </font>
+        <font style="vertical-align: inherit;"></font><br />
+        <font style="vertical-align: inherit;"></font>
+        <font class="hcp1">
+          <font style="vertical-align: inherit;"></font>
+        </font>
+        <font style="vertical-align: inherit;"></font>
+        <font class="hcp1">
+          <font style="vertical-align: inherit;"></font>
+        </font>
+        <font class="hcp1">
+          <font style="vertical-align: inherit;"></font>
+        </font>
+        <font style="vertical-align: inherit;"></font>
+        <font style="font-weight: bold; font-style: italic;">
+          <font style="vertical-align: inherit;"></font>
+        </font>
+        <font style="vertical-align: inherit;"></font>
+      </p>
+    </li>
+    <li class="hcp2">
+      <p>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">用户希望确定每次切削的偏移大小以及切削次数，并将该数据输出到 NC 数据文件。</font>
+          <font style="vertical-align: inherit;">在这种情况下，</font>
+        </font>
+        <font class="hcp1">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">请激活</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;"></font>
+        <font class="hcp1">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">“多重切割”</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">选项，并在</font>
+          <font class="hcp1">
+            <font style="vertical-align: inherit;">“切割”</font>
+          </font>
+          <font style="vertical-align: inherit;">选项卡的</font>
+        </font>
+        <font class="hcp1">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">“切割编号”</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">和</font>
+        </font>
+        <font class="hcp1">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">“偏移”</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">区域中输入切割次数以及每次切割的偏移</font>
+          <font style="vertical-align: inherit;">。</font>
+          <font style="vertical-align: inherit;">在这种情况下，</font>
+          <font class="hcp1">
+            <font style="vertical-align: inherit;">必须</font>
+          </font>
+          <font class="hcp1">
+            <font style="vertical-align: inherit;">激活</font>
+          </font>
+          <font class="hcp1">
+            <font style="vertical-align: inherit;">“切削”</font>
+          </font>
+          <font style="vertical-align: inherit;">选项卡中的</font>
+          <font class="hcp1">
+            <font style="vertical-align: inherit;">“输出偏移”</font>
+          </font>
+          <font style="vertical-align: inherit;">
+            选项</font>
+          <font style="vertical-align: inherit;">，以便系统在 NC 数据中输出切削次数和偏移值。</font>
+        </font>
+        <font class="hcp1">
+          <font style="vertical-align: inherit;"></font>
+        </font>
+        <font style="vertical-align: inherit;"></font><br />
+        <font style="vertical-align: inherit;"></font>
+        <font class="hcp1">
+          <font style="vertical-align: inherit;"></font>
+        </font>
+        <font style="vertical-align: inherit;"></font>
+        <font class="hcp1">
+          <font style="vertical-align: inherit;"></font>
+        </font>
+        <font class="hcp1">
+          <font style="vertical-align: inherit;"></font>
+        </font>
+        <font style="vertical-align: inherit;"></font>
+        <font class="hcp1">
+          <font style="vertical-align: inherit;"></font>
+        </font>
+        <font style="vertical-align: inherit;"></font>
+      </p>
+    </li>
+  </ol>
 {% endblock %}
 {% endlinebreakless %}

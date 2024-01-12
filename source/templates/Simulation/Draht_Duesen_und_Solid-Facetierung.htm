@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,11 +33,161 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Draht-, Düsen- und Solid-Facetierung" %}</p><p>{% trans "Wird eine [Drahtgrafik], eine [Düsengrafik] oder eine [Rohteilgrafik] die Kreise oder Bögen enthält, als Solid dargestellt, nähert das System die Darstellung aller Kreise durch kleine Geraden an (Facettierung)." %}</p>
-<p>{% trans "Dieses Dialogfeld stellt ein, mit welcher Genauigkeit die Annäherung erfolgt. Der eingegebene Wert ist der Abstand in mm, zwischen der angenäherten Geraden und der wirklicher Oberfläche." %}</p>
-<p>{% trans "Der Wert ist vergleichbar mit dem PEPS #[Rauhtiefenbefehl]#." %}</p>
-<p>{% trans "In diesem Dialog können Sie der [Drahtgrafik], der [Düsengrafik] und in der Simulation verwendeten [Rohteilgrafik[,]] verschiedene Genauigkeiten zuweisen." %}</p>
-<p>{% trans "Da die [Düsengrafik] bei der Beurteilung des Materialabtrages keine hohe Genauigkeit erfordern, stellt man deren Genauigkeit normalerweise geringer ein, als die des Drahtes und der Rohteilgrafik." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    线、喷嘴和实体刻面
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果将包含圆或圆弧的
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     线图形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     喷嘴
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    图形或
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     空白图形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    显示为实心，则系统会使用小直线（刻面）近似表示所有圆。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此对话框设置近似发生的精度。
+   </font>
+   <font style="vertical-align: inherit;">
+    输入的值是近似直线与实际表面之间的距离（以毫米为单位）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <a href="Rauhtiefe.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      该值与 PEPS粗糙度深度命令
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    相当
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在此对话框中，您可以为
+   </font>
+   <font class="hcp1">
+    <span style="font-weight: normal;">
+     <font style="vertical-align: inherit;">
+      模拟
+     </font>
+    </span>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     中使用的线材图形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     喷嘴图形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和毛坯图形
+   </font>
+   <font style="vertical-align: inherit;">
+    指定不同的精度
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     。
+    </font>
+   </font>
+   <span style="font-weight: normal;">
+    <font style="vertical-align: inherit;">
+    </font>
+   </span>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    由于
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     喷嘴图形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在评估材料去除量时不需要很高的精度，因此它们的精度通常设置为低于线材和毛坯件图形的精度。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

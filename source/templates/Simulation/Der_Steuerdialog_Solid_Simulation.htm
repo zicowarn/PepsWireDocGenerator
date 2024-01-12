@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,28 +35,158 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Der Steuerdialog" %}</p><p>{% trans "Mit diesem Dialog können Sie die [Simulation starten], [stoppen] und das [Simulationstempo] einstellen." %}</p><p>{% trans "Zudem können Sie die #Simulationsparameter einstellen#, den #Zielteilvergleich# und die #Schnittfunktion# aufrufen, sowie den #Ansicht-Dialog# und die #Simulationslistenanzeige# ein- und ausblenden." %}</p>
-<p class="hcp2"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen]" %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Steuer_Dia_Solid_Sim_shg.gif" usemap="#AreaMap0" alt="Steuer_Dia_Solid_Sim_shg.gif" width="925" height="79" border="0"/> <map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="27,9,63,43" href="javascript:BSSCPopup('Ein_oder_Ausblenden_der_Simulationslisten_Solid_Simulation.htm',400,600);" id="area1" alt=""/>
-<area shape="rect" coords="63,8,96,44" href="javascript:BSSCPopup('Ein_und_Ausblenden_des_Ansicht_Dialoges_Solid_Simulation.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="98,7,131,44" href="Schnitt_Simulation.htm" alt=""/>
-<area shape="rect" coords="135,8,167,41" href="Vergleich_Zielteilvergleich.htm" alt=""/>
-<area shape="rect" coords="170,8,203,42" href="Einstellungen_Simulation.htm" alt=""/>
-<area shape="rect" coords="269,20,334,45" href="javascript:BSSCPopup('Informationen_aus_Simulationsgrafik_abfragen_Solid_Simulation.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="357,8,447,47" href="javascript:BSSCPopup('Simulationsgeschwindigkeit.htm',400,300);" id="area4" alt=""/>
-<area shape="rect" coords="456,7,604,46" href="javascript:BSSCPopup('Stop_bei____.htm',400,300);" id="area5" alt=""/>
-<area shape="rect" coords="770,49,810,74" href="javascript:BSSCPopup('Anzeige_der_Bearbeitungsrichtung.htm',400,300);" id="area6" alt=""/>
-<area shape="rect" coords="20,48,759,74" href="javascript:BSSCPopup('Schieber_zum_Einstellen_der_Simulationsposition.htm');" id="area7" alt=""/>
-<area shape="rect" coords="818,50,864,72" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area8" alt=""/>
-<area shape="rect" coords="867,50,908,72" href="javascript:BSSCPopup('Schliessen_Simulation_beenden.htm',400,300);" id="area9" alt=""/>
-<area shape="rect" coords="694, 6, 916, 44" href="Schaltflaechen_zur_Steuerung_der_Programmsimulation.htm" alt=""/>
-<area shape="rect" coords="653, 13, 682, 43" href="javascript:BSSCPopup('Draht_auf_Position_der_Ueberschreitung_der_maximalen_Konik_positionieren_.htm',400,300);" id="area10" alt=""/>
-<area shape="rect" coords="621, 10, 651, 42" href="javascript:BSSCPopup('Draht_auf_zuletzt_gewaehltem_Face_positionieren.htm',400,300);" id="area11" alt=""/></map></p>
-<script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    税务对话
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通过此对话框，您可以
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     启动模拟
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     停止模拟
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    并设置
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     模拟速度
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    您还可以
+   </font>
+  </font>
+  <a href="Einstellungen_Simulation.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     设置模拟参数
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，调用
+   </font>
+  </font>
+  <a href="Vergleich_Zielteilvergleich.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     目标零件比较
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <a href="Schnitt_Simulation.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     切割功能
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，以及
+   </font>
+   <font style="vertical-align: inherit;">
+    显示或隐藏
+   </font>
+  </font>
+  <a href="Der_Ansichtdialog_Solid_Simulation.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     视图对话框
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <a href="Der_Listendialog_Solid_Simulation.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     模拟列表显示。
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域以访问帮助文本
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="Steuer_Dia_Solid_Sim_shg.gif" border="0" height="79" src="../Steuer_Dia_Solid_Sim_shg.gif" usemap="#AreaMap0" width="925"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="27,9,63,43" href="javascript:BSSCPopup('Ein_oder_Ausblenden_der_Simulationslisten_Solid_Simulation.htm',400,600);" id="area1" shape="rect"/>
+   <area alt="" coords="63,8,96,44" href="javascript:BSSCPopup('Ein_und_Ausblenden_des_Ansicht_Dialoges_Solid_Simulation.htm',400,300);" id="area2" shape="rect"/>
+   <area alt="" coords="98,7,131,44" href="Schnitt_Simulation.htm" shape="rect"/>
+   <area alt="" coords="135,8,167,41" href="Vergleich_Zielteilvergleich.htm" shape="rect"/>
+   <area alt="" coords="170,8,203,42" href="Einstellungen_Simulation.htm" shape="rect"/>
+   <area alt="" coords="269,20,334,45" href="javascript:BSSCPopup('Informationen_aus_Simulationsgrafik_abfragen_Solid_Simulation.htm',400,300);" id="area3" shape="rect"/>
+   <area alt="" coords="357,8,447,47" href="javascript:BSSCPopup('Simulationsgeschwindigkeit.htm',400,300);" id="area4" shape="rect"/>
+   <area alt="" coords="456,7,604,46" href="javascript:BSSCPopup('Stop_bei____.htm',400,300);" id="area5" shape="rect"/>
+   <area alt="" coords="770,49,810,74" href="javascript:BSSCPopup('Anzeige_der_Bearbeitungsrichtung.htm',400,300);" id="area6" shape="rect"/>
+   <area alt="" coords="20,48,759,74" href="javascript:BSSCPopup('Schieber_zum_Einstellen_der_Simulationsposition.htm');" id="area7" shape="rect"/>
+   <area alt="" coords="818,50,864,72" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area8" shape="rect"/>
+   <area alt="" coords="867,50,908,72" href="javascript:BSSCPopup('Schliessen_Simulation_beenden.htm',400,300);" id="area9" shape="rect"/>
+   <area alt="" coords="694, 6, 916, 44" href="Schaltflaechen_zur_Steuerung_der_Programmsimulation.htm" shape="rect"/>
+   <area alt="" coords="653, 13, 682, 43" href="javascript:BSSCPopup('Draht_auf_Position_der_Ueberschreitung_der_maximalen_Konik_positionieren_.htm',400,300);" id="area10" shape="rect"/>
+   <area alt="" coords="621, 10, 651, 42" href="javascript:BSSCPopup('Draht_auf_zuletzt_gewaehltem_Face_positionieren.htm',400,300);" id="area11" shape="rect"/>
+  </map>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
         if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
         FilePopupInit('area1');
         FilePopupInit('area2');
@@ -70,8 +199,9 @@
         FilePopupInit('area9');
         FilePopupInit('area10');
         FilePopupInit('area11');
-//]]&gt;
-</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,33 +35,110 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Dialoge Register (Einstellungen)" %}</p><p>{% trans "In diesem Dialog können Sie einstellen, ob die 4 Steuerdialoge ([Steuerdialog], [Ansichtsdialog], [Vergleichsdialog] und [Schnittdialog]) horizontal oder vertikal angezeigt werden" %}</p><p class="hcp2"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp2"> </p>
-<p><img src="../WireSimDialoge_shg.gif" usemap="#AreaMap0" alt="WireSimDialoge_shg.gif" width="349" height="457" border="0"/> <map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="55,82,295,285" href="javascript:BSSCPopup('Steuerdialoge_Solid_Simulation.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="21,420,96,442" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="102,420,178,444" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="183,423,259,445" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area4" alt=""/>
-<area shape="rect" coords="265,424,339,447" href="javascript:BSSCPopup('../Commdata/COMMON_Vorgaben.htm',400,300);" id="area5" alt=""/>
-<area shape="rect" coords="7,34,80,53" href="Solid_Register_Einstellungen_Simulation.htm" alt=""/>
-<area shape="rect" coords="85,35,173,55" href="Kollisionen_Register_Einstellungen.htm" alt=""/>
-<area shape="rect" coords="171,33,262,51" href="Toleranzen_Register_Einstellungen.htm" alt=""/>
-<area shape="rect" coords="264,33,339,52" href="Ansicht_Register_Einstellungen.htm" alt=""/>
-<area shape="rect" coords="7,51,88,71" href="Farben_Register_Einstellungen.htm" alt=""/>
-<area shape="rect" coords="171,54,263,72" href="Simulation_Register_Einstellungen_.htm" alt=""/>
-<area shape="rect" coords="264,54,339,73" href="Draht_Register_Einstellungen_.htm" alt=""/>
-<area shape="rect" coords="34, 301, 282, 356" href="Kurzhilfen_fuer_Dialogfelder_anzeigen.htm" alt=""/></map></p>
-<script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话选项卡（设置）
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在此对话框中您可以设置4个控制对话框（
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     控制对话框
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     视图对话框
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     比较对话框
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     截面对话框
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ）是水平还是垂直显示。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="WireSimDialoge_shg.gif" border="0" height="457" src="../WireSimDialoge_shg.gif" usemap="#AreaMap0" width="349"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="55,82,295,285" href="javascript:BSSCPopup('Steuerdialoge_Solid_Simulation.htm',400,300);" id="area1" shape="rect"/>
+   <area alt="" coords="21,420,96,442" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area2" shape="rect"/>
+   <area alt="" coords="102,420,178,444" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area3" shape="rect"/>
+   <area alt="" coords="183,423,259,445" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area4" shape="rect"/>
+   <area alt="" coords="265,424,339,447" href="javascript:BSSCPopup('../Commdata/COMMON_Vorgaben.htm',400,300);" id="area5" shape="rect"/>
+   <area alt="" coords="7,34,80,53" href="Solid_Register_Einstellungen_Simulation.htm" shape="rect"/>
+   <area alt="" coords="85,35,173,55" href="Kollisionen_Register_Einstellungen.htm" shape="rect"/>
+   <area alt="" coords="171,33,262,51" href="Toleranzen_Register_Einstellungen.htm" shape="rect"/>
+   <area alt="" coords="264,33,339,52" href="Ansicht_Register_Einstellungen.htm" shape="rect"/>
+   <area alt="" coords="7,51,88,71" href="Farben_Register_Einstellungen.htm" shape="rect"/>
+   <area alt="" coords="171,54,263,72" href="Simulation_Register_Einstellungen_.htm" shape="rect"/>
+   <area alt="" coords="264,54,339,73" href="Draht_Register_Einstellungen_.htm" shape="rect"/>
+   <area alt="" coords="34, 301, 282, 356" href="Kurzhilfen_fuer_Dialogfelder_anzeigen.htm" shape="rect"/>
+  </map>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
         if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
         FilePopupInit('area1');
         FilePopupInit('area2');
         FilePopupInit('area3');
         FilePopupInit('area4');
         FilePopupInit('area5');
-//]]&gt;
-</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

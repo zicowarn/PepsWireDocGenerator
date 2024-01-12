@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,9 +28,47 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Faktor für Zoomen" %}</p><p>{% trans "Legt die Schrittweite für ein Neuzeichnen der Werkstückgrafik, bei für [Zoomoperationen] fest." %}</p>
-<p>{% trans "Es ist normalerweise nicht notwendig, den voreingestellten Wert zu verändern." %}</p>
-<p>{% trans "Es sei denn, die Werkstückgrafik ist sehr komplex." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    缩放系数
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     设置缩放操作
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    时重绘工件图形的步长
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通常不需要更改默认值。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    除非工件图形非常复杂。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

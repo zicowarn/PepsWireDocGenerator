@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,54 +35,571 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Feature-Erkennung nach Flächenfarben" %}</p><p> </p>
-<p>{% trans "In diesem Beispiel soll die automatische Feature-Erkennung [alle hellgrünen Flächen] im Modell erkennen und ausschließlich diese bearbeiten. (Die gesuchten Durchbrüche sind im folgenden Bild durch [Pfeilsymbole] gekennzeichnet)." %}</p>
-<p> </p>
-<p><img src="../image/Example_Color_Fea_Recogn_1.gif" alt="image\Example_Color_Fea_Recogn_1.gif" title="image\Example_Color_Fea_Recogn_1.gif" width="570" height="422" border="0"/></p>
-<p class="Tip-Note-Heading" style="margin-top: 4.00pt;">{% trans "Erstellen einer Farb-Suchliste" %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "[Klicken] Sie mit der [rechten Maustaste] im [OPTICAM] FeatureManager auf den Zweig [Operation1] und wählen Sie den Befehl [Automatische] [Feature-Erkennung]" %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Example_Automatic_Feature_Recognition_1.gif" alt="image\Example_Automatic_Feature_Recognition_1.gif" title="image\Example_Automatic_Feature_Recognition_1.gif" border="0"/></p>
-<p class="hcp2"> </p>
-<p class="hcp2">{% trans "Dies öffnet den Dialog [Automatische Feature-Erkennung]." %}</p>
-<p class="hcp2"> </p>
-<p class="hcp2">{% trans "Wir erzeugen als erstes eine [Farb-Suchliste], in der wir die zu erkennenden Farbe(n) bestimmen." %}</p>
-<p>{% trans "Zur Erzeugung der [Farb-Suchliste] wählen Sie im Dialog die Schaltfläche &lt;img src='../image/Example_Color_Fea_Recogn_2a.gif' alt='image\Example_Color_Fea_Recogn_2a.gif' title='image\Example_Color_Fea_Recogn_2a.gif' width='247' height='25' border='0'/&gt;." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../image/Example_Color_Fea_Recogn_3.gif" alt="image\Example_Color_Fea_Recogn_3.gif" title="image\Example_Color_Fea_Recogn_3.gif" width="292" height="265" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Es wird der Dialog [Farbeinstellungs-Dialog] angezeigt." %}</p>
-<p>{% trans "Geben Sie im Feld [Listenname] den Namen der Farbliste ein ([Hellgruen])." %}</p>
-<p>{% trans "Klicken Sie anschließend die Schaltfläche [Neue Liste erzeugen]." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../image/Example_Color_Fea_Recogn_4.gif" alt="image\Example_Color_Fea_Recogn_4.gif" title="image\Example_Color_Fea_Recogn_4.gif" width="811" height="370" border="0"/></p>
-<p class="hcp2"> </p>
-<p class="hcp2"> </p>
-<p>{% trans "Klicken Sie nun [eine] [hellgrüne Fläche] im Modell an." %}</p>
-<p>{% trans "Die Farbe der gewünschten Fläche wird an den Dialog übergeben und im Feld [Farben in Liste] eingetragen." %}</p>
-<p>{% trans "[Hinweis]: Weitere Flächen mit anderen Farben könnten ausgewählt werden, um eine [Farb-Suchliste] mit mehreren Farben zu erzeugen." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../image/Example_Color_Fea_Recogn_5.gif" alt="image\Example_Color_Fea_Recogn_5.gif" title="image\Example_Color_Fea_Recogn_5.gif" width="648" height="285" border="0"/></p>
-<p>{% trans "Übernehmen Sie die Farbeinstellungen mit &lt;img src='../image/OK.gif' alt='image\OK.gif' title='image\OK.gif' width='40' height='39' border='0'/&gt;." %}</p>
-<p class="hcp2"> </p>
-<p class="hcp2"> </p>
-<p class="Tip-Note-Heading" style="margin-top: 4.00pt;">{% trans "Automatische Feature-Erkennung nach Farben ausführen" %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "Das System springt zurück in den Dialog zur automatischen Feature-Erkennung." %}</p>
-<p>{% trans "Wählen Sie im Dialogbereich [Farbliste] die eben erzeugte Liste [Hellgrün] aus." %}</p>
-<p>{% trans "Aktivieren Sie die Option [Farbliste verwenden], damit das System ausschließlich nach farbigen Flächen (in diesem Fall nur [hellgrüne] Flächen) sucht." %}</p>
-<p> </p>
-<p>{% trans "Stellen Sie sicher, dass der Dialog wie folgt ausgefüllt ist:" %}</p>
-<p class="hcp2"> </p>
-<p><img src="../image/Example_Color_Fea_Recogn_6.gif" alt="image\Example_Color_Fea_Recogn_6.gif" title="image\Example_Color_Fea_Recogn_6.gif" width="302" height="465" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Übernehmen Sie die Einstellungen mit &lt;img src='../image/OK.gif' alt='image\OK.gif' title='image\OK.gif' width='40' height='39' border='0'/&gt;." %}</p>
-<p> </p>
-<p>{% trans "Die automatische Feature-Erkennung durchsucht den Volumenkörper nach [allen hellgrünen Geometrien], die erodierbar sind und erzeugt einen Bearbeitungsvorschlag mit den im Vorfeld eingestellten Schneidparametern." %}</p>
-<p>{% trans "Für jede erodierbare Geometrie erzeugt [OPTICAM] ein [separates Feature] im [FeatureManager]:" %}</p>
-<p class="hcp2"> </p>
-<p><img src="../image/Example_Color_Fea_Recogn_7.gif" alt="image\Example_Color_Fea_Recogn_7.gif" title="image\Example_Color_Fea_Recogn_7.gif" width="811" height="377" border="0"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通过表面颜色进行特征检测
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在此示例中，自动特征识别应
+   </font>
+   <font style="vertical-align: inherit;">
+    识别模型中的
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     所有浅绿色区域并仅处理它们。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     （您正在寻找的突破点在下图中用箭头符号
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    标记
+   </font>
+   <font style="vertical-align: inherit;">
+    ）。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <img alt="图像/Example_Color_Fea_Recogn_1.gif" border="0" height="422" src="../image/Example_Color_Fea_Recogn_1.gif" title="图像/Example_Color_Fea_Recogn_1.gif" width="570"/>
+ </p>
+ <p class="Tip-Note-Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    创建颜色搜索列表
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    右键
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     单击
+    </font>
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     OPTICAM
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    FeatureManager
+   </font>
+   <font style="vertical-align: inherit;">
+    中的
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     “Operation1”
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     分支
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，然后选择
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     “自动
+    </font>
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     特征检测”命令
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="图像/Example_Automatic_Feature_Recognition_1.gif" border="0" src="../Example_Automatic_Feature_Recognition_1.gif" title="图像/Example_Automatic_Feature_Recognition_1.gif"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="hcp2">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这将打开
+   </font>
+  </font>
+  <span style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “自动特征检测”
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="hcp2">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    首先，我们创建一个
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     颜色搜索列表
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，在其中确定要识别的颜色。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    要创建
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     颜色搜索列表，
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    请选择对话框中的按钮
+   </font>
+  </font>
+  <img alt="图像/Example_Color_Fea_Recogn_2a.gif" border="0" height="25" src="../image/Example_Color_Fea_Recogn_2a.gif" title="图像/Example_Color_Fea_Recogn_2a.gif" width="247"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="图像/Example_Color_Fea_Recogn_3.gif" border="0" height="265" src="../image/Example_Color_Fea_Recogn_3.gif" title="图像/Example_Color_Fea_Recogn_3.gif" width="292"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     将显示“颜色设置”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     在列表名称
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    字段中，输入
+   </font>
+   <font style="vertical-align: inherit;">
+    颜色列表的名称（
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     浅绿色
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    然后单击
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     创建新列表
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="图像/Example_Color_Fea_Recogn_4.gif" border="0" height="370" src="../image/Example_Color_Fea_Recogn_4.gif" title="图像/Example_Color_Fea_Recogn_4.gif" width="811"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    现在单击
+   </font>
+   <font style="vertical-align: inherit;">
+    模型中的
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     浅绿色区域
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     。
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    所需区域的颜色将传递到对话框并输入到
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “列表中的颜色”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    字段中。
+   </font>
+  </font>
+ </p>
+ <p>
+  <br/>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     注意
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：可以选择具有不同颜色的其他区域来
+   </font>
+   <font style="vertical-align: inherit;">
+    创建具有多种颜色的
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     颜色搜索列表。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="图像/Example_Color_Fea_Recogn_5.gif" border="0" height="285" src="../image/Example_Color_Fea_Recogn_5.gif" title="图像/Example_Color_Fea_Recogn_5.gif" width="648"/>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用 应用颜色设置
+   </font>
+  </font>
+  <img alt="图片/OK.gif" border="0" height="39" src="../image/OK.gif" title="图片/OK.gif" width="40"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="Tip-Note-Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按颜色执行自动特征检测
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    系统跳回自动特征识别对话框。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     在颜色列表
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框区域中，选择
+   </font>
+   <font style="vertical-align: inherit;">
+    您刚刚创建的
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     浅绿色
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    列表 
+ 。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    启用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “使用颜色列表”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项以使系统仅搜索彩色区域（在本例中仅搜索
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     浅绿色
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    区域）。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    确保对话框填写如下：
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="图像/Example_Color_Fea_Recogn_6.gif" border="0" height="465" src="../image/Example_Color_Fea_Recogn_6.gif" title="图像/Example_Color_Fea_Recogn_6.gif" width="302"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用 来应用设置
+   </font>
+  </font>
+  <img alt="图片/OK.gif" border="0" height="39" src="../image/OK.gif" title="图片/OK.gif" width="40"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    自动特征识别功能会在实体中搜索
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     所有可腐蚀的浅绿色几何形状
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，并根据预先设置的切削参数生成加工建议。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对于每个可腐蚀几何体，
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     OPTICAM
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     FeatureManager 设计树
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    中创建 
+ 一个
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单独的特征
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="图像/Example_Color_Fea_Recogn_7.gif" border="0" height="377" src="../image/Example_Color_Fea_Recogn_7.gif" title="图像/Example_Color_Fea_Recogn_7.gif" width="811"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

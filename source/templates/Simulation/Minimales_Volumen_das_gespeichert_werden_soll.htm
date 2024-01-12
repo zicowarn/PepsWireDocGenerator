@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,12 +28,51 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Minimales Volumen das gespeichert werden soll" %}</p><p>{% trans "XXX Beschreibung in Arbeit ..." %}</p>
-<p>{% trans "Value sets the minimum volume of cut that is saved." %}</p>
-<p>{% trans "The volume of cut is saved so that when you go backwards and forwards through the simulation, it shows the most accurate removal of material." %}</p>
-<p>{% trans "If this value was set to a much larger value, as the user goes back through the simulation the material would not be drawn back where I should be." %}</p>
-<p>{% trans "The larger the value, the faster the simulation is." %}</p>
-<p> </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    最小存储量
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    XXX 说明正在进行中...
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    值设置保存的最小切削量。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    切割量会被保存，以便当您前后进行模拟时，它会显示最准确的材料去除量。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果这个值设置为一个更大的值，当用户返回模拟时，材料将不会被拉回我应该在的地方。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    值越大，模拟速度越快。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

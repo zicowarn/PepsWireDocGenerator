@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,29 +35,189 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Farben Register (Einstellungen)" %}</p><p>{% trans "Das Register [Farben] ruft einen Dialog auf, in der Sie die Farben für die [Solid]-[Simulation] einstellen können." %}</p><p>{% trans "Sie können jedes der Farbfelder individuell auswählen und einstellen, indem Sie verschiedene Anteile von [Rot], [Grün] oder [Blau] zuweisen." %}</p>
-<p>{% trans "Durch Anklicken der Schaltfläche #[Farbpalette]# @ ruft das System einen Dialog auf, in der Sie direkt eine von 48 verschiedenen Farben auswählen können." %}</p>
-<p>{% trans "Der folgende Dialog zeigt die Option [WKZ.-Eilgänge] aktiv. Als Farbe wurde [hauptsächlich rot] (255 rote Farbanteile) zugewiesen." %}</p>
-<p class="hcp2"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp2"> </p>
-<p><img src="../SIMCOLOP_W_shg.gif" usemap="#AreaMap0" alt="SIMCOLOP_W_shg.gif" width="349" height="457" border="0"/> <map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="9,83,331,259" href="Farben_Register_Einstellungen.htm" alt=""/>
-<area shape="rect" coords="258,282,315,308" href="javascript:BSSCPopup('Farbpallette_fuer_Simulation.htm',400,600);" id="area1" alt=""/>
-<area shape="rect" coords="9,32,81,51" href="Solid_Register_Einstellungen_Simulation.htm" alt=""/>
-<area shape="rect" coords="80,31,169,53" href="Kollisionen_Register_Einstellungen.htm" alt=""/>
-<area shape="rect" coords="264,34,338,56" href="Ansicht_Register_Einstellungen.htm" alt=""/>
-<area shape="rect" coords="20,423,103,447" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="101,422,175,448" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="185,427,258,448" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area4" alt=""/>
-<area shape="rect" coords="263,427,338,448" href="javascript:BSSCPopup('../Commdata/COMMON_Vorgaben.htm',400,300);" id="area5" alt=""/>
-<area shape="rect" coords="170,33,262,54" href="Toleranzen_Register_Einstellungen.htm" alt=""/>
-<area shape="rect" coords="262,56,333,72" href="Draht_Register_Einstellungen_.htm" alt=""/>
-<area shape="rect" coords="90,56,169,73" href="Dialoge_Register_Einstellungen_.htm" alt=""/>
-<area shape="rect" coords="171,56,260,72" href="Simulation_Register_Einstellungen_.htm" alt=""/>
-<area shape="rect" coords="17, 325, 333, 413" href="javascript:BSSCPopup('Vorgabe_fuer_Reflexionsfaktoren_Solid_Sim.htm',400,300);" id="area6" alt=""/></map></p>
-<script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    颜色选项卡（设置）
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “颜色”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项卡
+   </font>
+   <font style="vertical-align: inherit;">
+    打开一个对话框，您
+   </font>
+   <font style="vertical-align: inherit;">
+    可以在其中设置
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     实体
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    模拟
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     的颜色。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     您可以通过分配不同比例的红色
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     绿色
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     蓝色
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    来单独选择和调整每个色块
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通过单击
+   </font>
+  </font>
+  <a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('Farbpallette_fuer_Simulation.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      “调色板”
+     </font>
+    </font>
+   </font>
+  </a>
+  <img alt="选择.gif" border="0" height="29" src="../Select.gif" width="34"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮，系统会打开一个对话框，您可以在其中直接选择 48 种不同颜色中的一种。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    以下对话框显示刀具
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     快速进给
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项处于活动状态。
+   </font>
+   <font style="vertical-align: inherit;">
+    分配的颜色
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     主要是红色
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    （255 个红色分量）。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="SIMCOLOP_W_shg.gif" border="0" height="457" src="../SIMCOLOP_W_shg.gif" usemap="#AreaMap0" width="349"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="9,83,331,259" href="Farben_Register_Einstellungen.htm" shape="rect"/>
+   <area alt="" coords="258,282,315,308" href="javascript:BSSCPopup('Farbpallette_fuer_Simulation.htm',400,600);" id="area1" shape="rect"/>
+   <area alt="" coords="9,32,81,51" href="Solid_Register_Einstellungen_Simulation.htm" shape="rect"/>
+   <area alt="" coords="80,31,169,53" href="Kollisionen_Register_Einstellungen.htm" shape="rect"/>
+   <area alt="" coords="264,34,338,56" href="Ansicht_Register_Einstellungen.htm" shape="rect"/>
+   <area alt="" coords="20,423,103,447" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area2" shape="rect"/>
+   <area alt="" coords="101,422,175,448" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area3" shape="rect"/>
+   <area alt="" coords="185,427,258,448" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area4" shape="rect"/>
+   <area alt="" coords="263,427,338,448" href="javascript:BSSCPopup('../Commdata/COMMON_Vorgaben.htm',400,300);" id="area5" shape="rect"/>
+   <area alt="" coords="170,33,262,54" href="Toleranzen_Register_Einstellungen.htm" shape="rect"/>
+   <area alt="" coords="262,56,333,72" href="Draht_Register_Einstellungen_.htm" shape="rect"/>
+   <area alt="" coords="90,56,169,73" href="Dialoge_Register_Einstellungen_.htm" shape="rect"/>
+   <area alt="" coords="171,56,260,72" href="Simulation_Register_Einstellungen_.htm" shape="rect"/>
+   <area alt="" coords="17, 325, 333, 413" href="javascript:BSSCPopup('Vorgabe_fuer_Reflexionsfaktoren_Solid_Sim.htm',400,300);" id="area6" shape="rect"/>
+  </map>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
         if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
         FilePopupInit('a1');
         FilePopupInit('area1');
@@ -67,8 +226,9 @@
         FilePopupInit('area4');
         FilePopupInit('area5');
         FilePopupInit('area6');
-//]]&gt;
-</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

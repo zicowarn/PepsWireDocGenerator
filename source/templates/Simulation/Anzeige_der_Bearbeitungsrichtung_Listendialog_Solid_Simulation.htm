@@ -34,11 +34,64 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Anzeige der Bearbeitungsrichtung" %}</p><p>{% trans "Die Pfeilanzeige zeigt an, ob der aktuell simulierte Verfahrweg in [positiver Z-Achsenrichtung] (Pfeil nach oben) oder [negativer Z-Achsenrichtung] (Pfeil nach unten) ausgeführt wird." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p class="Hinweis">{% trans "Hinweis:" %}</p>
-<p>{% trans "Diese Anzeige spielt im Modul [Drahterodieren] keine wichtige Rolle." %}</p>
-<p>{% trans "Im Gegensatz zum Modul [Fräsen], wo es wichtig sein kann, zu wissen, ob ein Werkzeug in der Z-Achse zustellt oder nicht." %}</p>
-
+<p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">显示加工方向</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">箭头显示显示当前模拟的行进路径是沿</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">Z 轴正方向</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">（向上箭头）还是</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">沿 Z 轴负方向</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+        （向下箭头）执行。</font>
+    </font>
+  </p>
+  <p style="margin-top: 0; margin-bottom: 0;">&nbsp;</p>
+  <p class="Hinweis">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">一个通知：</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;"></font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">该显示在电火花线切割</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">模块中不起重要作用</font>
+      <font style="vertical-align: inherit;">
+        。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">与</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">铣削</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">模块相反，了解刀具是否沿 Z 轴进给非常重要。</font>
+    </font>
+  </p>
 {% endblock %}
 {% endlinebreakless %}

@@ -36,20 +36,163 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Blickrichtung" %}</p><p> </p>
-<p>{% trans "Dieser Dialogbereich wird verwendet, um die Blickrichtung festzulegen, aus der die Umrissgeometrie erzeugt werden soll." %}</p>
-<p>{% trans "Das Feld [X], [Y] oder [Z] welches den Wert [1] enthält, bestimmt die Blickrichtung." %}</p>
-<p class="Tip_Note_Heading">{% trans "X-Richtung" %}</p>
-<p>{% trans "Der Umriss wird auf X0 in der YZ-Ebene projiziert." %}</p>
-<p class="Tip_Note_Heading">{% trans "Y-Richtung" %}</p>
-<p>{% trans "Der Umriss wird auf Y0 in der XZ-Ebene projiziert." %}</p>
-<p class="Tip_Note_Heading">{% trans "Z-Richtung" %}</p>
-<p>{% trans "Der Umriss wird auf Z0 in der XY-Ebene projiziert." %}</p>
-<p>{% trans "Das folgende Bild zeigt drei Umrissgeometrien (XY, ZY, ZX), [OHNE] die Eingabe von [Projektionspositionen] erzeugt wurden. Die Umrisse liegen deshalb auf den Ebenen [X0],[Y0] und [Z0]." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../OUTLINE_PROJEKTION.gif" alt="OUTLINE_PROJEKTION.gif" width="423" height="303" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Das gleiche Beispiel [MIT] Eingabe von [Projektionswerten] finden Sie siehe [Projektion]." %}</p>
-
+<p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">视角方向</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">该对话框区域用于指定创建轮廓几何图形的观察方向。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">包含值</font>
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">1</font>
+      </font>
+      <font style="vertical-align: inherit;">的</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">X</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">、</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">Y</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+        或</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">Z</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">字段确定观察方向。</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;"></font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+  </p>
+  <p class="Tip_Note_Heading">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">X方向</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">轮廓投影到 YZ 平面中的 X0 上。</font>
+    </font>
+  </p>
+  <p class="Tip_Note_Heading">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">Y方向</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">轮廓投影到 XZ 平面中的 Y0 上。</font>
+    </font>
+  </p>
+  <p class="Tip_Note_Heading">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">Z方向</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">轮廓投影到 XY 平面中的 Z0 上。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">下图显示了</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">在未</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+        输入</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">投影位置的情况</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">下创建的三个轮廓几何图形（XY、ZY、ZX）
+        。</font>
+      <font style="vertical-align: inherit;">因此轮廓位于平面</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">X0</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">、</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">Y0</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">和</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">Z0</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">上。</font>
+    </font>
+  </p>
+  <p class="hcp2">&nbsp;</p>
+  <p><img alt="OUTLINE_PROJECTION.gif" border="0" height="303" src="../OUTLINE_PROJEKTION.gif" width="423" /></p>
+  <p class="hcp2">&nbsp;</p>
+  <p>
+    <font style="vertical-align: inherit;"></font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">有关</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">输入</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">投影值</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">的同一示例</font>
+      <font style="vertical-align: inherit;">，请参阅</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">投影</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">。</font>
+    </font>
+  </p>
 {% endblock %}
 {% endlinebreakless %}

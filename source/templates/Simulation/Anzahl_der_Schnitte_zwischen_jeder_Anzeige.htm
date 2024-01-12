@@ -29,11 +29,49 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Anzahl der Schnitte zwischen jeder Anzeige" %}</p><p>{% trans "Wird das System nicht anders eingestellt, baut das System die Bildschirmanzeige nach jedem Schnitt neu auf." %}</p>
-<p>{% trans "Bei der Bearbeitung von sehr kurzen Elementen ist ein Bildneuaufbau nach jeden Schnitt jedoch nicht akzeptabel." %}</p>
-<p>{% trans "Wird beispielsweise ein Kreis bearbeitet, teilt das Simulationssystem den Kreis in kleine Geraden (Facetten) auf. Jede Facette gilt als ein Schnitt." %}</p>
-<p>{% trans "Damit das System nicht nach jedem Schnitt den Bildschirm neu aufbaut, kann man hier die Anzahl der Schnitte festlegen, nach denen ein Bildschirmneuaufbau geschehen soll. Dies kann bei einem Kreis sinnvoll sein, bei der Bearbeitung von mehreren langen Geraden, ist ein Neuaufbau der Grafik nach z.B. 20 Schnitten störend." %}</p>
-<p>{% trans "Diesen Effekt kann man mit der Option (siehe #[Max. Schnitteingriff vor Anzeige]#) unterdrücken." %}</p>
-
+<p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">每个显示之间的剪切次数</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">如果系统没有进行不同的设置，则每次剪切后系统都会重建屏幕显示。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">但是，当编辑非常短的元素时，每次剪切后重建图像是不可接受的。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">例如，如果加工一个圆，则仿真系统将圆分成小直线（小平面）。</font>
+      <font style="vertical-align: inherit;">每个刻面都被视为一次切割。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">为了使系统不会在每次剪切后重建屏幕，您可以指定剪切次数后应重建屏幕。</font>
+    </font><br />
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+        这对于圆形可能很有用，但在编辑多条长直线时，例如，经过 20 次剪切后的新图形结构会造成破坏。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">可以使用该选项抑制此效果（请参阅</font>
+    </font><a href="Max_Schnitteingriff_vor_Anzeige.htm">
+      <font style="font-weight: bold;">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">显示前最大切削干预</font>
+        </font>
+      </font>
+    </a>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">）。</font>
+    </font>
+  </p>
 {% endblock %}
 {% endlinebreakless %}

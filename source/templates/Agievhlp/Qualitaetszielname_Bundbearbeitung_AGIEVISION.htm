@@ -29,12 +29,30 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Qualitätszielname (Bundbearbeitung)" %}</p><p>{% trans "Ordnet die Qualitätszielparameter #[Ra, Tkm und Te]# einem Namen zu." %}</p><script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
-        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
-        FilePopupInit('a1');
-//]]&gt;
-</script>
-
+<p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">质量目标名称（捆绑处理）</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">将质量目标参数</font>
+    </font><a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('Qualitaetsziel_AGIEVISION.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+      <font style="font-weight: bold;">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">Ra、Tkm 和 Te</font>
+        </font>
+      </font>
+    </a>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">指定为名称。</font>
+    </font>
+  </p>
+  <script language="JavaScript1.2" type="text/javascript">
+    //<![CDATA[
+    if (typeof (FilePopupInit) != 'function') FilePopupInit = new Function();
+    FilePopupInit('a1');
+    //]]>
+  </script>
 {% endblock %}
 {% endlinebreakless %}

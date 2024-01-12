@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,10 +33,66 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Simulationsfarben zurücksetzen" %}</p><p>{% trans "Sämtlicher Materialabtrag wird in der [Sold-Simulation] farbig gekennzeichnet." %}</p>
-<p>{% trans "Das heißt, wird Material vom Rohteil entfernt, ändert sich die Farbe des Rohteiles an diesen Stellen." %}</p>
-<p>{% trans "Wenn Sie die Schaltfläche [Sim.] wählen, wird der Materialabtrag wieder in der Farbe des Rohteils angezeigt." %}</p>
-<p>{% trans "Auf diese Weise können Sie besser sehen, welches Material die nachfolgende Bearbeitungen entfernen." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    重置模拟颜色
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     所有材料去除均在薪资模拟
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    中以颜色标记
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这意味着，如果从原始零件中去除材料，原始零件的颜色会在这些点发生变化。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     如果您选择“模拟”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮
+   </font>
+   <font style="vertical-align: inherit;">
+    ，材料去除量将再次以原始零件的颜色显示。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这使您可以更好地了解后续编辑将删除哪些内容。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,18 +35,195 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Bundbearbeitungen erkennen" %}</p><p>{% trans "Diese Option findet Anwendung, wenn ein Programm [Bundbearbeitungen] (Kavitäten mit einem [zylindrischen Bund] und einem [umlaufend konischen] Anteil) enthält." %}</p>
-<p>{% trans "Das folgende Bild zeigt ein Beispiel für eine Bundbearbeitung:" %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Recognize_Collar_Machining_1.gif" alt="Recognize_Collar_Machining_1.gif" width="223" height="230" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Ist die Option [Bundbearbeitungen erkennen] aktiv, werden Bundbearbeitungen im [WIRE-Expert] #FeatureManager# als [EIN] Bearbeitungsfeature angezeigt." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Recognize_Collar_Machining_2.gif" alt="Recognize_Collar_Machining_2.gif" width="260" height="124" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Ist die Option [Bundbearbeitungen erkennen] [nicht] aktiv, werden Bundbearbeitungen im #FeatureManager# in [ein zylindrisches] Bearbeitungsfeature und [ein oder zwei konische] Bearbeitungsfeatures aufgeteil angezeigt." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Recognize_Collar_Machining_3.gif" alt="Recognize_Collar_Machining_3.gif" width="259" height="150" border="0"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    认识品丝加工
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果程序包含
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     轴环加工
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    （具有
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     圆柱形轴环
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+   <font style="vertical-align: inherit;">
+    周围有
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     圆锥形部分的型腔），则适用此选项。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图显示了烦恼处理的示例：
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="Recognize_Collar_Machining_1.gif" border="0" height="230" src="../Recognize_Collar_Machining_1.gif" width="223"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     检测品丝编辑选项处于活动状态，则品丝编辑将在
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     WIRE-Expert
+    </font>
+   </font>
+  </font>
+  <a href="../WIRE_Expert_FeatureManager/WIRE_Expert_FeatureManager.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     FeatureManager
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    中显示
+   </font>
+   <font style="vertical-align: inherit;">
+    为
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     ONE
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    编辑特征。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="Recognize_Collar_Machining_2.gif" border="0" height="124" src="../Recognize_Collar_Machining_2.gif" width="260"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     检测品丝加工选项
+    </font>
+   </font>
+  </font>
+  <font style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     未
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    激活，品丝加工特征将
+   </font>
+   <font style="vertical-align: inherit;">
+    显示在
+   </font>
+  </font>
+  <a href="../WIRE_Expert_FeatureManager/WIRE_Expert_FeatureManager.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     FeatureManager 设计树
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    中，分为
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     一个圆柱形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    加工特征和
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     一个或两个圆锥形加工特征。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="Recognize_Collar_Machining_3.gif" border="0" height="150" src="../Recognize_Collar_Machining_3.gif" width="259"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

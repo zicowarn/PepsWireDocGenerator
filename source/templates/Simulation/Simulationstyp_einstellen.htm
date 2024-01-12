@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,15 +28,55 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "@ Simulationstyp einstellen" %}</p><p class="Block_Text">{% trans "Mit diesen Ikonen können Sie einstellen, ob obere und untere Düsengrafik die Verfahrbewegungen simulieren oder, ob sich das Werkstück bewegt und die Düsengrafik still steht." %}</p>
-<p class="Block_Text">{% trans "Folgende Optionen sind verfügbar:" %}</p>
-<p class="Block_Text"> </p>
-<p class="Block_Text"><img src="../Simulations_Kinematik_Wire_1.gif" alt="Simulations_Kinematik_Wire_1.gif" width="20" height="19" align="left" border="0"/>: 
- Obere und untere Düse verfahren und das Werkstück bewegt sich nicht.</p>
-<p class="Block_Text"><img src="../Simulations_Kinematik_Wire_2.gif" alt="Simulations_Kinematik_Wire_2.gif" width="19" height="17" align="left" border="0"/>: 
- Obere Düse wird im Grafikfenster zentriert und das Werkstück bewegt sich.</p>
-<p class="Block_Text"><img src="../Simulations_Kinematik_Wire_3.gif" alt="Simulations_Kinematik_Wire_3.gif" width="19" height="17" align="left" border="0"/>: 
- Untere Düse wird im Grafikfenster zentriert und das Werkstück bewegt sich.</p>
+ <p class="dialog">
+  <img alt="模拟_运动学_Wire.gif" border="0" height="23" src="../Simulations_Kinematik_Wire.gif" width="68"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    设置模拟类型
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通过这些图标，您可以设置上下喷嘴图形是否模拟横向运动，或者工件是否移动而喷嘴图形是否静止。
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    可以使用以下选项：
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+ </p>
+ <p class="Block_Text">
+  <img align="left" alt="模拟_运动学_线_1.gif" border="0" height="19" src="../Simulations_Kinematik_Wire_1.gif" width="20"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：移动上下喷嘴，工件不动。
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <img align="left" alt="模拟_运动学_线_2.gif" border="0" height="17" src="../Simulations_Kinematik_Wire_2.gif" width="19"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：上喷嘴位于图形窗口中央，工件移动。
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <img align="left" alt="模拟_运动学_线_3.gif" border="0" height="17" src="../Simulations_Kinematik_Wire_3.gif" width="19"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：下喷嘴位于图形窗口中央，工件移动。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

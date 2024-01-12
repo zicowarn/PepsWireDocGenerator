@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -37,25 +36,112 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "@ Schnitt" %}</p><p class="hcp1">{% trans "Mit der Schaltfläche [Schnitt] können Sie an beliebigen Positionen, [X]-, [Y]- oder [Z]-Ebenenschnitte durch das Rohteil legen." %}</p><p class="hcp3"> </p>
-<p class="hcp1"><img src="../Sol_Sim_Slice.gif" alt="Sol_Sim_Slice.gif" width="550" height="260" border="0"/></p>
-<p class="hcp3"> </p>
-<p class="hcp1">{% trans "Mit Hilfe von Schnitten können Sie Bereiche des Werkstückes überprüfen, die ohne einen Schnitt nicht oder nur undeutlich sichtbar wären." %}</p>
-<p class="hcp3"> </p>
-<p class="hcp1 pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp3"> </p>
-<p class="hcp1"><img src="../SECTION_shg.gif" usemap="#AreaMap0" alt="SECTION_shg.gif" width="132" height="170" border="0"/> <map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="4, 92, 121, 115" href="javascript:BSSCPopup('3_Punkte_Schaltflaeche.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="101,121,123,137" href="javascript:BSSCPopup('Schnitt_wiederholen.htm');" id="area2" alt=""/>
-<area shape="rect" coords="9,37,49,88" href="javascript:BSSCPopup('Schnittebenenauswahl_Solid_Simulation.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="72,64,123,85" href="javascript:BSSCPopup('Schnitt_ausfuehren.htm',400,300);" id="area4" alt=""/>
-<area shape="rect" coords="58,26,129,56" href="javascript:BSSCPopup('Schaltflaechen_zur_Steuerung_der_Schnittebenen.htm',400,300);" id="area5" alt=""/>
-<area shape="rect" coords="68,143,127,162" href="javascript:BSSCPopup('../Commdata/COMMON_Schliessen.htm',400,300);" id="area6" alt=""/>
-<area shape="rect" coords="6,140,66,160" href="javascript:BSSCPopup('Reset_Schnittebene_Solid_Simulation.htm',400,300);" id="area7" alt=""/>
-<area shape="rect" coords="70, 118, 96, 136" href="javascript:BSSCPopup('Schnitt_rueckgaengig_.htm',400,300);" id="area8" alt=""/>
-<area shape="rect" coords="7, 119, 67, 138" href="javascript:BSSCPopup('Temporaer_Permanent.htm',400,300);" id="area9" alt=""/></map></p>
-<script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
+ <p class="dialog">
+  <img alt="Solid_Sim_Section.gif" border="0" height="32" src="../Solid_Sim_Section.gif" width="32"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    切
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     您可以使用“切割”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮
+   </font>
+   <font style="vertical-align: inherit;">
+    在任何位置创建穿过毛坯的
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     X
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     Y
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     Z
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    平面切割。
+   </font>
+  </font>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p class="hcp1">
+  <img alt="Sol_Sim_Slice.gif" border="0" height="260" src="../Sol_Sim_Slice.gif" width="550"/>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p class="hcp1">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    借助切割，您可以检查在没有切割的情况下不可见或仅隐约可见的工件区域。
+   </font>
+  </font>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p class="hcp1">
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p class="hcp1">
+  <img alt="SECTION_shg.gif" border="0" height="170" src="../SECTION_shg.gif" usemap="#AreaMap0" width="132"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="4, 92, 121, 115" href="javascript:BSSCPopup('3_Punkte_Schaltflaeche.htm',400,300);" id="area1" shape="rect"/>
+   <area alt="" coords="101,121,123,137" href="javascript:BSSCPopup('Schnitt_wiederholen.htm');" id="area2" shape="rect"/>
+   <area alt="" coords="9,37,49,88" href="javascript:BSSCPopup('Schnittebenenauswahl_Solid_Simulation.htm',400,300);" id="area3" shape="rect"/>
+   <area alt="" coords="72,64,123,85" href="javascript:BSSCPopup('Schnitt_ausfuehren.htm',400,300);" id="area4" shape="rect"/>
+   <area alt="" coords="58,26,129,56" href="javascript:BSSCPopup('Schaltflaechen_zur_Steuerung_der_Schnittebenen.htm',400,300);" id="area5" shape="rect"/>
+   <area alt="" coords="68,143,127,162" href="javascript:BSSCPopup('../Commdata/COMMON_Schliessen.htm',400,300);" id="area6" shape="rect"/>
+   <area alt="" coords="6,140,66,160" href="javascript:BSSCPopup('Reset_Schnittebene_Solid_Simulation.htm',400,300);" id="area7" shape="rect"/>
+   <area alt="" coords="70, 118, 96, 136" href="javascript:BSSCPopup('Schnitt_rueckgaengig_.htm',400,300);" id="area8" shape="rect"/>
+   <area alt="" coords="7, 119, 67, 138" href="javascript:BSSCPopup('Temporaer_Permanent.htm',400,300);" id="area9" shape="rect"/>
+  </map>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
         if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
         FilePopupInit('area1');
         FilePopupInit('area2');
@@ -66,8 +152,9 @@
         FilePopupInit('area7');
         FilePopupInit('area8');
         FilePopupInit('area9');
-//]]&gt;
-</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

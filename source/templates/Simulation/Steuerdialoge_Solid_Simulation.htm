@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,8 +28,28 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Steuerdialoge" %}</p><p>{% trans "XXX The horizontal area of the dialog allows the user to specify the orientation of the control dialogs." %}</p>
-<p>{% trans "Ticking a dialog will mean the dialog will appear in the horizontal orientation." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    斯图尔对话
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    XXX 对话框的水平区域允许用户指定控制对话框的方向。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    勾选对话框将意味着该对话框将以水平方向显示。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

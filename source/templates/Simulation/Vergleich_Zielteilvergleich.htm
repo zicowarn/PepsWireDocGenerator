@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,27 +35,166 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Vergleich (Zielteilvergleich)" %}</p><p>{% trans "Mit dieser Schaltfläche können Sie einen [optischen Vergleich] zwischen dem Werkstück und der Simulationsgrafik ausführen." %}</p><p>{% trans "Auf diese Weise können Sie [unbearbeitete Werkstückbereiche] (Restmaterial) und [Hinterschnitte/Beschädigungen] (Gouges) sichtbar machen." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Zielteilvergleich.gif" alt="Zielteilvergleich.gif" width="503" height="285" border="0"/></p>
-<p class="hcp2"> </p>
-<p style="margin-left: 4.50pt;" class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Zielteilvergleich_dia_shg.gif" usemap="#AreaMap0" alt="Zielteilvergleich_dia_shg.gif" width="132" height="221" border="0"/> <map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="6,30,130,119" href="javascript:BSSCPopup('Optionen_Zielteilvergleich.htm',400,500);" id="area1" alt=""/>
-<area shape="rect" coords="4,122,126,188" href="javascript:BSSCPopup('Anzeigen_Zielteilvergleich.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="14,192,113,209" href="javascript:BSSCPopup('../Commdata/COMMON_Schliessen.htm',400,300);" id="area3" alt=""/></map></p>
-<p class="hcp2"> </p>
-<p class="Hinweis">{% trans "Hinweis:" %}</p>
-<p>{% trans "Zielteilvergleiche können nur ausgeführt werden, wenn Sie im Dialog #Operation starten# ein [Werkstück] (Zielteil) aus [Solids] oder [STL]-Daten definieren." %}</p>
-<script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    比较（目标部分比较）
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通过此按钮，您可以对工件和模拟图形
+   </font>
+   <font style="vertical-align: inherit;">
+    进行
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     视觉比较。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通过这种方式，您可以使
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     未加工的工件区域
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    （剩余材料）和
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     底切/损坏
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    （凿痕）可见。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="目标部分比较.gif" border="0" height="285" src="../Zielteilvergleich.gif" width="503"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p style="margin-left: 4.50pt;">
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="目标部分比较_dia_shg.gif" border="0" height="221" src="../Zielteilvergleich_dia_shg.gif" usemap="#AreaMap0" width="132"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="6,30,130,119" href="javascript:BSSCPopup('Optionen_Zielteilvergleich.htm',400,500);" id="area1" shape="rect"/>
+   <area alt="" coords="4,122,126,188" href="javascript:BSSCPopup('Anzeigen_Zielteilvergleich.htm',400,300);" id="area2" shape="rect"/>
+   <area alt="" coords="14,192,113,209" href="javascript:BSSCPopup('../Commdata/COMMON_Schliessen.htm',400,300);" id="area3" shape="rect"/>
+  </map>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一个通知：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <a href="../wirhlp10/Operation_starten.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     仅当您在“开始操作”对话框中从
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     实体
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     STL数据
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     定义工件
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    （
+   </font>
+   <font style="vertical-align: inherit;">
+    目标零件）
+   </font>
+   <font style="vertical-align: inherit;">
+    时，才能执行目标零件比较
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
         if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
         FilePopupInit('area1');
         FilePopupInit('area2');
         FilePopupInit('area3');
-//]]&gt;
-</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

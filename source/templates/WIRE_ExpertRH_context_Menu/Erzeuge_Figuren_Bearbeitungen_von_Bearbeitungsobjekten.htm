@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,10 +33,75 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Erzeuge Figuren + Bearbeitungen von Features" %}</p><p>{% trans "Diese Funktion wandelt die gewählten Features um, erzeugt [Bearbeitungsfiguren] (2D Bearbeitungsgeometrien) sowie [Bearbeitungsoperationen] und übergibt diese an die #Operationsliste#." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
-<p>{% trans "#Figuren + Bearbeitungen von Features erzeugen#" %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    创建角色+编辑特征
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此功能转换选定的特征，创建
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     加工图形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    （2D 加工几何形状）和
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     加工操作
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，并将它们传递到
+   </font>
+  </font>
+  <a href="../Operationsmanager/Bearbeitungs_Register_Operationsmanager.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     操作列表
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    它是这样完成的：
+   </font>
+  </font>
+ </p>
+ <p>
+  <a href="Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     创建图形+编辑特征
+    </font>
+   </font>
+  </a>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

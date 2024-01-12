@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,13 +33,165 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Deaktiviere Feature" %}</p><p>{% trans "Die im [WIRE-Expert] #FeatureManager# gewählten Features werden nicht verwendet." %}</p>
-<p> </p>
-<p>{% trans "Das System kennzeichnet alle deaktivierten Features grafisch @." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p class="Hinweis">{% trans "Tipp:" %}</p>
-<p>{% trans "Wählen Sie [mehrere aufeinander folgende] [Features] aus, indem Sie während des Auswählens die [Umschalt]-Taste gedrückt halten." %}</p>
-<p>{% trans "Wählen Sie [mehrere] [nicht] [aufeinander folgende] [Features] aus, indem Sie während des Auswählens die [Strg]-Taste gedrückt halten." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    禁用功能
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    不使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     WIRE-Expert
+    </font>
+   </font>
+  </font>
+  <a href="../WIRE_Expert_FeatureManager/WIRE_Expert_FeatureManager.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     FeatureManager 设计树
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    中选择的特征。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    系统以图形方式识别所有禁用的功能
+   </font>
+  </font>
+  <img alt="停用_功能.gif" border="0" height="98" src="../Deactive_Feature.gif" width="240"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    提示：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通过在选择时按住
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     Shift
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    键来
+   </font>
+   <font style="vertical-align: inherit;">
+    选择
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     多个连续
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     要素。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通过
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     在
+    </font>
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     选择
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    时按住 Ctrl 键来
+   </font>
+   <font style="vertical-align: inherit;">
+    选择
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     多个
+    </font>
+   </font>
+  </font>
+  <font style="font-weight: bold; 
+	 font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     不连续的
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     要素。
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

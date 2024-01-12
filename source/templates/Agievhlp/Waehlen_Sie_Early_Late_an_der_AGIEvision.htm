@@ -34,9 +34,91 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Wählen Sie Early/Late an der AGIEvision (Stop in SBL)" %}</p><p>{% trans "XXX Mit dieser Methode legt man fest, das die AGIEVISION Steuerung die Anbindungen, je nach gewählter Einstellung an der Steuerung, mit den Strategien [Early] oder [Late] entfernt." %}</p>
-<p>{% trans "1.) [Early]: Schnellst möglicher Eingriff durch den Bediener. [Schnittfolge] = Hauptschnitt, Trennschnitt, Nachschnitte. Je nach Auswahl der [Early]-Strategie auf der NC-Steuerung kann diese Schnittfolge auf einzelne Konturen oder das gesamte Werkstück bezogen sein." %}</p>
-<p>{% trans "2.) [Late]: Spätest möglicher Eingriff durch den Bediener. [Schnittfolge] = Hauptschnitt, Nachschnitte, Trennschnitt. Je nach Auswahl der [Late]-Strategie auf der NC-Steuerung kann diese Schnittfolge auf einzelne Konturen oder das gesamte Werkstück bezogen sein." %}</p>
-
+<p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">在 AGIEvision 上选择早/晚（在 SBL 中停止）</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">XXX 使用此方法，您可以确定 AGIEVISION 控制器使用</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">早期</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">或</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">晚期</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">策略删除连接，具体取决于控制器上所选的设置。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">1.)</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">早期</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">：操作员尽快干预。</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">切割顺序</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">=主切割、分离切割、二次切割。</font>
+      <font style="vertical-align: inherit;">根据NC 控制上</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">早期</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">策略的选择，该切削顺序可以基于单个轮廓或整个工件。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">2.)</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">迟到</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">：操作员最近可能进行的干预。</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">切割顺序</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">=主切割、副切割、分切。</font>
+      <font style="vertical-align: inherit;">根据NC 控制上</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">后期</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">策略的选择，该切削顺序可以基于单个轮廓或整个工件。</font>
+    </font>
+  </p>
 {% endblock %}
 {% endlinebreakless %}

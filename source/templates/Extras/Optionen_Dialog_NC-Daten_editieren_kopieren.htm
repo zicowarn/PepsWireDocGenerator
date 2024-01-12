@@ -35,24 +35,173 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Optionen" %}</p><p> </p>
-<p>{% trans "In diesem Dialog können Sie den Dialog [NC-Daten editieren / kopieren] voreinstellen." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p><img src="../Edit_NC-Data_wire_Options.gif" alt="Edit_NC-Data_wire_Options.gif" width="506" height="266" border="0"/></p>
-<p>{% trans "[Ziellaufwerk]: Hier können Sie einstellen, in welches Verzeichnis die Daten kopiert werden sollen, wenn Sie die Option @ [Kopiere Datei auf Diskette] verwenden." %}</p>
-<p> </p>
-<p>{% trans "[DNC-Aufruf]: In diesem Feld können Sie den Pfad zur Datenübertragungssoftware und den Namen des Übertragungsprogramms eingeben." %}</p>
-<p>{% trans "Normalerweise ist dies die PEPS Software [WNCCOMMS32.EXE], die im PEPS Unterverzeichnis ...\[System] abgelegt ist (Optionale Dienstleistung)." %}</p>
-<p> </p>
-<p>{% trans "[Editor-Software]: Hier können Sie einstellen, welcher Texteditor zum Editieren der NC-Dateien verwendet werden soll." %}</p>
-<p>{% trans "Die Voreinstellung ist das Programm [MS Windows Notepad.exe]." %}</p>
-<p> </p>
-<p>{% trans "[Software für Simulation]: In diesem Feld können Sie den Pfad zu einer [externen Simulationssoftware] eingeben." %}</p>
-<p>{% trans "[Ziellaufwerk 2]: Hier können Sie ein [zweites, alternatives] Laufwerk (z.B. für einen [USB]-Stick) einstellen, in das die Daten kopiert werden sollen, wenn Sie die Schaltfläche @ [Ziellaufwerk 2] klicken." %}</p>
-<p> </p>
-<p>{% trans "[Kopiere Einrichteblatt:] Ist diese Option aktiv, wird neben den NC-Daten, auch das Einrichteblatt in das Ziellaufwerk kopiert." %}</p>
-<p> </p>
-<p>{% trans "[Programm Name anhängen:] XXX" %}</p>
-
+<p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">选项</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">在此对话框中，您可以预设</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">编辑/复制 NC 数据</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">对话框。</font>
+    </font>
+  </p>
+  <p style="margin-top: 0; margin-bottom: 0;">&nbsp;</p>
+  <p><img alt="Edit_NC-Data_wire_Options.gif" border="0" height="266" src="../Edit_NC-Data_wire_Options.gif" width="506" /></p>
+  <p>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">目标驱动器：如果使用</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;"></font><img alt="Edi_Copy_to_disk_Wire.gif" border="0" height="29" src="../Edi_Copy_to_disk_Wire.gif" width="30" />
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">“将文件复制到软盘”</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">选项，您可以在此处设置数据应复制到的目录</font>
+      <font style="vertical-align: inherit;">。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">DNC 调用</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">：在此字段中您可以输入数据传输软件的路径和传输程序的名称。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">通常这是 PEPS 软件</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">WNCCOMMS32.EXE</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">，存储在 PEPS 子目录 ...\ </font>
+    </font><span class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">System</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">中
+        （可选服务）。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">编辑器软件</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">：您可以在此处设置应使用哪个文本编辑器来编辑 NC 文件。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">默认设置是</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">MS Windows Notepad.exe</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">程序。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">模拟软件：在此字段中您可以输入</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">外部模拟软件的</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">路径</font>
+      <font style="vertical-align: inherit;">。</font>
+    </font>
+  </p>
+  <p>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">目标驱动器 2</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">：您可以在此处设置</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">第二个备用</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+        驱动器（例如</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">USB记忆棒），当您单击</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;"></font><img alt="Edi_Copy_to_Disk_Wire_2.gif" border="0" height="29" src="../Edi_Copy_to_Disk_Wire_2.gif" width="32" />
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">“目标驱动器 2”</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">按钮时，数据应复制到该驱动器中
+      </font>
+      <font style="vertical-align: inherit;">。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">复制设置表：</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">如果此选项处于活动状态，除了 NC 数据之外，设置表也将被复制到目标驱动器。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p><span class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">附加程序名称：</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;"> XXX</font>
+    </font>
+  </p>
 {% endblock %}
 {% endlinebreakless %}

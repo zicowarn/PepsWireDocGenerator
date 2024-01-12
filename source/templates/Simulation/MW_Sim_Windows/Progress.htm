@@ -34,17 +34,88 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <h1>{% trans "Fortschrittsanzeige" %}</h1><p> </p>
-<p>{% trans "Der Schieber [Fortschrittsanzeige] zeigt sowohl die Position der aktuellen Operation, als auch die Positionen aller Operationen. Der Schieber kann ebenfalls verwendet werden, um an eine bestimmte Position im Werkzeugweg zu springen, indem man den Schieber vorwärts oder rückwärts 'zieht' ([Hinweis]: Bei dieser Art der Navigation ist die Kollisionsprüfung und alle anderen Überprüfungs-Algorithmen ausgeschaltet." %}</p>
-<p>{% trans "Der Schieber erlaubt es, auf besonders schnelle Weise eine bestimmte Position im Werkzeugweg zu erreichen. Die einzelnen Bearbeitungsoperationen werden voneinander getrennt, durch unterschiedliche Farben und einem schwarzen Trennstrich." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p><img src="../../newUI_progress.gif" alt="newUI_progress.gif" width="1051" height="104" border="0"/></p>
-<p> </p>
-<p>{% trans "Die 3 farbigen Fortschrittsanzeigen unterhalb des Schiebers, zeigen besondere Ereignisse im Werkzeugweg (z.B. Kollisionen) in [roter] Farbe grafisch an. Die Fortschrittsanzeigen haben folgende Funktion:" %}</p>
-<p> </p>
-<p>{% trans "[Erste Fortschrittsanzeige]: Maschinen-Verfahrgrenzen überschritten" %}</p>
-<p>{% trans "[Zweite Fortschrittsanzeige]: Kollisionsreport für die Maschine" %}</p>
-<p>{% trans "[Dritte Fortschrittsanzeige]: Kollisionsreport für die Simulation" %}</p>
-
+<h1>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">进度条</font>
+    </font>
+  </h1>
+  <p>&nbsp;</p>
+  <p>
+    <font style="vertical-align: inherit;"></font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">进度条</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">滑块</font>
+      <font style="vertical-align: inherit;">
+        显示当前操作的位置和所有操作的位置。</font>
+      <font style="vertical-align: inherit;">通过向前或向后“拖动”滑块，滑块还可以用于跳转到刀具路径中的特定位置（</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">注意</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">：使用这种类型的导航，碰撞检查和所有其他检查算法都将关闭。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">滑块允许您特别快速地到达刀具路径中的特定位置。</font>
+      <font style="vertical-align: inherit;">各个编辑操作通过不同的颜色和黑色分隔线彼此分开。</font>
+    </font>
+  </p>
+  <p style="margin-top: 0; margin-bottom: 0;">&nbsp;</p>
+  <p><img alt="newUI_progress.gif" border="0" height="104" src="../../newUI_progress.gif" width="1051" /></p>
+  <p>&nbsp;</p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">滑块下方的 3 个彩色进度指示器以</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">红色</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">图形方式显示刀具路径中的特殊事件（例如碰撞）
+        。</font>
+      <font style="vertical-align: inherit;">进度指示器具有以下功能：</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">第一个进度显示</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">：超出机器行程限制</font>
+    </font>
+  </p>
+  <p>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">第二个进度显示</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">：机器的碰撞报告</font>
+    </font>
+  </p>
+  <p>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">第三个进度条</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">：模拟的碰撞报告</font>
+    </font>
+  </p>
 {% endblock %}
 {% endlinebreakless %}

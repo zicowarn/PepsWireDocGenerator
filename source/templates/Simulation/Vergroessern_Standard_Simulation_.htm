@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,8 +28,58 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Vergrößern (Drahtmodell-Simulation)" %}</p><p>{% trans "Mit diesen Ikonen können Sie eine Vergrößerung der Simulationsgrafik ausführen oder eine vorhandene Vergrößerung aufheben." %}</p>
-<p>{% trans "Beachten Sie bitte die Befehlsoptionen ([rechte Maustaste] od. [horizontale Ikonenleiste]), die das System nach Wahl der Ikone @ anzeigt." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    放大（线框模拟）
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用这些图标，您可以放大模拟图形或取消现有的放大。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    请注意选择图标后
+   </font>
+   <font style="vertical-align: inherit;">
+    系统显示的
+   </font>
+   <font style="vertical-align: inherit;">
+    命令选项（
+   </font>
+  </font>
+  <font style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     鼠标右键
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <span style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     水平图标栏）。
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+  </font>
+  <img alt="喜欢.gif" border="0" height="28" src="../mag.gif" width="30"/>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

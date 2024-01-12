@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,9 +33,53 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Logbuch" %}</p><p>{% trans "Schaltet die Anzeige des [Logbuches] ein oder aus. Das [Logbuch] listet alle besonderen Simulationsereignisse auf (Kollisionen etc.)." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p><img src="../Logbuch_Standard_Simulation.gif" alt="Logbuch_Standard_Simulation.gif" width="547" height="244" border="0"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    日志
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    打开或关闭
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     日志
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    的显示。
+   </font>
+   <font style="vertical-align: inherit;">
+    日志列出了所有特殊模拟
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     事件
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    （碰撞等）。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <img alt="Logbook_Standard_Simulation.gif" border="0" height="244" src="../Logbuch_Standard_Simulation.gif" width="547"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

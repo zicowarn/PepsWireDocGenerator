@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,9 +33,61 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Restmaterial und Gouges transparent zeigen" %}</p><p>{% trans "Bei einem #[Zielteilvergleich]# zeigt das System das Restmaterial und Gouges (Hinterschnitte) [nicht] transparent an." %}</p>
-<p>{% trans "In einigen Fällen möchte der Anwender das Restmaterial jedoch transparent (durchsichtig) sehen, um das Zielteil besser erkennen zu können." %}</p>
-<p>{% trans "Aktivieren Sie diese Option, um Restmaterial und Gouges transparent anzuzeigen." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    透明地显示剩余材料和凿孔
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <a href="Vergleich_Zielteilvergleich.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      比较目标零件
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    时，系统
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     不会
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    透明地显示剩余材料和凿痕（底切）
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    然而，在某些情况下，用户希望看到剩余的材料透明（透视）以更好地看到目标部分。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    启用此选项可透明显示残留材料和凿痕。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

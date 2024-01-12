@@ -38,76 +38,486 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <h1>{% trans "Abtragssimulation Fenster" %}</h1><p> </p>
-<p>{% trans "Mit den Parametern im Fenster [Abtragssimulation ]können Sie die Simulationsgenauigkeit einstellen und den aktuellen Simulationsstatus als Rohteil abspeichern." %}</p>
-<p> </p>
-<p><img src="../../newUI_cutsim.gif" alt="newUI_cutsim.gif" width="526" height="491" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "[Datenmodell]" %}</p>
-<p>{% trans "Das Datenmodell kann sein: [Automatisch], [3-Achsen] oder [5-Achsen]." %}</p>
-<p>{% trans "[Automatisch]: Das Datenmodell ([3-Achsen / 5-Achsen]) stellt sich automatisch passend für das simulierte Modell ein." %}</p>
-<p>{% trans "[3-Achsen]: Das [3-Achsen] Datenmodell wird für 3-Achsenbearbeitungen wird verwendet für 3-Achsen Bearbeitungen in Z ohne Hinterschnitte." %}</p>
-<p>{% trans "[5-Achsen]: Das [5-Achsen] Datenmodell erlaubt auch die Simulation der Bearbeitung von Hinterschnitten." %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "[[Detailgenauigkeit]:]" %}</p>
-<p>{% trans "Bestimmt die Genauigkeit mit welcher der Materialabtrag am Rohteil dargestellt wird. Eine geringe Genauigkeit erhöht die Simulationsgeschwindigkeit, aber das Simulationsergebnis weniger genau. Eine hohe Genauigkeit verlangsamt zwar die Simulationsgeschwindigkeit, jedoch ist das Simulationsergebnis präziser." %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "[Prüfe]" %}</p>
-<p>{% trans "Die Option [Prüfe] stellt ein, welcher Teil eines Werkzeuges (Schneide, Schaft, Verlängerung und Halter) Material abtragen soll oder auf Kollisionen geprüft werden soll." %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "[Schneide]" %}</p>
-<p>{% trans "a) [Material abtragen]: Nur Materialabtrag, keine Kollisionsüberprüfung" %}</p>
-<p>{% trans "b) [Material abtragen mit ][[Kollisionskontrolle] (Eilgang)]: Materialabtrag und Kollisionsüberprüfung" %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "[Schaft, Verlängerung und Halter]" %}</p>
-<p>{% trans "a) [Keine Funktion]: Kein Materialabtrag, keine Kollisionsüberprüfung" %}</p>
-<p>{% trans "b) [Material abtragen]: Nur Materialabtrag, keine Kollisionsüberprüfung" %}</p>
-<p>{% trans "c) [Material abtragen mit [Kollisionskontrolle]]: Materialabtrag und Kollisionsüberprüfung" %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "[Rohteil speichern]" %}</p>
-<p>{% trans "@ Das aktuelle Simulationsergebnis kann als STL-Datei gespeichert werden. Die STL-Datei lässt sich z.B. für anschließende Restmaterialbearbeitungen verwenden" %}</p>
-<p> </p>
-<p>{% trans "[[Weitere ]Parameter]" %}</p>
-<p><img src="../../newUI_advanced_properties_cutsim.gif" alt="newUI_advanced_properties_cutsim.gif" width="33" height="31" border="0"/></p>
-<p>{% trans "Es ist möglich, nach jeder Bearbeitungsoperation [automatisch] das aktuelle Simulationsergebnis als STL-Datei zu speichern." %}</p>
-<p>{% trans "Wenn Sie die Option [Weitere Parameter] aktivieren, öffnet sich ein Dialog, in dem Sie bestimmen können, wo die STL-Dateien gespeichert werden sollen." %}</p>
-<p>{% trans "Der Dialog [Weitere Parameter] erlaubt folgende Einstellungen:" %}</p>
-<p> </p>
-<p><strong class="">Ergebnis sichern:</strong> Erlaubt es, nach jedem Werkzeugwechsel 
- automatisch ein Rohteil zu speichern. </p>
-<p><strong class="">Das Rohteil nach jeder neuen Operation sichern:</strong> 
- Wenn Sie diese Option aktivieren, speichert das System das(ie) STL-Datei(en) 
- in dem angegebenen Verzeichnis. </p>
-<p>{% trans "Es wird nach jedem Werkzeugwechsel eine STL-Datei erstellt. Der angegebene Dateiname wird dabei jeweils um 1 hochgezählt." %}</p>
-<p><strong class=""><span class="hcp1">Benutzerdefinierte 
- Auflösung</span>:</strong> Bestimmt die Genauigkeit der STL-Datei. </p>
-<p> </p>
-<p><strong class="">Restmaterial &amp; Bauteilverletzungsprüfung Einstellungen</strong></p>
-<p><strong class="">Offset zu Zielgeometrie:<span class="hcp4"> 
- </span><strong class=""><span class="hcp4">Diese Option 
- erlaubt dem Anwender einen </span><span class="hcp1">Abstandswert</span><span class="hcp4"> zu definieren, der bei der Berechnung 
- von <strong class="" style="font-weight: normal;">Restmaterial &amp; Bauteilverletzungsprüfung</strong> 
- berücksichtigt wird</span></strong>. </strong></p>
-<p><strong class="">Schwellenwert zu Restmaterial Bauteilverletzungsreport:<span class="hcp4"> </span></strong><strong class=""><span class="hcp4">Diese Option erlaubt dem Anwender einen 
- </span><span class="hcp1">Grenzwert</span><span class="hcp4"> 
- zu definieren, der bei der Berechnung von <strong class="" style="font-weight: normal;">Restmaterial 
- &amp; Bauteilverletzungsprüfung</strong></span><span class="hcp4"> 
- berücksichtigt wird</span></strong> </p>
-<p>{% trans "&lt;strong class=''&gt;Restmaterial Bauteilverletzungsprüfung bei nicht bearbeiteten Bereichen:&lt;/strong&gt; &lt;strong class=''&gt;[ ]&lt;/strong&gt;Diese Option erlaubt dem Anwender einzustellen, ob [Informationen] &lt;strong class='' style='font-weight: normal;'&gt;angezeigt werden sollen &lt;/strong&gt;über &lt;strong class='' style='font-weight: normal;'&gt;Restmaterial &amp;amp; Bauteilverletzungen für unbearbeitete Materialbereiche. &lt;/strong&gt;" %}<strong class="">Restmaterial Bauteilverletzungsprüfung bei nicht bearbeiteten 
- Bereichen:</strong> <strong class=""><span class="hcp4"> </span></strong>Diese 
- Option erlaubt dem Anwender einzustellen, ob <strong class="" style="font-weight: normal;">angezeigt werden sollen 
- </strong>über <strong class="" style="font-weight: normal;">Restmaterial 
- &amp; Bauteilverletzungen für unbearbeitete Materialbereiche. </strong></p>
-<p> </p>
-<p><strong class="">Schnittebene</strong></p>
-<p><strong class="">Ein<span class="hcp1">: </span><span class="hcp4">Diese Option erlaubt dem Anwender, das 
- Werkstück mit einer gedachten Schnittebene durchzuschneiden. </span><span class="hcp1"> </span></strong> </p>
-<p><strong class="">Normale (X, Y, Z):</strong> Definiert die Ebene, die 
- als Schnittebene verwendet werden soll. </p>
-<p><strong class="">Verschiebung:</strong> Erlaubt eine Verschiebung der 
- Schnittebene, um den hier eingegebenen Verschiebungswert.</p>
-<p> </p>
-<p><img src="../../save_as_advanced.gif" alt="save_as_advanced.gif" width="463" height="425" border="0"/></p>
-
+<h1>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">移除模拟窗口</font>
+    </font>
+  </h1>
+  <p>&nbsp;</p>
+  <p>
+    <font style="vertical-align: inherit;"></font><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">您可以使用材料去除模拟
+        </font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">窗口中的参数</font>
+      <font style="vertical-align: inherit;">来设置模拟精度并将当前模拟状态保存为毛坯零件。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p><img alt="newUI_cutsim.gif" border="0" height="491" src="../../newUI_cutsim.gif" width="526" /></p>
+  <p class="hcp2">&nbsp;</p>
+  <p>
+    <font class="hcp3">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">数据模型</font>
+      </font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">数据模型可以是：</font>
+    </font>
+    <font class="hcp3">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">自动</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">、
+      </font>
+    </font>
+    <font class="hcp3">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">3 轴</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">或</font>
+    </font>
+    <font class="hcp3">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">5 轴</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">。</font>
+    </font>
+  </p>
+  <p>
+    <font class="hcp3">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">自动</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">：自动调整</font>
+      <font style="vertical-align: inherit;">数据模型（</font>
+    </font>
+    <font class="hcp3">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">3 轴/5 轴）以适应模拟模型。</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+  </p>
+  <p>
+    <font class="hcp3">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">3 轴</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">：</font>
+    </font>
+    <font class="hcp3">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">3 轴</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+        数据模型用于 Z 轴上无底切的 3 轴加工。</font>
+    </font>
+  </p>
+  <p>
+    <font class="hcp3">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">5 轴</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">：</font>
+    </font>
+    <font class="hcp3">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">5 轴</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+        数据模型还允许模拟底切加工。</font>
+    </font>
+  </p>
+  <p class="hcp2">&nbsp;</p>
+  <p>
+    <font class="hcp3"><span class="hcp1">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">详细程度</font>
+        </font>
+      </span>
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">：</font>
+      </font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">确定原始零件上材料去除量的显示精度。</font>
+      <font style="vertical-align: inherit;">低精度会提高仿真速度，但仿真结果会变得不太准确。</font>
+      <font style="vertical-align: inherit;">虽然精度高会降低仿真速度，但仿真结果更加精确。</font>
+    </font>
+  </p>
+  <p class="hcp2">&nbsp;</p>
+  <p><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">查看</font>
+      </font>
+    </span></p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">检查选项设置刀具的哪个部分（切削刃、刀柄、延伸</font>
+    </font><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">部</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">和刀柄）应去除材料或检查碰撞。</font>
+    </font>
+  </p>
+  <p class="hcp2">&nbsp;</p>
+  <p>
+    <font class="hcp3">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">切</font>
+      </font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">a)</font>
+    </font><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">去除材料</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">：仅去除材料，不进行碰撞检查</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">b)通过</font>
+      <font class="hcp3"><span class="hcp1">
+          <font style="vertical-align: inherit;">碰撞控制</font>
+        </span></font>
+    </font><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">去除材料</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font class="hcp3">
+        <font style="vertical-align: inherit;">
+          （快速移动）</font>
+      </font>
+      <font style="vertical-align: inherit;">：材料去除和碰撞检查</font>
+    </font>
+    <font class="hcp3"><span class="hcp1">
+        <font style="vertical-align: inherit;"></font>
+      </span>
+      <font style="vertical-align: inherit;"></font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+  </p>
+  <p class="hcp2">&nbsp;</p>
+  <p>
+    <font class="hcp3">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">轴、延长杆和支架</font>
+      </font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">a)</font>
+    </font><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">无功能</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">：无材料去除，无碰撞检查</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">b)</font>
+    </font><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">去除材料</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">：仅去除材料，不进行碰撞检查</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">c)通过</font><span class="hcp1">
+        <font class="hcp3">
+          <font style="vertical-align: inherit;">碰撞控制</font>
+        </font>
+      </span>
+    </font><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">去除材料</font>
+      </font>
+      <font class="hcp3">
+        <font style="vertical-align: inherit;"></font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">：材料去除和碰撞检查</font>
+    </font>
+  </p>
+  <p class="hcp2">&nbsp;</p>
+  <p>
+    <font class="hcp3">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">保存空白</font>
+      </font>
+    </font>
+  </p>
+  <p><img alt="newUI_save_stock.gif" border="0" height="32" src="../../newUI_save_stock.gif" width="34" />
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">当前的仿真结果可以保存为STL文件。</font>
+      <font style="vertical-align: inherit;">例如，STL 文件可用于剩余材料的后续处理</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p>
+    <font class="hcp3"><span class="hcp1">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">其他
+          </font>
+        </font>
+      </span>
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">参数</font>
+      </font>
+    </font>
+  </p>
+  <p><img alt="newUI_advanced_properties_cutsim.gif" border="0" height="31" src="../../newUI_advanced_properties_cutsim.gif" width="33" /></p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">每次加工操作后，可以</font>
+    </font>
+    <font class="hcp3">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">自动</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+        将当前模拟结果保存为 STL 文件。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;"></font><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">如果激活“其他参数”</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">选项</font>
+      <font style="vertical-align: inherit;">
+        ，则会打开一个对话框，您可以在其中确定 STL 文件的保存位置。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;"></font><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">“附加参数”</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">对话框</font>
+      <font style="vertical-align: inherit;">
+        允许进行以下设置：</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p><strong class="">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">保存结果：</font>
+      </font>
+    </strong>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">允许您在每次更换工具后自动保存空白。</font>
+    </font>
+  </p>
+  <p><strong class="">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">每次新操作后保存空白：</font>
+      </font>
+    </strong>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+        如果启用此选项，系统会将 STL 文件保存在指定目录中。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">每次更换工具后都会创建一个 STL 文件。</font>
+      <font style="vertical-align: inherit;">指定的文件名每次加1。</font>
+    </font>
+  </p>
+  <p><strong class=""><span class="hcp1">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">自定义分辨率</font>
+        </font>
+      </span>
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">：</font>
+      </font>
+    </strong>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">确定 STL 文件的准确性。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p><strong class="">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">残留材料和部件损伤测试设置</font>
+      </font>
+    </strong></p>
+  <p><strong class="">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">目标几何形状的偏移：</font><strong class=""><span class="hcp4">
+            <font style="vertical-align: inherit;">此选项允许用户定义</font>
+          </span></strong><strong class=""><span class="hcp4">
+            <font style="vertical-align: inherit;">在计算</font>
+          </span></strong><strong class=""><span class="hcp4"><strong class="" style="font-weight: normal;">
+              <font style="vertical-align: inherit;">剩余材料和组件违规测试</font>
+            </strong></span></strong><strong class=""><span class="hcp4">
+            <font style="vertical-align: inherit;">时
+              考虑的</font>
+          </span></strong><strong class=""><span class="hcp1">
+            <font style="vertical-align: inherit;">距离值</font>
+          </span></strong>
+        <font style="vertical-align: inherit;">。</font>
+      </font><span class="hcp4">
+      </span><strong class=""><span class="hcp4">
+          <font style="vertical-align: inherit;"></font>
+        </span><span class="hcp1">
+          <font style="vertical-align: inherit;"></font>
+        </span><span class="hcp4">
+          <font style="vertical-align: inherit;"></font><strong class="" style="font-weight: normal;">
+            <font style="vertical-align: inherit;"></font>
+          </strong>
+          <font style="vertical-align: inherit;"></font>
+        </span></strong>
+      <font style="vertical-align: inherit;"></font>
+    </strong></p>
+  <p><strong class="">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">残留材料成分违规报告阈值：</font>
+      </font><span class="hcp4">&nbsp;</span>
+    </strong><strong class=""><span class="hcp4">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">此选项允许用户定义
+          </font>
+        </font>
+      </span>
+      <font style="vertical-align: inherit;"><span class="hcp4">
+          <font style="vertical-align: inherit;">
+            在计算</font>
+        </span><span class="hcp4"><strong class="" style="font-weight: normal;">
+            <font style="vertical-align: inherit;">残留材料和成分违规测试</font>
+          </strong></span><span class="hcp4">
+          <font style="vertical-align: inherit;">时
+            考虑的</font>
+        </span></font><span class="hcp1">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">限制</font>
+        </font>
+      </span><span class="hcp4">
+        <font style="vertical-align: inherit;"></font><strong class="" style="font-weight: normal;">
+          <font style="vertical-align: inherit;"></font>
+        </strong>
+      </span><span class="hcp4">
+        <font style="vertical-align: inherit;"></font>
+      </span>
+    </strong> </p>
+  <p><strong class="">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">未处理区域的残留材料成分违规检查：</font>
+      </font>
+    </strong> <strong class=""><span class="hcp4">&nbsp;</span></strong>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">此选项允许用户设置是否</font><strong class="" style="font-weight: normal;">
+        <font style="vertical-align: inherit;">应显示
+        </font>
+      </strong>
+      <font style="vertical-align: inherit;">有关</font><strong class="" style="font-weight: normal;">
+        <font style="vertical-align: inherit;">未处理材料区域的残留材料和成分违规的</font>
+      </strong>
+    </font><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">信息。</font>
+      </font>
+    </span>
+    <strong class="" style="font-weight: normal;">
+      <font style="vertical-align: inherit;"></font>
+    </strong>
+    <font style="vertical-align: inherit;"></font><strong class="" style="font-weight: normal;">
+      <font style="vertical-align: inherit;"></font>
+    </strong>
+  </p>
+  <p>&nbsp;</p>
+  <p><strong class="">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">切割平面</font>
+      </font>
+    </strong></p>
+  <p><strong class="">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">开</font>
+      </font><span class="hcp1">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">：</font>
+        </font>
+      </span><span class="hcp4">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">此选项允许用户使用假想切割平面切割工件。</font>
+        </font>
+      </span><span class="hcp1">&nbsp;</span>
+    </strong>&nbsp;</p>
+  <p><strong class="">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">法线 (X、Y、Z)：</font>
+      </font>
+    </strong>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">定义用作切割平面的平面。</font>
+    </font>
+  </p>
+  <p><strong class="">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">平移：</font>
+      </font>
+    </strong>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">允许按照此处输入的平移值移动切割平面。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p>
+    <img alt="另存为高级.gif" border="0" height="425" src="../../save_as_advanced.gif" width="463" />
+  </p>
 {% endblock %}
 {% endlinebreakless %}

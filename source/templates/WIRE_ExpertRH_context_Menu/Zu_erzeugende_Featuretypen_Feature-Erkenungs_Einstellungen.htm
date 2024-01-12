@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,13 +33,126 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Zu erzeugende Featuretypen" %}</p><p>{% trans "Mit diesem Filter können Sie bestimmbare Featuretypen von der automatischen [Feature-Erkennung] ausschließen." %}</p>
-<p> </p>
-<p>{% trans "[Beispiel]:" %}</p>
-<p>{% trans "[De]aktiviert man die Option '[Zylindrische Innenform]', werden bei Anwendung der automatischen [Feature-Erkennung] alle zylindrischen Innenformen ignoriert." %}</p>
-<p>{% trans "Das folgende Beispiel zeigt ein Modell nach einer [Feature-Erkennung], bei der alle [zylindrischen Innenformen] ignoriert wurden." %}</p>
-<p> </p>
-<p><img src="../FR_Filter_Example_1.gif" alt="FR_Filter_Example_1.gif" width="532" height="352" border="0"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    要创建的特征类型
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     此过滤器允许您从自动特征检测
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    中排除可识别的特征类型
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     例子
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     如果激活“
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     圆柱形内部形状
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ”选项，则在使用自动
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     特征识别
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    时将忽略所有圆柱形内部形状
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    以下示例显示了
+   </font>
+   <font style="vertical-align: inherit;">
+    忽略所有
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     圆柱形内部形状的
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     特征检测
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    后 
+ 的模型。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <img alt="FR_Filter_Example_1.gif" border="0" height="352" src="../FR_Filter_Example_1.gif" width="532"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,14 +33,135 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Boxauswahl verwenden" %}</p><p> </p>
-<p>{% trans "Ist diese Option aktiviert, können Sie [VOR] dem Start der [Automatischen Featureerkennung] eine [Auswahlfenster] 'aufziehen'." %}</p>
-<p>{% trans "Mit Hilfe des [Auswahlfenster] können Sie einen Teilbereich im 3D Modell auswählen, in dem die [Automatischen Featureerkennung] ausgeführt werden soll." %}</p>
-<p> </p>
-<p>{% trans "Die folgenden Bilder zeigt links wie ein rotes [Auswahlfenster], mit dessen Hilfe zwei Bohrungen ausgewählt werden sollen." %}</p>
-<p>{% trans "Das rechte Bild zeigt das Ergebnis der [Automatischen Featureerkennung], nämlich zwei bearbeite Bohrungen." %}</p>
-<p> </p>
-<p><img src="../image/Boxauswahl%20verwenden.gif" alt="" style="border: none;" border="0"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用框选择
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果激活此选项，您可以
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     在
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    开始
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     自动特征识别之前“绘制”
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     选择
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    窗口
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     选择窗口
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，您可以选择 3D 模型中应执行
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     自动特征识别
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    的部分 &nbsp;。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图左边是一个红色的
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     选择窗口
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，可以用来选择两个孔。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    右图显示了
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     自动特征识别
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    的结果，即两个加工孔。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <img alt="" border="0" src="../image/Boxauswahl%20verwenden.gif" style="border: none;"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

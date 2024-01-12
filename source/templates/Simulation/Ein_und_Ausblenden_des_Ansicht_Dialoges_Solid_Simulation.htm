@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,24 +28,70 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Ein und Ausblenden des Ansicht-Dialoges" %}</p><p>{% trans "Schaltet die Anzeige des #Ansicht-Dialogs# ein oder aus. Die folgende Abbildung zeigt den [Ansicht-Dialog]:" %}</p><p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p><img src="../Ansicht_Dia_Solid_Sim_shg.gif" usemap="#AreaMap0" alt="Ansicht_Dia_Solid_Sim_shg.gif" width="123" height="621" border="0"/> <map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="5,27,121,91" href="Ansicht_der_Simulation_Solid_Simulation.htm" alt=""/>
-<area shape="rect" coords="18,93,104,119" href="javascript:BSSCPopup('Simulationstyp_einstellen.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="2,174,65,195" href="javascript:BSSCPopup('Werkzeugwege_anzeigen_Simulation.htm',400,600);" id="area2" alt=""/>
-<area shape="rect" coords="66,176,123,196" href="javascript:BSSCPopup('Maschinenverfahrbewegungen_anzeigen_Simulation.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="6,592,63,615" href="javascript:BSSCPopup('Rohteil_als_STL_Datei_abspeichern.htm',400,300);" id="area4" alt=""/>
-<area shape="rect" coords="67,594,123,616" href="javascript:BSSCPopup('Aktuellen_Simulationsstand_abspeichern.htm',400,300);" id="area5" alt=""/>
-<area shape="rect" coords="2,259,123,350" href="javascript:BSSCPopup('Tranzparanz_fuer_Rohteildarstellung.htm',600,600);" id="area6" alt=""/>
-<area shape="rect" coords="9,493,123,523" href="javascript:BSSCPopup('Draht_Verdeck_Ohne_Kanten_Mit_Kanten.htm',400,600);" id="area7" alt=""/>
-<area shape="rect" coords="5,526,123,575" href="Erweitertes_Rendern_Solid_Sim.htm" alt=""/>
-<area shape="rect" coords="3,426,123,474" href="javascript:BSSCPopup('Maschinenbauteile_ein_und_ausblenden_Masch_Sim.htm',400,600);" id="area8" alt=""/>
-<area shape="rect" coords="0, 126, 122, 175" href="javascript:BSSCPopup('Draht_Duesen_Rohteile_Zielteile.htm',400,300);" id="area9" alt=""/>
-<area shape="rect" coords="2, 200, 124, 227" href="javascript:BSSCPopup('Rohteil_mit_Werkstueck_vergleichen.htm',400,300);" id="area10" alt=""/>
-<area shape="rect" coords="2, 230, 123, 256" href="javascript:BSSCPopup('Simulationsfarben_zuruecksetzen_Solid_Simulation.htm',400,300);" id="area11" alt=""/>
-<area shape="rect" coords="2, 355, 121, 425" href="Transparenz_fuer_Maschinenbauteile_Masch_Sim.htm" alt=""/></map></p>
-<script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    显示和隐藏视图对话框
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    打开或关闭
+   </font>
+  </font>
+  <a href="Der_Ansichtdialog_Solid_Simulation.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     视图对话框
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    的显示。
+   </font>
+   <font style="vertical-align: inherit;">
+    下图显示了
+   </font>
+  </font>
+  <font style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “查看”对话框
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <img alt="查看_Dia_Solid_Sim_shg.gif" border="0" height="621" src="../Ansicht_Dia_Solid_Sim_shg.gif" usemap="#AreaMap0" width="123"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="5,27,121,91" href="Ansicht_der_Simulation_Solid_Simulation.htm" shape="rect"/>
+   <area alt="" coords="18,93,104,119" href="javascript:BSSCPopup('Simulationstyp_einstellen.htm',400,300);" id="area1" shape="rect"/>
+   <area alt="" coords="2,174,65,195" href="javascript:BSSCPopup('Werkzeugwege_anzeigen_Simulation.htm',400,600);" id="area2" shape="rect"/>
+   <area alt="" coords="66,176,123,196" href="javascript:BSSCPopup('Maschinenverfahrbewegungen_anzeigen_Simulation.htm',400,300);" id="area3" shape="rect"/>
+   <area alt="" coords="6,592,63,615" href="javascript:BSSCPopup('Rohteil_als_STL_Datei_abspeichern.htm',400,300);" id="area4" shape="rect"/>
+   <area alt="" coords="67,594,123,616" href="javascript:BSSCPopup('Aktuellen_Simulationsstand_abspeichern.htm',400,300);" id="area5" shape="rect"/>
+   <area alt="" coords="2,259,123,350" href="javascript:BSSCPopup('Tranzparanz_fuer_Rohteildarstellung.htm',600,600);" id="area6" shape="rect"/>
+   <area alt="" coords="9,493,123,523" href="javascript:BSSCPopup('Draht_Verdeck_Ohne_Kanten_Mit_Kanten.htm',400,600);" id="area7" shape="rect"/>
+   <area alt="" coords="5,526,123,575" href="Erweitertes_Rendern_Solid_Sim.htm" shape="rect"/>
+   <area alt="" coords="3,426,123,474" href="javascript:BSSCPopup('Maschinenbauteile_ein_und_ausblenden_Masch_Sim.htm',400,600);" id="area8" shape="rect"/>
+   <area alt="" coords="0, 126, 122, 175" href="javascript:BSSCPopup('Draht_Duesen_Rohteile_Zielteile.htm',400,300);" id="area9" shape="rect"/>
+   <area alt="" coords="2, 200, 124, 227" href="javascript:BSSCPopup('Rohteil_mit_Werkstueck_vergleichen.htm',400,300);" id="area10" shape="rect"/>
+   <area alt="" coords="2, 230, 123, 256" href="javascript:BSSCPopup('Simulationsfarben_zuruecksetzen_Solid_Simulation.htm',400,300);" id="area11" shape="rect"/>
+   <area alt="" coords="2, 355, 121, 425" href="Transparenz_fuer_Maschinenbauteile_Masch_Sim.htm" shape="rect"/>
+  </map>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
         if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
         FilePopupInit('area1');
         FilePopupInit('area2');
@@ -59,8 +104,9 @@
         FilePopupInit('area9');
         FilePopupInit('area10');
         FilePopupInit('area11');
-//]]&gt;
-</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

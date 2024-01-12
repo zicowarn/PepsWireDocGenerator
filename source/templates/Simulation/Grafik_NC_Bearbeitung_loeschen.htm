@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,16 +35,179 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Grafik NC-Bearbeitung löschen" %}</p><p> </p>
-<p>{% trans "Dieser Befehl löscht die Drahtmodelldarstellung sämtlicher NC-Bearbeitungen des aktuellen Programms." %}</p>
-<p>{% trans "Der Befehl wird normalerweise verwendet, um die Bildschirmdarstellung übersichtlicher zu gestalten. Das Löschen des Drahtmodells hat keinen Einfluss auf die NC-Datenausgabe." %}</p>
-<p class="hcp1"> </p>
-<p><img src="../graf_nc.gif" alt="graf_nc.gif" width="581" height="203" border="0"/></p>
-<p class="hcp1"> </p>
-<p>{% trans "Nach der Ausführung einer NC-Bearbeitung wie z.B. [Standard Kontur-], [Regelflächen-] oder [Taschenerodierbearbeitungen], erzeugt PEPS einen Eintrag im Operationsmanager und eine grafische Darstellung der Bearbeitung als Drahtmodell." %}</p>
-<p>{% trans "Das Drahtmodell ist ein Geometrieelement vom Typ [Figur] und hat den Namen [@@GENSEC] gefolgt von dem Namen der Bearbeitungsfigur." %}</p>
-<p>{% trans "Der Befehl löscht [alle] vorhandenen NC-Bearbeitungsgrafiken. Verwenden Sie die Ikone @ zum Löschen [einzelner] NC-Bearbeitungsgrafiken." %}</p>
-<p>{% trans "Gelöschte NC-Bearbeitungsgrafiken können Sie mit dem Befehl @ #[Grafik NC-Bearbeitung neu erzeugen]# wiederherstellen." %}</p>
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; 
+	 border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <img alt="删除_线框.gif" border="0" height="30" src="../Delete_Wireframe.gif" width="33"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    删除图形数控加工
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该命令清除当前程序中所有 NC 加工的线框表示。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该命令通常用于使屏幕显示更清晰。
+   </font>
+   <font style="vertical-align: inherit;">
+    删除线框不会影响 NC 数据输出。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="graf_nc.gif" border="0" height="203" src="../graf_nc.gif" width="581"/>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    执行
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     标准轮廓
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     直纹表面
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     型腔 EDM 加工
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    等 NC 加工后，PEPS 在操作管理器中创建一个条目，并将加工的图形表示为线模型。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    线框是
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     图形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    类型的几何元素 
+ ，名称为
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     @@GENSEC，
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    后跟加工图形的名称。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该命令删除
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     所有
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    现有的 NC 加工图形。
+   </font>
+   <font style="vertical-align: inherit;">
+    使用 图标
+   </font>
+  </font>
+  <img alt="删除.gif" border="0" height="28" src="../delete.gif" width="30"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    删除
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单个
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    NC 加工图形。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    您可以使用
+   </font>
+  </font>
+  <img alt="创建_线框.gif" border="0" height="31" src="../Create_Wireframe.gif" width="34"/>
+  <a href="Grafik_NC_Bearbeitung_neu_erzeugen.htm">
+   <font class="hcp2">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      “重新创建 NC 加工图形”命令来恢复已删除的 NC 加工
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    图形。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

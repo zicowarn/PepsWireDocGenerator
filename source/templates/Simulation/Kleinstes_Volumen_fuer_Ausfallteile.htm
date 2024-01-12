@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,10 +33,61 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Kleinstes Volumen für Ausfallteile" %}</p><p class="Block_Text">{% trans "In diesem Textfeld legen Sie einen Grenzwert fest, der bestimmt, ab welchem Volumen ein Ausfallteil groß genug ist, um die Simulation zu stoppen." %}</p>
-<p>{% trans "[Beispiel:] Bei einem Ausräumen von kleinen Durchbrüchen (Taschenerodieren/Vollabtragsschnitt) mit großen Drahtbahnabständen, kann es zu vielen kleinen Ausfallteilen kommen." %}</p>
-<p>{% trans "Diese Ausfallteile sind normalerweise kein Problem und sollten die Simulation auch nicht stoppen." %}</p>
-<p>{% trans "Ist der Parameter [Kleinstes Volumen für Ausfallteile] groß genug eingestellt, wird die Simulation auch nicht stoppen wenn die Ausfallteile kleiner sind, als das eingestellte Volumen." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    缺陷零件的最小体积
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在此文本字段中，您可以设置一个极限值，该极限值确定故障零件足以停止模拟的体积。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     示例：
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    当清理具有大线间隙的小开口（袋式腐蚀/完全去除切割）时，可能会出现许多小的故障零件。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这些故障通常不是问题，不应停止模拟。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “失效零件的最小体积
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ”参数设置得足够大，则即使失效零件小于设定体积，模拟也不会停止。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -34,16 +34,138 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <h2>{% trans "Topologie von Solidgeometrien" %}</h2><p class="dialog"> </p>
-<p class="dialog">{% trans "Sheet-Body" %}</p>
-<p>{% trans "Ein [Sheet-Body] besteht immer aus einem oder mehreren [Faces]. Jedes [Face] innerhalb eines Sheet-Bodies besteht aus einem äußerem [Loop] und kann innere [Loops] enthalten." %}</p>
-<p>{% trans "Jedes [Loop] besteht aus einer oder mehreren [Kanten]. Jede Kante ist ein einzelnes Geometrieelement z.B. ein Bogen, eine Linie oder eine NURBS-Kurve." %}</p>
-<p class="dialog"> </p>
-<p class="dialog">{% trans "Solid-Body" %}</p>
-<p>{% trans "Ein Solid-Body besteht immer aus einer Anzahl von [Faces]. Diese Faces können wiederum in einzelne Geometrien aufgelöst werden (siehe [Sheet-Body] oberhalb)." %}</p>
-<p class="dialog"> </p>
-<p class="dialog">{% trans "Draht-Body" %}</p>
-<p>{% trans "Ein [Draht-Body] kann offen oder geschlossen sein und besteht aus einer oder mehreren [Kanten]." %}</p>
-
+<h2>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">立体几何拓扑</font>
+    </font>
+  </h2>
+  <p class="dialog">&nbsp;</p>
+  <p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">片体</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">片</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">体总是由一个或多个</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">面</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">组成</font>
+      <font style="vertical-align: inherit;">。</font>
+      <font style="vertical-align: inherit;">片体内的</font>
+      <font style="vertical-align: inherit;">每个</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">面都由一个</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">外环</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">组成
+        ，并且可以包含</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">内环</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">每个</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">环</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">由一条或多条</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">边</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">组成。</font>
+      <font style="vertical-align: inherit;">每条边都是单个几何元素，例如圆弧、直线或 NURBS 曲线。</font>
+    </font>
+  </p>
+  <p class="dialog">&nbsp;</p>
+  <p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">固体</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">实体总是由许多</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">面</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">组成。</font>
+      <font style="vertical-align: inherit;">这些面又可以分解为单独的几何形状（参见
+        上面的</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">片体</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">）。</font>
+    </font>
+  </p>
+  <p class="dialog">&nbsp;</p>
+  <p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">钢丝连体衣</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">线</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">体可以是开放的或封闭的，并且由一个或多个</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">边缘</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">组成</font>
+      <font style="vertical-align: inherit;">。</font>
+    </font>
+  </p>
 {% endblock %}
 {% endlinebreakless %}

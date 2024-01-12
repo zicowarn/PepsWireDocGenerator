@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -37,19 +36,160 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Gruppierung aufheben" %}</p><p>{% trans "Im [WIRE-Expert] #Feature Manager# ist es möglich, [mehrere Features] zusammenzufassen zu einem gruppierten Feature." %}</p>
-<p>{% trans "Ist dies der Fall und soll ein gruppiertes Feature zurückverwandelt werden in einzelne Features, verwendet man die Funktion [Gruppierung aufheben]." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Ungroup_Features.gif" alt="Ungroup_Features.gif" width="547" height="150" border="0"/></p>
-<p style="text-align: center;"> </p>
-<p>{% trans "Das Bild oberhalb zeigt links ein gruppiertes Feature und rechts die durch Aufheben der Gruppierung entstandenen Features." %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "[So wird es gemacht:]" %}</p>
-<ul>
-	<li class="hcp3"><p class="Tip_Note_Text_Bulleted">{% trans "Klicken Sie im #Feature Manager# das gruppierte Feature an, dessen Gruppierung aufgehoben werden soll." %}</p></li>
-	<li class="hcp3"><p class="Tip_Note_Text_Bulleted">{% trans "Klicken Sie die [rechte] Maustaste und wählen Sie im Menü die Option [Gruppierung aufheben]." %}</p></li>
-</ul>
-<p>{% trans "Das System löst das Feature auf in einzelne Features." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    取消分组
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     WIRE-Expert
+    </font>
+   </font>
+  </font>
+  <a href="../WIRE_Expert_FeatureManager/WIRE_Expert_FeatureManager.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     特征管理器
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    中，可以将
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     多个特征
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    组合 
+ 成一个分组特征。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果是这种情况，并且您想要将分组要素转换回单独要素，请使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     取消分组
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    功能。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="Ungroup_Features.gif" border="0" height="150" src="../Ungroup_Features.gif" width="547"/>
+ </p>
+ <p style="text-align: center;">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    上图左侧显示了分组的特征，右侧显示了通过取消分组创建的特征。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     它是这样完成的：
+    </font>
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp3">
+   <p class="Tip_Note_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <a href="../WIRE_Expert_FeatureManager/WIRE_Expert_FeatureManager.htm">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       在功能管理器
+      </font>
+     </font>
+    </a>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      中，单击
+     </font>
+     <font style="vertical-align: inherit;">
+      要取消分组的分组功能。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp3">
+   <p class="Tip_Note_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       右键
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      单击
+     </font>
+     <font style="vertical-align: inherit;">
+      并从菜单中选择
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       取消分组
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    系统将功能分解为单独的功能。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -34,13 +34,40 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Erzeuge neue Qualität" %}</p><p>{% trans "Das mit #[Ra, Tkm und Te]# unter einem frei waehlbaren Namen definierte #[Qualitätsziel]# wird in die Auswahlbox Qualitätsziel des Werkstückes und der Bearbeitungen der AGIE-Steuerung übergeben." %}</p><script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
-        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
-        FilePopupInit('a1');
-        FilePopupInit('a2');
-//]]&gt;
+<p class="dialog">
+  <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">创造新品质</font>
+  </font>
+</p>
+<p>
+  <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">用</font>
+  </font><a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('Qualitaetsziel_AGIEVISION.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+          <font class="hcp1">
+                  <font style="vertical-align: inherit;">
+                          <font style="vertical-align: inherit;">Ra、Tkm 和 Te</font>
+                  </font>
+          </font>
+  </a>
+  <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">定义的可自由选择名称的</font>
+  </font><a class="BSSCPopup" href="javascript:void(0);" id="a2" onclick="BSSCPopup('Qualitaetsziel_AGIEVISION.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+          <font class="hcp1">
+                  <font style="vertical-align: inherit;">
+                          <font style="vertical-align: inherit;">质量目标</font>
+                  </font>
+          </font>
+  </a>
+  <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">被传输到工件的质量目标和 AGIE 控制的加工选择框。</font>
+  </font>
+</p>
+<script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
+  if (typeof (FilePopupInit) != 'function') FilePopupInit = new Function();
+  FilePopupInit('a1');
+  FilePopupInit('a2');
+  //]]>
 </script>
-
 {% endblock %}
 {% endlinebreakless %}

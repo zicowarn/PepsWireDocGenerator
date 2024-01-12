@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,22 +33,305 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Alternative Vorgehensweisen, wenn die WIRE-Expert Featureerkennung scheitert" %}</p><p> </p>
-<p>{% trans "1.) [Viele Flächen eines Modells werden von der Featureerkennung nicht erkannt ] Verwenden Sie die Funktion #Geometrie Parameter# im Menü #WIRE-Expert#, um die nicht erkannten Flächen und Kanten auf deren Erodierbarkeit zu untersuchen." %}</p>
-<p>{% trans "Ändern Sie anschließend z.B. den Toleranzwert für die [Kurven-/Regelflächen-Linearität] auf z.B. 0.05 mm oder größer (z.B. 0.1)." %}</p>
-<p>{% trans "Starten Sie die Featureerkennung erneut (#Automatische Feature-Erkennung# oder #Manuelle Feature-##Erkennung#) ." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p>{% trans "2.) [Nur wenige Flächen eines Modells werden von der Featureerkennung nicht erkannt]" %}</p>
-<p>{% trans "Verwenden Sie die Funktion #Geometrie Parameter# im Menü im Menü #WIRE-Expert#, um die nicht erkannten Flächen zu untersuchen." %}</p>
-<p>{% trans "Wird dabei angezeigt, dass eine Fläche nicht erodierbar ist und diese trotzdem erodiert werden soll. Gehen Sie vor wie folgt:" %}</p>
-<p>{% trans "Klicken Sie im Dialog #Geometrie Parameter# auf die Schaltfläche [Face erodierbar machen]." %}</p>
-<p>{% trans "Dies macht die gewählte erodierbar, obwohl die WIRE-Expert Featureerkennung die Fläche als nicht erodierbar eingestuft hat." %}</p>
-<p> </p>
-<p class="Hinweis">{% trans "Wichtiger Hinweis:" %}</p>
-<p class="Block_Text">{% trans "Durch Wahl der Schaltfläche [Face erodierbar machen] wird die automatische Überprüfung der Flächen auf Erodierbarkeit ausgeschaltet." %}</p>
-<p class="Block_Text">{% trans "Sollte es zu Schäden am Werkstück kommen, übernimmt der Hersteller [Camtek GmbH] keine Haftung." %}</p>
-<p>{% trans "Starten Sie die Featureerkennung erneut (#Automatische Feature-Erkennung# oder #Manuelle Feature-##Erkennun#g)." %}</p>
-<p class="Block_Text"> </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    WIRE-Expert 特征识别失败时的替代方法
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    1.)
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     模型的许多表面不能被特征识别识别，
+    </font>
+   </font>
+   <br/>
+  </font>
+  <br/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用
+   </font>
+   <a href="../wirhlp9/Das_WIRE_Expert_Untermenue.htm">
+    <font style="vertical-align: inherit;">
+     WIRE-Expert
+    </font>
+   </a>
+   <font style="vertical-align: inherit;">
+    菜单中的
+   </font>
+  </font>
+  <a href="../wirhlp9/Geometrie_Parameter.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     几何参数
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    功能来检查无法识别的表面和边缘的可蚀性。
+   </font>
+  </font>
+  <a href="../wirhlp9/Das_WIRE_Expert_Untermenue.htm">
+   <font style="vertical-align: inherit;">
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     然后将曲线/直纹面线性度
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    的公差值更改
+   </font>
+   <font style="vertical-align: inherit;">
+    为例如0.05mm或更大（例如0.1）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    重新启动特征检测（
+   </font>
+  </font>
+  <a href="../WIRE_ExpertRH_context_Menu/Automatische_Feature_Erkennung.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     自动特征检测
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <a href="../WIRE_ExpertRH_context_Menu/Manuelle_Feature_Erkennung.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     手动特征
+    </font>
+   </font>
+  </a>
+  <a href="file://E:/Typeset_044/Wire/Wire_044/HTMLHelp/WIRE_ExpertRH_context_Menu/Manuelle_Feature_Erkennung.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     检测
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ）。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    2.)
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     模型中只有少数区域未被特征识别识别
+    </font>
+   </font>
+  </font>
+  <br/>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用
+   </font>
+   <a href="../wirhlp9/Das_WIRE_Expert_Untermenue.htm">
+    <font style="vertical-align: inherit;">
+     WIRE-Expert
+    </font>
+   </a>
+   <font style="vertical-align: inherit;">
+    菜单 &nbsp;中的
+   </font>
+  </font>
+  <a href="../wirhlp9/Geometrie_Parameter.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     几何参数
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    功能来检查无法识别的曲面。
+   </font>
+  </font>
+  <a href="../wirhlp9/Das_WIRE_Expert_Untermenue.htm">
+   <font style="vertical-align: inherit;">
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这表明表面不能被侵蚀并且仍然应该被侵蚀。
+   </font>
+   <font style="vertical-align: inherit;">
+    请按如下方式进行：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <a href="../wirhlp9/Geometrie_Parameter.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     在“几何参数”
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框中，单击
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “使面可腐蚀”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这使得所选区域可被侵蚀，即使 WIRE-Expert 特征识别已将该区域归类为不可侵蚀。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    重要的提示：
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通过选择
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “使面可腐蚀”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮，可关闭表面的可腐蚀自动检查。
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果发生工件损坏，制造商
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     Camtek GmbH
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    不承担任何责任。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    重新启动特征检测（
+   </font>
+  </font>
+  <a href="../WIRE_ExpertRH_context_Menu/Automatische_Feature_Erkennung.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     自动特征检测
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <a href="../WIRE_ExpertRH_context_Menu/Manuelle_Feature_Erkennung.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     手动特征
+    </font>
+   </font>
+  </a>
+  <a href="file://E:/Typeset_044/Wire/Wire_044/HTMLHelp/WIRE_ExpertRH_context_Menu/Manuelle_Feature_Erkennung.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     检测
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ）。
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

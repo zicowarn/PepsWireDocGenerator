@@ -34,39 +34,96 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Bund(bearbeitung)" %}</p><p>{% trans "Muss man eine [umlaufend gleiche Konik] programmieren und soll die Konik mit einem Bund (zylindrischer Teil) versehen werden, aktiviert man die Option [Bund(bearbeitung)]." %}</p><p>{% trans "Die Option erlaubt es, Koniken mit einem zylindrischen Teil (Bund) an der oberen, der unteren Ebene eines Werkstückes oder in der Mitte eines Werkstückes zu programmieren." %}</p>
-<p>{% trans "Ist die Option aktiv, verändert sich das Aussehen der Dialogbox [Qualität / Parameter] damit man die Lage des Bundes sowie die Qualitätsziele für Konik und Bund beschreiben kann." %}</p>
+<p class="dialog">
+    <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">联邦政府（处理中）</font>
+    </font>
+</p>
+<p>
+    <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">如果您必须</font>
+    </font>
+    <font class="hcp1">
+            <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">在周围编程相同的锥度</font>
+            </font>
+    </font>
+    <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">，并且锥度要配备轴环（圆柱形零件），请激活</font>
+    </font>
+    <font class="hcp1">
+            <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">轴环（加工）</font>
+            </font>
+    </font>
+    <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">选项。</font>
+    </font>
+</p>
+<p>
+    <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">该选项允许您在工件顶部、底部或工件中部对带有圆柱形零件（轴环）的锥度进行编程。</font>
+    </font>
+</p>
+<p>
+    <font style="vertical-align: inherit;"></font>
+    <font class="hcp1">
+            <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">如果该选项处于活动状态， “质量/参数”</font>
+            </font>
+    </font>
+    <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;"> 对话框的外观将发生变化</font>
+            <font style="vertical-align: inherit;">，以便您可以描述联邦政府的情况以及 Konik 和联邦政府的质量目标。</font>
+    </font>
+</p>
 <p> </p>
-<p style="color: #ff0000; font-style: italic;">{% trans "Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen." %}</p>
+<p style="color: #ff0000; font-style: italic;">
+    <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">单击下图的各个区域可访问帮助文本。</font>
+    </font>
+</p>
 <p> </p>
-<p><img src="../BUND_AV_shg.gif" usemap="#AreaMap0" alt="BUND_AV_shg.gif" width="662" height="400" border="0"/> <map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="10,370,166,390" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="172,369,325,388" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="331,369,487,390" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="494,369,653,391" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area4" alt=""/>
-<area shape="rect" coords="64,31,155,50" href="Schnittluft_Ecken_Registerkarte_AGIEVISION.htm" alt=""/>
-<area shape="rect" coords="12,95,295,251" href="Unterer_oberer_mittlerer_Bund_AGIEVISION.htm" alt=""/>
-<area shape="rect" coords="299,51,644,185" href="javascript:BSSCPopup('Qualitaetsziel_Bundbearbeitung_AGIEVISION.htm',400,600);" id="area5" alt=""/>
-<area shape="rect" coords="304,262,641,343" href="javascript:BSSCPopup('Qualitaetszielname_Bundbearbeitung_AGIEVISION.htm',400,300);" id="area6" alt=""/>
-<area shape="rect" coords="158,265,299,353" href="javascript:BSSCPopup('Technologiedatenbank_AGIEVISION.htm',400,600);" id="area7" alt=""/>
-<area shape="rect" coords="310,210,475,235" href="javascript:BSSCPopup('Waehle_vorhandene_Qualitaet_AGIEVISION.htm',400,300);" id="area8" alt=""/>
-<area shape="rect" coords="311,234,467,258" href="javascript:BSSCPopup('Erzeuge_neue_Qualitaet_AGIEVISION.htm',400,300);" id="area9" alt=""/>
-<area shape="rect" coords="157,33,308,51" href="Weitere_Parameter_Ereignisse_Registerkarte_AGIEVISION.htm" alt=""/></map></p>
-<p>{% trans "Siehe auch: #[Bundbearbeitung programmieren]#." %}</p>
-<script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
-        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
-        FilePopupInit('area1');
-        FilePopupInit('area2');
-        FilePopupInit('area3');
-        FilePopupInit('area4');
-        FilePopupInit('area5');
-        FilePopupInit('area6');
-        FilePopupInit('area7');
-        FilePopupInit('area8');
-        FilePopupInit('area9');
-//]]&gt;
+<p><img alt="BUND_AV_shg.gif" border="0" height="400" src="../BUND_AV_shg.gif" usemap="#AreaMap0" width="662" /> <map id="AreaMap0" name="AreaMap0">
+            <area alt="" coords="10,370,166,390" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area1" shape="rect" />
+            <area alt="" coords="172,369,325,388" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area2" shape="rect" />
+            <area alt="" coords="331,369,487,390" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area3" shape="rect" />
+            <area alt="" coords="494,369,653,391" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area4" shape="rect" />
+            <area alt="" coords="64,31,155,50" href="Schnittluft_Ecken_Registerkarte_AGIEVISION.htm" shape="rect" />
+            <area alt="" coords="12,95,295,251" href="Unterer_oberer_mittlerer_Bund_AGIEVISION.htm" shape="rect" />
+            <area alt="" coords="299,51,644,185" href="javascript:BSSCPopup('Qualitaetsziel_Bundbearbeitung_AGIEVISION.htm',400,600);" id="area5" shape="rect" />
+            <area alt="" coords="304,262,641,343" href="javascript:BSSCPopup('Qualitaetszielname_Bundbearbeitung_AGIEVISION.htm',400,300);" id="area6" shape="rect" />
+            <area alt="" coords="158,265,299,353" href="javascript:BSSCPopup('Technologiedatenbank_AGIEVISION.htm',400,600);" id="area7" shape="rect" />
+            <area alt="" coords="310,210,475,235" href="javascript:BSSCPopup('Waehle_vorhandene_Qualitaet_AGIEVISION.htm',400,300);" id="area8" shape="rect" />
+            <area alt="" coords="311,234,467,258" href="javascript:BSSCPopup('Erzeuge_neue_Qualitaet_AGIEVISION.htm',400,300);" id="area9" shape="rect" />
+            <area alt="" coords="157,33,308,51" href="Weitere_Parameter_Ereignisse_Registerkarte_AGIEVISION.htm" shape="rect" /></map></p>
+<p>
+    <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">另请参阅：</font>
+    </font><a href="Unterer_oberer_mittlerer_Bund_AGIEVISION.htm">
+            <font class="hcp1">
+                    <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">品格处理编程</font>
+                    </font>
+            </font>
+    </a>
+    <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">。</font>
+    </font>
+</p>
+<script language="JavaScript1.2" type="text/javascript">
+    //<![CDATA[
+    if (typeof (FilePopupInit) != 'function') FilePopupInit = new Function();
+    FilePopupInit('area1');
+    FilePopupInit('area2');
+    FilePopupInit('area3');
+    FilePopupInit('area4');
+    FilePopupInit('area5');
+    FilePopupInit('area6');
+    FilePopupInit('area7');
+    FilePopupInit('area8');
+    FilePopupInit('area9');
+    //]]>
 </script>
-
 {% endblock %}
 {% endlinebreakless %}

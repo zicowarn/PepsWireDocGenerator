@@ -34,41 +34,91 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Anbinden Register (AGIEVISION)" %}</p><p>{% trans "Dieses Register ruft einen Dialog auf in der man festlegt, wie ein Werkstück / Ausfallteil angebunden und auf welche Weise die Anbindung (Haltesteg) entfernt werden soll." %}</p><p>{% trans "Normalerweise befestigt man das Werkstück / Ausfallteil nur mit einer Anbindung." %}</p>
-<p>{% trans "Beachten Sie, dssß auch die Definition von [Mehrfachanbindungen] möglich ist. Dies geschieht mit dem Befehl #[Zusaetzliche Anbindungen]# im Menue #Vorbereitung#." %}</p>
-<p> </p>
-<p style="color: #ff0000; font-style: italic;">{% trans "Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen." %}</p>
-<p> </p>
-<p><img src="../TAGSTPAV_shg.gif" usemap="#AreaMap0" alt="TAGSTPAV_shg.gif" width="363" height="473" border="0"/> <map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="22,59,184,128" href="javascript:BSSCPopup('../wirhlp10/Stoppunkt_oder_Anbindung.htm',400,600);" id="area1" alt=""/>
-<area shape="rect" coords="191,81,350,106" href="javascript:BSSCPopup('../wirhlp10/NUR_Anbindungen_entfernen.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="193,109,354,131" href="javascript:BSSCPopup('../wirhlp10/Zusaetzliche_Anbindungen_in_Bearbeitung_dialog.htm',400,500);" id="area3" alt=""/>
-<area shape="rect" coords="192,133,347,161" href="javascript:BSSCPopup('../wirhlp10/1_Schnitt_fuer_Anbindungen_entfernen.htm');" id="area4" alt=""/>
-<area shape="rect" coords="19,35,68,56" href="Einstellungen_Einstellen_der_Schnittmethode_AGIEVISION.htm" alt=""/>
-<area shape="rect" coords="124,33,200,54" href="../wirhlp10/Ein_Ausfahren_Lasche.htm" alt=""/>
-<area shape="rect" coords="204,35,244,53" href="../wirhlp10/Offset_Lasche.htm" alt=""/>
-<area shape="rect" coords="245,35,295,55" href="../wirhlp10/Datenbank_fuer_Technologie_Lasche.htm" alt=""/>
-<area shape="rect" coords="23,127,179,158" href="javascript:BSSCPopup('../wirhlp10/Ausfahrabstand.htm');" id="area5" alt=""/>
-<area shape="rect" coords="22,164,353,212" href="javascript:BSSCPopup('../Commdata/COMMON_Nicht_verwendete_Funktion.htm',400,300);" id="area6" alt=""/>
-<area shape="rect" coords="14,440,87,465" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area7" alt=""/>
-<area shape="rect" coords="93,441,166,462" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area8" alt=""/>
-<area shape="rect" coords="172,440,274,464" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area9" alt=""/>
-<area shape="rect" coords="282,440,356,464" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area10" alt=""/>
-<area shape="rect" coords="27,222,346,335" href="Methode_zur_Entfernung_der_Anbindungen_AGIEVISION.htm" alt=""/></map></p>
-<script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
-        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
-        FilePopupInit('area1');
-        FilePopupInit('area2');
-        FilePopupInit('area3');
-        FilePopupInit('area4');
-        FilePopupInit('area5');
-        FilePopupInit('area6');
-        FilePopupInit('area7');
-        FilePopupInit('area8');
-        FilePopupInit('area9');
-        FilePopupInit('area10');
-//]]&gt;
+    <p class="dialog">
+        <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">连接寄存器（AGIEVISION）</font>
+        </font>
+    </p>
+    <p>
+        <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">该寄存器打开一个对话框，您可以在其中指定如何连接工件/失效零件以及如何移除连接（固定杆）。</font>
+        </font>
+    </p>
+    <p>
+        <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">通常，工件/失效部件仅通过一个连接来连接。</font>
+        </font>
+    </p>
+    <p>
+        <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">请注意，也可以定义</font>
+        </font>
+        <font class="hcp1">
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">多个连接</font>
+            </font>
+        </font>
+        <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">。</font>
+            <font style="vertical-align: inherit;">这是使用</font><a href="../wirhlp9/Das_Vorbereitungs_Menue.htm">
+                <font style="vertical-align: inherit;">“准备”</font>
+            </a>
+            <font style="vertical-align: inherit;">菜单中的</font>
+        </font><a href="../wirhlp9/Zusaetzliche_Anbindungen.htm">
+            <font class="hcp1">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">“附加绑定”</font>
+                </font>
+            </font>
+        </a>
+        <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">命令完成的。</font>
+        </font><a href="../wirhlp9/Das_Vorbereitungs_Menue.htm">
+            <font style="vertical-align: inherit;"></font>
+        </a>
+        <font style="vertical-align: inherit;"></font>
+    </p>
+    <p>&nbsp;</p>
+    <p style="color: #ff0000; font-style: italic;">
+        <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">单击下图的各个区域可访问帮助文本。</font>
+        </font>
+    </p>
+    <p>&nbsp;</p>
+    <p><img src="../TAGSTPAV_shg.gif" usemap="#AreaMap0" alt="TAGSTPAV_shg.gif" width="363" height="473" border="0"> <map name="AreaMap0" id="AreaMap0">
+            <area shape="rect" coords="22,59,184,128" href="javascript:BSSCPopup('../wirhlp10/Stoppunkt_oder_Anbindung.htm',400,600);" id="area1" alt="">
+            <area shape="rect" coords="191,81,350,106" href="javascript:BSSCPopup('../wirhlp10/NUR_Anbindungen_entfernen.htm',400,300);" id="area2" alt="">
+            <area shape="rect" coords="193,109,354,131" href="javascript:BSSCPopup('../wirhlp10/Zusaetzliche_Anbindungen_in_Bearbeitung_dialog.htm',400,500);" id="area3" alt="">
+            <area shape="rect" coords="192,133,347,161" href="javascript:BSSCPopup('../wirhlp10/1_Schnitt_fuer_Anbindungen_entfernen.htm');" id="area4" alt="">
+            <area shape="rect" coords="19,35,68,56" href="Einstellungen_Einstellen_der_Schnittmethode_AGIEVISION.htm" alt="">
+            <area shape="rect" coords="124,33,200,54" href="../wirhlp10/Ein_Ausfahren_Lasche.htm" alt="">
+            <area shape="rect" coords="204,35,244,53" href="../wirhlp10/Offset_Lasche.htm" alt="">
+            <area shape="rect" coords="245,35,295,55" href="../wirhlp10/Datenbank_fuer_Technologie_Lasche.htm" alt="">
+            <area shape="rect" coords="23,127,179,158" href="javascript:BSSCPopup('../wirhlp10/Ausfahrabstand.htm');" id="area5" alt="">
+            <area shape="rect" coords="22,164,353,212" href="javascript:BSSCPopup('../Commdata/COMMON_Nicht_verwendete_Funktion.htm',400,300);" id="area6" alt="">
+            <area shape="rect" coords="14,440,87,465" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area7" alt="">
+            <area shape="rect" coords="93,441,166,462" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area8" alt="">
+            <area shape="rect" coords="172,440,274,464" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area9" alt="">
+            <area shape="rect" coords="282,440,356,464" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area10" alt="">
+            <area shape="rect" coords="27,222,346,335" href="Methode_zur_Entfernung_der_Anbindungen_AGIEVISION.htm" alt=""></map></p>
+    <script type="text/javascript" language="JavaScript1.2">
+    //<![CDATA[
+            if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+            FilePopupInit('area1');
+            FilePopupInit('area2');
+            FilePopupInit('area3');
+            FilePopupInit('area4');
+            FilePopupInit('area5');
+            FilePopupInit('area6');
+            FilePopupInit('area7');
+            FilePopupInit('area8');
+            FilePopupInit('area9');
+            FilePopupInit('area10');
+    //]]>
+    </script>
+    
+    
+
 </script>
 
 {% endblock %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,13 +35,110 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Entferne oder füge Kanten diesem Feature hinzu" %}</p><p>{% trans "Erlaubt das nachträglich Editieren der [Kanten] des aktuell gewählten Features. Auf diese Weise ist es möglich, bereits gewählte Kanten zu entfernen oder neue Kanten hinzuzufügen." %}</p>
-<p>{% trans "Wählen Sie die [Kanten] aus, indem Sie während des Auswählens die [Strg]-Taste gedrückt halten. Beenden Sie die Auswahl mit der Schaltfläche [Auswahl beenden]." %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "Das folgende Bild zeigt links das zu verändernde Feature. Beachten Sie, dass die bereits gewählten Kanten, farblich hervorgehoben dargestellt werden." %}</p>
-<p>{% trans "Das rechte Bild zeigt, wie man weitere Kanten zum Feature hinzufügt." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Edit_Edges_of_Features.gif" alt="Edit_Edges_of_Features.gif" width="759" height="322" border="0"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    删除或添加此特征的边
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    允许
+   </font>
+   <font style="vertical-align: inherit;">
+    随后编辑当前选定要素的
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     边缘。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通过这种方式，可以删除已选择的边或添加新边。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通过在选择 的同时按住
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     Ctrl
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    键来选择
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     边缘
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     使用结束选择
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    按钮结束选择
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图左侧显示了要更改的功能。
+   </font>
+   <font style="vertical-align: inherit;">
+    请注意，已选择的边缘以颜色突出显示。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    右图显示了如何向特征添加更多边缘。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="Edit_Edges_of_Features.gif" border="0" height="322" src="../Edit_Edges_of_Features.gif" width="759"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -36,63 +36,319 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Grafisches Einrichteblatt" %}</p><p> </p><p>{% trans "Neben dem Einrichteblatt, dass automatisch bei einem Postprozessorlauf (NC-Daten erzeugen) erzeugt wird, existiert ein weiteres, das '[Grafische Einrichteblatt]'." %}</p>
-<p>{% trans "Das '[Grafische Einrichteblatt]'[ ]ist eine [interaktive] Art, ein Einrichteblatt zu erzeugen. Die im Einrichteblatt anzuzeigenden Geometrieelemente werden dabei interaktiv ausgewählt." %}</p>
-<p>{% trans "Zudem erzeugt das System automatisch einen Zeichnungsrahmen und schreibt Informationen (z.B. Material, Materialhöhe, Drahtdurchmesser) in den Kopf des Einrichteblatts." %}</p>
-<p class="Hinweis"> </p>
-<p class="Hinweis">{% trans "Wichtiger Hinweis:" %}</p>
-<p>{% trans "Dieser Befehl kann nur ausgeführt werden, wenn ein [Postprozessorlauf] (NC-Daten erzeugen) ausgeführt wurde." %}</p>
-<p> </p>
-<p>{% trans "Das folgende Bild zeigt ein Beispiel für ein grafisches Einrichteblatt:" %}</p>
-<p><img src="../Graf_Einrichtebl_Result.gif" alt="" border="0" class="hcp1"/></p>
-<p> </p>
-<p class="Tip_Note_Heading">{% trans "Vorgehensweise:" %}</p>
-<ul>
-	<li><p class="Topic_Text_Bulleted">{% trans "Programmieren Sie das Werkstück und erzeugen Sie das NC-Programm." %}</p></li>
-	<li><p class="Topic_Text_Bulleted">{% trans "Wählen Sie aus dem Menü #Extras# die Funktion [Grafisches Einrichteblatt]." %}</p></li>
-	<li><p class="Topic_Text_Bulleted">{% trans "Das System fragt:" %}</p></li>
-</ul>
-<p class="Prompts">{% trans "Wähle Objekte ... :" %}</p>
-<ul>
-	<li><p class="Topic_Text_Bulleted">{% trans "Wählen Sie die Geometrieelemente aus, die im Einrichteblatt angezeigt werden sollen." %}</p></li>
-	<li><p class="Topic_Text_Bulleted">{% trans "Beenden Sie die Auswahl mit der Option [Ende] (siehe [rechte Maustaste] od. [horizontale Ikonenleiste])." %}</p></li>
-</ul>
-<p>{% trans "Es wird ein Dialog mit Eintellparametern für das Einrichteblatt angezeigt:. Stellen Sie die Dialogparameter wie benötigt ein." %}</p>
-<p class="Hinweis">{% trans "Wichtiger Hinweis:" %}</p>
-<p>{% trans "Bei [Erstanwendung] müssen Sie die Schaltfläche [Standardwerte laden] verwenden, um den Dialog voreinzustellen." %}</p>
-<p> </p>
-<p style="color: #ff0000; font-style: italic;">{% trans "Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen." %}</p>
-<p><img src="../Graf_Einrichtebl_Dialog.gif" alt="" usemap="#MAP588283225" border="0" class="hcp1"/>
-<map id="MAP588283225" name="MAP588283225">
-<area shape="rect" coords="1, -2, 497, 481" href="Grafisches_Einrichteblatt_-_Parameter.htm" alt=""/>
-<area shape="rect" coords="14, 492, 98, 516" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="250, 493, 334, 516" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="403, 493, 487, 516" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="112, 492, 235, 515" href="Grafisches_Einrichteblatt_-_Parameter.htm" alt=""/>
-</map> </p>
-<ul>
-	<li><p class="Topic_Text_Bulleted">{% trans "Beenden Sie den Dialog mit [OK]." %}</p></li>
-	<li><p class="Topic_Text_Bulleted">{% trans "Das System erzeugt das Einrichteblatt und zeigt es anschließend im Grafikfenster an." %}</p></li>
-	<li><p class="Topic_Text_Bulleted">{% trans "Das System fragt:" %}</p></li>
-</ul>
-<p class="Prompts">{% trans "Wähle benötigte Option:" %}</p>
-<ul>
-	<li><p class="Tip_Note_Text_Bulleted">{% trans "Klicken Sie nun die [rechte Maustaste] und wählen Sie im Kontextmenü [Drucke]." %}</p></li>
-</ul>
-<p class="Topic_Text_Bulleted"><img src="../Graf_Einrichtebl_Optionen.gif" alt="" border="0" class="hcp1"/></p>
-<p class="Topic_Text_Bulleted"> </p>
-<p class="Topic_Text_Bulleted">{% trans "Das Einrichteblatt wird ausgedruckt." %}</p>
-<ul>
-	<li><p class="Topic_Text_Bulleted">{% trans "Beenden Sie die Druckfunktion mit der Option [Ende] (siehe [rechte Maustaste] od. [horizontale Ikonenleiste])." %}</p></li>
-</ul>
-<p><img src="../Graf_Einrichtebl_Optionen.gif" alt="" border="0" class="hcp1"/></p>
-<p> </p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
-	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
-	FilePopupInit('area1');
-	FilePopupInit('area2');
-	FilePopupInit('area3');
-//]]&gt;</script>
-
+<p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; 
+	 border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;"><img alt="" border="0" class="hcp1" src="../Grafisches_Einrichteblatt_Ico.gif" />
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">图形设置表</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">除了后处理器运行期间自动生成的设置表（生成 NC 数据）之外，还有另一种设置表，即“</font>
+    </font><span class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">图形设置表</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">”。
+      </font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">“</font>
+    </font><span class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">图形设置表</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">”</font>
+    </font><span class="hcp2"> </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">是一种</font>
+      <font style="vertical-align: inherit;">
+        创建设置表的</font>
+    </font><span class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">交互式方式。</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">要在设置表中显示的几何元素是交互式选择的。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">系统还会自动创建绘图框架并将信息（例如材料、材料高度、线径）写入设置表的标题中。</font>
+    </font>
+  </p>
+  <p class="Hinweis">&nbsp;</p>
+  <p class="Hinweis">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">重要的提示：</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+        仅当已执行</font>
+    </font>
+    <font class="hcp3">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">后处理器运行</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">（生成 NC 数据）时才能执行此命令。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">下图显示了图形设置表的示例：</font>
+    </font>
+  </p>
+  <p><img alt="" border="0" class="hcp1" src="../Graf_Einrichtebl_Result.gif" /></p>
+  <p>&nbsp;</p>
+  <p class="Tip_Note_Heading">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">方法：</font>
+    </font>
+  </p>
+  <ul>
+    <li>
+      <p class="Topic_Text_Bulleted">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">对工件进行编程并生成 NC 程序。</font>
+        </font>
+      </p>
+    </li>
+    <li>
+      <p class="Topic_Text_Bulleted">
+        <font style="vertical-align: inherit;"></font><a href="Das_Extra_Menue.htm">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">从“工具”</font>
+          </font>
+        </a>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">菜单中，选择</font>
+        </font><span class="hcp2">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">“图形设置表”</font>
+          </font>
+        </span>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">
+            功能</font>
+          <font style="vertical-align: inherit;">。
+          </font>
+        </font>
+      </p>
+    </li>
+    <li>
+      <p class="Topic_Text_Bulleted">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">系统询问：</font>
+        </font>
+      </p>
+    </li>
+  </ul>
+  <p class="Prompts">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">选择对象...：</font>
+    </font>
+  </p>
+  <ul>
+    <li>
+      <p class="Topic_Text_Bulleted">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">选择要在设置表中显示的几何元素。</font>
+        </font>
+      </p>
+    </li>
+    <li>
+      <p class="Topic_Text_Bulleted">
+        <font style="vertical-align: inherit;"></font>
+        <font class="hcp3">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">使用“结束”</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">选项结束选择</font>
+          <font style="vertical-align: inherit;">（请参见</font>
+        </font>
+        <font class="hcp3">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">鼠标右键</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">或</font>
+        </font>
+        <font class="hcp3">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">水平图标栏</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">）。</font>
+        </font>
+      </p>
+    </li>
+  </ul>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">将显示一个对话框，其中包含设置表的设置参数：</font>
+      <font style="vertical-align: inherit;">根据需要设置对话框参数。</font>
+    </font>
+  </p>
+  <p class="Hinweis">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">重要的提示：</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;"></font><span class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">第一次</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">使用时，</font>
+      <font style="vertical-align: inherit;">必须使用</font>
+    </font><span class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">“加载默认值”</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">按钮
+        来预设对话框。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p style="color: #ff0000; font-style: italic;">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">单击下图的各个区域可访问帮助文本。</font>
+    </font>
+  </p>
+  <p><img alt="" border="0" class="hcp1" src="../Graf_Einrichtebl_Dialog.gif" usemap="#MAP588283225" />
+    <map id="MAP588283225" name="MAP588283225">
+      <area alt="" coords="1, -2, 497, 481" href="Grafisches_Einrichteblatt_-_Parameter.htm" shape="rect" />
+      <area alt="" coords="14, 492, 98, 516" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area1" shape="rect" />
+      <area alt="" coords="250, 493, 334, 516" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area2" shape="rect" />
+      <area alt="" coords="403, 493, 487, 516" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area3" shape="rect" />
+      <area alt="" coords="112, 492, 235, 515" href="Grafisches_Einrichteblatt_-_Parameter.htm" shape="rect" />
+    </map>
+  </p>
+  <ul>
+    <li>
+      <p class="Topic_Text_Bulleted">
+        <font style="vertical-align: inherit;"></font><span class="hcp2">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">单击“确定”</font>
+          </font>
+        </span>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">结束对话框</font>
+          <font style="vertical-align: inherit;">。</font>
+        </font>
+      </p>
+    </li>
+    <li>
+      <p class="Topic_Text_Bulleted">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">系统创建设置表，然后将其显示在图形窗口中。</font>
+        </font>
+      </p>
+    </li>
+    <li>
+      <p class="Topic_Text_Bulleted">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">系统询问：</font>
+        </font>
+      </p>
+    </li>
+  </ul>
+  <p class="Prompts">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">选择所需选项：</font>
+    </font>
+  </p>
+  <ul>
+    <li>
+      <p class="Tip_Note_Text_Bulleted">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">现在</font>
+        </font><span class="hcp2">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">右键单击</font>
+          </font>
+        </span>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">并从上下文菜单中选择</font>
+        </font><span class="hcp2">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">“打印”</font>
+          </font>
+        </span>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">。
+          </font>
+        </font>
+      </p>
+    </li>
+  </ul>
+  <p class="Topic_Text_Bulleted"><img alt="" border="0" class="hcp1" src="../Graf_Einrichtebl_Optionen.gif" /></p>
+  <p class="Topic_Text_Bulleted">&nbsp;</p>
+  <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">设置表被打印出来。</font>
+    </font>
+  </p>
+  <ul>
+    <li>
+      <p class="Topic_Text_Bulleted">
+        <font style="vertical-align: inherit;"></font>
+        <font class="hcp3">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">使用“结束”</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">选项结束打印功能</font>
+          <font style="vertical-align: inherit;">（请参见</font>
+        </font>
+        <font class="hcp3">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">鼠标右键</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">或</font>
+        </font>
+        <font class="hcp3">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">水平图标栏</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">）。</font>
+        </font>
+      </p>
+    </li>
+  </ul>
+  <p><img alt="" border="0" class="hcp1" src="../Graf_Einrichtebl_Optionen.gif" /></p>
+  <p>&nbsp;</p>
+  <script language="JavaScript1.2" type="text/javascript">//<![CDATA[
+    if (typeof (FilePopupInit) != 'function') FilePopupInit = new Function();
+    FilePopupInit('area1');
+    FilePopupInit('area2');
+    FilePopupInit('area3');
+    //]]></script>
 {% endblock %}
 {% endlinebreakless %}

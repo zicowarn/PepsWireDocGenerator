@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,9 +33,55 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Perspektivische Ansicht verwenden" %}</p><p>{% trans "Ist die Option aktiv, zeigt das System die Simulationsgrafik als [perspektivische] Ansicht." %}</p>
-<p>{% trans "Ist die Option nicht aktiv (Standard) wird die [orthografische] Ansicht verwendet." %}</p>
-<p><img src="../Simulations_Modi2.gif" alt="Simulations_Modi2.gif" width="690" height="352" border="0"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用透视图
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果该选项处于活动状态，系统将模拟图形显示为
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     透视
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    图。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果该选项未激活（默认），
+   </font>
+   <font style="vertical-align: inherit;">
+    则使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     正交视图。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <img alt="模拟_模式2.gif" border="0" height="352" src="../Simulations_Modi2.gif" width="690"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

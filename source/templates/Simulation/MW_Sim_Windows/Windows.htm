@@ -39,24 +39,126 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <h1>{% trans "Simulations-Fenster" %}</h1><p class="hcp1"> </p>
-<p class="hcp1">{% trans "Die [Simulations]-[Fenster] werden als Voreinstellung auf der rechten Fensterseite, untereinander angezeigt und dienen zur Steuerung sowie zur Anpassung der Simulationsparameter." %}</p>
-<p class="hcp1">{% trans "Die Fenster sind frei verschiebbar und lassen sich beliebig im Simulationsfenster positionieren. Beachten Sie, das sich der Original-Zustand der Fensterpositionen mit der Menüfolge [Ansicht] &amp;gt; [Zurücksetzen] wiederherstellen lässt." %}</p>
-<p class="hcp1"> </p>
-<p class="hcp1"><img src="../../NewUI_Simulationsfenster_2_Tabs.gif" alt="" style="border: none;" border="0"/></p>
-<p> </p>
-<p>{% trans "Folgende [Simulations-Fenster] sind verfügbar:" %}</p>
-<p class="hcp3">{% trans "#Satzliste#" %}</p>
-<p class="hcp5">{% trans "#Analyse (Werkzeugweg)#" %}</p>
-<p class="hcp5">{% trans "#Statistik#" %}</p>
-<p class="hcp5">{% trans "#Maschine#" %}</p>
-<p class="hcp3">{% trans "#Simulation#" %}</p>
-<p class="hcp1"> </p>
-<p class="hcp5">{% trans "#Report#" %}</p>
-<p class="hcp5">{% trans "#Abtragssimulation#" %}</p>
-<p class="hcp5">{% trans "#Analyse (Rohteil)#" %}</p>
-<p class="hcp5">{% trans "#Messungen#" %}</p>
-<p class="hcp5">{% trans "#Man. Achsensteuerung#" %}</p>
-
+<h1>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">模拟窗口</font>
+    </font>
+  </h1>
+  <p class="hcp1">&nbsp;</p>
+  <p class="hcp1">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">仿真</font>
+      <font class="hcp2">
+        <font style="vertical-align: inherit;">窗口默认显示在窗口右侧，一个</font>
+      </font>
+    </font>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">在</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">另一个下，</font>
+      <font style="vertical-align: inherit;">用于控制和调整仿真参数。</font>
+    </font>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;"></font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+  </p>
+  <p class="hcp1">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">窗口可以自由移动，并且可以放置在模拟窗口中的任何位置。</font>
+      <font style="vertical-align: inherit;">请注意，可以使用菜单序列
+      </font>
+    </font>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">“视图”</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;"> &gt; </font>
+    </font>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">“重置”</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">恢复窗口位置的原始状态
+        。</font>
+    </font>
+  </p>
+  <p class="hcp1">&nbsp;</p>
+  <p class="hcp1"><img alt="" border="0" src="../../NewUI_Simulationsfenster_2_Tabs.gif" style="border: none;" /></p>
+  <p>&nbsp;</p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+        可以使用</font>
+      <font style="vertical-align: inherit;">以下</font>
+    </font>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">模拟窗口：</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+  </p>
+  <p class="hcp3"><a class="hcp4" href="Move_List.htm">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">句子列表</font>
+      </font>
+    </a></p>
+  <p class="hcp5"><a class="hcp4" href="Analysis_Toolpath_.htm">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">分析（刀具路径）</font>
+      </font>
+    </a></p>
+  <p class="hcp5"><a class="hcp4" href="Statistics.htm">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">统计数据</font>
+      </font>
+    </a></p>
+  <p class="hcp5"><a class="hcp4" href="Machine_1.htm">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">机器</font>
+      </font>
+    </a></p>
+  <p class="hcp3"><a class="hcp4" href="Simulation.htm">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">模拟</font>
+      </font>
+    </a></p>
+  <p class="hcp1">&nbsp;</p>
+  <p class="hcp5"><a class="hcp4" href="Report_Window.htm">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">报告</font>
+      </font>
+    </a></p>
+  <p class="hcp5"><a class="hcp4" href="CutSim.htm">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">材料去除模拟</font>
+      </font>
+    </a></p>
+  <p class="hcp5"><a class="hcp4" href="Stock_Analysis.htm">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">分析（原始部分）</font>
+      </font>
+    </a></p>
+  <p class="hcp5"><a class="hcp4" href="Measure.htm">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">测量</font>
+      </font>
+    </a></p>
+  <p class="hcp5">
+    <a class="hcp4" href="Axis_Control.htm">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">手动</font>
+        <font style="vertical-align: inherit;">轴控制</font>
+      </font>
+    </a>
+  </p>
 {% endblock %}
 {% endlinebreakless %}

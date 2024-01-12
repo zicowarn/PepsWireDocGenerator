@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,19 +34,51 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Einstellungen" %}</p><p>{% trans "Ruft einen Registerdialog auf, in dem die Solidsimulation eingestellt wird. Es folgt eine Beschreibung der einzelnen Registerkarten:" %}</p>
-<p class="hcp1"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp1"> </p>
-<p><img src="../VISIOPT_W_shg.gif" usemap="#AreaMap0" alt="VISIOPT_W_shg.gif" width="348" height="75" border="0"/> <map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="9,31,80,51" href="Solid_Register_Einstellungen_Simulation.htm" alt=""/>
-<area shape="rect" coords="83,33,170,51" href="Kollisionen_Register_Einstellungen.htm" alt=""/>
-<area shape="rect" coords="264,53,338,74" href="Draht_Register_Einstellungen_.htm" alt=""/>
-<area shape="rect" coords="263,33,339,52" href="Ansicht_Register_Einstellungen.htm" alt=""/>
-<area shape="rect" coords="11,51,90,69" href="Farben_Register_Einstellungen.htm" alt=""/>
-<area shape="rect" coords="170,35,264,53" href="Toleranzen_Register_Einstellungen.htm" alt=""/>
-<area shape="rect" coords="89,51,166,70" href="Dialoge_Register_Einstellungen_.htm" alt=""/>
-<area shape="rect" coords="170,49,263,73" href="Simulation_Register_Einstellungen_.htm" alt=""/></map></p>
+<body id="mbody">
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    设置
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    打开一个注册对话框，在其中设置实体模拟。
+   </font>
+   <font style="vertical-align: inherit;">
+    以下是每个选项卡的说明：
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="VISIOPT_W_shg.gif" border="0" height="75" src="../VISIOPT_W_shg.gif" usemap="#AreaMap0" width="348"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="9,31,80,51" href="Solid_Register_Einstellungen_Simulation.htm" shape="rect"/>
+   <area alt="" coords="83,33,170,51" href="Kollisionen_Register_Einstellungen.htm" shape="rect"/>
+   <area alt="" coords="264,53,338,74" href="Draht_Register_Einstellungen_.htm" shape="rect"/>
+   <area alt="" coords="263,33,339,52" href="Ansicht_Register_Einstellungen.htm" shape="rect"/>
+   <area alt="" coords="11,51,90,69" href="Farben_Register_Einstellungen.htm" shape="rect"/>
+   <area alt="" coords="170,35,264,53" href="Toleranzen_Register_Einstellungen.htm" shape="rect"/>
+   <area alt="" coords="89,51,166,70" href="Dialoge_Register_Einstellungen_.htm" shape="rect"/>
+   <area alt="" coords="170,49,263,73" href="Simulation_Register_Einstellungen_.htm" shape="rect"/>
+  </map>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

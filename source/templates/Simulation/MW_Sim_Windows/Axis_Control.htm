@@ -34,53 +34,217 @@
 <!--/ Head CSS -->
 <!-- Head JavaScript -->
 {% block headjs %}
-    <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="../ehlpdhtm.js"></SCRIPT>
-{% endblock %}
-<!--/ Head JavaScript -->
-{% block mainbody %}
-    <h1>{% trans "Manuelle Achsensteuerung" %}</h1><p> </p>
-<p>{% trans "Mit Hilfe der [Manuellen Achsensteuerung] können Sie die Linear- und Rotationsachsen der Maschine, manuell durch Tastatureingaben oder mit Schiebereglern bewegen und kontrollieren." %}</p>
-<p> </p>
-<p><img src="../../newUI_axis_control.gif" alt="newUI_axis_control.gif" width="555" height="489" border="0"/></p>
-<p class="hcp2"> </p>
-<p><strong class="">Hauptvorteile:</strong></p>
-<p>{% trans "Es ist überprüfbar, ob die Achsengrenzen korrekt eingestellt sind." %}</p>
-<p>{% trans "Es ist überprüfbar, ob die Kollisionsprüfung korrekt eingestellt ist." %}</p>
-<p> </p>
-<p><strong class="">Beschreibung:</strong></p>
-<p><strong class=""><span class="hcp3">Ermittelt die Achsen</span><span class="hcp3">grenzen.</span></strong></p>
-<p><strong class=""><span class="hcp3">Ermittelt die aktuelle 
- Achsenposition. </span></strong></p>
-<p>{% trans "Verändern der Achsenwerte, entweder über Eingabefelder, verschieben der Schieberegler oder durch einen 'Rechtsklick' auf einen der Schieberegler, um die Eingaben in einem Dialog zu tätigen (Siehe Beschreibung unterhalb)." %}</p>
-<p>{% trans "Die Eingabefelder unterhalb der Schieberegler, zeigen den aktuellen Wert einer Achse und werden bei einer Simulation kontinuierlich aktualisiert." %}</p>
-<p>{% trans "Um von einem Feld von links nach rechts in das nächste zu springen, verwendet man die TAB-Taste. Um von einem Feld von rechts nach links in das nächste zu springen, verwendet man die SHIFT+TAB-Taste." %}</p>
-<p>{% trans "If you are jumping on a field that is not visible, the Axis Control tab is automatically scrolling to show the respective field." %}</p>
-<p>{% trans "XXX Wenn Sie auf ein unsichtbares Feld springen, XXX" %}</p>
-<p style="margin-left: 48px;"> </p>
-<p><strong class="">XXX Numeric stepper</strong> <strong class="">actions:</strong></p>
-<p>{% trans "The values can be copied pressing CTRL+C and paste command can be applied using CTRL+V (Windows standard keys)" %}</p>
-<p>{% trans "Die Werte lassen sich [kopieren] durch Drücken der Tastenkombination CTRL+C und wieder [einfügen] mit Hilfe der Tasten CTRL+V (MS-Windows Standardfunktionen)" %}</p>
-<p>{% trans "If upper and lower arrows from numeric steppers are used, these will increment with 0.1 for metric simulations and with 0.01 for inch simulations" %}</p>
-<p>XXX</p>
-<p>{% trans "If you want to apply Cut command (CTRL+X) in numeric stepper, after the value will disappear from the used field, 0 (zero) will be put instead." %}</p>
-<p>XXX</p>
-<p class="hcp2"> </p>
-<p style="font-weight: bold;">{% trans "Kontextmenü auf rechter Maustaste" %}</p>
-<p>{% trans "Klicken Sie mit der [rechten] Maustaste auf einen der Achsen-Schieber, um den folgenden Dialog zu öffnen. Der Dialog erlaubt eine bestimmte Achsenposition einzugeben oder die Achsenposition auf [0] zu setzen." %}</p>
-<p><img src="../../newUI_axis_control_1.gif" alt="newUI_axis_control_1.gif" width="327" height="298" border="0"/></p>
-<p> </p>
-<p><strong class="">Temporary Relative Jog Values:</strong> Mit dieser 
- Option können Sie alle Achsenwerte auf 0 setzen ohne das Maschinenmodell 
- zu bewegen. </p>
-<p>{% trans "Auf diese Weise können Sie das Maschinenmodell solange temporär auf einen bestimmten Wert bewegen, wie die Option aktiviert ist. Schließt man den Dialog wird der Effekt der Option beendet." %}</p>
-<p><strong class="">Alle auf 0:</strong> Mit dieser Option können Sie alle 
- Achsen auf 0 zurücksetzen </p>
-<p><strong class="">Auf Anfangswerte zurücksetzen:</strong> Mit dieser 
- Option können Sie alle Achsen auf deren ursprünglich eingestellten Werte 
- zurücksetzen. Dies sind die der Maschinendefinitionsdatei gespeicherten 
- Werte.</p>
-<p><strong class="">Alles in Zwischenablage kopieren:</strong> Mit dieser 
- Option können Sie die Einstellwerte aller Achsen kopieren. </p>
-
+<h1>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">手动轴控制</font>
+    </font>
+  </h1>
+  <p>&nbsp;</p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">借助</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">手动轴控制，</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+        您可以使用键盘输入或滑块手动移动和控制机器的线性轴和旋转轴。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p><img alt="新UI_axis_control.gif" border="0" height="489" src="../../newUI_axis_control.gif" width="555" /></p>
+  <p class="hcp2">&nbsp;</p>
+  <p><strong class="">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">主要优点：</font>
+      </font>
+    </strong></p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">可以检查轴限制设置是否正确。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">可以检查碰撞检查设置是否正确。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p><strong class="">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">描述：</font>
+      </font>
+    </strong></p>
+  <p><strong class=""><span class="hcp3">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">确定轴</font>
+        </font>
+      </span><span class="hcp3">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">限制。</font>
+        </font>
+      </span></strong></p>
+  <p><strong class=""><span class="hcp3">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">确定当前轴位置。</font>
+        </font>
+      </span></strong></p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">通过输入字段、移动滑块或“右键单击”滑块之一以在对话框中进行输入来更改轴值（请参阅下面的说明）。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">滑块下方的输入字段显示轴的当前值，并在模拟过程中不断更新。
+      </font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">要从一个字段从左向右跳转到下一个字段，请使用 TAB 键。</font>
+      <font style="vertical-align: inherit;">要从一个字段从右向左跳转到下一个字段，请使用 SHIFT+TAB 键。 &nbsp;</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">如果您跳转到不可见的字段，“轴控制”选项卡会自动滚动以显示相应的字段。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">XXX 如果你跳到一个看不见的区域，XXX</font>
+    </font>
+  </p>
+  <p style="margin-left: 48px;">&nbsp;</p>
+  <p><strong class="">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">XXX 数字步进器</font>
+      </font>
+    </strong> <strong class="">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">操作：</font>
+      </font>
+    </strong></p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">可以按 CTRL+C 复制这些值，并可以使用 CTRL+V（Windows 标准键）应用粘贴命令</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">可以</font>
+      <font style="vertical-align: inherit;">
+        通过按组合键 CTRL+C</font>
+    </font><span class="hcp4">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">复制</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">这些值，然后
+        使用 CTRL+V 键再次</font>
+    </font><span class="hcp4">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">粘贴（MS-Windows 标准功能）</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;"></font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">如果使用数字步进器的上下箭头，则对于公制模拟，这些箭头将以 0.1 递增，对于英制模拟，这些箭头将以 0.01 递增</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">XXX</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">如果您想在数字步进器中应用“剪切”命令（CTRL+X），则该值将从使用的字段中消失后，将改为输入 0（零）。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">XXX</font>
+    </font>
+  </p>
+  <p class="hcp2">&nbsp;</p>
+  <p style="font-weight: bold;">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">右键单击上下文菜单</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;"></font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">右键</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">单击</font>
+      <font style="vertical-align: inherit;">
+        轴滑块之一打开以下对话框。</font>
+      <font style="vertical-align: inherit;">该对话框允许您输入特定的轴位置或将轴位置</font>
+      <font style="vertical-align: inherit;">设置为</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">0 。</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+  </p>
+  <p><img alt="新UI_axis_control_1.gif" border="0" height="298" src="../../newUI_axis_control_1.gif" width="327" /></p>
+  <p>&nbsp;</p>
+  <p><strong class="">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">临时相对点动值：</font>
+      </font>
+    </strong>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">使用此选项您可以将所有轴值设置为 0，而无需移动机器模型。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">只要启用该选项，您就可以暂时将机器模型移至特定值。</font>
+      <font style="vertical-align: inherit;">如果关闭该对话框，该选项的效果就会结束。 &nbsp;&nbsp;</font>
+    </font>
+  </p>
+  <p><strong class="">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">全部重置为 0：</font>
+      </font>
+    </strong>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">此选项允许您将所有轴重置为 0</font>
+    </font>
+  </p>
+  <p><strong class="">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">重置为初始值：</font>
+      </font>
+    </strong>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">使用此选项，您可以将所有轴重置为其原始设置值。</font>
+      <font style="vertical-align: inherit;">这些是存储在机器定义文件中的值。</font>
+    </font>
+  </p>
+  <p><strong class="">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">将所有内容复制到剪贴板：</font>
+      </font>
+    </strong>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">使用此选项您可以复制所有轴的设置值。</font>
+    </font>
+  </p>
 {% endblock %}
 {% endlinebreakless %}

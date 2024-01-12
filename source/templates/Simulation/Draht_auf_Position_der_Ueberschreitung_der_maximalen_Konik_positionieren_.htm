@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,8 +28,47 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog"><img src="../Position_der_Maximalkonik_zeigen.gif" alt="Position_der_Maximalkonik_zeigen.gif" width="27" height="31" border="0"/> Draht auf Position der Überschreitung der maximalen Konik positionieren.</p><p>{% trans "Diese Schaltfläche ist nur dann aktiv, wenn es im Zuge der Simulation zu einer Überschreitung des [maximal möglichen Konikwinkels] der Maschine kommt." %}</p>
-<p class="Block_Text">{% trans "Ein Klick auf die Schaltfläche @ positioniert die Drahtgrafik auf die Schneidposition, an der es zu der Überschreitung der maximal möglichen Konik kam." %}</p>
+ <p class="dialog">
+  <img alt="Position_of_the_maximalkonik_show.gif" border="0" height="31" src="../Position_der_Maximalkonik_zeigen.gif" width="27"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    将导线放置在超过最大锥度的位置。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    仅当在模拟过程中超过机器的
+   </font>
+  </font>
+  <font style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     最大可能锥角
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    时，此按钮才会激活。
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    单击按钮
+   </font>
+  </font>
+  <img alt="Position_of_the_maximalkonik_show.gif" border="0" height="31" src="../Position_der_Maximalkonik_zeigen.gif" width="27"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    将线材图形定位到超出最大可能锥度的切割位置。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

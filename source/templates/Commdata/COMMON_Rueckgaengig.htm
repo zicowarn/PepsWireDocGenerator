@@ -29,7 +29,16 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Rückgängig" %}</p><p>{% trans "Macht den letzten Befehl rückgängig. Um mehrere Aktionen in einem Schritt rückgängig zu machen, klicken Sie mehrfach auf die Schaltfläche." %}</p>
-
+<p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">未完成</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">撤消最后一个命令。</font>
+      <font style="vertical-align: inherit;">要一次性撤消多个操作，请多次单击该按钮。</font>
+    </font>
+  </p>
 {% endblock %}
 {% endlinebreakless %}

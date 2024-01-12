@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,7 +28,21 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Rauhtiefenvorgabe für Simulation" %}</p><p>{% trans "Dieser Wert bestimmt, mit welcher Genauigkeit kreisförmige Werkzeugbewegungen in kleine Vektoren umgerechnet werden." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    模拟粗糙度规范
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该值决定了将圆形刀具运动转换为小矢量的精度。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

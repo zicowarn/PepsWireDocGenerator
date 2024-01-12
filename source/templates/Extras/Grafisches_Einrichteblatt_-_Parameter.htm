@@ -35,39 +35,213 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Grafisches Einrichteblatt - Parameter" %}</p><p> </p>
-<p class="Tip_Note_Heading">{% trans "Textfelder des Einrichteblattes" %}</p>
-<p>{% trans "Hier bestimmen Sie, welche Informationen z.B. [Material], [Schneidhöhe], [Maschine] etc. in den oberen Teil des Einrichteblatts geschrieben werden sollen." %}</p>
-<p> </p>
-<p><img src="../Grafisches_Einrichteblatt_Textfelder.gif" alt="" border="0" class="hcp2"/></p>
-<p> </p>
-<p>{% trans "Das folgende Bild zeigt, das die Information [Material] (Aluminium) wie im Bild oberhalb bestimmt, in der [dritten] [Spalte] des Einrichteblatts angezeigt wird." %}</p>
-<p> </p>
-<p><img src="../Grafisches_Einrichteblatt_Textfelder_1.gif" alt="" border="0" class="hcp2"/></p>
-<p> </p>
-<p>{% trans "Bestimmte Informationen wie z.B. [ZeichnungsNr.], [Projekt-Nr]. oder [Kunde] werden nur angezeigt, wenn Sie die optionale Software [CAMMAN] (Programmverwaltung) verwenden." %}</p>
-<p class="Tip_Note_Heading">{% trans "Abmessungen" %}</p>
-<p>XXX</p>
-<p class="Tip_Note_Heading">{% trans "[Grafik automatisch einpassen]" %}</p>
-<p>{% trans "Ist die Option aktiv, wird die Grafik der Bearbeitungsgeometrien, automatisch größtmöglich, in das Einrichteblatt eingepasst." %}</p>
-<p>{% trans "Bei nicht aktivierter Option, wird die aktuelle Bildschirmansicht in das Einrichteblatt eingepasst." %}</p>
-<p class="Tip_Note_Heading">{% trans "[Startpunkte ausgeben]" %}</p>
-<p>{% trans "Zeigt für jede bearbeitete Figur, die Koordinaten des Startpunktes grafisch an." %}</p>
-<p class="Tip_Note_Heading">{% trans "[Figurnamen ausgeben]" %}</p>
-<p>{% trans "Zeigt für jede bearbeitete Figur, den der Bearbeitungsfigur grafisch an." %}</p>
-<p class="Tip_Note_Heading">{% trans "Nullpunkte ausgeben" %}</p>
-<p>{% trans "Zeigt die Position des Nullpunktes grafisch im Einrichteblatt an." %}</p>
-<p class="Tip_Note_Heading">{% trans "Farben" %}</p>
-<p>{% trans "Hier können Sie einstellen, im welchen Farben die [Bearbeitungsgeometrien] (Figuren), [Datenfelder] und der [Rahmen] des Einrichteblattes angezeigt werden sollen." %}</p>
-<p class="Tip_Note_Heading">{% trans "Standardwerte laden" %}</p>
-<p>{% trans "Setzt die Dialogeinstellung zurück auf die vom Systemhersteller gespeicherten Voreinstellungen." %}</p>
-<p> </p>
-<p> </p>
-<p> </p>
-<p> </p>
-<p> </p>
-<p> </p>
-<p> </p>
-
+<p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">图形设置表 - 参数</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p class="Tip_Note_Heading">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">设置表的文本字段</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+        您可以在此处确定应在设置表的上部写入</font>
+      <font style="vertical-align: inherit;">哪些信息，例如</font>
+    </font><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">材料</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">、
+      </font>
+    </font><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">切割高度</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">、</font>
+    </font><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">机器等。</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;"></font>
+  </p>
+  <p>&nbsp;</p>
+  <p><img alt="" border="0" class="hcp2" src="../Grafisches_Einrichteblatt_Textfelder.gif" /></p>
+  <p>&nbsp;</p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">下图显示</font>
+    </font><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">材料</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">（铝）信息显示</font>
+      <font style="vertical-align: inherit;">
+        在设置表的</font>
+    </font><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">第三</font>
+      </font>
+    </span>
+    <span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">列中，如上图所示。</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;"></font>
+  </p>
+  <p>&nbsp;</p>
+  <p><img alt="" border="0" class="hcp2" src="../Grafisches_Einrichteblatt_Textfelder_1.gif" /></p>
+  <p>&nbsp;</p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">某些信息，例如</font>
+    </font><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">图纸编号。</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">，
+      </font>
+    </font><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">项目编号</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">。</font><span class="hcp1">
+        <font style="vertical-align: inherit;">仅当您使用可选的CAMMAN</font>
+      </span>
+      <font style="vertical-align: inherit;"> （程序管理）软件
+        时才会显示</font>
+      <font style="vertical-align: inherit;">或</font>
+    </font><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">客户</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+        。</font>
+    </font><span class="hcp1">
+      <font style="vertical-align: inherit;"></font>
+    </span>
+    <font style="vertical-align: inherit;"></font>
+  </p>
+  <p class="Tip_Note_Heading">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">方面</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">XXX</font>
+    </font>
+  </p>
+  <p class="Tip_Note_Heading"><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">自动适应图形</font>
+      </font>
+    </span></p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">如果该选项处于活动状态，加工几何形状的图形会自动尽可能大地安装到设置表中。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">如果未激活该选项，则当前屏幕视图将安装到设置表中。</font>
+    </font>
+  </p>
+  <p class="Tip_Note_Heading"><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">输出起点</font>
+      </font>
+    </span></p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">以图形方式显示每个编辑图形的起点坐标。</font>
+    </font>
+  </p>
+  <p class="Tip_Note_Heading"><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">输出角色名称</font>
+      </font>
+    </span></p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">对于每个编辑的图形，以图形方式显示编辑图形。</font>
+    </font>
+  </p>
+  <p class="Tip_Note_Heading">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">输出零点</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">在设置表中以图形方式显示零点位置。</font>
+    </font>
+  </p>
+  <p class="Tip_Note_Heading">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">颜色</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;"></font><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">您可以在此处设置处理几何图形</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+        （图形）、</font>
+    </font><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">数据字段</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">和
+      </font>
+      <font style="vertical-align: inherit;">设置表框架的显示</font>
+    </font><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">颜色</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">。</font>
+    </font>
+  </p>
+  <p class="Tip_Note_Heading">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">加载默认值</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">将对话框设置重置回系统制造商保存的默认设置。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
 {% endblock %}
 {% endlinebreakless %}

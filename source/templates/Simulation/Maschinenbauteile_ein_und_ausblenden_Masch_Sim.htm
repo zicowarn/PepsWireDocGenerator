@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,39 +34,216 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Maschinenbauteile ein- und ausblenden" %}</p><p>{% trans "Mit diesen Schaltflächen können Sie einzelne [Maschinenbauteile] ein- oder ausblenden." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
-<p class="Tip_Note_Heading">{% trans "Maschinenbauteile ausblenden" %}</p>
-<ul>
-<li class="hcp2">
-<p class="Tip_Note_Text_Bulleted">{% trans "Klicken Sie auf die Schaltfläche [Ausblen &amp;gt;&amp;gt;]." %}</p>
-</li>
-<li class="hcp2">
-<p class="Tip_Note_Text_Bulleted">{% trans "Wählen Sie die auszublendenden Elemente im Grafikfenster aus." %}</p>
-</li>
-<li class="hcp2">
-<p class="Tip_Note_Text_Bulleted">{% trans "Beenden Sie die Auswahl mit der Taste [Esc] oder der Schaltfläche [Abbruch]." %}</p>
-</li>
-</ul>
-<p class="Tip_Note_Heading">{% trans "Maschinenbauteile ausblenden und von der Kollisionskontrolle ausschließen" %}</p>
-<ul>
-<li class="hcp2">
-<p class="Tip_Note_Text_Bulleted">{% trans "Klicken Sie auf die Schaltfläche [Entfernen &amp;gt;&amp;gt;]." %}</p>
-</li>
-<li class="hcp2">
-<p class="Tip_Note_Text_Bulleted">{% trans "Wählen Sie die auszublendenden Elemente im Grafikfenster aus." %}</p>
-</li>
-<li class="hcp2">
-<p class="Tip_Note_Text_Bulleted">{% trans "Beenden Sie die Auswahl mit der Taste [Esc] oder der Schaltfläche [Abbruch]." %}</p>
-</li>
-</ul>
-<p class="Tip_Note_Heading">{% trans "Ausgeblendete Maschinenbauteile wieder einblenden" %}</p>
-<ul>
-<li class="hcp2">
-<p class="Tip_Note_Text_Bulleted">{% trans "Klicken Sie auf die Schaltfläche [Wiederherstellen]." %}</p>
-</li>
-</ul>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    显示和隐藏机器组件
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    您可以使用这些按钮来显示或隐藏各个
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     机器组件
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    它是这样完成的：
+   </font>
+  </font>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    隐藏机器组件
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp2">
+   <p class="Tip_Note_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      单击
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       隐藏&gt;&gt;
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      按钮。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp2">
+   <p class="Tip_Note_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选择要在图形窗口中隐藏的元素。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp2">
+   <p class="Tip_Note_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       使用Esc
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      键或
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       取消
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      按钮结束选择
+     </font>
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    隐藏机器组件并将其排除在碰撞控制之外
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp2">
+   <p class="Tip_Note_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      单击
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       删除&gt;&gt;
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      按钮。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp2">
+   <p class="Tip_Note_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选择要在图形窗口中隐藏的元素。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp2">
+   <p class="Tip_Note_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       使用Esc
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      键或
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       取消
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      按钮结束选择
+     </font>
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    再次显示隐藏的机器组件
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp2">
+   <p class="Tip_Note_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      单击
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       恢复
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      按钮。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+
 
 {% endblock %}
 {% endlinebreakless %}

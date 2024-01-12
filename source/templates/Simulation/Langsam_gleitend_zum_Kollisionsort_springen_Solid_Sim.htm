@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,8 +28,28 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Langsam gleitend zum Kollisionsort springen" %}</p><p>{% trans "Wird eine Kollision entdeckt, kann der Anwender zu der Operation springen, in der die Kollision auftritt." %}</p>
-<p>{% trans "Ob dieser Sprung an den Kollisionsort weich gleitend oder sprunghaft dargestellt wird, können Sie hier einstellen." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    缓慢滑行跳跃至碰撞地点
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果检测到碰撞，用户可以跳转到发生碰撞的操作。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    您可以在此处设置跳转到碰撞位置是平滑显示还是突然显示。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

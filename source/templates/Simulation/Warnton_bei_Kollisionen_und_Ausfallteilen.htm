@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,7 +28,33 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Warnton bei Kollisionen und Ausfallteilen" %}</p><p>{% trans "Ist die Option aktiv, wird ein [akustischer Warnton] ausgegeben wenn die Simulation eine Kollision oder ein Ausfallteil entdeckt." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    发生碰撞和零件损坏时发出警告音
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果该选项处于活动状态，
+   </font>
+   <font style="vertical-align: inherit;">
+    当模拟检测到碰撞或故障部件时，会发出
+   </font>
+  </font>
+  <font style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     声音警告音。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

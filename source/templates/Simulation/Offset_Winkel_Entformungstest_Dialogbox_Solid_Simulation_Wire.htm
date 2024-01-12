@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,18 +33,303 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Offset Winkel (Entformungstest Dialog)" %}</p><p>{% trans "Auf Grund der großen Anzahl möglicher Entformungstests, kann das System den Entformungstest bei [nicht] vertikalen Ausfallteilen (z.B. Schrägschiebern), [nicht automatisch] ausführen." %}</p>
-<p>{% trans "In diesem Dialogbereich können Sie einstellen, entlang welcher Richtungsachse und in welchem Winkel der Entformungstest ausgeführt werden soll." %}</p>
-<p>{% trans "Als Richtungsachse können Sie theoretisch jede Achse bestimmen, aber normalerweise nimmt man die Achsen [+Z] oder -[Z]. Das folgende Beispiel verwendet die [+Z] Richtungsachse" %}</p>
-<p> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "+Z Richtungsachse" %}</p>
-<p>{% trans "Ist der Parameter [Von Richtungsachse] auf 0 Grad eingestellt ist, verläuft der Entformungstest entlang der vertikalen Z-Achse." %}</p>
-<p>{% trans "Wenn der Parameter [Von Richtungsachse] auf 30 Grad eingestellt ist, wird die Achse bezogen auf die Vertikale, um 30 Grad rotiert - aber in welche Richtung?" %}</p>
-<p> </p>
-<p>{% trans "Wird im Feld [Um Richtungsachse] e. Winkel v.[0] Grad bestimmt, verläuft d. 30 Grad Winkel in [+X] Richtung (siehe Bild)." %}</p>
-<p>{% trans "Wird im Feld [Um Richtungsachse] e. Winkel v. [90] Grad bestimmt, verläuft d. 30 Grad Winkel in [+Y] Richtung (siehe Bild)." %}</p>
-<p>{% trans "Wird im Feld [Um Richtungsachse] e. Winkel v. [180] Grad bestimmt, verläuft d. 30 Grad Winkel in [-X] Richtung (siehe Bild)." %}</p>
-<p><img src="../separate_axis.gif" alt="separate_axis.gif" width="457" height="354" border="0"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    偏移角度（脱模测试对话框）
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    由于可能进行的脱模试验数量较多，系统无法
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     自动对
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     非
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    垂直失效件（如倾斜滑道）进行脱模试验
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在此对话框区域中，您可以设置脱模测试应沿哪个方向轴和哪个角度进行。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     理论上，您
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    可以指定任何轴作为方向轴，但通常使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     +Z
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或-Z轴
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+   <font style="vertical-align: inherit;">
+    以下示例使用
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     +Z
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    方向轴
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    +Z方向轴
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     如果“从方向轴”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    参数
+   </font>
+   <font style="vertical-align: inherit;">
+    设置为 0 度，则脱模测试沿垂直 Z 轴运行。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     如果“从方向轴”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    参数
+   </font>
+   <font style="vertical-align: inherit;">
+    设置为 30 度，则轴将相对于垂直方向旋转 30 度 - 但朝哪个方向旋转呢？
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     显示在“绕方向轴”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    字段中
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+   <font style="vertical-align: inherit;">
+    安角诉
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     确定0
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    度，d．
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     +X
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    方向30 度角
+   </font>
+   <font style="vertical-align: inherit;">
+    （见图）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     显示在“绕方向轴”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    字段中
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+   <font style="vertical-align: inherit;">
+    安角诉
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     确定90
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    度，d．
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     +Y
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    方向30 度角
+   </font>
+   <font style="vertical-align: inherit;">
+    （见图）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     显示在“绕方向轴”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    字段中
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+   <font style="vertical-align: inherit;">
+    安角诉
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     确定180
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    度，d．
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     -X
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    方向30 度角
+   </font>
+   <font style="vertical-align: inherit;">
+    （见图）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <img alt="分离轴.gif" border="0" height="354" src="../separate_axis.gif" width="457"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

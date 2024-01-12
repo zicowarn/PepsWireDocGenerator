@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,11 +28,48 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Infofenster" %}</p><p>{% trans "Dieses Fenster zeigt Informationen (Art des Objekt, Konikwinkel etc... ) über das aktuell erzeugte Feature." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p><img src="../RH_Feature_Recognition_manual_Info.gif" alt="RH_Feature_Recognition_manual_Info.gif" width="297" height="100" border="0"/></p>
-<p style="text-align: center;"> </p>
-<p>{% trans "Kann kein Feature erzeugt werden, zeigt das [Infofenster] Fehlermeldungen." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    信息窗口
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该窗口显示有关当前创建的特征的信息（对象类型、锥角等）。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <img alt="RH_Feature_Recognition_manual_Info.gif" border="0" height="100" src="../RH_Feature_Recognition_manual_Info.gif" width="297"/>
+ </p>
+ <p style="text-align: center;">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果无法创建要素，
+   </font>
+  </font>
+  <span style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     信息窗口
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    会显示 
+ 错误消息。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,18 +34,224 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Auswahl beenden / löschen" %}</p><p>{% trans "[Auswahl löschen] " %}</p>
-<p>{% trans "Löscht die aktuelle Flächen-/Kantenauswahl." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p style="font-weight: bold;">{% trans "Auswahl beenden" %}</p>
-<p>{% trans "Führt die aktuelle Flächen-/Kantenauswahl aus. Dabei überprüft [WIRE-Expert], ob aus den gewählten Flächen/Kanten ein erodierbares Feature erzeugt werden kann." %}</p>
-<p>{% trans "Falls nicht, wird im Dialog eine Fehlermeldung angezeigt." %}</p>
-<p> </p>
-<p>{% trans "[Auswahl vervollständigen] – Diese Schaltfläche steht nur zur Verfügung, wenn im Dialog die Option #Manuelle Flächenauswahl# oder #Manuelle Kantenauswahl# aktiviert wurde." %}</p>
-<p>{% trans "Die Schaltfläche wird verwendet, wenn eine [größere Anzahl] miteinander verbundener Flächen / Flächenkanten ausgewählt werden sollen." %}</p>
-<p>{% trans "Anstatt jede einzelne Fläche auszuwählen, wählt man die [erste] und die [letzte Fläche / Kante] und klickt anschließend auf die Schaltfläche [Feature abschließen]." %}</p>
-<p>{% trans "Anschließend wählt das System [alle Flächen zwischen] der [ersten] und der [letzten Fläche / Kante] automatisch aus." %}</p>
-<p> </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    结束/删除选择
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     删除选择
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    -
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    清除当前的面/边选择。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p style="font-weight: bold;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    结束选择
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    执行当前面/边选择。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     WIRE-Expert
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    检查
+   </font>
+   <font style="vertical-align: inherit;">
+    是否可以从选定的曲面/边创建可侵蚀特征。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果没有，对话框中将显示错误消息。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     完整选择
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    - 仅当
+   </font>
+   <font style="vertical-align: inherit;">
+    对话框中激活了
+   </font>
+  </font>
+  <a href="Manuelle_Faceauswahl_Neues_Bearbeitungsobjekt.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     手动曲面选择
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <a href="Manuelle_Kantenauswahl_Neues_Bearbeitungsobjekt.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     手动边选择选项时，此按钮才可用。
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    当要选择
+   </font>
+  </font>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     大量
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    连接曲面/曲面边时，使用该按钮。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    不要选择每个单独的面，而是选择
+   </font>
+  </font>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     第一个
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     最后一个面/边
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，然后单击
+   </font>
+  </font>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “完整特征”
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    然后系统自动选择
+   </font>
+   <font style="vertical-align: inherit;">
+    第
+   </font>
+   <span class="hcp2">
+    <font style="vertical-align: inherit;">
+     一个
+    </font>
+   </span>
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+   <span class="hcp2">
+    <font style="vertical-align: inherit;">
+     最后一个表面/边
+    </font>
+   </span>
+  </font>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     之间的所有表面
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+  </font>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

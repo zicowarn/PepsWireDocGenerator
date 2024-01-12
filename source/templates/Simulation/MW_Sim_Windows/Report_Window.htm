@@ -36,35 +36,216 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <h1>{% trans "Report Fenster" %}</h1><p> </p>
-<p>{% trans "Das Report-Fenster sammelt alle besonderen Ereignisse (z.B. Kollisionen), die im Zuge einer Simulation auftreten. Der Report wird in Form einer Baumstruktur aufgelistet." %}</p>
-<p>{% trans "Jeder Zweig der Baumstruktur beginnt mit der Operationsnummer, gefolgt von der Werkzeugnummer. Typische Ereignisse sind:" %}</p>
-<p>{% trans "Wertüberschreitungen" %}</p>
-<p>{% trans "Wertunterschreitungen" %}</p>
-<p>{% trans "Kollisionsereignisse zwischen den Achsengeometrien (z.B. Kollision zwischen C-Achse und Tisch)" %}</p>
-<p>{% trans "Kollisionsereignisse zwischen Werkzeug und Geometrien (z.B. Kollision zwischen Werkzeug und C-Achse)" %}</p>
-<p>{% trans "Kollisionsereignisse zwischen Werkzeug und Geometrien (z.B. Kollision zwischen Werkzeug und C-Achse)" %}</p>
-<p>{% trans "Kollisionsereignisse zwischen Werkzeug und Werkstück" %}</p>
-<p>{% trans "Kollisionsereignisse zwischen Rohteil und Werkzeugteilbereich (z.B. Kollision zwischen Rohteil und Werkzeugaufnahme)" %}</p>
-<p>{% trans "Kollisionsereignisse zwischen Rohteil und Werkzeugweg im Eilgang" %}</p>
-<p>{% trans "Annäherungsalarm (Fast-Kollision) zwischen Werkzeug und Rohteil oder Werkstück." %}</p>
-<p>{% trans "Annäherungsalarm (Fast-Kollision) zwischen den Achsen-Geometrien." %}</p>
-<p> </p>
-<p><img src="../../newUI_report.gif" alt="newUI_report.gif" width="458" height="581" border="0"/></p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;"> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Hauptfunktionen:" %}</p>
-<p>{% trans "Die Tiefe der Kollision ist verfügbar, wenn das Werkzeug eine Kollision ausführt (XXX eg. range: more than 0.2)." %}</p>
-<p>{% trans "Verwenden Sie den Dialog ['Anzeigefeld Auswahl'] um die angezeigten Spalten im [Report]-Fensters anzupassen. Klicken Sie dazu mit der [rechten] Maustaste in das [Report]-Fenster und wählen Sie im Kontextmenü ['Anzeigefeld Auswahl']." %}</p>
-<p><img src="../../newUI_field_chooser.gif" alt="newUI_field_chooser.gif" width="132" height="123" border="0"/></p>
-<p>{% trans "[Typ]  Zeigt den Ereignistyp an, symbolisiert durch eine Ikone." %}</p>
-<p>{% trans "[Werkzeug#] - Zeigt die in diesem Ereignis verwendete [Werkzeugnummer]." %}</p>
-<p>{% trans "[Op.Nr.] - Zeigt die in diesem Ereignis verwendete [Operationsnummer]." %}</p>
-<p>{% trans "[Block]  Zeigt die Satznummer in der Satzliste für das aktuelle Ereignis." %}</p>
-<p>{% trans "[Kommentar]  Zeigt den Operationskommentar des aktuellen Ereignisses." %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "[Hinweis]: Wenn Sie im Dialog auf eine Feldspalte (z.B. ID#) klicken, kann man die Spalte sortieren." %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "Klick man im Dialog auf ein Ereignis, springt das Werkzeug auf die entsprechende Koordinate im Werkzeugweg." %}</p>
-
+<h1>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">报告窗口</font>
+    </font>
+  </h1>
+  <p>&nbsp;</p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">报告窗口收集模拟期间发生的所有特殊事件（例如碰撞）。</font>
+      <font style="vertical-align: inherit;">该报告以树形结构的形式列出。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">树结构的每个分支都以操作编号开始，后面跟着工具编号。</font>
+      <font style="vertical-align: inherit;">典型事件有：</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">价值超出</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">低估</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">轴几何形状之间的碰撞事件（例如 C 轴和工作台之间的碰撞）</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">刀具和几何形状之间的碰撞事件（例如刀具和 C 轴之间的碰撞）</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">刀具和几何形状之间的碰撞事件（例如刀具和 C 轴之间的碰撞）</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">刀具与工件之间的碰撞事件</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">毛坯和刀具部分之间的碰撞事件（例如毛坯和刀架之间的碰撞）</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">快速移动过程中毛坯和刀具路径之间的碰撞事件</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">刀具与毛坯或工件之间的接近报警（接近碰撞）。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">轴几何形状之间的接近警报（接近碰撞）。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p><img alt="newUI_report.gif" border="0" height="581" src="../../newUI_report.gif" width="458" /></p>
+  <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">&nbsp;</p>
+  <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">主要功能：</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">当工具执行碰撞时，碰撞深度可用（XXX 例如范围：大于 0.2）。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">使用</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">“显示字段选择”对话框自定义</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">“报告”</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">窗口中显示的列</font>
+      <font style="vertical-align: inherit;">。</font>
+      <font style="vertical-align: inherit;">为此，</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">请右键</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+        单击</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">报告</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">窗口，然后从上下文菜单中选择</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">“显示字段选择”</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">。</font>
+    </font>
+  </p>
+  <p><img alt="newUI_field_chooser.gif" border="0" height="123" src="../../newUI_field_chooser.gif" width="132" /></p>
+  <p>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">类型</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">– 显示事件类型，以图标表示。</font>
+    </font>
+  </p>
+  <p>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">Tool#</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;"> - 显示此事件中使用的</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">工具编号</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">。</font>
+    </font>
+  </p>
+  <p>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">操作编号 </font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">- 显示此事件中使用的</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">操作编号</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">。</font>
+    </font>
+  </p>
+  <p>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">块</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">– 显示当前事件在记录列表中的记录编号。</font>
+    </font>
+  </p>
+  <p>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">注释</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">——显示当前事件的操作注释。</font>
+    </font>
+  </p>
+  <p class="hcp2">&nbsp;</p>
+  <p>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">注意</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">：如果单击对话框中的字段列（例如 ID#），则可以对该列进行排序。</font>
+    </font>
+  </p>
+  <p class="hcp2">&nbsp;</p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">如果单击对话框中的某个事件，工具将跳转到工具路径中的相应坐标。</font>
+    </font>
+  </p>
 {% endblock %}
 {% endlinebreakless %}

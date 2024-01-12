@@ -35,50 +35,196 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "NC-Code Simulation - Parameter 1" %}</p><p> </p>
-<p><img src="../NC_Code_Simulation_Dialog_oberer_Teil.gif" alt="" border="0" class="hcp1"/></p>
-<p> </p>
-<p><img src="../NC_Code_Simulation_NC_Datei_oeffnen.gif" alt="" border="0" class="hcp1"/> Eine beliebige NC-Datei in die NC-Simulation importieren.</p>
-<p class="Tip_Note_Heading"> </p>
-<p class="Tip_Note_Heading">{% trans "Kreisgröße" %}</p>
-<p>{% trans "Das [untere Drahtende] wird durch einen [Kreis] symbolisiert. Der Durchmesser dieses Kreises wird hier eingestellt." %}</p>
-<p class="Tip_Note_Heading">{% trans "Kreisskalierung - Schieber" %}</p>
-<p>{% trans "Der im Feld [Kreisgröße] bestimmte Kreis, kann mit diesem Schieber vergrößert oder verkleinert werden." %}</p>
-<p class="Tip_Note_Heading">{% trans "Simulationsfarbe" %}</p>
-<p>{% trans "Bestimmt die Farbe des simulierten Drahtsymbols." %}</p>
-<p> </p>
-<p class="Tip_Note_Heading">{% trans "Suchoptionen" %}</p>
-<p class="Tip_Note_Heading">{% trans "@" %}</p>
-<p>{% trans "Geben Sie in diesem Eingabefeld den zu suchenden NC-Code ein." %}</p>
-<p><img src="../NC_Code_Simulation_Suchoptionen_Ab_Anfang.gif" alt="" border="0" class="hcp1"/> Suchen ab Dateianfang.</p>
-<p><img src="../NC_Code_Simulation_Suchoptionen_Aktuelle_Position.gif" alt="" border="0" class="hcp1"/> Suchen ab aktueller 
- Cursor Position.</p>
-<p> </p>
-<p>{% trans "@ Aufruf der #NC-Code Datenbank#. Hier können Sie sich über die Bedeutung der einzelnen NC-Codes informieren." %}</p>
-<p><img src="../NC_Code_Simulation_Dialog_verkleinern.gif" alt="" border="0" class="hcp1"/> Dialog verkleinern / vergrößern.</p>
-<p>{% trans "@ Modell im Grafikfenster zentrieren" %}</p>
-<p> </p>
-<p class="Tip_Note_Heading">{% trans "Fadenkreuz nicht löschen" %}</p>
-<p>XXX</p>
-<p> </p>
-<p><img src="../NC_Code_Simulation_Datei_editieren.gif" alt="" border="0" class="hcp1"/> Editieren der aktuell angezeigten NC-Datei.</p>
-<p>{% trans "@ Editierte NC-Datei neu berechnen. Notwendig nach Editieren einer NC-Datei." %}</p>
-<p> </p>
-<p class="Tip_Note_Heading">{% trans "Zeige Draht / Zeige oberes Kreuz / Zeige unteren Kreis" %}</p>
-<p>{% trans "Ein- und Ausblenden der Bestandteile des Drahtsymbols (Draht, oberes Kreuz und unterer Kreis)." %}</p>
-<p> </p>
-<p class="Tip_Note_Heading">{% trans "Zeige G92 (als Viereck)" %}</p>
-<p>{% trans "Ein- und Ausblenden der XY-Position des NC-Codes G92 ( Viereck-Symbol)." %}</p>
-<p class="Tip_Note_Heading">{% trans "Zeige Letzte Position" %}</p>
-<p>XXX </p>
-<p class="Tip_Note_Heading">{% trans "Zeige Simulationsfarbe" %}</p>
-<p>{% trans "Ein- und Ausblenden des Feldes '[Simulationsfarbe]' (Einstellen der Simulationsfarbe)." %}</p>
-<p class="Tip_Note_Heading"> </p>
-<p> </p>
-<p> </p>
-<p> </p>
-<p> </p>
-<p> </p>
-
+<p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">&nbsp;NC 代码模拟 - 参数 1</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p><img alt="" border="0" class="hcp1" src="../NC_Code_Simulation_Dialog_oberer_Teil.gif" /></p>
+  <p>&nbsp;</p>
+  <p><img alt="" border="0" class="hcp1" src="../NC_Code_Simulation_NC_Datei_oeffnen.gif" />
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">将任何 NC 文件导入 NC 模拟。</font>
+    </font>
+  </p>
+  <p class="Tip_Note_Heading">&nbsp;</p>
+  <p class="Tip_Note_Heading">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">圆圈大小</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;"></font><span class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">电线的下端</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">用</font>
+    </font><span class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">圆圈</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">表示</font>
+      <font style="vertical-align: inherit;">。</font>
+      <font style="vertical-align: inherit;">该圆的直径在此处设置。</font>
+    </font>
+  </p>
+  <p class="Tip_Note_Heading">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">圆缩放 - 滑块</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">可以使用此滑块放大或缩小</font>
+    </font><span class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">“圆大小”</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">字段中指定的圆。</font>
+    </font>
+  </p>
+  <p class="Tip_Note_Heading">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">仿真色</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">确定模拟电线符号的颜色。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p class="Tip_Note_Heading">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">搜索选项</font>
+    </font>
+  </p>
+  <p class="Tip_Note_Heading"><img alt="" border="0" class="hcp1" src="../NC_Code_Simulation_Suchoptionen.gif" />
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">在此输入字段中输入要搜索的 NC 代码。</font>
+    </font>
+  </p>
+  <p><img alt="" border="0" class="hcp1" src="../NC_Code_Simulation_Suchoptionen_Ab_Anfang.gif" />
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">从文件开头开始搜索。</font>
+    </font>
+  </p>
+  <p><img alt="" border="0" class="hcp1" src="../NC_Code_Simulation_Suchoptionen_Aktuelle_Position.gif" />
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">从当前光标位置开始搜索。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p><img alt="" border="0" class="hcp1" src="../NC_Code_Simulation_NC_Code_DB.gif" />
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">调用</font>
+    </font><a href="NC-Code_Datenbank.htm">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">NC代码数据库</font>
+      </font>
+    </a>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">。</font>
+      <font style="vertical-align: inherit;">在这里您可以了解各个 NC 代码的含义。</font>
+    </font>
+  </p>
+  <p><img alt="" border="0" class="hcp1" src="../NC_Code_Simulation_Dialog_verkleinern.gif" />
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">放大/缩小对话框。</font>
+    </font>
+  </p>
+  <p><img alt="" border="0" class="hcp1" src="../NC_Code_Simulation_Modell_zentrieren.gif" />
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">将模型置于图形窗口的中心</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p class="Tip_Note_Heading">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">不要删除十字准线</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">XXX</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p><img alt="" border="0" class="hcp1" src="../NC_Code_Simulation_Datei_editieren.gif" />
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">编辑当前显示的 NC 文件。</font>
+    </font>
+  </p>
+  <p><img alt="" border="0" class="hcp1" src="../NC_Code_Simulation_Datei_neu_berechnen.gif" />
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">重新计算编辑后的 ​​NC 文件。</font>
+      <font style="vertical-align: inherit;">编辑 NC 文件后需要。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p class="Tip_Note_Heading">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">显示线/显示顶部十字/显示底部圆圈</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">显示和隐藏线符号的组件（线、顶部十字和底部圆圈）。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p class="Tip_Note_Heading">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">显示 G92（作为正方形）</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">显示和隐藏 NC 代码 G92（方形符号）的 XY 位置。
+      </font>
+    </font>
+  </p>
+  <p class="Tip_Note_Heading">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">显示最后位置</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">XXX</font>
+    </font>
+  </p>
+  <p class="Tip_Note_Heading">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">显示模拟颜色</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">显示或隐藏</font>
+    </font><span class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">模拟颜色</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">字段（设置模拟颜色）。</font>
+    </font>
+  </p>
+  <p class="Tip_Note_Heading">&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
 {% endblock %}
 {% endlinebreakless %}

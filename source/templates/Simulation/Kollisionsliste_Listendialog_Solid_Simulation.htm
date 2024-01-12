@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,11 +34,46 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Kollisionsliste" %}</p><p>{% trans "Diese Liste informiert über eventuell aufgetretene Kollisionen." %}</p>
-<p class="hcp1"> </p>
-<p><img src="../Listen_Kollisionsliste.gif" alt="Listen_Kollisionsliste.gif" width="511" height="134" border="0"/></p>
-<p class="hcp1"> </p>
-<p>{% trans "[Hinweis: ]Beachten Sie, dass Sie jeden Listeneintrag anklicken können. Die Simulation springt anschließend zurück / vor zum gewählten Eintrag." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    碰撞列表
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此列表提供有关可能发生的任何冲突的信息。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="Listen_Collision 列表.gif" border="0" height="134" src="../Listen_Kollisionsliste.gif" width="511"/>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font color="#0000FF" style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     注意：
+    </font>
+   </font>
+   <br/>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    请注意，您可以单击任何列表条目。
+   </font>
+   <font style="vertical-align: inherit;">
+    然后模拟向后/向前跳至所选条目。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

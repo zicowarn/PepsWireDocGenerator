@@ -36,19 +36,160 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Projektion" %}</p><p> </p><p>{% trans "Dieser Dialogbereich wird verwendet, um zusätzlich die Projektionsposition der Umrissgeometrie festzulegen." %}</p>
-<p>{% trans "Die Option [2D-Projizieren] wird verwendet, um die drei [XYZ]-Eingabefelder freizuschalten." %}</p>
-<p>{% trans "Sind die Felder 'ausgegraut' oder die Werte auf [0] gesetzt, wird die Umrissgeometrie wie im Feld [Blickrichtung] beschrieben, projiziert." %}</p>
-<p>{% trans "Wenn das Feld [Y] im Dialogbereich [Blickrichtung] eine [1] enthält, dann müssen Sie im Dialogbereich [Projektion] die Projektionsposition ebenfalls im Feld [Y] bestimmen und die anderen Felder mit [0] belegen." %}</p>
-<p>{% trans "Das folgende Bild zeigt drei Umrissgeometrien (XY, ZY, ZX), die durch Eingabe von Werten in den Feldern [Projektion], verschoben wurden." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../OUTLINE_PROJEKTION1.gif" alt="OUTLINE_PROJEKTION1.gif" width="423" height="303" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Das gleiche Beispiel OHNE Eingabe von [Projektionswerten] finden Sie siehe [#Blickrichtung#]." %}</p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
-	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
-	FilePopupInit('a2');
-//]]&gt;</script>
-
+<p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">投影</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">该对话框区域用于另外指定轮廓几何体的投影位置。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;"></font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">2D 项目</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">选项</font>
+      <font style="vertical-align: inherit;">用于解锁三个</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">XYZ</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">输入字段。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">如果字段“变灰”或值设置为</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">0</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+        ，则轮廓几何图形将按照“</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">查看方向”</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">字段中的描述进行投影
+        。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">如果</font>
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">“视图方向”</font>
+      </font>
+      <font style="vertical-align: inherit;">对话框区域中的
+      </font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">Y</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">字段包含1 </font>
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">，</font>
+      </font>
+      <font style="vertical-align: inherit;">
+        则还必须确定“投影”</font>
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">对话框区域</font>
+      </font>
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">中的</font>
+      </font>
+      <font style="vertical-align: inherit;">
+        Y 字段中的投影位置，并将</font>
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">0</font>
+      </font>
+      <font style="vertical-align: inherit;">分配
+        给其他字段</font>
+      <font style="vertical-align: inherit;">
+        。</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;"></font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;"></font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;"></font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;"></font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;"></font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">下图显示了通过在</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">“投影”</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">字段中输入值来移动的三个轮廓几何图形（XY、ZY、ZX）。</font>
+    </font>
+  </p>
+  <p class="hcp2">&nbsp;</p>
+  <p><img alt="OUTLINE_PROJECTION1.gif" border="0" height="303" src="../OUTLINE_PROJEKTION1.gif" width="423" /></p>
+  <p class="hcp2">&nbsp;</p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font class="hcp1"><a class="BSSCPopup" href="javascript:void(0);" id="a2" onclick="BSSCPopup('Blickrichtung_Umriss_projizieren_OP_Man.htm',400,300);return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+          <font style="vertical-align: inherit;">在观察方向</font>
+        </a></font>
+      <font style="vertical-align: inherit;">
+        上可以找到未输入</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">投影值</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">的相同示例</font>
+      <font style="vertical-align: inherit;">。</font>
+    </font>
+    <font class="hcp1"><a class="BSSCPopup" href="javascript:void(0);" id="a2" onclick="BSSCPopup('Blickrichtung_Umriss_projizieren_OP_Man.htm',400,300);return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+        <font style="vertical-align: inherit;"></font>
+      </a></font>
+    <font style="vertical-align: inherit;"></font>
+  </p>
+  <script language="JavaScript1.2" type="text/javascript">//<![CDATA[
+    if (typeof (FilePopupInit) != 'function') FilePopupInit = new Function();
+    FilePopupInit('a2');
+    //]]>
+  </script>
 {% endblock %}
 {% endlinebreakless %}

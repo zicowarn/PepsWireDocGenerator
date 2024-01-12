@@ -29,36 +29,53 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Schnittluft / Ecken Registerkarte" %}</p><p>{% trans "In diesem Register kann man festlegen, ob eine Bearbeitung oder das Entfernen der Anbindung mit einer zusätzlichen Schnittluft (Aufmaß) ausgeführt werden soll." %}</p><p>{% trans "Zusätzlich kann man festlegen auf welche Weise die AGIEVISION Steuerung scharfkantige Konturecken behandeln soll." %}</p>
-<p> </p>
-<p style="color: #ff0000; font-style: italic;">{% trans "Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen." %}</p>
-<p> </p>
-<p><img src="../QUA_AV2_shg.gif" usemap="#AreaMap0" alt="QUA_AV2_shg.gif" width="392" height="392" border="0"/> <map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="80,337,192,357" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="196,337,309,359" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="80,363,193,386" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="198,362,309,385" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area4" alt=""/>
-<area shape="rect" coords="19,54,193,167" href="javascript:BSSCPopup('Schnittluft_AGIEVISION.htm',400,300);" id="area5" alt=""/>
-<area shape="rect" coords="196,69,371,168" href="javascript:BSSCPopup('Trennspiel_AGIEVISION.htm',400,300);" id="area6" alt=""/>
-<area shape="rect" coords="16,172,194,296" href="javascript:BSSCPopup('Scharfe_Ecken_Aussenecken_AGIEVISION.htm',400,300);" id="area7" alt=""/>
-<area shape="rect" coords="197,179,368,299" href="javascript:BSSCPopup('Scharfe_Ecken_Innenecken_AGIEVISION.htm',400,300);" id="area8" alt=""/>
-<area shape="rect" coords="15,305,187,325" href="javascript:BSSCPopup('Min__Radius_bei_letztem_Schnitt_AGIEVISION.htm',400,300);" id="area9" alt=""/>
-<area shape="rect" coords="16,33,59,52" href="Qualitaet_Registerkarte_AGIEVISION.htm" alt=""/>
-<area shape="rect" coords="162,30,313,52" href="Weitere_Parameter_Ereignisse_Registerkarte_AGIEVISION.htm" alt=""/></map></p>
-<script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
-        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
-        FilePopupInit('area1');
-        FilePopupInit('area2');
-        FilePopupInit('area3');
-        FilePopupInit('area4');
-        FilePopupInit('area5');
-        FilePopupInit('area6');
-        FilePopupInit('area7');
-        FilePopupInit('area8');
-        FilePopupInit('area9');
-//]]&gt;
-</script>
-
+<p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">切割空气/角选项卡</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">在此选项卡中，您可以指定是否应使用附加切削间隙（超大）进行加工或移除连接。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">您还可以指定 AGIEVISION 控件应如何处理锐边轮廓角。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p style="color: #ff0000; font-style: italic;">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">单击下图的各个区域可访问帮助文本。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p><img alt="QUA_AV2_shg.gif" border="0" height="392" src="../QUA_AV2_shg.gif" usemap="#AreaMap0" width="392" /> <map id="AreaMap0" name="AreaMap0">
+      <area alt="" coords="80,337,192,357" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area1" shape="rect" />
+      <area alt="" coords="196,337,309,359" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area2" shape="rect" />
+      <area alt="" coords="80,363,193,386" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area3" shape="rect" />
+      <area alt="" coords="198,362,309,385" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area4" shape="rect" />
+      <area alt="" coords="19,54,193,167" href="javascript:BSSCPopup('Schnittluft_AGIEVISION.htm',400,300);" id="area5" shape="rect" />
+      <area alt="" coords="196,69,371,168" href="javascript:BSSCPopup('Trennspiel_AGIEVISION.htm',400,300);" id="area6" shape="rect" />
+      <area alt="" coords="16,172,194,296" href="javascript:BSSCPopup('Scharfe_Ecken_Aussenecken_AGIEVISION.htm',400,300);" id="area7" shape="rect" />
+      <area alt="" coords="197,179,368,299" href="javascript:BSSCPopup('Scharfe_Ecken_Innenecken_AGIEVISION.htm',400,300);" id="area8" shape="rect" />
+      <area alt="" coords="15,305,187,325" href="javascript:BSSCPopup('Min__Radius_bei_letztem_Schnitt_AGIEVISION.htm',400,300);" id="area9" shape="rect" />
+      <area alt="" coords="16,33,59,52" href="Qualitaet_Registerkarte_AGIEVISION.htm" shape="rect" />
+      <area alt="" coords="162,30,313,52" href="Weitere_Parameter_Ereignisse_Registerkarte_AGIEVISION.htm" shape="rect" /></map></p>
+  <script language="JavaScript1.2" type="text/javascript">
+    //<![CDATA[
+    if (typeof (FilePopupInit) != 'function') FilePopupInit = new Function();
+    FilePopupInit('area1');
+    FilePopupInit('area2');
+    FilePopupInit('area3');
+    FilePopupInit('area4');
+    FilePopupInit('area5');
+    FilePopupInit('area6');
+    FilePopupInit('area7');
+    FilePopupInit('area8');
+    FilePopupInit('area9');
+    //]]>
+  </script>
 {% endblock %}
 {% endlinebreakless %}

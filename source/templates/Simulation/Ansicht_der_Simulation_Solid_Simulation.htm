@@ -34,21 +34,263 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Ansicht der Simulation" %}</p><p>{% trans "Mit diesen Schaltflächen können Sie die Simulationsansicht steuern." %}</p>
-<p>{% trans "[Rückg.](ängig): Hebt die letzte Ansichtsänderung auf (Nur #Solid-Simulation#)." %}</p>
-<p>{% trans "[Origin.](nal): Zeigt die Ansicht, mit der die Simulation gestartet wurde (Nur #Solid-Simulation#)." %}</p>
-<p>{% trans "[XYZ], [XY], [XZ], [YZ]: Mit diesen Schaltflächen können Sie die in der Simulation angezeigte Ansicht einstellen." %}</p>
-<p>{% trans "[Zentr.](ieren): Zentriert die Simulationsgrafik in der Mitte des Grafikfensters und ist hilfreich, wenn die Simulationsgrafik außerhalb des Grafikfenster liegt." %}</p>
-<p>{% trans "[Einpas.](sen): Zentriert entweder das [Rohteil] oder die [gesamte Simulationsgrafik] in der Mitte des Grafikfensters. Was zentriert wird, legen Sie mit der Schaltfläche [Rohteil / Alles] fest." %}</p>
-<p>{% trans "[Rohteil / Alles]: - Diese Schaltfläche ist doppelt belegt und zeigt entweder [Rohteil] oder [Alles]." %}</p>
-<p>{% trans "Wird [Rohteil] angezeigt, wird bei Anwendung der Schaltflächen [Zentr.](ieren) oder [Einpas].(sen) [nur das Rohteil] zentriert bzw. eingepasst." %}</p>
-<p>{% trans "Eventuell vorhandene Spannmittelgrafiken bleiben unberücksichtigt." %}</p>
-<p>{% trans "Wird [Alles] angezeigt, werden auch Spannmittelgrafiken zentriert bzw. eingepasst." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<h2 style="margin-top: 4.00pt; margin-bottom: 0.00pt;">{% trans "Interaktives Ändern der Simulationsansicht" %}</h2>
-<p>{% trans "Normalerweise wird die Simulationsansicht interaktiv mit Hilfe der Maus gesteuert. Siehe: [#Interaktives Zoomen/Rotieren im PEPS Grafikfenster#.]" %}</p>
-<p>{% trans "Die Simulationsansicht lässt sich auch mit Hilfe der Tastatur verändern." %}</p>
-<p>{% trans "Dabei können Sie die [Umschalt]-Taste [gedrückt halten] und die [vier Pfeiltasten] der Tastatur zum rotieren und drehen der Werkstückgrafik verwenden." %}</p>
-
+<p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">模拟视图</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">这些按钮允许您控制模拟视图。</font>
+    </font>
+  </p>
+  <p>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">返回 </font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">（待定）：取消上次视图更改（仅限</font>
+    </font><a href="Solid_Simulation.htm">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">实体模拟</font>
+      </font>
+    </a>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">）。</font>
+    </font>
+  </p>
+  <p>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">起源。</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">(nal)：显示开始模拟的视图（仅限</font>
+    </font><a href="Solid_Simulation.htm">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">实体模拟</font>
+      </font>
+    </a>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">）。</font>
+    </font>
+  </p>
+  <p>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">XYZ</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">、</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">XY</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">、</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">XZ</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">、</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">YZ</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">：这些按钮允许您调整模拟中显示的视图。</font>
+    </font>
+  </p>
+  <p>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">居中</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">：将模拟图形置于图形窗口的中间，如果模拟图形位于图形窗口之外，则非常有用。</font>
+    </font>
+  </p>
+  <p>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">艾因帕斯。</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">(sen)：将</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">空白</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">或</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">整个模拟图形</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">置于图形窗口的中心。</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">您可以使用“空白/全部”</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">按钮确定居中的内容</font>
+      <font style="vertical-align: inherit;">。</font>
+    </font>
+  </p>
+  <p>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">原始部分/全部</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">： - 此按钮具有双重功能，显示</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">原始部分</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">或</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">全部</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">如果显示</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">空白</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">，使用</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">“居中”</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">或</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">“适合”按钮将仅使</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">空白</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">居中或适合</font>
+      <font style="vertical-align: inherit;">。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">不考虑任何现有的夹紧装置图形。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">如果显示</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">所有内容</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">，则夹紧装置图形也会居中或调整。</font>
+    </font>
+  </p>
+  <p style="margin-top: 0; margin-bottom: 0;">&nbsp;</p>
+  <h2 style="margin-top: 4.00pt; margin-bottom: 0.00pt;">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">交互式更改模拟视图</font>
+    </font>
+  </h2>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">通常，模拟视图是使用鼠标交互控制的。</font>
+      <font style="vertical-align: inherit;">请参阅：</font>
+    </font>
+    <font class="hcp1"><a href="Common-049.chm::/CommonHelp5/Interaktives_Zoomen_Rotieren_im_PEPS_Grafikfenster.htm">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">PEPS 图形窗口中的交互式缩放/旋转</font>
+        </font>
+      </a>
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">。</font>
+      </font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">也可以使用键盘更改模拟视图。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">您可以</font>
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">按住</font>
+      </font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">Shift</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">键</font>
+      <font style="vertical-align: inherit;">并</font>
+      <font style="vertical-align: inherit;">使用键盘上的</font>
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">四个方向键来旋转和旋转工件图形。</font>
+      </font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;"></font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;"></font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+  </p>
 {% endblock %}
 {% endlinebreakless %}

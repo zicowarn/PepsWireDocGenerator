@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,9 +28,70 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "@ Schaltflächen zur Steuerung der Schnittebenen" %}</p><p>{% trans "Die Schaltflächen [Auf/Ab] &lt;img src='../Schnitt+-.gif' alt='Schnitt+-.gif' width='18' height='28' border='0'/&gt; werden verwendet, um die Schnittebene vom absoluten Nullpunkt an eine geeignete Stelle zu verschieben." %}</p>
-<p>{% trans "Die momentane Position wird in einem Textfeld @ angezeigt." %}</p>
-<p>{% trans "Kennt man die genaue Position einer Schnittebene, kann man diese direkt in das Textfeld eingeben. Ein Klick auf die Schaltflächen @ oder @ führt die Eingabe aus." %}</p>
+ <p class="dialog">
+  <img alt="剪切选择.gif" border="0" height="19" src="../schnittwahl.gif" width="52"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    用于控制切割平面的按钮
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    向上
+   </font>
+  </font>
+  <font style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     /向下
+    </font>
+   </font>
+  </font>
+  <img alt="剪切+-.gif" border="0" height="28" src="../Schnitt+-.gif" width="18"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮用于将切割平面从绝对零移动到合适的位置。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    当前位置
+   </font>
+  </font>
+  <img alt="cutpos.gif" border="0" height="33" src="../schnittpos.gif" width="82"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    显示在文本字段中。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果您知道切割平面的确切位置，则可以将其直接输入到文本字段中。
+   </font>
+   <font style="vertical-align: inherit;">
+    单击按钮
+   </font>
+  </font>
+  <img alt="sectneg.gif" border="0" height="17" src="../sectneg.gif" width="24"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <img alt="sectpos.gif" border="0" height="17" src="../sectpos.gif" width="23"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    执行输入。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -34,12 +34,65 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Qualitätsziel" %}</p><p>{% trans "Auf der Basis dieser Daten berechnet die AGIEVISION Steuerung die benötigte Anzahl Schnitte, den Offset pro Schnitt und die Generatoreinstellungen." %}</p>
-<p>{% trans "[Ra]  Bestimmt die benötigte Oberflächengüte (Arithmetischer Mittelwert)." %}</p>
-<p>{% trans "[Tkm]  Ist die maximal erlaubte absolute Geometrieabweichung von der Sollkontur." %}</p>
-<p>{% trans "[Te]  Ist die maximal erlaubte Eckenabweichung." %}</p>
-<p>{% trans "[Geschwindigkeit:] Ist diese Option aktiviert, XXX" %}</p>
-<p>{% trans "[Hohe Qualität:] Ist die Option aktiviert, XXX" %}</p>
-
+<p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">质量目标</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">AGIEVISION 控制器根据这些数据计算所需的切割次数、每次切割的偏移量以及发电机设置。</font>
+    </font>
+  </p>
+  <p>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">Ra</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;"> – 确定所需的表面质量（算术平均值）。</font>
+    </font>
+  </p>
+  <p>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">Tkm</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;"> – 与目标轮廓的最大允许绝对几何偏差。</font>
+    </font>
+  </p>
+  <p>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">Te</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;"> – 允许的最大拐角偏差。</font>
+    </font>
+  </p>
+  <p>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">速度：</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">如果激活此选项，XXX</font>
+    </font>
+  </p>
+  <p>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">高品质：</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">如果激活该选项，XXX</font>
+    </font>
+  </p>
 {% endblock %}
 {% endlinebreakless %}

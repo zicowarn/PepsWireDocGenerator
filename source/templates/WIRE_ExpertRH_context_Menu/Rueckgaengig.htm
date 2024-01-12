@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,7 +28,43 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Rückgängig" %}</p><p>{% trans "Macht die zuletzt im [WIRE-Expert] #Feature Manager# programmierte Aktion rückgängig. Sie können eine, aber auch mehrere Aktionen hintereinander rückgängig machen." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    未完成
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     撤消WIRE-Expert
+    </font>
+   </font>
+  </font>
+  <a href="../WIRE_Expert_FeatureManager/WIRE_Expert_FeatureManager.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     功能管理器
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    中编程的最后一个
+   </font>
+   <font style="vertical-align: inherit;">
+    操作。
+   </font>
+   <font style="vertical-align: inherit;">
+    您可以撤消连续的一个或多个操作。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

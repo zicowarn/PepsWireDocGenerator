@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,28 +35,231 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Kopiere Feature - In gleiche / neue Operation" %}</p><p> </p>
-<p>{% trans "Mit dieser Funktion können Sie [ein oder mehrere Bearbeitungsfeature(s) kopieren]." %}</p>
-<p>{% trans "Sie können die Features in die [aktuelle Operation kopieren] oder die Features in eine [neue Operation kopieren]." %}</p>
-<p>{% trans "Die Option wird beispielsweise verwendet, um ein Feature zweimal, mit unterschiedlichen Schneidparametern zu bearbeiten." %}</p>
-<p> </p>
-<p class="Hinweis">{% trans "Hinweis:" %}</p>
-<p>{% trans "[Gruppierte Features] können zur Zeit NICHT kopiert werden." %}</p>
-<p> </p>
-<p class="Tip-Note-Heading">{% trans "Kopiere Feature in gleiche Operation" %}</p>
-<p>{% trans "Kopiert ein oder mehrere gewählte Bearbeitungsfeature(s) an das Ende der aktuellen Operation." %}</p>
-<p> </p>
-<p><img src="../image/Kopiere%20Feature%20in%20gleiche%20Operation.gif" alt="" border="0" class="hcp2"/></p>
-<p> </p>
-<p class="Tip-Note-Heading">{% trans "Kopiere Feature in neue Operation" %}</p>
-<p>{% trans "Erzeugt eine neue Operation und kopiert ein oder mehrere gewählte Bearbeitungsfeature(s) in die neue Operation" %}</p>
-<p> </p>
-<p><img src="../image/Kopiere%20Feature%20in%20neue%20Operation.gif" alt="" border="0" class="hcp2"/></p>
-<p> </p>
-<p class="Hinweis">{% trans "Tipp:" %}</p>
-<p>{% trans "Wählen Sie [mehrere aufeinander folgende] [Bearbeitungsfeature] aus, indem Sie während des Auswählens die [Umschalt]-Taste gedrückt halten." %}</p>
-<p>{% trans "Wählen Sie [nicht aufeinander folgende] [Bearbeitungsfeature] aus, indem Sie während des Auswählens die [Strg]-Taste gedrückt halten." %}</p>
-<p> </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    复制功能 - 进入相同/新操作
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此功能允许您
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     复制一个或多个编辑功能
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    您可以
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     将功能复制到当前操作
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     将功能复制到新操作
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    例如，该选项用于使用不同的切削参数对某个特征进行两次加工。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一个通知：
+   </font>
+  </font>
+ </p>
+ <p>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    目前无法复制
+   </font>
+   <span class="hcp1">
+    <font style="vertical-align: inherit;">
+     分组功能。
+    </font>
+   </span>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Tip-Note-Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    将功能复制到同一操作中
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    将一项或多项选定的编辑功能复制到当前操作的末尾。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <img alt="" border="0" class="hcp2" src="../image/Kopiere%20Feature%20in%20gleiche%20Operation.gif"/>
+ </p>
+ <p>
+ </p>
+ <p class="Tip-Note-Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    将功能复制到新操作
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    创建新操作并将一个或多个选定的编辑功能复制到新操作中
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <img alt="" border="0" class="hcp2" src="../image/Kopiere%20Feature%20in%20neue%20Operation.gif"/>
+ </p>
+ <p>
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    提示：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通过在选择时按住
+   </font>
+   <font class="hcp3">
+    <font style="vertical-align: inherit;">
+     Shift
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    键来
+   </font>
+   <font style="vertical-align: inherit;">
+    选择
+   </font>
+  </font>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     多个连续
+    </font>
+   </font>
+  </font>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     编辑功能。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通过在选择时按住
+   </font>
+   <font class="hcp3">
+    <font style="vertical-align: inherit;">
+     Ctrl
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    键来
+   </font>
+   <font style="vertical-align: inherit;">
+    选择
+   </font>
+  </font>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     非连续
+    </font>
+   </font>
+  </font>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     编辑要素。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

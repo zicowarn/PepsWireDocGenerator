@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,9 +28,47 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Vorgabe für Reflexionsfaktoren" %}</p><p>{% trans "In diesen Dialogbereich können Sie einstellen, wie das Licht auf der Simulationsgrafik reflektiert." %}</p>
-<p>{% trans "Mit der Schaltfläche [Voreinstellungen verwenden], können Sie die Einstellungen wieder auf die Werkseinstellungen zurücksetzen." %}</p>
-<p>{% trans "Normalerweise werden die Einstellwerte in diesem Dialogbereich nicht verändert." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    反射系数规范
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在此对话框区域中，您可以设置光线在模拟图形上的反射方式。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     您可以使用“使用预设”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮
+   </font>
+   <font style="vertical-align: inherit;">
+    将设置重置回出厂默认值。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一般情况下该对话框区域中的设置值不会改变。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,12 +33,77 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Zeige Komponenten am Kollisionsort innerhalb:" %}</p><p>{% trans "[Einer prozentuale Toleranz von, die nicht überschreitet eine Distanz von:]" %}</p>
-<p style="font-weight: bold;">{% trans "Eine lineare Positionstoleranz von und eine Winkelposition von:" %}</p>
-<p> </p>
-<p>{% trans "Der Kollisionsort ist der Punkt, an dem die Kollision stattfindet." %}</p>
-<p>{% trans "Der Parameter kann als [Prozentsatz] oder tatsächlicher [linearer Wert] definiert werden Wert und legt fest, wie nahe der gemeldete Kollisionsort an der tatsächlichen Kollision liegt." %}</p>
-<p>{% trans "Wenn Sie hier kleine Werte einstellen, wird die Simulation langsamer, da das System Kollisionen häufiger prüfen muss." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    显示碰撞位置处的组件：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     其百分比容差不超过以下距离：
+    </font>
+   </font>
+  </font>
+ </p>
+ <p style="font-weight: bold;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    线性位置公差和角度位置公差为：
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    碰撞位置是碰撞发生的点。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该参数可以定义为
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     百分比
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或实际
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     线性值
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，并确定报告的碰撞位置与实际碰撞的接近程度。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果在这里设置较小的值，模拟会更慢，因为系统必须更频繁地检查碰撞。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,9 +28,26 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Logbuch" %}</p><p>{% trans "Das Logbuch listet alle besonderen Simulationsereignisse auf (Ausfallteile, Kollisionen etc.)." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p><img src="../Listen_Logbuch.gif" alt="Listen_Logbuch.gif" width="862" height="130" border="0"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    日志
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    日志列出了所有特殊模拟事件（故障部件、碰撞等）。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <img alt="Listen_Logbook.gif" border="0" height="130" src="../Listen_Logbuch.gif" width="862"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

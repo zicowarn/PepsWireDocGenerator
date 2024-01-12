@@ -35,32 +35,61 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Umriss projizieren" %}</p><p> </p><p>{% trans "Diese Option wird nur angezeigt, wenn Sie im Operationsmanager den Geometrieelementtyp [Solid-Body] ausgewählt haben." %}</p>
-<p>{% trans "Der Befehl wird zur Ableitung der Umrissgeometrie eines Solids verwendet, die entsteht, wenn man den Solid in einer der Ebenen XY, XZ oder YZ betrachtet." %}</p>
-<p class="hcp1"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp1"> </p>
-<p><img src="../OUTLINE_PROJEKTION_a_shg.gif" usemap="#AreaMap0" alt="OUTLINE_PROJEKTION_a_shg.gif" width="433" height="289" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="136, 30, 260, 197" href="javascript:BSSCPopup('Projektion_Umriss_projizieren_OP_Man.htm',400,600);" id="area1" alt=""/>
-<area shape="rect" coords="7, 24, 130, 194" href="javascript:BSSCPopup('Blickrichtung_Umriss_projizieren_OP_Man.htm',400,600);" id="area2" alt=""/>
-<area shape="rect" coords="266, 31, 424, 198" href="javascript:BSSCPopup('Solids_Umriss_projizieren_OP_Man.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="178, 252, 253, 275" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area4" alt=""/>
-<area shape="rect" coords="261, 253, 336, 276" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area5" alt=""/>
-<area shape="rect" coords="342, 253, 417, 275" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area6" alt=""/>
-<area shape="rect" coords="16, 214, 181, 252" alt="" href="javascript:BSSCPopup('Linien_Boegen_erzeugen_Umriss_projizieren.htm',400,300);" id="area7"/>
-<area shape="rect" coords="276, 200, 424, 238" href="Toleranz_Umriss_projizieren.htm" alt=""/>
-</map> </p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
-	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
-	FilePopupInit('area1');
-	FilePopupInit('area2');
-	FilePopupInit('area3');
-	FilePopupInit('area4');
-	FilePopupInit('area5');
-	FilePopupInit('area6');
-	FilePopupInit('area7');
-//]]&gt;</script>
-
+<p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">轮廓投影</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">仅当您在 Operations Manager 中选择了</font>
+    </font>
+    <font style="font-weight: bold;">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">实体几何</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">元素类型时，才会出现此选项
+        。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">该命令用于导出实体的轮廓几何形状，这是通过在 XY、XZ 或 YZ 平面之一查看实体而得到的。</font>
+    </font>
+  </p>
+  <p class="hcp1">&nbsp;</p>
+  <p>
+    <font color="#FF0000" style="font-style: italic;">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">单击下图的各个区域可访问帮助文本。</font>
+      </font>
+    </font>
+  </p>
+  <p class="hcp1">&nbsp;</p>
+  <p><img alt="OUTLINE_PROJEKTION_a_shg.gif" border="0" height="289" src="../OUTLINE_PROJEKTION_a_shg.gif" usemap="#AreaMap0" width="433" />
+    <map id="AreaMap0" name="AreaMap0">
+      <area alt="" coords="136, 30, 260, 197" href="javascript:BSSCPopup('Projektion_Umriss_projizieren_OP_Man.htm',400,600);" id="area1" shape="rect" />
+      <area alt="" coords="7, 24, 130, 194" href="javascript:BSSCPopup('Blickrichtung_Umriss_projizieren_OP_Man.htm',400,600);" id="area2" shape="rect" />
+      <area alt="" coords="266, 31, 424, 198" href="javascript:BSSCPopup('Solids_Umriss_projizieren_OP_Man.htm',400,300);" id="area3" shape="rect" />
+      <area alt="" coords="178, 252, 253, 275" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area4" shape="rect" />
+      <area alt="" coords="261, 253, 336, 276" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area5" shape="rect" />
+      <area alt="" coords="342, 253, 417, 275" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area6" shape="rect" />
+      <area alt="" coords="16, 214, 181, 252" href="javascript:BSSCPopup('Linien_Boegen_erzeugen_Umriss_projizieren.htm',400,300);" id="area7" shape="rect" />
+      <area alt="" coords="276, 200, 424, 238" href="Toleranz_Umriss_projizieren.htm" shape="rect" />
+    </map>
+  </p>
+  <script language="JavaScript1.2" type="text/javascript">//<![CDATA[
+    if (typeof (FilePopupInit) != 'function') FilePopupInit = new Function();
+    FilePopupInit('area1');
+    FilePopupInit('area2');
+    FilePopupInit('area3');
+    FilePopupInit('area4');
+    FilePopupInit('area5');
+    FilePopupInit('area6');
+    FilePopupInit('area7');
+    //]]></script>
 {% endblock %}
 {% endlinebreakless %}

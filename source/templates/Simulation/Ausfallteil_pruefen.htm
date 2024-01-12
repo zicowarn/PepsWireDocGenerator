@@ -36,17 +36,113 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Ausfallteil prüfen" %}</p><p>{% trans "In diesem Dialogbereich stellen Sie die Parameter ein, die das System bei einer Ausfallteilüberprüfung verwendet (System prüft, ob sich das beim Erodieren entstehende Ausfallteil entnehmen lässt)." %}</p>
-<p>{% trans "Die Ausfallteilüberprüfung wird mit Hilfe des Dialogs #[Ausfallteilüberprüfung]# gesteuert." %}</p>
-<p>{% trans "Die folgenden Parameter lassen sich einstellen:" %}</p>
-<p class="hcp2">{% trans "[Schrittweite für Kollisionsprüfung]" %}</p>
-<p class="hcp3">{% trans "Bestimmt den inkrementalen Abstand zwischen den einzelnen Kollisionsprüfungen, die das System bei einer Ausfallteilüberprüfung durchführt." %}</p>
-<p class="hcp3">{% trans "Beispiel: Wird ein Ausfallteil aus einem Werkstück von 30 mm Höhe entfernt und ist eine Schrittweite von 10 mm eingestellt, finden 3 Kollisionsprüfungen statt." %}</p>
-<p class="hcp2">{% trans "[Anzahl der Kollisionsprüfungen zwischen jeder Anzeige]" %}</p>
-<p class="hcp3">{% trans "Diese Einstellung bestimmt, wie viele Ebenen die Ausfallteilüberprüfung graphisch anzeigt." %}</p>
-<p class="hcp3">{% trans "Ist die [Schrittweite für Kollisionsprüfung] so eingestellt, dass das System die Ausfallteilüberprüfung auf 6 Ebenen durchführt und ist der Parameter [Anzahl der Kollisionsprüfungen zwischen jeder Anzeige] auf 2 eingestellt, dann zeigt das System die Ausfallteilüberprüfung auf 3 Ebenen graphisch an. Stellt man die [Anzahl der] [Kollisionsprüfungen] auf 1 ein, würde die Ausfallteilüberprüfung an 6 Ebenen angezeigt." %}</p>
-<p class="hcp2">{% trans "[Verzögerung nach jedem Schnitt (msek.)]" %}</p>
-<p class="hcp3">{% trans "Stellt ein, wie lange jede einzelne Ausfallteilüberprüfung graphisch angezeigt wird. Mit Hilfe dieser Einstellung können Sie die Simulation der Ausfallteilüberprüfung verlangsamen/beschleunigen." %}</p>
-
+<p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">检查故障部位</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">在此对话框区域中，您可以设置系统在检查失效零件时使用的参数（系统检查是否可以删除侵蚀期间创建的失效零件）。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">失败的零件检查是使用</font>
+    </font><a href="Ausfallteil_Ueberpruefung_Dialogbox_Solid_Simulation_Wire.htm">
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">失败的零件检查</font>
+        </font>
+      </font>
+    </a>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">对话框来控制的。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">可以设置以下参数：</font>
+    </font>
+  </p>
+  <p class="hcp2">
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">碰撞检查的步长</font>
+      </font>
+    </font>
+  </p>
+  <p class="hcp3">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">确定系统在失败的零件检查期间执行的每次碰撞检查之间的增量距离。</font>
+    </font>
+  </p>
+  <p class="hcp3">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">示例：如果从高度为 30 mm 的工件上取下失效零件，并设定增量为 10 mm，则进行 3 次碰撞测试。</font>
+    </font>
+  </p>
+  <p class="hcp2">
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">每个显示器之间的碰撞检查次数</font>
+      </font>
+    </font>
+  </p>
+  <p class="hcp3">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">此设置确定故障零件检查以图形方式显示的级别。</font>
+    </font>
+  </p>
+  <p class="hcp3">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">如果设置</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">碰撞检查步长</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">，使系统执行 6 级故障部位检查，且参数“</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">每次显示之间的碰撞检查次数”</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">设置为 2，则系统以图形方式显示 3 级故障部位检查。</font>
+      <font style="vertical-align: inherit;">如果将</font>
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">碰撞检查</font>
+      </font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">次数</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">设置为 1，则故障部分检查将显示 6 级。</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;"></font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+  </p>
+  <p class="hcp2">
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">每次切割后的延迟（毫秒）</font>
+      </font>
+    </font>
+  </p>
+  <p class="hcp3">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">设置以图形方式显示每个单独故障部件检查的时间长度。</font>
+      <font style="vertical-align: inherit;">您可以使用此设置来减慢/加快故障部件检查的模拟。</font>
+    </font>
+  </p>
 {% endblock %}
 {% endlinebreakless %}

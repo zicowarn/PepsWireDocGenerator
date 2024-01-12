@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,13 +28,54 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Simulation im Einzelsatz" %}</p><p>{% trans "Klickt man die Schaltfläche @, stoppt die Simulation nach jedem NC-Satz." %}</p><p>{% trans "Auf diese Weise kann man in Verbindung mit der Anzeige für die #[XY-Position,]# satzweise simulieren und die momentane Drahtposition exakt bestimmen." %}</p>
-<script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一句话模拟
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果单击按钮
+   </font>
+  </font>
+  <img alt="Sim_Single_Step.gif" border="0" height="34" src="../Sim_Single_Step.gif" width="39"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，模拟将在每个 NC 程序段后停止。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这样，结合
+   </font>
+  </font>
+  <a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('XY_Position_und_Winkelanzeige_Simulation.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+   <font style="font-weight: bold;">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      XY位置的显示，
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    就可以分块模拟，准确确定当前导线位置。
+   </font>
+  </font>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
         if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
         FilePopupInit('a1');
-//]]&gt;
-</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

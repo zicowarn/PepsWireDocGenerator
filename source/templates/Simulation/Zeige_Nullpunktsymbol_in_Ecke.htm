@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,10 +28,33 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Zeige Nullpunktsymbol in Ecke" %}</p><p>{% trans "Ist diese Option aktiv, wird ein Nullpunktsymbol gezeigt, dass die Lage der Achsen X, Y und Z zeigen soll." %}</p>
-<p>{% trans "Die Anzeige dient der besseren Orientierung, wenn die Bildschirmansicht interaktiv rotiert wird." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p><img src="../Zeige_Nullpunktsymbol_Ecke_SIM.gif" alt="Zeige_Nullpunktsymbol_Ecke_SIM.gif" width="493" height="222" border="0"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在角落显示零点符号
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果此选项处于活动状态，则会显示零点符号，该符号应显示 X、Y 和 Z 轴的位置。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    当屏幕视图交互旋转时，显示器用于更好的定位。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <img alt="Show_零点符号_corner_SIM.gif" border="0" height="222" src="../Zeige_Nullpunktsymbol_Ecke_SIM.gif" width="493"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -34,33 +34,144 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kastoum" style="border-top: 1.50pt solid #0000ff; border-bottom: 1.50pt solid #0000ff; border-left: 1.50pt solid #0000ff; border-right: 1.50pt solid #0000ff;">{% trans "Zusätzliche M-Codes, Kommentare u.a. (AGIEVISION)" %}</p><p>{% trans "Der Befehl [Zusätzliche M-Codes, Kommentare u.a. ...] findet bei AGIEVISION Maschinen Anwendung, wenn an bestimmten Positionen einer Bearbeitungsfigur, [zusätzliche Maschinenstops] eingebracht werden müssen." %}</p><p>{% trans "Nach Aufruf des Befehls wird der Anwender aufgefordert die Bearbeitungsfigur anzuklicken, an die der [zusätzliche] [Maschinenstop] eingebracht werden sollen." %}</p>
-<p>{% trans "Verwenden Sie anschließend die [Fangfunktionen], um die Positionen des zusätzlichen Stops festzulegen. Nach der Eingabe der Position erfolgt der Aufruf eines Dialogs." %}</p>
-<p>{% trans "Geben Sie dort ein, bei welchem Schnitt der Stop in die NC-Daten ausgegeben werden soll." %}</p>
-<p>{% trans "Jeder zusätzliche Stop wird durch ein [grünes Kreissymbol] symbolisiert." %}</p>
-<p> </p>
-<p style="color: #ff0000; font-style: italic;">{% trans "Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen." %}</p>
-<p> </p>
-<p><img src="../ZUMC_AV1_shg.gif" usemap="#AreaMap0" alt="ZUMC_AV1_shg.gif" width="249" height="294" border="0"/> <map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="10,259,81,282" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="89,261,158,282" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="165,260,238,283" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="15,61,237,248" href="javascript:BSSCPopup('Stop_Ereignis_AGIEVISION.htm',400,300);" id="area4" alt=""/></map></p>
-<p> </p>
-<p class="Hinweis">{% trans "Wichtiger Hinweis:" %}</p>
-<p>{% trans "Zusätzliche Stopps [werden nur dann ausgegeben], wenn die Checkbox #[Extra_Codes]# in der Dialogbox [Bearbeitung einstellen] [aktiviert] ist (Siehe folgende Abbildung)." %}</p>
-<p> </p>
-<p><img src="../TECHN_AG.gif" alt="TECHN_AG.gif" width="313" height="63" border="0"/></p>
-<script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
-        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
-        FilePopupInit('area1');
-        FilePopupInit('area2');
-        FilePopupInit('area3');
-        FilePopupInit('area4');
-        FilePopupInit('a1');
-//]]&gt;
-</script>
-
+<p class="Kastoum" style="border-top: 1.50pt solid #0000ff; border-bottom: 1.50pt solid #0000ff; border-left: 1.50pt solid #0000ff; border-right: 1.50pt solid #0000ff;">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">附加 M 代码、注释等 (AGIEVISION)</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">当必须在加工图形的某些位置引入</font>
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">附加机床停止</font>
+      </font>
+      <font style="vertical-align: inherit;">时，在 AGIEVISION 机床上使用</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">附加 M 代码、注释等</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">命令。</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;"></font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">调用该命令后，要求用户单击</font>
+      <font style="vertical-align: inherit;">应引入</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">附加</font>
+      </font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">机器停止的加工图形。</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">然后使用</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">捕捉功能</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">设置附加停止点的位置。</font>
+      <font style="vertical-align: inherit;">输入位置后，将打开一个对话框。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">输入应在 NC 数据中输出停止位置的切削。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;"></font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">每个额外的停靠点均以绿色圆圈符号</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">表示</font>
+      <font style="vertical-align: inherit;">。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p style="color: #ff0000; font-style: italic;">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">单击下图的各个区域可访问帮助文本。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p><img alt="ZUMC_AV1_shg.gif" border="0" height="294" src="../ZUMC_AV1_shg.gif" usemap="#AreaMap0" width="249" /> <map id="AreaMap0" name="AreaMap0">
+      <area alt="" coords="10,259,81,282" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area1" shape="rect" />
+      <area alt="" coords="89,261,158,282" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area2" shape="rect" />
+      <area alt="" coords="165,260,238,283" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area3" shape="rect" />
+      <area alt="" coords="15,61,237,248" href="javascript:BSSCPopup('Stop_Ereignis_AGIEVISION.htm',400,300);" id="area4" shape="rect" /></map></p>
+  <p>&nbsp;</p>
+  <p class="Hinweis">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">重要的提示：</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;"></font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">仅</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">当在</font>
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">“设置编辑”对话框中</font>
+      </font>
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">激活</font>
+      </font>
+    </font><a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('Extra_Codes_AGIEVISION.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+      <font class="hcp1">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">Extra_Codes</font>
+        </font>
+      </font>
+    </a>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">复选框时才会输出</font>
+      <font style="vertical-align: inherit;">其他停靠点</font>
+      <font style="vertical-align: inherit;">（参见下图）。</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;"></font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;"></font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+  </p>
+  <p>&nbsp;</p>
+  <p><img alt="TECHN_AG.gif" border="0" height="63" src="../TECHN_AG.gif" width="313" /></p>
+  <script language="JavaScript1.2" type="text/javascript">
+    //<![CDATA[
+    if (typeof (FilePopupInit) != 'function') FilePopupInit = new Function();
+    FilePopupInit('area1');
+    FilePopupInit('area2');
+    FilePopupInit('area3');
+    FilePopupInit('area4');
+    FilePopupInit('a1');
+    //]]>
+  </script>
 {% endblock %}
 {% endlinebreakless %}

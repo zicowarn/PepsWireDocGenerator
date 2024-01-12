@@ -42,162 +42,984 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <h1>{% trans "Rohteilanalyse" %}</h1><p> </p>
-<p>{% trans "Die [Rohteilanalyse] färbt das angezeigte Restmaterial ein, so dass der Anwender folgende Analysen der Werkzeugwege ausführen kann:" %}</p>
-<p> </p>
-<p><img src="../../newUI_stock_analyses.gif" alt="newUI_stock_analyses.gif" width="523" height="494" border="0"/></p>
-<p> </p>
-<p> </p>
-<h2>{% trans "Vorhandene Optionen" %}</h2>
-<p>{% trans "Es folgt eine Auflistung der vorhandenen Analyseoptionen:" %}</p>
-<p> </p>
-<h2>{% trans "Keine" %}</h2>
-<p>{% trans "Das Rohteil wird nicht eingefärbt, da keine Werkzeugweganalyse ausgeführt wird." %}</p>
-<p class="dialog" style="margin-top: 0; margin-bottom: 0;"> </p>
-<p class="dialog">{% trans "Werkzeugnummer" %}</p>
-<p>{% trans "Das angezeigte Restmaterial wird so eingefärbt, dass das System für [jedes] [Werkzeug] eine [separate Farbe] anzeigt." %}</p>
-<p class="hcp3"><img src="../../newUI_stock_analyses_Tool%20Number.gif" alt="" border="0" class="hcp4"/></p>
-<p class="hcp3">{% trans "Hauptvorteile:" %}</p>
-<p>{% trans "Man kann schnell erkennen, wie viele unterschiedliche Werkzeuge eingesetzt werden." %}</p>
-<p>{% trans "Man kann an der Farbe des Restmaterials erkennen, welches Werkzeug, welche Werkstückbereiche bearbeitet." %}</p>
-<p class="hcp5"><strong class="" style="font-weight: normal;"><span class="hcp6"><font style="font-weight: normal;">D</font>er 
- Dialog bietet folgenden </span><span class="hcp1">Optionen</span><span class="hcp6">, </span><span class="hcp1">Einstellungen</span><span class="hcp6"> und </span><span class="hcp1">Schaltflächen 
- </span><img src="../../newUI_stock_analyses_Tab_Button_Options.gif" alt="" border="0" class="hcp4"/><span class="hcp6">:</span></strong></p>
-<p class="hcp5">{% trans "&lt;strong class=''&gt;@Zurücksetzen:&lt;/strong&gt; Führt die Änderungen aus, die im Dialog [Farben] eingestellt wurden. (!! Dialogaufruf erfolgt durch Doppelklick auf ein Farbfeld z.B. @)" %}<strong class=""><img src="../../newUI_stock_analyses_Tab_Button_Options_Refresh.gif" alt="" border="0" class="hcp4"/>Zurücksetzen:</strong> 
- Führt die Änderungen aus, die im Dialog </p>
-<p><strong class=""><img src="../../newUI_stock_analyses_Tab_Button_Options_Auto_Adjust.gif" alt="" border="0" class="hcp4"/> Automatisch 
- ermitteln:</strong> Zurücksetzen des Farbschemas auf die Vorgaben des 
- Herstellers.</p>
-<p>{% trans "&lt;strong class=''&gt;&lt;img src='../../newUI_stock_analyses_Tab_Button_Options_Match%20tool%20flute%20color.gif' alt='' border='0' class='hcp4'/&gt; Gleiche Werkzeugschneidenfarbe mit Schnittfarbe ab:&lt;/strong&gt; Durch Aktivieren dieser Schaltfläche, nimmt die [Werkzeugschneide] die gleiche Farbe an, wie der mit dem Werkzeug gefräste Bereich." %}<strong class=""><img src="../../newUI_stock_analyses_Tab_Button_Options_Match%20tool%20flute%20color.gif" alt="" border="0" class="hcp4"/> Gleiche 
- Werkzeugschneidenfarbe mit Schnittfarbe ab:</strong> Durch Aktivieren 
- dieser Schaltfläche, nimmt die </p>
-<p><img src="../../Tool_flute_1.gif" alt="" border="0" class="hcp4"/></p>
-<p> </p>
-<p>{% trans "[Beispiel]:" %}</p>
-<p>{% trans "Das folgende Bild zeigt die Bearbeitung einer konvexen (erhabenen) Werkstückoberfläche. Der Materialabtrag unterschiedlich eingefärbt, je nach verwendetem Werkzeug." %}</p>
-<p>{% trans "Wie an der Farbe des Materialabtrages erkennbar, wurden 4 Werkzeuge eingesetzt." %}</p>
-<p><img src="../../stock_analysis_operation.gif" alt="stock_analysis_operation.gif" width="508" height="417" border="0"/></p>
-<p class="hcp7"> </p>
-<p class="dialog">{% trans "Operationsnummer" %}</p>
-<p>{% trans "Das angezeigte Restmaterial wird so eingefärbt, dass das System für [jede] [Bearbeitungsoperation] eine [separate Farbe] anzeigt." %}</p>
-<p><img src="../../newUI_stock_analyses_Operation%20Number.gif" alt="" border="0" class="hcp4"/></p>
-<p>{% trans "[Hauptvorteile:]" %}</p>
-<p>{% trans "Man kann schnell erkennen, wie viele unterschiedliche Bearbeitungsoperationen ausgeführt werden." %}</p>
-<p>{% trans "Man kann an der Farbe des Restmaterials erkennen, welche Bearbeitungsoperation (z.B. Schruppen, Parallel Schnitte), welche Werkstückbereiche bearbeitet." %}</p>
-<p class="hcp5">{% trans "[&lt;strong class='' style='font-weight: normal;'&gt;[Der Dialog bietet folgenden [Optionen], [Einstellungen] und ][Schaltflächen ]@[:]&lt;/strong&gt;]" %}</p>
-<p class="hcp5">{% trans "&lt;strong class=''&gt;@Zurücksetzen:&lt;/strong&gt; Führt die Änderungen aus, die im Dialog [Farben] eingestellt wurden. (!! Dialogaufruf erfolgt durch Doppelklick auf ein Farbfeld z.B. @)" %}<strong class=""><img src="../../newUI_stock_analyses_Tab_Button_Options_Refresh.gif" alt="" border="0" class="hcp4"/>Zurücksetzen:</strong> 
- Führt die Änderungen aus, die im Dialog </p>
-<p><strong class=""><img src="../../newUI_stock_analyses_Tab_Button_Options_Auto_Adjust.gif" alt="" border="0" class="hcp4"/> Automatisch 
- ermitteln:</strong> Zurücksetzen des eingestellten Farbschemas auf die 
- Vorgaben des Herstellers.</p>
-<p>{% trans "&lt;strong class=''&gt;&lt;img src='../../newUI_stock_analyses_Tab_Button_Options_Match%20tool%20flute%20color.gif' alt='' border='0' class='hcp4'/&gt; Gleiche Werkzeugschneidenfarbe mit Schnittfarbe ab:&lt;/strong&gt; Durch Aktivieren dieser Schaltfläche, nimmt die [Werkzeugschneide] die gleiche Farbe an, wie der mit dem Werkzeug gefräste Bereich." %}<strong class=""><img src="../../newUI_stock_analyses_Tab_Button_Options_Match%20tool%20flute%20color.gif" alt="" border="0" class="hcp4"/> Gleiche 
- Werkzeugschneidenfarbe mit Schnittfarbe ab:</strong> Durch Aktivieren 
- dieser Schaltfläche, nimmt die </p>
-<p> </p>
-<p>{% trans "[Beispiel]:" %}</p>
-<p>{% trans "Das folgende Bild zeigt die Bearbeitung einer konvexen (erhabenen) Werkstückoberfläche. Der Materialabtrag unterschiedlich eingefärbt, je nach ausgeführter Bearbeitungsoperation. Wie an der Farbe des Materialabtrags erkennbar, wurden 4 unterschiedliche Bearbeitungsoperationen ausgeführt." %}</p>
-<p><img src="../../stock_analysis_operation.gif" alt="stock_analysis_operation.gif" width="508" height="417" border="0"/></p>
-<p class="hcp7"> </p>
-<p class="dialog">{% trans "Abweichung" %}</p>
-<p>{% trans "Die Option [Abweichung] zeigt das verbliebene Restmaterial an, indem es den Materialabtrag mit der Geometrie des zu bearbeitenden Werkstücks (Zielteil) vergleicht." %}</p>
-<p>{% trans "Je nachdem wie viel oder wenig Restmaterial existiert, wird dieses in einer anderen Farbe angezeigt. Die im Dialog angezeigter Farbskala informiert über die Dicke des Restmaterials." %}</p>
-<p><img src="../../newUI_stock_analyses_Deviation.gif" alt="" border="0" class="hcp4"/></p>
-<p>{% trans "[Hauptvorteile:]" %}</p>
-<p>{% trans "Man erkennt, wie viel Restmaterial auf dem Werkstück verblieben ist." %}</p>
-<p>{% trans "Es ist erkennbar, wenn zu viel Material abgetragen wurde und Werkstückbeschädigungen (Gouges) auftreten." %}</p>
-<p>{% trans "Es ist erkennbar, für welche Werkstückbereiche eine Restmaterialbearbeitung ausgeführt werden sollte." %}</p>
-<p>{% trans "[Beispiel]:" %}</p>
-<p>{% trans "Das folgende Beispiel zeigt die Bearbeitung des Bodens einer Getränkeflaschenform. Das Restmaterial wird durch eine Farbskala angezeigt, die von [grün] (kein Restmaterial) über [hellblau] (wenig Restmaterial) nach [blau] (viel Restmaterial) verläuft. Die Restmaterialanzeige liefert zwei wichtige Erkenntnisse:" %}</p>
-<ol>
-	<li class="hcp8"><p>{% trans "Da eine großen Z-Zustellung verwendet wurde, sind die einzelnen Zustellungsebenen in den [dunkelb][lau] [gefärbten] Bereichen deutliche zu erkennen." %}</p></li>
-	<li class="hcp8"><p>{% trans "Das verwendete Werkzeug ist für eine Fertigbearbeitung zu groß, was die [blau] [gefärbten] Bereiche im unteren und oberen Bereich des Flaschenbodens zeigen. Eine zusätzliche Restmaterialbearbeitung wäre notwendig." %}</p></li>
-</ol>
-<p><img src="../../stock_analysis_deviation.gif" alt="stock_analysis_deviation.gif" width="541" height="435" border="0"/></p>
-<p class="hcp7"> </p>
-<p class="dialog">{% trans "Höhenänderung" %}</p>
-<p>{% trans "Die Option [Höhenänderung] kann anzeigen, ob ein Werkzeug eine [eintauchende] oder [zurückziehende Bewegung] innerhalb des Materials ausführt." %}</p>
-<p><img src="../../newUI_stock_analyses_Height_Change.gif" alt="" border="0" class="hcp4"/></p>
-<p>{% trans "[Hauptvorteile:]" %}</p>
-<p>{% trans "Es ist erkennbar, ob ein Werkzeug eine eintauchende Verfahrbewegung ausführt." %}</p>
-<p>{% trans "In diesem Fall muss ein entsprechendes Werkzeug eingesetzt werden, das 'über die Mitte' schneiden kann." %}</p>
-<p>{% trans "Die verwendete Bearbeitungsmethode (ZickZack oder Einweg) ist erkennbar." %}</p>
-<p>{% trans "[Beispiel]:" %}</p>
-<p>{% trans "Das folgende Beispiel zeigt die Bearbeitung eines konvexen (erhabenen) Werkstücks. Die Farbe [Rot] identifiziert [Eintauchbewegungen] und [Blau] [zurückziehende Bewegungen]." %}</p>
-<p>{% trans "Offensichtlich wird hier eine Bearbeitungsstrategie vom Typ [Einweg] ausgeführt, da der Werkzeugweg ohne Richtungsumkehr, im Uhrzeigersinn, von außen nach innen verläuft." %}</p>
-<p><img src="../../stock_analysis_height_change.gif" alt="stock_analysis_height_change.gif" width="505" height="430" border="0"/></p>
-<p class="hcp7"> </p>
-<p class="dialog">{% trans "Orientierungswechsel" %}</p>
-<p>{% trans "Hier wird der Materialabtrag unterschiedlich eingefärbt, je nachdem, wie schnell die Werkzeugmaschine Orientierungswechsel der Rotationsachsen ausgeführt." %}</p>
-<p><img src="../../newUI_stock_analyses_Orientation%20Change.gif" alt="" border="0" class="hcp4"/></p>
-<p>{% trans "[Hauptvorteile:]" %}</p>
-<p>{% trans "Schnelle Orientierungswechsel der Rotationsachsen sind erkennbar." %}</p>
-<p>{% trans "Es ist erkennbar, wie schnell Orientierungswechsel der Rotationsachsen ausgeführt werden." %}</p>
-<p>{% trans "Die Geschwindigkeit mit der Orientierungswechsel der Rotationsachsen ausgeführt werden, lässt darauf schließen, wo es zu Stabilitätsproblemen kommen könnte, die eine Auswirkung auf die Qualität der Werkstückoberfläche haben könnten." %}</p>
-<p>{% trans "[Beispiel]:" %}</p>
-<p>{% trans "Das folgende Bild zeigt die Bearbeitung eines Turbinenblattes." %}</p>
-<p>{% trans "Der Farbverlauf verläuft von [Blau] (langsamer Orientierungswechsel der Rotationsachsen) nach [Orange] (schnelle Orientierungswechsel der Rotationsachsen)." %}</p>
-<p>{% trans "Es ist ersichtlich, dass besonders in den kleinen Eckradien schnelle Orientierungswechsel der Rotationsachsen ausgeführt werden." %}</p>
-<p>{% trans "Daher ist es wahrscheinlich zu erwarten, dass die Oberflächengüte in den orange gefärbten Bereichen nicht genügend ist." %}</p>
-<p><img src="../../stock_analysis_orientation.gif" alt="stock_analysis_orientation.gif" width="380" height="376" border="0"/></p>
-<p class="hcp7"> </p>
-<p class="dialog">{% trans "Satzlänge" %}</p>
-<p>{% trans "Die Werkzeugwege werden je nach Segmentlänge unterschiedlich eingefärbt." %}</p>
-<p><img src="../../newUI_stock_analyses_Toolpath%20Length.gif" alt="" border="0" class="hcp4"/></p>
-<p>{% trans "[Hauptvorteile:]" %}</p>
-<p>{% trans "Es ist erkennbar, ob die Werkzeugwegpunkte gleichmäßig über das Werkstück verteilt sind. Eine gleichmäßige Verteilung der Werkzeugwegpunkte ist generell besser für die Qualität und Stabilität eines Bearbeitungsprozesses." %}</p>
-<p>{% trans "[Beispiel]:" %}</p>
-<p>{% trans "Das folgende Bild zeigt die Bearbeitung einer Flaschengeometrie. Es ist erkennbar, dass die Werkzeugweglänge in einigen Bereichen unterschiedlich ist. Das heißt, die Werkzeugwegpunkte sind nicht gleichmäßig verteilt." %}</p>
-<p><img src="../../newUI_toolpath_lenght.gif" alt="" border="0" class="hcp4"/></p>
-<p class="hcp7"> </p>
-<p class="dialog">{% trans "Teile markieren" %}</p>
-<p>{% trans "Ausfallteile die sich bei z.B. Fräsbearbeitungen oder Drahterodierbearbeitungen ergeben, werden verschieden farblich gekennzeichnet." %}</p>
-<p><img src="../../newUI_stock_analyses_Mark_Parts.gif" alt="" border="0" class="hcp4"/></p>
-<p>{% trans "[Hauptvorteile:]" %}</p>
-<p>{% trans "Man kann Ausfallteile erkennen, die sich als Resultat einer Bearbeitung ergeben können." %}</p>
-<p>{% trans "[Beispiel]:" %}</p>
-<p>{% trans "Das folgende Bild zeigt ein Werkstück nach einer Fräsbearbeitung. Da mehrere Ausfallteile entstanden sind, wurde das Werkstück aufgeteilt in 8 Bereiche (1 Werkstück und 7 Ausfallteile)." %}</p>
-<p>{% trans "Jedem Ausfallteil wurde dabei eine separate Farbe zugewiesen." %}</p>
-<p><img src="../../mark_parts.gif" alt="mark_parts.gif" width="617" height="363" border="0"/></p>
-<p class="hcp7"> </p>
-<p class="dialog">{% trans "Einfarbig" %}</p>
-<p>{% trans "Kennzeichnet alle bearbeiten Bereiche eines Werkstückes in einer Farbe." %}</p>
-<p><img src="../../newUI_stock_analyses_Single%20Marking.gif" alt="" border="0" class="hcp4"/></p>
-<p>{% trans "[&lt;strong class=''&gt;H&lt;/strong&gt;auptvorteil:]" %}</p>
-<p>{% trans "Zeigt deutlich alle bearbeiteten Bereiche eines Werkstückes." %}</p>
-<p> </p>
-<p>{% trans "&lt;strong class=''&gt;[@ ]Zurücksetzen:&lt;/strong&gt; Führt die Änderungen aus, die im Dialog [Farben] eingestellt wurden. (!! Dialogaufruf erfolgt durch Doppelklick auf ein Farbfeld z.B. @)" %}<strong class=""><span class="hcp6"><img src="../../newUI_stock_analyses_Tab_Button_Options_Refresh.gif" alt="" border="0" class="hcp4"/> 
- </span>Zurücksetzen:</strong> Führt die Änderungen aus, die im Dialog 
- </p>
-<p><strong class=""><img src="../../newUI_stock_analyses_Tab_Button_Options_Auto_Adjust.gif" alt="" border="0" class="hcp4"/> Automatisch 
- ermitteln:</strong> Setzt eine einfarbige Färbung zurück auf die Vorgaben 
- des Herstellers.</p>
-<p> </p>
-<p>{% trans "&lt;strong class=''&gt;Beispiel:&lt;/strong&gt; Das Beispiel zeigt einen von mehreren Werkzeugen erzeugten, [einfarbigen] Materialabtrag. Die Farbe kann vom Anwender eingestellt werden." %}<strong class="">Beispiel:</strong> Das Beispiel zeigt einen von mehreren 
- Werkzeugen erzeugten, </p>
-<p><img src="../../newUI_Single_Marking.gif" alt="" border="0" class="hcp4"/></p>
-<p class="hcp7"> </p>
-<p class="dialog">{% trans "Restmaterial &amp; Bauteilverletzungen" %}</p>
-<p>{% trans "Diese Option markiert Werkstückbereiche mit Bauteilverletzungen und überschüssigem Material farblich." %}</p>
-<p>{% trans "Zudem werden die fertig gefrästen Materialbereiche mit der Werkstückgeometrie verglichen und übereinstimmenden Bereiche farblich markiert. &lt;img src='../../newUI_stock_analyses_Gouge%20and%20Excess.gif' alt='' border='0' class='hcp4'/&gt;" %}</p>
-<p><strong class=""><font class="hcp2">Hauptvorteil</font>e:</strong></p>
-<p>{% trans "Identifiziert alle überschüssigen Materialbereiche innerhalb der Werkstückgeometrie." %}</p>
-<p>{% trans "Identifiziert Bereiche in denen eine Restmaterialbearbeitung nötig ist." %}</p>
-<p>{% trans "Identifiziert alle Bereiche in denen Bauteilverletzungen auftreten, weil zu viel Material entfernt wurde und die Werkstückgeometrie beschädigt ist." %}</p>
-<p>{% trans "Identifiziert die Bereiche, die innerhalb der definierten Genauigkeiten liegen." %}</p>
-<p> </p>
-<p><strong class="">Optionen, Einstellungen und Schaltflächen:</strong><br/>
-</p>
-<p>{% trans "&lt;strong class=''&gt;[@] &lt;strong class=''&gt;Zurücksetzen&lt;/strong&gt;:&lt;/strong&gt; Führt die Änderungen aus, die im Dialog [Farben] eingestellt wurden. (!! Dialogaufruf erfolgt durch Doppelklick auf ein Farbfeld z.B. @)" %}<strong class=""><span class="hcp6"><img src="../../newUI_stock_analyses_Tab_Button_Options_Refresh.gif" alt="" border="0" class="hcp4"/></span> 
- <strong class="">Zurücksetzen</strong>:</strong> Führt die Änderungen 
- aus, die im Dialog </p>
-<p><strong class=""><img src="../../newUI_stock_analyses_Tab_Button_Options_Auto_Adjust.gif" alt="" border="0" class="hcp4"/> Automatisch 
- ermitteln:</strong> Zurücksetzen des eingestellten Farbschemas auf die 
- Vorgaben des Herstellers.</p>
-<p> </p>
-<p><strong class="">Beispiel:</strong> Das folgende Bild zeigt ein bearbeitetes 
- Werkstück, dass mit der Werkstückgeometrie verglichen wurde. </p>
-<p>{% trans "Die fertig bearbeitenden Bereich sind [schwarz] und die Restmaterialbereiche [blau] markiert." %}</p>
-<p><img src="../../NewUI_Gouge_Excess.gif" alt="" border="0" class="hcp4"/></p>
-
+<h1>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">原始零件分析</font>
+    </font>
+  </h1>
+  <p>&nbsp;</p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">库存</font>
+    </font><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">分析</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">对显示的剩余材料进行着色，允许用户执行以下刀具路径分析：</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p><img alt="newUI_stock_analysis.gif" border="0" height="494" src="../../newUI_stock_analyses.gif" width="523" /></p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <h2>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">现有选项</font>
+    </font>
+  </h2>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">以下是可用分析选项的列表：</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <h2>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">不</font>
+    </font>
+  </h2>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">由于未执行刀具路径分析，因此毛坯未着色。</font>
+    </font>
+  </p>
+  <p class="dialog" style="margin-top: 0; margin-bottom: 0;">&nbsp;</p>
+  <p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">刀具数量</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">显示的剩余材料带有颜色，以便系统
+        为</font>
+    </font>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">每个</font>
+      </font>
+    </font>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">工具</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">显示</font>
+      <font style="vertical-align: inherit;">
+        单独</font>
+    </font>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">的颜色。</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+  </p>
+  <p class="hcp3"><img alt="" border="0" class="hcp4" src="../../newUI_stock_analyses_Tool%20Number.gif" /></p>
+  <p class="hcp3">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">主要优点：</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">您可以快速查看使用了多少种不同的工具。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">您可以根据剩余材料的颜色判断哪个刀具正在加工工件的哪些区域。</font>
+    </font>
+  </p>
+  <p class="hcp5"><strong class="" style="font-weight: normal;"><span class="hcp6">
+        <font style="font-weight: normal;">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">该</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">对话框提供以下</font>
+        </font>
+      </span><span class="hcp1">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">选项</font>
+        </font>
+      </span><span class="hcp6">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">、</font>
+        </font>
+      </span><span class="hcp1">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">设置</font>
+        </font>
+      </span><span class="hcp6">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">和</font>
+        </font>
+      </span><span class="hcp1">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">按钮
+          </font>
+        </font>
+      </span><img alt="" border="0" class="hcp4" src="../../newUI_stock_analyses_Tab_Button_Options.gif" /><span class="hcp6">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">：</font>
+        </font>
+      </span></strong></p>
+  <p class="hcp5"><strong class=""><img alt="" border="0" class="hcp4" src="../../newUI_stock_analyses_Tab_Button_Options_Refresh.gif" />
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">重置：执行在</font>
+      </font>
+    </strong>
+    <font style="vertical-align: inherit;"></font><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">“颜色”</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">对话框中
+        所做的</font>
+      <font style="vertical-align: inherit;">
+        更改。</font>
+      <font style="vertical-align: inherit;">（！！通过双击颜色字段打开该对话框，例如</font>
+    </font><img alt="" border="0" class="hcp4" src="../../newUI_measure_Color_Dialog_Farbfeld.gif" />
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">）</font>
+    </font>
+  </p>
+  <p><strong class=""><img alt="" border="0" class="hcp4" src="../../newUI_stock_analyses_Tab_Button_Options_Auto_Adjust.gif" />
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">自动检测：</font>
+      </font>
+    </strong>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">将配色方案重置为制造商的规格。</font>
+    </font>
+  </p>
+  <p><strong class=""><img alt="" border="0" class="hcp4" src="../../newUI_stock_analyses_Tab_Button_Options_Match%20tool%20flute%20color.gif" />
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">将刀具切削刃颜色与切削颜色匹配：</font>
+      </font>
+    </strong>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">通过激活此按钮，</font>
+    </font><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">刀具切削刃</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">将
+        呈现与刀具铣削区域相同的颜色。</font>
+    </font>
+  </p>
+  <p><img alt="" border="0" class="hcp4" src="../../Tool_flute_1.gif" /></p>
+  <p>&nbsp;</p>
+  <p>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">例子</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">：</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">下图显示了凸（凸起）工件表面的加工。</font>
+      <font style="vertical-align: inherit;">根据所使用的工具，材料去除的颜色有所不同。
+      </font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">从去除的材料颜色可以看出，使用了4种工具。</font>
+    </font>
+  </p>
+  <p><img alt="库存分析操作.gif" border="0" height="417" src="../../stock_analysis_operation.gif" width="508" /></p>
+  <p class="hcp7">&nbsp;</p>
+  <p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">操作数</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">显示的剩余材料带有颜色，以便系统
+        为</font>
+    </font>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">每个</font>
+      </font>
+    </font>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">加工操作</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">显示
+        单独</font>
+    </font>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">的颜色</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">。</font>
+    </font>
+  </p>
+  <p><img alt="" border="0" class="hcp4" src="../../newUI_stock_analyses_Operation%20Number.gif" /></p>
+  <p>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">主要优点：</font>
+      </font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">您可以快速查看正在执行多少种不同的加工操作。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">您可以根据剩余材料的颜色判断哪种加工操作（例如粗加工、平行切削）处理哪些工件区域。</font>
+    </font>
+  </p>
+  <p class="hcp5"><span><strong class="" style="font-weight: normal;"><span class="hcp6">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">该对话框提供以下</font>
+          </font><span class="hcp1">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">选项</font>
+            </font>
+          </span>
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">、
+            </font>
+          </font><span class="hcp1">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">设置</font>
+            </font>
+          </span>
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">和</font>
+          </font>
+        </span><span class="hcp1">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">按钮</font>
+          </font>
+        </span><img alt="" border="0" class="hcp4" src="../../newUI_stock_analyses_Tab_Button_Options.gif" /><span class="hcp6">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">：</font>
+          </font>
+        </span></strong></span></p>
+  <p class="hcp5"><strong class=""><img alt="" border="0" class="hcp4" src="../../newUI_stock_analyses_Tab_Button_Options_Refresh.gif" />
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">重置：执行在</font>
+      </font>
+    </strong>
+    <font style="vertical-align: inherit;"></font><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">“颜色”</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">对话框中
+        所做的</font>
+      <font style="vertical-align: inherit;">
+        更改。</font>
+      <font style="vertical-align: inherit;">（！！通过双击颜色字段打开该对话框，例如</font>
+    </font><img alt="" border="0" class="hcp4" src="../../newUI_measure_Color_Dialog_Farbfeld.gif" />
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">）</font>
+    </font>
+  </p>
+  <p><strong class=""><img alt="" border="0" class="hcp4" src="../../newUI_stock_analyses_Tab_Button_Options_Auto_Adjust.gif" />
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">自动确定：</font>
+      </font>
+    </strong>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">将设置的配色方案重置为制造商的规格。</font>
+    </font>
+  </p>
+  <p><strong class=""><img alt="" border="0" class="hcp4" src="../../newUI_stock_analyses_Tab_Button_Options_Match%20tool%20flute%20color.gif" />
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">将刀具切削刃颜色与切削颜色匹配：</font>
+      </font>
+    </strong>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">通过激活此按钮，</font>
+    </font><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">刀具切削刃</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">将
+        呈现与刀具铣削区域相同的颜色。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">例子</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">：</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">下图显示了凸（凸起）工件表面的加工。</font>
+      <font style="vertical-align: inherit;">根据所进行的加工操作，材料去除的颜色有所不同。</font>
+      <font style="vertical-align: inherit;">从去除材料的颜色可以看出，进行了 4 种不同的加工操作。</font>
+    </font>
+  </p>
+  <p><img alt="库存分析操作.gif" border="0" height="417" src="../../stock_analysis_operation.gif" width="508" /></p>
+  <p class="hcp7">&nbsp;</p>
+  <p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">偏差</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;"></font>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">偏差</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">选项</font>
+      <font style="vertical-align: inherit;">通过将材料去除量与待加工工件（目标零件）的几何形状进行比较来显示剩余材料。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">根据残留材料的多少，它会以不同的颜色显示。</font>
+      <font style="vertical-align: inherit;">对话框中显示的色标提供有关剩余材料厚度的信息。</font>
+    </font>
+  </p>
+  <p><img alt="" border="0" class="hcp4" src="../../newUI_stock_analyses_Deviation.gif" /></p>
+  <p>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">主要优点：</font>
+      </font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">您可以看到工件上残留有多少残留材料。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">当去除太多材料并发生工件损坏（凿痕）时，可以看出这一点。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">可以看出哪些工件区域需要进行残留材料处理。</font>
+    </font>
+  </p>
+  <p>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">例子</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">：</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">以下示例显示了饮料瓶模具底部的加工。</font>
+      <font style="vertical-align: inherit;">剩余材料由色标表示，色标从</font>
+    </font>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">绿色</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+        （没有剩余材料）到</font>
+    </font><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">浅蓝色</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+        （很少剩余材料）再到</font>
+    </font>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">蓝色</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+        （大量剩余材料）。</font>
+      <font style="vertical-align: inherit;">剩余的材料显示提供了两个重要的见解：</font>
+    </font>
+  </p>
+  <ol>
+    <li class="hcp8">
+      <p>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">由于使用了大 Z 进给，因此可以在</font>
+        </font><span class="hcp1">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">深</font>
+          </font>
+        </span>
+        <font class="hcp2">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">蓝色</font>
+          </font>
+        </font>
+        <font class="hcp2">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">区域</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">
+            清楚地看到各个进给水平。</font>
+        </font>
+      </p>
+    </li>
+    <li class="hcp8">
+      <p>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">使用的工具太大，无法完成精加工，如</font>
+          <font style="vertical-align: inherit;">瓶底底部和顶部的</font>
+        </font>
+        <font class="hcp2">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">蓝色</font>
+          </font>
+        </font>
+        <font class="hcp2">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">区域所示。</font>
+          </font>
+        </font>
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">额外的残余材料处理是必要的。</font>
+        </font>
+      </p>
+    </li>
+  </ol>
+  <p><img alt="stock_analysis_deviation.gif" border="0" height="435" src="../../stock_analysis_deviation.gif" width="541" /></p>
+  <p class="hcp7">&nbsp;</p>
+  <p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">海拔变化</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">“高度</font>
+    </font>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">变化”</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">选项可以指示工具是否在材料内</font>
+      <font style="vertical-align: inherit;">进行</font>
+    </font>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">切入</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+        或</font>
+    </font>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">缩回运动。</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+  </p>
+  <p><img alt="" border="0" class="hcp4" src="../../newUI_stock_analyses_Height_Change.gif" /></p>
+  <p>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">主要优点：</font>
+      </font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">可以看出刀具是否执行切入运动。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">在这种情况下，必须使用能够“从中间切开”的适当工具。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">所使用的加工方法（之字形或单向）是可见的。</font>
+    </font>
+  </p>
+  <p>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">例子</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">：</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">以下示例显示了加工凸面（凸起）工件。</font>
+      <font style="vertical-align: inherit;">红色</font>
+      <font style="vertical-align: inherit;">代表
+      </font>
+      <font class="hcp2">
+        <font style="vertical-align: inherit;">下沉运动</font>
+      </font>
+    </font>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">，</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">蓝色代表</font>
+      <font class="hcp2">
+        <font style="vertical-align: inherit;">缩回</font>
+      </font>
+      <font class="hcp2">
+        <font style="vertical-align: inherit;">运动</font>
+      </font>
+      <font style="vertical-align: inherit;">。</font>
+    </font>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;"></font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;"></font>
+    </font>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;"></font>
+    </font>
+    <font style="vertical-align: inherit;"></font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">显然，这里执行的是</font>
+    </font>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">单向</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">型加工策略
+        ，因为刀具路径从外到内顺时针运行，而不反转方向。</font>
+    </font>
+  </p>
+  <p><img alt="stock_analysis_height_change.gif" border="0" height="430" src="../../stock_analysis_height_change.gif" width="505" /></p>
+  <p class="hcp7">&nbsp;</p>
+  <p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">改变方向</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">这里，材料去除的颜色不同，具体取决于机床改变旋转轴方向的速度。</font>
+    </font>
+  </p>
+  <p><img alt="" border="0" class="hcp4" src="../../newUI_stock_analyses_Orientation%20Change.gif" /></p>
+  <p>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">主要优点：</font>
+      </font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">可以看到旋转轴方向的快速变化。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">可以看出旋转轴的方向改变进行得有多快。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">旋转轴方向改变的速度表明哪里可能出现稳定性问题，从而影响工件表面的质量。</font>
+    </font>
+  </p>
+  <p>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">例子</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">：</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">下图为涡轮叶片的加工过程。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">颜色渐变从</font>
+    </font>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">蓝色</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+        （旋转轴方向缓慢变化）到</font>
+    </font>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">橙色</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+        （旋转轴方向快速变化）。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">可以看出，旋转轴的方向发生了快速变化，特别是在小拐角半径处。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">因此，可以预期橙色区域的表面质量不够。</font>
+    </font>
+  </p>
+  <p><img alt="stock_analysis_orientation.gif" border="0" height="376" src="../../stock_analysis_orientation.gif" width="380" /></p>
+  <p class="hcp7">&nbsp;</p>
+  <p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">句子长度</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">根据线段长度，刀具路径的颜色有所不同。</font>
+    </font>
+  </p>
+  <p><img alt="" border="0" class="hcp4" src="../../newUI_stock_analyses_Toolpath%20Length.gif" /></p>
+  <p>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">主要优点：</font>
+      </font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">可以看出刀具路径点是否均匀分布在工件上。</font>
+      <font style="vertical-align: inherit;">刀具路径点的均匀分布通常更有利于加工过程的质量和稳定性。</font>
+    </font>
+  </p>
+  <p>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">例子</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">：</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">下图显示了瓶子几何形状的编辑。</font>
+      <font style="vertical-align: inherit;">可以看出，某些区域的刀具路径长度有所不同。</font>
+      <font style="vertical-align: inherit;">这意味着刀具路径点分布不均匀。</font>
+    </font>
+  </p>
+  <p><img alt="" border="0" class="hcp4" src="../../newUI_toolpath_lenght.gif" /></p>
+  <p class="hcp7">&nbsp;</p>
+  <p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">标记零件</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">例如，由于铣削或线切割加工而丢失的零件会以不同的颜色进行标记。</font>
+    </font>
+  </p>
+  <p><img alt="" border="0" class="hcp4" src="../../newUI_stock_analyses_Mark_Parts.gif" /></p>
+  <p>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">主要优点：</font>
+      </font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">您可以识别加工过程中可能出现的缺陷零件。</font>
+    </font>
+  </p>
+  <p>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">例子</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">：</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">下图显示了铣削后的工件。</font>
+      <font style="vertical-align: inherit;">由于产生了多个不合格零件，因此将工件分为 8 个区域（1 个工件和 7 个不合格零件）。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">每个失败的部分都被分配了一种单独的颜色。</font>
+    </font>
+  </p>
+  <p><img alt="标记零件.gif" border="0" height="363" src="../../mark_parts.gif" width="617" /></p>
+  <p class="hcp7">&nbsp;</p>
+  <p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">单色</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">用一种颜色标记工件的所有加工区域。
+      </font>
+    </font>
+  </p>
+  <p><img alt="" border="0" class="hcp4" src="../../newUI_stock_analyses_Single%20Marking.gif" /></p>
+  <p>
+    <font class="hcp2"><strong class="">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">主要</font>
+        </font>
+      </strong>
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">优点：</font>
+      </font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">清晰显示工件的所有加工区域。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p><strong class=""><span class="hcp6"><img alt="" border="0" class="hcp4" src="../../newUI_stock_analyses_Tab_Button_Options_Refresh.gif" />
+      </span>
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">重置：执行在</font>
+      </font>
+    </strong>
+    <font style="vertical-align: inherit;"></font><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">“颜色”</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">对话框中所做的</font>
+      <font style="vertical-align: inherit;">更改
+        。</font>
+      <font style="vertical-align: inherit;">（！！通过双击颜色字段打开该对话框，例如</font>
+    </font><img alt="" border="0" class="hcp4" src="../../newUI_measure_Color_Dialog_Farbfeld.gif" />
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">）</font>
+    </font>
+  </p>
+  <p><strong class=""><img alt="" border="0" class="hcp4" src="../../newUI_stock_analyses_Tab_Button_Options_Auto_Adjust.gif" />
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">自动检测：</font>
+      </font>
+    </strong>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">将单色重置为制造商的规格。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p><strong class="">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">示例：</font>
+      </font>
+    </strong>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">该示例显示了由多个工具创建的&nbsp;</font>
+    </font><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">单色</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">材料去除
+        。</font>
+      <font style="vertical-align: inherit;">用户可以调整颜色。</font>
+    </font>
+  </p>
+  <p><img alt="" border="0" class="hcp4" src="../../newUI_Single_Marking.gif" /></p>
+  <p class="hcp7">&nbsp;</p>
+  <p class="dialog">
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">残留材料和部件损伤</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">此选项以颜色突出显示有部件损伤和多余材料的工件区域。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">此外，将成品铣削材料区域与工件几何形状进行比较，并用颜色标记匹配区域。</font>
+    </font><img alt="" border="0" class="hcp4" src="../../newUI_stock_analyses_Gouge%20and%20Excess.gif" />
+  </p>
+  <p><strong class="">
+      <font class="hcp2">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">主要优点</font>
+        </font>
+      </font>
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">：</font>
+      </font>
+    </strong></p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">识别工件几何形状内任何多余的材料区域。
+      </font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">识别需要处理残留材料的区域。
+      </font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">识别因去除过多材料且工件几何形状损坏而发生部件损伤的所有区域。 &nbsp;</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">识别位于定义精度范围内的区域。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p><strong class="">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">选项、设置和按钮：</font>
+      </font>
+    </strong><br />
+  </p>
+  <p><strong class=""><span class="hcp6"><img alt="" border="0" class="hcp4" src="../../newUI_stock_analyses_Tab_Button_Options_Refresh.gif" /></span>
+      <strong class="">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;">重置</font>
+        </font>
+      </strong>
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">：执行在</font>
+      </font>
+    </strong>
+    <font style="vertical-align: inherit;"></font><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">“颜色”</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">对话框中所做的</font>
+      <font style="vertical-align: inherit;">更改</font>
+      <font style="vertical-align: inherit;">（！！通过双击颜色字段打开该对话框，例如
+      </font>
+    </font><img alt="" border="0" class="hcp4" src="../../newUI_measure_Color_Dialog_Farbfeld.gif" />
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">）</font>
+    </font>
+  </p>
+  <p><strong class=""><img alt="" border="0" class="hcp4" src="../../newUI_stock_analyses_Tab_Button_Options_Auto_Adjust.gif" />
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">自动确定：</font>
+      </font>
+    </strong>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">将设置的配色方案重置为制造商的规格。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p><strong class="">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">示例：</font>
+      </font>
+    </strong>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">下图显示了与工件几何形状进行比较的已加工工件。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">待完成的区域标记为</font>
+    </font><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">黑色</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+        ，其余材料区域标记为</font>
+    </font><span class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">蓝色</font>
+      </font>
+    </span>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+        。</font>
+    </font>
+  </p>
+  <p>
+    <img alt="" border="0" class="hcp4" src="../../NewUI_Gouge_Excess.gif" />
+  </p>
 {% endblock %}
 {% endlinebreakless %}

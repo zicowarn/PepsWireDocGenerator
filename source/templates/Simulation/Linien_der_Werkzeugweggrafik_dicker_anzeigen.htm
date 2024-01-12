@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,7 +28,21 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Linien der Werkzeugweggrafik dicker anzeigen" %}</p><p class="Block_Text">{% trans "Ist diese Option aktiv, werden die Geometrieelemente der Werkzeugweggrafik dicker dargestellt." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使刀具路径图形线更粗
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果此选项处于活动状态，刀具路径图形的几何元素将显示得更粗。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

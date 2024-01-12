@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,11 +33,58 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Maximaler Winkel" %}</p><p> </p>
-<p>{% trans "Legt den erlaubten [Maximalen Konikwinkel] fest, für die Feature-Erkennung von konischen Features." %}</p>
-<p>{% trans "Erodierbare Features, die einem Konikwinkel größer als der [Maximalen Konikwinke]l aufweisen, bleiben unberücksichtigt." %}</p>
-<p> </p>
-<p> </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    最大角度
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    设置锥形特征的特征检测所
+   </font>
+   <font style="vertical-align: inherit;">
+    允许的
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     最大锥角。
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    不考虑
+   </font>
+   <font style="vertical-align: inherit;">
+    锥角大于
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     最大锥角l 的侵蚀特征。
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

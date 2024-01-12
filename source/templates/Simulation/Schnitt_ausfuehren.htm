@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,10 +33,118 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Schnitt ausführen" %}</p><p>{% trans "Die Schaltflächen @ und @ werden verwendet, um einen Teil des in zwei Teile geschnittenen Werkstückes zu entfernen, vor oder hinter der Schnittebene." %}</p>
-<p>{% trans "Die Schaltfläche @ entfernt den Teil in [positiver] [X-, Y-, Z-]Richtung." %}</p>
-<p>{% trans "Die Schaltfläche @ entfernt den Teil in [negativer] [X-, Y-, Z]-Richtung." %}</p>
-<p class="Block_Text">{% trans "Wird der falsche Teil entfernt, verwendet man die Schaltfläche @ um den ursprünglich Zustand wiederherzustellen." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    执行剪切
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <img alt="sectneg.gif" border="0" height="17" src="../sectneg.gif" width="24"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+   <font style="vertical-align: inherit;">
+    按钮
+   </font>
+  </font>
+  <img alt="sectpos.gif" border="0" height="17" src="../sectpos.gif" width="23"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    用于移除在切割平面前面或后面被切成两半的工件的一部分。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该按钮
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     沿
+    </font>
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     X、Y、Z
+    </font>
+   </font>
+  </font>
+  <img alt="sectpos.gif" border="0" height="17" src="../sectpos.gif" width="23"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    正方向移除零件
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该按钮移除
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     X、Y、Z
+    </font>
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     负
+    </font>
+   </font>
+  </font>
+  <img alt="sectneg.gif" border="0" height="17" src="../sectneg.gif" width="24"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    方向上的零件
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果删除了错误的部件，请使用 按钮
+   </font>
+  </font>
+  <img alt="Solid_Sim_Undo.gif" border="0" height="15" src="../Solid_Sim_Undo.gif" width="22"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    恢复原始状态。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

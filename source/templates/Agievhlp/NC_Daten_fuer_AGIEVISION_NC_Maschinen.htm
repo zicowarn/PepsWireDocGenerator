@@ -36,21 +36,131 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <h1>{% trans "NC-Daten für AGIEVISION NC-Maschinen" %}</h1><p>{% trans "Folgende Dateien werden bei einem Postprozessorlauf erzeugt:" %}</p>
-<p>{% trans "[Scriptdatei] (Dateiendung *.[sbl])" %}</p>
-<p>{% trans "Diese Datei enthält Angaben über das Material, die Materialhöhe, das Qualitätsziel sowie die Bearbeitungsstrategie." %}</p>
-<p>{% trans "Aufgrund der Angaben in der [Scriptdatei] berechnet die AGIEVISION Steuerung die Einstellung für Offset, Spülung und Generator automatisch." %}</p>
-<p> </p>
-<p><img src="../AV_SBL.gif" alt="AV_SBL.gif" width="726" height="136" border="0"/></p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p>{% trans "[NC-Datendatei(en)] (Dateiendung *.[iso])" %}</p>
-<p>{% trans "Enthält die Geometriedaten. Für jede einzelne Bearbeitungsfigur erzeugt das System eine separate NC-Datei. Die Namen der Dateien werden inkrementiert (z.B. Bei4[01], Bei4[02], Bei4[03], ... )." %}</p>
-<p> </p>
-<p><img src="../AV_ISO.gif" alt="AV_ISO.gif" width="335" height="160" border="0"/></p>
-<p style="text-align: center;"> </p>
-<p>{% trans "[Übertragungsdatei] (Dateiendung *.[sbr])" %}</p>
-<p>{% trans "Bei einer Datenübertragung (Diskette oder ON-LINE) nutzt die AGIEVISION Steuerung die SBR-Datei um in Erfahrung zu bringen, welche ISO-Dateien übertragen werden müssen." %}</p>
-<p><img src="../AV_SBR.gif" alt="AV_SBR.gif" width="333" height="38" border="0"/></p>
+<h1>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">AGIEVISION 数控机床的 NC 数据</font>
+    </font>
+  </h1>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">在后处理器运行期间创建以下文件：</font>
+    </font>
+  </p>
+  <p>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">脚本文件</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">（文件扩展名 * </font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">.sbl</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">）</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">该文件包含有关材料、材料高度、质量目标和加工策略的信息。</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">根据</font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">脚本文件</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">中的信息，AGIEVISION 控件自动计算偏移、冲洗和发电机的设置。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p><img alt="AV_SBL.gif" border="0" height="136" src="../AV_SBL.gif" width="726" /></p>
+  <p style="margin-top: 0; margin-bottom: 0;">&nbsp;</p>
+  <p>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">NC 数据文件</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">（文件扩展名 * </font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">.iso</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">）</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">包含几何数据。</font>
+      <font style="vertical-align: inherit;">系统为每个单独的加工图形创建单独的 NC 文件。</font>
+      <font style="vertical-align: inherit;">文件名递增（例如 Bei4 </font>
+    </font>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">01</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">、 Bei4 </font>
+    </font>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">02</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">、 Bei4 </font>
+    </font>
+    <font class="hcp2">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">03</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">，...）。</font>
+    </font>
+  </p>
+  <p>&nbsp;</p>
+  <p><img alt="AV_ISO.gif" border="0" height="160" src="../AV_ISO.gif" width="335" /></p>
+  <p style="text-align: center;">&nbsp;</p>
+  <p>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">传输文件</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">（文件扩展名 * </font>
+    </font>
+    <font class="hcp1">
+      <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">.sbr</font>
+      </font>
+    </font>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">）</font>
+    </font>
+  </p>
+  <p>
+    <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">当传输数据（软盘或在线）时，AGIEVISION 控件使用 SBR 文件来查找需要传输哪些 ISO 文件。</font>
+    </font>
+  </p>
+  <p><img alt="AV_SBR.gif" border="0" height="38" src="../AV_SBR.gif" width="333" /></p>
 
 {% endblock %}
 {% endlinebreakless %}

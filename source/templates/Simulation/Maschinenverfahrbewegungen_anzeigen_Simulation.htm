@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,8 +28,28 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Maschinenverfahrbewegungen anzeigen" %}</p><p class="Block_Text">{% trans "Ist diese Option aktiv (Voreinstellung) wird jede Verfahrbewegung simuliert." %}</p>
-<p class="Block_Text">{% trans "Ist die Option nicht aktiv, werden keine Verfahrbewegungen simuliert, sondern nur das Bearbeitungsergebnis." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    显示机器动作
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果此选项处于活动状态（默认设置），则会模拟每个运动。
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果该选项未激活，则不会模拟任何移动，仅模拟加工结果。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,14 +33,138 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Erweitertes Rendern" %}</p><p>{% trans "Aktiviert man die Option [Erweitertes Rendern] (Schattieren), verwendet das System die Einstellungen des Dialogs [Erweitertes Rendern]." %}</p>
-<p>{% trans "Zudem wird die Schaltfläche [Einstellungen] freigeschaltet." %}</p>
-<p>{% trans "Mit der Schaltfläche [Einstellungen] können Sie den Dialog [Erweitertes Rendern] aufrufen." %}</p>
-<p>{% trans "Mit diesem Dialog können Sie die [Hintergrundfarbe der Simulation] einstellen, sowie die Lichteinstellungen für das Rendern (Schattieren) und verschiedene weiter Renderingfunktionen beeinflussen." %}</p>
-<p> </p>
-<p class="Hinweis">{% trans "Hinweis:" %}</p>
-<p>{% trans "Das Einstellen der Renderingfunktionen richtet sich an versierte Anwender." %}</p>
-<p>{% trans "Im Normalfall sind diese Einstellungen Herstellerseitig voreingestellt und müssen nicht verändert werden." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    高级渲染
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果激活
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “高级渲染
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    （着色）”选项，系统将使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “高级渲染”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框的设置。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     设置
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮也被
+   </font>
+   <font style="vertical-align: inherit;">
+    激活。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    您可以使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “设置”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮打开
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “高级渲染”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框 
+ 。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通过此对话框，您可以设置
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     模拟的背景颜色
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，以及影响渲染（着色）和各种其他渲染功能的灯光设置。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一个通知：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    设置渲染函数是针对有经验的用户。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通常，这些设置是由制造商预设的，不需要更改。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

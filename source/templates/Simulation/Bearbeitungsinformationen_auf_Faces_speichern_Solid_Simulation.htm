@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,17 +28,71 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Bearbeitungsinformationen auf Faces speichern" %}</p><p>{% trans "Mit dieser Option können Sie die Möglichkeit, Bearbeitungsinformationen auf den geschnittenen Flächen zu speichern (z.B. welche Operation hat eine Kavität geschnitten), ein- und ausschalten." %}</p><p>{% trans "Nutzen Sie die Funktion #[Informationen aus Simulationsgrafik abfragen]#, um die Informationen abzufragen." %}</p>
-<p>{% trans "Ist die Option nicht aktiv, läuft die Simulation schneller, da keine Informationen auf den bearbeiteten Flächen gespeichert werden." %}</p>
-<p> </p>
-<p class="Hinweis">{% trans "Hinweis:" %}</p>
-<p>{% trans "Änderungen an dieser Optionseinstellung werden erst bei der nächsten Simulation wirksam." %}</p>
-<script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    将编辑信息保存到 Faces
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此选项允许您打开或关闭在切割表面上保存加工信息的功能（例如哪个操作切割了型腔）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用
+   </font>
+  </font>
+  <a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('Informationen_aus_Simulationsgrafik_abfragen_Solid_Simulation.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+   <font style="font-weight: bold;">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      仿真图形查询信息
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    功能可以查询信息。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果该选项未激活，则模拟运行速度会更快，因为加工表面上不会保存任何信息。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一个通知：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对此选项设置的更改要到下一次模拟才会生效。
+   </font>
+  </font>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
         if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
         FilePopupInit('a1');
-//]]&gt;
-</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}
