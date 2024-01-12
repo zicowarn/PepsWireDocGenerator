@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,11 +33,71 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Identische Feature gruppieren" %}</p><p>{% trans "Fasst [geometrisch identisch] [Bearbeitungsfeatures] zusammen zu einem Bearbeitungsfeature." %}</p>
-<p>{% trans "Dies reduziert die Anzahl der Einträge im #FeatureManager# wenn viele identische Geometrien bearbeitet werden müssen." %}</p>
-<p>{% trans "Das folgende Bild zeigt links das Ergebnis ohne gruppieren und rechts mit gruppieren." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p><img src="../Feature_Recognition_Group_Features.gif" alt="Feature_Recognition_Group_Features.gif" width="875" height="517" border="0"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    将相同的特征分组
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     将几何形状相同的
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     加工特征
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    合并
+   </font>
+   <font style="vertical-align: inherit;">
+    为一个加工特征。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    当需要处理许多相同的几何图形时，这会减少
+   </font>
+  </font>
+  <a href="../WIRE_Expert_FeatureManager/WIRE_Expert_FeatureManager.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     FeatureManager 设计
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    树中的条目数量。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图左侧显示了未分组的结果，右侧显示了分组后的结果。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <img alt="Feature_Recognition_Group_Features.gif" border="0" height="517" src="../Feature_Recognition_Group_Features.gif" width="875"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

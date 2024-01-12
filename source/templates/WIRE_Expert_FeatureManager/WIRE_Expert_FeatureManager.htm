@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,31 +34,227 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <a name="642b3b9347ca42c9b00b820c00c373fa=1"/><h1>{% trans "WIRE-Expert FeatureManager" %}</h1><p> </p>
-<p>{% trans "Mit Hilfe des Moduls [WIRE-Expert] (optional) können Sie die Erzeugung von NC-Daten für Drahterodiermaschinen, auf Basis von 3D-Volumenmodellen, weitgehend automatisieren." %}</p>
-<p>{% trans "Dabei ist der [FeatureManager] das zentrale Bedienelement des Moduls [WIRE-Expert] und wird auf der [linken] Seite des Grafikfensters angezeigt." %}</p>
-<p>{% trans "Im [FeatureManager] werden alle programmierten Features aufgelistet." %}</p>
-<p> </p>
-<p class="Normal_(Web) pitalic" style="margin-left: 5.75pt; margin-right: 6.50pt;  margin-top: 4.00pt; margin-bottom: 0.00pt;">{% trans "&lt;p class='Normal_(Web)' style='margin-left: 5.75pt; margin-right: 6.50pt; margin-top: 4.00pt; margin-bottom: 0.00pt;'&gt;[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="Normal_(Web)" style="margin-left: 5.75pt; margin-right: 6.50pt;  margin-top: 4.00pt; margin-bottom: 0.00pt;"> </p>
-<p><img src="../FeatureManager_shg.gif" usemap="#AreaMap0" alt="FeatureManager_shg.gif" width="320" height="214" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="3, 19, 77, 52" href="../Operationsmanager/Geometrie_Register_Operationsmanager.htm" alt=""/>
-<area shape="rect" coords="80, 20, 153, 53" href="../Operationsmanager/Bearbeitungs_Register_Operationsmanager.htm" alt=""/>
-<area shape="rect" coords="155, 19, 226, 52" href="Parameter_Register_Operationsmanager_.htm" alt=""/>
-<area shape="rect" coords="2, 52, 319, 208" href="../WIRE_ExpertRH_context_Menu/OPTICAM_FeatureManager_Optionen_der_rechten_Maustaste.htm" alt=""/>
-</map> </p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Siehe auch:" %}</p>
-<p>{% trans "#[Der Feature-Manager - Funktionen der rechten Maustaste]#" %}</p>
-<p>{% trans "#[WIRE-Expert - Prinzip der automatisierten Bearbeitung]#" %}</p>
-<p>{% trans "#[Automatische Featureerkennung]#" %}</p>
-<p class="hcp2">{% trans "#Manuelle Featureerkennung#" %}</p>
-<p class="hcp2">{% trans "#Automatische Featureerkennung nach Flächenfarben#" %}</p>
-<p>{% trans "#[Figuren + Bearbeitungen von Features erzeugen]#" %}</p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "und:" %}</p>
-<p>{% trans "#[Doppelklick auf ein Element des FeatureManagers]#" %}</p>
-<p>{% trans "#[Klick mit rechter Maustaste auf ein Element des FeatureManagers]#" %}</p>
+ <a name="642b3b9347ca42c9b00b820c00c373fa=1">
+ </a>
+ <h1>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    WIRE 专家特征管理器
+   </font>
+  </font>
+ </h1>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    借助
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     WIRE-Expert
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    模块 
+ （可选），您可以在很大程度上自动生成基于 3D 实体模型的线切割机床的 NC 数据。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     FeatureManager 设计
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    树是
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     WIRE-Expert
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    模块 
+ 的中央控制元素
+   </font>
+   <font style="vertical-align: inherit;">
+    ，显示在
+   </font>
+   <font style="vertical-align: inherit;">
+    图形窗口的
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     左侧。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    所有编程特征均列
+   </font>
+   <font style="vertical-align: inherit;">
+    在
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     FeatureManager 设计树中。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Normal_(Web)" style="margin-left: 5.75pt; margin-right: 6.50pt; 
+	 margin-top: 4.00pt; margin-bottom: 0.00pt;">
+  <font color="#FF0000" face="Arial" size="2" style="font-family: Arial; 
+														 font-size: 9pt; 
+														 font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="Normal_(Web)" style="margin-left: 5.75pt; margin-right: 6.50pt; 
+	 margin-top: 4.00pt; margin-bottom: 0.00pt;">
+ </p>
+ <p>
+  <img alt="FeatureManager_shg.gif" border="0" height="214" src="../FeatureManager_shg.gif" usemap="#AreaMap0" width="320"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="3, 19, 77, 52" href="../Operationsmanager/Geometrie_Register_Operationsmanager.htm" shape="rect"/>
+   <area alt="" coords="80, 20, 153, 53" href="../Operationsmanager/Bearbeitungs_Register_Operationsmanager.htm" shape="rect"/>
+   <area alt="" coords="155, 19, 226, 52" href="Parameter_Register_Operationsmanager_.htm" shape="rect"/>
+   <area alt="" coords="2, 52, 319, 208" href="../WIRE_ExpertRH_context_Menu/OPTICAM_FeatureManager_Optionen_der_rechten_Maustaste.htm" shape="rect"/>
+  </map>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    也可以看看：
+   </font>
+  </font>
+ </p>
+ <p>
+  <a href="../WIRE_ExpertRH_context_Menu/OPTICAM_FeatureManager_Optionen_der_rechten_Maustaste.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      功能管理器 - 右键单击​​功能
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+  <a href="Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      WIRE-Expert - 自动化加工原理
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+  <a href="../WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      自动特征检测
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p class="hcp2">
+  <a href="../WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     手动特征检测
+    </font>
+   </font>
+  </a>
+ </p>
+ <p class="hcp2">
+  <a href="../WIRE_ExpertRH_context_Menu/Beispiel_Feature_Erkennung_nach_Fl_chenfarben.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     基于表面颜色的自动特征识别
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+  <a href="../WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      创建图形+编辑特征
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和：
+   </font>
+  </font>
+ </p>
+ <p>
+  <a href="Doppelklick_auf_ein_Element_des_FeatureManagers.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      双击 FeatureManager 设计树的元素
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+  <a href="Klick_mit_rechter_Maustaste_auf_ein_Element_des_FeatureManagers.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      右键单击 FeatureManager 设计树的元素
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

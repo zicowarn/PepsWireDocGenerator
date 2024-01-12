@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,9 +33,73 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "1 Schnitt für Anbindungen entfernen" %}</p><p>{% trans "Die Checkbox ist nur aktiviert, wenn die Methode #[Automatisches Entfernen der Anbindungen am Ende der Operation]# gewählt wurde." %}</p>
-<p>{% trans "Sie findet Anwendung, wenn der [Haltesteg mit nur einem Schnitt entfernt] werden soll (z.B. Stempelbearbeitung)." %}</p>
-<p>{% trans "Ist die Checkbox [nicht] aktiviert, entspricht die Anzahl der Schnitte für die Entfernung der Haltestege der Anzahl der Schnitte für die Figurbearbeitung." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    去除 1 处领带切口
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    仅当选择了
+   </font>
+  </font>
+  <a href="Automatisches_Entfernen_der_Anbindungen_am_Ende_der_Operation.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      操作结束时自动删除绑定方法
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    时，才会激活该复选框。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     如果只需一次切割即可移除固定杆
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    （例如冲压加工） ，则可以使用它
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     如果未
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    激活该复选框
+   </font>
+   <font style="vertical-align: inherit;">
+    ，则用于移除固定杆的切割次数与用于图形处理的切割次数相对应。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

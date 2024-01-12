@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -37,37 +36,232 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "WIRE-Expert Prinzip der automatisierten Bearbeitung" %}</p><p> </p>
-<p>{% trans "Dieses Kapitel soll einen verkürzten Überblick geben über die Funktionsweise des Moduls [WIRE-Expert] (optional):" %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "1.) 3D-Modell importieren ausrichten und Nullpunkt bestimmen." %}</p>
-<p><img src="../Example_WIRE_Expert_1.gif" alt="Example_WIRE_Expert_1.gif" width="345" height="283" border="0"/></p>
-<p style="text-align: center;"> </p>
-<p>{% trans "2.) Im Bereich @ des Operationsmanagers die [Automatische Feature-Erkennung] starten." %}</p>
-<p>{% trans "Es wird ein Dialog angezeigt. Den Dialog korrekt ausfüllen." %}</p>
-<p><img src="../Example_WIRE_Expert_2.gif" alt="Example_WIRE_Expert_2.gif" width="513" height="398" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "3.) Erodierbare Geometrien werden automatisch im 3D-Modell erkannt" %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Example_WIRE_Expert_3.gif" alt="Example_WIRE_Expert_3.gif" width="357" height="287" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "4.) Den Dialog beenden. Anschließend werden im Bereich @ des Operationsmanagers eine Liste der erkannten Bearbeitungsobjekte erzeugt." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Example_WIRE_Expert_4.gif" alt="Example_WIRE_Expert_4.gif" width="317" height="203" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "5.) Nun die erkannten Bearbeitungsobjekte an den PEPS Operationsmanager übergeben." %}</p>
-<p>{% trans "Mit den Optionen [Erzeuge Figuren + Bearbeitungen von Features] und [Erzeuge nur Figuren von Features], können Sie [Figuren und Bearbeitungen] erzeugen oder ausschließlich [Figuren]," %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Example_WIRE_Expert_5.gif" alt="Example_WIRE_Expert_5.gif" width="488" height="398" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "6.) Die Bearbeitungsobjekte werden umgewandelt in PEPS Bearbeitungsoperationen." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Example_WIRE_Expert_6.gif" alt="Example_WIRE_Expert_6.gif" width="450" height="313" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "7.) Für jede Bearbeitungsoperation werden zudem automatisch Bearbeitungsfiguren und die NC-Bearbeitungsgrafik erzeugt." %}</p>
-<p><img src="../Example_WIRE_Expert_7.gif" alt="Example_WIRE_Expert_7.gif" width="363" height="267" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "8.) Erzeugte Bearbeitungsoperationen überprüfen und ggf. die Schneidparameter anpassen und wie gewohnt weiter programmieren ... ." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    WIRE-Expert自动化加工原理
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    本章旨在简要概述
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     WIRE-Expert
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    模块的工作原理（可选）：
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    1.) 导入3D模型，对准并确定零点。
+   </font>
+  </font>
+  <br/>
+ </p>
+ <p>
+  <img alt="示例_WIRE_Expert_1.gif" border="0" height="283" src="../Example_WIRE_Expert_1.gif" width="345"/>
+ </p>
+ <p style="text-align: center;">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    2.)在操作管理器区域启动
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     自动特征
+    </font>
+   </font>
+  </font>
+  <img alt="示例_WIRE_Expert_1a.gif" border="0" height="31" src="../Example_WIRE_Expert_1a.gif" width="89"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    检测
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    将显示一个对话框。
+   </font>
+   <font style="vertical-align: inherit;">
+    正确填写对话框。
+   </font>
+  </font>
+  <br/>
+ </p>
+ <p>
+  <img alt="示例_WIRE_Expert_2.gif" border="0" height="398" src="../Example_WIRE_Expert_2.gif" width="513"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    3.) 3D 模型中自动识别易腐蚀的几何形状
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="示例_WIRE_Expert_3.gif" border="0" height="287" src="../Example_WIRE_Expert_3.gif" width="357"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    4.) 结束对话。
+   </font>
+   <font style="vertical-align: inherit;">
+    然后
+   </font>
+  </font>
+  <img alt="示例_WIRE_Expert_1a.gif" border="0" height="31" src="../Example_WIRE_Expert_1a.gif" width="89"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在操作管理器区域中生成所识别的处理对象的列表。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="示例_WIRE_Expert_4.gif" border="0" height="203" src="../Example_WIRE_Expert_4.gif" width="317"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    5.) 现在将识别的处理对象传输到 PEPS Operations Manager。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通过选项
+   </font>
+  </font>
+  <span class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “从要素创建图形 + 编辑”
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <span class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “仅从要素创建图形”
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，您可以创建
+   </font>
+  </font>
+  <span class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     图形并编辑
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或仅
+   </font>
+  </font>
+  <span class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     创建图形
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="示例_WIRE_Expert_5.gif" border="0" height="398" src="../Example_WIRE_Expert_5.gif" width="488"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    6.) 将处理对象转换为PEPS处理操作。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="示例_WIRE_Expert_6.gif" border="0" height="313" src="../Example_WIRE_Expert_6.gif" width="450"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    7.) 每次加工操作都会自动生成加工图形和 NC 加工图形。
+   </font>
+  </font>
+ </p>
+ <p>
+  <img alt="示例_WIRE_Expert_7.gif" border="0" height="267" src="../Example_WIRE_Expert_7.gif" width="363"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    8.) 检查生成的加工操作，如有必要，调整切削参数并照常继续编程...。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

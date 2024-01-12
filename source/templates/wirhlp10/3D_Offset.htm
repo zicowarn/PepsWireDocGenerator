@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,19 +33,166 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "3D Offset" %}</p><p>{% trans "Diese Option ist [nur] aktivierbar, wenn eine #[Regelflaechenbearbeitung]# durchgefuehrt wird und gleichzeitig die Option #[Offset ausgeben]# angeschaltet ist." %}</p><p>{% trans "Ist die [3D Offset] nicht aktiv, wird der Offset beim Schneiden einer Regelfläche bezogen auf die XY-Ebene berechnet (Siehe Zeichnung)." %}</p>
-<p>{% trans "Dies kann beim Schneiden sehr hoher Regelflächen zu Maßabweichungen führen. Wählt man die Option [3D Offset] rechnet das System den echten 3D-Offset." %}</p>
-<p>{% trans "Allerdings ist die NC-Ausgabe dann vektorisiert (Folge = lange NC-Programme) und ein Schneiden mit der NC-Radiuskorrektur (G41/G42) ist nicht mehr möglich." %}</p>
-<p>{% trans "Da die NC-Radiuskorrektur nicht ausgegeben wird, muss man in den Feldern #[Offset]# den [Drahtradius] + [Funkenspalt] eingeben." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p class="footnote_text"><img src="../OFFGEOM.gif" alt="OFFGEOM.gif" width="438" height="352" border="0"/></p>
-<script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    3D 偏移
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     仅
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    当正在编辑
+   </font>
+  </font>
+  <a href="Regelflaechenbearbeitung____.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      直纹曲面
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    并且同时打开
+   </font>
+  </font>
+  <a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('Offset_ausgeben_Std_Konturbea.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      “输出偏移”
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项时才能激活
+   </font>
+   <font style="vertical-align: inherit;">
+    此选项。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     3D 偏移
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    未激活，则在切割相对于 XY 平面的直纹曲面时计算偏移（参见绘图）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    当切割非常高的直纹表面时，这可能会导致尺寸偏差。
+   </font>
+   <font style="vertical-align: inherit;">
+    如果选择
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     3D 偏移
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项，系统将计算真实的 3D 偏移。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    然而，NC 输出随后被矢量化（序列 = 长 NC 程序），并且不再可以使用 NC 半径修正 (G41/G42) 进行切削。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    由于不输出 NC 半径校正，因此您必须在
+   </font>
+  </font>
+  <a class="BSSCPopup" href="javascript:void(0);" id="a2" onclick="BSSCPopup('Offset_im_Dialog_Bearbeitung_einstellen.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      “偏移”
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    字段中输入焊丝
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     半径
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    +
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     火花隙
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p class="footnote_text">
+  <img alt="关闭GEOM.gif" border="0" height="352" src="../OFFGEOM.gif" width="438"/>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
         if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
         FilePopupInit('a1');
         FilePopupInit('a2');
-//]]&gt;
-</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}
