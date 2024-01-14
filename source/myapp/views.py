@@ -4,6 +4,7 @@ Created on 25.07.2021
 @author: wang
 '''
 import os
+import platform
 from django.shortcuts import render, HttpResponse
 from . import settings
 
@@ -11,7 +12,13 @@ def index(request):
     if request.path.endswith('htm'):
         context = {'encoding': 'utf-8' }
         target_template = request.path.replace('/', '', 1)
-        target_template = target_template.replace('/', '\\')
+        current_os = platform.system()
+        if current_os == "Windows":
+            print("Running on Windows")
+            target_template = target_template.replace('/', '\\')
+        elif current_os == "Darwin":
+            print("Running on macOS")
+            target_template = target_template.replace('\\', '/')
         return render(request, target_template, context)
     elif request.path.endswith('css'):
         context = {'encoding': 'utf-8' }

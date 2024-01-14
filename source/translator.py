@@ -18,6 +18,11 @@ try:
 except:
     pass
 
+"""
+本py模块将 template模版，通过selenium结合chrome中的google自动翻译origin中的html，将翻译后的body保存到相应的模版文件中。 
+在此过程中通过检测模版文件是否有trans标识来确定模版是否完成翻译。
+"""
+
 def checkout_template_translation(template_path=""):
     if not os.path.exists(template_path):
         return False
