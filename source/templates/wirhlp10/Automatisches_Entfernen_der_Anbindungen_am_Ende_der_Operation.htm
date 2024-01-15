@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,23 +35,130 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Automatisches Entfernen der Anbindungen am Ende der Operation" %}</p><p> </p><p>{% trans "Ist diese Option gewählt, werden zunächst alle Schruppschnitte und falls vorhanden, alle Schlichtschnitte durchgeführt." %}</p>
-<p class="hcp1"> </p>
-<p><img src="../TAGMETH4.gif" alt="TAGMETH4.gif" width="434" height="233" border="0"/></p>
-<p class="hcp1"> </p>
-<p>{% trans "Erst am Ende der Operation trennt das System alle Anbindungen automatisch ab." %}</p>
-<p>{% trans "Die [Anzahl der Schnitte zum Entfernen der Anbindungen], [entspricht der Anzahl der programmierten Schrupp- und Schlichtschnitte]." %}</p>
-<p>{% trans "Will man die [Anbindung nur mit einem Schnitt entfernen] (z.B. Stempelbearbeitung), aktiviert man die Option #[1 Schnitt für Anbindungen entfernen]# in diesem Dialog." %}</p>
-<p> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
-<p>{% trans "@ [&lt;a href='../Strategie_4_Automatisches%20Entfernen%20der%20Anbindung%20am%20Ende%20der%20Operation.gif' id='a2'&gt;Zeige Beispielfilm zum o.g. Thema#]" %}</p>
-<p> </p>
-<script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    操作结束时自动移除绑定
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果选择此选项，则首先执行所有粗加工切削以及所有精加工切削（如果可用）。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="TAGMETH4.gif" border="0" height="233" src="../TAGMETH4.gif" width="434"/>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    只有在操作结束时系统才会自动断开所有连接。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    去除
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     连接的
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    切削次数
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     与编程的粗加工和精加工切削次数相对应
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果您只想
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     删除一次切割的连接
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    （例如冲压处理），请
+   </font>
+   <font style="vertical-align: inherit;">
+    在此对话框中激活
+   </font>
+  </font>
+  <a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('1_Schnitt_fuer_Anbindungen_entfernen.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+   <font class="hcp2">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      “删除连接的 1 次切割”选项。
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    它是这样完成的：
+   </font>
+  </font>
+ </p>
+ <p>
+  <img alt="电影.gif" border="0" height="27" src="../MOVIE.gif" width="27"/>
+  <font class="hcp2">
+   <a href="../Strategie_4_Automatisches%20Entfernen%20der%20Anbindung%20am%20Ende%20der%20Operation.gif" id="a2">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      播放有关上述主题的示例影片
+     </font>
+    </font>
+   </a>
+  </font>
+ </p>
+ <p>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
         if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
         FilePopupInit('a1');
-//]]&gt;
-</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

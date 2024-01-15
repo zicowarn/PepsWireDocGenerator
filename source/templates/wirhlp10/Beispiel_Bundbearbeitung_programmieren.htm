@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -37,75 +36,932 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Bundbearbeitung programmieren" %}</p><ul>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Zeichnen Sie die #[Bearbeitungsfigur(en)]# die bearbeitet werden soll." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Rufen im Menü [Bearbeitung] den Dialog #[Operation starten]# auf." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Bestimmen Sie im Dialog den [NC-Dateinamen] und die [Startposition]." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Geben Sie im Feld [Referenzhöhe] die Z-Lage des Bundes ein (Gilt nicht für [Agievision]-Maschinen) XXX." %}</p></li>
-</ul>
-<p>{% trans "@ (Beispiel für Materialhöhe 40 und 5 mm Bund oben )" %}</p>
-<ul>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Rufen Sie im Menü [Bearbeitung] den Befehl #Bundbearbeitung# auf." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Wählen Sie die zu bearbeitenden Figur(en) mit der Schaltfläche @." %}</p></li>
-</ul>
-<p><img src="../Bundbearbeitung_exa_1a.gif" alt="Zylindrischer_Schnitt_exa_1.gif" border="0"/></p>
-<p class="hcp3"> </p>
-<ul>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Legen Sie mit den grafischen Schaltflächen im Bereich [Standardkonik] fest, ob der Bund [oben] oder [unten] sein soll." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Anschließend in den Feldern [Winkel] den Grad der Konik ein (positiver Wert)." %}</p></li>
-</ul>
-<p><img src="../Bundbearbeitung_exa_2.gif" alt="Bundbearbeitung_exa_2.gif" width="326" height="223" border="0"/></p>
-<p class="hcp3"> </p>
-<ul>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Wählen Sie die Registerlasche [Technologie]." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie rechts neben dem Symbol @ auf die Schaltfläche #[Einstellungen]#." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Dies ruft den Dialog zur Einstellung der Bearbeitung des [zylindrischen Bereichs] auf." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Aktivieren Sie die Checkboxen unterhalb des Feldes [Schnitt Nr.], um die Anzahl der Schnitte festzulegen." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Geben Sie im Feld [Offset] das Schlichtaufmaß ein. Das Aufmaß wird normalerweise für die #[Simulation]# verwendet." %}</p></li>
-</ul>
-<p><img src="../Bundbearbeitung_exa_3.gif" alt="Bundbearbeitung_exa_3.gif" width="314" height="114" border="0"/></p>
-<ul>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Bestimmen Sie mit den Schaltflächen @ die Technologie für den(ie) Schnitt(e)." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf das Register #[Anbinden]#." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Aktivieren Sie [Anbindungslänge] und geben Sie im Textfeld die Breite der Anbindung ein, falls es ein Ausfallteil gibt und dieses gesichert werde soll." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Geben Sie [Keine] ein, wenn kein Ausfallteil zu erwarten ist." %}</p></li>
-</ul>
-<p><img src="../Bundbearbeitung_exa_4.gif" alt="Bundbearbeitung_exa_4.gif" width="329" height="152" border="0"/></p>
-<ul>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Wählen Sie im Bereich [Methode zur Entfernung der Anbindung] z.B. die Methode [Stopp Anbindung mit dem ersten Schnitt entfernen]." %}</p></li>
-</ul>
-<p><img src="../Bundbearbeitung_exa_5.gif" alt="Bundbearbeitung_exa_5.gif" width="327" height="179" border="0"/></p>
-<ul>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf das Register #[Ein-/Ausfahren]# und stellen Sie ein, wie die Bearbeitungsgeometrie(n) an-, bzw. abgefahren werden soll(en)." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf das Register #[Offset]#." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Aktivieren Sie Option [Richtung automatisch (Nur geschl. Figuren)] und stellen Sie ein, in welcher Richtung (Uhrzeiger- / Gegenuhrzeiger) die Bearbeitung ausgeführt werden soll." %}</p></li>
-</ul>
-<p><img src="../Zylindrischer_Schnitt_exa_5.gif" alt="Zylindrischer_Schnitt_exa_5.gif" width="341" height="235" border="0"/></p>
-<ul>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Schließen Sie den [Einstellungen] Dialog mit [OK]." %}</p></li>
-</ul>
-<p class="hcp3"> </p>
-<p>{% trans "Bearbeitungsparameter für die [konische Bearbeitung] einstellen." %}</p>
-<ul>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie rechts neben dem Symbol @ auf die Schaltfläche #[Einstellungen]#. Dies ruft den Dialog zur Einstellung der Bearbeitung des [konischen Bereichs] auf." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Stellen Sie die Bearbeitungsparameter [Anzahl der Schnitte], [Technologie], Anbindung etc. für die [konische Bearbeitung] ein. Gehen Sie vor, wie oberhalb beschrieben." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Schließen Sie den [Einstellungen] Dialog mit [OK]." %}</p></li>
-</ul>
-<ul>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Wählen Sie die Registerlasche [Optionen]." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Stellen Sie unter [Bearbeitungsoptionen] ein, mit welcher Strategie die Bundbearbeitung ausgeführt werden soll." %}</p></li>
-</ul>
-<p><img src="../Bundbearbeitung_exa_8.gif" alt="Bundbearbeitung_exa_8.gif" width="281" height="122" border="0"/></p>
-<ul>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Schließen Sie alle Dialoge mit [OK]." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Die Bearbeitungsoperation wird im #[Operationsmanager]# gespeichert." %}</p></li>
-</ul>
-<p><img src="../Bundbearbeitung_exa_6.gif" alt="Bundbearbeitung_exa_6.gif" width="282" height="97" border="0"/></p>
-<p class="hcp3"> </p>
-<ul>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Führen Sie eine #[Simulation]# der Bearbeitung durch." %}</p></li>
-</ul>
-<p><img src="../Bundbearbeitung_exa_7.gif" alt="Bundbearbeitung_exa_7.gif" width="451" height="330" border="0"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    程序线圈加工
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      绘制
+     </font>
+     <font style="vertical-align: inherit;">
+      要编辑的
+     </font>
+    </font>
+    <a href="../wirhlp9/Beispiel_fuer_die_Erzeugung_einer_Bearbeitungsfigur.htm">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        编辑图形。
+       </font>
+      </font>
+     </font>
+    </a>
+    <font style="vertical-align: inherit;">
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       在“编辑”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      菜单中打开
+     </font>
+    </font>
+    <a href="Operation_starten.htm">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        “开始操作”
+       </font>
+      </font>
+     </font>
+    </a>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      对话框
+     </font>
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      在对话框中，确定
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       NC 文件名
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      和
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       起始位置
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       在参考高度
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      字段中，输入
+     </font>
+     <font style="vertical-align: inherit;">
+      轴环的 Z 位置（不适用于
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       Agievision
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      机器）XXX。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p>
+  <img alt="联邦处理_exa_1.gif" border="0" height="93" src="../Bundbearbeitung_exa_1.gif" width="239"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    （以上材料高度为 40 和 5 毫米领口的示例）
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       从“编辑”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      菜单中，调用
+     </font>
+    </font>
+    <a href="Bundbearbeitung_.htm">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “线圈编辑”
+      </font>
+     </font>
+    </a>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      命令
+     </font>
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      使用按钮 选择要编辑的图形
+     </font>
+    </font>
+    <img alt="选择_1.gif" border="0" height="22" src="../select_1.gif" width="73"/>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p>
+  <img alt="Cylindrical_Section_exa_1.gif" border="0" src="../Bundbearbeitung_exa_1a.gif"/>
+ </p>
+ <p class="hcp3">
+ </p>
+ <ul>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       使用“标准锥度”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      区域中的图形按钮
+     </font>
+     <font style="vertical-align: inherit;">
+      指定轴环
+     </font>
+     <font style="vertical-align: inherit;">
+      应位于
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       顶部
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      还是
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       底部。
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      然后在角度字段中输入
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       锥度
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      （正值）。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p>
+  <img alt="联邦处理_exa_2.gif" border="0" height="223" src="../Bundbearbeitung_exa_2.gif" width="326"/>
+ </p>
+ <p class="hcp3">
+ </p>
+ <ul>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选择
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “技术”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选项卡。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      单击图标右侧的
+     </font>
+     <a href="Einstellungen_Einstellen_der_Schnittmethode.htm">
+      <font class="hcp2">
+       <font style="vertical-align: inherit;">
+        “设置”
+       </font>
+      </font>
+     </a>
+    </font>
+    <img alt="Bund_Symbol_Cyl.gif" border="0" height="31" src="../Bund_Symbol_Zyl.gif" width="43"/>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      按钮
+     </font>
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+    <a href="Einstellungen_Einstellen_der_Schnittmethode.htm">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+      </font>
+     </font>
+    </a>
+    <font style="vertical-align: inherit;">
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       这将打开用于设置圆柱区域
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      编辑的对话框
+     </font>
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       激活“剪切编号”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      字段下方的复选框
+     </font>
+     <font style="vertical-align: inherit;">
+      以指定剪切次数。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       在偏移
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      字段中输入精加工余量
+     </font>
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+     <font style="vertical-align: inherit;">
+      oversize通常用于
+     </font>
+    </font>
+    <a href="../Simulation/_Standard_Simulation.htm">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        模拟
+       </font>
+      </font>
+     </font>
+    </a>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p>
+  <img alt="外滩处理_exa_3.gif" border="0" height="114" src="../Bundbearbeitung_exa_3.gif" width="314"/>
+ </p>
+ <ul>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      使用按钮确定
+     </font>
+    </font>
+    <img alt="技术_但是.gif" border="0" height="21" src="../tech_but.gif" width="41"/>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      切割技术。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      单击
+     </font>
+    </font>
+    <a href="Anbinden_Lasche.htm">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        “连接”
+       </font>
+      </font>
+     </font>
+    </a>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选项卡。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      如果存在失效部件且应予以保护，请激活
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       连接长度
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      并在文本字段中输入连接宽度。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      如果预计不会出现零件故障，
+     </font>
+     <font style="vertical-align: inherit;">
+      请输入
+     </font>
+    </font>
+    <span style="font-weight: bold;">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “无” 。
+      </font>
+     </font>
+    </span>
+    <font style="vertical-align: inherit;">
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p>
+  <img alt="外滩处理_exa_4.gif" border="0" height="152" src="../Bundbearbeitung_exa_4.gif" width="329"/>
+ </p>
+ <ul>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       在删除连接的方法
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      区域中，选择
+     </font>
+     <font style="vertical-align: inherit;">
+      方法
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       停止删除与第一次切割的连接，
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      例如。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p>
+  <img alt="外滩处理_exa_5.gif" border="0" height="179" src="../Bundbearbeitung_exa_5.gif" width="327"/>
+ </p>
+ <ul>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      单击
+     </font>
+    </font>
+    <a href="Ein_Ausfahren_Lasche.htm">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        “移入/移出”
+       </font>
+      </font>
+     </font>
+    </a>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选项卡 
+	 ，然后设置如何接近或移开加工几何体。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      单击
+     </font>
+    </font>
+    <a href="Offset_Lasche.htm">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        “偏移”
+       </font>
+      </font>
+     </font>
+    </a>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选项卡。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      自动激活
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “方向”选项（仅限闭合图形）
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      并设置应沿哪个方向（顺时针/逆时针）进行编辑。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p>
+  <img alt="Cylindrical_Section_exa_5.gif" border="0" height="235" src="../Zylindrischer_Schnitt_exa_5.gif" width="341"/>
+ </p>
+ <ul>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       单击“确定”
+      </font>
+     </font>
+     <font style="vertical-align: inherit;">
+      关闭
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       设置
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      对话框
+     </font>
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p class="hcp3">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    设置
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     圆锥加工
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    的加工参数。
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      单击图标右侧的
+     </font>
+     <a href="Einstellungen_Einstellen_der_Schnittmethode.htm">
+      <font class="hcp2">
+       <font style="vertical-align: inherit;">
+        “设置”
+       </font>
+      </font>
+     </a>
+    </font>
+    <img alt="Bund_Symbol_Konik.gif" border="0" height="26" src="../Bund_Symbol_Konik.gif" width="45"/>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      按钮
+     </font>
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       这将打开用于设置圆锥形区域
+      </font>
+     </font>
+     <font style="vertical-align: inherit;">
+      加工的对话框
+     </font>
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+    <a href="Einstellungen_Einstellen_der_Schnittmethode.htm">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+      </font>
+     </font>
+    </a>
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      设置
+     </font>
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       圆锥加工
+      </font>
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       的切削次数
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      、
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       工艺
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      、连接等加工参数
+     </font>
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+     <font style="vertical-align: inherit;">
+      按照上述步骤进行。
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       单击“确定”
+      </font>
+     </font>
+     <font style="vertical-align: inherit;">
+      关闭
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       设置
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      对话框
+     </font>
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+    </font>
+   </p>
+  </li>
+ </ul>
+ <ul>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选择
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “选项”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选项卡。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       在加工选项
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      下
+     </font>
+     <font style="vertical-align: inherit;">
+      ，设置进行品丝加工的策略。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p>
+  <img alt="外滩处理_exa_8.gif" border="0" height="122" src="../Bundbearbeitung_exa_8.gif" width="281"/>
+ </p>
+ <ul>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       单击“确定”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      关闭所有对话框
+     </font>
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      编辑操作保存在
+     </font>
+    </font>
+    <a href="../Operationsmanager/Bearbeitungs_Register_Operationsmanager.htm">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        操作管理器
+       </font>
+      </font>
+     </font>
+    </a>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      中。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p>
+  <img alt="绑定处理_exa_6.gif" border="0" height="97" src="../Bundbearbeitung_exa_6.gif" width="282"/>
+ </p>
+ <p class="hcp3">
+ </p>
+ <ul>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      运行
+     </font>
+     <font style="vertical-align: inherit;">
+      加工
+     </font>
+    </font>
+    <a href="../Simulation/_Standard_Simulation.htm">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        模拟。
+       </font>
+      </font>
+     </font>
+    </a>
+    <font style="vertical-align: inherit;">
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p>
+  <img alt="外滩处理_exa_7.gif" border="0" height="330" src="../Bundbearbeitung_exa_7.gif" width="451"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

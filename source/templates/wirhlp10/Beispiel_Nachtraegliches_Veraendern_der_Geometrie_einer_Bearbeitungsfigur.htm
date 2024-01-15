@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,22 +34,209 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Tip_Note_Heading">{% trans "Nachträgliches Verändern der Geometrie einer Bearbeitungsfigur" %}</p><ul>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Führen Sie einen [Doppelklick] auf die Figur aus. (Alternativ können Sie im Menü [Layer/Figuren] den Befehl [Figur editieren] aufrufen und dann die Figur anklicken, die es zu verändern gilt.)" %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Das System zeigt einen Dialog (nur bei Doppelklick auf Figur)." %}</p></li>
-</ul>
-<p><img src="../Figur_editieren.gif" alt="Figur_editieren.gif" width="244" height="212" border="0"/></p>
-<ul>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf die Schaltfläche [Figur editieren]." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Verändern Sie die Geometrie mit Hilfe der Konstruktionsbefehle." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Führen Sie einen Doppelklick auf das Feld @ (unten rechts im Grafikfenster) aus oder rufen Sie im Menü [Layer/Figuren] den Befehl [Figur editieren Ende] auf." %}</p></li>
-</ul>
-<p>{% trans "oder:" %}</p>
-<ul>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Lösen Sie die Bearbeitungsfigur mit dem Befehl [Figur auflösen] im Menü [Layer/Figuren] auf." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Verändern Sie die Geometrie mit Hilfe der Konstruktionsbefehle." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Erzeugen Sie die Bearbeitungsfigur erneut." %}</p></li>
-</ul>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    随后更改加工图形的几何形状
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       双击
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      该
+     </font>
+     <font style="vertical-align: inherit;">
+      图。
+     </font>
+     <font style="vertical-align: inherit;">
+      （或者，您可以使用
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “图层/图形”菜单中的
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “编辑图形”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      命令
+     </font>
+     <font style="vertical-align: inherit;">
+      ，然后单击需要更改的图形。）
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      系统显示一个对话框（仅当双击图窗时）。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p>
+  <img alt="图_编辑.gif" border="0" height="212" src="../Figur_editieren.gif" width="244"/>
+ </p>
+ <ul>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      单击
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       编辑图
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      按钮。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      使用构造命令修改几何图形。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      双击该字段
+     </font>
+    </font>
+    <img alt="图_编辑_结束.gif" border="0" height="21" src="../Figure_edit_end.gif" width="102"/>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      （位于图形窗口的右下角）或调用
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “图层/图形”菜单中的
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “编辑图形结束
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      ”命令
+     </font>
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或者：
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       使用“图层/图形”
+      </font>
+     </font>
+     <font style="vertical-align: inherit;">
+      菜单中的
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “溶解图形”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      命令溶解编辑图形
+     </font>
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      使用构造命令修改几何图形。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      再次生成编辑图。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+
 
 {% endblock %}
 {% endlinebreakless %}

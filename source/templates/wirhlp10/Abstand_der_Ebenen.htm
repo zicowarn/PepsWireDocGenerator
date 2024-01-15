@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,17 +35,299 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Abstand der Ebenen (Regelflächenbearbeitung)" %}</p><p>{% trans "Der [Abstand der Ebenen] beschreibt den [Abstand zwischen der unteren und oberen Ebene] [einer Regelfläche]." %}</p>
-<p>{% trans "Die folgende Zeichnung zeigt eine Konik mit einem Bund auf der Höhe von Z5." %}</p>
-<p>{% trans "Wenn dies eine Regelfläche wäre, so müsste für die [untere Ebene 5 mm], für die [obere Ebene 30 mm] und als [Abstand der Ebenen] [25] [mm] bestimmt werden." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../BUND.gif" alt="BUND.gif" width="584" height="478" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Würde das Beispielwerkstück umgedreht auf die Maschine gespannt, müssen Sie für die [untere Ebene] und [obere Ebene] andere Werte eingeben." %}</p>
-<p>{% trans "Die [untere Ebene] wäre jetzt auf [Z0] und die [obere Ebene] bei [Z25]. Der [Abstand der Ebenen] bleibt mit [25 mm] gleich." %}</p>
-<p>{% trans "In der Simulation wird die Bearbeitung mit einer Materialdicke von 30 mm dargestellt, wobei die obere Öffnung kleiner dargestellt wird." %}</p>
-<p>{% trans "Der zylindrische Bund von 5 mm kann sowohl vorher als auch anschließend mit Hilfe der [Standardkonturbearbeitung] bearbeitet werden." %}</p>
-<p>{% trans "Das Feld [Abstand der Ebenen] wird ebenfalls verwendet, wenn sehr hohe Regelflächen, aufgeteilt in mehrere Schnittebenen geschnitten werden müssen (Vergl. #[Regelflächen in mehreren Schnittebenen schneiden]#)." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    层间距离（直纹面加工）
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     水平面之间的距离
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    描述
+   </font>
+   <font style="vertical-align: inherit;">
+    直纹
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     表面的
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     下水平面和上水平面之间的距离
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图显示了 Z5 水平处带有轴环的锥度。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果这是一个受控表面，则必须确定下层为
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     5 毫米，
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     上层
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    为 30 毫米
+   </font>
+   <font style="vertical-align: inherit;">
+    ，
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     层间距离为
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     25
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     毫米
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="外滩.gif" border="0" height="478" src="../BUND.gif" width="584"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果示例工件在机器上被倒置夹紧，则必须为
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     下层
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     上层
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    输入不同的值。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     现在，
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下层
+   </font>
+   <font style="vertical-align: inherit;">
+    位于
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     Z0
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     上层
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    位于
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     Z25
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     水平面之间的距离
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    保持
+   </font>
+   <font style="vertical-align: inherit;">
+    不变，为
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     25 毫米
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    模拟中，材料厚度为 30 mm，上部开口较小。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     5 毫米圆柱形轴环可以在使用标准轮廓加工
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    之前和之后
+   </font>
+   <font style="vertical-align: inherit;">
+    进行加工。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果需要切割非常高的直纹曲面并将其分为多个切割平面，则还可以使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     平面间距离
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    字段（请参阅
+   </font>
+  </font>
+  <a href="Regelflaechen_in_mehreren_Schnittebenen_schneiden.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      在多个切割平面中切割直纹表面
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ）。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,12 +33,78 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Automatisches Entfernen der Anbindungen am Ende jeder Figur" %}</p><p>{% trans "Ist diese Option gewählt, wird an der [ersten gewählten Figur] zunächst der Schruppschnitt und alle Nachschnitte ausgeführt. Zum Schluss wird die Anbindung entfernt." %}</p>
-<p>{% trans "Dann werden die [nächsten gewählten Figuren] auf die gleiche Weise (Schruppen, Schlichten + Anbindung entfernen) bearbeitet." %}</p>
-<p> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
-<p>{% trans "@ [&lt;a href='../Strategie_2_Automatisches%20Entfernen%20der%20Anbindung%20am%20Ende%20jeder%20Figur.gif' id='a2'&gt;Zeige Beispielfilm zum o.g. Thema#]" %}</p>
-<p> </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    自动删除每个图末尾的绑定
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果选择此选项，则粗剪和所有重剪都会在
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     第一个选定的图形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    上进行。
+   </font>
+   <font style="vertical-align: inherit;">
+    最后连接被移除。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    然后
+   </font>
+   <font style="vertical-align: inherit;">
+    以相同的方式加工下一个
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     选定的图形（粗加工、精加工+去除装订）。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    它是这样完成的：
+   </font>
+  </font>
+ </p>
+ <p>
+  <img alt="电影.gif" border="0" height="27" src="../MOVIE.gif" width="27"/>
+  <font class="hcp1">
+   <a href="../Strategie_2_Automatisches%20Entfernen%20der%20Anbindung%20am%20Ende%20jeder%20Figur.gif" id="a2">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      播放有关上述主题的示例影片
+     </font>
+    </font>
+   </a>
+  </font>
+ </p>
+ <p>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

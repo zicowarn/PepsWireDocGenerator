@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,18 +35,166 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Aussenkontur (Stempel)" %}</p><p>{% trans "Diese Option wird automatisch freigeschaltet, wenn Sie die Option [#Richtung automatisch#] wählen." %}</p><p>{% trans "Sie stellt automatisch sicher, dass die Richtung einer Bearbeitungsfigur korrekt ist, so dass eine [Aussenkontur (Stempel)] immer mit [linkem] oder [rechtem] [Offset] geschnitten wird." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../WIREOFF1.gif" alt="WIREOFF1.gif" width="221" height="226" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Für [Offset links] muss die Bearbeitungsfigur [im Uhrzeigersinn] und für [Offset rechts] im [Gegenuhrzeigersinn] definiert sein." %}</p>
-<p>{% trans "Die Option ermittelt und ändert ggf. die Richtung von Bearbeitungsfiguren automatisch." %}</p>
-<script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    外轮廓（印章）
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('Richtung_automatisch.htm',400,300);return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      如果您选择“自动方向”
+     </font>
+    </font>
+   </a>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项，则会自动激活此选项
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    它自动确保加工图形的方向正确，以便始终
+   </font>
+   <font style="vertical-align: inherit;">
+    以
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     左
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     右
+    </font>
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     偏移
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    切割
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     外轮廓（印记） 。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="无线断线1.gif" border="0" height="226" src="../WIREOFF1.gif" width="221"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对于
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     向左偏移，必须
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     顺时针
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    定义加工图形
+   </font>
+   <font style="vertical-align: inherit;">
+    ，对于
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     向右偏移
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     ，
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    必须逆时针定义加工图形
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该选项自动确定加工图形的方向，并在必要时更改加工图形的方向。
+   </font>
+  </font>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
         if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
         FilePopupInit('a1');
-//]]&gt;
-</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

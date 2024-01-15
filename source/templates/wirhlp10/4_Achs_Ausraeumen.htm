@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,37 +35,160 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "&lt;img src='../4%20Achsen%20ausraeumen_ico.gif' alt='' border='0' class='hcp1'/&gt; 4 Achs Ausräumen" %}</p><p> </p><p>{% trans "Das [4 Achsen Ausräumen] von Regelflächen ermöglicht die Bearbeitung von Regelflächen ohne Ausfallteil." %}</p>
-<p>{% trans "Der Programmieraufwand wird dadurch wesentlich reduziert und die Bearbeitung kann unbeaufsichtigt erfolgen." %}</p>
-<p> </p>
-<p><img src="../4%20Achsen%20ausraeumen%20Exa1.gif" alt="" border="0" class="hcp1"/></p>
-<p> </p>
-<p style="color: #ff0000; font-style: italic;">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p> </p>
-<p><img src="../4%20Achsen%20ausraeumen%20Dialog.gif" alt="" usemap="#MAP569972842" border="0" class="hcp1"/>
-<map id="MAP569972842" name="MAP569972842">
-<area shape="rect" coords="2, 34, 416, 553" href="4_Achs_Ausraeumen_Parameter.htm" alt=""/>
-<area shape="rect" coords="95, 571, 207, 600" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="229, 572, 346, 597" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area2" alt=""/>
-</map> </p>
-<p> </p>
-<p class="hcp3">{% trans "Nach dem Schließen des Dialogs durch die Anwahl auf [„OK“], werden für die obere und untere Ebenen zwei Figuren erzeugt und diese automatisch im Dialog eingetragen." %}</p>
-<p class="hcp3"> </p>
-<p class="Hinweis">{% trans "Hinweis:" %}</p>
-<p class="hcp3">{% trans "Diese Bearbeitung erfolgt ohne Aufruf der Radiuskorrektur (z.B. G41/G42), da die Bearbeitung mit Mittelpunktsbahn ausgeräumt[ ]wird." %}</p>
-<p> </p>
-<p class="Hinweis">{% trans "Hinweis:" %}</p>
-<p>{% trans "Diese Funktion ist optional." %}</p>
-<p class="dialog">{% trans "So wird es gemacht:" %}</p>
-<p style="font-weight: bold;">{% trans "#4 Achs Ausräumen programmieren#" %}</p>
-<p> </p>
-<p> </p>
-<p> </p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; 
+	 border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <img alt="" border="0" class="hcp1" src="../4%20Achsen%20ausraeumen_ico.gif"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    4轴清零
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     直纹面的4 轴清理
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    可
+   </font>
+   <font style="vertical-align: inherit;">
+    实现直纹面加工，而不会丢失零件。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这显着减少了编程工作，并且可以在无人监督的情况下进行处理。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <img alt="" border="0" class="hcp1" src="../4%20Achsen%20ausraeumen%20Exa1.gif"/>
+ </p>
+ <p>
+ </p>
+ <p style="color: #ff0000; font-style: italic;">
+  <span style="color: #ff0000; 
+													 font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </span>
+ </p>
+ <p>
+ </p>
+ <p>
+  <img alt="" border="0" class="hcp1" src="../4%20Achsen%20ausraeumen%20Dialog.gif" usemap="#MAP569972842"/>
+  <map id="MAP569972842" name="MAP569972842">
+   <area alt="" coords="2, 34, 416, 553" href="4_Achs_Ausraeumen_Parameter.htm" shape="rect"/>
+   <area alt="" coords="95, 571, 207, 600" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area1" shape="rect"/>
+   <area alt="" coords="229, 572, 346, 597" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area2" shape="rect"/>
+  </map>
+ </p>
+ <p>
+ </p>
+ <p class="hcp3">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选择
+   </font>
+  </font>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “确定”
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    关闭对话框后，将为上层和下层创建两个图形，并自动输入到对话框中。
+   </font>
+  </font>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一个通知：
+   </font>
+  </font>
+ </p>
+ <p class="hcp3">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该加工无需调用半径修正（例如 G41/G42）即可进行，因为加工
+   </font>
+  </font>
+  <span style="mso-spacerun: yes;">
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    是通过中心路径清除的。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一个通知：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此功能是可选的。
+   </font>
+  </font>
+ </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    它是这样完成的：
+   </font>
+  </font>
+ </p>
+ <p style="font-weight: bold;">
+  <a href="Beispiel_4_Achs_Ausraeumen.htm" style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     程序4轴清零
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+ </p>
+ <p>
+ </p>
+ <p>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('area1');
 	FilePopupInit('area2');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

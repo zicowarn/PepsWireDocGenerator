@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -44,34 +43,285 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Ausfallteil Sicherung TYP 5" %}</p><p> </p>
-<p class="dialog">{% trans "[[Typ 5: Ausfallteil Sicherung für konische Schneidmatrizen]]" %}</p>
-<p>{% trans "[Bei diesem Typ wird die Schneidmatrize ohne Bund bearbeitet. Im Bereich der Ausfallteilsicherung wird eine geringere Konik geschnitten.]" %}</p>
-<p>{% trans "[[Vorteil:]] [ ]" %}</p>
-<p class="hcp5">{% trans "Durchgängiger Schneidkantenverlauf. Dadurch erhöht sich die Standzeit. Ebenso ergibt sich an der Unterseite der Matrize ein durchgehender Verlauf." %}</p>
-<p class="MsoNormal" style="mso-layout-grid-align: none; text-autospace: none;">{% trans "[[ ]]" %}</p>
-<p class="MsoNormal" style="mso-layout-grid-align: none; text-autospace: none;"><img src="../Ausfallteil_Sicherung_Typ5_Parameter.gif" alt="" border="0" class="hcp1"/></p>
-<p class="MsoNormal" style="mso-layout-grid-align: none; text-autospace: none;"> </p>
-<p>{% trans "[[Bearbeitungsablauf:][ ]]" %}</p>
-<p> </p>
-<p>{% trans "Zunächst wird die umlaufende Konik geschnitten, inkl. den [Winkel A2]." %}</p>
-<p>{% trans "Anschließend wird eine offene Regelflächenbearbeitung durchgeführt, wobei sich am Ende wieder ein durchgängiger Kantenverlauf an der Unterseite ergibt." %}</p>
-<p> </p>
-<p>{% trans "Es existieren 4 weitere Typen von Ausfallteil Sicherungen:" %}</p>
-<p class="dialog" style="font-family: Arial, sans-serif;">{% trans "&lt;p class='dialog' style='font-family: Arial, sans-serif;'&gt;[[#Typ 1: Ausfallteil Sicherung bei konischen und zylindrischen Schnittwerkzeugen#]]" %}</p>
-<p class="dialog" style="font-family: Arial, sans-serif;">{% trans "&lt;p class='dialog' style='font-family: Arial, sans-serif;'&gt;[#T[yp 2: Ausfallteil Sicherung bei konischen und zylindrischen Schnittwerkzeugen]#]" %}</p>
-<p class="dialog" style="font-family: Arial, sans-serif;">{% trans "&lt;p class='dialog' style='font-family: Arial, sans-serif;'&gt;#[T][[yp 3: Ausfallteilführung]]#" %}</p>
-<p class="dialog1">{% trans "#[[T]][[yp 4:][ ][Ausfallteil Sicherung][ ][mit Zylindrischen Bund und Vorweite]]#" %}</p>
-<p class="MsoNormal"> </p>
-<p class="MsoNormal">{% trans "Das folgende Bild zeigt die [5 Typen der Ausfallteil Sicherung]:" %}</p>
-<p> </p>
-<p class="hcp5"><img src="../Ausfallteil_Sicherung_1.gif" alt="" border="0" class="hcp1"/></p>
-<p> </p>
-<p class="Hinweis">{% trans "Hinweis:" %}</p>
-<p>{% trans "Diese Funktion ist optional." %}</p>
-<p class="dialog">{% trans "So wird es gemacht:" %}</p>
-<p style="font-weight: bold;">{% trans "#Ausfallteilsicherung programmieren#" %}</p>
-<p> </p>
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; 
+	 border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <img alt="" border="0" class="hcp1" src="../Ausfallteil_Sicherung_Ico.gif"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    保险丝故障部分 TYPE 5
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="dialog">
+  <b class="hcp2">
+   <span class="hcp3">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      类型 5：锥形切割模具的丢失零件熔断器
+     </font>
+    </font>
+   </span>
+  </b>
+ </p>
+ <p>
+  <span class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     在这种类型中，切削模具加工时没有轴环。
+    </font>
+    <font style="vertical-align: inherit;">
+     在失效部位保护区域切出较小的锥度。
+    </font>
+   </font>
+  </span>
+ </p>
+ <p>
+  <b class="hcp2">
+   <span class="hcp3">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      优势：
+     </font>
+    </font>
+   </span>
+  </b>
+  <span class="hcp4">
+  </span>
+ </p>
+ <p class="hcp5">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    持续不断的前沿进展。
+   </font>
+   <font style="vertical-align: inherit;">
+    这增加了使用寿命。
+   </font>
+   <font style="vertical-align: inherit;">
+    模具底部也有一个连续的路线。
+   </font>
+  </font>
+ </p>
+ <p class="MsoNormal" style="mso-layout-grid-align: none; text-autospace: none;">
+  <span class="hcp3">
+   <span style="mso-tab-count: 2;">
+   </span>
+  </span>
+ </p>
+ <p class="MsoNormal" style="mso-layout-grid-align: none; text-autospace: none;">
+  <img alt="" border="0" class="hcp1" src="../Ausfallteil_Sicherung_Typ5_Parameter.gif"/>
+ </p>
+ <p class="MsoNormal" style="mso-layout-grid-align: none; text-autospace: none;">
+ </p>
+ <p>
+  <span class="hcp3">
+   <b class="hcp2">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      加工工艺：
+     </font>
+    </font>
+   </b>
+   <span class="hcp4">
+   </span>
+  </span>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    首先，切割周围的锥度，包括
+   </font>
+  </font>
+  <span class="hcp6">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     角度A2
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    然后进行开放式控制表面处理，最终在底面上形成连续的边缘轮廓。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    还有 4 种其他类型的故障部件熔断器：
+   </font>
+  </font>
+ </p>
+ <p class="dialog" style="font-family: Arial, sans-serif;">
+  <span class="hcp3">
+   <b>
+    <a href="Ausfallteil_Sicherung_Typ1.htm">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       类型 1：圆锥形和圆柱形切削刀具的丢失零件固定
+      </font>
+     </font>
+    </a>
+   </b>
+  </span>
+ </p>
+ <p class="dialog" style="font-family: Arial, sans-serif;">
+  <b>
+   <a href="Ausfallteil_Sicherung_Typ_2.htm">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      类型
+     </font>
+    </font>
+    <span class="hcp7">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       2：圆锥形和圆柱形切削刀具的丢失零件固定
+      </font>
+     </font>
+    </span>
+   </a>
+  </b>
+ </p>
+ <p class="dialog" style="font-family: Arial, sans-serif;">
+  <a href="Ausfallteil_Sicherung_Typ_3.htm">
+   <b>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      类型
+     </font>
+    </font>
+   </b>
+   <b class="hcp2">
+    <span class="hcp7">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       3：故障零件指南
+      </font>
+     </font>
+    </span>
+   </b>
+  </a>
+ </p>
+ <p class="dialog1">
+  <a href="Ausfallteil_Sicherung_Typ_4.htm">
+   <b class="hcp2">
+    <span class="hcp3">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       类型
+      </font>
+     </font>
+    </span>
+   </b>
+   <b class="hcp2">
+    <span class="hcp8">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       4：
+      </font>
+     </font>
+    </span>
+    <font style="vertical-align: inherit;">
+     <span class="hcp8">
+      <font style="vertical-align: inherit;">
+       带有圆柱形套环和前宽的
+      </font>
+     </span>
+     <span class="hcp8">
+      <font style="vertical-align: inherit;">
+       故障部件熔断器
+      </font>
+     </span>
+    </font>
+    <span class="hcp4">
+    </span>
+    <span class="hcp8">
+     <font style="vertical-align: inherit;">
+     </font>
+    </span>
+    <span style="mso-spacerun: yes;">
+    </span>
+    <span class="hcp8">
+     <font style="vertical-align: inherit;">
+     </font>
+    </span>
+   </b>
+  </a>
+ </p>
+ <p class="MsoNormal">
+ </p>
+ <p class="MsoNormal">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图为
+   </font>
+  </font>
+  <span class="hcp6">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     保险丝失效的5种类型
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="hcp5">
+  <img alt="" border="0" class="hcp1" src="../Ausfallteil_Sicherung_1.gif"/>
+ </p>
+ <p>
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一个通知：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此功能是可选的。
+   </font>
+  </font>
+ </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    它是这样完成的：
+   </font>
+  </font>
+ </p>
+ <p style="font-weight: bold;">
+  <a href="Beispiel_Ausfallteil_Sicherung_Beispiel.htm" style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     程序故障部分保护
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

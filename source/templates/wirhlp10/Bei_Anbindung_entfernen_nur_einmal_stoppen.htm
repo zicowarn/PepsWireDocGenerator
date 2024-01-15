@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,13 +35,182 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Bei Anbindung entfernen nur EINMAL stoppen" %}</p><p>{% trans "Diese Option wird normalerweise nur dann aktiviert, wenn man [Mehrfachanbindungen] zum Festhalten des Abfallteils programmieren will." %}</p>
-<p>{% trans "Ist die Option aktiv, gibt das System [nur einen Maschinenstop] (z.B. M01) bei der Entfernung der ersten Anbindung aus. Ist sie nicht aktiv, stoppt die Maschine bei jeder Anbindung." %}</p>
-<p> </p>
-<p>{% trans "Die Option kann man auch für die Bearbeitung von [mehreren Figuren] die mit [einem] oder [mehreren Anbindungen] befestigt sind verwenden." %}</p>
-<p>{% trans "In diesem Fall wird jedoch [nur ein Stopp], nämlich bei der Entfernung der ersten Anbindung ausgegeben." %}</p>
-<p>{% trans "Bestimmt man aber für jede Bearbeitungsfigur [einen separaten Operationsstart], gibt das System für jede Figur bei der Entfernung der ersten Anbindung einen Stopp aus." %}</p>
-<p>{% trans "Ist die Option [Bei Anbindung entfernen nur einmal stoppen] [nicht] [aktiviert], wird für jede Anbindung ein Stopp ausgegeben." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果已连接，则仅删除停止一次
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     通常仅当您想要对多个连接
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    进行编程 
+ 以容纳废弃部件时才
+   </font>
+   <font style="vertical-align: inherit;">
+    激活此选项。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果该选项处于活动状态，则系统仅
+   </font>
+   <font style="vertical-align: inherit;">
+    在第一个连接被移除时
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     发出机器停止（例如 M01）。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果它未激活，则机器会在每次连接时停止。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该选项还可用于编辑通过
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     一个
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     多个连接
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    连接的
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     多个图形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    然而，在这种情况下，
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     仅发出一次停止
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，即当第一个连接被移除时。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    但是，如果为每个处理图形指定
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单独的操作开始
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，则当第一个连接被删除时，系统会为每个图形发出停止信号。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果
+   </font>
+   <font class="hcp2">
+    <font style="vertical-align: inherit;">
+     未
+    </font>
+   </font>
+   <font class="hcp2">
+    <font style="vertical-align: inherit;">
+     激活
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “删除连接时仅停止一次”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项，则会针对每个连接发出停止信号。
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -38,19 +37,248 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Alle Bearbeitungen löschen" %}</p><p>{% trans "Dieser Befehl [löscht ALLE NC-Bearbeitungsoperationen] und deren Einträge in der *.VDM Datei." %}</p>
-<p>{% trans "Beachten Sie, dass die Wirkung dieses Befehls nicht aufgehoben werden kann und deshalb eine Warnung ausgegeben wird." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Delete_all_vdms.gif" alt="Delete_all_vdms.gif" width="346" height="152" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Wenn Sie [einzelne] NC-[Bearbeitungsoperationen] [löschen] wollen, verwenden Sie bitte den #[Operationsmanager]#." %}</p>
-<p>{% trans "Jede NC-Bearbeitungsoperation wird intern als Figur mit dem Namen [@@GENSEC-][Bearbeitungsfigurname], in der *.VDM-Datei gespeichert und als Drahtmodell dargestellt." %}</p>
-<p>{% trans "Das Drahtmodell hat keinen Einfluss auf die NC-Ausgabe und wird nicht durch den Befehl [Alle Bearbeitungen löschen] entfernt." %}</p>
-<p>{% trans "Aus diesem Grund müssen Sie nach dem Löschen aller NC-Bearbeitungsoperationen, die Drahtmodellsimulation der Bearbeitungen mit dem Befehl #[Grafik NC-Bearbeitung löschen]# entfernen." %}</p>
-<p class="hcp2"> </p>
-<p class="Hinweis">{% trans "Hinweis:" %}</p>
-<p>{% trans "Beachten Sie, dass das Löschen einer Bearbeitungsfigur ([@@GENSEC-][Bearbeitungsfigurname)] allein nicht genügt, um die NC-Ausgabe deren Figurdaten zu verhindern." %}</p>
-<p>{% trans "Sie müssen den Eintrag der Figur in der *.VDM Datei löschen. Verwenden Sie dazu den #[Operationsmanager]# oder den Befehl [Alle Bearbeitungen löschen]." %}</p>
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; 
+	 border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <img alt="删除_所有_Machinings.gif" border="0" height="28" src="../Delete_all_Machinings.gif" width="31"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    删除所有编辑
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此命令
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     删除所有 NC 加工操作
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    及其在 *.VDM 文件中的条目。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    请注意，该命令的效果无法被覆盖，因此会发出警告。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="删除_all_vdms.gif" border="0" height="152" src="../Delete_all_vdms.gif" width="346"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果您想
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     删除
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单个
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    NC
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     加工操作
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，请使用
+   </font>
+   <a href="../Operationsmanager/Operation_editieren____.htm">
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      操作管理器
+     </font>
+    </font>
+   </a>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <a href="../Operationsmanager/Operation_editieren____.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    每个 NC 加工操作都在 *.VDM 文件中内部保存为名为
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     @@GENSEC-
+    </font>
+   </font>
+  </font>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     machinery-figure
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    -name 的图形，并表示为线框。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    线框不会影响 NC 输出，也不会被
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “清除所有编辑”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令删除 
+ 。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    因此，删除所有 NC 加工操作后，必须使用“删除
+   </font>
+  </font>
+  <a href="../Simulation/Grafik_NC_Bearbeitung_loeschen.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      图形 NC 加工”
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令删除加工操作的线框模拟 
+ 。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一个通知：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    请注意，仅删除加工图形（
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     @@GENSEC-
+    </font>
+   </font>
+  </font>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     加工图形名称）
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    不足以阻止其图形数据的 NC 输出。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    您必须删除 *.VDM 文件中的图窗条目。
+   </font>
+   <font style="vertical-align: inherit;">
+    为此，请使用
+   </font>
+  </font>
+  <a href="../Operationsmanager/Operation_editieren____.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      Operations Manager
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     清除所有编辑
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

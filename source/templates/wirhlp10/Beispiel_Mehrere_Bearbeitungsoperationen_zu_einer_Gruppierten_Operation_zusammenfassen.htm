@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -37,42 +36,265 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Mehrere Bearbeitungsoperationen zu einer Gruppierten Operation zusammenfassen" %}</p><p>{% trans "Mehrere vorhandene Bearbeitungsoperationen sollen zu einer [Gruppierten Operation] zusammengefasst werden." %}</p><ul>
-	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie im Operationsmanager die Bearbeitungen an, die zur Gruppe gehören sollen. Verwenden Sie zur Mehrfachauswahl die Tasten [Strg] oder [Shift]." %}</p></li>
-</ul>
-<p>{% trans "@" %}</p>
-<ul>
-	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Klicken mit der [rechten Maustaste] auf eine der gewählten Operationen, um das Kontextmenü anzuzeigen." %}</p></li>
-</ul>
-<p>{% trans "@" %}</p>
-<ul>
-	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Wählen Sie im Kontextmenü die Option [Gruppieren]. Das System zeigt den Dialog [Neue Gruppenoperation erzeugen]." %}</p></li>
-	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Geben Sie einen Namen für die Gruppe ein und bestätigen Sie mit [OK]." %}</p></li>
-</ul>
-<p>{% trans "@" %}</p>
-<p class="hcp3"> </p>
-<p>{% trans "Das System zeigt nun den Dialog [Gruppenoperation aufrufen]." %}</p>
-<p>{% trans "In dem Dialog wird festgelegt, welche Gruppe auf welchen geometrischen Muster, z.B. auf einem Teilkreismuster, wiederholt werden soll." %}</p>
-<p class="hcp3"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp3"> </p>
-<p>{% trans "&lt;img src='../exa_Gruppieren_4_shg.gif' usemap='#AreaMap0' alt='exa_Gruppieren_4_shg.gif' width='266' height='214' border='0'/&gt;&lt;map name='AreaMap0' id='AreaMap0'&gt;########&lt;/map&gt;" %}<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="7, 25, 225, 65" href="javascript:BSSCPopup('Gruppenname_Gruppenoperation_aufrufen.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="21, 105, 172, 122" href="javascript:BSSCPopup('Lineares_Gitter_Gruppenoperation_aufrufen.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="21, 123, 172, 142" href="javascript:BSSCPopup('Kreismuster_Gruppenoperation_aufrufen.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="20, 143, 174, 160" href="javascript:BSSCPopup('Figuren_oder_auf_Punkten_Gruppenoperation_aufrufen.htm',400,300);" id="area4" alt=""/>
-<area shape="rect" coords="16, 178, 87, 202" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area5" alt=""/>
-<area shape="rect" coords="96, 177, 170, 202" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area6" alt=""/>
-<area shape="rect" coords="180, 179, 254, 202" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area7" alt=""/>
-<area shape="rect" coords="18, 84, 170, 105" href="javascript:BSSCPopup('Gruppe_spaeter_verwenden_Gruppenoperation_aufrufen.htm',400,300);" id="area8" alt=""/>
-</map> </p>
-<ul>
-	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Wählen Sie die Option [Gruppe später verwenden]." %}</p></li>
-</ul>
-<p class="Hinweis">{% trans "Wichtiger Hinweis:" %}</p>
-<p>{% trans "Eine Anleitung wie Sie die Gruppe an beliebigen Positionen wiederholen können, finden Sie siehe:" %}</p>
-<p class="Topic_Text_Bulleted">{% trans "#[Eine Gruppierte Operation aufrufen und an beliebigen anderen Positionen wiederholen]#" %}</p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    将多个加工操作合并为一个分组操作
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    多个现有的加工操作应
+   </font>
+   <font style="vertical-align: inherit;">
+    合并为一个
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     分组操作。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <ul>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      在 Operations Manager 中，单击应属于该组的编辑。
+     </font>
+     <font style="vertical-align: inherit;">
+      要进行多项选择，请使用
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       Ctrl
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      或
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       Shift
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      键。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p>
+  <img alt="exa_Gruppieren_1.gif" border="0" height="109" src="../exa_Gruppieren_1.gif" width="393"/>
+ </p>
+ <ul>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       右键
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      单击
+     </font>
+     <font style="vertical-align: inherit;">
+      所选操作之一以显示上下文菜单。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p>
+  <img alt="exa_Gruppieren_2.gif" border="0" height="355" src="../exa_Gruppieren_2.gif" width="499"/>
+ </p>
+ <ul>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      从上下文菜单中选择
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       组
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+     <font style="vertical-align: inherit;">
+      系统显示
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “创建新组操作”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      对话框。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      输入组的名称并单击
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “确定”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      进行确认。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p>
+  <img alt="exa_Gruppieren_3.gif" border="0" height="138" src="../exa_Gruppieren_3.gif" width="269"/>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    系统现在显示
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “呼叫组操作”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该对话框确定应在哪个几何图案上重复哪个组，例如在部分圆形图案上。
+   </font>
+  </font>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p>
+  <img alt="exa_Gruppieren_4_shg.gif" border="0" height="214" src="../exa_Gruppieren_4_shg.gif" usemap="#AreaMap0" width="266"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="7, 25, 225, 65" href="javascript:BSSCPopup('Gruppenname_Gruppenoperation_aufrufen.htm',400,300);" id="area1" shape="rect"/>
+   <area alt="" coords="21, 105, 172, 122" href="javascript:BSSCPopup('Lineares_Gitter_Gruppenoperation_aufrufen.htm',400,300);" id="area2" shape="rect"/>
+   <area alt="" coords="21, 123, 172, 142" href="javascript:BSSCPopup('Kreismuster_Gruppenoperation_aufrufen.htm',400,300);" id="area3" shape="rect"/>
+   <area alt="" coords="20, 143, 174, 160" href="javascript:BSSCPopup('Figuren_oder_auf_Punkten_Gruppenoperation_aufrufen.htm',400,300);" id="area4" shape="rect"/>
+   <area alt="" coords="16, 178, 87, 202" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area5" shape="rect"/>
+   <area alt="" coords="96, 177, 170, 202" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area6" shape="rect"/>
+   <area alt="" coords="180, 179, 254, 202" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area7" shape="rect"/>
+   <area alt="" coords="18, 84, 170, 105" href="javascript:BSSCPopup('Gruppe_spaeter_verwenden_Gruppenoperation_aufrufen.htm',400,300);" id="area8" shape="rect"/>
+  </map>
+ </p>
+ <ul>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选择
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       稍后使用组
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选项。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    重要的提示：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    有关如何在任意位置重复该组的说明，请参阅：
+   </font>
+  </font>
+ </p>
+ <p class="Topic_Text_Bulleted">
+  <a href="Beispiel_Eine_Gruppierte_Operation_aufrufen_und_an_beliebigen_anderen_Positionen_wiederholen.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      调用分组操作并在任何其他位置重复该操作
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('area1');
 	FilePopupInit('area2');
@@ -82,7 +304,9 @@
 	FilePopupInit('area6');
 	FilePopupInit('area7');
 	FilePopupInit('area8');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

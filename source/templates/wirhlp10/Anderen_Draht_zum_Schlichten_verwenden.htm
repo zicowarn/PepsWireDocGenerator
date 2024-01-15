@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,9 +33,59 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Anderen Draht zum Schlichten verwenden" %}</p><p>{% trans "Einige Drahterodiermaschinen bieten die Möglichkeit zum Drahtwechsel während der Bearbeitung." %}</p>
-<p>{% trans "Dabei kann für die Schlichtschnitte ein anderer Draht (z.B. 0.1) verwendet werden als für die Schruppschnitte (z.B. 0.25)." %}</p>
-<p>{% trans "Wenn Sie die Option [Anderen Draht zum Schlichten verwenden] aktiveren, schaltet dies die Listbox [Draht zum Schlichten frei], so dass Sie hier Schneiddraht für die Schlichtoperationen auswählen können." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用不同的线材进行精加工
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一些线切割机提供在加工过程中更换线的选项。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    与粗加工切割（例如 0.25）相比，精加工切割可以使用不同的金属丝（例如 0.1）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果激活
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “使用另一根线进行精加工”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项，则会
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     解锁“用于精加工的线”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    列表框，以便您可以在此处选择用于精加工操作的切割线。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

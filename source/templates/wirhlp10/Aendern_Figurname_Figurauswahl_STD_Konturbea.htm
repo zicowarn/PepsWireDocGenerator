@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,17 +34,79 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Ändern" %}</p><p>{% trans "Mit dieser Funktion können Sie neue Figuren zur Liste der zu schneidenden [Bearbeitungsfiguren hinzufügen] oder [vorhandene Figuren entfernen]." %}</p><p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Siehe auch:" %}</p>
-<p class="hcp2">{% trans "#Neue Figuren zur Liste der zu schneidenden Bearbeitungsfiguren hinzufügen#" %}</p>
-<p class="hcp2">{% trans "#Vorhandene Figuren aus der Liste der zu schneidenden Bearbeitungsfiguren entfernen#" %}</p>
-<script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    改变
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此功能允许您
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     将新图形添加到要剪切的编辑图形列表中
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     删除现有图形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    也可以看看：
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+  <a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('Beispiel_Neue_Figuren_zur_Liste_der_zu_schneidenden_Bearbeitungsfiguren_hinzufuegen.htm',400,300);return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     将新图形添加到要剪切的编辑图形列表中
+    </font>
+   </font>
+  </a>
+ </p>
+ <p class="hcp2">
+  <a class="BSSCPopup" href="javascript:void(0);" id="a2" onclick="BSSCPopup('Beispiel_Vorhandene_Figuren_aus_der_Liste_der_zu_schneidenden_Bearbeitungsfiguren_entfernen.htm',400,300);return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     从要剪切的编辑图形列表中删除现有图形
+    </font>
+   </font>
+  </a>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
         if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
         FilePopupInit('a1');
         FilePopupInit('a2');
-//]]&gt;
-</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

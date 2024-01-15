@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,9 +28,35 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Ausfallteilentsorger der NC-Maschine verwenden" %}</p><p>{% trans "Diese Option können Sie nur an NC-Maschinen verwenden, die über einen automatischen Ausfallteilentsorger verfügen." %}</p>
-<p>{% trans "Ist die Option gewählt, werden zunächst alle Schruppschnitte und falls vorhanden, alle Schlichtschnitte durchgeführt." %}</p>
-<p>{% trans "Am Ende der Operation werden die Ausfallteile automatisch durch den Ausfallteilentsorger entfernt." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用数控机床的废件处理系统
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    您只能在具有自动废料处理系统的 NC 机床上使用此选项。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果选择该选项，则首先执行所有粗加工切削以及所有精加工切削（如果可用）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    作业结束后，故障部件由故障部件处理公司自动清除。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}
