@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,40 +35,509 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Einfahren Gerade" %}</p><p>{% trans "Führt zu einer linearen (geraden) Einfahrbewegung. Der Draht fährt gerade von der Startlochbohrungsposition, auf die Bearbeitungsstartposition einer Bearbeitungsfigur." %}</p><p> </p>
-<p> </p>
-<p class="dialog">{% trans "Einfahren Bogen mit Eckenmodus" %}</p>
-<p>{% trans "Führt zu einer [kreisförmigen tangentialen Einfahrbewegung] an die Bearbeitungsfigur." %}</p>
-<p>{% trans "Für diese Option muss man einen Einfahrradius programmieren. Der Radius der Einfahrbewegung muss [kleiner sein] als der [Abstand zwischen] der [Start(loch)position] und der [Bearbeitungsstartposition auf der Figur] und [größer sein] als der [Drahtradius + Offset]." %}</p>
-<p class="Block_Text">{% trans "Es existieren zwei Methoden für das kreisförmige Einfahren, nämlich:" %}</p>
-<p>{% trans "[Einfahren Bogen mit ISO] und [Einfahren Bogen mit Eckenmodus]" %}</p>
-<p>{% trans "Der [Unterschied] zwischen den Methoden wird [nur bei der Bearbeitung von Koniken] offensichtlich." %}</p>
-<p>{% trans "Normalerweise verwendet man die Einfahroption [Einfahren Bogen mit ISO]. Sie ist auch die einzig mögliche Methode wenn man Regelflächen bogenförmig anfahren möchte." %}</p>
-<p>{% trans "Die folgende Zeichnung zeigt die Methode [Einfahren Bogen mit ISO]." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../LEADISO.gif" alt="LEADISO.gif" width="283" height="179" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Wird die Option [Einfahren Bogen mit Eckenmodus] aktiviert, wird je nach Einstellung des [#Eckenmodus#] im Dialog [Standard Konturbearbeitung] entweder ein ISO-Radius oder ein Drehspindelradius erzeugt." %}</p>
-<p>{% trans "Die Option [Einfahren Bogen mit Eckenmodus] ist nicht identisch mit der Einfahroption [Einfahren Bogen mit ISO]." %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "[Einfahren Bogen mit: ISO Eckenmodus]" %}</p>
-<p><img src="../LEADISOC.gif" alt="LEADISOC.gif" width="279" height="176" border="0"/></p>
-<p>{% trans "[Einfahren Bogen mit: Drehspindel Eckenmodus]" %}</p>
-<p><img src="../LEADCONC.gif" alt="LEADCONC.gif" width="287" height="180" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Die oben gezeigten Einfahrmethoden ([ISO] und [Drehspindel]) sollten man nur programmieren wenn die NC-Steuerung dies auch zulässt." %}</p>
-<p>{% trans "Verwenden Sie im Zweifelsfall die Option [Einfahren Bogen mit ISO]." %}</p>
-<p>{% trans "Beachten Sie ebenfalls, dass ein bogenförmigen Anfahren auf einem Radiuselement bei vielen Steuerungen zu Offsetfehlern führt." %}</p>
-<p>{% trans "Fahren Sie deshalb besser auf einem geraden Element an." %}</p>
-<p> </p>
-<p class="dialog">{% trans "Einfahren Bogen mit ISO" %}</p>
-<p>{% trans "Führt zu einer bogenförmigen Einfahrbewegung. Der Draht fährt im programmierten Radius von der Startlochbohrungsposition, auf die Bearbeitungsstartposition einer Bearbeitungsfigur." %}</p>
-<p>{% trans "[Ist eine Konik programmiert], bildet die Einfahrbewegung immer [einen ISO-Radius]." %}</p>
-<p>{% trans "Der [Radius] der Einfahrbewegung [muss angegeben werden]. Bei Radius 0 (Null) wird gerade angefahren." %}</p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    直行行驶
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    导致线性（直线）缩回运动。
+   </font>
+   <font style="vertical-align: inherit;">
+    线材从孔起始位置直线移动到加工图形的加工起始位置。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+ </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用转角模式缩回圆弧
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    导致
+   </font>
+   <font style="vertical-align: inherit;">
+    加工图形的
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     圆形切向进入运动。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对于此选项，您必须编程进入半径。
+   </font>
+   <font style="vertical-align: inherit;">
+    退刀运动的半径必须
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     小于
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     图形上的起始（孔）位置和加工起始位置
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    之间
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     的
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    距离
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     ，
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    并且
+   </font>
+   <font style="vertical-align: inherit;">
+    大于
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     走
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    丝
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     半径+偏移量
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    圆形退刀有两种方法，即：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     使用 ISO 回退圆弧
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     使用角模式回退圆弧
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    仅当加工锥度时，这些方法之间的
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     差异
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    才
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     变得明显
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通常，您使用“收缩”选项
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “收缩弓”和“ISO”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+   <font style="vertical-align: inherit;">
+    如果您想以圆弧方式接近受控曲面，这也是唯一可能的方法。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图显示了
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     ISO 的板材回缩方法
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="LEADISO.gif" border="0" height="179" src="../LEADISO.gif" width="283"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果激活
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     使用拐角模式退回圆弧
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项，则会创建
+   </font>
+   <font style="vertical-align: inherit;">
+    ISO 半径或车削主轴半径，具体取决于
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     标准轮廓处理
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    对话框 
+ 中的
+   </font>
+  </font>
+  <font class="hcp1">
+   <a class="BSSCPopup" href="javascript:void(0);" id="a3" onclick="BSSCPopup('Eckenmodus.htm',400,300);return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      拐角模式设置。
+     </font>
+    </font>
+   </a>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     拐角模式下的圆弧收缩选项
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    与
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     ISO 下的圆弧收缩选项
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    不同
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     缩回圆弧：ISO 角模式
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <img alt="LEADISOC.gif" border="0" height="176" src="../LEADISOC.gif" width="279"/>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     通过以下方式收回板材： 旋转主轴转角模式
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <img alt="LEADCONC.gif" border="0" height="180" src="../LEADCONC.gif" width="287"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    仅当 NC 控制允许时，才应对
+   </font>
+   <font style="vertical-align: inherit;">
+    上面显示的输入方法（
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     ISO
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     车削主轴）进行编程。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如有疑问，请使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “Retract Arc with ISO”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    另请注意，半径元素的弧形接近会导致许多控件中的偏移误差。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    因此，最好从直线元件开始。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用 ISO 缩回弓
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    导致弧形回缩运动。
+   </font>
+   <font style="vertical-align: inherit;">
+    钢丝以编程半径从孔起始位置移动到加工图形的加工起始位置。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     如果编程为圆锥体
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，则退回运动始终形成
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     ISO 半径
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     必须指定
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    退回运动
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     的
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    半径
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+   <font style="vertical-align: inherit;">
+    目前正在半径 0（零）进近。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('a3');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

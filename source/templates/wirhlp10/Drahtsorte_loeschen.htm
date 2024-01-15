@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,17 +34,111 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "@ Drahtsorte löschen" %}</p><p class="Tip_Note_Heading">{% trans "Eine Drahtsorte löschen" %}</p>
-<ul>
-<li class="hcp1">
-<p class="Tip_Note_Text_Bulleted">{% trans "Rufen Sie im Menü #[Bearbeitung]# den Befehl #[Operation starten]# auf und wählen Sie das Register [Technologie]. Klicken Sie im Dialog auf die Schaltfläche @." %}</p>
-</li>
-</ul>
-<ul>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Klicken Sie mit der [linken Maustaste] die zu löschende Drahtsorte in der Drahtsortenliste an und anschließend auf die Schaltfläche @." %}</p>
-</li>
-</ul>
+ <p class="dialog">
+  <img alt="删除_cross.gif" border="0" height="23" src="../Delete_cross.gif" width="28"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    删除电线类型
+   </font>
+  </font>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    删除某种类型的电线
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp1">
+   <p class="Tip_Note_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <a href="Das_Bearbeitungs_Menue.htm">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        在“编辑”
+       </font>
+      </font>
+     </font>
+    </a>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      菜单中，调用
+     </font>
+    </font>
+    <a href="Operation_starten.htm">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        “开始操作”
+       </font>
+      </font>
+     </font>
+    </a>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      命令
+     </font>
+     <font style="vertical-align: inherit;">
+      并选择
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “技术”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选项卡。
+     </font>
+     <font style="vertical-align: inherit;">
+      单击对话框中的按钮
+     </font>
+    </font>
+    <img alt="wire_edi_but.gif" border="0" height="24" src="../wire_edi_but.gif" width="25"/>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <ul>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       左键
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      单击
+     </font>
+     <font style="vertical-align: inherit;">
+      电线类型列表中要删除的电线类型，然后单击 按钮
+     </font>
+    </font>
+    <img alt="删除_cross.gif" border="0" height="23" src="../Delete_cross.gif" width="28"/>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+
 
 {% endblock %}
 {% endlinebreakless %}

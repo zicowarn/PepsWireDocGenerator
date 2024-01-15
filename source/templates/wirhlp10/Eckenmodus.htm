@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,23 +35,199 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Eckenmodus" %}</p><p>{% trans "Der Eckenmodus legt fest, auf welche Weise sich die obere/unter Drahtführung bewegen, wenn sich der Draht um eine Werkstückecke bewegt." %}</p>
-<p>{% trans "Die folgenden Zeichnungen zeigen [scharfe] und [runde] Ecken, für [Innen]- und [Außenecken] bei allen vier möglichen Eckenmodi." %}</p>
-<p>{% trans "Die Zeichnungen zeigen nur Linie/Linie- und [tangentiale] Linie/Kreis/Linie Übergänge." %}</p>
-<p>{% trans "Für nicht tangentiale Übergänge Linie/Kreis bzw. Kreis/Kreis wird immer ein Drehspindelradius verwendet." %}</p>
-<p class="hcp2"> </p>
-<p class="dialog">{% trans "Drehspindel + Scharf" %}</p>
-<p><img src="../SQUARE.gif" alt="SQUARE.gif" width="589" height="151" border="0"/></p>
-<p class="dialog">{% trans "ISO + Drehspindel" %}</p>
-<p><img src="../ISO.gif" alt="ISO.gif" width="591" height="148" border="0"/></p>
-<p class="dialog">{% trans "ISO + Scharf" %}</p>
-<p><img src="../ISOSQR.gif" alt="ISOSQR.gif" width="585" height="144" border="0"/></p>
-<p class="dialog">{% trans "Nur Drehspindel" %}</p>
-<p><img src="../CONIC.gif" alt="CONIC.gif" width="586" height="148" border="0"/></p>
-<p class="hcp2"> </p>
-<p class="Hinweis">{% trans "Hinweis:" %}</p>
-<p>{% trans "ISO-Radien sind nur bei tangentialen Übergängen vom Typ Linie/Kreis/Linie möglich." %}</p>
-<p>{% trans "Ist diese Bedingung nicht gegeben und sind trotzdem ISO-Radien notwendig, können Sie den Befehl #[In ISO Linie/Bogen/Linie umwandeln]# im Menü [Vorbereitung \ Diverses] verwenden, um die Geometrie anzupassen." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    拐角模式
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    拐角模式确定当焊丝围绕工件拐角移动时顶部/底部焊丝导轨如何移动。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图显示了所有四种可能的角模式下的
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     内角
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     外角
+    </font>
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     的
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    尖角
+   </font>
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     圆角
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    附图仅显示线/线和
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     切线
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    /圆/线过渡。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    车削主轴半径始终用于非相切线/圆或圆/圆过渡。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    旋转主轴+锋利
+   </font>
+  </font>
+ </p>
+ <p>
+  <img alt="正方形.gif" border="0" height="151" src="../SQUARE.gif" width="589"/>
+ </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ISO+旋转主轴
+   </font>
+  </font>
+ </p>
+ <p>
+  <img alt="ISO.gif" border="0" height="148" src="../ISO.gif" width="591"/>
+ </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ISO + 锐利
+   </font>
+  </font>
+ </p>
+ <p>
+  <img alt="ISOSQR.gif" border="0" height="144" src="../ISOSQR.gif" width="585"/>
+ </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    仅旋转主轴
+   </font>
+  </font>
+ </p>
+ <p>
+  <img alt="圆锥曲线.gif" border="0" height="148" src="../CONIC.gif" width="586"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一个通知：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ISO 半径仅适用于直线/圆/直线相切过渡。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果不满足此条件并且仍然需要 ISO 半径，则可以使用“
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     准备\杂
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    项”菜单中的
+   </font>
+  </font>
+  <a href="../wirhlp9/In_ISO_Linie_Bogen_Linie_umwandeln____.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      “转换为 ISO 线/弧/线”
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令来调整几何形状。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

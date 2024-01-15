@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,15 +35,192 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Ecken Freimachung" %}</p><p>{% trans "Wurde eine [Eckenfreimachung] programmiert (Siehe Menüfolge [Vorbereitung] \ #[Eckenfreimachung]#), wird diese Freimachung nur dann geschnitten, wenn die Felder unterhalb [Ecken Freimach] aktiv sind." %}</p>
-<p>{% trans "Auf diese Weise können Sie z.B. Schnitt 1 [mit einer Freimachung] und Schnitt 2 / Schnitt 3 ohne Freimachung schneiden." %}</p>
-<p class="hcp2"> </p>
-<p class="Hinweis">{% trans "Hinweis:" %}</p>
-<p>{% trans "[Eckenfreimachungen] müssen [vor] einer Bearbeitungsprogrammierung mit dem Befehl #[Eckenfreimachung]# aus dem Menue #[Vorbereitung]#, in die Bearbeitungsfigur eingebracht werden." %}</p>
-<p class="hcp2"> </p>
-<p class="Block_Text">{% trans "[So wird es gemacht:]" %}</p>
-<p>{% trans "#[Eckenfreimachung bestimmen]#" %}</p>
-<p>{% trans "#[Eckenfreimachung nachträglich verändern]#" %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    拐角间隙
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     拐角间隙
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    已编程（参见菜单序列
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “准备”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    \
+   </font>
+  </font>
+  <a href="../wirhlp9/Eckenfreimachung.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      “拐角间隙
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     ”），则仅当“拐角间隙”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下方的字段处于活动状态
+   </font>
+   <font style="vertical-align: inherit;">
+    时，才会切割该间隙。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    例如，您可以通过这种方式，剪切
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     带有邮资的
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    剪切 1和剪切 2/剪切 3 而不带有邮资的剪切。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一个通知：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font style="font-weight: bold; font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     在加工编程之前，
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    必须
+   </font>
+   <font style="vertical-align: inherit;">
+    使用
+   </font>
+   <a href="../wirhlp9/Das_Vorbereitungs_Menue.htm">
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      “准备
+     </font>
+    </font>
+   </a>
+   <font style="vertical-align: inherit;">
+    ”菜单中的
+   </font>
+  </font>
+  <a href="Ecken_Strategie.htm">
+   <font color="#008000" style="font-weight: bold; text-decoration: underline;">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      “拐角间隙”
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     命令将拐角间隙
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    引入到加工图形中。
+   </font>
+  </font>
+  <a href="../wirhlp9/Das_Vorbereitungs_Menue.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="Block_Text">
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     它是这样完成的：
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <a href="../wirhlp9/Beispiel_Eckenfreimachung_bestimmen.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      确定拐角间隙
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+  <a href="../wirhlp9/Beispiel_Eckenfreimachung_nachtraeglich_veraendern.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      稍后更改拐角间隙
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,27 +35,159 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Drahtsorte" %}</p><p>{% trans "Legt den verwendeten Schneiddrahttyp und dessen Durchmesser fest. Der Drahtdurchmesser wird in der Regel nur zu Simulationszwecken verwendet. Es gibt jedoch Ausnahmen:" %}</p><p>{% trans "1.) Das System zieht den Drahtdurchmesser zur Berechnung der #[Taschenerodierfunktion]# heran." %}</p>
-<p>{% trans "2.) Auch zur Berechnung der Bahnverschiebung wird der Drahtdurchmesser verwendet und zwar dann, wenn der Offset in die NC-Daten ausgegeben werden soll." %}</p>
-<p>{% trans "Allerdings muss in diesem Fall die Option #[Offset ausgeben]# aktiv sein." %}</p>
-<p>{% trans "Die Liste der vorhandenen Drahtsorten wird durch einen Klick auf die Schaltfläche @ verändert. Dies ruft einen Dialog auf, in der Sie neue Drahtsorten hinzufügen oder löschen können." %}</p>
-<p class="hcp2"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp2"> </p>
-<p><img src="../DRAHTEDI_shg.gif" usemap="#AreaMap0" alt="DRAHTEDI_shg.gif" width="219" height="394" border="0"/> <map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="8,26,202,182" href="javascript:BSSCPopup('Momentane_Drahtsortenliste.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="118,186,143,209" href="javascript:BSSCPopup('Drahtsorte_loeschen.htm',400,500);" id="area2" alt=""/>
-<area shape="rect" coords="146,185,198,211" href="javascript:BSSCPopup('Reihenfolge_der_Drahttabelle_aendern.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="14,213,201,342" href="javascript:BSSCPopup('Drahtbeschreibung_Durchmesser.htm',400,500);" id="area4" alt=""/>
-<area shape="rect" coords="19,362,103,382" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area5" alt=""/>
-<area shape="rect" coords="108,359,192,383" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area6" alt=""/></map></p>
-<p class="hcp2"> </p>
-<p class="Tip_Note_Heading">{% trans "So wird es gemacht:" %}</p>
-<p>{% trans "#[Neue Drahtsorte hinzufügen]#" %}</p>
-<p>{% trans "#[Drahtsorte löschen]#" %}</p>
-<p>{% trans "#[Reihenfolge der Drahttabelle ändern]#" %}</p>
-<script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    电线类型
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    指定所用切割线的类型及其直径。
+   </font>
+   <font style="vertical-align: inherit;">
+    线径通常仅用于模拟目的。
+   </font>
+   <font style="vertical-align: inherit;">
+    但是，也有例外：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    1.) 系统使用线径来计算
+   </font>
+  </font>
+  <a href="Taschenerodieren_1.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      型腔侵蚀函数
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    2.) 如果要在 NC 数据中输出偏移，则还可以使用线径来计算路径偏移。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    然而，在这种情况下，
+   </font>
+  </font>
+  <a href="Offset_ausgeben_Std_Konturbea.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      输出偏移
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项必须处于活动状态。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    单击 按钮可以更改现有电线类型的列表
+   </font>
+  </font>
+  <img alt="wire_edi_but.gif" border="0" height="24" src="../wire_edi_but.gif" width="25"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+   <font style="vertical-align: inherit;">
+    这将弹出一个对话框，您可以在其中添加或删除新的电线类型。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="DRAHTEDI_shg.gif" border="0" height="394" src="../DRAHTEDI_shg.gif" usemap="#AreaMap0" width="219"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="8,26,202,182" href="javascript:BSSCPopup('Momentane_Drahtsortenliste.htm',400,300);" id="area1" shape="rect"/>
+   <area alt="" coords="118,186,143,209" href="javascript:BSSCPopup('Drahtsorte_loeschen.htm',400,500);" id="area2" shape="rect"/>
+   <area alt="" coords="146,185,198,211" href="javascript:BSSCPopup('Reihenfolge_der_Drahttabelle_aendern.htm',400,300);" id="area3" shape="rect"/>
+   <area alt="" coords="14,213,201,342" href="javascript:BSSCPopup('Drahtbeschreibung_Durchmesser.htm',400,500);" id="area4" shape="rect"/>
+   <area alt="" coords="19,362,103,382" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area5" shape="rect"/>
+   <area alt="" coords="108,359,192,383" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area6" shape="rect"/>
+  </map>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    它是这样完成的：
+   </font>
+  </font>
+ </p>
+ <p>
+  <a href="Drahtbeschreibung_Durchmesser.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      添加新的电线类型
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+  <a href="Drahtsorte_loeschen.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      删除电线类型
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+  <a href="Reihenfolge_der_Drahttabelle_aendern.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      更改线表顺序
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
         if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
         FilePopupInit('area1');
         FilePopupInit('area2');
@@ -64,8 +195,9 @@
         FilePopupInit('area4');
         FilePopupInit('area5');
         FilePopupInit('area6');
-//]]&gt;
-</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

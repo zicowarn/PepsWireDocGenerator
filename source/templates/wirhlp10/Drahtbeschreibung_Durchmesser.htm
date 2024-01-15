@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,16 +34,162 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Drahtbeschreibung / Durchmesser" %}</p><p>{% trans "Mit diesem Feld können Sie eine neue Drahtsorte zur Liste hinzufügen." %}</p>
-<p class="Tip_Note_Heading">{% trans "Drahtsorte hinzufügen" %}</p>
-<ul>
-	<li class="hcp1"><p class="Tip_Note_Text_Bulleted">{% trans "Rufen Sie im Menü #[Bearbeitung]# den Befehl #[Operation starten]# auf und wählen Sie das Register [Technologie]." %}</p></li>
-	<li class="hcp1"><p class="Tip_Note_Text_Bulleted">{% trans "Klicken Sie im Dialog auf die Schaltfläche @." %}</p></li>
-</ul>
-<ul>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Geben Sie im Feld [Beschreibung] den Namen der Drahtsorte z.B. [Cobra Cut 0.1] ein." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Bestimmen Sie im Feld [Drahtdurchmesser] den Durchmesser des Schneiddrahtes und klicken Sie die Schaltfläche [Hinzufügen]." %}</p></li>
-</ul>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    线材描述/直径
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此字段允许您将新的电线类型添加到列表中。
+   </font>
+  </font>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    添加电线类型
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp1">
+   <p class="Tip_Note_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <a href="Das_Bearbeitungs_Menue.htm">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        在“编辑”
+       </font>
+      </font>
+     </font>
+    </a>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      菜单中，调用
+     </font>
+    </font>
+    <a href="Operation_starten.htm">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        “开始操作”
+       </font>
+      </font>
+     </font>
+    </a>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      命令
+     </font>
+     <font style="vertical-align: inherit;">
+      并选择
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “技术”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选项卡。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Tip_Note_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      单击对话框中的按钮
+     </font>
+    </font>
+    <img alt="wire_edi_but.gif" border="0" height="24" src="../wire_edi_but.gif" width="25"/>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <ul>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       在描述
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      字段中，输入
+     </font>
+     <font style="vertical-align: inherit;">
+      电线类型的名称，例如
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       Cobra Cut 0.1
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       在“钢丝直径”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      字段中，确定
+     </font>
+     <font style="vertical-align: inherit;">
+      切割钢丝的直径，然后单击
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “添加”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      按钮。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+
 
 {% endblock %}
 {% endlinebreakless %}

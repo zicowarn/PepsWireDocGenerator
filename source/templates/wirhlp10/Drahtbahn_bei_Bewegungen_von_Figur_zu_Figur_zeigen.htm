@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,7 +28,21 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Drahtbahn bei Bewegungen von Figur zu Figur zeigen" %}</p><p>{% trans "Wenn gewählt, werden Verfahrbewegungen von Bearbeitungsfigur zu Bearbeitungsfigur (Eilgang od. Vorschub) als Simulationsgrafik angezeigt." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在图形之间移动时显示导线路径
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果选择，加工图形之间的移动运动（快速移动或进给）将显示为模拟图形。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,18 +34,156 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Einfahrpunkt rotieren" %}</p><p>{% trans "Diese Funktion wird aktiviert, wenn man [Durchbrüche] mit mehreren Schnitten bearbeiten will und der Draht bei jedem Schnitt, eine andere Anfahrposition in der Bohrung anfahren soll." %}</p>
-<p class="Block_Text">{% trans "Die Funktion wird z.B. verwendet, wenn man sehr präzise Bohrungen schneiden möchte, bei denen eine konstante Anfahrposition zu Anfahrmarken führt." %}</p>
-<p class="Block_Text"> </p>
-<p class="Block_Text"><img src="../rotpoint_1.gif" alt="" style="border: none;" border="0"/></p>
-<p class="Block_Text"> </p>
-<p>{% trans "Mit den Optionen [Winkel] oder [Abstand] wird die Funktion und ein Eingabefeld freigeschaltet." %}</p>
-<p>{% trans "Ist [Winkel] eingestellt, gibt man im Eingabefeld den [Winkel] ein, um den die Einfahrposition bei jedem Schnitt verschoben werden soll." %}</p>
-<p>{% trans "Ist [Abstand ]eingestellt, gibt man im Eingabefeld den [Abstandswert] ein, um den die Einfahrposition bei jedem Schnitt verschoben werden soll." %}</p>
-<p> </p>
-<p>{% trans "Beachten Sie bei Bohrungen, dass der Draht in der Mitte der Bohrung eingefädelt sein sollte." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p><img src="../rotpoint.gif" alt="rotpoint.gif" width="355" height="163" border="0"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    旋转入口点
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     如果您想要通过多次切割来处理开口
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，并且每次切割时焊丝应移动到孔中的不同接近位置，则可以
+   </font>
+   <font style="vertical-align: inherit;">
+    激活此功能。
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    例如，如果您想要切割非常精确的孔，其中恒定的逼近位置会导致逼近标记，则可以使用该功能。
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+ </p>
+ <p class="Block_Text">
+  <img alt="" border="0" src="../rotpoint_1.gif" style="border: none;"/>
+ </p>
+ <p class="Block_Text">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     角度
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     距离
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项
+   </font>
+   <font style="vertical-align: inherit;">
+    启用该功能和输入字段。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果
+   </font>
+   <font style="vertical-align: inherit;">
+    设置了
+   </font>
+  </font>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     角度
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ， 
+ 请在输入字段中输入每次切割时缩回位置应移动的
+   </font>
+  </font>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     角度。
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果
+   </font>
+   <font style="vertical-align: inherit;">
+    设置了
+   </font>
+  </font>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     距离
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，请 
+ 在输入字段中输入每次切割时退刀位置应移动的
+   </font>
+  </font>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     距离值。
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    钻孔时请注意，电线应穿入孔的中间。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <img alt="旋转点.gif" border="0" height="163" src="../rotpoint.gif" width="355"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

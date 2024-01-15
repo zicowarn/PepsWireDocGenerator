@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,12 +33,121 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Ebenen Berechnung" %}</p><p>{% trans "Das Feld [Ebenen Berechnung] dient rein grafischen Zwecken und hat [keinen] Einfluss auf die NC-Ausgabe." %}</p>
-<p>{% trans "Es wird verwendet, um die Anzahl grafischer Schnittebenen durch die Regelflächendarstellung festzulegen." %}</p>
-<p>{% trans "Die Systemvorgabe [2] zeigt nur die obere und untere Schnittebene einer Regelfläche. Die Eingabe von [3] würde eine weitere Schnittebene in der Mitte der Regelfläche erzeugen." %}</p>
-<p>{% trans "Schnittebenen sind dann hilfreich, wenn obere und untere Regelflächengeometrie sehr von einander abweichen und Hinterschnitte zu erwarten sind." %}</p>
-<p>{% trans "Schnittebenen können Hinterschnitte grafisch veranschaulichen." %}</p>
-<p>{% trans "Die Option wird ebenfalls verwendet, wenn sehr #[hohe Matrizen in mehreren Schnittebenen bearbeitet]# werden müssen." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    等级计算
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     液位计算
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    字段
+   </font>
+   <font style="vertical-align: inherit;">
+    纯粹用于图形目的，
+   </font>
+   <font style="vertical-align: inherit;">
+    对 NC 输出
+   </font>
+  </font>
+  <font style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     没有影响。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    它用于通过直纹曲面表示指定图形切割平面的数量。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    系统默认值
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     2
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    仅显示直纹曲面的顶部和底部切割平面。
+   </font>
+   <font style="vertical-align: inherit;">
+    输入
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     3
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    将在直纹曲面的中心创建另一个切割平面。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    当上、下直纹表面几何形状彼此差异很大并且预计会出现底切时，切割平面很有用。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    切割平面可以以图形方式说明底切。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    当需要在多个切割平面中加工非常
+   </font>
+  </font>
+  <a href="Regelflaechen_in_mehreren_Schnittebenen_schneiden.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      高的基体
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    时，也可以使用该选项。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

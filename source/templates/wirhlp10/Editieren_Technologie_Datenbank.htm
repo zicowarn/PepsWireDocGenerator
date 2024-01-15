@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,14 +35,97 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Editieren (Technologie Datenbank)" %}</p><p>{% trans "Ruft einen weiteren Dialog auf, der zeigt wie viel Schnitte, welcher Offset, welches Offsetregister und welche Stromstufe dem gewählten Material zugeordnet ist." %}</p>
-<p>{% trans "Hinweis: Der Dialog kann je nach NC-Maschine variieren." %}</p>
-<p class="hcp1"> </p>
-<p><img src="../TEC_DAT3.gif" alt="TEC_DAT3.gif" width="270" height="449" border="0"/></p>
-<p class="hcp1"> </p>
-<p>{% trans "Das Feld [Offset Betrag] dient ausschließlich dazu, den Offset bei einer Simulation optisch zu veranschaulichen. Es gibt jedoch eine Ausnahme:" %}</p>
-<p>{% trans "Ist bei Bearbeitung die Option #[Offset ausgeben]# aktiv, so werden die Offsetwerte in die NC-Daten ausgegeben." %}</p>
-<p>{% trans "Das Feld [Offset] zeigt mit welchem Offsetregister ein Schnitt ausgeführt wird." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    编辑（技术数据库）
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    打开另一个对话框，显示分配给所选材料的切割次数、偏移量、偏移寄存器以及当前级别。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    注意：该对话框可能因 NC 机床而异。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="TEC_DAT3.gif" border="0" height="449" src="../TEC_DAT3.gif" width="270"/>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     偏移量
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    字段
+   </font>
+   <font style="vertical-align: inherit;">
+    仅用于直观地说明模拟中的偏移。
+   </font>
+   <font style="vertical-align: inherit;">
+    然而，有一个例外：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <a href="Offset_ausgeben_Std_Konturbea.htm">
+   <font class="hcp2">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      如果加工期间输出偏移
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项处于
+   </font>
+   <font style="vertical-align: inherit;">
+    活动状态，则偏移值将输出到 NC 数据中。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     偏移
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    字段
+   </font>
+   <font style="vertical-align: inherit;">
+    显示使用哪个偏移寄存器来执行剪切。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}
