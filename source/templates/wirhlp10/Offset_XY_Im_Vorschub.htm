@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,12 +33,95 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Offset" %}</p><p>{% trans "Dieser Dialogbereich ist nur für bestimmte NC-Maschinen freigeschaltet." %}</p>
-<p>{% trans "Die Option [Offset am Start zustellen] legt fest, dass die Radiuskorrektur (Offset) am Beginn der Verfahrbewegung eingeschaltet wird." %}</p>
-<p>{% trans "Der Offset kann [links] oder [rechts] bezogen auf die Schnittrichtung eingestellt werden." %}</p>
-<p>{% trans "Die Option [Offset am Ende aufheben] schaltet die Radiuskorrektur (Offset) vor der nächsten Verfahrbewegung aus." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p><img src="../offset_cut.gif" alt="offset_cut.gif" width="534" height="201" border="0"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    抵消
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该对话框区域仅针对某些 NC 机床激活。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     开始时传送偏移
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项
+   </font>
+   <font style="vertical-align: inherit;">
+    指定在运行运动开始时打开半径校正（偏移）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    可以将偏移
+   </font>
+   <font style="vertical-align: inherit;">
+    设置为相对于切割方向
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     向左
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     向右。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     结束时取消偏移
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项
+   </font>
+   <font style="vertical-align: inherit;">
+    可在下一次移动之前关闭半径修正（偏移）。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <img alt="偏移切割.gif" border="0" height="201" src="../offset_cut.gif" width="534"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

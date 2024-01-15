@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,20 +35,123 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Obere / Untere Führung" %}</p><p>{% trans "Hier wird die Z-Höhe der [oberen] Drahtführung eingegeben. Der Befehl hat die Aufgabe, bei konischen oder Regelflächenbearbeitungen den Drahtauslenkungswinkel zu berechnen." %}</p><p>{% trans "Der Drahtauslenkungswinkel wird bei einer Programmsimulation angezeigt." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../auslenk.gif" alt="auslenk.gif" width="534" height="103" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Wird kein Wert angegeben, rechnet das System mit den Angaben für die [#Referenzhoehe#] und [#Sekundärhöhe#]." %}</p>
-<p>{% trans "Für einfache Bearbeitungen bei denen die Drahtauslenkung gering ist, kann der Wert für die obere und untere Führung mit den Werten für Referenzhöhe und Sekundärebene identisch sein." %}</p>
-<p>{% trans "Wenn sich die Drahtauslenkung jedoch den Maschinengrenzen nähert, ist es ratsam die wirkliche Höhe der oberen und unteren Führung einzugeben, damit die maximale Drahtauslenkung korrekt berechnet werden kann. Winkelüberschreitungen werden bei einer #[Bearbeitungssimulation]# gekennzeichnet." %}</p>
-<script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    上级/下级领导
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此处输入
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     上部
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    导丝器的 Z 高度。
+   </font>
+   <font style="vertical-align: inherit;">
+    该命令的任务是计算圆锥形或直纹表面加工的线偏转角度。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    线偏转角度在程序模拟期间显示。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="偏转.gif" border="0" height="103" src="../auslenk.gif" width="534"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果未指定值，系统将根据
+   </font>
+  </font>
+  <font class="hcp1">
+   <a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('Referenzhoehe.htm',400,300);return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      参考高度
+     </font>
+    </font>
+   </a>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <font class="hcp1">
+   <a class="BSSCPopup" href="javascript:void(0);" id="a2" onclick="BSSCPopup('Sekundaerebene.htm',400,300);return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      辅助高度
+     </font>
+    </font>
+   </a>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    的信息进行计算。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对于线材挠度较小的简单加工，上下引导值可与参考高度和二次平面值相同。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    但是，如果焊丝偏转接近机器极限，建议输入上导轨和下导轨的实际高度，以便可以正确计算最大焊丝偏转。
+   </font>
+  </font>
+  <a href="../Simulation/_Standard_Simulation.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      在加工模拟过程
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    中会标记角度违规
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
         if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
         FilePopupInit('a1');
         FilePopupInit('a2');
-//]]&gt;
-</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,68 +35,310 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Regelflächenbearbeitung" %}</p><p>{% trans "Die Regelflächenbearbeitung wird verwendet, wenn die Geometrie der oberen und die Geometrie der unteren Ebene eines Werkstückes unterschiedlich sind und eine Konturbearbeitung mit einfacher oder variabler Konik nicht angewendet werden kann." %}</p><p>{% trans "Es wird für die untere Ebene und die obere Ebene jeweils eine Bearbeitungsfigur erzeugt und diese anschließend mit dem Befehl [Regelflächenbearbeitung] bearbeitet." %}</p>
-<p class="hcp2"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp2"> </p>
-<p><img src="../REGELFL1_shg.gif" usemap="#AreaMap0" alt="REGELFL1_shg.gif" width="607" height="562" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="10, 154, 117, 177" href="javascript:BSSCPopup('Ebene_variabel.htm',400,500);" id="area1" alt=""/>
-<area shape="rect" coords="337, 37, 426, 58" href="NURB_Surface_Lasche.htm" alt=""/>
-<area shape="rect" coords="290, 211, 520, 231" href="Proportionale_Synchronisation.htm" alt=""/>
-<area shape="rect" coords="294, 230, 425, 249" href="javascript:BSSCPopup('Synchronisationslinien_in_dialog_Regelflaeche.htm',400,500);" id="area2" alt=""/>
-<area shape="rect" coords="294, 248, 426, 266" href="javascript:BSSCPopup('Zeige_alle_Figuren.htm',400,500);" id="area3" alt=""/>
-<area shape="rect" coords="290, 294, 587, 336" href="Praezision_der_Regelflaeche.htm" alt=""/>
-<area shape="rect" coords="11, 112, 268, 154" href="javascript:BSSCPopup('Untere_Ebene.htm',400,500);" id="area4" alt=""/>
-<area shape="rect" coords="9, 41, 274, 81" href="javascript:BSSCPopup('Obere_Ebene.htm',400,500);" id="area5" alt=""/>
-<area shape="rect" coords="289, 335, 574, 421" href="javascript:BSSCPopup('Ebenen_Berechnung.htm',400,500);" id="area6" alt=""/>
-<area shape="rect" coords="145, 461, 261, 486" href="Einstellungen_Button_Regelflaechenbearbeitung.htm" alt=""/>
-<area shape="rect" coords="293, 486, 422, 510" href="javascript:BSSCPopup('Kurzhilfen_anzeigen.htm',400,300);" alt="" id="area22"/>
-<area shape="rect" coords="11, 85, 220, 108" href="javascript:BSSCPopup('Ebene_variabel.htm',400,500);" id="area7" alt=""/>
-<area shape="rect" coords="434, 524, 560, 549" href="javascript:BSSCPopup('Eingaben_speichern_Regelflaeche.htm',400,300);" id="area8" alt=""/>
-<area shape="rect" coords="44, 525, 169, 548" href="javascript:BSSCPopup('OK_Button_Regelflaeche_schneiden.htm',400,300);" id="area9" alt=""/>
-<area shape="rect" coords="137, 156, 262, 187" href="Hoehe_untere_Ebene.htm" alt=""/>
-<area shape="rect" coords="6, 217, 263, 302" href="Abstand_der_Ebenen.htm" alt=""/>
-<area shape="rect" coords="7, 311, 181, 354" href="javascript:BSSCPopup('Schnittschemen.htm',400,600);" id="area10" alt=""/>
-<area shape="rect" coords="189, 326, 263, 351" href="Schnittschema_laden_speichern.htm" id="area11" alt=""/>
-<area shape="rect" coords="291, 130, 460, 151" href="javascript:BSSCPopup('Autom__Einfaedeln_Abschneiden.htm',400,500);" id="area13" alt=""/>
-<area shape="rect" coords="293, 153, 494, 192" href="javascript:BSSCPopup('Mit_Bearbeitung.htm',400,500);" id="area14" alt=""/>
-<area shape="rect" coords="436, 249, 583, 268" href="javascript:BSSCPopup('Alle_Figuren_bearbeiten_Regelflaeche.htm',400,600);" id="area15" alt=""/>
-<area shape="rect" coords="294, 269, 428, 287" href="javascript:BSSCPopup('Schraeg_einfaedeln_Regelflaeche.htm',400,300);" id="area16" alt=""/>
-<area shape="rect" coords="295, 466, 414, 488" href="javascript:BSSCPopup('Operation_rendern.htm',400,500);" id="area17" alt=""/>
-<area shape="rect" coords="300, 443, 485, 470" href="javascript:BSSCPopup('Rendern_Farbe_Material_Listbox.htm',400,300);" id="area18" alt=""/>
-<area shape="rect" coords="307, 522, 433, 546" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area19" alt=""/>
-<area shape="rect" coords="176, 521, 302, 545" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area20" alt=""/>
-<area shape="rect" coords="17, 358, 272, 438" href="Technologie_STD_Konturbearbeitung.htm" alt=""/>
-<area shape="rect" coords="4, 191, 128, 215" href="javascript:BSSCPopup('Nur_Figuren_waehlbar.htm',400,500);" id="area21" alt=""/>
-<area shape="rect" coords="287, 66, 586, 116" href="Eigene_Operationsbeschreibung_Regelflaeche.htm" alt=""/>
-</map>  </p>
-<p class="hcp2"> </p>
-<p>{% trans "In vielen Fällen ist es jedoch erforderlich, #[Synchronisationslinien]# in die Regelflächengeometrie einzufügen, bevor diese bearbeitet werden kann." %}</p>
-<p>{% trans "Auch in den einfachsten Fällen gibt es oft mehrere mögliche Lösungen, so dass nur durch das Zeichnen von Synchronisationslinien eine eindeutige Regelfläche entsteht." %}</p>
-<p>{% trans "Die folgende Zeichnung soll dies verdeutlichen. Je nach Lage der Synchronisationslinien ergeben sich konische oder zylindrische ISO-Radien." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../KUR1.gif" alt="KUR1.gif" width="576" height="310" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Bei symmetrischen Teilen kann häufig auf Synchronisationslinien verzichtet werden (siehe folgende Zeichnung)." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../CONSTR1.gif" alt="CONSTR1.gif" width="457" height="353" border="0"/></p>
-<p class="hcp2"> </p>
-<p class="Block_Text">{% trans "Die vorige Zeichnung zeigt eine Ellipse aus 40 Geometrieelementen, die durch eine Regelflächenbearbeitung mit der inneren Figur bestehend aus 16 Elementen verbunden wurde." %}</p>
-<p class="Block_Text">{% trans "Die Regelfläche wurde OHNE Synchronisationslinien erzeugt." %}</p>
-<p>{% trans "Wenn das Ergebnis einer Regelflächenbearbeitung OHNE Synchronisationslinien nicht befriedigend ist, so können Sie [Synchronisationslinien auch nachträglich] einfügen." %}</p>
-<p>{% trans "Synchronisationslinien erzeugt man mit dem Befehl #[Synchronisationslinien]# im Menü #[Vorbereitung]#." %}</p>
-<p class="hcp2"> </p>
-<p style="text-align: justify;">{% trans "[So wird es gemacht:]" %}</p>
-<p>{% trans "#[Regelfläche ohne Synchronisationslinien erodieren]#" %}</p>
-<p>{% trans "#[Regelfläche mit Synchronisationslinien erodieren]#" %}</p>
-<p>{% trans "#[Regelfläche mit einem variablen Höhenprofil erodieren]#" %}</p>
-<p style="text-align: justify; font-weight: bold;">{% trans "#Regelflächen in mehreren Schnittebenen schneiden#" %}</p>
-<p>{% trans "[@] #[Zeige Beispielfilm Regelflächenbearbeitung]#" %}</p>
-<p>{% trans "[@] #[Zeige Beispielfilm Synchronisationslinien für Regelfläche erzeugen]#" %}</p>
-<p> </p>
-<p> </p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; 
+	 border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <img alt="规则.gif" border="0" height="26" src="../Rule.gif" width="29"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    直纹面加工
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    当工件的上下平面的几何形状不同且无法使用简单或变锥度的轮廓加工时，使用直纹面加工。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    为下层和上层创建加工图形，然后使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     直纹表面处理
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令对这些图形进行加工 
+ 。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="REGELFL1_shg.gif" border="0" height="562" src="../REGELFL1_shg.gif" usemap="#AreaMap0" width="607"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="10, 154, 117, 177" href="javascript:BSSCPopup('Ebene_variabel.htm',400,500);" id="area1" shape="rect"/>
+   <area alt="" coords="337, 37, 426, 58" href="NURB_Surface_Lasche.htm" shape="rect"/>
+   <area alt="" coords="290, 211, 520, 231" href="Proportionale_Synchronisation.htm" shape="rect"/>
+   <area alt="" coords="294, 230, 425, 249" href="javascript:BSSCPopup('Synchronisationslinien_in_dialog_Regelflaeche.htm',400,500);" id="area2" shape="rect"/>
+   <area alt="" coords="294, 248, 426, 266" href="javascript:BSSCPopup('Zeige_alle_Figuren.htm',400,500);" id="area3" shape="rect"/>
+   <area alt="" coords="290, 294, 587, 336" href="Praezision_der_Regelflaeche.htm" shape="rect"/>
+   <area alt="" coords="11, 112, 268, 154" href="javascript:BSSCPopup('Untere_Ebene.htm',400,500);" id="area4" shape="rect"/>
+   <area alt="" coords="9, 41, 274, 81" href="javascript:BSSCPopup('Obere_Ebene.htm',400,500);" id="area5" shape="rect"/>
+   <area alt="" coords="289, 335, 574, 421" href="javascript:BSSCPopup('Ebenen_Berechnung.htm',400,500);" id="area6" shape="rect"/>
+   <area alt="" coords="145, 461, 261, 486" href="Einstellungen_Button_Regelflaechenbearbeitung.htm" shape="rect"/>
+   <area alt="" coords="293, 486, 422, 510" href="javascript:BSSCPopup('Kurzhilfen_anzeigen.htm',400,300);" id="area22" shape="rect"/>
+   <area alt="" coords="11, 85, 220, 108" href="javascript:BSSCPopup('Ebene_variabel.htm',400,500);" id="area7" shape="rect"/>
+   <area alt="" coords="434, 524, 560, 549" href="javascript:BSSCPopup('Eingaben_speichern_Regelflaeche.htm',400,300);" id="area8" shape="rect"/>
+   <area alt="" coords="44, 525, 169, 548" href="javascript:BSSCPopup('OK_Button_Regelflaeche_schneiden.htm',400,300);" id="area9" shape="rect"/>
+   <area alt="" coords="137, 156, 262, 187" href="Hoehe_untere_Ebene.htm" shape="rect"/>
+   <area alt="" coords="6, 217, 263, 302" href="Abstand_der_Ebenen.htm" shape="rect"/>
+   <area alt="" coords="7, 311, 181, 354" href="javascript:BSSCPopup('Schnittschemen.htm',400,600);" id="area10" shape="rect"/>
+   <area alt="" coords="189, 326, 263, 351" href="Schnittschema_laden_speichern.htm" id="area11" shape="rect"/>
+   <area alt="" coords="291, 130, 460, 151" href="javascript:BSSCPopup('Autom__Einfaedeln_Abschneiden.htm',400,500);" id="area13" shape="rect"/>
+   <area alt="" coords="293, 153, 494, 192" href="javascript:BSSCPopup('Mit_Bearbeitung.htm',400,500);" id="area14" shape="rect"/>
+   <area alt="" coords="436, 249, 583, 268" href="javascript:BSSCPopup('Alle_Figuren_bearbeiten_Regelflaeche.htm',400,600);" id="area15" shape="rect"/>
+   <area alt="" coords="294, 269, 428, 287" href="javascript:BSSCPopup('Schraeg_einfaedeln_Regelflaeche.htm',400,300);" id="area16" shape="rect"/>
+   <area alt="" coords="295, 466, 414, 488" href="javascript:BSSCPopup('Operation_rendern.htm',400,500);" id="area17" shape="rect"/>
+   <area alt="" coords="300, 443, 485, 470" href="javascript:BSSCPopup('Rendern_Farbe_Material_Listbox.htm',400,300);" id="area18" shape="rect"/>
+   <area alt="" coords="307, 522, 433, 546" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area19" shape="rect"/>
+   <area alt="" coords="176, 521, 302, 545" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area20" shape="rect"/>
+   <area alt="" coords="17, 358, 272, 438" href="Technologie_STD_Konturbearbeitung.htm" shape="rect"/>
+   <area alt="" coords="4, 191, 128, 215" href="javascript:BSSCPopup('Nur_Figuren_waehlbar.htm',400,500);" id="area21" shape="rect"/>
+   <area alt="" coords="287, 66, 586, 116" href="Eigene_Operationsbeschreibung_Regelflaeche.htm" shape="rect"/>
+  </map>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    然而，在许多情况下，需要先将
+   </font>
+  </font>
+  <a href="../wirhlp9/Synchronisationslinien.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      同步线
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    插入直纹曲面几何图形中，然后才能对其进行编辑。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    即使在最简单的情况下，也常常有几种可能的解决方案，因此只能通过绘制同步线来创建清晰的受控面。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图应该可以清楚地说明这一点。
+   </font>
+   <font style="vertical-align: inherit;">
+    根据同步线的位置，会产生圆锥形或圆柱形 ISO 半径。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="KUR1.gif" border="0" height="310" src="../KUR1.gif" width="576"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对于对称零件，通常可以省去同步线（参见下图）。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="CONSTR1.gif" border="0" height="353" src="../CONSTR1.gif" width="457"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    上图显示了一个由40个几何元素组成的椭圆，通过直纹曲面处理将其与由16个元素组成的内部图形连接起来。
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    创建直纹面时没有同步线。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果加工不带同步线的直纹面的结果不令人满意，也可以稍后
+   </font>
+   <font style="vertical-align: inherit;">
+    插入
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     同步线。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    同步线是使用
+   </font>
+   <a href="../wirhlp9/Das_Vorbereitungs_Menue.htm">
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      “准备”
+     </font>
+    </font>
+   </a>
+   <font style="vertical-align: inherit;">
+    菜单 
+ 中的
+   </font>
+  </font>
+  <a href="../wirhlp9/Synchronisationslinien.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      “同步线”
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令创建的。
+   </font>
+  </font>
+  <a href="../wirhlp9/Das_Vorbereitungs_Menue.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p style="text-align: justify;">
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     它是这样完成的：
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <a href="Beispiel_Regelflaeche_ohne_Synchronisationslinien_erodieren.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      腐蚀直纹面，无需同步线
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+  <a href="Beispiel_Regelflaeche_mit_Synchronisationslinien_erodieren.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      用同步线侵蚀直纹面
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+  <a href="../wirhlp9/Beispiel_Variables_Hoehenprofil_erodieren.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      具有可变高度轮廓的侵蚀受控表面
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p style="text-align: justify; font-weight: bold;">
+  <a href="Regelflaechen_in_mehreren_Schnittebenen_schneiden.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     在多个切割平面中切割直纹曲面
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+  <font class="hcp1">
+   <img alt="电影.gif" border="0" height="27" src="../MOVIE.gif" width="27"/>
+  </font>
+  <a href="../Videos/Video__Regelflaeche_ohne_Synchronisationslinien_V8.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      显示直纹面加工示例影片
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+  <font class="hcp1">
+   <img alt="电影.gif" border="0" height="27" src="../MOVIE.gif" width="27"/>
+  </font>
+  <a href="../Videos/Video__Synchronisationslinien_fuer_Regelflaeche_erzeugen_V8.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      显示为直纹曲面创建同步线的示例影片
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+ </p>
+ <p>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('area1');
 	FilePopupInit('area2');
@@ -119,7 +360,9 @@
 	FilePopupInit('area19');
 	FilePopupInit('area20');
 	FilePopupInit('area21');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

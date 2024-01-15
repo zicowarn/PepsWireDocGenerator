@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -37,55 +36,778 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Regelflächen in mehreren Schnittebenen schneiden" %}</p><p>{% trans "Schnittebenen werden dann angewendet, wenn die Werkstückhöhe die physikalischen Grenzen der NC-Maschine überschreitet oder die maximal mögliche Drahtauslenkung überschritten wird." %}</p>
-<p>{% trans "In solchen Fällen wird das Werkstück aus mehreren Schnittplatten, die nacheinander geschnitten werden, zusammengebaut. Jede Schnittplatte wird dabei als separate Schnittebene betrachtet." %}</p>
-<p>{% trans "Die folgende Zeichnung zeigt ein 60 mm hohes Werkstück das in 3 Schnittplatten(ebenen) aufgeteilt ist." %}</p>
-<p>{% trans "In dem Beispiel wird angenommen, dass nur die Geometrie der unteren und obere Ebene (d.h. Z0 und Z60) bekannt sind." %}</p>
-<p> </p>
-<p class="Tip_Note_Heading">{% trans "Regelfläche in mehreren Schnittebenen schneiden:" %}</p>
-<p class="hcp1"> </p>
-<p><img src="../RULESEC.gif" alt="RULESEC.gif" width="457" height="217" border="0"/></p>
-<p>{% trans "[Schnitt 1] bearbeiten" %}</p>
-<ul>
-	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Starten Sie eine Operation mit [Operation starten]" %}</p></li>
-	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Definieren Sie die [Referenzhöhe] auf [0] und die [Sekundärebene] auf [20] mm." %}</p></li>
-	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Bearbeiten Sie die Regelfläche mit:" %}</p></li>
-</ul>
-<p>{% trans "[Höhe untere Ebene] = [0] und" %}</p>
-<p class="Topic_Text_Bulleted" style="margin-left: 5.75pt;">{% trans "[ Abstand der Ebenen] [[=] 60]" %}</p>
-<ul>
-	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Im Feld [Ebenen Berechnung] geben Sie bitte ein:" %}</p></li>
-</ul>
-<p>{% trans "[Starthöhe] = [0]" %}</p>
-<p>{% trans "[Endhöhe] = [60] und [Anzahl Ebenen] = [4]" %}</p>
-<p class="hcp1"> </p>
-<p>{% trans "[Schnitt 2] bearbeiten" %}</p>
-<ul>
-	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Starten Sie eine Operation mit [Operation starten]" %}</p></li>
-	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Definieren Sie die [Referenzhöhe] auf [0] und die [Sekundärebene] auf [20] mm." %}</p></li>
-	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Bearbeiten Sie die Regelfläche mit:" %}</p></li>
-</ul>
-<p>{% trans "[Höhe untere Ebene] = -[20] und" %}</p>
-<p>{% trans "[Abstand der Ebenen] = [60]" %}</p>
-<ul>
-	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Im Feld [Ebenen Berechnung] geben Sie bitte ein:" %}</p></li>
-</ul>
-<p>{% trans "[Starthöhe] = [0]" %}</p>
-<p>{% trans "[Endhöhe] = [60] und [Anzahl Ebenen] = [4]" %}</p>
-<p class="hcp1"> </p>
-<p>{% trans "[Schnitt 3] bearbeiten" %}</p>
-<ul>
-	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Starten Sie eine weitere Operation mit [Operation starten]" %}</p></li>
-	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Definieren Sie die [Referenzhöhe] auf [0] und die [Sekundärebene] auf [20] mm." %}</p></li>
-	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Bearbeiten Sie die Regelfläche mit:" %}</p></li>
-</ul>
-<p>{% trans "[Höhe untere Ebene] = -[40] und" %}</p>
-<p>{% trans "[Abstand der Ebenen] = [60]" %}</p>
-<ul>
-	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Im Feld [Ebenen Berechnung] geben Sie bitte ein:" %}</p></li>
-</ul>
-<p>{% trans "[Starthöhe] = [0]" %}</p>
-<p>{% trans "[Endhöhe] = [60] und [Anzahl Ebenen] = [4]" %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在多个切割平面中切割直纹曲面
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    当工件高度超过 NC 机床的物理极限或超过最大可能的线偏转时，使用切割平面。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在这种情况下，工件由多个切割面板组装而成，这些面板被一个接一个地切割。
+   </font>
+   <font style="vertical-align: inherit;">
+    每个切割板被视为一个单独的切割平面。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图显示了一个 60 毫米高的工件，该工件被分为 3 个切割板（层）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该示例假设仅知道下层和上层（即 Z0 和 Z60）的几何形状。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在多个切割平面中切割直纹曲面：
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="规则SEC.gif" border="0" height="217" src="../RULESEC.gif" width="457"/>
+ </p>
+ <p>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    编辑
+   </font>
+   <font class="hcp2">
+    <font style="vertical-align: inherit;">
+     剪辑1
+    </font>
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      通过
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       开始操作开始操作
+      </font>
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       将参考高度
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      定义
+     </font>
+     <font style="vertical-align: inherit;">
+      为
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       0
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      ，将
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       辅助平面
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      定义 
+	 为
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       20
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      mm。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      使用以下命令编辑直纹曲面：
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     下层高度
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    =
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     0
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    且
+   </font>
+  </font>
+ </p>
+ <p class="Topic_Text_Bulleted" style="margin-left: 5.75pt;">
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     级别之间的距离
+    </font>
+   </font>
+  </font>
+  <font class="hcp2">
+   <span style="font-weight: normal;">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      =
+     </font>
+    </font>
+   </span>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     60
+    </font>
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       在级别计算
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      字段中，
+     </font>
+     <font style="vertical-align: inherit;">
+      请输入：
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     起始高度
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    =
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     0
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     最终高度
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    =
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     60
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     层数
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    =
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     4
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    编辑
+   </font>
+   <font class="hcp2">
+    <font style="vertical-align: inherit;">
+     剪辑2
+    </font>
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      通过
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       开始操作开始操作
+      </font>
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       将参考高度
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      定义
+     </font>
+     <font style="vertical-align: inherit;">
+      为
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       0
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      ，将
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       辅助平面
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      定义 
+	 为
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       20
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      mm。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      使用以下命令编辑直纹曲面：
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     下层高度
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    = -
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     20
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    且
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     级别之间的距离
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    =
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     60
+    </font>
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       在级别计算
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      字段中，
+     </font>
+     <font style="vertical-align: inherit;">
+      请输入：
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     起始高度
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    =
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     0
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     最终高度
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    =
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     60
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     层数
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    =
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     4
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    编辑
+   </font>
+   <font class="hcp2">
+    <font style="vertical-align: inherit;">
+     剪辑3
+    </font>
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       使用开始操作
+      </font>
+     </font>
+     <font style="vertical-align: inherit;">
+      开始另一个操作
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       将参考高度
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      定义
+     </font>
+     <font style="vertical-align: inherit;">
+      为
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       0
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      ，将
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       辅助平面
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      定义 
+	 为
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       20
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      mm。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      使用以下命令编辑直纹曲面：
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     下层高度
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    = -
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     40
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    且
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     级别之间的距离
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    =
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     60
+    </font>
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       在级别计算
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      字段中，
+     </font>
+     <font style="vertical-align: inherit;">
+      请输入：
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     起始高度
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    =
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     0
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     最终高度
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    =
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     60
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     层数
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    =
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     4
+    </font>
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

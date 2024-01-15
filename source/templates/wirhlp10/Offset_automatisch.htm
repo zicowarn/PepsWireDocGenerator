@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,9 +33,64 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Offset wie Figurrichtung" %}</p><p>{% trans "Wählen Sie diese Option, wenn das System das [Offset automatisch] auf der [Basis der Richtung der Figur] berechnen soll." %}</p>
-<p>{% trans "Dies geschieht durch Prüfung der Lage der Startposition (innen oder außen) und Ermitteln der Richtung der Bearbeitungsfigur." %}</p>
-<p>{% trans "Diese Funktion kann nur bei geschlossenen Umrissen verwendet werden. Eine automatische Richtungsänderung der Figur findet nicht statt." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    像图形方向一样偏移
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果您希望系统
+   </font>
+   <font style="vertical-align: inherit;">
+    根据
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     图形的方向
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     自动计算偏移，
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    请选择此选项。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这是通过检查起始位置（内部或外部）的位置并确定加工图形的方向来完成的。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此功能只能用于闭合轮廓。
+   </font>
+   <font style="vertical-align: inherit;">
+    图形的方向不会自动改变。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

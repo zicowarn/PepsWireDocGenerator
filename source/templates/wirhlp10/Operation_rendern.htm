@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,10 +28,33 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Operation rendern" %}</p><p>{% trans "Ist diese Checkbox aktiviert, stellt das System die Grafik der NC-Bearbeitung schattiert dar." %}</p>
-<p>{% trans "Die schattierte Darstellung kommt besonders gut zur Geltung, wenn Sie in die XYZ-Ansicht wechseln." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p><img src="../Render_Operation.gif" alt="Render_Operation.gif" width="597" height="309" border="0"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    渲染操作
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果激活此复选框，系统将显示带阴影的 NC 加工图形。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    当您切换到 XYZ 视图时，阴影显示特别有效。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <img alt="渲染_操作.gif" border="0" height="309" src="../Render_Operation.gif" width="597"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

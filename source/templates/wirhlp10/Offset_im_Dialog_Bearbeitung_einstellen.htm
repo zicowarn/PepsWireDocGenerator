@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -38,27 +37,220 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Offset (im Dialog: Bearbeitung einstellen)" %}</p><p>{% trans "Die Eingabefelder unterhalb [Offset] im Dialog [Bearbeitung einstellen] haben drei Aufgaben:" %}</p><p class="hcp2"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp2"> </p>
-<p><img src="../OFFSET_shg.gif" usemap="#AreaMap0" alt="OFFSET_shg.gif" width="185" height="113" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="130, 2, 182, 114" href="javascript:BSSCPopup('Offset_im_Dialog_Bearbeitung_einstellen.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="86, 1, 130, 113" href="javascript:BSSCPopup('Ecken_Strategie.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="46, 1, 88, 113" href="javascript:BSSCPopup('Mit_Konik.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="2, 0, 46, 113" href="javascript:BSSCPopup('Schnitt_Nr_123.htm',400,300);" id="area4" alt=""/>
-</map> </p>
-<p class="hcp2"> </p>
-<p>{% trans "1.) [Grafische Simulation [der]] einer Bearbeitung zugewiesenen [Offsetwerte]." %}</p>
-<p class="hcp3">{% trans "2.) [Ausgabe der Offsetwerte in die NC-Daten]. Die Offsetwerte werden jedoch nur dann in die NC-Daten ausgegeben, [w][enn die Checkbox #[Offset ausgeben]# aktiviert ist.]" %}</p>
-<p class="hcp3">{% trans "3.) Wird die Funktion #[Taschenerodieren]# verwendet, bestimmt der Eintrag im Feld [Offset] unter Schnitt 1die Größe des verbleibenden Schlichtaufmaßes nach dem Ausräumschnitt." %}</p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    偏移（在对话框中：设置处理）
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     “设置处理”
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    对话框中
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “偏移”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下方的输入字段
+   </font>
+   <font style="vertical-align: inherit;">
+    具有三个任务：
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="OFFSET_shg.gif" border="0" height="113" src="../OFFSET_shg.gif" usemap="#AreaMap0" width="185"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="130, 2, 182, 114" href="javascript:BSSCPopup('Offset_im_Dialog_Bearbeitung_einstellen.htm',400,300);" id="area1" shape="rect"/>
+   <area alt="" coords="86, 1, 130, 113" href="javascript:BSSCPopup('Ecken_Strategie.htm',400,300);" id="area2" shape="rect"/>
+   <area alt="" coords="46, 1, 88, 113" href="javascript:BSSCPopup('Mit_Konik.htm',400,300);" id="area3" shape="rect"/>
+   <area alt="" coords="2, 0, 46, 113" href="javascript:BSSCPopup('Schnitt_Nr_123.htm',400,300);" id="area4" shape="rect"/>
+  </map>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    1.)
+   </font>
+   <font style="vertical-align: inherit;">
+    分配给加工的
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     偏置值
+    </font>
+   </font>
+   <font class="hcp1">
+    <span style="font-weight: normal;">
+     <font style="vertical-align: inherit;">
+      的
+     </font>
+    </span>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     图形模拟
+    </font>
+   </font>
+   <span style="font-weight: normal;">
+    <font style="vertical-align: inherit;">
+    </font>
+   </span>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="hcp3">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    2.)
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     NC数据中的偏置值的输出
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <span>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     但是，如果激活了
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <span>
+    <a href="Offset_ausgeben_Std_Konturbea.htm">
+     <font class="hcp1">
+      <font style="vertical-align: inherit;">
+       输出偏移
+      </font>
+     </font>
+    </a>
+   </span>
+   <span>
+    <font style="vertical-align: inherit;">
+     复选框
+    </font>
+   </span>
+   <font style="vertical-align: inherit;">
+    ，则偏移值仅在 NC 数据中输出
+   </font>
+   <span>
+    <font style="vertical-align: inherit;">
+     。
+    </font>
+   </span>
+  </font>
+  <span>
+   <font style="vertical-align: inherit;">
+   </font>
+   <a href="Offset_ausgeben_Std_Konturbea.htm">
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+     </font>
+    </font>
+   </a>
+   <font style="vertical-align: inherit;">
+   </font>
+  </span>
+ </p>
+ <p class="hcp3">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    3.) 如果 
+ 使用
+   </font>
+  </font>
+  <a href="Taschenerodieren_1.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      型腔腐蚀
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     功能，则“切削 1”下“偏移”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    字段中的条目
+   </font>
+   <font style="vertical-align: inherit;">
+    将确定清切削后剩余精加工余量的大小。
+   </font>
+  </font>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('area1');
 	FilePopupInit('area2');
 	FilePopupInit('area3');
 	FilePopupInit('area4');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

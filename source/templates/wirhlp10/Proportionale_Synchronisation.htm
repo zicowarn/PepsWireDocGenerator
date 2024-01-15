@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -38,20 +37,130 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Proportionale Synchronisation" %}</p><p>{% trans "Bei der Regelflächenbearbeitung erfolgt die Synchronisation der Regelfläche zunächst automatisch." %}</p>
-<p>{% trans "Dies geschieht, indem das System den Umfang der unteren Figur, mit dem Umfang der oberen Figur ins Verhältnis setzt und intern Synchronisationslinien setzt." %}</p>
-<p>{% trans "Dies kann jedoch in einigen Fällen zu unbefriedigenden Ergebnissen führen." %}</p>
-<p>{% trans "Eine einfache Regelfläche bestehend aus zwei Figuren, mit jeweils vier Elementen, soll dies erläutern." %}</p>
-<p class="hcp1"> </p>
-<p><img src="../sych_eq1.gif" alt="sych_eq1.gif" width="193" height="170" border="0"/></p>
-<p class="hcp1"> </p>
-<p>{% trans "Ist die Option [Proportionale Synchronisation] [aktiviert], erfolgt eine proportionale Synchronisation:" %}</p>
-<p class="hcp1"> </p>
-<p><img src="../sych_eq2.gif" alt="sych_eq2.gif" width="196" height="178" border="0"/></p>
-<p class="hcp1"> </p>
-<p>{% trans "Ist die Option [Proportionale Synchronisation] [nicht] [aktiviert], wird intern von Elementende zu Elementende, eine Synchronisationslinie gelegt:" %}</p>
-<p class="hcp1"> </p>
-<p><img src="../sych_eq3.gif" alt="sych_eq3.gif" width="195" height="181" border="0"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    比例同步
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    处理直纹曲面时，最初会自动进行直纹曲面的同步。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这是通过系统将下图的周长与上图的周长相关联并在内部设置同步线来完成的。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    然而，在某些情况下，这可能会导致不令人满意的结果。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一个由两个图形组成的简单直纹曲面，每个图形有四个元素，应该可以解释这一点。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="sych_eq1.gif" border="0" height="170" src="../sych_eq1.gif" width="193"/>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font class="hcp3">
+    <font style="vertical-align: inherit;">
+     如果激活
+    </font>
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     比例同步
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项
+   </font>
+   <font style="vertical-align: inherit;">
+    ，则会发生比例同步：
+   </font>
+  </font>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="sych_eq2.gif" border="0" height="178" src="../sych_eq2.gif" width="196"/>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="font-weight: bold; font-style: italic; text-decoration: underline;">
+    <font style="vertical-align: inherit;">
+     如果未
+    </font>
+   </font>
+   <font class="hcp3">
+    <font style="vertical-align: inherit;">
+     激活
+    </font>
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “比例同步”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项
+   </font>
+   <font style="vertical-align: inherit;">
+    ，则会在内部从元件末端到元件末端铺设一条同步线：
+   </font>
+  </font>
+  <font style="font-weight: bold; font-style: italic; text-decoration: underline;">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="sych_eq3.gif" border="0" height="181" src="../sych_eq3.gif" width="195"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

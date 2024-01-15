@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,30 +35,154 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Passwort Schutz für die Schaltfläche Eingaben speichern" %}</p><p>{% trans "Die meisten Systemeinstellungen können mit der Schaltfläche [Einstellungen] [speichern] als Systemvorgaben abgespeichert werden." %}</p><p>{% trans "Diese Einstellungen verändert die Funktionsweise der Software und können die NC-Ausgabe beeinflussen." %}</p>
-<p>{% trans "Es ist deshalb gefährlich, die Systemeinstellungen unkontrolliert zu verändern. Aus oben genannten Gründen wurde das Verändern der Systemeinstellungen durch ein PASSWORT geschützt." %}</p>
-<p>{% trans "Die Systemvoreinstellungen werden normalerweise nur durch eine Person festgelegt." %}</p>
-<p>{% trans "Mit den Voreinstellungen sollten alle häufig vorkommenden Programmieraufgaben gelöst werden." %}</p>
-<p>{% trans "Ist eine gelegentliche Veränderung der Systemvoreinstellung notwendig, so kann dies lokal in dem Dialog geschehen, OHNE die Systemvoreinstellungen zu verändern." %}</p>
-<p class="hcp2"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp2"> </p>
-<p><img src="../PASSWORD_shg.gif" usemap="#AreaMap0" alt="PASSWORD_shg.gif" width="325" height="232" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="6, 90, 321, 176" href="javascript:BSSCPopup('Passwort_aendern.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="83, 190, 156, 219" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="166, 191, 240, 214" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area3" alt=""/>
-</map> </p>
-<p class="hcp2"> </p>
-<p>{% trans "Müssen die Voreinstellungen jedoch generell neu festgelegt werden, so sollte das durch die Person geschehen, die das PASSWORT kennt und die Systemvoreinstellungen üblicherweise vornimmt." %}</p>
-<p>{% trans "Wurde kein eigenes Passwort vergeben (siehe [Passwort ändern]), gilt ein vom Hersteller voreingestelltes Passwort." %}</p>
-<p>{% trans "Wenn Sie das PASSWORT nicht kennen, wenden Sie sich bitte an Ihren Systemlieferanten oder den Hersteller [Camtek]." %}</p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    保存输入按钮的密码保护
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    大多数系统设置可以使用“保存
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     设置”按钮
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     保存
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    为系统默认值。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这些设置会改变软件的工作方式并影响 NC 输出。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    因此，以不受控制的方式更改系统设置是危险的。
+   </font>
+   <font style="vertical-align: inherit;">
+    由于上述原因，更改系统设置受到密码保护。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    系统首选项通常仅由一个人设置。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    所有常见的编程任务都应该使用默认设置来解决。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果需要偶尔更改系统默认设置，可以在对话框中本地完成此操作，而无需更改系统默认设置。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="PASSWORD_shg.gif" border="0" height="232" src="../PASSWORD_shg.gif" usemap="#AreaMap0" width="325"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="6, 90, 321, 176" href="javascript:BSSCPopup('Passwort_aendern.htm',400,300);" id="area1" shape="rect"/>
+   <area alt="" coords="83, 190, 156, 219" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area2" shape="rect"/>
+   <area alt="" coords="166, 191, 240, 214" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area3" shape="rect"/>
+  </map>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    然而，如果默认设置通常需要重新定义，则应由知道密码的人来完成，并且通常会进行系统默认设置。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果您尚未指定自己的密码（请参阅
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     更改密码
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ），则应用制造商预设的密码。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果您不知道密码，请联系您的系统供应商或制造商
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     Camtek
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('area1');
 	FilePopupInit('area2');
 	FilePopupInit('area3');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

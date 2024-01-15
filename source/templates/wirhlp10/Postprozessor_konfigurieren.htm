@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,35 +35,116 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Postprozessor konfigurieren" %}</p><p>{% trans "Mit diesem Befehl können Sie den verwendeten Postprozessor einstellen." %}</p><p>{% trans "Nach Wahl des Befehls wird ein Dialog aufgerufen, in dem Sie verschiedene Optionen frei schalten und Einstellungen tätigen können." %}</p>
-<p>{% trans "Die Optionen und Einstellungen sind je nach verwendeter NC-Maschine unterschiedlich." %}</p>
-<p class="hcp1"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp1"> </p>
-<p><img src="../PP_konfigurieren_Generell_shg.gif" usemap="#AreaMap0" alt="PP_konfigurieren_Generell_shg.gif" width="697" height="471" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="15, 41, 67, 59" href="NC_Ausgabe_Optionen_Postprozessor_konfigurieren_.htm" alt=""/>
-<area shape="rect" coords="68, 39, 179, 59" href="Simulation_Postprozessor_konfigurieren_.htm" alt=""/>
-<area shape="rect" coords="21, 66, 229, 176" href="javascript:BSSCPopup('Ausgabeeinheit_Postprozessor_konfigurieren.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="21, 174, 421, 231" href="javascript:BSSCPopup('Nachkommastellen_Postprozessor_konfigurieren.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="11, 229, 254, 331" href="javascript:BSSCPopup('Maschinenprofile_Postprozessor_konfigurieren.htm',400,600);" id="area3" alt=""/>
-<area shape="rect" coords="17, 332, 230, 398" href="javascript:BSSCPopup('Maschinenprofile_Postprozessor_konfigurieren.htm',400,600);" id="area4" alt=""/>
-<area shape="rect" coords="9, 441, 125, 465" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area5" alt=""/>
-<area shape="rect" coords="134, 442, 246, 462" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area6" alt=""/>
-<area shape="rect" coords="250, 439, 366, 461" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area7" alt=""/>
-<area shape="rect" coords="370, 441, 487, 462" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area8" alt=""/>
-<area shape="rect" coords="255, 288, 493, 347" href="Startlochdatei_ausgeben_Postprozessor_konfigurieren.htm" alt=""/>
-<area shape="rect" coords="256, 234, 502, 289" href="javascript:BSSCPopup('Einrichteblatt_ausgeben_Postprozessor_konfigurieren.htm',400,300);" id="area9" alt=""/>
-<area shape="rect" coords="182, 42, 241, 57" href="Simulation_Postprozessor_konfigurieren_.htm" alt=""/>
-</map> </p>
-<p class="hcp1"> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
-<p>{% trans "#[NC-Ausgabe für einen Maschinentyp anpassen]#" %}</p>
-<p class="Block_Text">{% trans "#[Ein Profil für einen Maschinentyp anlegen]#" %}</p>
-<p class="hcp1"> </p>
-<p class="Hinweis">{% trans "Hinweis:" %}</p>
-<p>{% trans "Die angezeigten Optionen können je nach verwendeter NC-Maschine unterschiedlich sein, dieses Hilfsystem beschreibt nur einige Beispiele." %}</p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; 
+	 border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <img alt="PP_配置.gif" border="0" height="30" src="../PP_Config.gif" width="33"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    配置后处理器
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用此命令您可以设置使用的后处理器。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选择命令后，将打开一个对话框，您可以在其中激活各种选项并进行设置。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项和设置因所使用的 NC 机床而异。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="PP_konfigurieren_General_shg.gif" border="0" height="471" src="../PP_konfigurieren_Generell_shg.gif" usemap="#AreaMap0" width="697"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="15, 41, 67, 59" href="NC_Ausgabe_Optionen_Postprozessor_konfigurieren_.htm" shape="rect"/>
+   <area alt="" coords="68, 39, 179, 59" href="Simulation_Postprozessor_konfigurieren_.htm" shape="rect"/>
+   <area alt="" coords="21, 66, 229, 176" href="javascript:BSSCPopup('Ausgabeeinheit_Postprozessor_konfigurieren.htm',400,300);" id="area1" shape="rect"/>
+   <area alt="" coords="21, 174, 421, 231" href="javascript:BSSCPopup('Nachkommastellen_Postprozessor_konfigurieren.htm',400,300);" id="area2" shape="rect"/>
+   <area alt="" coords="11, 229, 254, 331" href="javascript:BSSCPopup('Maschinenprofile_Postprozessor_konfigurieren.htm',400,600);" id="area3" shape="rect"/>
+   <area alt="" coords="17, 332, 230, 398" href="javascript:BSSCPopup('Maschinenprofile_Postprozessor_konfigurieren.htm',400,600);" id="area4" shape="rect"/>
+   <area alt="" coords="9, 441, 125, 465" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area5" shape="rect"/>
+   <area alt="" coords="134, 442, 246, 462" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area6" shape="rect"/>
+   <area alt="" coords="250, 439, 366, 461" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area7" shape="rect"/>
+   <area alt="" coords="370, 441, 487, 462" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area8" shape="rect"/>
+   <area alt="" coords="255, 288, 493, 347" href="Startlochdatei_ausgeben_Postprozessor_konfigurieren.htm" shape="rect"/>
+   <area alt="" coords="256, 234, 502, 289" href="javascript:BSSCPopup('Einrichteblatt_ausgeben_Postprozessor_konfigurieren.htm',400,300);" id="area9" shape="rect"/>
+   <area alt="" coords="182, 42, 241, 57" href="Simulation_Postprozessor_konfigurieren_.htm" shape="rect"/>
+  </map>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    它是这样完成的：
+   </font>
+  </font>
+ </p>
+ <p>
+  <a href="Beispiel_NC_Ausgabe_fuer_einen_Maschinentyp_anpassen.htm">
+   <font class="hcp2">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      调整机器类型的 NC 输出
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p class="Block_Text">
+  <a href="Beispiel_Profil_fuer_einen_Maschinentyp_anlegen.htm">
+   <font class="hcp2">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      为机器类型创建配置文件
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一个通知：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    显示的选项可能会根据所使用的 NC 机床而有所不同，本帮助系统仅描述一些示例。
+   </font>
+  </font>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('area1');
 	FilePopupInit('area2');
@@ -75,7 +155,9 @@
 	FilePopupInit('area7');
 	FilePopupInit('area8');
 	FilePopupInit('area9');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

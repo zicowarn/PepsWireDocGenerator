@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,16 +34,61 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Position" %}</p><p>{% trans "Mit diesen sechs Schaltflächen können Sie die Position des Werkstücks im Maschinenkoordinatensystem ermitteln." %}</p>
-<p>{% trans "Mit einigen Funktionen kann man die Werkstückposition in einer Messoperation ermitteln, in anderen Fällen wählt man eine Kombination von zwei Messfunktionen." %}</p>
-<p>{% trans "Die Funktionen sind abhängig von der verwendeten CNC-Steuerung und nicht immer verfügbar." %}</p>
-<p class="hcp1"> </p>
-<p><img src="../MEASURE_CYCLES_Position.gif" alt="MEASURE_CYCLES_Position.gif" width="509" height="109" border="0"/></p>
-<p class="hcp1"> </p>
-<p>{% trans "Nach dem Aufruf einer Funktion zeigt das System einen Dialog, in dem nur die für den Messzyklus benötigten Eingabebereiche freigeschaltet sind." %}</p>
-<p>{% trans "Eine Bitmapgrafik zeigt an, welche Informationen in den Dialog einzugeben sind." %}</p>
-<p class="hcp1"> </p>
-<p><img src="../MEASURE_CYCLES_Position_1.gif" alt="MEASURE_CYCLES_Position_1.gif" width="377" height="608" border="0"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    位置
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这六个按钮允许您确定工件在机器坐标系中的位置。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用某些功能，您可以在一次测量操作中确定工件位置，而在其他情况下，您可以选择两种测量功能的组合。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这些功能取决于所使用的 CNC 控制，并且并不总是可用。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="MEASURE_CYCLES_Position.gif" border="0" height="109" src="../MEASURE_CYCLES_Position.gif" width="509"/>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    调用功能后，系统会显示一个对话框，其中仅启用测量循环所需的输入区域。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    位图图形显示需要在对话框中输入哪些信息。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="MEASURE_CYCLES_Position_1.gif" border="0" height="608" src="../MEASURE_CYCLES_Position_1.gif" width="377"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

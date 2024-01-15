@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,25 +34,52 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Optionen Register (Standard Konturbearbeitung)" %}</p><p>{% trans "Normalerweise stellt man die Optionen in diesem Register nur einmal ein, speichert diese und verändert sie nur, wenn spezielle Schnitttechniken erforderlich sind." %}</p><p class="hcp1"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp1"> </p>
-<p><img src="../OPTNPROF_shg.gif" usemap="#AreaMap0" alt="OPTNPROF_shg.gif" width="333" height="392" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="16,93,200,115" href="javascript:BSSCPopup('Autom__Einfaedeln_Abschneiden.htm',400,500);" id="area1" alt=""/>
-<area shape="rect" coords="13, 114, 236, 154" href="javascript:BSSCPopup('Mit_Bearbeitung.htm',400,500);" id="area2" alt=""/>
-<area shape="rect" coords="12,156,187,178" href="javascript:BSSCPopup('Zeige_alle_Figuren_Std_Konturbea.htm',400,500);" id="area3" alt=""/>
-<area shape="rect" coords="11,185,328,225" href="javascript:BSSCPopup('Anzahl_Schnittebenen.htm',400,600);" id="area4" alt=""/>
-<area shape="rect" coords="13,234,328,277" href="javascript:BSSCPopup('Vektorisierungs_Toleranz_Standardkonturbearbeitung.htm',400,600);" id="area5" alt=""/>
-<area shape="rect" coords="-1, 1, 44, 22" href="Konik_lasche.htm" alt=""/>
-<area shape="rect" coords="44, 1, 159, 21" href="Taschenerodieren_1.htm" alt=""/>
-<area shape="rect" coords="10,348,129,375" href="javascript:BSSCPopup('Kurzhilfen_anzeigen.htm',400,300);" id="area6" alt=""/>
-<area shape="rect" coords="14, 283, 319, 318" href="javascript:BSSCPopup('Rendern_Farbe_Material_Listbox.htm',400,300);" id="area7" alt=""/>
-<area shape="rect" coords="15,319,138,342" href="Operation_rendern.htm" alt=""/>
-<area shape="rect" coords="11,31,329,80" href="javascript:BSSCPopup('Eigene_Operationsbeschreibung_Std_Konturbea.htm',400,500);" id="area8" alt=""/>
-<area shape="rect" coords="164, 1, 247, 21" href="Rotationsachse_Register_Standard_Konturbearbeitung_.htm" alt=""/>
-</map> </p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项选项卡（标准轮廓编辑）
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通常，您只需在此选项卡中设置一次选项，然后保存它们，并且仅在需要特殊编辑技术时才更改它们。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="OPTNPROF_shg.gif" border="0" height="392" src="../OPTNPROF_shg.gif" usemap="#AreaMap0" width="333"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="16,93,200,115" href="javascript:BSSCPopup('Autom__Einfaedeln_Abschneiden.htm',400,500);" id="area1" shape="rect"/>
+   <area alt="" coords="13, 114, 236, 154" href="javascript:BSSCPopup('Mit_Bearbeitung.htm',400,500);" id="area2" shape="rect"/>
+   <area alt="" coords="12,156,187,178" href="javascript:BSSCPopup('Zeige_alle_Figuren_Std_Konturbea.htm',400,500);" id="area3" shape="rect"/>
+   <area alt="" coords="11,185,328,225" href="javascript:BSSCPopup('Anzahl_Schnittebenen.htm',400,600);" id="area4" shape="rect"/>
+   <area alt="" coords="13,234,328,277" href="javascript:BSSCPopup('Vektorisierungs_Toleranz_Standardkonturbearbeitung.htm',400,600);" id="area5" shape="rect"/>
+   <area alt="" coords="-1, 1, 44, 22" href="Konik_lasche.htm" shape="rect"/>
+   <area alt="" coords="44, 1, 159, 21" href="Taschenerodieren_1.htm" shape="rect"/>
+   <area alt="" coords="10,348,129,375" href="javascript:BSSCPopup('Kurzhilfen_anzeigen.htm',400,300);" id="area6" shape="rect"/>
+   <area alt="" coords="14, 283, 319, 318" href="javascript:BSSCPopup('Rendern_Farbe_Material_Listbox.htm',400,300);" id="area7" shape="rect"/>
+   <area alt="" coords="15,319,138,342" href="Operation_rendern.htm" shape="rect"/>
+   <area alt="" coords="11,31,329,80" href="javascript:BSSCPopup('Eigene_Operationsbeschreibung_Std_Konturbea.htm',400,500);" id="area8" shape="rect"/>
+   <area alt="" coords="164, 1, 247, 21" href="Rotationsachse_Register_Standard_Konturbearbeitung_.htm" shape="rect"/>
+  </map>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('area1');
 	FilePopupInit('area2');
@@ -63,7 +89,9 @@
 	FilePopupInit('area6');
 	FilePopupInit('area7');
 	FilePopupInit('area8');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

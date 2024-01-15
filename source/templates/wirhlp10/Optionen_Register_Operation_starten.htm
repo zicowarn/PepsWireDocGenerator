@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,23 +34,50 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Optionen Register (Operation starten)" %}</p><p>{% trans "Die Einstellungen in diesem Register können Sie eine eigene Beschreibung für die Operation vergeben." %}</p><p class="hcp1"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp1"> </p>
-<p><img src="../OP_START_Optionen_shg.gif" usemap="#AreaMap0" alt="OP_START_Optionen_shg.gif" width="788" height="577" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="21, 35, 85, 54" href="Operation_starten.htm" alt=""/>
-<area shape="rect" coords="20, 75, 101, 95" href="Technologie_Register_Operation_starten_.htm" alt=""/>
-<area shape="rect" coords="18, 54, 110, 74" href="NC_Ausgabe_Register_Operation_starten_.htm" alt=""/>
-<area shape="rect" coords="20, 93, 89, 112" href="Strategie_Register_Operation_starten_.htm" alt=""/>
-<area shape="rect" coords="407, 545, 488, 568" href="javascript:BSSCPopup('OK_Button_Operation_starten.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="489, 545, 563, 567" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="570, 543, 697, 571" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="703, 544, 780, 570" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area4" alt=""/>
-<area shape="rect" coords="215, 42, 759, 96" href="javascript:BSSCPopup('Eigene_Operationsbeschreibung_Operation_Starten.htm',400,600);" id="area5" alt=""/>
-<area shape="rect" coords="214, 99, 760, 152" href="javascript:BSSCPopup('Draht_Status_am_Programmanfang.htm',400,600);" id="area6" alt=""/>
-</map> </p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项寄存器（开始操作）
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    您可以使用此选项卡中的设置来创建您自己的操作描述。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="OP_START_Options_shg.gif" border="0" height="577" src="../OP_START_Optionen_shg.gif" usemap="#AreaMap0" width="788"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="21, 35, 85, 54" href="Operation_starten.htm" shape="rect"/>
+   <area alt="" coords="20, 75, 101, 95" href="Technologie_Register_Operation_starten_.htm" shape="rect"/>
+   <area alt="" coords="18, 54, 110, 74" href="NC_Ausgabe_Register_Operation_starten_.htm" shape="rect"/>
+   <area alt="" coords="20, 93, 89, 112" href="Strategie_Register_Operation_starten_.htm" shape="rect"/>
+   <area alt="" coords="407, 545, 488, 568" href="javascript:BSSCPopup('OK_Button_Operation_starten.htm',400,300);" id="area1" shape="rect"/>
+   <area alt="" coords="489, 545, 563, 567" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area2" shape="rect"/>
+   <area alt="" coords="570, 543, 697, 571" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area3" shape="rect"/>
+   <area alt="" coords="703, 544, 780, 570" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area4" shape="rect"/>
+   <area alt="" coords="215, 42, 759, 96" href="javascript:BSSCPopup('Eigene_Operationsbeschreibung_Operation_Starten.htm',400,600);" id="area5" shape="rect"/>
+   <area alt="" coords="214, 99, 760, 152" href="javascript:BSSCPopup('Draht_Status_am_Programmanfang.htm',400,600);" id="area6" shape="rect"/>
+  </map>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('area1');
 	FilePopupInit('area2');
@@ -59,7 +85,9 @@
 	FilePopupInit('area4');
 	FilePopupInit('area5');
 	FilePopupInit('area6');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

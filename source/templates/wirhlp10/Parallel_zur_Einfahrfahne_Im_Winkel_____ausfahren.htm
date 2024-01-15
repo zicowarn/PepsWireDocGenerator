@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,17 +35,85 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Parallel zur Einfahrfahne / Im Winkel zur Konturnormalen ausfahren" %}</p><p>{% trans "[Parallel zur Einfahrfahne]" %}</p>
-<p>{% trans "Bedeutet, dass die Ausfahrbewegung parallel zur Einfahrbewegung ist." %}</p>
-<p> </p>
-<p><img src="../Parallel%20zur%20Einfahrfahne.gif" alt="" border="0" class="hcp2"/></p>
-<p class="hcp3"> </p>
-<p class="hcp3">{% trans "Im Winkel zur Konturnormalen" %}</p>
-<p>{% trans "In einigen Anwendungsfällen wird eine Ausfahrbewegung benötigt, die in einem bestimmbaren Winkel zur Einfahrbewegung erfolgen soll." %}</p>
-<p>{% trans "Wird eine Ausfahrbewegung im Winkel programmiert, muss die Größe des Winkels im Feld [[Im Winkel zur Konturnormalen]] eingegeben werden." %}</p>
-<p>{% trans "Das folgende Bild zeigt eine Ausfahrbewegung unter 45 Grad:" %}</p>
-<p> </p>
-<p><img src="../Im%20Winkel%20zur%20Konturnormalen.gif" alt="" border="0" class="hcp2"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    平行于入口标志延伸/与轮廓法线成一定角度
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     与入口标志平行
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    意味着伸出运动与缩回运动平行。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <img alt="" border="0" class="hcp2" src="../Parallel%20zur%20Einfahrfahne.gif"/>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p class="hcp3">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    与轮廓法线成一定角度
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在一些应用中，需要延伸运动，该延伸运动应该以与缩回运动成可确定的角度进行。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <span>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      如果以一定角度编程延伸运动，则必须在与轮廓法线成一定角度字段
+     </font>
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    中 
+ 输入
+   </font>
+   <font style="vertical-align: inherit;">
+    角度大小。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图显示了 45 度以下的伸展运动：
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <img alt="" border="0" class="hcp2" src="../Im%20Winkel%20zur%20Konturnormalen.gif"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

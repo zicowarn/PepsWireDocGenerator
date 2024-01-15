@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,13 +35,63 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Referenzhöhe" %}</p><p>{% trans "Die Referenzhöhe ist die Z-Ebene, auf die sich die XY-Koordinaten der NC-Ausgabe beziehen. In diesem Textfeld wird die Lage Referenzhöhe festgelegt." %}</p>
-<p class="hcp1"> </p>
-<p><img src="../TAPERCU2.gif" alt="TAPERCU2.gif" width="560" height="185" border="0"/> <img src="../REFSEC.gif" alt="REFSEC.gif" width="433" height="309" border="0"/></p>
-<p class="hcp1"> </p>
-<p>{% trans "[Siehe auch:]" %}</p>
-<p>{% trans "#[Werkstücke mit Bund und Konik bearbeiten]#" %}</p>
-<p>{% trans "#[Bundbearbeitung]#" %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    参考高度
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    参考高度是 NC 输出的 XY 坐标所参考的 Z 平面。
+   </font>
+   <font style="vertical-align: inherit;">
+    位置参考高度在此文本字段中设置。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="TAPERCU2.gif" border="0" height="185" src="../TAPERCU2.gif" width="560"/>
+  <img alt="参考安全.gif" border="0" height="309" src="../REFSEC.gif" width="433"/>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     也可以看看：
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <a href="Werkstuecke_mit_Bund_und_Konik_bearbeiten.htm">
+   <font class="hcp2">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      加工带凸缘和锥度的工件
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+  <a href="Bundbearbeitung_.htm">
+   <font class="hcp2">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      外滩加工
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}
