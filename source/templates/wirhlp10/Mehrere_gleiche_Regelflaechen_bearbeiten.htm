@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,13 +33,138 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Mehrere gleiche Regelflächen bearbeiten" %}</p><p>{% trans "Es ist möglich [mehrere gleiche Regelflächen] an verschiedenen Positionen zu schneiden." %}</p>
-<p>{% trans "In diesen Fällen ist es ausreichend nur die [untere Figur der Regelfläche] an die entsprechende Positionen zu [kopieren]." %}</p>
-<p>{% trans "Nach dem grafischen Positionieren der unteren Regelflächenfiguren, ist es nicht notwendig etwaige Technologiesymbole die in die Originalfigur eingebracht sind ebenfalls zu kopieren." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p>{% trans "[Hinweise:]" %}</p>
-<p>{% trans "Mit dem Befehl #[Kreise/Bögen zur Mehrfachfigur]# im Menü [Vorbereitung \ Diverses], kann man die untere Regelflächenfigur auf eine Punktegruppe kopieren." %}</p>
-<p>{% trans "Die Checkbox #[Zeige alle Figuren]# muss aktiviert sein, um die Bearbeitungsgrafik für ALLE kopierten Regelflächengeometrie zu sehen." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    编辑几个相同的直纹曲面
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    可以在不同位置
+   </font>
+   <font style="vertical-align: inherit;">
+    切割
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     多个相同的直纹面。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在这些情况下，只需将
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     直纹曲面的下部图形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     复制
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    到相应的位置即可
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    以图形方式定位下控制面图形后，无需复制原始图形中包含的任何技术符号。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     提示：
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     “准备\其他”
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    菜单中的
+   </font>
+  </font>
+  <a href="../wirhlp9/Kreise_Boegen_Mehrfachfigur.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      “圆/圆弧到多个图形”
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令，您可以将下直纹曲面图形复制到一组点。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    必须激活“显示所有图形”复选框才能查看所有复制的直纹曲面几何体的编辑
+   </font>
+   <font style="vertical-align: inherit;">
+    图形
+   </font>
+  </font>
+  <a href="Zeige_alle_Figuren.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

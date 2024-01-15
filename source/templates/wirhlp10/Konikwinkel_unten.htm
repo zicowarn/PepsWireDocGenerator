@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -37,26 +36,138 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Konikwinkel unten" %}</p><p>{% trans "Die folgende Zeichnung zeigt einen Schnitt durch eine Matrize mit einer Konik am Boden des Werkstückes und die Einstellungen für beide Bearbeitungsoperationen (konisch und zylindrisch)." %}</p>
-<p class="hcp1"> </p>
-<p><img src="../TAPERCU2.gif" alt="TAPERCU2.gif" width="560" height="185" border="0"/></p>
-<p class="hcp1"> </p>
-<p class="hcp2">{% trans "[Konischen Abschnitt schneiden]" %}</p>
-<p class="hcp2">{% trans "Obere Führung z.B. 35" %}</p>
-<p class="hcp2">{% trans "Sekundärebene 0" %}</p>
-<p class="hcp2">{% trans "Referenzhöhe 19" %}</p>
-<p class="hcp2">{% trans "Untere Führung z.B. -10" %}</p>
-<p class="hcp1"> </p>
-<p class="hcp2">{% trans "[Zylindrischen Abschnitt schneiden]" %}</p>
-<p class="hcp2">{% trans "Obere Führung z.B. 35" %}</p>
-<p class="hcp2">{% trans "Sekundärebene 0" %}</p>
-<p class="hcp2">{% trans "Referenzhöhe 19" %}</p>
-<p class="hcp2">{% trans "Untere Führung z.B. -10" %}</p>
-<p class="hcp1"> </p>
-<p class="Block_Text">{% trans "Genau betrachtet machen Eingaben für die Referenz- und Sekundärebene bei der Bearbeitung des zylindrischen Abschnitts nicht allzu viel Sinn. Bei Eingabe der obigen Werte ist jedoch die Simulation korrekt." %}</p>
-<p class="hcp1"> </p>
-<p>{% trans "[Siehe auch:]" %}</p>
-<p>{% trans "#[Bundbearbeitung]#" %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下面的锥角
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图显示了工件底部带有锥度的模具的剖面图以及两种加工操作（圆锥形和圆柱形）的设置。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="TAPERCU2.gif" border="0" height="185" src="../TAPERCU2.gif" width="560"/>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p class="hcp2">
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     切出圆锥形截面
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    高层管理人员，例如 35
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    中学0级
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    参考海拔19
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    较低的领导力，例如-10
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p class="hcp2">
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     切割圆柱形截面
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    高层管理人员，例如 35
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    中学0级
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    参考海拔19
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    较低的领导力，例如-10
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    仔细想想，在加工圆柱形截面时，参考平面和辅助平面的输入没有多大意义。
+   </font>
+   <font style="vertical-align: inherit;">
+    然而，当输入上述值时，模拟是正确的。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     也可以看看：
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <a href="Bundbearbeitung_.htm">
+   <font class="hcp3">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      外滩加工
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

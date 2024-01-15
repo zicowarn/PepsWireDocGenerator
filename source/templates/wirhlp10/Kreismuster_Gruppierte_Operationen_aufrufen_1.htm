@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,29 +35,188 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Kreismuster" %}</p><p><img src="../Kreismuster_Gruppe.gif" alt="Kreismuster_Gruppe.gif" width="370" height="251" border="0"/></p>
-<p class="hcp1"> </p>
-<p style="font-weight: bold;">{% trans "Die Optionen des Dialoges:" %}</p>
-<p> </p>
-<p class="Tip_Note_Heading">{% trans "Gruppenname" %}</p>
-<p>{% trans "Wird verwendet, um den Namen der Gruppe auszuwählen, falls mehrere Gruppen existieren." %}</p>
-<p> </p>
-<p class="Tip_Note_Heading">{% trans "Teilkreis- und Winkeldetails" %}</p>
-<p>{% trans "[Gesamtanzahl von Gruppen]: Die Gesamtanzahl der zu erzeugenden Gruppenbearbeitungen auf dem Teilkreis." %}</p>
-<p>{% trans "[Winkel zwischen den Gruppen]: Winkel zwischen den Gruppenbearbeitungen in Grad." %}</p>
-<p>{% trans "[XY-Teilkreiszentrum]: Die Koordinate des Teilkreiszentrums. Verwenden Sie die Schaltfläche @, um die Koordinate zu digitalisieren." %}</p>
-<p> </p>
-<p class="Tip_Note_Heading">{% trans "Zeige/Simuliere diese gruppierten Operationen" %}</p>
-<p>{% trans "Wenn aktiv, werden bei einer Bearbeitungssimulation alle Gruppenpositionen simuliert. Wenn nicht, wird nur die erste Gruppenoperation simuliert." %}</p>
-<p class="hcp1"> </p>
-<p>{% trans "@" %}</p>
-<p class="hcp1"> </p>
-<p>{% trans "Das obige Beispiel zeigt ein Kreismuster, auf dem eine gruppierte Operationen (ein Rechteck mit Bundbearbeitung und eine Bohrung mit zylindrischer Bearbeitung) wiederholt wurde." %}</p>
-<p> </p>
-<p>{% trans "Folgende Optionen wurden im Dialog eingestellt:" %}</p>
-<p>{% trans "[8] Gesamtanzahl der Gruppen" %}</p>
-<p>{% trans "[45] Grad zwischen den Gruppen" %}</p>
-<p>{% trans "[X0 Y40] ist das Teilkreiszentrum" %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    圆形图案
+   </font>
+  </font>
+ </p>
+ <p>
+  <img alt="圆形图案_group.gif" border="0" height="251" src="../Kreismuster_Gruppe.gif" width="370"/>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p style="font-weight: bold;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框选项：
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    团队名字
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果存在多个组，则用于选择组的名称。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    零件圆和角度细节
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     组总数
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：要在节圆上创建的组编辑总数。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     组之间的角度
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：组编辑之间的角度（以度为单位）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     XY 俯仰中心
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：俯仰中心的坐标。
+   </font>
+   <font style="vertical-align: inherit;">
+    使用 按钮
+   </font>
+  </font>
+  <img alt="选择.gif" border="0" height="23" src="../Select.gif" width="24"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    将坐标数字化。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    显示/模拟这些分组操作
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果激活，则在加工模拟期间模拟所有组位置。
+   </font>
+   <font style="vertical-align: inherit;">
+    如果没有，则仅模拟第一组操作。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="分组处理_circular.gif" border="0" height="287" src="../Gruppenbearbeitung_Zirkular.gif" width="470"/>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    上例显示了一个圆形图案，在该图案上重复了分组操作（用轴环加工的矩形和用圆柱加工的孔）。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框中设置了以下选项：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     8
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    组总数
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    组间
+   </font>
+   <font class="hcp2">
+    <font style="vertical-align: inherit;">
+     45度
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     X0 Y40
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    为节圆圆心
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

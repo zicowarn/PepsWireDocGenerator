@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,12 +28,67 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Maschinenprofile" %}</p><p>{% trans "Für jeden unterstützten Maschinentyp eines Herstellers kann ein Profil erstellt werden." %}</p>
-<p>{% trans "Auf diese Weise können Sie für jeden Maschinentyp separate Einstellungen im Dialogregister #[NC-Ausgabe Optionen]# einstellen und als Profil abspeichern." %}</p>
-<p class="Block_Text">{% trans "Dies hat den Vorteil, dass man bei einem Postprozessorlauf (NC-Daten erzeugen), das Profil des Maschinentyps auswählen kann, für den die NC-Daten erzeugt werden sollen." %}</p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;"> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
-<p class="Block_Text" style="font-weight: bold;">{% trans "#Ein Profil für einen Maschinentyp anlegen#" %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    机器简介
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    可以为制造商提供的每种受支持的机器类型创建配置文件。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <a href="NC_Ausgabe_Optionen_Postprozessor_konfigurieren_.htm">
+   <font style="font-weight: bold;">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      通过这种方式，您可以在NC 输出选项
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框选项卡中为每种机器类型设置单独的设置
+   </font>
+   <font style="vertical-align: inherit;">
+    ，并将它们保存为配置文件。
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这样做的优点是，在后处理器运行（生成 NC 数据）期间，您可以选择要为其生成 NC 数据的机器类型的配置文件。
+   </font>
+  </font>
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    它是这样完成的：
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text" style="font-weight: bold;">
+  <a href="Beispiel_Profil_fuer_einen_Maschinentyp_anlegen.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     为机器类型创建配置文件
+    </font>
+   </font>
+  </a>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

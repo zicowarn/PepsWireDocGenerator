@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -44,42 +43,385 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Lineares Muster" %}</p><p><img src="../Lineares_Muster_Gruppe.gif" alt="Lineares_Muster_Gruppe.gif" width="410" height="487" border="0"/></p>
-<p class="hcp1">{% trans "Die Optionen des Dialoges:" %}</p>
-<p class="hcp1"> </p>
-<p class="hcp2"> </p>
-<p class="Tip_Note_Heading">{% trans "Gruppenname" %}</p>
-<p>{% trans "Wird verwendet, um den Namen der Gruppe auszuwählen, falls mehrere Gruppen existieren." %}</p>
-<p class="hcp2"> </p>
-<p class="Tip_Note_Heading">{% trans "Verwende Originalgruppe als erste[: ]" %}</p>
-<h2 class="hcp4"><font class="hcp3">XXX</font></h2>
-<p> </p>
-<p>{% trans "[Primäre Gitterrichtung][[:] Diese Parameter beschreiben die] X-Achse des Gitters" %}</p>
-<p>{% trans "[Anzahl Einfügungen in Primärrichtung:] Die Gesamtanzahl der zu erzeugenden Gruppenbearbeitungen für die [X]-Achse" %}</p>
-<p class="footnote_text">{% trans "[X-Abstand zwischen den Einfügungen][: Der Abstand zwischen den Gruppierten Operationen entlang der] [X][-Achse]" %}</p>
-<p>{% trans "[A-Winkel der Primärrichtung]: Der Winkel der X-Achse. 0 liegt auf 3 Uhr." %}</p>
-<p> </p>
-<p>{% trans "[Sekundäre Gitterrichtung]: Diese Parameter beschreiben die [Y]-Achse des Gitters" %}</p>
-<p>{% trans "[Anzahl Einfügungen in Sekundärrichtung]: Die Gesamtanzahl der zu erzeugenden Gruppenbearbeitungen für die [Y]-Achse" %}</p>
-<p>{% trans "[Y-Abstand zwischen den Einfügungen]: Der Abstand zwischen den Gruppierten Operationen entlang der [Y]-Achse" %}</p>
-<p>{% trans "[B-Winkel der Primärrichtung]: Der Winkel der Y-Achse. 90 liegt auf 12 Uhr." %}</p>
-<p> </p>
-<p class="Tip_Note_Heading" style="margin-top: 0.00pt;">{% trans "Zeige/Simuliere diese gruppierten Operationen." %}</p>
-<p>{% trans "Wenn aktiv, werden bei einer [Bearbeitungssimulation] alle Gruppenpositionen simuliert. Wenn nicht, wird nur die erste Gruppenoperation simuliert." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Gruppenbearbeitung_Linear.gif" alt="Gruppenbearbeitung_Linear.gif" width="419" height="250" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Das obige Beispiel zeigt ein Gittermuster, auf dem eine gruppierte Operationen (ein Rechteck mit Bundbearbeitung und eine Bohrung mit zylindrischer Bearbeitung) wiederholt wurde." %}</p>
-<p> </p>
-<p>{% trans "Folgende Optionen wurden im Dialog eingestellt:" %}</p>
-<h2 class="hcp4">{% trans "Primäre Gitterrichtung" %}</h2>
-<p>{% trans "4 Einfügungen" %}</p>
-<p>{% trans "X-Abstand ist 20mm" %}</p>
-<p>{% trans "A-Winkel ist 0 Grad" %}</p>
-<p>{% trans "[Sekundäre Gitterrichtung]" %}</p>
-<p>{% trans "3 Einfügungen" %}</p>
-<p>{% trans "Y-Abstand ist 25mm" %}</p>
-<p>{% trans "B-Winkel ist 90 Grad" %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    线性图案
+   </font>
+  </font>
+ </p>
+ <p>
+  <img alt="Linear_Pattern_Group.gif" border="0" height="487" src="../Lineares_Muster_Gruppe.gif" width="410"/>
+ </p>
+ <p class="hcp1">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框选项：
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    团队名字
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果存在多个组，则用于选择组的名称。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    首先使用原始组
+   </font>
+  </font>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     ：
+    </font>
+   </font>
+  </font>
+ </p>
+ <h2 class="hcp4">
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     XXX
+    </font>
+   </font>
+  </font>
+ </h2>
+ <p>
+ </p>
+ <p>
+  <span class="hcp5">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     主要网格方向
+    </font>
+   </font>
+  </span>
+  <font class="hcp3">
+   <span class="hcp5">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      ：
+     </font>
+    </font>
+   </span>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     这些参数描述
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    网格的 X 轴
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp6">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     主要方向上的插入数量：为
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp6">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     X
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    轴
+   </font>
+   <font style="vertical-align: inherit;">
+    创建的组编辑总数
+   </font>
+  </font>
+ </p>
+ <p class="footnote_text">
+  <font class="hcp7" face="Arial">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     插入之间的 X 距离：沿
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font class="hcp7" face="Arial">
+    <font style="vertical-align: inherit;">
+     X
+    </font>
+   </font>
+   <font class="hcp8" face="Arial">
+    <font style="vertical-align: inherit;">
+     轴
+    </font>
+   </font>
+  </font>
+  <font class="hcp8" face="Arial">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     分组操作之间的距离
+    </font>
+   </font>
+  </font>
+  <font class="hcp7" face="Arial">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font class="hcp8" face="Arial">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp6">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     主方向 A 角
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：X 轴的角度。
+   </font>
+   <font style="vertical-align: inherit;">
+    0 点在 3 点钟方向。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font class="hcp6">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     辅助网格方向
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：这些参数描述
+   </font>
+   <font style="vertical-align: inherit;">
+    网格的
+   </font>
+  </font>
+  <font class="hcp6">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     Y轴
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font class="hcp6">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     次要方向上的插入数量：为
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp6">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     Y
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    轴
+   </font>
+   <font style="vertical-align: inherit;">
+    创建的组编辑总数
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp6">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     插入之间的 Y-距离：沿
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp6">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     Y
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    轴
+   </font>
+   <font style="vertical-align: inherit;">
+    分组操作之间的距离
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp6">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     主方向 B 角度
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：Y 轴的角度。
+   </font>
+   <font style="vertical-align: inherit;">
+    90点是12点。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 0.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    显示/模拟这些分组操作。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp6">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     如果激活，则在加工模拟
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    期间模拟所有组位置
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+   <font style="vertical-align: inherit;">
+    如果没有，则仅模拟第一组操作。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="组编辑_Linear.gif" border="0" height="250" src="../Gruppenbearbeitung_Linear.gif" width="419"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    上面的示例显示了一个网格图案，在该图案上重复了分组操作（用轴环加工的矩形和用圆柱加工的孔）。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框中设置了以下选项：
+   </font>
+  </font>
+ </p>
+ <h2 class="hcp4">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    主网格方向
+   </font>
+  </font>
+ </h2>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    4 个刀片
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    X轴距离为20mm
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一个角是0度
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp6">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     次网格方向
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    3 次插入
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    Y距离为25mm
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    B角为90度
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

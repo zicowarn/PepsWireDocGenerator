@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,20 +35,102 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Maschinenteile" %}</p><p>{% trans "Wählen Sie hier die Solids aus, die in der #[Solid-Simulation]# als Bauteile der Werkzeugmaschine angezeigt werden sollen." %}</p><p>{% trans "Die Definition von [Maschinenteilen] ist erforderlich, wenn Sie im Zuge einer #[Solid-Simulation]# Bauteile der Werkzeugmaschine darstellen und diese in die Kollisionsprüfung mit einbeziehen wollen." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Simulation_Maschinenteile_Erodieren.gif" alt="Simulation_Maschinenteile_Erodieren.gif" width="480" height="221" border="0"/></p>
-<p class="hcp2"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Maschinenteile_shg.gif" usemap="#AreaMap0" alt="Maschinenteile_shg.gif" width="278" height="197" border="0"/> <map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="10,161,85,186" href="javascript:BSSCPopup('Solid_s_Maschinenteile_Operation_starten_Rohteil_Register.htm');" id="area1" alt=""/></map></p>
-<script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    机械零件
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此处选择应在
+   </font>
+  </font>
+  <a href="../Simulation/Solid_Simulation.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      实体模拟
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    中显示为机床组件的实体。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <a href="../Simulation/Solid_Simulation.htm">
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      如果您想在实体仿真
+     </font>
+    </font>
+   </a>
+   <font style="vertical-align: inherit;">
+    过程中表示机床的组件并将它们包含在碰撞检查中，则必须定义
+   </font>
+   <font style="vertical-align: inherit;">
+    机器
+   </font>
+   <font style="vertical-align: inherit;">
+    零件
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <a href="../Simulation/Solid_Simulation.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="模拟_机器零件_Eroding.gif" border="0" height="221" src="../Simulation_Maschinenteile_Erodieren.gif" width="480"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="机器零件_shg.gif" border="0" height="197" src="../Maschinenteile_shg.gif" usemap="#AreaMap0" width="278"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="10,161,85,186" href="javascript:BSSCPopup('Solid_s_Maschinenteile_Operation_starten_Rohteil_Register.htm');" id="area1" shape="rect"/>
+  </map>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
         if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
         FilePopupInit('area1');
-//]]&gt;
-</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

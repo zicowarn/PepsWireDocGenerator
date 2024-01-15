@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,7 +28,21 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Jeden Durchbruch einzeln fertig bearbeiten" %}</p><p>{% trans "Ist diese Option aktiv und werden mehrere Durchbrüche bearbeitet, dann wird jeder Durchbruch einzeln fertigbearbeitet (Konik und Bund) und danach der nächste Durchbruch." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    单独完成每个突破
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果此选项处于活动状态并且正在处理多个突破，则每个突破都会单独完成（锥形和轴环），然后是下一个突破。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

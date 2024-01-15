@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,9 +28,41 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Löschen (Technologie Datenbank)" %}</p><p>{% trans "Die Schaltfläche [Löschen] entfernt den momentan gewählten Eintrag aus der Datenbank. Das System zeigt zur Bestätigung des Löschvorganges eine Sicherheitsabfrage." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p><img src="../DELTECH.gif" alt="DELTECH.gif" width="455" height="119" border="0"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    删除（技术数据库）
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    删除
+   </font>
+  </font>
+  <font style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     按钮
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    从数据库中删除当前选定的条目。
+   </font>
+   <font style="vertical-align: inherit;">
+    系统会显示安全查询以确认删除过程。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <img alt="德尔泰克.gif" border="0" height="119" src="../DELTECH.gif" width="455"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

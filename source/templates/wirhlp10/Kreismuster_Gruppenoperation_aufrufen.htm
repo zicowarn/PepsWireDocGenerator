@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,10 +33,56 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Kreismuster" %}</p><p>{% trans "Verwenden Sie diese Option, um die Gruppe auf einem [Teilkreismuster] zu vervielfältigen. Der Befehl erzeugt einen Eintrag im Operationsmanager." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p>{% trans "[Siehe auch:]" %}</p>
-<p style="font-weight: bold;">{% trans "#Kreismuster#" %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    圆形图案
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用此选项可在
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     部分圆形图案
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    上复制组。
+   </font>
+   <font style="vertical-align: inherit;">
+    该命令在操作管理器中创建一个条目。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     也可以看看：
+    </font>
+   </font>
+  </font>
+ </p>
+ <p style="font-weight: bold;">
+  <a href="Kreismuster_Gruppierte_Operationen_aufrufen_1.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     圆形图案
+    </font>
+   </font>
+  </a>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

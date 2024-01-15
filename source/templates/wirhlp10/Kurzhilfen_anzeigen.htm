@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,7 +28,27 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Kurzhilfen anzeigen" %}</p><p>{% trans "Ist diese Option aktiviert, zeigt das System eine Kurzhilfe z.B. @, wenn Sie den Cursor über die einzelnen Dialogfelder positionieren und einen Moment warten." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    显示快速帮助
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果激活此选项，系统会显示快速帮助，例如
+   </font>
+  </font>
+  <img alt="工具提示_wire.gif" border="0" height="19" src="../tooltip_wire.gif" width="218"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，如果您将光标放在各个对话框上并稍等片刻。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -37,18 +36,157 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ M-Code einfügen" %}</p><p>{% trans "Erlaubt das Einfügen von beliebigen [M-Codes], [NC-Codes] oder [Sonderfunktionen] in die NC-Ausgabedatei." %}</p>
-<p>{% trans "Diese Funktion ist normalerweise nicht notwendig, da ein PEPS Postprozessor alle für eine Bearbeitung notwendigen Befehle automatisch erzeugt." %}</p>
-<p>{% trans "Der M-Code od. NC-Code wird in den #[Operationsmanager]# eingefügt." %}</p>
-<p> </p>
-<p>{% trans "Das folgende Bild zeigt ein Dialogbeispiel. Der Dialog '[M-Code einfügen]' variiert je nach verwendetem Postprozessor." %}</p>
-<p class="hcp3"> </p>
-<p>{% trans "@" %}</p>
-<p class="hcp3"> </p>
-<p class="Hinweis">{% trans "Hinweise:" %}</p>
-<p>{% trans "1.) Mit Hilfe des Feldes [Beliebiger] kann ein beliebiger M-Code programmiert werden." %}</p>
-<p>{% trans "Es liegt aber in Ihrer Verantwortung, dass der einzufügende M-Code oder NC-Codes richtig ist und von der NC-Steuerung verarbeitet werden kann. Es erfolgt KEINE Syntaxprüfung." %}</p>
-<p> </p>
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; 
+	 border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <img alt="M_代码_插入.gif" border="0" height="30" src="../M_Code_insert.gif" width="32"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    插入M代码
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    允许将任何
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     M 代码
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     NC 代码
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     特殊功能
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    插入 NC 输出文件。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此功能通常不是必需的，因为 PEPS 后处理器会自动生成编辑所需的所有命令。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    M 代码或NC 代码被插入到
+   </font>
+  </font>
+  <a href="../Operationsmanager/Bearbeitungs_Register_Operationsmanager.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      操作管理器
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    中。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图显示了一个对话框示例。
+   </font>
+  </font>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “插入 M 代码”
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框
+   </font>
+   <font style="vertical-align: inherit;">
+    因所使用的后处理器而异。
+   </font>
+  </font>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p>
+  <img alt="MCO_INS_shg.gif" border="0" height="427" src="../MCO_INS_shg.gif" width="304"/>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    提示：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    1.) 可以使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     任意
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    字段 
+ 对任意 M 代码进行编程。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    然而，您有责任确保要插入的 M 代码或 NC 代码正确并且可以由 NC 控制进行处理。
+   </font>
+   <font style="vertical-align: inherit;">
+    没有语法检查。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

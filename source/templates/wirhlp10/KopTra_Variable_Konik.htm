@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,14 +35,112 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Kopieren + Verschieben" %}</p><p>{% trans "Mit dieser Funktion kann [eine] oder [eine Anzahl von Winkelwechselsymbolen] mit einem bestimmbaren Abstand zueinander, [transformiert] (verschoben) werden." %}</p>
-<p>{% trans "Es sind eine oder mehrere Kopien möglich." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../KOPTRA.gif" alt="KOPTRA.gif" width="730" height="304" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Das Beispiel oben zeigt eine Zahnstange mit 15 gleichen Koniken. Dem ersten Zahn wurden 4 Winkelwechselsymbole zugeordnet welche die Konik bestimmen." %}</p>
-<p>{% trans "Diese 4 Winkelwechselsymbole wurden anschließend mit der Option [Kopieren + Verschieben] verschoben und 14 mal kopiert um die Konik der restliche Zähne zu bestimmen." %}</p>
-<p>{% trans "An der letzten horizontalen Zahnflanke, wurde noch ein zusätzliches Winkelwechselsymbol eingefügt. Die Zeichnung zeigt ebenfalls eine Vergrößerung der Konik von zwei Zähnen." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    复制+移动
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该功能可用于
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     变换
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    （移动）
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     一个
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     多个角度变化符号，
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使其彼此之间的距离可确定。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一份或多份副本都是可能的。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="科普特拉.gif" border="0" height="304" src="../KOPTRA.gif" width="730"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    上面的示例显示了一个具有 15 个相等锥体的机架。
+   </font>
+   <font style="vertical-align: inherit;">
+    第一个齿分配有 4 个角度变化符号，用于确定锥度。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     然后使用“复制 + 移动”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项移动这 4 个角度变化符号
+   </font>
+   <font style="vertical-align: inherit;">
+    ，并复制 14 次以确定剩余牙齿的锥度。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    最后一个水平齿面添加了额外的角度变化符号。
+   </font>
+   <font style="vertical-align: inherit;">
+    该图还显示了两个齿的锥度的放大图。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

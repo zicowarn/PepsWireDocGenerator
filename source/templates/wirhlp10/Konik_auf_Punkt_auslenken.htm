@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,11 +28,52 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Konik auf Punkt auslenken" %}</p><p>{% trans "Als Systemvoreinstellung wird die Konik kontinuierlich auf einem gewählten Element zugestellt." %}</p>
-<p>{% trans "Mit der Option [Konik auf Punkt auslenken], können Sie die Konik auf einer bestimmbaren Punktposition zustellen." %}</p>
-<p>{% trans "Die folgende Abbildung zeigt eine variable Konik, bei der die Konik an drei Positionen auf einem Punkt ausgelenkt." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p><img src="../Taper_immediately.gif" alt="Taper_immediately.gif" width="348" height="291" border="0"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    将锥角偏转至该点
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    作为系统默认设置，圆锥体在选定元素上连续前进。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用选项
+   </font>
+  </font>
+  <font style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     将圆锥曲线偏转至点
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，您可以将圆锥曲线移动到特定点位置。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图显示了一个可变锥度，其中锥度在一个点的三个位置处发生偏转。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <img alt="Taper_immediately.gif" border="0" height="291" src="../Taper_immediately.gif" width="348"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -37,45 +36,188 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "Job- / Kommandodatei erzeugen" %}</p><p>{% trans "Dieser Befehl erzeugt für NC-Maschinen vom Typ [AGIE] [100/123] und [CHARMILLES Robofil] automatisch eine Job- bzw. Kommandodatei (CMD) und lädt diese in einen Editor oder ruft einen Editor zum manuellen Erzeugen der o.g. Dateien auf." %}</p><p>{% trans "Nach Aufruf des Befehls fragt das System zunächst:" %}</p>
-<p class="hcp3"> </p>
-<p><img src="../job_YNo.gif" alt="job_YNo.gif" width="584" height="119" border="0"/></p>
-<p class="hcp3"> </p>
-<p>{% trans "Wird der Dialog mit [Ja] bestätigt, erzeugt das System aus den momentanen Programmdaten eine Job- / Kommandodatei und zeigt diese in einem Editor." %}</p>
-<p>{% trans "Klickt man auf [Nein] ruft das System nur einen Editor auf, so dass die Job- / Kommandodatei manuell erzeugt werden kann." %}</p>
-<p>{% trans "Die folgenden Bilder zeigen den Editor mit einer JOB Datei für eine [AGIE] [ 100/123] und eine [Charmilles Robofil] Maschine." %}</p>
-<p class="hcp3"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp3"> </p>
-<p><img src="../JOB_AGIE_shg.gif" usemap="#AreaMap0" alt="JOB_AGIE_shg.gif" width="329" height="534" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="11,124,288,197" href="javascript:BSSCPopup('Dateiname_Job_Editor.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="13,208,285,489" href="javascript:BSSCPopup('Das_Kommandoprogrammfenster_Job_Editor.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="200, 499, 288, 519" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area17" alt=""/>
-<area shape="rect" coords="15, 498, 103, 518" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area18" alt=""/>
-<area shape="rect" coords="295,225,321,249" href="javascript:BSSCPopup('Neue_Datei_Job_Editor.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="297,249,321,269" href="javascript:BSSCPopup('Vorhandene_Datei_laden_Job_Editor.htm',400,300);" id="area4" alt=""/>
-<area shape="rect" coords="297,271,320,293" href="javascript:BSSCPopup('Datei_speichern_Job_Editor.htm',400,300);" id="area5" alt=""/>
-<area shape="rect" coords="298,346,320,369" href="javascript:BSSCPopup('Syntax_pruefen_Job_Editor.htm');" id="area6" alt=""/>
-<area shape="rect" coords="296,391,320,460" href="javascript:BSSCPopup('Ausschneiden_Kopieren_Einfuegen_Job_Editor.htm',400,300);" id="area7" alt=""/>
-<area shape="rect" coords="298, 463, 320, 483" href="javascript:BSSCPopup('Rueckgaengig_Job_Editor.htm',400,300);" id="area8" alt=""/>
-<area shape="rect" coords="110, 498, 198, 518" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area19" alt=""/>
-</map> <img src="../JOB_ROBO_shg.gif" usemap="#AreaMap1" alt="JOB_ROBO_shg.gif" width="329" height="387" border="0"/>
-<map name="AreaMap1" id="AreaMap1">
-<area shape="rect" coords="11,63,286,346" href="javascript:BSSCPopup('Das_Kommandoprogrammfenster_Job_Editor.htm');" id="area9" alt=""/>
-<area shape="rect" coords="296,110,321,133" href="javascript:BSSCPopup('Neue_Datei_Job_Editor.htm',400,300);" id="area10" alt=""/>
-<area shape="rect" coords="294,134,321,158" href="javascript:BSSCPopup('Vorhandene_Datei_laden_Job_Editor.htm',400,300);" id="area11" alt=""/>
-<area shape="rect" coords="295,205,321,228" href="javascript:BSSCPopup('Syntax_pruefen_Job_Editor.htm',400,300);" id="area12" alt=""/>
-<area shape="rect" coords="297,251,319,319" href="javascript:BSSCPopup('Ausschneiden_Kopieren_Einfuegen_Job_Editor.htm',400,300);" id="area13" alt=""/>
-<area shape="rect" coords="295,321,321,345" href="javascript:BSSCPopup('Rueckgaengig_Job_Editor.htm',400,300);" id="area14" alt=""/>
-<area shape="rect" coords="118,32,288,61" href="javascript:BSSCPopup('Dateiname_Job_Editor.htm',400,300);" id="area15" alt=""/>
-<area shape="rect" coords="296,69,319,91" href="javascript:BSSCPopup('Startsequenz_importieren_Nur_Charmilles.htm',400,300);" id="area16" alt=""/>
-<area shape="rect" coords="16, 498, 104, 518" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area20" alt=""/>
-<area shape="rect" coords="14, 354, 102, 377" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area21" alt=""/>
-<area shape="rect" coords="197, 353, 285, 376" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area22" alt=""/>
-<area shape="rect" coords="106, 352, 194, 375" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area23" alt=""/>
-</map> </p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; 
+	 border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    生成作业/命令文件
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     此命令自动为AGIE
+    </font>
+   </font>
+  </font>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     100/123
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     CHARMILLES Robofil
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    类型的 NC 机床创建作业或命令文件 (CMD)
+   </font>
+   <font style="vertical-align: inherit;">
+    ，并将其加载到编辑器中或调用编辑器手动创建上述文件。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    调用命令后，系统首先询问：
+   </font>
+  </font>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p>
+  <img alt="工作_YNo.gif" border="0" height="119" src="../job_YNo.gif" width="584"/>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     如果选择“是”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    确认该对话框
+   </font>
+   <font style="vertical-align: inherit;">
+    ，系统将从当前程序数据创建作业/命令文件并将其显示在编辑器中。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果单击
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “否”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，系统仅调用编辑器，以便可以手动创建作业/命令文件。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图显示了带有
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     AGIE
+    </font>
+   </font>
+  </font>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     100/123
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     Charmilles Robofil
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    机器的 JOB 文件的编辑器。
+   </font>
+  </font>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p>
+  <img alt="JOB_AGIE_shg.gif" border="0" height="534" src="../JOB_AGIE_shg.gif" usemap="#AreaMap0" width="329"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="11,124,288,197" href="javascript:BSSCPopup('Dateiname_Job_Editor.htm',400,300);" id="area1" shape="rect"/>
+   <area alt="" coords="13,208,285,489" href="javascript:BSSCPopup('Das_Kommandoprogrammfenster_Job_Editor.htm',400,300);" id="area2" shape="rect"/>
+   <area alt="" coords="200, 499, 288, 519" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area17" shape="rect"/>
+   <area alt="" coords="15, 498, 103, 518" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area18" shape="rect"/>
+   <area alt="" coords="295,225,321,249" href="javascript:BSSCPopup('Neue_Datei_Job_Editor.htm',400,300);" id="area3" shape="rect"/>
+   <area alt="" coords="297,249,321,269" href="javascript:BSSCPopup('Vorhandene_Datei_laden_Job_Editor.htm',400,300);" id="area4" shape="rect"/>
+   <area alt="" coords="297,271,320,293" href="javascript:BSSCPopup('Datei_speichern_Job_Editor.htm',400,300);" id="area5" shape="rect"/>
+   <area alt="" coords="298,346,320,369" href="javascript:BSSCPopup('Syntax_pruefen_Job_Editor.htm');" id="area6" shape="rect"/>
+   <area alt="" coords="296,391,320,460" href="javascript:BSSCPopup('Ausschneiden_Kopieren_Einfuegen_Job_Editor.htm',400,300);" id="area7" shape="rect"/>
+   <area alt="" coords="298, 463, 320, 483" href="javascript:BSSCPopup('Rueckgaengig_Job_Editor.htm',400,300);" id="area8" shape="rect"/>
+   <area alt="" coords="110, 498, 198, 518" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area19" shape="rect"/>
+  </map>
+  <img alt="JOB_ROBO_shg.gif" border="0" height="387" src="../JOB_ROBO_shg.gif" usemap="#AreaMap1" width="329"/>
+  <map id="AreaMap1" name="AreaMap1">
+   <area alt="" coords="11,63,286,346" href="javascript:BSSCPopup('Das_Kommandoprogrammfenster_Job_Editor.htm');" id="area9" shape="rect"/>
+   <area alt="" coords="296,110,321,133" href="javascript:BSSCPopup('Neue_Datei_Job_Editor.htm',400,300);" id="area10" shape="rect"/>
+   <area alt="" coords="294,134,321,158" href="javascript:BSSCPopup('Vorhandene_Datei_laden_Job_Editor.htm',400,300);" id="area11" shape="rect"/>
+   <area alt="" coords="295,205,321,228" href="javascript:BSSCPopup('Syntax_pruefen_Job_Editor.htm',400,300);" id="area12" shape="rect"/>
+   <area alt="" coords="297,251,319,319" href="javascript:BSSCPopup('Ausschneiden_Kopieren_Einfuegen_Job_Editor.htm',400,300);" id="area13" shape="rect"/>
+   <area alt="" coords="295,321,321,345" href="javascript:BSSCPopup('Rueckgaengig_Job_Editor.htm',400,300);" id="area14" shape="rect"/>
+   <area alt="" coords="118,32,288,61" href="javascript:BSSCPopup('Dateiname_Job_Editor.htm',400,300);" id="area15" shape="rect"/>
+   <area alt="" coords="296,69,319,91" href="javascript:BSSCPopup('Startsequenz_importieren_Nur_Charmilles.htm',400,300);" id="area16" shape="rect"/>
+   <area alt="" coords="16, 498, 104, 518" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area20" shape="rect"/>
+   <area alt="" coords="14, 354, 102, 377" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area21" shape="rect"/>
+   <area alt="" coords="197, 353, 285, 376" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area22" shape="rect"/>
+   <area alt="" coords="106, 352, 194, 375" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area23" shape="rect"/>
+  </map>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('area1');
 	FilePopupInit('area2');
@@ -100,7 +242,9 @@
 	FilePopupInit('area21');
 	FilePopupInit('area22');
 	FilePopupInit('area23');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}
