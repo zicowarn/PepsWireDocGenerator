@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,13 +33,162 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Draht einfädeln / abschneiden" %}</p><p>{% trans "Dieser Dialog zeigt im oberen Abschnitt den [momentanen Drahtstatus] (eingefädelt / abgeschnitten)." %}</p>
-<p>{% trans "Ferner erlaubt sie, an beliebigen Positionen eine [separate Operation] zum [Einfädeln] oder [Abschneiden] des Drahtes zu programmieren." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p><img src="../wirecont.gif" alt="wirecont.gif" width="376" height="169" border="0"/></p>
-<p style="text-align: center;"> </p>
-<p>{% trans "Das manuelle Einfädeln des Drahtes wird normalerweise angewendet, wenn komplexere Mehrfachaufspannungen geschnitten werden sollen und das automatische Draht einfädeln, unerwünschte NC-Codes für Einfädeln und Abschneiden erzeugen würde." %}</p>
-<p>{% trans "Ob der Draht automatisch Einfädeln soll oder nicht, wird mit der Option [Autom. einfädeln / abschneiden] im Register #[Optionen]# der Dialoge [Standard Konturbearbeitung] und [Regelflächenbearbeitung] abgeschaltet." %}</p>
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; 
+	 border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <img alt="线程.gif" border="0" height="29" src="../Thread.gif" width="30"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    穿线/剪线
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该对话框在上部
+   </font>
+   <font style="vertical-align: inherit;">
+    显示
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     当前的导线状态（螺纹/切割）。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    它还允许您对在任何位置
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     穿线
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     切割
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    电线
+   </font>
+   <font style="vertical-align: inherit;">
+    的
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单独操作进行编程。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <img alt="电线连接.gif" border="0" height="169" src="../wirecont.gif" width="376"/>
+ </p>
+ <p style="text-align: center;">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    手动穿线通常用于切割更复杂的多个设置，而自动穿线会生成不需要的用于穿线和切割的 NC 代码。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     使用“标准轮廓处理
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    ”和
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     “直纹曲面处理”
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    对话框的
+   </font>
+   <a href="Optionen_Lasche_Standard_Konturbearbeitung.htm">
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      “选项”
+     </font>
+    </font>
+   </a>
+   <font style="vertical-align: inherit;">
+    选项卡 
+ 中的
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “自动穿线/切割
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ”选项可以关闭是否自动穿线
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <a href="Optionen_Lasche_Standard_Konturbearbeitung.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

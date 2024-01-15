@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,8 +28,28 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Beschreibung" %}</p><p>{% trans "Dieses Feld enthält üblicherweise eine Beschreibung des zu programmierenden Werkstückes." %}</p>
-<p>{% trans "Es hat keinen Einfluss auf die NC-Daten, ist aber nützlich, um ein Programm näher zu beschreiben." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    描述
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该字段通常包含要编程的工件的描述。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    它对 NC 数据没有影响，但对于更详细地描述程序很有用。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

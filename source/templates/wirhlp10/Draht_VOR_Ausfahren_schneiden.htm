@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,8 +28,28 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Draht VOR Ausfahren schneiden" %}</p><p>{% trans "Die Checkbox wird aktiviert, wenn der Draht innerhalb der Bearbeitungskontur das heißt, vor der Abfahrbewegung, abgeschnitten werden soll." %}</p>
-<p>{% trans "Die Option kann man mit oder ohne Angabe von Anbindungen (Haltestegen) verwenden." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    延伸前剪断电线
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果要在加工轮廓内（即在出发运动之前）切割线，则激活该复选框。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该选项可以在有或没有指定连接（支撑杆）的情况下使用。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

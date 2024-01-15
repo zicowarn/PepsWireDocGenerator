@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,17 +34,107 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Profil auf einem Zylinder abwickeln" %}</p><p>{% trans "Hier wird die zu schneidende 2D-Kontur auf einem Zylinder abgewickelt. Die folgenden Bilder zeigen eine Zahnform die auf einem Zylinder abgewickelt wurde." %}</p>
-<p class="hcp1"> </p>
-<p><img src="../Rotationsachse_Profil_auf_einem_Zylinder_abwickeln.gif" alt="Rotationsachse_Profil_auf_einem_Zylinder_abwickeln.gif" width="673" height="344" border="0"/></p>
-<p class="hcp1"> </p>
-<p>{% trans "Die folgenden Parameter werden benötigt, um den Schnitt auf dem Zylinder zu positionieren:" %}</p>
-<p class="dialog">{% trans "Abwicklungsdurchmesser" %}</p>
-<p>{% trans "Definiert den Durchmesser des Zylinders, auf dem die zu schneidende 2D-Kontur abgewickelt werden soll." %}</p>
-<p class="dialog">{% trans "Y-Schneidposition" %}</p>
-<p>{% trans "Diese Y-Positionskoordinate erlaubt es, die Schneidgeometrie entlang der Y-Achse zu verschieben. Die 2D-Kontur wird an dieser Position abgewickelt." %}</p>
-<p class="dialog">{% trans "Helix-Start um Gruppenabstand verschieben" %}</p>
-<p>{% trans "Werden mehrere #gruppierte#, helikale Schnitte bearbeitet und ist die Option '[Helix-Start um Gruppenabstand verschieben]' aktiv, beginnen alle helikalen Schnitte nach einer Rotation an der gleichen Position." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在圆柱体上展开型材
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这里要切割的二维轮廓是在圆柱体上形成的。
+   </font>
+   <font style="vertical-align: inherit;">
+    下图显示了在圆柱体上开发的齿形。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="旋转 axis_profile_on_a_cylindrical_unwinding.gif" border="0" height="344" src="../Rotationsachse_Profil_auf_einem_Zylinder_abwickeln.gif" width="673"/>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    将切割定位在圆柱体上需要以下参数：
+   </font>
+  </font>
+ </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    放卷直径
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    定义要在其上开发要切割的 2D 轮廓的圆柱体的直径。
+   </font>
+  </font>
+ </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    Y切割位置
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该 Y 位置坐标允许切削几何形状沿 Y 轴移动。
+   </font>
+   <font style="vertical-align: inherit;">
+    2D 轮廓是在该位置绘制的。
+   </font>
+  </font>
+ </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按组距离移动螺旋线起点
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果处理多个
+   </font>
+  </font>
+  <a href="Gruppierte_Operationen_aufrufen.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     分组
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    螺旋切削，并且选项“
+   </font>
+  </font>
+  <font style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     按组距离移动螺旋起点
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ”处于活动状态，则所有螺旋切削在旋转后都会在同一位置开始。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

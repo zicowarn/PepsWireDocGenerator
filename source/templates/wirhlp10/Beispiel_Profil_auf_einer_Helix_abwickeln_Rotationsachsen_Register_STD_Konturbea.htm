@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,17 +35,107 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Profil auf einer Helix abwickeln" %}</p><p>{% trans "Die zu schneidende Kontur wird in 2D geschnitten, wobei sich das Rohteil um die Rotationsachse dreht. Die Kontur wird dabei helikal auf einer weichen Kurve abgewickelt." %}</p>
-<p>{% trans "Das heißt, dass sich die Rotationsachse gleichzeitig mit den Schneiddüsen entlang der Rotationsachse bewegt." %}</p>
-<p>{% trans "Die Bilder unterhalb zeigen die zylindrische Bearbeitung eines Langlochs, bei gleichzeitiger Rotation der Rotationsachse." %}</p>
-<p class="hcp1"> </p>
-<p><img src="../Rotationsachse_Profil_auf_einer_Helix_abwickeln.gif" alt="Rotationsachse_Profil_auf_einer_Helix_abwickeln.gif" width="868" height="418" border="0"/></p>
-<p class="hcp1"> </p>
-<p>{% trans "Wurde die Option [Profil auf einer Helix abwickeln aktiviert], schaltet das System folgende Optionen frei:" %}</p>
-<p class="dialog">{% trans "Rotation, Grad pro mm" %}</p>
-<p>{% trans "Der Parameter [Rotation, Grad pro mm] definiert die Rotation der Rotationsachse (in Grad) pro jedem geschnittenen Millimeter." %}</p>
-<p class="dialog">{% trans "X-Position für Start der Helix" %}</p>
-<p>{% trans "Diese X-Positionskoordinate erlaubt es, die Schneidgeometrie entlang der X-Achse zu verschieben. Die helikale Form startet dann an der definierten X-Position." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在螺旋上展开轮廓
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    待切割轮廓以 2D 方式切割，毛坯绕旋转轴旋转。
+   </font>
+   <font style="vertical-align: inherit;">
+    轮廓在柔和的曲线上呈螺旋状发展。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这意味着旋转轴与切割喷嘴同时沿着旋转轴移动。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图显示了在旋转轴同时旋转的情况下对细长孔进行圆柱加工。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="旋转 axis_profile_on_a_helix_unwinding.gif" border="0" height="418" src="../Rotationsachse_Profil_auf_einer_Helix_abwickeln.gif" width="868"/>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     激活螺旋上的展开轮廓选项
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，系统将解锁以下选项：
+   </font>
+  </font>
+ </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    旋转，每毫米度数
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    旋转
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     ，每毫米度数
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    参数定义每毫米切割的旋转轴旋转（以度为单位）。
+   </font>
+  </font>
+ </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    螺旋线起点的 X 位置
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该 X 位置坐标允许切削几何形状沿 X 轴移动。
+   </font>
+   <font style="vertical-align: inherit;">
+    然后螺旋形状从定义的 X 位置开始。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

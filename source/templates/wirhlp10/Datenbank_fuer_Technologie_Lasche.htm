@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,44 +35,342 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Datenbank für Technologie Register" %}</p><p>{% trans "Mit dem Register [Datenbank] können Sie Technologiedaten [Laden] oder [Speichern]." %}</p><p>{% trans "Als [Technologiedaten] bezeichnet man die Einstellungen für [Stromstufe], [Register], [Anzahl der Schnitte] etc. die man benötigt, um ein bestimmtes Material, mit einer bestimmten Dicke, mit einer bestimmten Oberflächengüte schneiden zu können." %}</p>
-<p class="hcp2"> </p>
-<p style="color: #ff0000; font-style: italic;">{% trans "Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen." %}</p>
-<p> </p>
-<p><img src="../TECHN_LA_shg.gif" usemap="#AreaMap0" alt="TECHN_LA_shg.gif" width="362" height="512" border="0"/> <map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="12,39,61,55" href="Einstellungen_Einstellen_der_Schnittmethode.htm" alt=""/>
-<area shape="rect" coords="62,38,117,55" href="Anbinden_Lasche.htm" alt=""/>
-<area shape="rect" coords="120,36,197,55" href="Ein_Ausfahren_Lasche.htm" alt=""/>
-<area shape="rect" coords="197,37,238,55" href="Offset_Lasche.htm" alt=""/>
-<area shape="rect" coords="19,66,325,92" href="javascript:BSSCPopup('Filter_Material.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="17,92,323,114" href="javascript:BSSCPopup('Filter_Dicke.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="18,116,320,139" href="javascript:BSSCPopup('Filter_Oberflaechenguete.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="19,151,324,385" href="javascript:BSSCPopup('Technologie_Datenbank_Liste_der_Materialien.htm',400,300);" id="area4" alt=""/>
-<area shape="rect" coords="29,392,180,412" href="javascript:BSSCPopup('Liste_neu_aufbauen.htm',400,300);" id="area5" alt=""/>
-<area shape="rect" coords="193,392,332,413" href="javascript:BSSCPopup('Technologie_laden_aus_Technologie_Datenbank.htm',400,300);" id="area6" alt=""/>
-<area shape="rect" coords="24,420,101,442" href="javascript:BSSCPopup('Editieren_Technologie_Datenbank.htm',400,300);" id="area7" alt=""/>
-<area shape="rect" coords="104,422,180,442" href="javascript:BSSCPopup('Loeschen_Technologie_Datenbank.htm',400,300);" id="area8" alt=""/>
-<area shape="rect" coords="190,420,329,443" href="javascript:BSSCPopup('Technologie_speichern_Technologie_Datenbank.htm',400,300);" id="area9" alt=""/>
-<area shape="rect" coords="12,476,83,501" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area10" alt=""/>
-<area shape="rect" coords="92,478,168,504" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area11" alt=""/>
-<area shape="rect" coords="172,479,266,501" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area12" alt=""/>
-<area shape="rect" coords="271,479,347,503" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area13" alt=""/></map></p>
-<p class="hcp2"> </p>
-<p>{% trans "Für jede Kombination von Material, Materialdicke und Oberflächengüte kann man eine Einstellung für [Stromstufe], [Register], [Anzahl der Schnitte] etc. festlegen, in der Datenbank speichern und bei Bedarf laden." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../GLOB_SET.gif" alt="GLOB_SET.gif" width="218" height="262" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Lädt man Technologiedaten aus der Datenbank, weist das System deren Technologiewerte der aktuellen Bearbeitung zu." %}</p>
-<p>{% trans "Die Datenbank bietet Möglichkeiten um [vorhandenen Technologien zu verändern] oder [neue Technologien] zu [erzeugen]." %}</p>
-<p>{% trans "Die Datenbank enthält die folgenden Daten:" %}</p>
-<p>{% trans "[Materialbeschreibung]:" %}</p>
-<p>{% trans "Ist eine Beschreibung des Material das geschnitten werden soll. In vielen Fällen werden hier zusätzlich Informationen wie z.B. Härteangaben für das Material notiert." %}</p>
-<p>{% trans "[Materialdicke]:" %}</p>
-<p>{% trans "In diesem Feld wird die Dicke des Materials z.B. [20 mm] durch Eingabe eines Wertes oder durch Eingabe eines Bereichs von z.B. [20 - 30 mm] festgelegt." %}</p>
-<p>{% trans "[Oberflächengüte]" %}</p>
-<p>{% trans "Legt die Oberflächengüte fest (z.B. 10 RA)." %}</p>
-<script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    技术注册数据库
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    您可以
+   </font>
+   <font style="vertical-align: inherit;">
+    使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “数据库”选项
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     卡加载
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     保存
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    技术数据。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     工艺数据
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    是指
+   </font>
+   <font style="vertical-align: inherit;">
+    为了能够切割特定材料、特定厚度和特定表面质量所需的电流
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     级别
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     套准
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     切割次数
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    等设置。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p style="color: #ff0000; font-style: italic;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    单击下图的各个区域可访问帮助文本。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <img alt="TECHN_LA_shg.gif" border="0" height="512" src="../TECHN_LA_shg.gif" usemap="#AreaMap0" width="362"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="12,39,61,55" href="Einstellungen_Einstellen_der_Schnittmethode.htm" shape="rect"/>
+   <area alt="" coords="62,38,117,55" href="Anbinden_Lasche.htm" shape="rect"/>
+   <area alt="" coords="120,36,197,55" href="Ein_Ausfahren_Lasche.htm" shape="rect"/>
+   <area alt="" coords="197,37,238,55" href="Offset_Lasche.htm" shape="rect"/>
+   <area alt="" coords="19,66,325,92" href="javascript:BSSCPopup('Filter_Material.htm',400,300);" id="area1" shape="rect"/>
+   <area alt="" coords="17,92,323,114" href="javascript:BSSCPopup('Filter_Dicke.htm',400,300);" id="area2" shape="rect"/>
+   <area alt="" coords="18,116,320,139" href="javascript:BSSCPopup('Filter_Oberflaechenguete.htm',400,300);" id="area3" shape="rect"/>
+   <area alt="" coords="19,151,324,385" href="javascript:BSSCPopup('Technologie_Datenbank_Liste_der_Materialien.htm',400,300);" id="area4" shape="rect"/>
+   <area alt="" coords="29,392,180,412" href="javascript:BSSCPopup('Liste_neu_aufbauen.htm',400,300);" id="area5" shape="rect"/>
+   <area alt="" coords="193,392,332,413" href="javascript:BSSCPopup('Technologie_laden_aus_Technologie_Datenbank.htm',400,300);" id="area6" shape="rect"/>
+   <area alt="" coords="24,420,101,442" href="javascript:BSSCPopup('Editieren_Technologie_Datenbank.htm',400,300);" id="area7" shape="rect"/>
+   <area alt="" coords="104,422,180,442" href="javascript:BSSCPopup('Loeschen_Technologie_Datenbank.htm',400,300);" id="area8" shape="rect"/>
+   <area alt="" coords="190,420,329,443" href="javascript:BSSCPopup('Technologie_speichern_Technologie_Datenbank.htm',400,300);" id="area9" shape="rect"/>
+   <area alt="" coords="12,476,83,501" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area10" shape="rect"/>
+   <area alt="" coords="92,478,168,504" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area11" shape="rect"/>
+   <area alt="" coords="172,479,266,501" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area12" shape="rect"/>
+   <area alt="" coords="271,479,347,503" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area13" shape="rect"/>
+  </map>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对于材料、材料厚度和表面质量的每种组合，您可以设置
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     当前级别
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     寄存器
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     切割次数
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    等设置，将其保存在数据库中并在必要时加载。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="GLOB_SET.gif" border="0" height="262" src="../GLOB_SET.gif" width="218"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果从数据库加载技术数据，系统会将其技术值分配给当前处理。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     该数据库提供了更改现有技术
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     或
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    创建
+   </font>
+   <font style="vertical-align: inherit;">
+    新
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     技术的
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该数据库包含以下数据：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     材质说明
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    是对要切割的材料的描述。
+   </font>
+   <font style="vertical-align: inherit;">
+    在许多情况下，此处会注明材料的硬度信息等附加信息。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     材料厚度
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     在此字段中，通过输入值或通过输入例如20-30mm
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    的范围来
+   </font>
+   <font style="vertical-align: inherit;">
+    设置材料的厚度，例如
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     20mm
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     表面质量
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    设置表面质量（例如 10 RA）。
+   </font>
+  </font>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
         if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
         FilePopupInit('area1');
         FilePopupInit('area2');
@@ -88,8 +385,9 @@
         FilePopupInit('area11');
         FilePopupInit('area12');
         FilePopupInit('area13');
-//]]&gt;
-</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

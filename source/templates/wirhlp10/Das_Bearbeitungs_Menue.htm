@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -39,41 +38,114 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <h1>{% trans "Das Bearbeitung Menü" %}</h1><p>{% trans "Das Menü [Bearbeitung] enthält Befehle zur Programmierung von Drahterodierbearbeitungen." %}</p>
-<p>{% trans "Es existieren Befehle, um den Namen der NC-Ausgabedatei anzugeben, die Reihenfolge einzelnen Bearbeitungsoperationen zu bestimmen und Befehle zur Festlegung des verwendeten Bearbeitungsverfahrens." %}</p>
-<p class="hcp2"> </p>
-<p class="hcp2">{% trans "Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen." %}</p>
-<p class="hcp3"> </p>
-<p><img src="../Wir10_shg.gif" usemap="#AreaMap0" alt="Wir10_shg.gif" width="1064" height="262" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="0, 55, 214, 83" href="Postprozessor_konfigurieren.htm" alt=""/>
-<area shape="rect" coords="0, 81, 217, 108" href="Rotationsachse_konfigurieren.htm" alt=""/>
-<area shape="rect" coords="214, 29, 280, 108" href="Operation_starten.htm" alt=""/>
-<area shape="rect" coords="708, 27, 901, 58" href="Im_Eilgang_.htm" alt=""/>
-<area shape="rect" coords="710, 58, 901, 88" href="Im_Vorschub_Dialog.htm" alt=""/>
-<area shape="rect" coords="712, 87, 901, 112" href="Draht_einfaedeln.htm" alt=""/>
-<area shape="rect" coords="900, 25, 1062, 57" href="Mess_Zyklen.htm" alt=""/>
-<area shape="rect" coords="280, 26, 388, 105" href="Standard_Konturbearbeitung____.htm" alt=""/>
-<area shape="rect" coords="187, 149, 400, 181" href="Standard_Konturbearbeitung_Auto_Matrize_Stempel.htm" alt=""/>
-<area shape="rect" coords="388, 24, 489, 106" href="Bundbearbeitung_.htm" alt=""/>
-<area shape="rect" coords="485, 23, 618, 105" href="Regelflaechenbearbeitung____.htm" alt=""/>
-<area shape="rect" coords="900, 54, 1063, 81" href="M_Code_einfuegen.htm" alt=""/>
-<area shape="rect" coords="902, 79, 1062, 104" href="Zurueck_zur_Startposition____.htm" alt=""/>
-<area shape="rect" coords="189, 181, 400, 209" href="Gruppierte_Operationen_aufrufen.htm" alt=""/>
-<area shape="rect" coords="724, 151, 840, 263" href="Alle_VDM_Eintraege_loeschen.htm" alt=""/>
-<area shape="rect" coords="1, 22, 212, 54" href="Masseinheit_mm_Inch_bestimmen.htm" alt=""/>
-<area shape="rect" coords="619, 22, 705, 99" href="Regelflaeche_mit_Rotationsachse.htm" alt=""/>
-<area shape="rect" coords="402, 150, 544, 180" href="Teilefiguren_erzeugen.htm" alt=""/>
-<area shape="rect" coords="578, 181, 709, 212" href="Partielles_Ausraeumen.htm" alt=""/>
-<area shape="rect" coords="579, 151, 710, 180" href="4_Achs_Ausraeumen.htm" alt=""/>
-<area shape="rect" coords="400, 182, 542, 209" href="Ausfallteil_Sicherung.htm" alt=""/>
-<area shape="rect" coords="401, 211, 572, 237" href="Schnittschemen_nachladen.htm" alt=""/>
-<area shape="rect" coords="191, 209, 380, 233" href="Freihand_erodieren.htm" alt=""/>
-</map> </p>
-<p class="hcp3"> </p>
-<p>{% trans "[Siehe auch]:" %}</p>
-<p class="hcp4">{% trans "#Passwortschutz für die Schaltfläche: Eingaben speichern#" %}</p>
-<p class="hcp4">{% trans "#Simulation der NC-Bearbeitung#" %}</p>
+ <h1>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    编辑菜单
+   </font>
+  </font>
+ </h1>
+ <p>
+  <br/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    加工菜单包含
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     用于
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对线切割加工进行编程的命令。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    存在命令来指定 NC 输出文件的名称、确定各个加工操作的顺序以及指定所使用的加工方法的命令。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="hcp2">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    单击下图的各个区域可访问帮助文本。
+   </font>
+  </font>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p>
+  <img alt="Wir10_shg.gif" border="0" height="262" src="../Wir10_shg.gif" usemap="#AreaMap0" width="1064"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="0, 55, 214, 83" href="Postprozessor_konfigurieren.htm" shape="rect"/>
+   <area alt="" coords="0, 81, 217, 108" href="Rotationsachse_konfigurieren.htm" shape="rect"/>
+   <area alt="" coords="214, 29, 280, 108" href="Operation_starten.htm" shape="rect"/>
+   <area alt="" coords="708, 27, 901, 58" href="Im_Eilgang_.htm" shape="rect"/>
+   <area alt="" coords="710, 58, 901, 88" href="Im_Vorschub_Dialog.htm" shape="rect"/>
+   <area alt="" coords="712, 87, 901, 112" href="Draht_einfaedeln.htm" shape="rect"/>
+   <area alt="" coords="900, 25, 1062, 57" href="Mess_Zyklen.htm" shape="rect"/>
+   <area alt="" coords="280, 26, 388, 105" href="Standard_Konturbearbeitung____.htm" shape="rect"/>
+   <area alt="" coords="187, 149, 400, 181" href="Standard_Konturbearbeitung_Auto_Matrize_Stempel.htm" shape="rect"/>
+   <area alt="" coords="388, 24, 489, 106" href="Bundbearbeitung_.htm" shape="rect"/>
+   <area alt="" coords="485, 23, 618, 105" href="Regelflaechenbearbeitung____.htm" shape="rect"/>
+   <area alt="" coords="900, 54, 1063, 81" href="M_Code_einfuegen.htm" shape="rect"/>
+   <area alt="" coords="902, 79, 1062, 104" href="Zurueck_zur_Startposition____.htm" shape="rect"/>
+   <area alt="" coords="189, 181, 400, 209" href="Gruppierte_Operationen_aufrufen.htm" shape="rect"/>
+   <area alt="" coords="724, 151, 840, 263" href="Alle_VDM_Eintraege_loeschen.htm" shape="rect"/>
+   <area alt="" coords="1, 22, 212, 54" href="Masseinheit_mm_Inch_bestimmen.htm" shape="rect"/>
+   <area alt="" coords="619, 22, 705, 99" href="Regelflaeche_mit_Rotationsachse.htm" shape="rect"/>
+   <area alt="" coords="402, 150, 544, 180" href="Teilefiguren_erzeugen.htm" shape="rect"/>
+   <area alt="" coords="578, 181, 709, 212" href="Partielles_Ausraeumen.htm" shape="rect"/>
+   <area alt="" coords="579, 151, 710, 180" href="4_Achs_Ausraeumen.htm" shape="rect"/>
+   <area alt="" coords="400, 182, 542, 209" href="Ausfallteil_Sicherung.htm" shape="rect"/>
+   <area alt="" coords="401, 211, 572, 237" href="Schnittschemen_nachladen.htm" shape="rect"/>
+   <area alt="" coords="191, 209, 380, 233" href="Freihand_erodieren.htm" shape="rect"/>
+  </map>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     也可以看看
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：
+   </font>
+  </font>
+ </p>
+ <p class="hcp4">
+  <a href="Passwort_Schutz_fuer_den_Eingaben_speichern_Button.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     按钮的密码保护：保存条目
+    </font>
+   </font>
+  </a>
+ </p>
+ <p class="hcp4">
+  <a href="../Simulation/_Standard_Simulation.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     数控加工模拟
+    </font>
+   </font>
+  </a>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

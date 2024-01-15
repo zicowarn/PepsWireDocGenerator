@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,8 +33,67 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Codes" %}</p><p>{% trans "Ist diese Checkbox aktiviert, wird jede [zusätzliche M-Funktion] die mit dem Befehl #[Zusätzliche M-Codes, Kommentare u.a.]#" %}</p>
-<p>{% trans "Im Menü #[Vorbereitung]# zu einer Bearbeitungsfigur hinzugefügt wurde, dem gewählten Schnitt zugeordnet und in die NC-Daten ausgegeben." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    代码
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果激活此复选框，则通过命令
+   </font>
+   <a href="../wirhlp9/Zusaetzliche_M_Codes_Kommentare_u_a_____.htm">
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      附加 M 代码、注释等
+     </font>
+    </font>
+   </a>
+   <font style="vertical-align: inherit;">
+    激活的每个
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     附加 M 功能
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <a href="../wirhlp9/Zusaetzliche_M_Codes_Kommentare_u_a_____.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <a href="../wirhlp9/Das_Vorbereitungs_Menue.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      添加到准备
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    菜单中的
+   </font>
+   <font style="vertical-align: inherit;">
+    加工图形，分配给选定的切削并输出到 NC 数据。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

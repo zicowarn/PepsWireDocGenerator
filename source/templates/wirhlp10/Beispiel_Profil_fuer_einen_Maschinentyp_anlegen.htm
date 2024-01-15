@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,17 +34,223 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Profil für einen Maschinentyp anlegen" %}</p><ul>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Wählen Sie im Menü #[Bearbeitung]# den Befehl #[Postprozessor konfigurieren]#." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Wechseln Sie im Dialog in das Register #[NC-Ausgabe Optionen]#." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Aktivieren Sie die Option [Automatische Konfiguration ausschalten]." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Falls vorhanden, wählen Sie aus der Listbox [Steuerungstyp] einen passenden Maschinen-/Steuerungstyp." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Aktivieren Sie die benötigen Einstelloptionen." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Speichern Sie die Einstellungen mit [Eingaben speichern]." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Wechseln Sie im Dialog in das Register [#Generell (Allgemein)# ]." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie im Bereich [Vorhandene Maschinenprofile] auf die Schaltfläche @. Dies fügt das neue Profil zur Liste der Profile hinzu." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Speichern Sie die Einstellungen mit [Eingaben speichern]." %}</p></li>
-</ul>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    为机器类型创建配置文件
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <a href="Das_Bearbeitungs_Menue.htm">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        从“编辑”
+       </font>
+      </font>
+     </font>
+    </a>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      菜单中，选择
+     </font>
+    </font>
+    <a href="Postprozessor_konfigurieren.htm">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        “配置后
+       </font>
+      </font>
+     </font>
+    </a>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      处理器”
+     </font>
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      在对话框中，切换到
+     </font>
+    </font>
+    <a href="NC_Ausgabe_Optionen_Postprozessor_konfigurieren_.htm">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        “NC 输出选项”
+       </font>
+      </font>
+     </font>
+    </a>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选项卡。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      启用
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       关闭自动配置
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选项。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      如果可用，请从
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       控制类型
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      列表框中选择 
+	 合适的机器/控制类型。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      激活所需的设置选项。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      使用保存设置
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       保存设置
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      在对话框中，切换到
+     </font>
+    </font>
+    <font class="hcp2">
+     <a href="Postprozessor_konfigurieren.htm">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        “常规”
+       </font>
+      </font>
+     </a>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选项卡。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       在现有机器配置文件
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      区域中，单击
+     </font>
+     <font style="vertical-align: inherit;">
+      按钮
+     </font>
+    </font>
+    <img alt="加号.gif" border="0" height="21" src="../Plus.gif" width="24"/>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+     <font style="vertical-align: inherit;">
+      这会将新配置文件添加到配置文件列表中。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      使用保存设置
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       保存设置
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+
 
 {% endblock %}
 {% endlinebreakless %}

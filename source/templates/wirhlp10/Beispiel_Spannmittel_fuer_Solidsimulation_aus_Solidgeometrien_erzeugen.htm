@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,15 +34,181 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Tip_Note_Heading">{% trans "Spannmittel für Solidsimulation aus Solidgeometrien erzeugen" %}</p><ul>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Definieren Sie die Solidgeometrien der Spannmittel (Solid importieren oder konstruieren)." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Rufen Sie im Menü #[Bearbeitung]# den Befehl #[Operation starten]# auf und klicken Sie im Dialog auf das Register [Rohteil]." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie im Dialogbereich [Spannmittel] auf die Schaltfläche [&amp;gt;&amp;gt;]." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie die Solids mit der linken Maustaste an und beenden Sie die Auswahl mit der Option [Ende] (siehe: [rechte] Maustaste od. [horizontale Ikonenleiste])." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Schließen Sie den Dialog, programmieren Sie die Bearbeitung und führen Sie eine #[Solid-Simulation]# durch." %}</p></li>
-</ul>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p><img src="../Simulation_mit_Spannmitteln_2.gif" alt="Simulation_mit_Spannmitteln_2.gif" width="865" height="352" border="0"/></p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    从实体几何形状创建用于实体模拟的夹紧装置
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      定义夹紧装置的实体几何形状（导入或构造实体）。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <a href="Das_Bearbeitungs_Menue.htm">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        在“加工”
+       </font>
+      </font>
+     </font>
+    </a>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      菜单中，调用
+     </font>
+    </font>
+    <a href="Operation_starten.htm">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        “开始操作”
+       </font>
+      </font>
+     </font>
+    </a>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      命令
+     </font>
+     <font style="vertical-align: inherit;">
+      ，然后单击 
+	 对话框中的
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “空白”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选项卡。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      在
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       夹紧设备对话框区域中，单击
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       &gt;&gt;
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      按钮
+     </font>
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      使用鼠标左键单击实体，然后使用
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “结束”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选项结束选择（请参阅：
+     </font>
+     <font style="vertical-align: inherit;">
+      鼠标
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       右键或
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       水平图标栏
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      ）。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      关闭对话框，对加工进行编程并进行
+     </font>
+    </font>
+    <a href="../Simulation/Solid_Simulation.htm">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        实体模拟
+       </font>
+      </font>
+     </font>
+    </a>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <img alt="模拟_with_clamping_2.gif" border="0" height="352" src="../Simulation_mit_Spannmitteln_2.gif" width="865"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

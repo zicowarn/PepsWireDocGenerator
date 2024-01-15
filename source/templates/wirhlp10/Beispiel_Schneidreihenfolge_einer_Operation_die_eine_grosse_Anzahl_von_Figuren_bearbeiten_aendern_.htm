@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -38,31 +37,277 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Beispiel: Schneidreihenfolge einer Operation ändern, die eine große Anzahl von Figuren bearbeitet." %}</p><ul>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Editieren Sie eine vorhandene Bearbeitunsoperation mit Hilfe des [#Operationsmanagers#.] Die Operation sollte wie im folgenden Beispiel mehr als 3 Figuren enthalten." %}</p></li>
-</ul>
-<p class="Topic_Text_Bulleted"><img src="../Optimierung_Dialog_Exa_1.gif" alt="" border="0" class="hcp3"/></p>
-<ul>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf die Schaltfläche [Neu ordnen]. Das System zeigt den Dialog [Optimierung]." %}</p></li>
-</ul>
-<p><img src="../Optimierung_Dialog.gif" alt="" border="0" class="hcp3"/></p>
-<p> </p>
-<p>{% trans "Die aktuelle Schneidreihenfolge wird angezeigt durch kleine Pfeilsymbole. Das folgende Bild zeigt, dass die Reihenfolge ziemlich ungeordnet ist." %}</p>
-<p class="Topic_Text_Bulleted"><img src="../Optimierung_Dialog_Exa_2.gif" alt="" border="0" class="hcp3"/></p>
-<p class="Topic_Text_Bulleted">{% trans "Die Schneidreihenfolge soll nun so verändert werden, dass diese in der [unteren linken Ecke] beginnt und reihenweise entlang der[ X-Achse] verläuft." %}</p>
-<ul class="hcp5">
-	<li><p class="Topic_Text_Bulleted">{% trans "Wählen Sie zu nächst mit Hilfe der Schaltfläche @ den Startpunkt der ersten zu schneidenden Figur (linke untere Figur)." %}</p></li>
-	<li><p class="Topic_Text_Bulleted">{% trans "Verschieben Sie anschließend den [Schieber] im Feld [Priorität] auf [X]." %}</p></li>
-	<li><p class="Topic_Text_Bulleted">{% trans "Klicken danach auf die Schaltfläche [Optimieren]." %}</p></li>
-</ul>
-<p class="Topic_Text_Bulleted"><img src="../Optimierung_Dialog_Exa_3.gif" alt="" border="0" class="hcp3"/></p>
-<p class="Topic_Text_Bulleted"> </p>
-<p class="Topic_Text_Bulleted">{% trans "Das folgende Bild zeigt die optimierte Schneidreihenfolge." %}</p>
-<p class="Topic_Text_Bulleted"><img src="../Optimierung_Dialog_Exa_4.gif" alt="" border="0" class="hcp3"/></p>
-<ul class="hcp5">
-	<li><p class="Topic_Text_Bulleted">{% trans "Schließen Sie den Dialog [Optimierung] mit der Schaltfläche [Schließen]." %}</p></li>
-</ul>
-<p class="Topic_Text_Bulleted"> </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    示例：更改处理大量图形的操作的切割顺序。
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <a href="../Operationsmanager/Operation_editieren____.htm">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        使用Operations Manager
+       </font>
+      </font>
+     </a>
+     <font style="vertical-align: inherit;">
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      编辑现有编辑操作
+     </font>
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       。
+      </font>
+     </font>
+     <font style="vertical-align: inherit;">
+      该操作应包含 3 个以上的数字，如下例所示。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p class="Topic_Text_Bulleted">
+  <img alt="" border="0" class="hcp3" src="../Optimierung_Dialog_Exa_1.gif"/>
+ </p>
+ <ul>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      单击
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “重新排序”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      按钮。
+     </font>
+     <font style="vertical-align: inherit;">
+      系统显示
+     </font>
+    </font>
+    <span class="hcp4">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “优化”
+      </font>
+     </font>
+    </span>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      对话框。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p>
+  <img alt="" border="0" class="hcp3" src="../Optimierung_Dialog.gif"/>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    当前切割顺序由小箭头符号指示。
+   </font>
+   <font style="vertical-align: inherit;">
+    下图可以看出，顺序相当混乱。
+   </font>
+  </font>
+ </p>
+ <p class="Topic_Text_Bulleted">
+  <img alt="" border="0" class="hcp3" src="../Optimierung_Dialog_Exa_2.gif"/>
+ </p>
+ <p class="Topic_Text_Bulleted">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    现在应该更改切割顺序，使其从左下角开始
+   </font>
+  </font>
+  <span class="hcp4">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     并沿
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+  </font>
+  <span class="hcp4">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     X 轴
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    逐行
+   </font>
+   <font style="vertical-align: inherit;">
+    运行。
+   </font>
+  </font>
+ </p>
+ <ul class="hcp5">
+  <li>
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      接下来，使用 按钮选择
+     </font>
+    </font>
+    <img alt="" border="0" class="hcp3" src="../Select.gif"/>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      要剪切的第一个图形的起点（左下图）。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li>
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      然后将
+     </font>
+     <span class="hcp4">
+      <font style="vertical-align: inherit;">
+       优先级
+      </font>
+     </span>
+     <font style="vertical-align: inherit;">
+      字段中的
+     </font>
+    </font>
+    <span class="hcp4">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       滑块
+      </font>
+     </font>
+    </span>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      移至
+     </font>
+     <span class="hcp4">
+      <font style="vertical-align: inherit;">
+       X
+      </font>
+     </span>
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+    <span class="hcp4">
+     <font style="vertical-align: inherit;">
+     </font>
+    </span>
+    <font style="vertical-align: inherit;">
+    </font>
+    <span class="hcp4">
+     <font style="vertical-align: inherit;">
+     </font>
+    </span>
+    <font style="vertical-align: inherit;">
+    </font>
+   </p>
+  </li>
+  <li>
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      然后单击
+     </font>
+    </font>
+    <span class="hcp4">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       优化
+      </font>
+     </font>
+    </span>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      按钮。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p class="Topic_Text_Bulleted">
+  <img alt="" border="0" class="hcp3" src="../Optimierung_Dialog_Exa_3.gif"/>
+ </p>
+ <p class="Topic_Text_Bulleted">
+ </p>
+ <p class="Topic_Text_Bulleted">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图显示了优化后的切割顺序。
+   </font>
+  </font>
+ </p>
+ <p class="Topic_Text_Bulleted">
+  <img alt="" border="0" class="hcp3" src="../Optimierung_Dialog_Exa_4.gif"/>
+ </p>
+ <ul class="hcp5">
+  <li>
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      使用“关闭”按钮
+     </font>
+     <span class="hcp4">
+      <font style="vertical-align: inherit;">
+       关闭
+      </font>
+     </span>
+    </font>
+    <span class="hcp4">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “优化”
+      </font>
+     </font>
+    </span>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      对话框
+     </font>
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+    <span class="hcp4">
+     <font style="vertical-align: inherit;">
+     </font>
+    </span>
+    <font style="vertical-align: inherit;">
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p class="Topic_Text_Bulleted">
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

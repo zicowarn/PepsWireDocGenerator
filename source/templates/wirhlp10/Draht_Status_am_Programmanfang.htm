@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,8 +33,52 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Draht-Status am Programmanfang" %}</p><p>{% trans "Legt fest, welchen Status ([eingefädelt] oder [nicht eingefädelt]) der Schneiddraht am Beginn eines Programms hat." %}</p>
-<p class="Block_Text">{% trans "Die Funktion wird in einigen seltenen Fällen aktiviert, z.B. wenn der Draht schon vor dem Start eines Programms, manuell vom Bediener eingefädelt wurde." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    程序开始时的线路状态
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    确定程序开始时切割线的
+   </font>
+   <font style="vertical-align: inherit;">
+    状态（
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     螺纹
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或未
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     螺纹）。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在极少数情况下会激活该功能，例如，如果操作员在程序启动之前已手动穿线。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

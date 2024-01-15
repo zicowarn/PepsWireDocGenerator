@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,14 +34,179 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Tip_Note_Heading">{% trans "Beispiel: Vorhandene Figuren aus der Liste der zu schneidenden Bearbeitungsfiguren entfernen" %}</p><ul>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Editieren Sie eine vorhandene Bearbeitung mit Hilfe des #[Operationsmanagers]#[.]" %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf die Schaltfläche [Ändern]. Das System schließt den Dialog und zeigt das Grafikfenster an." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Die momentan ausgewählten Bearbeitungsfiguren werden [hergehoben] angezeigt." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Positionieren Sie die Maus [auf] die zu löschende Bearbeitungsfigur und drücken Sie die Taste [D]'." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Die Auswahl der Figur wird dadurch aufgehoben. Wiederholen Sie den Vorgang für jede Figur die nicht mehr bearbeitet werden soll." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Beenden Sie die Auswahl mit der Option [Ende] (siehe [rechte Maustaste] oder [ horizontale Ikonenleiste])." %}</p></li>
-</ul>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    示例：从要剪切的编辑图形列表中删除现有图形
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <a href="../Operationsmanager/Operation_editieren____.htm">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        使用Operations Manager
+       </font>
+      </font>
+     </font>
+    </a>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      编辑现有编辑
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       。
+      </font>
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      单击
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “更改”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      按钮。
+     </font>
+     <font style="vertical-align: inherit;">
+      系统关闭对话框并显示图形窗口。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      当前选择的编辑图形
+     </font>
+    </font>
+    <font style="font-style: italic;">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       突出
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      显示 
+	 。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      将鼠标置于
+     </font>
+     <font style="vertical-align: inherit;">
+      要删除的编辑图形
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       上，然后按
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       D
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      键。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      这将取消对图形的选择。
+     </font>
+     <font style="vertical-align: inherit;">
+      对不再需要编辑的每个图形重复此过程。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       使用“结束”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选项结束选择
+     </font>
+     <font style="vertical-align: inherit;">
+      （请参见
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       鼠标右键
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      或
+     </font>
+    </font>
+    <span style="font-weight: bold;">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       水平图标栏
+      </font>
+     </font>
+    </span>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      ）。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+
 
 {% endblock %}
 {% endlinebreakless %}

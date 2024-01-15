@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,25 +34,617 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Nachschnitte in Reihenfolge nach Schnitt Nr:" %}</p><p>{% trans "Diese Option wird erst aktiviert, wenn Sie [vorher] die Optionen #[Zuerst ALLE Schruppschnitte]# und #Nachschnitte in Reihenfolge 1, 2, 3# wählen." %}</p><p>{% trans "Die Option erlaubt es zu bestimmen, ab welchem Schnitt die Wirkung der Option #Nachschnitte in Reihenfolge 1, 2, 3# aufgehoben wird." %}</p>
-<p>{% trans "[Beispiel]: Programmiert man für die Geometrien des folgenden Bildes ([A],[B],[C] und [D]) einen Schrupp- und vier Nachschnitte und stellt die Option [Nachschnitte in Reihenfolge nach Schnitt Nr:] auf [3] ein, würde dies zu folgender Schneidreihenfolge führen:" %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p><img src="../Nachschnitte_in_Reihenfolge_nach_Schnitt_Nr.gif" alt="Nachschnitte_in_Reihenfolge_nach_Schnitt_Nr.gif" width="666" height="240" border="0"/></p>
-<p>{% trans "[ Schruppen A], [Schruppen B], [Schruppen C], [Schruppen D]," %}</p>
-<p>{% trans "[1][ter] [Schlichtschnitt A], [1][ter] [Schlichtschnitt B], [1][ter] [Schlichtschnitt C], [1][ter] [Schlichtschnitt D]," %}</p>
-<p>{% trans "[2][ter] [Schlichtschnitt A], [2][ter] [Schlichtschnitt B], [2][ter] [Schlichtschnitt C], [2][ter] [Schlichtschnitt D]," %}</p>
-<p>{% trans "(Jetzt wird die Wirkung der Option #Nachschnitte in Reihenfolge 1, 2, 3# aufgehoben) [3][ter] [Schlichtschnitt A, 4][ter] [Schlichtschnitt A][,]" %}</p>
-<p>{% trans "[3][ter] [Schlichtschnitt B, 4][ter] [Schlichtschnitt B, ][3][ter] [Schlichtschnitt C, 4][ter] [Schlichtschnitt C,]" %}</p>
-<p>{% trans "[3][ter] [Schlichtschnitt D, 4][ter] [Schlichtschnitt D.]" %}</p>
-<script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    根据切割编号按顺序重新切割：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     仅当您首先
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选择
+   </font>
+   <font style="vertical-align: inherit;">
+    选项“首先
+   </font>
+   <a class="BSSCPopup" href="javascript:void(0);" id="a2" onclick="BSSCPopup('Nachschnitte_in_Reihenfolge_1_2_3_.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+    <font style="vertical-align: inherit;">
+     按顺序 1、2、3 进行
+    </font>
+   </a>
+  </font>
+  <a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('Zuerst_ALLE_Schruppschnitte.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      所有粗剪
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和重剪”
+   </font>
+   <font style="vertical-align: inherit;">
+    时，才会激活此选项。
+   </font>
+  </font>
+  <a class="BSSCPopup" href="javascript:void(0);" id="a2" onclick="BSSCPopup('Nachschnitte_in_Reihenfolge_1_2_3_.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+   <font style="vertical-align: inherit;">
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该选项允许您确定从哪个剪切开始
+   </font>
+   <font style="vertical-align: inherit;">
+    取消
+   </font>
+  </font>
+  <a class="BSSCPopup" href="javascript:void(0);" id="a3" onclick="BSSCPopup('Nachschnitte_in_Reihenfolge_1_2_3_.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     按顺序 1、2、3 重新剪切选项的效果。
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     示例
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：如果您为以下图像的几何形状（
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     A
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     B
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     C
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     D
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ）编写一次粗加工切削和四次重切削，并将
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     按切削编号顺序重切削：选项
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    设置为
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     3
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，则将产生以下切削顺序：
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <img alt="Recuts_in_Order_after_Cut_No.gif" border="0" height="240" src="../Nachschnitte_in_Reihenfolge_nach_Schnitt_Nr.gif" width="666"/>
+ </p>
+ <p>
+  <font color="#FF0000">
+   <br/>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     粗加工 A
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font color="#0000FF">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     粗加工 B
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font color="#FF9900">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     粗加工 C
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font color="#00FF00">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     粗加工 D
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+ </p>
+ <p>
+  <font color="#FF0000">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     第 1 次
+    </font>
+   </font>
+  </font>
+  <font class="hcp2" color="#FF0000">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     精加工
+    </font>
+   </font>
+  </font>
+  <font color="#FF0000">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     A
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font color="#0000FF">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     第 1 次
+    </font>
+   </font>
+  </font>
+  <font class="hcp2" color="#0000FF">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     精加工
+    </font>
+   </font>
+  </font>
+  <font color="#0000FF">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     B
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font color="#FF9900">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     第 1 次
+    </font>
+   </font>
+  </font>
+  <font class="hcp2" color="#FF9900">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     精加工
+    </font>
+   </font>
+  </font>
+  <font color="#FF9900">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     C
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font color="#00FF00">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     第 1 次
+    </font>
+   </font>
+  </font>
+  <font class="hcp2" color="#00FF00">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     精加工
+    </font>
+   </font>
+  </font>
+  <font color="#00FF00">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     D
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+ </p>
+ <p>
+  <font color="#FF0000">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     第 2 次
+    </font>
+   </font>
+  </font>
+  <font class="hcp2" color="#FF0000">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     精加工
+    </font>
+   </font>
+  </font>
+  <font color="#FF0000">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     A
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font color="#0000FF">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     第 2 次
+    </font>
+   </font>
+  </font>
+  <font class="hcp2" color="#0000FF">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     精加工
+    </font>
+   </font>
+  </font>
+  <font color="#0000FF">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     B
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font color="#FF9900">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     第 2 次
+    </font>
+   </font>
+  </font>
+  <font class="hcp2" color="#FF9900">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     精加工
+    </font>
+   </font>
+  </font>
+  <font color="#FF9900">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     C
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font color="#00FF00">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     第 2 次
+    </font>
+   </font>
+  </font>
+  <font class="hcp2" color="#00FF00">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     精加工
+    </font>
+   </font>
+  </font>
+  <font color="#00FF00">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     D
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+ </p>
+ <p>
+  <br/>
+  <font style="vertical-align: inherit;">
+  </font>
+  <a class="BSSCPopup" href="javascript:void(0);" id="a4" onclick="BSSCPopup('Nachschnitte_in_Reihenfolge_1_2_3_.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     （现在按顺序 1、2、3 重新切割选项
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    的效果
+   </font>
+   <font style="vertical-align: inherit;">
+    被取消）
+   </font>
+  </font>
+  <br/>
+  <br/>
+  <font color="#FF0000">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     第 3 次
+    </font>
+   </font>
+  </font>
+  <font class="hcp2" color="#FF0000">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     精加工
+    </font>
+   </font>
+  </font>
+  <font color="#FF0000">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     A、第 4 次
+    </font>
+   </font>
+  </font>
+  <font class="hcp2" color="#FF0000">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     精加工
+    </font>
+   </font>
+  </font>
+  <font color="#FF0000">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     A
+    </font>
+   </font>
+  </font>
+  <font color="#0000FF">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     、
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font color="#0000FF">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     第三
+    </font>
+   </font>
+  </font>
+  <font class="hcp2" color="#0000FF">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     精加工
+    </font>
+   </font>
+  </font>
+  <font color="#0000FF">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     B、第四
+    </font>
+   </font>
+  </font>
+  <font class="hcp2" color="#0000FF">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     精加工
+    </font>
+   </font>
+  </font>
+  <font color="#0000FF">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     B、
+    </font>
+   </font>
+   <br/>
+  </font>
+  <font color="#FF9900">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     第三
+    </font>
+   </font>
+  </font>
+  <font class="hcp2" color="#FF9900">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     精加工
+    </font>
+   </font>
+  </font>
+  <font color="#FF9900">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     C、第四
+    </font>
+   </font>
+  </font>
+  <font class="hcp2" color="#FF9900">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     精加工
+    </font>
+   </font>
+  </font>
+  <font color="#FF9900">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     C、
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font color="#00FF00">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     第 3 次
+    </font>
+   </font>
+  </font>
+  <font class="hcp2" color="#00FF00">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     精加工
+    </font>
+   </font>
+  </font>
+  <font color="#00FF00">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     D、第 4 次
+    </font>
+   </font>
+  </font>
+  <font class="hcp2" color="#00FF00">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     精加工
+    </font>
+   </font>
+  </font>
+  <font color="#00FF00">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     D。
+    </font>
+   </font>
+  </font>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
         if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
         FilePopupInit('a1');
         FilePopupInit('a2');
         FilePopupInit('a3');
         FilePopupInit('a4');
-//]]&gt;
-</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}
