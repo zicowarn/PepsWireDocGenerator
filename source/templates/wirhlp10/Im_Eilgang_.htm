@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,26 +34,73 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Im Eilgang" %}</p><p>{% trans "Mit diesem Dialog können Sie eine [Eilgangbewegung] des Drahtes in bis zu 4 Achsen gleichzeitig programmieren." %}</p><p>{% trans "Zudem können Sie eine CNC-gesteuerte Rotationsachse im Eilgang positionieren." %}</p>
-<p class="hcp1"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp1"> </p>
-<p><img src="../RAP_TO_shg.gif" usemap="#AreaMap0" alt="RAP_TO_shg.gif" width="358" height="508" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="14, 256, 166, 287" href="javascript:BSSCPopup('Auf_Punkt_UV_Im_Eilgang.htm',400,400);" id="area1" alt=""/>
-<area shape="rect" coords="12, 46, 178, 75" href="javascript:BSSCPopup('Draht_geschnitten_Im_Eilgang.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="12, 75, 176, 102" href="javascript:BSSCPopup('Draht_eingefaedelt_Im_Eilgang.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="7, 153, 172, 203" href="javascript:BSSCPopup('Technologie_Im_Eilgang.htm',400,300);" id="area4" alt=""/>
-<area shape="rect" coords="11, 223, 170, 256" href="javascript:BSSCPopup('Auf_Punkt_XY_Im_Eilgang.htm',400,300);" id="area5" alt=""/>
-<area shape="rect" coords="42, 465, 167, 487" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area6" alt=""/>
-<area shape="rect" coords="188, 466, 313, 487" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area7" alt=""/>
-<area shape="rect" coords="179, 207, 349, 432" href="../Commdata/COMMON_Nicht_verwendete_Funktion.htm" alt=""/>
-<area shape="rect" coords="178, 38, 344, 173" href="javascript:BSSCPopup('Offset_Im_Eilgang.htm',400,300);" id="area8" alt=""/>
-<area shape="rect" coords="15, 289, 178, 418" href="javascript:BSSCPopup('Rotationsachse_Im_Eilgang.htm',400,300);" id="area9" alt=""/>
-<area shape="rect" coords="47, 435, 171, 459" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area10" alt=""/>
-<area shape="rect" coords="188, 436, 312, 457" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm');" id="area11" alt=""/>
-</map> </p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; 
+	 border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <img alt="快速.gif" border="0" height="28" src="../Rapid.gif" width="31"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    匆忙
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通过此对话框，您可以对
+   </font>
+   <font style="vertical-align: inherit;">
+    线材同时在最多 4 个轴上
+   </font>
+  </font>
+  <font style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     快速移动进行编程。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    您还可以快速移动 CNC 控制的旋转轴。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="RAP_TO_shg.gif" border="0" height="508" src="../RAP_TO_shg.gif" usemap="#AreaMap0" width="358"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="14, 256, 166, 287" href="javascript:BSSCPopup('Auf_Punkt_UV_Im_Eilgang.htm',400,400);" id="area1" shape="rect"/>
+   <area alt="" coords="12, 46, 178, 75" href="javascript:BSSCPopup('Draht_geschnitten_Im_Eilgang.htm',400,300);" id="area2" shape="rect"/>
+   <area alt="" coords="12, 75, 176, 102" href="javascript:BSSCPopup('Draht_eingefaedelt_Im_Eilgang.htm',400,300);" id="area3" shape="rect"/>
+   <area alt="" coords="7, 153, 172, 203" href="javascript:BSSCPopup('Technologie_Im_Eilgang.htm',400,300);" id="area4" shape="rect"/>
+   <area alt="" coords="11, 223, 170, 256" href="javascript:BSSCPopup('Auf_Punkt_XY_Im_Eilgang.htm',400,300);" id="area5" shape="rect"/>
+   <area alt="" coords="42, 465, 167, 487" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area6" shape="rect"/>
+   <area alt="" coords="188, 466, 313, 487" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area7" shape="rect"/>
+   <area alt="" coords="179, 207, 349, 432" href="../Commdata/COMMON_Nicht_verwendete_Funktion.htm" shape="rect"/>
+   <area alt="" coords="178, 38, 344, 173" href="javascript:BSSCPopup('Offset_Im_Eilgang.htm',400,300);" id="area8" shape="rect"/>
+   <area alt="" coords="15, 289, 178, 418" href="javascript:BSSCPopup('Rotationsachse_Im_Eilgang.htm',400,300);" id="area9" shape="rect"/>
+   <area alt="" coords="47, 435, 171, 459" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area10" shape="rect"/>
+   <area alt="" coords="188, 436, 312, 457" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm');" id="area11" shape="rect"/>
+  </map>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('area1');
 	FilePopupInit('area2');
@@ -67,7 +113,9 @@
 	FilePopupInit('area9');
 	FilePopupInit('area10');
 	FilePopupInit('area11');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

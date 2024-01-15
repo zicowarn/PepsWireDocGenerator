@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,17 +35,135 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Gruppierte Operationen aufrufen" %}</p><p>{% trans "Mit dieser Funktion können Sie eine [Anzahl von Bearbeitungsoperationen] aufrufen, die im Vorfeld zu einer [Gruppierten Operation] zusammengefasst wurden und diese auf Mustern (Teilkreis oder Rechteckmuster) oder an beliebigen Positionen wiederholen." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Gruppenbearbeitung_Zirkular.gif" alt="Gruppenbearbeitung_Zirkular.gif" width="470" height="287" border="0"/></p>
-<p class="hcp2"> </p>
-<p class="Tip_Note_Heading" style="margin-top: 0.00pt;">{% trans "So wird es gemacht:" %}</p>
-<p>{% trans "#[1.) Mehrere Bearbeitungsoperationen zu einer Gruppierten Operation zusammenfassen]#" %}</p>
-<p>{% trans "#[2.) Eine Gruppierte Operation aufrufen und an beliebigen anderen Positionen wiederholen]#" %}</p>
-<p class="hcp2"> </p>
-<p class="Hinweis">{% trans "Wichtiger Hinweis:" %}</p>
-<p>{% trans "Bevor Sie eine [Gruppierte Operation] aufrufen können, müssen diese erst erzeugen." %}</p>
-<p>{% trans "[Siehe]: #[Eine Gruppierte Operation aufrufen und an beliebigen anderen Positionen wiederholen]#" %}</p>
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <img alt="群组呼叫.gif" border="0" height="29" src="../Group_Call.gif" width="28"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    调用分组操作
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用此功能，您可以调用
+   </font>
+   <font style="vertical-align: inherit;">
+    先前分组为
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     分组操作的
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     多个加工操作
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，并在图案（部分圆形或矩形图案）或任何位置重复它们。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="分组处理_circular.gif" border="0" height="287" src="../Gruppenbearbeitung_Zirkular.gif" width="470"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 0.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    它是这样完成的：
+   </font>
+  </font>
+ </p>
+ <p>
+  <a href="Beispiel_Mehrere_Bearbeitungsoperationen_zu_einer_Gruppierten_Operation_zusammenfassen.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      1.) 将多个加工操作合并为一个分组操作
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+  <a href="Beispiel_Eine_Gruppierte_Operation_aufrufen_und_an_beliebigen_anderen_Positionen_wiederholen.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      2.) 调用分组操作并在任何其他位置重复该操作
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    重要的提示：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在调用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     分组操作
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    之前，必须先创建它。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     请参阅
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：
+   </font>
+  </font>
+  <a href="Beispiel_Eine_Gruppierte_Operation_aufrufen_und_an_beliebigen_anderen_Positionen_wiederholen.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      调用分组操作并在任何其他位置重复它
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

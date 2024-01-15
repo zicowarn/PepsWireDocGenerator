@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,21 +33,111 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Figurname(n)" %}</p><p class="Block_Text">{% trans "In dieser Listbox geben Sie die Namen der zu schneidenden Bearbeitungsfiguren an." %}</p><p class="Block_Text">{% trans "Die Auswahl der Figuren geschieht durch Wahl der Schaltfläche @ und anschließendem Anklicken der Bearbeitungsfiguren." %}</p>
-<p class="Block_Text">{% trans "Die Reihenfolge der Bearbeitung legt die Reihenfolge der Figurauswahl fest." %}</p>
-<p class="Block_Text">{% trans "Ist eine Bearbeitungsfigur (z.B. Fig_002) mehrfach in der Zeichnung vorhanden, wird jede zu bearbeitende Figur separat gewählt." %}</p>
-<p>{% trans "Beachten Sie, dass bei der Figurauswahl auch eine Fensterauswahl (! Option #[Nur Figuren wählbar]# aktivieren) erlaubt ist." %}</p>
-<p>{% trans "Diese Variante wird besonders dann verwendet, wenn eine große Anzahl von Figuren bearbeitet werden soll." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Siehe auch:" %}</p>
-<p class="hcp1">{% trans "#Neue Figuren zur Liste der zu schneidenden Bearbeitungsfiguren hinzufügen#" %}</p>
-<p class="hcp1">{% trans "#Vorhandene Figuren aus der Liste der zu schneidenden Bearbeitungsfiguren entfernen#" %}</p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    角色名称
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在此列表框中输入要切割的加工图形的名称。
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+  </font>
+  <img alt="选择.gif" border="0" height="23" src="../Select.gif" width="24"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通过选择按钮然后单击编辑图形来
+   </font>
+   <font style="vertical-align: inherit;">
+    选择图形。
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    处理的顺序决定了图形选择的顺序。
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果一个处理图形（例如Fig_002）在图中多次出现，则单独选择每个要处理的图形。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    请注意，
+   </font>
+   <font style="vertical-align: inherit;">
+    选择图形时也允许窗口选择（！激活
+   </font>
+  </font>
+  <a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('Nur_Figuren_waehlbar.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+   <font style="font-weight: bold;">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      仅图形可选选项）。
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    当要处理大量图形时，特别使用此变体。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    也可以看看：
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+  <a class="BSSCPopup" href="javascript:void(0);" id="a2" onclick="BSSCPopup('Beispiel_Neue_Figuren_zur_Liste_der_zu_schneidenden_Bearbeitungsfiguren_hinzufuegen.htm',400,300);return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     将新图形添加到要剪切的编辑图形列表中
+    </font>
+   </font>
+  </a>
+ </p>
+ <p class="hcp1">
+  <a class="BSSCPopup" href="javascript:void(0);" id="a3" onclick="BSSCPopup('Beispiel_Vorhandene_Figuren_aus_der_Liste_der_zu_schneidenden_Bearbeitungsfiguren_entfernen.htm',400,300);return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     从要剪切的编辑图形列表中删除现有图形
+    </font>
+   </font>
+  </a>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('a1');
 	FilePopupInit('a2');
 	FilePopupInit('a3');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

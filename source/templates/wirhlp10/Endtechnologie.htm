@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -38,14 +37,294 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Endtechnologie" %}</p><p>{% trans "Es ist häufig erforderlich, die Bearbeitung mit einer reduzierten Generatorstufe zu beenden. Mit der Checkbox [Endtechnologie] kann diese Generatorstufe programmiert werden." %}</p>
-<p>{% trans "Der Wert im Feld [Abstand] bezieht sich auf den [Endpunkt] [der Bearbeitungsfigur]. Der Wert kann [positiv] oder [negativ] sein." %}</p>
-<p>{% trans "[Hinweis]: Wird eine Anbindung (Haltesteg) am Ende der Bearbeitungsfigur benötigt, muss die Eingabe im Feld [Abstand] größer sein als die Anbindung selbst. Dies ist erforderlich, da sich die Eingabe für den [Abstand] auf den [Endpunkt] [der Bearbeitungsfigur] bezieht. Siehe folgende Zeichnung:" %}</p>
-<p class="hcp3"> </p>
-<p><img src="../STENDTEC.gif" alt="STENDTEC.gif" width="482" height="282" border="0"/></p>
-<p class="hcp3"> </p>
-<p>{% trans "Ein [positiver Wert] legt fest, dass der Technologiewechsel [auf] [der] [Bearbeitungsfigur] stattfindet. Ein [negativer Wert] legt den Technologiewechsel [auf] [die] [Ausfahrgeometrie]." %}</p>
-<p>{% trans "Verwenden Sie anschließend die Schaltfläche [Endtechnologie] um die Technologieparameter festzulegen." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    最终技术
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通常需要以降低的发生器级别来完成处理。
+   </font>
+   <font style="vertical-align: inherit;">
+    该发生器阶段可以使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “结束技术”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    复选框进行编程。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     距离
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    字段中的值
+   </font>
+   <font style="vertical-align: inherit;">
+    是指
+   </font>
+   <font class="hcp2">
+    <font style="vertical-align: inherit;">
+     加工图形的
+    </font>
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     终点
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+   <font style="vertical-align: inherit;">
+    该值可以是
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     正数
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     负数
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     注意
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：如果加工图形的末尾需要连接（固定条），则
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     距离
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    字段中的输入必须大于连接本身。这是必要的，因为
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     距离
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    的输入是指
+   </font>
+   <font class="hcp2">
+    <font style="vertical-align: inherit;">
+     加工的
+    </font>
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     终点
+    </font>
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     数字
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+   <font style="vertical-align: inherit;">
+    见下图：
+   </font>
+  </font>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p>
+  <img alt="STENDTEC.gif" border="0" height="282" src="../STENDTEC.gif" width="482"/>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    正值
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     表示
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     加工
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     图形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    发生技术
+   </font>
+   <font style="vertical-align: inherit;">
+    变化
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    负值
+   </font>
+   <font style="vertical-align: inherit;">
+    会将技术更改
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     置于
+    </font>
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     延伸几何
+    </font>
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     体
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     上
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    然后使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “结束技术”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮设置技术参数。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

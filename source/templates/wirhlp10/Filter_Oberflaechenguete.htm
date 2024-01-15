@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,16 +33,104 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Filter Oberflächengüte" %}</p><p>{% trans "Um in der Datenbank nach einer bestimmten Oberflächengüte zu suchen oder eine neue Oberflächengüte einzutragen, [aktiviert] man zunächst die Checkbox [Filter Oberflächengüte]." %}</p><p>{% trans "Dies schaltet die daneben liegende Combobox frei, so dass man diese öffnen kann. Das System zeigt in der Combobox alle in der Datenbank gespeicherten Oberflächengüten." %}</p>
-<p>{% trans "Wählen Sie nun die Oberflächengüte nach der gesucht werden soll oder geben Sie eine neue Oberflächengüte ein." %}</p>
-<p>{% trans "Klicken Sie jetzt auf die Schaltfläche [#Liste neu aufbauen#] um die gesuchte Materialdicke aufzulisten oder verwenden Sie die Schaltflaeche [#Technologie speichern#] um eine neu eingegebene Oberflächengüte zu speichern." %}</p>
-<script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    过滤器表面质量
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    要在数据库中搜索特定表面质量或输入新的表面质量，请
+   </font>
+   <font style="vertical-align: inherit;">
+    首先
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     激活
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     过滤表面质量
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    复选框。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这将解锁旁边的组合框，以便您可以打开它。
+   </font>
+   <font style="vertical-align: inherit;">
+    系统在组合框中显示数据库中存储的所有表面质量。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    现在选择您要搜索的表面质量或输入新的表面质量。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    现在，单击
+   </font>
+  </font>
+  <font class="hcp1">
+   <a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('Liste_neu_aufbauen.htm',400,300);return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      “重建列表”
+     </font>
+    </font>
+   </a>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮列出您要查找的材料厚度，或使用“
+   </font>
+  </font>
+  <font class="hcp1">
+   <a class="BSSCPopup" href="javascript:void(0);" id="a2" onclick="BSSCPopup('Technologie_speichern_Technologie_Datenbank.htm',400,300);return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      保存技术”
+     </font>
+    </font>
+   </a>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮保存新输入的表面质量。
+   </font>
+  </font>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
         if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
         FilePopupInit('a1');
         FilePopupInit('a2');
-//]]&gt;
-</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,7 +28,24 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Gruppenname" %}</p><p>{% trans "Zeigt eine Liste der aktuell definierten Gruppen wenn mehr als eine Gruppe definiert wurde. Wählen Sie die aus, mit der Sie arbeiten wollen." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    团队名字
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果定义了多个组，则显示当前定义的组的列表。
+   </font>
+   <font style="vertical-align: inherit;">
+    选择您想要合作的人。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

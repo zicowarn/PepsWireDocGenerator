@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,28 +35,355 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Erzeugen einer Bearbeitungsfigur" %}</p><p>{% trans "Fast alle Bearbeitungsoperationen des Moduls Drahterosion basieren auf dem Geometrietyp [Bearbeitungsfigur]." %}</p>
-<p>{% trans "Sie sollten unbedingt mit der Erzeugung von Konstruktionen auf der Basis von C-Linien, C-Kreisen und Linien- /Bogenelementen vertraut sein, bevor Sie weiterlesen." %}</p>
-<p>{% trans "Um eine Konturbearbeitung, Regelflächenbearbeitung oder eine Taschenerodierbearbeitung ausführen zu können, müssen Sie die vorhandenen Linien-/Bogenelemente zu einer Bearbeitungsfigur zusammenfassen." %}</p>
-<p>{% trans "Dies geschieht durch Anwendung der Befehle #[Linien/Boegen ==&amp;gt; Figur]#, [Parametrische Figuren] und #[Auto. Matritzen / Stempel]# im Menü [Vorbereitung]." %}</p>
-<p class="Tip_Note_Heading">{% trans "Jede Bearbeitungsfigur muss folgende Einzelheiten beinhalten:" %}</p>
-<p class="Tip_Note_Heading"> </p>
-<p>{% trans "[- Eine Start(loch)position] - definiert als Punkt [VOR] der Figur." %}</p>
-<p>{% trans "[- Eine Bearbeitungsstartposition] - definiert als Punkt [AUF] der Figur. Wird keine Bearbeitungsstartposition angegeben, verwendet das System die [nächste Position AUF] der Figur, bezogen auf die Start(loch)position." %}</p>
-<p>{% trans "[- Eine Anzahl von Linien/Bogenelementen] - welche die zu schneidenden Bearbeitungsfigur bilden. Der Anwender muss sicherstellen, dass die Geometrie der Bearbeitungsfigur von guter Qualität, d.h. maßgenau ist und kein Lücken aufweist." %}</p>
-<p> </p>
-<p>{% trans "Auch eine [OFFENE] Bearbeitungsfigur muss eine [Start(loch)position] und eine [Bearbeitungsstartposition] aufweisen." %}</p>
-<p>{% trans "Bei einer [Regelflächenbearbeitung] benötigt normalerweise nur die Figur, welche die obere Ebene bildet, eine Startposition." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../FIGURE.gif" alt="FIGURE.gif" width="461" height="331" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Sollte es notwendig sein, die Geometrie einer Bearbeitungsfigur zu einem späteren Zeitpunkt zu verändern, geschieht dies folgendermaßen." %}</p>
-<p>{% trans "[Siehe]: #[Nachträgliches Verändern der Geometrie einer Bearbeitungsfigur]#." %}</p>
-<p class="hcp2"> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Siehe auch:" %}</p>
-<p>{% trans "#[Beispiel für die Erzeugung einer Bearbeitungsfigur]#" %}</p>
-<p>{% trans "@# [Zeige Beispielfilm zur Erzeugung einer Bearbeitungsfigur]#" %}</p>
-<p>{% trans "#[Nachträgliches Ändern der Startposition einer Bearbeitungsfigur]#" %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    创建加工图形
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    线切割模块中的几乎所有加工操作都基于
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     加工图形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    几何类型。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在进一步阅读之前，熟悉基于 C 线、C 圆和线/弧元素创建设计非常重要。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    为了能够进行轮廓加工、直纹面加工或型腔腐蚀加工，必须将现有的直线/圆弧元素组合成加工图形。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这是通过使用命令
+   </font>
+  </font>
+  <a href="../wirhlp9/Linien_Boegen_Bearbeitungsfigur.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      Lines/Arcs ==&gt; Figure
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     ParametricFigures
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <a href="../wirhlp9/Auto_Matritzen_und_Stempel.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      Auto 来完成的。
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     准备
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    菜单中的
+   </font>
+   <a href="../wirhlp9/Auto_Matritzen_und_Stempel.htm">
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      模具/印章
+     </font>
+    </font>
+   </a>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    每个加工图必须包含以下详细信息：
+   </font>
+  </font>
+ </p>
+ <p class="Tip_Note_Heading">
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     - 起始（孔）位置
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    - 定义为图形
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     之前的
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    点。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     - 编辑起始位置
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    - 定义为图形
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     上的
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    点。
+   </font>
+   <font style="vertical-align: inherit;">
+    如果未指定加工起始位置，系统将
+   </font>
+   <font style="vertical-align: inherit;">
+    根据起始（孔）位置使用图形
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     上的下一个位置。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     - 一些线/弧元素
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    - 形成要切割的加工图形。
+   </font>
+   <font style="vertical-align: inherit;">
+    用户必须确保加工图形的几何形状质量良好，即尺寸准确且没有间隙。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     OPEN
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    加工图形
+   </font>
+   <font style="vertical-align: inherit;">
+    还必须具有
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     起始（孔）位置
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     加工起始位置
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    加工
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     直纹曲面时，
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通常只有形成上层的图形需要起始位置。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="图.gif" border="0" height="331" src="../FIGURE.gif" width="461"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果稍后需要改变加工图形的几何形状，则按如下方式完成。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     请参阅
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：
+   </font>
+  </font>
+  <a href="Beispiel_Nachtraegliches_Veraendern_der_Geometrie_einer_Bearbeitungsfigur.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      随后更改加工图形的几何形状
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    也可以看看：
+   </font>
+  </font>
+ </p>
+ <p>
+  <a href="../wirhlp9/Beispiel_fuer_die_Erzeugung_einer_Bearbeitungsfigur.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      创建加工图形的示例
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+  <img alt="电影.gif" border="0" height="27" src="../MOVIE.gif" width="27"/>
+  <a href="../Videos/Video__Bearbeitungsfigur_erzeugen_geschlossen_V8.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      显示用于创建编辑人物的示例影片
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+  <a href="Beispiel_Nachtraegliches_Aendern_der_Startposition_einer_Bearbeitungsfigur.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      随后更改加工图形的起始位置
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

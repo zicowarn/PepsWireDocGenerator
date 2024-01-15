@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,13 +33,96 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Figuren oder auf Punkten" %}</p><p>{% trans "Mit dieser Funktion können Sie eine gruppierte Operation auf beliebigen Positionen wiederholen." %}</p>
-<p>{% trans "Die Positionen werden in der Zeichnung durch [C-Punkte] oder [Bearbeitungsfiguren] gekennzeichnet." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p>{% trans "[Siehe auch:]" %}</p>
-<p>{% trans "#[Figuren oder auf Punkten]#" %}</p>
-<p>{% trans "#[Gruppierte Operationen auf Figuren wiederholen]#" %}</p>
-<p>{% trans "#[Gruppierte Operationen auf Punkten wiederholen]#" %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    数字或点
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此功能允许您在任意位置重复分组操作。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这些位置在图纸中用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     C点
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     加工图形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    来标记。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     也可以看看：
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <a href="Figuren_oder_auf_Punkten_Gruppierte_Operationen_aufrufen.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      数字或点
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+  <a href="Beispiel_Gruppierte_Operationen_auf_Figuren_wiederholen.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      对图形重复分组操作
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+  <a href="Beispiel_Gruppierte_Operationen_auf_Punkten_wiederholen.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      对点重复分组操作
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

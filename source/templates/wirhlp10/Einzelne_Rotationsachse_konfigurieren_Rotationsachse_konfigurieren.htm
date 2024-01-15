@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,19 +34,68 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Einzelne Rotationsachse konfigurieren" %}</p><p>{% trans "Mit diesem Dialog legen Sie die XY-Position der Rotationsachse fest und die Z-Höhe der Spindelmitte." %}</p>
-<p class="hcp1"> </p>
-<p><img src="../Rotationsachse_konfigurieren.gif" alt="Rotationsachse_konfigurieren.gif" width="379" height="224" border="0"/></p>
-<p class="hcp1"> </p>
-<p class="Tip_Note_Heading">{% trans "X-, Y-Achse:" %}</p>
-<p>{% trans "Legt die X-, Y-Position der Rotationsachse auf dem Maschinentisch fest." %}</p>
-<p class="hcp1"> </p>
-<p><img src="../Rotationsachse_konfigurieren_XY_Achse.gif" alt="Rotationsachse_konfigurieren_XY_Achse.gif" width="363" height="263" border="0"/></p>
-<p style="text-align: center;"> </p>
-<p class="Tip_Note_Heading">{% trans "Achsenhöhe:" %}</p>
-<p>{% trans "Bestimmt die Z-Höhe der Spindelmitte, bezogen auf die Maschinentischoberfläche." %}</p>
-<p class="hcp1"> </p>
-<p><img src="../Rotationsachse_konfigurieren_Höhe.gif" alt="Rotationsachse_konfigurieren_Höhe.gif" width="356" height="188" border="0"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    配置单独的旋转轴
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用此对话框可以指定旋转轴的 XY 位置和主轴中心的 Z 高度。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="配置旋转轴.gif" border="0" height="224" src="../Rotationsachse_konfigurieren.gif" width="379"/>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    X、Y轴：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    设置旋转轴在机床工作台上的 X、Y 位置。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="配置旋转轴_XY_axis.gif" border="0" height="263" src="../Rotationsachse_konfigurieren_XY_Achse.gif" width="363"/>
+ </p>
+ <p style="text-align: center;">
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    轴高：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    根据机床工作台表面确定主轴中心的 Z 高度。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="旋转轴_configure_height.gif" border="0" height="188" src="../Rotationsachse_konfigurieren_Hoehe.gif" width="356"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

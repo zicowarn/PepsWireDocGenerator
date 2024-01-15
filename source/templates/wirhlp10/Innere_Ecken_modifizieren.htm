@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,16 +35,108 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Innere Ecken modifizieren" %}</p><p>{% trans "Diese Checkbox wird verwendet, um die inneren Ecken / Radien von Bearbeitungsfiguren so zu verändern, dass diese größer sind als der Bearbeitungsoffset." %}</p>
-<p>{% trans "Viele NC-Steuerungen können Geometrien mit scharfen inneren Ecken und Radien die kleiner sind als der Bearbeitungsoffset, problemlos bearbeiten." %}</p>
-<p>{% trans "Die Option [Innere Ecken modifizieren] wird deshalb nur für NC-Steuerungen benötigt, die bei den o. g. Eckensituationen Probleme (z.B. Hinterschnitte) verursachen." %}</p>
-<p class="Block_Text">{% trans "Die Korrektur der inneren Ecken/Radien geschieht intern, wobei das System die Bearbeitungsfigur intern verschiebt (offsettiert) und anschließend wieder zurück kopiert." %}</p>
-<p class="Block_Text">{% trans "Das Ergebnis ist eine Korrektur der Ecken um 0.005 mm." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../SHARP_CORNER.gif" alt="SHARP_CORNER.gif" width="670" height="325" border="0"/></p>
-<p class="hcp2"> </p>
-<p class="Hinweis">{% trans "Hinweis:" %}</p>
-<p>{% trans "Im Menü [Vorbereitung] finden Sie den Befehl #[Bearbeitungsfigur abrunden]#, mit dem Sie eine Bearbeitungsfigur nachträglich mit inneren und äußeren Eckradien versehen können." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    修改内角
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该复选框用于更改加工图形的内角/半径，使其大于加工偏移。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    许多 NC 控制装置可以轻松加工具有锐利内角和半径小于加工偏移的几何形状。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    因此，只有在上述拐角情况下导致问题（例如底切）的 NC 控制才需要“
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     修改内拐角
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ”选项。
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    内角/半径在内部进行校正，系统在内部移动（偏移）加工图形，然后再次将其复制回来。
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    结果是将角修正了 0.005 毫米。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="SHARP_CORNER.gif" border="0" height="325" src="../SHARP_CORNER.gif" width="670"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一个通知：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     在“准备”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    菜单中
+   </font>
+   <font style="vertical-align: inherit;">
+    ，您将找到
+   </font>
+  </font>
+  <a href="../wirhlp9/Bearbeitungsfigur_abrunden____.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      “圆角编辑图形”
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令，随后可以使用该命令将内角半径和外角半径添加到加工图形中。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}
