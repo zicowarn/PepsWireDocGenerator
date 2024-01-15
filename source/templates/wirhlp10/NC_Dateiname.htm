@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,13 +33,108 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "NC-Dateiname" %}</p><p>{% trans "Ist der Dateiname der NC-Ausgabedatei. Beachten Sie die Einschränkungen der verwendeten NC-Steuerung." %}</p>
-<p>{% trans "Einige Steuerung verlangen den Namen der NC-Ausgabedatei z.B. als rein numerische Angabe, bei anderen darf der Dateiname z.B. nicht länger als 6 Zeichen sein." %}</p>
-<p>{% trans "Durch die Definition von mehreren Operationen (Befehl #[Operation starten]#), können Sie mit einem Programm, [mehrere] NC-Ausgabedateien erzeugen." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "An vorherige anhängen" %}</p>
-<p class="footnote_text" style="margin-bottom: 0.00pt; font-family: Arial;">{% trans "Existieren mehreren Operationen, wird für jede Operation normalerweise eine separate NC-Ausgabedatei erzeugt." %}</p>
-<p class="footnote_text" style="margin-bottom: 0.00pt;">{% trans "[Mit der Option] [An vorherige anhängen] können Sie die NC-Daten einer Operation stattdessen, an die [NC-Ausgabedatei der vorangegangenen Operation anhängen.]" %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    数控文件名
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    是 NC 输出文件的文件名。
+   </font>
+   <font style="vertical-align: inherit;">
+    请注意所使用的 NC 控制的限制。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    例如，某些控件要求 NC 输出文件的名称作为纯数字规范，而对于其他控件，文件名不得超过 6 个字符。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通过定义多个操作（
+   </font>
+  </font>
+  <a href="Operation_starten.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      开始操作
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令），可以用一个程序创建
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     多个
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    NC 输出文件。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    附加到上一个
+   </font>
+  </font>
+ </p>
+ <p class="footnote_text" style="margin-bottom: 0.00pt; font-family: Arial;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果存在多个操作，通常会为每个操作生成单独的 NC 输出文件。
+   </font>
+  </font>
+ </p>
+ <p class="footnote_text" style="margin-bottom: 0.00pt;">
+  <font face="Arial" style="font-family: Arial;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     附加
+    </font>
+   </font>
+  </font>
+  <span style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     到上一个
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项允许您将操作的 NC 数据附加到上一个
+   </font>
+  </font>
+  <span style="font-family: Arial;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     操作的 NC 输出文件中。
+    </font>
+   </font>
+  </span>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

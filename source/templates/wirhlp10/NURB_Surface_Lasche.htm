@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,29 +35,148 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "NURBS-Surface Register" %}</p><p>{% trans "Dieses Register bietet die Möglichkeit eine Regelflächenbearbeitung aus einer 3D-Fläche von Typ [NURBS-Surface] zu erzeugen." %}</p><p>{% trans "Bei einer normalen Regelflächenbearbeitung liegen die untere bzw. obere Ebene einer Regelfläche auf der XY-Ebene, OHNE Abweichung in der Z-Ebene." %}</p>
-<p>{% trans "Die Option [NURBS-Surface schneiden] erlaubt die Bearbeitung von 3D-Regelflächen, deren obere bzw. untere Ebene aus einer 3D-NURBS-Kurve besteht. Das heißt, es sind Abweichungen in der Z-Achse vorhanden." %}</p>
-<p> </p>
-<p><img src="../NURBS.gif" alt="NURBS.gif" width="563" height="397" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "NURBS-Surfaces können von den meisten externen CAD-Systemen als IGES Datei ausgegeben werden." %}</p>
-<p>{% trans "Aus diesem Grunde kann man NURBS-Surfaces in PEPS einladen und bearbeiten." %}</p>
-<p>{% trans "Ist kein CAD-System vorhanden, kann man das NURBS-Surface mit dem Befehl [NURBS-Kurven und Surfaces] im Menü [CAD] erzeugen." %}</p>
-<p class="hcp2"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp2"> </p>
-<p><img src="../NURBTAB_shg.gif" usemap="#AreaMap0" alt="NURBTAB_shg.gif" width="314" height="189" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="6,3,58,21" href="Regelflaechenbearbeitung____.htm" alt=""/>
-<area shape="rect" coords="9,27,310,102" href="javascript:BSSCPopup('NURB_Surface.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="15,108,309,181" href="javascript:BSSCPopup('Startposition_NURB_SURFACE_schneiden.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="153, 1, 202, 20" href="Startloch_Register_Regelflaechenbearbeitung.htm" alt=""/>
-</map> </p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    NURBS 曲面套准
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     此选项卡提供了从NURBS-Surface
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    类型的 3D 曲面 
+ 创建
+   </font>
+   <font style="vertical-align: inherit;">
+    直纹曲面处理的可能性。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    正常直纹面加工时，直纹面的下平面和上平面位于 XY 平面上，在 Z 平面上没有偏差。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    “剪切
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     NURBS 曲面”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项 
+ 允许您编辑其上层或下层由 3D NURBS 曲线组成的 3D 直纹曲面。
+   </font>
+   <font style="vertical-align: inherit;">
+    这意味着Z轴存在偏差。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <img alt="NURBS.gif" border="0" height="397" src="../NURBS.gif" width="563"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    大多数外部 CAD 系统都可以将 NURBS 曲面输出为 IGES 文件。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    因此，您可以在 PEPS 中加载和编辑 NURBS 曲面。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果没有 CAD 系统，可以使用
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     CAD
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    菜单 
+ 中的
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     NURBS 曲线和曲面
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令创建 NURBS 曲面。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="NURBTAB_shg.gif" border="0" height="189" src="../NURBTAB_shg.gif" usemap="#AreaMap0" width="314"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="6,3,58,21" href="Regelflaechenbearbeitung____.htm" shape="rect"/>
+   <area alt="" coords="9,27,310,102" href="javascript:BSSCPopup('NURB_Surface.htm',400,300);" id="area1" shape="rect"/>
+   <area alt="" coords="15,108,309,181" href="javascript:BSSCPopup('Startposition_NURB_SURFACE_schneiden.htm',400,300);" id="area2" shape="rect"/>
+   <area alt="" coords="153, 1, 202, 20" href="Startloch_Register_Regelflaechenbearbeitung.htm" shape="rect"/>
+  </map>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('area1');
 	FilePopupInit('area2');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

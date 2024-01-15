@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,8 +33,79 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "OK" %}</p><p>{% trans "Diese Schaltfläche beendet den Dialog [Operation starten] und speichert den Inhalt des Dialogs als Eintrag z.B. [Operationstart 1:] [......] im [Operationsmanager]." %}</p>
-<p>{% trans "Sie können den Eintrag durch einen Doppelklick auf das Symbol @ editieren." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    确定
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此按钮结束
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “开始操作”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框并将对话框的内容保存为条目，例如
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     操作管理器
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    中的
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “操作开始 1：
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     ……”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    您可以
+   </font>
+  </font>
+  <img alt="Op_Manager_Op_Start.gif" border="0" height="49" src="../Op_Manager_Op_Start.gif" width="179"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通过双击符号来编辑条目。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

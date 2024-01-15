@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,9 +28,35 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "OK" %}</p><p>{% trans "Beendet den Dialog und erzeugt die NC-Bearbeitungsgrafik der Regelfläche." %}</p>
-<p>{% trans "In diesem Zusammenhang sollte erwähnt werden, dass bei einigen NC-Steuerungen die erreichbare Präzision bei Regelflächen eingeschränkt ist." %}</p>
-<p>{% trans "Dies ist z.B. der Fall, wenn 0.001 mm Präzision programmiert wurde, die NC-Steuerung aber nur 0.01 mm Präzision erreicht." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    确定
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    关闭对话框并创建直纹曲面的 NC 加工图形。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在这种情况下，应该提到的是，对于某些 NC 控制，受控表面可实现的精度是有限的。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    例如，如果编程精度为 0.001 毫米，但 NC 控制只能达到 0.01 毫米的精度。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

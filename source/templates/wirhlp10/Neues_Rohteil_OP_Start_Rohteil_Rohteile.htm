@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,25 +34,72 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Neues Rohteil" %}</p><p>{% trans "Mit dieser Schaltfläche können Sie Rohteile erzeugen, wenn keine Solidmodelle zur Verfügung stehen. Folgende Definitionsfunktionen stehen zur Verfügung:" %}</p><p class="hcp1"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp1"> </p>
-<p><img src="../Neues_Rohteil_shg.gif" usemap="#MAP752670655" alt="Neues_Rohteil_shg.gif" width="547" height="354" border="0"/>
-<map name="MAP752670655" id="MAP752670655">
-<area shape="rect" coords="7, 36, 172, 97" href="javascript:BSSCPopup('Name_OP_Start_Rohteil_Rohteile_Neues_Rohteil.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="182, 305, 248, 335" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="253, 306, 327, 333" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="335, 305, 450, 333" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area4" alt=""/>
-<area shape="rect" coords="185, 42, 532, 125" href="javascript:BSSCPopup('Rohteiltyp_OP_Start_Rohteil_Rohteile.htm',400,600);" id="area5" alt=""/>
-<area shape="rect" coords="10, 97, 177, 274" href="javascript:BSSCPopup('Rohteiltyp_OP_Start_Rohteil_Rohteile.htm',400,600);" id="area6" alt=""/>
-<area shape="rect" coords="457, 306, 531, 332" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area7" alt=""/>
-<area shape="rect" coords="190, 122, 525, 176" href="Rohteiltyp_OP_Start_Rohteil_Rohteile.htm" alt=""/>
-<area shape="rect" coords="185, 176, 526, 300" href="javascript:BSSCPopup('Hoehe_OP_Start_Rohteil_Rohteile.htm',400,600);" id="area8" alt=""/>
-</map>  </p>
-<p class="hcp1"> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
-<p>{% trans "#[Rechteckiges Rohteil definieren]#" %}</p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    新的原始部分
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    当实体模型不可用时，此按钮允许您创建毛坯。
+   </font>
+   <font style="vertical-align: inherit;">
+    可以使用以下定义函数：
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="New_raw_part_shg.gif" border="0" height="354" src="../Neues_Rohteil_shg.gif" usemap="#MAP752670655" width="547"/>
+  <map id="MAP752670655" name="MAP752670655">
+   <area alt="" coords="7, 36, 172, 97" href="javascript:BSSCPopup('Name_OP_Start_Rohteil_Rohteile_Neues_Rohteil.htm',400,300);" id="area1" shape="rect"/>
+   <area alt="" coords="182, 305, 248, 335" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area2" shape="rect"/>
+   <area alt="" coords="253, 306, 327, 333" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area3" shape="rect"/>
+   <area alt="" coords="335, 305, 450, 333" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area4" shape="rect"/>
+   <area alt="" coords="185, 42, 532, 125" href="javascript:BSSCPopup('Rohteiltyp_OP_Start_Rohteil_Rohteile.htm',400,600);" id="area5" shape="rect"/>
+   <area alt="" coords="10, 97, 177, 274" href="javascript:BSSCPopup('Rohteiltyp_OP_Start_Rohteil_Rohteile.htm',400,600);" id="area6" shape="rect"/>
+   <area alt="" coords="457, 306, 531, 332" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area7" shape="rect"/>
+   <area alt="" coords="190, 122, 525, 176" href="Rohteiltyp_OP_Start_Rohteil_Rohteile.htm" shape="rect"/>
+   <area alt="" coords="185, 176, 526, 300" href="javascript:BSSCPopup('Hoehe_OP_Start_Rohteil_Rohteile.htm',400,600);" id="area8" shape="rect"/>
+  </map>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    它是这样完成的：
+   </font>
+  </font>
+ </p>
+ <p>
+  <a href="Beispiel_Rechteckiges_Rohteil_definieren.htm">
+   <font style="font-weight: bold;">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      定义矩形毛坯
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('area1');
 	FilePopupInit('area2');
@@ -63,7 +109,9 @@
 	FilePopupInit('area6');
 	FilePopupInit('area7');
 	FilePopupInit('area8');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,9 +33,78 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Nächste / Vorherige Konik" %}</p><p>{% trans "Die Schaltflächen [Nächste] [Konik] und [Vorherige] [Konik] erlauben das schrittweise Editieren der gewählten Winkelwechselsymbole." %}</p>
-<p>{% trans "Das momentan anstehende Winkelwechselsymbol wird in Zeichnung grafisch gekennzeichnet." %}</p>
-<p>{% trans "Wurden die Symbole in einer bestimmten Reihenfolge ausgewählt, bestimmt dies auch die Editierreihenfolge. Erfolgte die Auswahl durch ein Fenster, ist die Editierreihenfolge zufällig." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下一个/上一个 Konik
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     下一个
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    锥度
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     和
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    上
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     一个
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     锥度
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮允许您逐步编辑选定的角度变化符号。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    当前未决的角度改变符号以图形方式标记在图中。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果按特定顺序选择符号，这也决定了编辑顺序。
+   </font>
+   <font style="vertical-align: inherit;">
+    如果通过窗口进行选择，则编辑顺序是随机的。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

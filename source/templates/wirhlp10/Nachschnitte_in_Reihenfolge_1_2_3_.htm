@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,22 +33,257 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Nachschnitte in Reihenfolge 1, 2, 3 ..." %}</p><p> </p><p>{% trans "Diese Option wird erst aktiviert, wenn Sie [vorher] die Option #[Zuerst ALLE Schruppschnitte]# wählen." %}</p>
-<p>{% trans "Die Option bestimmt, in [welcher Reihenfolge die Nachschnitte] bei Bearbeitungsoperationen mit mehreren Schnitten ausgeführt werden." %}</p>
-<p>{% trans "Ist die Option aktiv, wird der [erste Nachschnitt] an der Figur1, dann an der Figur2 und dann an der Figur3 etc. ... ausgeführt." %}</p>
-<p>{% trans "Die gleiche Bearbeitungsreihenfolge wird für den [zweiten], [dritten], [vierten] [Nachschnitt] etc. ausgeführt." %}</p>
-<p>{% trans "Die Option [Nachschnitte in Reihenfolge 1, 2, 3 ...] ist besonders vorteilhaft, wenn Sie Materialien bearbeiten, die sehr schnell korrodieren." %}</p>
-<p>{% trans "Die Option erzeugt eine Bearbeitungsfolge, welche die Zeit reduziert, in der die Schnittflächen einer Korrosion ausgesetzt sind." %}</p>
-<p>{% trans "Ist die Option [nicht] gewählt, wird an der Figur1 der [erste Nachschnitt] ausgeführt, dann der [zweite Nachschnitt], der [dritte Nachschnitt] etc.." %}</p>
-<p>{% trans "Anschließend werden die gleichen Nachschnitte an der Figur2 und dann an der Figur3 etc. ausgeführt. Dies würde allerdings zu einem höherem Korrosionsgrad an der Figur1 führen." %}</p>
-<p> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
-<p>{% trans "@ [#Zeige Beispielfilm zum o.g. Thema#]" %}</p>
-<p> </p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按 1、2、3 的顺序重新切割...
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     仅当您首先
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选择
+   </font>
+  </font>
+  <a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('Zuerst_ALLE_Schruppschnitte.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      “首先进行所有粗加工”
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项
+   </font>
+   <font style="vertical-align: inherit;">
+    时，此选项才会激活。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该选项确定
+   </font>
+   <font style="vertical-align: inherit;">
+    在多次切削加工操作中执行
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     重新切削的顺序。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果该选项处于活动状态，则将在图 1 上进行
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     第一次重新剪切
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，然后在图 2 上进行，然后在图 3 上进行，依此类推。...
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     第二次
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     第三次
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     第四次
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     重切
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    等
+   </font>
+   <font style="vertical-align: inherit;">
+    执行相同的加工顺序。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     当加工腐蚀非常快的材料时，按 1、2、3... 顺序重新切割
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项
+   </font>
+   <font style="vertical-align: inherit;">
+    特别有利。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该选项创建的加工顺序可减少切割表面暴露于腐蚀的时间。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     如果不
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选择该选项，则
+   </font>
+   <font style="vertical-align: inherit;">
+    对图1进行
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     第一次重切
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，然后进行
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     第二次重切
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     第三次重切，
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    依此类推。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    然后对图 2、图 3 等进行相同的重新切割。
+   </font>
+   <font style="vertical-align: inherit;">
+    然而，这会导致图 1 中的腐蚀程度更高。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    它是这样完成的：
+   </font>
+  </font>
+ </p>
+ <p>
+  <img alt="电影.gif" border="0" height="27" src="../MOVIE.gif" width="27"/>
+  <font class="hcp1">
+   <a href="../Strategie_6_Nachschnitte_in_Reihenfolge123.gif" id="a2">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      播放有关上述主题的示例影片
+     </font>
+    </font>
+   </a>
+  </font>
+ </p>
+ <p>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('a1');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

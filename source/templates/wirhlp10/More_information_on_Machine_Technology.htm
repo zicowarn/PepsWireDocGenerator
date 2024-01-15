@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,12 +28,80 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "More information on Machine Technology" %}</p><p>{% trans "XXX Technology files (supplied by the machine manufacturer), contain machining parameters i.e. generator or power settings, strategy, and wire offsets. The most critical of these probably being the wire offsets and number of cuts. Each technology file is developed to meet a specific set of machining requirements, given details of - material type, material thickness, wire type, wire diameter, corner deviation, tolerance, and roughness. Peps knowledge based technology, determines which of these files will be used for an operation based on the material type and thickness, the wire type and diameter and the quality of surface required. Once the specific technology file has been determined, then PEPS will know the number of cuts to be taken and the wire offset to be used on each cut, automatically setting these values in the relevant cutting dialogue." %}</p>
-<p>{% trans "The use of knowledge base technology is important for two reasons." %}</p>
-<p>{% trans "1. The CAM system can properly program the number of cuts to achieve the part specifications." %}</p>
-<p>{% trans "2. The CAM system can predict any potential for overcutting that may occur in small inside corner radii." %}</p>
-<p>{% trans "The first reason is of lesser importance if a common technology file is used for most jobs. Reason number two is more significant for Agie machines if small internal radii (less than .010 in.) are to be cut. When programming the CNC 123 control all corners must be tangent, this means that a fillet radius must be programmed in all sharp corners. If the machine has to offset larger than an inside radius, then overcutting will occur. Even if overcutting only occurs on the roughing cuts with the larger offsets, if it is large enough then the corner may not clean up with the final trim cuts." %}</p>
-<p>{% trans "The technology file on the Agievision is essentially the same as the CNC 123. There is no requirement for fillets in sharp corners as with the CNC 123. This control is also capable of adapting the programmed path to avoid overcutting on small radii, if the radius is tangent." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    有关机器技术的更多信息
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    XXX 技术文件（由机器制造商提供）包含加工参数，即发电机或功率设置、策略和线偏移。
+   </font>
+   <font style="vertical-align: inherit;">
+    其中最关键的可能是线偏移和切割次数。
+   </font>
+   <font style="vertical-align: inherit;">
+    每个技术文件都是为了满足一组特定的加工要求而开发的，并给出了材料类型、材料厚度、线材类型、线材直径、拐角偏差、公差和粗糙度的详细信息。
+   </font>
+   <font style="vertical-align: inherit;">
+    Peps 基于知识的技术根据材料类型和厚度、线材类型和直径以及所需的表面质量来确定将使用这些文件中的哪些文件进行操作。
+   </font>
+   <font style="vertical-align: inherit;">
+    一旦确定了具体的技术文件，PEPS 将知道要进行的切割次数以及每次切割要使用的线偏移，并在相关切割对话框中自动设置这些值。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    知识库技术的使用很重要，原因有两个。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    1. CAM系统可以正确编程切削次数以达到零件规格。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    2. CAM 系统可以预测小内角半径中可能发生的过切可能性。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果大多数工作都使用通用技术文件，则第一个原因就不那么重要了。
+   </font>
+   <font style="vertical-align: inherit;">
+    如果要切割小内半径（小于 0.010 英寸），第二个原因对于 Agie 机器来说更为重要。
+   </font>
+   <font style="vertical-align: inherit;">
+    对 CNC 123 控制器进行编程时，所有拐角都必须相切，这意味着必须在所有尖角处编程圆角半径。
+   </font>
+   <font style="vertical-align: inherit;">
+    如果机器的偏移量大于内半径，则会发生过切。
+   </font>
+   <font style="vertical-align: inherit;">
+    即使过切仅发生在具有较大偏移量的粗加工切削上，如果它足够大，则拐角可能无法通过最终的修整切削清理干净。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    Agievision 上的技术文件本质上与 CNC 123 相同。与 CNC 123 一样，不需要在尖角处进行圆角。该控制还能够调整编程路径，以避免在小半径上进行过切，如果半径是相切的。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

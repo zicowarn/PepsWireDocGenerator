@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,25 +34,91 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Mess Zyklen" %}</p><p>{% trans "Mit den [Mess Zyklen] können Sie den Messtaster / Messsensor von Drahterodiermaschinen programmieren, um das Werkstück im Maschinenkoordinatensystem auszurichten." %}</p><p class="hcp1"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp1"> </p>
-<p><img src="../MEASURE_CYCLES_shg.gif" usemap="#AreaMap0" alt="MEASURE_CYCLES_shg.gif" width="524" height="379" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="10,140,518,242" href="Position_Mess_Zyklen.htm" alt=""/>
-<area shape="rect" coords="13,271,437,304" href="javascript:BSSCPopup('Relativ_zum_PEPS_Ursprung_Mess_Zyklen.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="19,342,119,364" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="128,343,225,366" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="234,343,336,367" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area4" alt=""/>
-<area shape="rect" coords="342,343,442,368" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area5" alt=""/>
-<area shape="rect" coords="333,26,517,135" href="Lage_in_der_Bearbeitungsebene_Mess_Zyklen.htm" alt=""/>
-<area shape="rect" coords="15, 304, 435, 333" href="javascript:BSSCPopup('Relativ_zur_linken_unteren_Werkstueckecke_Mess_Zyklen.htm',400,300);" id="area6" alt=""/>
-<area shape="rect" coords="12, 28, 195, 134" href="javascript:BSSCPopup('Raeumliche_Lage_Mess_Zyklen.htm',400,600);" id="area7" alt=""/>
-</map> </p>
-<p class="hcp1"> </p>
-<p class="Hinweis">{% trans "Hinweis:" %}</p>
-<p>{% trans "Die Funktion [Mess Zyklen] ist optional und nicht für jede Erodiermaschine verfügbar (Zur Zeit nur AGIEVISION, Mitsubishi und Charmilles Robofil)." %}</p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; 
+	 border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <img alt="Measure_Cycle.gif" border="0" height="29" src="../Measure_Cycle.gif" width="30"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    测量周期
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通过
+   </font>
+  </font>
+  <span style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     测量循环，
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    您可以对线切割机床的测量探头/测量传感器进行编程，以在机床坐标系中对齐工件。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="MEASURE_CYCLES_shg.gif" border="0" height="379" src="../MEASURE_CYCLES_shg.gif" usemap="#AreaMap0" width="524"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="10,140,518,242" href="Position_Mess_Zyklen.htm" shape="rect"/>
+   <area alt="" coords="13,271,437,304" href="javascript:BSSCPopup('Relativ_zum_PEPS_Ursprung_Mess_Zyklen.htm',400,300);" id="area1" shape="rect"/>
+   <area alt="" coords="19,342,119,364" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area2" shape="rect"/>
+   <area alt="" coords="128,343,225,366" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area3" shape="rect"/>
+   <area alt="" coords="234,343,336,367" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area4" shape="rect"/>
+   <area alt="" coords="342,343,442,368" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area5" shape="rect"/>
+   <area alt="" coords="333,26,517,135" href="Lage_in_der_Bearbeitungsebene_Mess_Zyklen.htm" shape="rect"/>
+   <area alt="" coords="15, 304, 435, 333" href="javascript:BSSCPopup('Relativ_zur_linken_unteren_Werkstueckecke_Mess_Zyklen.htm',400,300);" id="area6" shape="rect"/>
+   <area alt="" coords="12, 28, 195, 134" href="javascript:BSSCPopup('Raeumliche_Lage_Mess_Zyklen.htm',400,600);" id="area7" shape="rect"/>
+  </map>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一个通知：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    测量
+   </font>
+  </font>
+  <font style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     循环
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    功能是可选的，并非适用于所有 EDM 机床（目前仅 AGIEVISION、Mitsubishi 和 Charmilles Robofil）。
+   </font>
+  </font>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('area1');
 	FilePopupInit('area2');
@@ -62,7 +127,9 @@
 	FilePopupInit('area5');
 	FilePopupInit('area6');
 	FilePopupInit('area7');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,7 +28,21 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Nullpunkt" %}</p><p>{% trans "Bei einigen Maschinen können Sie an dieser Stelle festlegen, auf welchen Nullpunkt (z.B. G54, G55, G56 ...) sich die NC-Ausgabe beziehen soll." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    零点
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在某些机器上，您可以在此时指定 NC 输出应参考哪个零点（例如 G54、G55、G56 ...）。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

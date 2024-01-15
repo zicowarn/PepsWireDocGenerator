@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,7 +28,21 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Name" %}</p><p class="Topic_Text_Bulleted">{% trans "Geben Sie in diesem Feld eine Bezeichnung für das Rohteil ein." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    姓
+   </font>
+  </font>
+ </p>
+ <p class="Topic_Text_Bulleted">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在此字段中输入空白的名称。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}
