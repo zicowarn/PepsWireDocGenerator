@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,11 +34,114 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <h1>{% trans "Schnittschemen nachladen" %}</h1><p class="hcp1"> </p>
-<p class="hcp1">{% trans "Die #Schnittschemen-Datenbank# ermöglicht es, dass bei einem Wechsel von [Maschine A] zu [Maschine B], automatisch die richtige Technologie geladen wird." %}</p>
-<p>{% trans "Hierzu müssen die Schnittschemen der [Maschinen A] und [B] nur den [gleichen Namen] haben. Zudem müssen Sie beim Programmieren Schnittschemen verwenden." %}</p>
-<p> </p>
-<p>{% trans "Beschreibung in Arbeit ...." %}</p>
+ <h1>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    重新加载切割方案
+   </font>
+  </font>
+ </h1>
+ <p class="hcp1">
+ </p>
+ <p class="hcp1">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    切割
+   </font>
+  </font>
+  <a href="Beispiel_Erodierbearbeitungen_durch_Schnittschemen_automatisieren.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     方案数据库
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使得从
+   </font>
+  </font>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     机器 A
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    切换到
+   </font>
+  </font>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     机器 B
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    时能够自动加载正确的技术。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    为此，
+   </font>
+  </font>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     机器 A
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     B
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    的切割方案只需具有
+   </font>
+  </font>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     相同的名称
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    即可。
+   </font>
+   <font style="vertical-align: inherit;">
+    编程时还需要使用切割方案。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    说明正在进行中...
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

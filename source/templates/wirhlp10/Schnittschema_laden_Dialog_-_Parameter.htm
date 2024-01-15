@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,65 +34,1187 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "@ Schnittschema laden - Parameter" %}</p><p>{% trans "Diese Schaltfläche@ ruft den Dialog[ Schnittschema laden] auf, mit dessen Hilfe Sie ein Schnittschema auswählen und der aktuell gewählten Bearbeitungsoperation zuweisen können." %}</p>
-<p>{% trans "[Siehe auch:] #Erodierbearbeitungen durch Schnittschemen automatisieren#" %}</p>
-<p> </p>
-<p class="dialog">{% trans "Haupt-Ikonenleiste" %}</p>
-<p class="Tip_Note_Heading">{% trans "Haupt-Ikonenleiste - Standardfunktionen" %}</p>
-<p><img src="../Schnittschema_laden_Hauptikonenleiste.gif" alt="" border="0" class="hcp2"/></p>
-<p> </p>
-<p>{% trans "[@ OK]: Schließt den Dialog und übernimmt den gewählten Datensatz." %}</p>
-<p>{% trans "[@ Abbrechen]: Schließt den Dialog." %}</p>
-<p> </p>
-<p>{% trans "[&lt;img src='../Schnittschema_laden_Ico_Daten%20bearbeiten.gif' alt='' border='0' class='hcp2'/&gt; Daten bearbeiten Ein/Aus]: Es ist möglich, den Inhalt einzelner Spalten zu verändern (z.B. die Spalte '[Kommentar]')." %}</p>
-<p>{% trans "Dazu müssen Sie zunächst den Modus '[Daten bearbeiten]' einschalten mit &lt;img src='../Schnittschema_laden_Ico_Daten%20bearbeiten_EIN.gif' alt='' border='0' class='hcp2'/&gt;." %}</p>
-<p>{% trans "Ändern Sie danach den Spalteninhalt und schalten Sie den Modus '[Daten bearbeiten]' wieder aus mit &lt;img src='../Schnittschema_laden_Ico_Daten%20bearbeiten_AUS.gif' alt='' border='0' class='hcp2'/&gt;." %}</p>
-<p>{% trans "[Wichtiger Hinweis]: Nicht alle Spalteninhalte lassen sich verändern. Verwenden Sie die Schaltfläche @ um festzulegen, welche Spalten angepasst werden dürfen." %}</p>
-<p> </p>
-<p>{% trans "[&lt;img src='../Schnittschema_laden_Ico_Löschen.gif' alt='' border='0' class='hcp2'/&gt; Löschen]: Diese Option löscht einen oder mehrere gewählte Datensätze aus der [Suchergebnis Liste]." %}</p>
-<p>{% trans "Verwenden Sie zur Auswahl der Datensätze die Standard MS-Windows Auswahltechniken." %}</p>
-<p> </p>
-<p>{% trans "[@ Schriftart]: Einstellen der verwendeten Schriftart für diesen Dialog." %}</p>
-<p> </p>
-<p>{% trans "[&lt;img src='../Schnittschema_laden_Ico_Spaltengröße%20anpassen.gif' alt='' border='0' class='hcp2'/&gt; Spaltengröße anpassen]: Breite der Spalten und Spalten-Überschriften automatisch anpassen. Zwei Modi sind verfügbar: Linker Mausklick auf Schaltfläche [&lt;img src='../Schnittschema_laden_Ico_Spaltengröße%20anpassen.gif' alt='' border='0' class='hcp2'/&gt;]: Spaltenbreite an [Überschriften] und [Werte] in Spalten anpassen." %}</p>
-<p>{% trans "Rechter Mausklick auf Schaltfläche [&lt;img src='../Schnittschema_laden_Ico_Spaltengröße%20anpassen.gif' alt='' border='0' class='hcp2'/&gt;]: Spaltenbreite nur an [Werte] in Spalten anpassen." %}</p>
-<p> </p>
-<p>{% trans "[@ Einstellungen]: Anpassen der Datenbank-Einstellungen." %}</p>
-<p>{% trans "[Hinweis:] Verfügbar nur für Fachpersonal. Freischaltung über Passwort nötig. Bitte wenden Sie sich an den Hersteller." %}</p>
-<p> </p>
-<p>{% trans "[@ Verwendeter Postprozessor]: Zeigt den Kurzbezeichnung des aktuell verwendeten Postprozessors (z.B. [Robofil])." %}</p>
-<p> </p>
-<p class="Tip_Note_Heading">{% trans "Haupt-Ikonenleiste - Schnellfilter" %}</p>
-<p><img src="../Schnittschema_laden_Schnellfilter.gif" alt="" border="0" class="hcp2"/></p>
-<p>{% trans "[Schnellsuche] auf Basis der aktuell im Dialog #Operationsstart# eingestellten Werte für [Material], [Materialhöhe], [Drahtsorte] und [Drahtdurchmesser]." %}</p>
-<p>{% trans "[Beispiel]: Ein Klick auf die Schaltfläche [Materialhöhe] sucht nach allen Datensätzen, mit der[ ]im Dialog #Operationsstart# eingestellten Höhe." %}</p>
-<p>{% trans "Beachten Sie das eine Kombination der Schaltflächen (z.B. [Material] und [Materialhöhe]) möglich ist." %}</p>
-<p> </p>
-<p>{% trans "[Höhentoleranz]:" %}</p>
-<p>{% trans "In der Regel definiert man nicht für jede [Materialhöhe] ein eigenes Schnittschema, sondern staffelt die Schnittschemen z.B. in 5mm Schritten von 0-5mm, 5-10,15-20 usw. ." %}</p>
-<p>{% trans "Die [Schnellsuche] sucht jedoch nach der aktuell im Dialog #Operationsstart# eingestellten [Materialhöhe] und würde bei eine Höhe von z.B. [21 ]keinen Datensatz finden. Hier hilft der [Höhenfilter]." %}</p>
-<p>{% trans "[Beispiel]: Die aktuelle [Materialhöhe] beträgt z.B. [21] mm und die [Höhentoleranz] ist [5]. Eine [Schnellsuche] würde alle Datensätze zwischen [15 ]und [25] mm [Materialhöhe] anzeigen." %}</p>
-<p>{% trans "Der Anwender kann nun ein Schnittschema für eine [Materialhöhe] von [20] mm wählen." %}</p>
-<p> </p>
-<p>{% trans "[@ Filter Drahtsorte]: Schnellsuchte nach dem der aktuell in diesem Programm einstellte [Drahtsorte]." %}</p>
-<p>{% trans "[@ Filter Drahtdurchmesser]: Schnellsuchte nach dem der aktuell in diesem Programm einstellten [Drahtdurchmesser]." %}</p>
-<p>{% trans "[@ Filter Material]: Schnellsuchte nach dem aktuell in diesem Programm einstellten [Material]." %}</p>
-<p>{% trans "[&lt;img src='../Schnittschema_laden_Ico_Filter_Höhe.gif' alt='' border='0' class='hcp2'/&gt; Filter Höhe]: Schnellsuchte nach dem der aktuell in diesem Programm einstellte [Materialhöhe]." %}</p>
-<p> </p>
-<p class="dialog">{% trans "Suchfilter" %}</p>
-<p><img src="../Schnittschema_laden_Filter.gif" alt="" border="0" class="hcp2"/></p>
-<p> </p>
-<p>{% trans "Mit dem [Filter] stellen Sie ein, wonach in der Schnittschemen-Datenbank gesucht werden soll." %}</p>
-<p>{% trans "Im Beispiel oberhalb wird nach den Suchkriterien [Werkstückmaterial] (Stahl) und [Anzahl Schnitte] (3) und [Materialhöhe ](30) gesucht." %}</p>
-<p>{% trans "Direkt nach Eingabe der Suchkriterien, zeigt das System in der [Suchergebnis Liste] alle Schnittschemen an, die den o.g. Suchkriterien entsprechen." %}</p>
-<p> </p>
-<p>{% trans "[@ Such-Filterkriterien ausschalten]: Mit dieser Schaltfläche können Sie die aktuell eingestellten Suchkriterien [ausschalten]." %}</p>
-<p>{% trans "[Beispiel]: Es wurde eine Suche nach einer [Materialhöhe] von [30] mm ausgeführt, Das System zeigt in der [Suchergebnis Liste] alle der Suche entsprechenden Schnittsschemen an. Verwenden Sie die Schaltfläche [@], um wieder[ ALLE Datensätze] anzuzeigen." %}</p>
-<p> </p>
-<p class="dialog">{% trans "Suchergebnis Liste" %}</p>
-<p><img src="../Schnittschema_laden_Ergebnisliste.gif" alt="" border="0" class="hcp2"/></p>
-<p>{% trans "Die [Suchergebnis Liste] zeigt das Ergebnis einer Suche nach Schnittschemen an. Wählen Sie das benötigte Schnittschema und übernehmen Sie die Auswahl mit [@ ]." %}</p>
-<p> </p>
+ <p class="dialog">
+  <img alt="加载.gif" border="0" height="23" src="../load.gif" width="24"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    负载切割方案-参数
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此按钮
+   </font>
+  </font>
+  <img alt="加载.gif" border="0" height="23" src="../load.gif" width="24"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    可打开
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “加载切削方案”
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框，您可以在其中选择切削方案并将其分配给当前选定的加工操作。
+   </font>
+  </font>
+ </p>
+ <p>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     另请参阅：
+    </font>
+   </font>
+  </span>
+  <a href="Beispiel_Erodierbearbeitungen_durch_Schnittschemen_automatisieren.htm" style="font-weight: normal;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     使用切割方案自动化 EDM 加工
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+ </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    主图标栏
+   </font>
+  </font>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    主工具栏 - 标准功能
+   </font>
+  </font>
+ </p>
+ <p>
+  <img alt="" border="0" class="hcp2" src="../Schnittschema_laden_Hauptikonenleiste.gif"/>
+ </p>
+ <p>
+ </p>
+ <p>
+  <span class="hcp1">
+   <img alt="" border="0" class="hcp2" src="../Schnittschema_laden_Ico_OK.gif"/>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     确定
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：关闭对话框并接受选定的数据记录。
+   </font>
+  </font>
+ </p>
+ <p>
+  <span class="hcp1">
+   <img alt="" border="0" class="hcp2" src="../Schnittschema_laden_Ico_Abbrechen.gif"/>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     取消
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：关闭对话框。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <span class="hcp1">
+   <img alt="" border="0" class="hcp2" src="../Schnittschema_laden_Ico_Daten%20bearbeiten.gif"/>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     编辑数据开/关
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：可以更改各个列的内容（例如“
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     注释
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ”列）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     为此，您必须首先使用 打开“编辑数据
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ”
+   </font>
+   <font style="vertical-align: inherit;">
+    模式
+   </font>
+  </font>
+  <img alt="" border="0" class="hcp2" src="../Schnittschema_laden_Ico_Daten%20bearbeiten_EIN.gif"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    然后更改列内容并
+   </font>
+   <font style="vertical-align: inherit;">
+    使用 再次关闭“
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     编辑数据
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+  </font>
+  <img alt="" border="0" class="hcp2" src="../Schnittschema_laden_Ico_Daten%20bearbeiten_AUS.gif"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ”模式。
+   </font>
+  </font>
+ </p>
+ <p>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     重要提示
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：并非所有列内容都可以更改。
+   </font>
+   <font style="vertical-align: inherit;">
+    使用 按钮
+   </font>
+  </font>
+  <img alt="" border="0" class="hcp2" src="../Schnittschema_laden_Ico_Spalteneinstellungen.gif"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    指定可以自定义哪些列。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <span class="hcp1">
+   <img alt="" border="0" class="hcp2" src="../Schnittschema_laden_Ico_Loeschen.gif"/>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     删除：此选项从
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     搜索结果列表
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    中删除一条或多条选定的记录
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用标准 MS-Windows 选择技术来选择数据集。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <span class="hcp1">
+   <img alt="" border="0" class="hcp2" src="../Schnittschema_laden_Ico_Schriftart.gif"/>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     字体
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：设置此对话框使用的字体。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <span class="hcp1">
+   <img alt="" border="0" class="hcp2" src="../Schnittschema_laden_Ico_Spaltengroesse%20anpassen.gif"/>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     调整列大小
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：自动调整列和列标题的宽度。
+   </font>
+   <font style="vertical-align: inherit;">
+    有两种模式可用：
+   </font>
+  </font>
+  <br/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    鼠标左键单击按钮
+   </font>
+  </font>
+  <span class="hcp1">
+   <img alt="" border="0" class="hcp2" src="../Schnittschema_laden_Ico_Spaltengroesse%20anpassen.gif"/>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：根据
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     标题
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和列中的
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     值
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    调整列宽 
+ 。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    右键单击按钮
+   </font>
+  </font>
+  <span class="hcp1">
+   <img alt="" border="0" class="hcp2" src="../Schnittschema_laden_Ico_Spaltengroesse%20anpassen.gif"/>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：仅将列宽调整为列中的
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     值
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <span class="hcp1">
+   <img alt="" border="0" class="hcp2" src="../Schnittschema_laden_Ico_Einstellungen.gif"/>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     设置
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：调整数据库设置。
+   </font>
+  </font>
+ </p>
+ <p>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     注意：
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    仅适用于合格人员。
+   </font>
+   <font style="vertical-align: inherit;">
+    需要通过密码激活。
+   </font>
+   <font style="vertical-align: inherit;">
+    请联系制造商。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <span class="hcp1">
+   <img alt="" border="0" class="hcp2" src="../Schnittschema_laden_Ico_PP_Name.gif"/>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     使用的后处理器
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：显示当前使用的后处理器的简称（例如
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     Robofil
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ）。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    主工具栏 - 快速过滤器
+   </font>
+  </font>
+ </p>
+ <p>
+  <img alt="" border="0" class="hcp2" src="../Schnittschema_laden_Schnellfilter.gif"/>
+ </p>
+ <p>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+  </font>
+  <a href="Operation_starten.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     根据当前在“操作开始”
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框
+   </font>
+   <font style="vertical-align: inherit;">
+    中设置的值，
+   </font>
+   <span class="hcp1">
+    <font style="vertical-align: inherit;">
+     快速搜索
+    </font>
+   </span>
+   <font style="vertical-align: inherit;">
+    材料
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     、
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     材料高度
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     线材类型
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     线材直径
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     示例
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：单击
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “材料高度”
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮可搜索具有
+   </font>
+   <a href="Operation_starten.htm">
+    <font style="vertical-align: inherit;">
+     “操作开始”
+    </font>
+   </a>
+  </font>
+  <span class="hcp1">
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框中设置的高度的所有数据集
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <a href="Operation_starten.htm">
+   <font style="vertical-align: inherit;">
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    请注意，按钮的组合（例如
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     材料
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     材料高度
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ）是可能的。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     高度公差
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通常，您不会为每种
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     材料高度
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    定义单独的切割方案 
+ ，而是交错切割方案，例如以 5 毫米为增量，0-5 毫米、5-10、15-20 等。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    然而，快速
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     搜索
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    会搜索
+   </font>
+  </font>
+  <a href="Operation_starten.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “操作开始”
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框中当前 
+ 设置的
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     材料高度，例如，如果高度为
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     21
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，则不会找到任何数据记录
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     高度过滤器
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在这里很有帮助
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     举例
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ： 例如，当前
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     材料高度
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    为
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     21
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    毫米，
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     高度公差
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    为
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     5
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+   <font style="vertical-align: inherit;">
+    快速
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     搜索
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    将显示
+   </font>
+   <span class="hcp1">
+    <font style="vertical-align: inherit;">
+     材料高度在
+    </font>
+   </span>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     15
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    到
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     25
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    毫米之间的所有记录
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    用户现在可以选择
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     材料高度
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    为
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     20
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    毫米的切割方案。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <span class="hcp1">
+   <img alt="" border="0" class="hcp2" src="../Schnittschema_laden_Ico_Filter_Drahtsorte.gif"/>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     过滤电线类型
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：快速搜索当前在此程序中设置的
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     电线类型
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <span class="hcp1">
+   <img alt="" border="0" class="hcp2" src="../Schnittschema_laden_Ico_Filter_DrahtDM.gif"/>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     过滤线径
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：快速搜索当前程序中设置的
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     线径
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <span class="hcp1">
+   <img alt="" border="0" class="hcp2" src="../Schnittschema_laden_Ico_Filter_Material.gif"/>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     过滤材料
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：快速搜索该程序中当前设置的
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     材料
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <span class="hcp1">
+   <img alt="" border="0" class="hcp2" src="../Schnittschema_laden_Ico_Filter_Hoehe.gif"/>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     过滤高度
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：快速搜索当前程序中设置的
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     材料高度
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    搜索过滤器
+   </font>
+  </font>
+ </p>
+ <p>
+  <img alt="" border="0" class="hcp2" src="../Schnittschema_laden_Filter.gif"/>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    您可以使用
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     过滤器
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    设置要在切割方案数据库中搜索的内容。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在上面的示例中，搜索条件是
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     工件材料
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    （钢）、
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     切削次数
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    (3) 和
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     材料高度
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    (30)。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    输入搜索条件后，系统立即在
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     搜索结果列表
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    中显示符合上述搜索条件的所有切割方案。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <span class="hcp1">
+   <img alt="" border="0" class="hcp2" src="../Schnittschema_laden_Ico_Suchilter.gif"/>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     关闭搜索过滤条件
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：使用此按钮您可以
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     关闭
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    当前设置的搜索条件。
+   </font>
+  </font>
+ </p>
+ <p>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     例
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：搜索
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     材料高度
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    为
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     30mm
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，系统在
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     搜索结果列表
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    中显示该搜索对应的所有切割方案。
+   </font>
+  </font>
+  <br/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用 按钮
+   </font>
+  </font>
+  <span class="hcp1">
+   <img alt="" border="0" class="hcp2" src="../Schnittschema_laden_Ico_Suchilter.gif"/>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    再次显示
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     所有记录
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    搜索结果列表
+   </font>
+  </font>
+ </p>
+ <p>
+  <img alt="" border="0" class="hcp2" src="../Schnittschema_laden_Ergebnisliste.gif"/>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    搜索
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     结果列表
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    显示切割方案的搜索结果。
+   </font>
+   <font style="vertical-align: inherit;">
+    选择所需的切割方案并用 接受选择
+   </font>
+  </font>
+  <span class="hcp1">
+   <img alt="" border="0" class="hcp2" src="../OK_button.gif"/>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

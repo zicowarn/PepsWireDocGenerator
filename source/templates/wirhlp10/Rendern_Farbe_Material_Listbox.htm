@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,8 +28,40 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Rendern (Farbe/Material) Listbox" %}</p><p>{% trans "In dieser Listbox können Sie das Material / die Farbe auswählen, mit dem(r) eine Bearbeitungsoperation schattiert (gerendert) werden soll." %}</p>
-<p>{% trans "Mit der Schaltfläche [Einstellungen] können Sie die Voreinstellungen der vorhandene Materialien/Farbe ändern oder neue Materialien erzeugen." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    渲染（颜色/材质）列表框
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在此列表框中，您可以选择用于着色（渲染）编辑操作的材质/颜色。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用
+   </font>
+  </font>
+  <font style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “设置”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮，您可以更改现有材质/颜色的默认设置或创建新材质。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

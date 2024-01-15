@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,8 +28,31 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Schräg einfädeln" %}</p><p>{% trans "Wenn Schrägschieber unter großen Winkeln geschnitten werden, kann es beim Schneiden von Matrizen passieren, dass ein senkrechtes Einfädeln des Drahtes nicht möglich ist." %}</p>
-<p>{% trans "Mit dieser Option können Sie den Draht schräg in die Startlochbohrung einfädeln. Beachten Sie, dass diese Option nicht für jede CNC-Maschine zur Verfügung steht." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对角线
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果以大角度切割对角滑道，则在切割模具时可能无法垂直穿线。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用此选项，您可以将电线以一定角度穿入起始孔。
+   </font>
+   <font style="vertical-align: inherit;">
+    请注意，此选项并非适用于所有 CNC 机床。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

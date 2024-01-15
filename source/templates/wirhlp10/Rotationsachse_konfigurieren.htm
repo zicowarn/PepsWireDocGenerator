@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,22 +35,102 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Rotationsachse konfigurieren" %}</p><p>{% trans "Wenn die Drahterodiermaschine eine Rotationsachse ([A]-, [B]- od. [A+B]-Achse(n)) hat und diese programmiert werden soll, muss die Rotationsachse im Vorfeld eingestellt werden." %}</p><p class="hcp2"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Config_Rot_Axis_shg.gif" usemap="#AreaMap0" alt="Config_Rot_Axis_shg.gif" width="309" height="224" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="5,29,304,106" href="Einzelne_Rotationsachse_konfigurieren_Rotationsachse_konfigurieren.htm" alt=""/>
-<area shape="rect" coords="4,108,302,183" href="Erweiterte_Rotationsachse_konfigurieren_Rotationsachse_konfigurieren.htm" alt=""/>
-<area shape="rect" coords="178,192,297,216" href="javascript:BSSCPopup('../Commdata/COMMON_Schliessen.htm');" id="area1" alt=""/>
-</map> </p>
-<p> </p>
-<p class="Hinweis">{% trans "Hinweis:" %}</p>
-<p>{% trans "Die Programmierung von Rotationsachsen ist eine Option." %}</p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; 
+	 border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <img alt="Rotaxis_Config.gif" border="0" height="29" src="../Rotaxis_Config.gif" width="31"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    配置旋转轴
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果线切割机有旋转轴（
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     A
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     B
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     A+B
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    轴）并且需要编程，则必须提前设置旋转轴。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="Config_Rot_Axis_shg.gif" border="0" height="224" src="../Config_Rot_Axis_shg.gif" usemap="#AreaMap0" width="309"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="5,29,304,106" href="Einzelne_Rotationsachse_konfigurieren_Rotationsachse_konfigurieren.htm" shape="rect"/>
+   <area alt="" coords="4,108,302,183" href="Erweiterte_Rotationsachse_konfigurieren_Rotationsachse_konfigurieren.htm" shape="rect"/>
+   <area alt="" coords="178,192,297,216" href="javascript:BSSCPopup('../Commdata/COMMON_Schliessen.htm');" id="area1" shape="rect"/>
+  </map>
+ </p>
+ <p>
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一个通知：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    可以选择对旋转轴进行编程。
+   </font>
+  </font>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('area1');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,24 +35,140 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Rohteile" %}</p><p>{% trans "Dieses Dialogregister dient zum Erzeugen einer Rohteilgrafik." %}</p><p>{% trans "Eine Rohteilgrafik ist erforderlich, wenn die Bearbeitung in Form einer [#Solid-Simulation#] simuliert werden soll." %}</p>
-<p>{% trans "Sie können Rohteile auf Basis von [3D-Solidmodellen] definieren oder diese durch parametrische Eingaben beschreiben (Schaltfläche #[Neues Rohteil]#[)]." %}</p>
-<p class="hcp2"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Rohteile_shg.gif" usemap="#AreaMap0" alt="Rohteile_shg.gif" width="274" height="171" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="10, 116, 88, 139" href="Solid_s_OP_Start_Rohteil_Rohteile.htm" id="area1" alt=""/>
-<area shape="rect" coords="192, 115, 266, 136" href="Neues_Rohteil_OP_Start_Rohteil_Rohteile.htm" alt="" id="area2"/>
-</map> </p>
-<p class="hcp2"> </p>
-<p class="Tip_Note_Heading">{% trans "So wird es gemacht:" %}</p>
-<p>{% trans "#[Rechteckiges Rohteil definieren]#" %}</p>
-<p>{% trans "#[Solid als Rohteil verwenden]#" %}</p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    原材料
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该对话框寄存器用于创建空白图形。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <a href="../Simulation/_Standard_Simulation.htm">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      如果要以实体模拟
+     </font>
+    </font>
+   </a>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    的形式模拟加工，则需要空白图形
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    您可以根据
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     3D 实体模型
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    定义毛坯零件 
+ ，或使用参数输入来描述它们（“
+   </font>
+  </font>
+  <a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('Neues_Rohteil_OP_Start_Rohteil_Rohteile.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      新建毛坯零件”
+     </font>
+    </font>
+   </font>
+  </a>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     按钮）
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="Rohteile_shg.gif" border="0" height="171" src="../Rohteile_shg.gif" usemap="#AreaMap0" width="274"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="10, 116, 88, 139" href="Solid_s_OP_Start_Rohteil_Rohteile.htm" id="area1" shape="rect"/>
+   <area alt="" coords="192, 115, 266, 136" href="Neues_Rohteil_OP_Start_Rohteil_Rohteile.htm" id="area2" shape="rect"/>
+  </map>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    它是这样完成的：
+   </font>
+  </font>
+ </p>
+ <p>
+  <a href="Beispiel_Rechteckiges_Rohteil_definieren.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      定义矩形毛坯
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+  <a href="Beispiel_Solid_als_Rohteil_verwenden.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      使用实体作为原始零件
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('a1');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

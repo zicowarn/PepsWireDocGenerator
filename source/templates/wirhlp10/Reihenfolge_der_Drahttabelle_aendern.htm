@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,10 +34,105 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "@ Reihenfolge der Drahttabelle ändern" %}</p><ul>
-	<li class="hcp1"><p class="Tip_Note_Text_Bulleted">{% trans "Rufen Sie im Menü #[Bearbeitung]# den Befehl #[Operation starten]# auf und wählen Sie das Register [Technologie]. Klicken Sie im Dialog auf die Schaltfläche @." %}</p></li>
-	<li class="hcp1"><p class="Tip_Note_Text_Bulleted">{% trans "Klicken Sie den Eintrag den Sie verschieben wollen mit der [linken Maustaste] an. Klicken Sie anschließend auf eine der Schaltflächen @, um den Eintrag zu verschieben." %}</p></li>
-</ul>
+ <p class="dialog">
+  <img alt="向上移动.gif" border="0" height="23" src="../Move_up_down.gif" width="52"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    更改线表顺序
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp1">
+   <p class="Tip_Note_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <a href="Das_Bearbeitungs_Menue.htm">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        在“编辑”
+       </font>
+      </font>
+     </font>
+    </a>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      菜单中，调用
+     </font>
+    </font>
+    <a href="Operation_starten.htm">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        “开始操作”
+       </font>
+      </font>
+     </font>
+    </a>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      命令
+     </font>
+     <font style="vertical-align: inherit;">
+      并选择
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “技术”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选项卡。
+     </font>
+     <font style="vertical-align: inherit;">
+      单击对话框中的按钮
+     </font>
+    </font>
+    <img alt="wire_edi_but.gif" border="0" height="24" src="../wire_edi_but.gif" width="25"/>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Tip_Note_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       用鼠标左键
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      单击要移动的条目
+     </font>
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+     <font style="vertical-align: inherit;">
+      然后单击其中一个按钮
+     </font>
+    </font>
+    <img alt="向上移动.gif" border="0" height="23" src="../Move_up_down.gif" width="52"/>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      来移动条目。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+
 
 {% endblock %}
 {% endlinebreakless %}

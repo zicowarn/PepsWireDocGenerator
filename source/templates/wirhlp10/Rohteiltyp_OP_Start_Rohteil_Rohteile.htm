@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -39,37 +38,344 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Rohteiltyp" %}</p><p> </p>
-<p style="font-weight: bold;">{% trans "Rechteckig" %}</p>
-<p>{% trans "Definition eines rechteckiges Rohteil. Das Rechteck wird durch die Eingabe der linken unteren ([XY-Minimum]) und rechten oberen Rohteilecke ([XY-Maximum]) festgelegt." %}</p>
-<p class="hcp2"> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
-<p>{% trans "#[Rechteckiges Rohteil definieren]#" %}</p>
-<p class="hcp2"> </p>
-<p class="footnote_text" style="margin-bottom: 0.00pt;"><img src="../Select_Solid.gif" alt="Select_Solid.gif" width="224" height="23" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Mit dieser Funktion können Sie im Grafikfenster einen Solid-Body anklicken und davon ein [rechteckiges Rohteil] ableiten." %}</p>
-<p>{% trans "Das System legt intern eine unsichtbare, rechteckige Box um den gewählten Solid-Body und erzeugt daraus die Rohteilgeometrie." %}</p>
-<p><img src="../Box_um_Solid_Rohteil.gif" alt="" border="0" class="hcp3"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "[Kreisförmig]" %}</p>
-<p>{% trans "Kreisförmiges Rohteil durch Eingabe von [Kreismittelpunkt] und [Durchmesser]." %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "[Aus Linien/Bögen]" %}</p>
-<p>{% trans "Definition eines Rohteils beliebiger Form, auf der Basis von vorhandenen [Linien-/Bogenelementen]." %}</p>
-<p class="Tip_Note_Heading">{% trans "Rohteil aus Linien/Bögen erzeugen" %}</p>
-<ul>
-	<li class="hcp4"><p class="Topic_Text_Bulleted">{% trans "Die Form des Rohteils muss als in sich geschlossene Konstruktion (Linien-/Bogenelemente) vorliegen." %}</p></li>
-	<li class="hcp4"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie anschließend im Dialog [Neues Rohteil] auf die Schaltfläche [Wähle Linien/Bögen &amp;gt;&amp;gt;]." %}</p></li>
-	<li class="hcp4"><p class="Topic_Text_Bulleted">{% trans "Wählen Sie nun die Linien-/Bogenelemente einzeln aus oder mit Hilfe der Option [Verbinden] ([rechte Maustaste] o. [horizontale Ikonenleiste])." %}</p></li>
-</ul>
-<p class="Topic_Text_Bulleted">{% trans "[Aus Figur]" %}</p>
-<p>{% trans "Definition eines Rohteils beliebiger Form, auf der Basis einer vorhandenen Geometrie vom Typ [Figur]." %}</p>
-<p> </p>
-<p>{% trans "[Als Solid erzeugen]" %}</p>
-<p>{% trans "Ist diese Option aktiv, wird das definierte Rohteil wird nicht als Drahtmodell erzeugt, sondern als durchsichtiger[ Solid-Body]." %}</p>
-<p><img src="../Rohteil_als_Solid.gif" alt="" border="0" class="hcp3"/></p>
-<p> </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    毛坯类型
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p style="font-weight: bold;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    矩形的
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    矩形毛坯的定义。
+   </font>
+   <font style="vertical-align: inherit;">
+    通过输入左下角（
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     XY 最小值
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ）和右上角空白角（
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     XY 最大值
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ）来定义矩形。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    它是这样完成的：
+   </font>
+  </font>
+ </p>
+ <p>
+  <a href="Beispiel_Rechteckiges_Rohteil_definieren.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      定义矩形毛坯
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="footnote_text" style="margin-bottom: 0.00pt;">
+  <img alt="选择_实体.gif" border="0" height="23" src="../Select_Solid.gif" width="224"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用此功能，您可以在图形窗口中单击实体并从中导出
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     矩形毛坯
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    系统在内部围绕选定的实体放置一个不可见的矩形框，并使用它来创建原始零件几何形状。
+   </font>
+  </font>
+ </p>
+ <p>
+  <img alt="" border="0" class="hcp3" src="../Box_um_Solid_Rohteil.gif"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     圆
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    圆形毛坯通过输入
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     圆心
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     直径
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     从直线/弧线
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     基于现有的线/弧元素
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    定义任何形状的毛坯
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    从直线/圆弧创建原始零件
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp4">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      原始零件的形状必须是独立的结构（线/拱形元素）。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp4">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      然后单击
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “新建空白”对话框中的
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “选择线/弧&gt;&gt;”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      按钮
+     </font>
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp4">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      现在单独选择线/弧元素或使用
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “连接”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选项（
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       鼠标右键
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      或
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       水平图标栏
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      ）。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p class="Topic_Text_Bulleted">
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     从图中
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    基于图类型的现有几何形状定义任何形状的
+   </font>
+  </font>
+  <span class="hcp5">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     毛坯
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     创建为实体
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果此选项处于活动状态，则定义的毛坯不会创建为线模型，而是创建为透明
+   </font>
+  </font>
+  <span class="hcp5">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     实体
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <img alt="" border="0" class="hcp3" src="../Rohteil_als_Solid.gif"/>
+ </p>
+ <p>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

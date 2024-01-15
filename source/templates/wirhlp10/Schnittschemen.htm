@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -40,28 +39,289 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Schnittschemen" %}</p><p>{% trans "Schnittschemen ermöglichen es, die Einstellparameter eines Bearbeitungsdialoges zu speichern und für folgende Programme zu verwenden." %}</p>
-<p>{% trans "Alle Einstellungen die einer [Konturbearbeitung], [Bundbearbeitung] oder [Regelflächenbearbeitung] zugewiesen wurden, lassen sich als Schnittschema speichern." %}</p>
-<p>{% trans "Ein Schnittschema speichert Einstellungen wie: Technologie, Methode zur Entfernung der Anbindung, Einstellungen für Ein-/Ausfahren, Einstellungen für Offset etc." %}</p>
-<p> </p>
-<p>{% trans "Will man auf [vorhandene Schnittschemen zugreifen], klickt man auf die Schaltfläche @ #Schnittschema laden#" %}</p>
-<p>{% trans "Es folgt der[ Schnittschema laden] Dialog, in die Schnittschemen laden und verändern können." %}</p>
-<p>{% trans "Möchte man ein [neues Schnittschema speichern oder ein bestehendes verändern] verwendet man die Schaltfläche @[ ]#[[Sc]][[hnittschema speichern]]#" %}</p>
-<p>{% trans "Es folgt der Aufruf des [Schnittschema speichern ]Dialogs, in dem Sie dem Schnittschema einen Namen geben und es speichern können." %}</p>
-<p class="hcp5"> </p>
-<p>{% trans "Beispiele für typische Schnittschemen:" %}</p>
-<p class="hcp6">{% trans "Tasche ausräumen 1 Nachschnitt" %}</p>
-<p class="hcp6">{% trans "Einzelner Schruppschnitt" %}</p>
-<p class="hcp6">{% trans "3 Schnitte - Pendelschnitt" %}</p>
-<p class="hcp6">{% trans "2 Schnitte - 1mm Steg" %}</p>
-<p>{% trans "[Mehrfachstempel 3 Schnitte 0.5 mm Steg]" %}</p>
-<p class="hcp5"> </p>
-<p>{% trans "Folgende Optionen stehen zur Verfügung:" %}</p>
-<p>{% trans "@ #Schnittschema speichern#" %}</p>
-<p>{% trans "[@] #Schnittschema laden#" %}</p>
-<p class="hcp5"> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
-<p style="font-weight: normal;">{% trans "#[Erodierbearbeitungen durch Schnittschemen automatisieren]#" %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    切割方案
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    切割方案可以保存编辑对话框的设置参数并将其用于后续程序。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    所有分配给
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     轮廓加工
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     轴环加工
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     直纹面加工的设置都
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    可以保存为切割方案。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    切割方案存储诸如：技术、解绑方法、缩回/延伸设置、偏移设置等设置。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果您想
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     访问现有的切割方案
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，请单击
+   </font>
+  </font>
+  <img alt="加载.gif" border="0" height="23" src="../load.gif" width="24"/>
+  <a class="hcp2" href="Schnittschema_laden_speichern.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “加载切割方案”按钮
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    接下来是
+   </font>
+  </font>
+  <span class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “加载切割方案”
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框，可以在其中加载和更改切割方案。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果要
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     保存新的切割方案或更改现有的切割方案，
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    请使用
+   </font>
+   <a class="hcp2" href="Schnittschema_laden_speichern.htm">
+    <span>
+     <font class="hcp4">
+      <font style="vertical-align: inherit;">
+       “保存切割方案”
+      </font>
+     </font>
+    </span>
+   </a>
+   <a class="hcp2" href="Schnittschema_laden_speichern.htm">
+    <span>
+     <font class="hcp4">
+      <font style="vertical-align: inherit;">
+       按钮
+      </font>
+     </font>
+    </span>
+   </a>
+  </font>
+  <img alt="保存.gif" border="0" height="23" src="../save.gif" width="24"/>
+  <span class="hcp3">
+  </span>
+  <a class="hcp2" href="Schnittschema_laden_speichern.htm">
+   <span>
+    <font class="hcp4">
+     <font style="vertical-align: inherit;">
+     </font>
+    </font>
+   </span>
+   <span>
+    <font class="hcp4">
+     <font style="vertical-align: inherit;">
+     </font>
+    </font>
+   </span>
+  </a>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    然后调用
+   </font>
+  </font>
+  <span class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “保存切割方案”
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框，您可以在其中为切割方案命名并保存。
+   </font>
+  </font>
+ </p>
+ <p class="hcp5">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    典型切割方案示例：
+   </font>
+  </font>
+ </p>
+ <p class="hcp6">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    清空袋子1重新切割
+   </font>
+  </font>
+ </p>
+ <p class="hcp6">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    单次粗切
+   </font>
+  </font>
+ </p>
+ <p class="hcp6">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    3 次切割 - 摆式切割
+   </font>
+  </font>
+ </p>
+ <p class="hcp6">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    2 次切割 - 1mm 桥
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     多次冲孔 3 次切割 0.5 毫米桥
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp5">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    可以使用以下选项：
+   </font>
+  </font>
+ </p>
+ <p>
+  <img alt="保存.gif" border="0" height="23" src="../save.gif" width="24"/>
+  <a class="hcp2" href="Schnittschema_laden_speichern.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     保存切割方案
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+  <font class="hcp1">
+   <img alt="加载.gif" border="0" height="23" src="../load.gif" width="24"/>
+  </font>
+  <a class="hcp2" href="Schnittschema_laden_speichern.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     负载切割图
+    </font>
+   </font>
+  </a>
+ </p>
+ <p class="hcp5">
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    它是这样完成的：
+   </font>
+  </font>
+ </p>
+ <p style="font-weight: normal;">
+  <a href="Beispiel_Erodierbearbeitungen_durch_Schnittschemen_automatisieren.htm">
+   <font class="hcp4">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      使用切割方案自动进行腐蚀加工
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

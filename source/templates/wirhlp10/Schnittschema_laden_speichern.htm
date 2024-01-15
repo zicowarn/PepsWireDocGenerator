@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -37,29 +36,133 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Schnittschema laden, speichern" %}</p><p class="dialog">{% trans "@ Schnittschema laden" %}</p>
-<p>{% trans "Diese Schaltfläche ruft den Dialog[ Schnittschema laden] auf, mit dessen Hilfe Sie ein Schnittschema auswählen und dessen Einstellungen, der momentan gewählten Bearbeitungsoperation zuweisen können." %}</p>
-<p>{% trans "Der Vorgang ändert die Parametereinstellungen des Dialogs und übernimmt die Einstellungen des gewählten Schnittschemas, wenn Sie den Dialog mit [@ ]beenden." %}</p>
-<p>{% trans "[Siehe auch:] #Erodierbearbeitungen durch Schnittschemen automatisieren#" %}</p>
-<p> </p>
-<p class="hcp3">{% trans "Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen." %}</p>
-<p> </p>
-<p><img src="../Schnittschema_laden_Dialog.gif" alt="" usemap="#MAP664184964" border="0" class="hcp2"/>
-<map id="MAP664184964" name="MAP664184964">
-<area shape="rect" coords="-3, 33, 1022, 501" href="Schnittschema_laden_Dialog_-_Parameter.htm" alt=""/>
-</map> </p>
-<p> </p>
-<p class="dialog">{% trans "@ Schnittschema speichern" %}</p>
-<p>{% trans "Verwenden Sie diese Schaltfläche, um die momentanen Dialogeinstellungen als neues Schnittschema zu speichern." %}</p>
-<p>{% trans "Zudem können Sie ein angepasstes Schnittschema speichern." %}</p>
-<p> </p>
-<p class="hcp3">{% trans "Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen." %}</p>
-<p> </p>
-<p><img src="../Schnittschema_speichern_Dialog.gif" alt="" usemap="#MAP664211854" border="0" class="hcp2"/>
-<map id="MAP664211854" name="MAP664211854">
-<area shape="rect" coords="3, 92, 492, 552" href="Schnittschema_speichern_Dialog_-_Parameter.htm" alt=""/>
-</map> </p>
-<p> </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    加载并保存切割方案
+   </font>
+  </font>
+ </p>
+ <p class="dialog">
+  <img alt="加载.gif" border="0" height="23" src="../load.gif" width="24"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    负载切割图
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     此按钮可打开“加载切削方案”
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框
+   </font>
+   <font style="vertical-align: inherit;">
+    ，您可以在其中选择切削方案并将其设置分配给当前选定的加工操作。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <span class="hcp1">
+   <img alt="" border="0" class="hcp2" src="../OK_button.gif"/>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    当您使用 退出对话框
+   </font>
+   <font style="vertical-align: inherit;">
+    时，该过程会更改对话框的参数设置并采用所选切割方案的设置 
+ 。
+   </font>
+  </font>
+ </p>
+ <p>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     另请参阅：
+    </font>
+   </font>
+  </span>
+  <a href="Beispiel_Erodierbearbeitungen_durch_Schnittschemen_automatisieren.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     使用切割方案自动化 EDM 加工
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+ </p>
+ <p class="hcp3">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    单击下图的各个区域可访问帮助文本。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <img alt="" border="0" class="hcp2" src="../Schnittschema_laden_Dialog.gif" usemap="#MAP664184964"/>
+  <map id="MAP664184964" name="MAP664184964">
+   <area alt="" coords="-3, 33, 1022, 501" href="Schnittschema_laden_Dialog_-_Parameter.htm" shape="rect"/>
+  </map>
+ </p>
+ <p>
+ </p>
+ <p class="dialog">
+  <img alt="保存.gif" border="0" height="23" src="../save.gif" width="24"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    保存切割方案
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用此按钮可将当前对话框设置保存为新的切割方案。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    您还可以保存自定义的切割方案。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="hcp3">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    单击下图的各个区域可访问帮助文本。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <img alt="" border="0" class="hcp2" src="../Schnittschema_speichern_Dialog.gif" usemap="#MAP664211854"/>
+  <map id="MAP664211854" name="MAP664211854">
+   <area alt="" coords="3, 92, 492, 552" href="Schnittschema_speichern_Dialog_-_Parameter.htm" shape="rect"/>
+  </map>
+ </p>
+ <p>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

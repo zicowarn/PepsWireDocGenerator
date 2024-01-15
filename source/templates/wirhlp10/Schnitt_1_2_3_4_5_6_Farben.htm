@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,8 +33,47 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Schnitt 1, 2, 3, ...20 (Farbe einstellen)" %}</p><p>{% trans "Hier kann jedem Schnitt eine separate Farbe für die Simulation zugeordnet werden." %}</p>
-<p>{% trans "Klicken Sie zunächst auf die Schnittnummer (z.B. Schnitt 3) und wählen Sie anschließend eine Farbe im Feld [Wähle] [Farbe]." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    剪切 1, 2, 3, ...20（设置颜色）
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在这里，每个切口都可以分配一个单独的颜色以进行模拟。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    首先单击剪切编号（例如剪切 3），然后在
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “选择
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     颜色”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    字段中选择一种颜色。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

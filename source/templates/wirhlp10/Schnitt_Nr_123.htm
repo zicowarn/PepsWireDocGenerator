@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,12 +33,128 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Schnitt Nr. 1 ,2, 3, ...." %}</p><p>{% trans "Mit den Checkboxen [1, 2, 3 ...] bis [10] legen Sie die Anzahl der Schnitte fest. Zusätzlich können Sie jedem Schnitt spezielle Technologieinformationen zuordnen." %}</p>
-<p>{% trans "Weiterhin finden Sie hier Funktionen mit denen Sie Offsets bestimmen, zusätzliche Technologien und zusätzliche Anbindungen zuordnen, sowie zusätzliche NC-Codes ausgeben können." %}</p>
-<p>{% trans "Müssen [mehr als 10 Schnitte] programmiert werden, können Sie dies mit der Schaltfläche [Weitere] ... bestimmen." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p class="Hinweis">{% trans "Hinweis:" %}</p>
-<p>{% trans "Zusätzliche Technologiewechsel, Anbindungen und NC-Codes etc. müssen [vorher] mit den Befehlen im Menü #[Vorbereitung]#, in die Bearbeitungsfigur eingebracht werden." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    第 1、2、3 号剪......
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用复选框
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     1、2、3...
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    到
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     10
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    指定切割次数。
+   </font>
+   <font style="vertical-align: inherit;">
+    此外，您还可以为每次切割分配特定的技术信息。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    您还可以在此处找到用于确定偏移、分配附加技术和附加连接以及输出附加 NC 代码的功能。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果需要
+   </font>
+   <font style="vertical-align: inherit;">
+    编程
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     10 次以上的切割，您可以使用
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “更多
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ...”按钮来执行此操作。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一个通知：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font style="font-weight: bold; font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     必须首先使用
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <a href="../wirhlp9/Das_Vorbereitungs_Menue.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      “准备”
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    菜单中的命令
+   </font>
+   <font style="vertical-align: inherit;">
+    将其他技术更改、连接和 NC 代码等
+   </font>
+   <font style="vertical-align: inherit;">
+    引入到加工图形中。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

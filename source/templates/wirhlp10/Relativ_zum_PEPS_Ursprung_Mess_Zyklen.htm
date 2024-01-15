@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,8 +28,23 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Relativ zum PEPS Ursprung" %}</p><p>{% trans "XXX Using this method the CAM Systems co-ordinate system is set relative to the machine and workpiece co-ordinate system by returning the PEPS position for the datum reference point within the XY position measure cycle." %}</p>
-<p> </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    PEPS 起源的相关性
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    XXX 使用此方法，通过在 XY 位置测量周期内返回基准参考点的 PEPS 位置，相对于机器和工件坐标系设置 CAM 系统坐标系。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

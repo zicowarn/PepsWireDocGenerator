@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,35 +34,387 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "@ Schnittschema speichern Dialog - Parameter" %}</p><p>{% trans "Verwenden Sie diese Schaltfläche@ , um die aktuellen Dialogeinstellungen als neues Schnittschema zu speichern." %}</p>
-<p>{% trans "Bestehende Schnittschemen können Sie verändern, indem Sie mit Schaltfläche @ den [#Schnittschema laden#] Dialog aufrufen. Dann das Schnittsschema suchen es anpassen und danach speichern." %}</p>
-<p>{% trans "[Siehe auch:] #Erodierbearbeitungen durch Schnittschemen automatisieren#" %}</p>
-<p> </p>
-<p><img src="../Schnittschema_speichern_Parameter_1.gif" alt="" border="0" class="hcp2"/></p>
-<p> </p>
-<p class="Tip_Note_Heading">{% trans "KNO Dateiname" %}</p>
-<p>{% trans "In diesem Feld gibt das System einen Name für das Schnittschema vor. Die Vorgabe besteht aus dem aktuell gewähltem [Material], [Materialhöhe], [Draht], [Drahtdurchmesser] und der [Anzahl der Schnitte]." %}</p>
-<p>{% trans "Beachten Sie, dass man den vorgegeben Name verändern kann. Die Systemvorgabe lässt sich einstellen im Dialog [Modul Einstellungen] (Menüfolge: [Datei &amp;gt; Einstellungen &amp;gt; Modul Einstellungen &amp;gt; Dialogeinstellungen]." %}</p>
-<p> </p>
-<p class="Tip_Note_Heading">{% trans "Schnittschemenfarbe" %}</p>
-<p>{% trans "In einigen Anwendungsfällen sind bestimmte Flächen von 3D Modellen[ farbig eingefärb]t." %}</p>
-<p>{% trans "So könnte beispielsweise, eine [rote Bohrung] eine Passung [H7] kennzeichnen." %}</p>
-<p>{% trans "Das Feld [Farbe] zeigt an, welche Farbe einem Schnittschema zugewiesen wurde." %}</p>
-<p>{% trans "Der benötigte Farbcode lässt sich mit der Schaltfläche [Face picken] von einem 3D Modell ableiten oder mit der Schaltfläche [Farbe wählen] über den MS-Windows Dialog zur Farbauswahl bestimmen." %}</p>
-<p> </p>
-<p><img src="../Schnittschema_speichern_Parameter_2.gif" alt="" border="0" class="hcp2"/></p>
-<p class="Tip_Note_Heading">{% trans "Draht, Draht-Durchmesser" %}</p>
-<p>{% trans "Bestimmt den verwendeten Draht und den Drahtdurchmesser." %}</p>
-<p class="Tip_Note_Heading">{% trans "Werkstückmaterial, Höhe" %}</p>
-<p>{% trans "Bestimmt das verwendete Material und dessen Höhe." %}</p>
-<p class="Tip_Note_Heading">{% trans "Durchmesser" %}</p>
-<p>{% trans "XXX Spezialfall - Beschreibung in Arbeit." %}</p>
-<p class="Tip_Note_Heading">{% trans "Anzahl der Schnitte" %}</p>
-<p>{% trans "Zeigt die im Schnittschema gespeicherte Anzahl von Schnitten." %}</p>
-<p class="Tip_Note_Heading">{% trans "Beschreibung, Kommentar" %}</p>
-<p>{% trans "Zwei frei beschreibbare Felder, in denen der Anwender einem Schnittschema kommentierende Texte zuweisen kann." %}</p>
-<p> </p>
-<p> </p>
+ <p class="dialog">
+  <img alt="保存.gif" border="0" height="23" src="../save.gif" width="24"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    保存切割方案对话框 - 参数
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用此按钮
+   </font>
+  </font>
+  <img alt="保存.gif" border="0" height="23" src="../save.gif" width="24"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    可将当前对话框设置保存为新的切割方案。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    您可以通过
+   </font>
+   <font style="vertical-align: inherit;">
+    使用 按钮调用
+   </font>
+   <span class="hcp1">
+    <a href="Schnittschema_laden_Dialog_-_Parameter.htm">
+     <font style="vertical-align: inherit;">
+      “加载切割方案”
+     </font>
+    </a>
+   </span>
+  </font>
+  <img alt="加载.gif" border="0" height="23" src="../load.gif" width="24"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框来更改现有切割方案。
+   </font>
+   <font style="vertical-align: inherit;">
+    然后搜索切割方案，调整后保存。
+   </font>
+  </font>
+  <span class="hcp1">
+   <a href="Schnittschema_laden_Dialog_-_Parameter.htm">
+    <font style="vertical-align: inherit;">
+    </font>
+   </a>
+  </span>
+  <font style="vertical-align: inherit;">
+  </font>
+  <br/>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     另请参阅：
+    </font>
+   </font>
+  </span>
+  <a href="Beispiel_Erodierbearbeitungen_durch_Schnittschemen_automatisieren.htm" style="font-weight: normal;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     使用切割方案自动化 EDM 加工
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+ </p>
+ <p>
+  <img alt="" border="0" class="hcp2" src="../Schnittschema_speichern_Parameter_1.gif"/>
+ </p>
+ <p>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    KNO 文件名
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    系统在此字段中指定切割方案的名称。
+   </font>
+   <font style="vertical-align: inherit;">
+    默认值由当前选择的
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     材料
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     材料高度
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     线
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     线直径
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     切割次数
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    组成。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    请注意，您可以更改默认名称。
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     可以在“模块设置”
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框中设置系统默认值
+   </font>
+   <font style="vertical-align: inherit;">
+    （菜单顺序：
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     文件 &gt; 设置 &gt; 模块设置 &gt; 对话框设置
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    切割方案颜色
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在某些应用中，3D 模型的某些区域是有
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     颜色的
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    例如，
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     红色孔
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    可能表示适合
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     H7
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    颜色字段
+   </font>
+   <font style="vertical-align: inherit;">
+    显示已分配给切割方案的颜色
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     。
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     所需的颜色代码可以使用“拾取面”
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮从 3D 模型中导出，也可以使用
+   </font>
+   <font style="vertical-align: inherit;">
+    MS Windows 颜色选择对话框中的
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “选择颜色”
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮确定。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <img alt="" border="0" class="hcp2" src="../Schnittschema_speichern_Parameter_2.gif"/>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    线材、线径
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    确定所使用的电线和电线直径。
+   </font>
+  </font>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    工件材质、高度
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    确定所使用的材料及其高度。
+   </font>
+  </font>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    直径
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    XXX 特殊情况 - 描述正在进行中。
+   </font>
+  </font>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    切割次数
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    显示切割方案中保存的切割数量。
+   </font>
+  </font>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    描述、评论
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    两个可自由写入的字段，用户可以在其中将注释文本分配给剪切方案。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}
