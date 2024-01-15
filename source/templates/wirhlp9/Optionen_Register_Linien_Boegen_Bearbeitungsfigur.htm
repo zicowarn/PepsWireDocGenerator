@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,28 +34,67 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Optionen Register (Bearbeitungsfigur erzeugen)" %}</p><p>{% trans "Das Register [Optionen] wird normalerweise nur einmal verwendet, um die Vorlieben eines Anwenders für die Definition von Bearbeitungsfiguren einzustellen." %}</p><p class="hcp1"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp1"> </p>
-<p><img src="../CREPRFG1_shg.gif" usemap="#AreaMap0" alt="CREPRFG1_shg.gif" width="376" height="503" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="15, 68, 351, 116" href="javascript:BSSCPopup('Vorgabe_fuer_Figurnamen_Linien_Boegen_Bearbeitungsfigur.htm',400,500);" id="area1" alt=""/>
-<area shape="rect" coords="16, 114, 294, 167" href="javascript:BSSCPopup('Toleranz_fuer_Linien_Bogenverbindung_Linien_Boegen_Bearbeitungsfigur.htm',400,400);" id="area2" alt=""/>
-<area shape="rect" coords="18, 175, 297, 201" href="javascript:BSSCPopup('Linien_Boegen_loeschen_Linien_Boegen_Bearbeitungsfigur.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="18, 195, 292, 224" href="javascript:BSSCPopup('Zeige_Fehlerfigur_bei_offenen_Figuren.htm',400,600);" id="area4" alt=""/>
-<area shape="rect" coords="14, 221, 349, 298" href="javascript:BSSCPopup('Verwende_momentane_Farbe_v_Linien_Boegen_eigene_Farbe.htm',400,600);" id="area5" alt=""/>
-<area shape="rect" coords="18, 300, 348, 346" href="javascript:BSSCPopup('Tangenten_pruefen_Bearbeitungsfigur_erzeugen.htm',400,300);" id="area6" alt=""/>
-<area shape="rect" coords="6, 475, 108, 497" href="javascript:BSSCPopup('../Commdata/COMMON_Schliessen.htm',400,300);" alt="" id="area12"/>
-<area shape="rect" coords="129, 475, 244, 498" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area7" alt=""/>
-<area shape="rect" coords="248, 473, 360, 495" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area8" alt=""/>
-<area shape="rect" coords="17, 40, 93, 59" href="Linien_Boegen_Bearbeitungsfigur.htm" alt=""/>
-<area shape="rect" coords="153, 39, 192, 60" href="Report_anzeigen_Lin_Bof_Bea_figur.htm" alt=""/>
-<area shape="rect" coords="194, 42, 234, 61" href="Eject_Register_Lin_Bof_Bea_figur.htm" alt=""/>
-<area shape="rect" coords="19, 349, 348, 398" href="javascript:BSSCPopup('Linien_Boegen_Reduktion.htm',400,400);" id="area9" alt=""/>
-<area shape="rect" coords="19, 395, 292, 412" href="javascript:BSSCPopup('Schwerpunkt_anzeigen_Bearbeitungsfigur_erzeugen.htm',400,600);" id="area10" alt=""/>
-<area shape="rect" coords="18, 415, 354, 457" href="javascript:BSSCPopup('Geometrie_linearisieren_Bearbeitungsfigur_erzeugen.htm',400,300);" id="area11" alt=""/>
-</map> </p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项选项卡（创建加工图）
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “选项”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项卡
+   </font>
+   <font style="vertical-align: inherit;">
+    通常仅使用一次来设置用户定义编辑图形的首选项。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="CREPRFG1_shg.gif" border="0" height="503" src="../CREPRFG1_shg.gif" usemap="#AreaMap0" width="376"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="15, 68, 351, 116" href="javascript:BSSCPopup('Vorgabe_fuer_Figurnamen_Linien_Boegen_Bearbeitungsfigur.htm',400,500);" id="area1" shape="rect"/>
+   <area alt="" coords="16, 114, 294, 167" href="javascript:BSSCPopup('Toleranz_fuer_Linien_Bogenverbindung_Linien_Boegen_Bearbeitungsfigur.htm',400,400);" id="area2" shape="rect"/>
+   <area alt="" coords="18, 175, 297, 201" href="javascript:BSSCPopup('Linien_Boegen_loeschen_Linien_Boegen_Bearbeitungsfigur.htm',400,300);" id="area3" shape="rect"/>
+   <area alt="" coords="18, 195, 292, 224" href="javascript:BSSCPopup('Zeige_Fehlerfigur_bei_offenen_Figuren.htm',400,600);" id="area4" shape="rect"/>
+   <area alt="" coords="14, 221, 349, 298" href="javascript:BSSCPopup('Verwende_momentane_Farbe_v_Linien_Boegen_eigene_Farbe.htm',400,600);" id="area5" shape="rect"/>
+   <area alt="" coords="18, 300, 348, 346" href="javascript:BSSCPopup('Tangenten_pruefen_Bearbeitungsfigur_erzeugen.htm',400,300);" id="area6" shape="rect"/>
+   <area alt="" coords="6, 475, 108, 497" href="javascript:BSSCPopup('../Commdata/COMMON_Schliessen.htm',400,300);" id="area12" shape="rect"/>
+   <area alt="" coords="129, 475, 244, 498" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area7" shape="rect"/>
+   <area alt="" coords="248, 473, 360, 495" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area8" shape="rect"/>
+   <area alt="" coords="17, 40, 93, 59" href="Linien_Boegen_Bearbeitungsfigur.htm" shape="rect"/>
+   <area alt="" coords="153, 39, 192, 60" href="Report_anzeigen_Lin_Bof_Bea_figur.htm" shape="rect"/>
+   <area alt="" coords="194, 42, 234, 61" href="Eject_Register_Lin_Bof_Bea_figur.htm" shape="rect"/>
+   <area alt="" coords="19, 349, 348, 398" href="javascript:BSSCPopup('Linien_Boegen_Reduktion.htm',400,400);" id="area9" shape="rect"/>
+   <area alt="" coords="19, 395, 292, 412" href="javascript:BSSCPopup('Schwerpunkt_anzeigen_Bearbeitungsfigur_erzeugen.htm',400,600);" id="area10" shape="rect"/>
+   <area alt="" coords="18, 415, 354, 457" href="javascript:BSSCPopup('Geometrie_linearisieren_Bearbeitungsfigur_erzeugen.htm',400,300);" id="area11" shape="rect"/>
+  </map>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('area1');
 	FilePopupInit('area2');
@@ -70,7 +108,9 @@
 	FilePopupInit('area9');
 	FilePopupInit('area10');
 	FilePopupInit('area11');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

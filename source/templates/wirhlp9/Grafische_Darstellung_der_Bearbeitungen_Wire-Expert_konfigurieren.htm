@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -37,18 +36,137 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Grafische Darstellung der Bearbeitungen" %}</p><p class="hcp1"> </p>
-<p class="hcp1">{% trans "Zeige alle Figuren" %}</p>
-<p>{% trans "Ist diese Option aktiv und existiert ein erkanntes Bearbeitungsobjekt mehrfach, z.B. mehrere Bohrungen mit identischem Durchmesser, dann wird für ALLE Bohrungen die [Grafik der NC-Bearbeitung] erzeugt (siehe oberes Bild unterhalb)." %}</p>
-<p>{% trans "Ist die Option nicht aktiv, wird nur für die erste Bohrung die [Grafik der NC-Bearbeitung] erzeugt (siehe unteres Bild)." %}</p>
-<p class="hcp3"> </p>
-<p><img src="../Config_wire_expert_3.gif" alt="Config_wire_expert_3.gif" width="459" height="181" border="0"/></p>
-<p class="hcp3"> </p>
-<p>{% trans "[Zeige Grafik der NC-Bearbeitung] " %}</p>
-<p>{% trans "Ist diese Option aktiv, dann wird nach Übergabe der erkannten Bearbeitungsobjekte an PEPS [automatisch] die [Grafik der NC-Bearbeitung] erzeugt." %}</p>
-<p>{% trans "Ist die Option nicht aktiv, wird keine [Grafik der NC-Bearbeitung] erzeugt." %}</p>
-<p class="hcp3"> </p>
-<p><img src="../Config_Wire_Expert_3a.gif" alt="Config_Wire_Expert_3a.gif" width="277" height="90" border="0"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    编辑的图形表示
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p class="hcp1">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    显示所有数字
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果此选项处于活动状态并且已识别的加工对象存在多次，例如多个具有相同直径的孔，则将为所有孔生成
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     NC 加工图形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    （参见下图）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果该选项未激活，则仅生成第一个孔的
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     NC 加工图形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    （见下图）。
+   </font>
+  </font>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p>
+  <img alt="Config_wire_expert_3.gif" border="0" height="181" src="../Config_wire_expert_3.gif" width="459"/>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     显示 NC 加工图形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    –
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果此选项处于活动状态，则
+   </font>
+   <font style="vertical-align: inherit;">
+    在识别的加工对象传输到 PEPS 后，会
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     自动生成
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     NC 加工的图形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果该选项未激活，则不会生成
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     NC 加工图形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p>
+  <img alt="Config_Wire_Expert_3a.gif" border="0" height="90" src="../Config_Wire_Expert_3a.gif" width="277"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

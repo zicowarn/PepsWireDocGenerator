@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,29 +34,129 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Eine Bearbeitungsfigur auf eine Punktegruppe (G1 ...) verteilen" %}</p><ul>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Zeichnen Sie die Bearbeitungsfigur" %}</p>
-</li>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Bestimmen Sie die Positionen auf welcher die Bearbeitungsfigur kopiert werden soll, mit Hilfe des Registers [Gruppe] der Dialogbox [NURBS-Kurven und Surfaces]." %}</p>
-</li>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Der Befehl erzeugt eine Punktegruppe (G1 ..)." %}</p>
-</li>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Rufen Sie im Menü [Vorbereitung \ Diverses] den Befehl [Kreise/Bögen ==&amp;gt; Mehrfachfigur] auf." %}</p>
-</li>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Klicken Sie zuerst die Punktegruppe (G1 ..) an und anschließend die zu kopierende Bearbeitungsfigur." %}</p>
-</li>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Das System nimmt die gewählte Figur und kopiert diese auf die vorhandenen Punktegruppe (G1 ..)." %}</p>
-</li>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Beachten Sie, dass die Start(loch)position der Figur deckungsgleich auf den Gruppenpunkten liegt." %}</p>
-</li>
-</ul>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    将加工图形分配给一组点（G1...）。
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      绘制编辑图
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       使用“NURBS 曲线和曲面”
+      </font>
+     </font>
+     <font style="vertical-align: inherit;">
+      对话框的
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “组”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选项卡确定应将加工图形复制到的位置
+     </font>
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      该命令创建一组点 (G1 ..)。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       在“准备\杂项”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      菜单中，调用
+     </font>
+     <font style="vertical-align: inherit;">
+      “
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       圆/弧==&gt;多个图形”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      命令。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      首先单击点组（G1 ..），然后单击要复制的加工图形。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      系统获取选定的图形并将其复制到现有点组 (G1 ..)。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      请注意，图形的起始（孔）位置与组点一致。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+
 
 {% endblock %}
 {% endlinebreakless %}

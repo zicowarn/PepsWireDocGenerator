@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,14 +34,80 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "FeatureManager (Einstellungen)" %}</p><p class="dialog">{% trans "Kleine Ikonen / Mittlere Ikonen" %}</p>
-<p>{% trans "Bestimmt die Größe der im #FeatureManager# angezeigten Ikonen." %}</p>
-<p>{% trans "Das folgende Bild zeigt links die rechts kleine Ikonen und mittlere Ikonengröße." %}</p>
-<p class="hcp1"> </p>
-<p><img src="../Icon_Size.gif" alt="Icon_Size.gif" width="642" height="266" border="0"/></p>
-<p class="hcp1"> </p>
-<p class="Tip_Note_Heading">{% trans "Kurzhilfen anzeigen" %}</p>
-<p>{% trans "Legt fest, ob eine [Kurzhilfe] angezeigt werden soll, wenn man den Mauscursor über einen Dialogeintrag positioniert." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    功能管理器（设置）
+   </font>
+  </font>
+ </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    小图标/中图标
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <a href="../WIRE_Expert_FeatureManager/WIRE_Expert_FeatureManager.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     确定在FeatureManager 设计树
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    中显示的图标的大小
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图左侧显示小图标，右侧显示中等大小的图标。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="Icon_Size.gif" border="0" height="266" src="../Icon_Size.gif" width="642"/>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    显示快速帮助
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    指定
+   </font>
+   <font style="vertical-align: inherit;">
+    当您将鼠标光标置于对话框条目上时是否应显示
+   </font>
+  </font>
+  <font style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     简短帮助。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

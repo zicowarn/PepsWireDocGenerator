@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -38,35 +37,206 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Linien/Bögen =&amp;gt; Bearbeitungsfigur" %}</p><p>{% trans "Der Befehl wird verwendet, um einzelne Linien-/Bogenelemente in eine Bearbeitungsfigur umzuwandeln." %}</p><p>{% trans "Der Befehl legt zusätzlich eine [Startposition] [VOR] der Figur, den [Bearbeitungsstartpunkt AUF der Figur] sowie [die Richtung der Figur] fest." %}</p>
-<p>{% trans "Bearbeitungsparameter und Technologien werden zum Zeitpunkt der Figurdefinition noch nicht bestimmt." %}</p>
-<p>{% trans "Diese werden erst bei der Bearbeitungsprogrammierung mit Hilfe der Befehle #Standard Konturbearbeitung#, #Regelflächenbearbeitung# und #[Bundbearbeitung]# festgelegt." %}</p>
-<p class="hcp2"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp2"> </p>
-<p><img src="../CREPRFG3_shg.gif" usemap="#AreaMap0" alt="CREPRFG3_shg.gif" width="376" height="503" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="95, 41, 151, 60" href="Optionen_Register_Linien_Boegen_Bearbeitungsfigur.htm" alt=""/>
-<area shape="rect" coords="20, 73, 352, 108" href="javascript:BSSCPopup('Figurname_Linien_Boegen_Bearbeitungsfigur.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="20, 106, 347, 135" href="javascript:BSSCPopup('Einfuegeposition_Linien_Boegen_Bearbeitungsfigur.htm',400,500);" id="area2" alt=""/>
-<area shape="rect" coords="14, 180, 347, 216" href="javascript:BSSCPopup('Startloch__Linien_Boegen_Bearbeitungsfigur.htm',400,500);" id="area3" alt=""/>
-<area shape="rect" coords="18, 217, 352, 291" href="javascript:BSSCPopup('Auf_Figur_Startpunkte.htm',400,500);" id="area4" alt=""/>
-<area shape="rect" coords="15, 303, 353, 346" href="Ausfahren_auf_Linien_Boegen_Bearbeitungsfigur.htm" alt=""/>
-<area shape="rect" coords="16, 404, 356, 449" href="Figur_Auswahlbutton_Linien_Boegen_Bearbeitungsfigur.htm" id="area5" alt=""/>
-<area shape="rect" coords="19, 140, 339, 167" href="javascript:BSSCPopup('Startloch_Einfuegeposition_der_Figur.htm',400,500);" id="area6" alt=""/>
-<area shape="rect" coords="15, 347, 347, 397" href="javascript:BSSCPopup('Auf_Figur_Endpunkte.htm',400,600);" id="area7" alt=""/>
-<area shape="rect" coords="10, 474, 114, 495" href="javascript:BSSCPopup('../Commdata/COMMON_Schliessen.htm',400,300);" id="area8" alt=""/>
-<area shape="rect" coords="129, 475, 237, 498" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area9" alt=""/>
-<area shape="rect" coords="250, 472, 356, 497" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area10" alt=""/>
-<area shape="rect" coords="149, 42, 191, 62" href="Report_Register_Lin_Bof_Bea_figur.htm" alt=""/>
-<area shape="rect" coords="192, 42, 231, 60" href="Eject_Register_Lin_Bof_Bea_figur.htm" alt=""/>
-</map> </p>
-<p> </p>
-<p class="dialog">{% trans "So wird es gemacht:" %}</p>
-<p class="hcp3">{% trans "@ #Video: Bearbeitungsfigur erzeugen geschlossen#" %}</p>
-<p class="hcp3">{% trans "@ #Video: Bearbeitungsfigur - Startposition ändern#" %}</p>
-<p>{% trans "#[Beispiel für eine Bearbeitungsfigur mit Endpunkt]#" %}</p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; 
+	 border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <img alt="creprofig.gif" border="0" height="32" src="../creprofig.gif" width="35"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    直线/圆弧=&gt;加工图形
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该命令用于将单个线/弧元素转换为编辑图形。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该命令还指定
+   </font>
+   <font style="vertical-align: inherit;">
+    图形
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     之前的
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     起始位置、
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     图形上的处理起始点
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    以及
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     图形的方向
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在图形定义时，处理参数和技术尚未确定。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <a href="../wirhlp10/Standard_Konturbearbeitung____.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     这些仅在加工编程期间使用标准轮廓加工
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <a href="../wirhlp10/Regelflaechenbearbeitung____.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     直纹面加工
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <a href="../wirhlp10/Bundbearbeitung_.htm">
+   <font style="font-weight: normal;">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      轴环加工
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令来定义
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="CREPRFG3_shg.gif" border="0" height="503" src="../CREPRFG3_shg.gif" usemap="#AreaMap0" width="376"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="95, 41, 151, 60" href="Optionen_Register_Linien_Boegen_Bearbeitungsfigur.htm" shape="rect"/>
+   <area alt="" coords="20, 73, 352, 108" href="javascript:BSSCPopup('Figurname_Linien_Boegen_Bearbeitungsfigur.htm',400,300);" id="area1" shape="rect"/>
+   <area alt="" coords="20, 106, 347, 135" href="javascript:BSSCPopup('Einfuegeposition_Linien_Boegen_Bearbeitungsfigur.htm',400,500);" id="area2" shape="rect"/>
+   <area alt="" coords="14, 180, 347, 216" href="javascript:BSSCPopup('Startloch__Linien_Boegen_Bearbeitungsfigur.htm',400,500);" id="area3" shape="rect"/>
+   <area alt="" coords="18, 217, 352, 291" href="javascript:BSSCPopup('Auf_Figur_Startpunkte.htm',400,500);" id="area4" shape="rect"/>
+   <area alt="" coords="15, 303, 353, 346" href="Ausfahren_auf_Linien_Boegen_Bearbeitungsfigur.htm" shape="rect"/>
+   <area alt="" coords="16, 404, 356, 449" href="Figur_Auswahlbutton_Linien_Boegen_Bearbeitungsfigur.htm" id="area5" shape="rect"/>
+   <area alt="" coords="19, 140, 339, 167" href="javascript:BSSCPopup('Startloch_Einfuegeposition_der_Figur.htm',400,500);" id="area6" shape="rect"/>
+   <area alt="" coords="15, 347, 347, 397" href="javascript:BSSCPopup('Auf_Figur_Endpunkte.htm',400,600);" id="area7" shape="rect"/>
+   <area alt="" coords="10, 474, 114, 495" href="javascript:BSSCPopup('../Commdata/COMMON_Schliessen.htm',400,300);" id="area8" shape="rect"/>
+   <area alt="" coords="129, 475, 237, 498" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area9" shape="rect"/>
+   <area alt="" coords="250, 472, 356, 497" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area10" shape="rect"/>
+   <area alt="" coords="149, 42, 191, 62" href="Report_Register_Lin_Bof_Bea_figur.htm" shape="rect"/>
+   <area alt="" coords="192, 42, 231, 60" href="Eject_Register_Lin_Bof_Bea_figur.htm" shape="rect"/>
+  </map>
+ </p>
+ <p>
+ </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    它是这样完成的：
+   </font>
+  </font>
+ </p>
+ <p class="hcp3">
+  <img alt="" border="0" class="hcp4" src="../MOVIE.gif"/>
+  <a href="../Videos/Video__Bearbeitungsfigur_erzeugen_geschlossen_V8.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     视频：创建编辑图形关闭
+    </font>
+   </font>
+  </a>
+ </p>
+ <p class="hcp3">
+  <img alt="" border="0" class="hcp4" src="../MOVIE.gif"/>
+  <a href="../Videos/Video__Bearbeitungsfigur_Startposition_aendern_V8.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     视频：编辑图形 - 更改起始位置
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+  <a href="Beispiel_fuer_eine_Bearbeitungsfigur_mit_Endpunkt.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      带终点的加工图形示例
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('area1');
 	FilePopupInit('area2');
@@ -77,7 +247,9 @@
 	FilePopupInit('area8');
 	FilePopupInit('area9');
 	FilePopupInit('area10');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

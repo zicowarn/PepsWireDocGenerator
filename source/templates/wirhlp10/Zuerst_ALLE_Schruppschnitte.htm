@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,8 +28,28 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Zuerst ALLE Schruppschnitte" %}</p><p>{% trans "Diese Option wird aktiviert, wenn man z.B. mehrere Matrizen mit mehreren Schnitten bearbeiten möchte." %}</p>
-<p>{% trans "Durch die Wahl dieser Option ist es möglich, den Abfall erst nach Ausführung der Schruppschnitte zu entfernen und die zeitaufwendigen Nachschnitte anschließend auszuführen, vielleicht sogar über Nacht." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    首先，所有粗剪
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    例如，如果您想要通过多次切割来编辑多个矩阵，则可以激活此选项。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通过选择此选项，可以仅在粗加工完成后清除废料，然后进行耗时的重新切割，甚至可能需要过夜。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

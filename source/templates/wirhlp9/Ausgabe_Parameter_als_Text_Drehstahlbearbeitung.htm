@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,8 +28,28 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Ausgabe Parameter als Text" %}</p><p>{% trans "Alle Parametereinstellungen werden als Text im Grafikfenster angezeigt." %}</p>
-<p>{% trans "Auf diese Weise, weiß der Anwender beim nächsten Aufruf des Drehstahls, mit welchen Parametern dieser erzeugt wurde." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    以文本形式输出参数
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    所有参数设置都在图形窗口中显示为文本。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这样，下次用户调用车削刀具时，他就知道它是用哪些参数创建的。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

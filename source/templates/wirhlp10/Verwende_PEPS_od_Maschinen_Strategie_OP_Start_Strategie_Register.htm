@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,14 +33,156 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Verwende PEPS- od. Maschinen-Strategie" %}</p><p>{% trans "[Verwende PEPS Strategie:]" %}</p>
-<p>{% trans "Aktiviert man die Option [Verwende PEPS Strategie] werden in der Listbox #Strategieart# alle verfügbaren PEPS Bearbeitungsstrategien aufgelistet. [Siehe auch:] #[Strategieart]#" %}</p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;"> </p>
-<p>{% trans "[Verwende Strategie der Maschine:]" %}</p>
-<p>{% trans "Einige Drahterodiermaschinen (z.B. AGIEVISION) bieten eigene Bearbeitungsstrategien." %}</p>
-<p>{% trans "Aktiviert man die Option [Verwende Strategie der Maschine] werden in der Listbox [Strategiename] die verfügbaren Maschinenstrategien aufgelistet." %}</p>
-<p> </p>
-<p>{% trans "[Hinweis:][ ]Die Option [Verwende Strategie der Maschine] ist nur für einige Erodiermaschinen verfügbar." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用 PEPS 或机器策略
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     使用 PEPS 策略：
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     如果激活使用 PEPS 策略
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项，则所有可用的 PEPS 处理策略都会在
+   </font>
+  </font>
+  <a href="Strategieart_OP_starten_Strategie_Register.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     策略类型
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    列表框中列出
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <br/>
+  <br/>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     另请参阅：
+    </font>
+   </font>
+  </font>
+  <a href="Strategieart_OP_starten_Strategie_Register.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      策略类型
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     使用机器策略：
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一些线切割机床（例如 AGIEVISION）提供自己的加工策略。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果激活“
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     使用计算机策略”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项，则可用的计算机策略将在
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “策略名称”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    列表框中列出。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font class="hcp1" color="#0000FF">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     注意：
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     “使用机器策略”
+    </font>
+   </font>
+  </font>
+  <font color="#0000FF">
+   <br/>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项
+   </font>
+   <font style="vertical-align: inherit;">
+    仅适用于某些 EDM 机器。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

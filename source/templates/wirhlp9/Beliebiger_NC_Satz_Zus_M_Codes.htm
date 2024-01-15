@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,9 +28,47 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Beliebiger NC-Satz" %}</p><p>{% trans "Hier kann ein beliebiger NC-Code eingetragen werden." %}</p>
-<p>{% trans "Der Code wird exakt an der Stelle ausgegeben, an der das NC-Codesymbol positioniert wurde." %}</p>
-<p>{% trans "Es findet [keine Syntaxüberprüfung] des eingegebenen NC-Codes statt." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    任何 NC 块
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    任何 NC 代码都可以在此处输入。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    代码准确地输出在 NC 代码符号所在的位置。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    不对
+   </font>
+   <font style="vertical-align: inherit;">
+    输入的 NC 代码进行
+   </font>
+  </font>
+  <font style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     语法检查。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,10 +33,93 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Verzeichnis für NC-Daten" %}</p><p class="pitalic">{% trans "[Standard NC-Verzeichnis] - NC-Daten werden im Standard NC-Verzeichnis (C:\Benutzer\Öffentlich\Öffentliche Dokumente\PEPSV8.x\NC\[Maschinen_Name]) abgelegt." %}</p>
-<p>{% trans "[Momentanes Arbeitsverzeichnis] - NC-Daten werden in dem Verzeichnis abgelegt, in dem das momentan bearbeitete Programmdatei (*.vdm) gespeichert wird." %}</p>
-<p>{% trans "[Anwender Verzeichnis] - Klicken Sie auf die Schaltfläche @, um selbst ein Verzeichnis festzulegen, in dem die NC-Daten gespeichert werden sollen." %}</p>
-<p>{% trans "Die Schaltfläche [Eingaben speichern] speichert das eingestellte Verzeichnis für folgende Programme." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    NC 数据目录
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     标准 NC 目录
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    - NC 数据存储在标准 NC 目录 (C:/Users/Public/Public Documents/PEPSV8.x/NC\
+   </font>
+  </font>
+  <font style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     Machine_Name
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ) 中。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     当前工作目录
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    - NC 数据存储在当前编辑的程序文件 (*.vdm) 的保存目录中。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     用户目录
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    - 单击按钮
+   </font>
+  </font>
+  <img alt="Fig_load.gif" border="0" height="24" src="../Fig_load.gif" width="23"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    指定应保存 NC 数据的目录。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    保存
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     条目
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮保存以下程序的设置目录。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

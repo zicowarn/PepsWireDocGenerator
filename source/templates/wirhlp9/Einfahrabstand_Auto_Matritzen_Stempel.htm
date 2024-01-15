@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,14 +33,67 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Einfahrabstand (Auto Matrizen Stempel)" %}</p><p>{% trans "Dieses Textfeld wird verwendet, um den Abstand der Startposition von Bearbeitungsfigur festzulegen." %}</p><p>{% trans "Die Lage der Startposition wird über den [#Umfangsparameter#] eingestellt." %}</p>
-<p>{% trans "(Diese Option ist bei Verwendung eines [Suchschemas] nicht aktiv)." %}</p>
-<script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    进入距离（自动冲模）
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该文本框用于设置编辑图形起始位置的间距。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    起始位置的位置通过
+   </font>
+  </font>
+  <font class="hcp1">
+   <a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('Umfangs_Parameter_Auto_Matritzen_Stempel.htm',400,300);return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      圆周参数
+     </font>
+    </font>
+   </a>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    设置。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     （使用搜索方案
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    时此选项不活动
+   </font>
+   <font style="vertical-align: inherit;">
+    ）。
+   </font>
+  </font>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
         if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
         FilePopupInit('a1');
-//]]&gt;
-</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

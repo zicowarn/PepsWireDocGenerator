@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,18 +35,93 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Optimales Startloch ermitteln" %}</p><p>{% trans "Dieser Befehl ermittelt die günstigste Start(loch)position, sowie den maximal möglichen Startlochradius für eine vorhandene Bearbeitungsfigur." %}</p>
-<p>{% trans "Der Befehl verändert die Start(loch)position und die Bearbeitungsstartposition einer Bearbeitungsfigur." %}</p>
-<p>{% trans "Der Befehl findet besonders dann Anwendung, wenn bei einem Taschenerosionsvorgang die größtmögliche Startlochbohrung und deren optimale Position ermittelt werden soll." %}</p>
-<p class="hcp1"> </p>
-<p><img src="../STARTLO.gif" alt="STARTLO.gif" width="495" height="358" border="0"/></p>
-<p class="hcp1"> </p>
-<p class="Tip_Note_Heading">{% trans "Vorgehensweise:" %}</p>
-<ul>
-	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie die Figur an deren Start(loch)position verändert werden soll (! muss Bearbeitungsfigur sein !)." %}</p></li>
-	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Das System berechnet automatisch eine neue Start(loch)position und verschiebt ggf. die Bearbeitungsstartposition auf der Figur." %}</p></li>
-	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Nach Ausführung des Befehls wird die neue Start(loch)position und der maximal mögliche Radius für das Startloch im [Ausgabefenster] anzeigt." %}</p></li>
-</ul>
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; 
+	 border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <img alt="最好的.gif" border="0" height="29" src="../BESTSTHL.gif" width="29"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    确定最佳起始孔
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该命令确定现有加工图形的最有利的起始（孔）位置以及最大可能的起始孔半径。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该指令改变加工图形的开始（孔）位置和加工开始位置。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    当要在型腔侵蚀过程中确定最大可能的起始孔及其最佳位置时，特别需要使用该命令。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="STARTLO.gif" border="0" height="358" src="../STARTLO.gif" width="495"/>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    方法：
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      单击要更改起始（孔）位置的图形（！必须是编辑图形！）。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      系统自动计算新的起始（孔）位置，并在必要时移动图形上的加工起始位置。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      执行命令后，新的起始（孔）位置和起始孔的最大可能半径将显示在
+     </font>
+    </font>
+    <font style="font-weight: bold;">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       输出窗口
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      中 
+	 。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+
 
 {% endblock %}
 {% endlinebreakless %}

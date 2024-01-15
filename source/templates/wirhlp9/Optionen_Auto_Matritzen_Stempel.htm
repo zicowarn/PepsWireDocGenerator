@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,24 +34,51 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Optionen (Auto Matrizen Stempel)" %}</p><p>{% trans "In diesem Register können Sie einstellen, ob etwaige Geometrielücken bei der Figurerzeugung automatisch geschlossen werden soll (Toleranz für Linien-/Bogenverbindung) und ob eine Reduzierung (Reduktion) der Anzahl der Geometrieelemente stattfinden soll." %}</p><p class="hcp1"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp1"> </p>
-<p><img src="../QUI_D_P7_shg.gif" usemap="#AreaMap0" alt="QUI_D_P7_shg.gif" width="423" height="397" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="15, 42, 66, 61" href="Matrizen_Auto_Matritzen_Stempel.htm" alt=""/>
-<area shape="rect" coords="65, 42, 114, 62" href="Stempel_Auto_Matritzen_Stempel.htm" alt=""/>
-<area shape="rect" coords="114, 41, 153, 60" href="Filter_Auto_Matritzen_Stempel.htm" alt=""/>
-<area shape="rect" coords="15, 190, 401, 234" href="javascript:BSSCPopup('Reduktion_Optionen_Register_Auto_Matritze.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="121, 360, 213, 386" href="javascript:BSSCPopup('../Commdata/COMMON_Schliessen.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="8, 366, 115, 388" href="javascript:BSSCPopup('../Commdata/COMMON_Nicht_verwendete_Funktion.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="223, 364, 313, 388" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area4" alt=""/>
-<area shape="rect" coords="320,360,410,383" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area5" alt=""/>
-<area shape="rect" coords="13, 237, 399, 312" href="javascript:BSSCPopup('Report_Optionen_Optionen_Register_Auto_Matritze.htm',400,300);" id="area6" alt=""/>
-<area shape="rect" coords="18, 151, 407, 189" href="javascript:BSSCPopup('Toleranz_fuer_Linien_Bogenverbindung_Linien_Boegen_Bearbeitungsfigur.htm',400,300);" id="area7" alt=""/>
-<area shape="rect" coords="16, 65, 406, 138" href="javascript:BSSCPopup('Vorgabe_fuer_Figurnamen_Optionen_Register_Auto_Matritze.htm',400,300);" id="area8" alt=""/>
-</map> </p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项（自动模具印记）
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在此选项卡中，您可以设置在创建图形时是否应自动关闭任何几何间隙（直线/圆弧连接的公差）以及是否应减少几何元素的数量。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="QUI_D_P7_shg.gif" border="0" height="397" src="../QUI_D_P7_shg.gif" usemap="#AreaMap0" width="423"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="15, 42, 66, 61" href="Matrizen_Auto_Matritzen_Stempel.htm" shape="rect"/>
+   <area alt="" coords="65, 42, 114, 62" href="Stempel_Auto_Matritzen_Stempel.htm" shape="rect"/>
+   <area alt="" coords="114, 41, 153, 60" href="Filter_Auto_Matritzen_Stempel.htm" shape="rect"/>
+   <area alt="" coords="15, 190, 401, 234" href="javascript:BSSCPopup('Reduktion_Optionen_Register_Auto_Matritze.htm',400,300);" id="area1" shape="rect"/>
+   <area alt="" coords="121, 360, 213, 386" href="javascript:BSSCPopup('../Commdata/COMMON_Schliessen.htm',400,300);" id="area2" shape="rect"/>
+   <area alt="" coords="8, 366, 115, 388" href="javascript:BSSCPopup('../Commdata/COMMON_Nicht_verwendete_Funktion.htm',400,300);" id="area3" shape="rect"/>
+   <area alt="" coords="223, 364, 313, 388" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area4" shape="rect"/>
+   <area alt="" coords="320,360,410,383" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area5" shape="rect"/>
+   <area alt="" coords="13, 237, 399, 312" href="javascript:BSSCPopup('Report_Optionen_Optionen_Register_Auto_Matritze.htm',400,300);" id="area6" shape="rect"/>
+   <area alt="" coords="18, 151, 407, 189" href="javascript:BSSCPopup('Toleranz_fuer_Linien_Bogenverbindung_Linien_Boegen_Bearbeitungsfigur.htm',400,300);" id="area7" shape="rect"/>
+   <area alt="" coords="16, 65, 406, 138" href="javascript:BSSCPopup('Vorgabe_fuer_Figurnamen_Optionen_Register_Auto_Matritze.htm',400,300);" id="area8" shape="rect"/>
+  </map>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('area1');
 	FilePopupInit('area2');
@@ -62,7 +88,9 @@
 	FilePopupInit('area6');
 	FilePopupInit('area7');
 	FilePopupInit('area8');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

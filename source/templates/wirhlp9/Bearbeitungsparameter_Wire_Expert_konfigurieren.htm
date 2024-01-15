@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,31 +33,142 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Bearbeitungsparameter" %}</p><p>{% trans "Mit dem Dialog [Bearbeitungsparameter] können Sie einstellen, auf welche Weise das Modul [WIRE-Expert] (optional) die automatisch erzeugten Bearbeitungsoperationen an [PEPS] übergeben soll." %}</p><p>{% trans "Nach Aufruf der Funktion folgt ein Dialog in dem Sie einstellen können, ob [Schnittschemen] zugewiesen werden sollen, was an die [PEPS] [Operationsliste] übergeben werden soll und wie die erzeugten Bearbeitungsoperationen grafisch dargestellt werden sollen." %}</p>
-<p>{% trans "Folgende Einstelloptionen sind verfügbar:" %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p style="text-align: center;"> </p>
-<p><img src="../Config_wire_expert_1_shg.gif" usemap="#AreaMap0" alt="Config_wire_expert_1_shg.gif" width="772" height="487" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="6, 30, 362, 259" href="Schnittschemen_Wire-Expert_konfigurieren.htm" alt=""/>
-<area shape="rect" coords="18, 260, 357, 338" href="Grafische_Darstellung_der_Bearbeitungen_Wire-Expert_konfigurieren.htm" alt=""/>
-<area shape="rect" coords="313, 453, 456, 481" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="386, 35, 757, 189" href="Weitere_Optionen_1_Wire-Expert_konfigurieren.htm" alt=""/>
-<area shape="rect" coords="158, 452, 302, 480" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" alt="" id="area4"/>
-<area shape="rect" coords="468, 455, 615, 477" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="28, 427, 240, 443" href="javascript:BSSCPopup('Zeige_diesen_Dialog_das_naechste_mal_nicht_mehr_Wire-Expert_konfigurieren.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="18, 341, 360, 396" href="javascript:BSSCPopup('Ermittle_kleinste_Elemente_bei_Figurerstellung_WIRE_Expert.htm',400,300);" id="area5" alt=""/>
-<area shape="rect" coords="387, 189, 758, 418" href="Weitere_Optionen_2_Wire-Expert_konfigurieren.htm" alt=""/>
-</map> </p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; 
+	 border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <img alt="Wire_Expert_Mach_Par.gif" border="0" height="28" src="../Wire_Expert_Mach_Par.gif" width="31"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    加工参数
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     您可以使用“加工参数”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框
+   </font>
+   <font style="vertical-align: inherit;">
+    来设置
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     WIRE-Expert
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    模块（可选）应如何将 
+ 自动生成的加工操作
+   </font>
+   <font style="vertical-align: inherit;">
+    传输到
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     PEPS 。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    调用该功能后，将出现一个对话框，您可以在其中设置是否
+   </font>
+   <font style="vertical-align: inherit;">
+    应分配
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     切削方案
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、应将哪些内容传输到
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     PEPS
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     操作列表以及应如何以图形方式显示生成的加工操作。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    可以使用以下设置选项：
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p style="text-align: center;">
+ </p>
+ <p>
+  <img alt="Config_wire_expert_1_shg.gif" border="0" height="487" src="../Config_wire_expert_1_shg.gif" usemap="#AreaMap0" width="772"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="6, 30, 362, 259" href="Schnittschemen_Wire-Expert_konfigurieren.htm" shape="rect"/>
+   <area alt="" coords="18, 260, 357, 338" href="Grafische_Darstellung_der_Bearbeitungen_Wire-Expert_konfigurieren.htm" shape="rect"/>
+   <area alt="" coords="313, 453, 456, 481" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area1" shape="rect"/>
+   <area alt="" coords="386, 35, 757, 189" href="Weitere_Optionen_1_Wire-Expert_konfigurieren.htm" shape="rect"/>
+   <area alt="" coords="158, 452, 302, 480" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area4" shape="rect"/>
+   <area alt="" coords="468, 455, 615, 477" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area2" shape="rect"/>
+   <area alt="" coords="28, 427, 240, 443" href="javascript:BSSCPopup('Zeige_diesen_Dialog_das_naechste_mal_nicht_mehr_Wire-Expert_konfigurieren.htm',400,300);" id="area3" shape="rect"/>
+   <area alt="" coords="18, 341, 360, 396" href="javascript:BSSCPopup('Ermittle_kleinste_Elemente_bei_Figurerstellung_WIRE_Expert.htm',400,300);" id="area5" shape="rect"/>
+   <area alt="" coords="387, 189, 758, 418" href="Weitere_Optionen_2_Wire-Expert_konfigurieren.htm" shape="rect"/>
+  </map>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('area1');
 	FilePopupInit('area4');
 	FilePopupInit('area2');
 	FilePopupInit('area3');
 	FilePopupInit('area5');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

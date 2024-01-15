@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,53 +35,362 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Tip_Note_Heading">{% trans "Bohrungen gleichen Durchmessers suchen und automatisch Bearbeitungsfiguren erzeugen" %}</p><ul>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Zeichnen Sie die Bohrungen." %}</p>
-</li>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Rufen Sie im Menü im Menü [Vorbereitung \ Diverses] den Befehl [Kreise/Bögen ==&amp;gt; Mehrfachfigur] auf." %}</p>
-</li>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Die erste Abfrage: [Wähle Kreis, Bogen oder Gruppe um Gruppe zu erzeugen] ermittelt automatisch den Radius von Bohrungen." %}</p>
-</li>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Klicken Sie die Bohrung an, deren Radius Sie ermitteln wollen." %}</p>
-</li>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Wählen Sie nun die Option [Suchen] (siehe [rechte Maustaste] od. [horizontale Ikonenleiste])." %}</p>
-</li>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Das System fragt [Eingabe auszuwählender Radius &amp;lt;10&amp;gt;:] und zeigt den ermittelten Radius als Vorgabe in eckigen Klammern." %}</p>
-</li>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Übernehmen Sie die Systemvorgabe mit der Taste RETURN." %}</p>
-</li>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Es folgt die Standard Auswahlabfrage [Wähle Objekte ....]" %}</p>
-</li>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Wählen Sie mit der Maus die Bohrungen die zusammengefasst werden sollen, oder verwenden Sie ein Auswahlfenster." %}</p>
-</li>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf die Option [Ende] (siehe [rechte Maustaste] od. [horizontale Ikonenleiste])." %}</p>
-</li>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Wählen Sie erneut die Option [Ende] (siehe [rechte Maustaste] od. [horizontale Ikonenleiste])." %}</p>
-</li>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Klicken Sie nun auf die Option [Loch] (siehe [rechte Maustaste] od. [horizontale Ikonenleiste])." %}</p>
-</li>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Das System fragt [Eingabe Lochdurchmesser &amp;lt;20&amp;gt;:] und zeigt den Durchmesser der Bohrungen als Vorgabe in eckigen Klammern." %}</p>
-</li>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Übernehmen Sie die Systemvorgabe mit der Taste RETURN." %}</p>
-</li>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Das System erzeugt nun automatisch eine Gruppe von identischen Bearbeitungsfiguren." %}</p>
-</li>
-</ul>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    搜索同直径孔并自动生成加工图形
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      画出孔。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       在“准备\杂项”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      菜单中，调用
+     </font>
+     <font style="vertical-align: inherit;">
+      “
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       圆/弧==&gt;多个图形”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      命令。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      第一个查询：
+     </font>
+    </font>
+    <font class="hcp3">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       选择圆、圆弧或组来创建组，
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      自动确定孔的半径。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      单击要确定其半径的孔。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      现在选择
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “搜索”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选项（请参见
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       鼠标右键
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      或
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       水平图标栏
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      ）。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      系统要求
+     </font>
+    </font>
+    <font class="hcp3">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       选择半径&lt;10&gt;：
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      并在方括号中显示确定的默认半径。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      使用 RETURN 按钮接受系统默认值。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      接下来是标准选择查询
+     </font>
+    </font>
+    <font class="hcp3">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       选择对象....
+      </font>
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      使用鼠标选择要组合的孔，或使用选择窗口。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      单击
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “结束”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选项（请参见
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       鼠标右键
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      或
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       水平图标栏
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      ）。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      再次选择
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “结束”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选项（请参见
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       鼠标右键
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      或
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       水平图标栏
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      ）。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      现在单击
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “孔”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选项（请参见
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       鼠标右键
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      或
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       水平图标栏
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      ）。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      系统要求
+     </font>
+    </font>
+    <font class="hcp3">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       孔直径&lt;20&gt;：
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      并在方括号中显示默认孔的直径。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      使用 RETURN 按钮接受系统默认值。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      系统现在自动创建一组相同的加工图形。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+
 
 {% endblock %}
 {% endlinebreakless %}

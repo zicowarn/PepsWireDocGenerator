@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,7 +33,45 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Als Spline ausgeben" %}</p><p>{% trans "Legt fest, ob die zu erzeugenden Projektionsfiguren intern aus Linien/Bogenelementen ('Als Spline ausgeben' [aktiv]) oder komplett aus Linienelementen ('Als Spline ausgeben' [de]aktiviert) angenähert werden sollen." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    输出为样条线
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    指定要创建的投影图形
+   </font>
+   <font style="vertical-align: inherit;">
+    是应从直线/圆弧元素内部近似（“输出为样条曲线”
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     处于活动状态
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ），还是完全从直线元素进行近似（“输出为样条曲线”
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     处于停用状态）。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

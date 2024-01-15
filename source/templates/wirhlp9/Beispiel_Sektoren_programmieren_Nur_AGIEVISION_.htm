@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -37,43 +36,313 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Sektoren programmieren (Nur AGIEVISION)" %}</p><p>{% trans "Ausgangssituation: Es ist eine Bearbeitungsfigur vorhanden. Diese soll in einem durch 2 Punkte definierten Sektor mit einer zusätzliche Schnittluft versehen werden." %}</p>
-<p class="hcp1"> </p>
-<p><img src="../Sektoren_Exa_1.gif" alt="Sektoren_Exa_1.gif" width="241" height="150" border="0"/></p>
-<p class="hcp1"> </p>
-<ul>
-	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Rufen Sie im Menü [Vorbereitung] den Befehl [Sektoren] auf." %}</p></li>
-</ul>
-<p class="Prompts">{% trans "Wähle Figur :" %}</p>
-<ul>
-	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie die Bearbeitungsfigur an, die mit einem Sektor versehen werden soll." %}</p></li>
-</ul>
-<p class="Prompts">{% trans "Eingabe Punkt für Sektorstart:" %}</p>
-<ul>
-	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Geben Sie die Position des Sektorstarts ein oder verwenden Sie die [Fangfunktionen]." %}</p></li>
-</ul>
-<p class="Topic_Text_Bulleted" style="margin-left: 5.75pt;">{% trans "Ein Richtungspfeil zeigt an, in welcher Richtung der 2te Punkte, das Sektorende definiert werden muss." %}</p>
-<p class="Topic_Text_Bulleted" style="margin-left: 5.75pt;">{% trans "Sie können die Richtung ändern mit Hilfe der Option [Richtung tauschen] (siehe [rechte Maustaste] od. [horizontale Ikonenleiste])." %}</p>
-<p class="hcp1"> </p>
-<p><img src="../Sektoren_Exa_2.gif" alt="Sektoren_Exa_2.gif" width="214" height="139" border="0"/></p>
-<p class="hcp1"> </p>
-<p class="Prompts">{% trans "Eingabe Punkt für Sektorende:" %}</p>
-<ul>
-	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Geben Sie die Position des Sektorendes ein oder verwenden Sie die [Fangfunktionen]." %}</p></li>
-	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Es folgt der [Sektoren]-Dialog in dem man die gewünschten Sektorparameter eingibt." %}</p></li>
-</ul>
-<p class="hcp1"> </p>
-<p><img src="../Sektoren_Exa_3.gif" alt="Sektoren_Exa_3.gif" width="372" height="178" border="0"/></p>
-<p class="hcp1"> </p>
-<ul>
-	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Beenden Sie den Dialog mit der Schaltfläche [OK]." %}</p></li>
-	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Der Sektorbereich wird durch zwei hellblaue Symbole gekennzeichnet." %}</p></li>
-</ul>
-<p class="hcp1"> </p>
-<p><img src="../Sektoren_Exa_4.gif" alt="Sektoren_Exa_4.gif" width="169" height="110" border="0"/></p>
-<ul>
-	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Beenden Sie den Befehl mit der Option [Ende] (siehe [rechte Maustaste] od. [horizontale Ikonenleiste])." %}</p></li>
-</ul>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    编程扇区（仅限 AGIEVISION）
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    初始情况：有加工图。
+   </font>
+   <font style="vertical-align: inherit;">
+    应在由 2 个点定义的扇区中提供额外的切割空气。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="Sectors_Exa_1.gif" border="0" height="150" src="../Sektoren_Exa_1.gif" width="241"/>
+ </p>
+ <p class="hcp1">
+ </p>
+ <ul>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp3">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       从“准备”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      菜单中，选择
+     </font>
+    </font>
+    <font class="hcp3">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “扇区”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      命令
+     </font>
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p class="Prompts">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选择角色：
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      单击应指定扇区的编辑图形。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p class="Prompts">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    输入扇区起始点：
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      输入扇区起始位置或使用
+     </font>
+    </font>
+    <font class="hcp3">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       捕捉功能
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p class="Topic_Text_Bulleted" style="margin-left: 5.75pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    方向箭头显示必须定义第二个点（扇区末端）的方向。
+   </font>
+  </font>
+ </p>
+ <p class="Topic_Text_Bulleted" style="margin-left: 5.75pt;">
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     您可以使用“交换方向”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项更改方向
+   </font>
+   <font style="vertical-align: inherit;">
+    （请参阅
+   </font>
+  </font>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     鼠标右键
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     水平图标栏
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ）。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="Sectors_Exa_2.gif" border="0" height="139" src="../Sektoren_Exa_2.gif" width="214"/>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p class="Prompts">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    输入扇区终点点：
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      输入扇区结束位置或使用
+     </font>
+    </font>
+    <font class="hcp3">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       捕捉功能
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      随后出现
+     </font>
+    </font>
+    <span style="font-weight: bold;">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       扇区
+      </font>
+     </font>
+    </span>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      对话框，您可以在其中输入所需的扇区参数。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="Sectors_Exa_3.gif" border="0" height="178" src="../Sektoren_Exa_3.gif" width="372"/>
+ </p>
+ <p class="hcp1">
+ </p>
+ <ul>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp3">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       单击“确定”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      按钮关闭对话框
+     </font>
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      扇区区域由两个浅蓝色符号表示。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="Sectors_Exa_4.gif" border="0" height="110" src="../Sektoren_Exa_4.gif" width="169"/>
+ </p>
+ <ul>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp3">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       使用“结束”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选项结束命令
+     </font>
+     <font style="vertical-align: inherit;">
+      （请参见
+     </font>
+    </font>
+    <font class="hcp3">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       鼠标右键
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      或
+     </font>
+    </font>
+    <font class="hcp3">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       水平图标栏
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      ）。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -37,24 +36,298 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ In ISO Linie/Bogen/Linie umwandeln" %}</p><p>{% trans "Es gibt Drahterosionsmaschinen, bei denen es nicht möglich ist, die Kombination [Bogen/Bogen] mit einer variablen Konik zu versehen." %}</p>
-<p>{% trans "Dieser Befehl erlaubt es, in einem [Bogen/Bogen] Übergang ein kleines Linienelement einzufügen, so dass die Kombination [Bogen/Linie/Bogen] entsteht." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../iso_konv.gif" alt="iso_konv.gif" width="265" height="208" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Durch diesen Trick kann die Geometrie doch als variable Konik geschnitten werden." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../CORNCONV.gif" alt="CORNCONV.gif" width="504" height="427" border="0"/></p>
-<p class="Tip_Note_Heading">{% trans "So wird es gemacht:" %}</p>
-<ul>
-	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Zeichnen Sie die Geometrie als Linien/Bogenelemente. Definieren Sie KEINE Bearbeitungsfigur." %}</p></li>
-	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Rufen Sie im Menü [Vorbereitung \ Diverses] den Befehl [In ISO Linie/Bogen/Linie umwandeln] auf." %}</p></li>
-	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Aktivieren Sie die Option [Radien modifizieren / Tangentialität erhalten] oder [de]aktivieren Sie die Option." %}</p></li>
-	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Bestimmen Sie im Feld [Länge der eingefügten Linie] die Länge der einzufügenden Linie." %}</p></li>
-	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf die Schaltfläche [&amp;gt;&amp;gt;] und wählen Sie die [2] Bogenelemente aus, zwischen denen die Linie eingefügt werden soll." %}</p></li>
-	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Beenden Sie den Auswahlmodus mit der Option [Ende] [(siehe] [rechte Maustaste] [od.] [horizontale Ikonenleiste][)]." %}</p></li>
-	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Verlassen Sie den Dialog und erzeugen Sie die Bearbeitungsfigur." %}</p></li>
-</ul>
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; 
+	 border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <img alt="更改为 ISO.gif" border="0" height="28" src="../Change_to_ISO.gif" width="29"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    转换为 ISO 线/圆弧/线
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    有些线蚀机无法
+   </font>
+   <font style="vertical-align: inherit;">
+    提供具有可变锥度的
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     拱形/圆弧组合。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此命令允许您在
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     圆弧/圆弧
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    过渡中 
+ 插入小直线元素 
+ ，从而创建
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     圆弧/直线/圆弧
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    组合。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="iso_konv.gif" border="0" height="208" src="../iso_konv.gif" width="265"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通过这个技巧，可以将几何形状切割为可变锥度。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="玉米转化.gif" border="0" height="427" src="../CORNCONV.gif" width="504"/>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    它是这样完成的：
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      将几何图形绘制为直线/圆弧元素。
+     </font>
+     <font style="vertical-align: inherit;">
+      不要定义编辑图。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       在准备\杂项
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      菜单中，调用
+     </font>
+     <font style="vertical-align: inherit;">
+      转换
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       为 ISO 线/弧/线
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      命令。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      激活
+     </font>
+     <font style="vertical-align: inherit;">
+      或
+     </font>
+     <font class="hcp1">
+      <font style="vertical-align: inherit;">
+       停用
+      </font>
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       修改半径/保留相切
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选项。
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+    </font>
+   </p>
+  </li>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       在插入线的长度
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      字段中，指定
+     </font>
+     <font style="vertical-align: inherit;">
+      要插入的线的长度。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      单击
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       &gt;&gt;
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      按钮 
+	 并选择
+     </font>
+     <font style="vertical-align: inherit;">
+      应在其间插入直线的
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       2 个圆弧元素。
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+    </font>
+   </p>
+  </li>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       使用“结束”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选项退出选择模式
+     </font>
+    </font>
+    <font color="#000000">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       （参见
+      </font>
+     </font>
+    </font>
+    <font class="hcp1" color="#000000">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       鼠标右键
+      </font>
+     </font>
+    </font>
+    <font color="#000000">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       或
+      </font>
+     </font>
+    </font>
+    <font class="hcp1" color="#000000">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       水平图标栏
+      </font>
+     </font>
+    </font>
+    <font color="#000000">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       ）
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      离开对话框并创建编辑图形。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+
 
 {% endblock %}
 {% endlinebreakless %}

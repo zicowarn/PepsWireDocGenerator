@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,33 +35,282 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Auto Matrizen und Stempel" %}</p><p>{% trans "Neben den Befehlen #[Linien/Bögen =&amp;gt; Bearbeitungsfigur]# und #[Parametrische Figuren]#, ist der Befehl [Auto Matrizen und Stempel] eine weitere Methode zur Erzeugung von Bearbeitungsfiguren aus Linien/Bogenelementen." %}</p>
-<p>{% trans "Der Befehl erzeugt automatisch Bearbeitungsfiguren, was zu einer erheblichen Zeiteinsparung führen kann, wenn eine Zeichnung viele Konturen enthält, die in Bearbeitungsfiguren umgewandelt werden sollen." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../find_starthole.gif" alt="find_starthole.gif" width="264" height="203" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Der bietet Befehl zwei Möglichkeiten zur automatischen Figurerzeugung:" %}</p>
-<p>{% trans "1.) In der Zeichnung sind [keine] Startlöcher eingezeichnet. Der Befehl erzeugt automatisch Bearbeitungsfiguren (Stempel od. Matrizen) aus geschlossenen Konturen und setzt die Startlöcher automatisch." %}</p>
-<p>{% trans "[Siehe]: #[Automatisch Figuren erzeugen. - OHNE vorhandene Startlöcher.]#" %}</p>
-<p> </p>
-<p>{% trans "2.) In der Zeichnung [sind Startlöcher eingezeichnet] (als Kreis, C-Kreis od. C-Punkt)." %}</p>
-<p>{% trans "Der Befehl erzeugt automatisch Bearbeitungsfiguren (Stempel od. Matrizen) und sucht die Startlöcher nach einem Suchschema und verwendet deren Mittelpunkte als Startpositionen." %}</p>
-<p>{% trans "[Siehe]: #[Automatisch Figuren erzeugen. - MIT vorhandenen Startlöchern (Startloch Suchschema).]#" %}</p>
-<p>{% trans "Der Befehl ist ideal, wenn z.B. eine importierte 2D CAD Zeichnungen viele kleine Bohrungen oder Durchbrüche enthält, die automatisch in Bearbeitungsfiguren umgewandelt werden sollen." %}</p>
-<p class="hcp2"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp2"> </p>
-<p><img src="../QUI_D_P1_shg.gif" usemap="#AreaMap0" alt="QUI_D_P1_shg.gif" width="207" height="27" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="0,1,52,22" href="Matrizen_Auto_Matritzen_Stempel.htm" alt=""/>
-<area shape="rect" coords="53,2,100,22" href="Stempel_Auto_Matritzen_Stempel.htm" alt=""/>
-<area shape="rect" coords="103,4,145,22" href="Filter_Auto_Matritzen_Stempel.htm" alt=""/>
-<area shape="rect" coords="146,0,200,22" href="Optionen_Auto_Matritzen_Stempel.htm" alt=""/>
-</map> </p>
-<p class="hcp2"> </p>
-<p class="Hinweis">{% trans "Hinweis:" %}</p>
-<p>{% trans "Der Befehl #[Linien/Bögen =&amp;gt; Bearbeitungsfigur]# wird verwendet, wenn eine kleinere Anzahl von komplexen Konturen mit individuellen Startlochpositionen zu Bearbeitungsfiguren umgewandelt werden sollen." %}</p>
-<p>{% trans "Der Befehl [ #[Parametrische Figuren]#,] immer dann, wenn man einfache Standardkonturen (Kreise, Rechtecke) konstruieren möchte." %}</p>
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; 
+	 border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <img alt="cremulti.gif" border="0" height="29" src="../cremulti.gif" width="31"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    自动模具和冲头
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <a href="Linien_Boegen_Bearbeitungsfigur.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      除了直线/圆弧 =&gt; 加工图形
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <a href="Common-049.chm::/CommonHelp2/Parametrische_Figuren.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      参数化图形
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令之外
+   </font>
+   <font style="vertical-align: inherit;">
+    ，
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     自动矩阵和图章
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令是 
+ 从直线/圆弧元素创建加工图形的另一种方法。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该命令会自动创建加工图形，当绘图包含许多需要转换为加工图形的轮廓时，这可以节省大量时间。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="find_starthole.gif" border="0" height="203" src="../find_starthole.gif" width="264"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该命令提供了两个自动创建图形的选项：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    1.)
+   </font>
+   <font style="vertical-align: inherit;">
+    图中
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     没有显示起始孔。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该命令自动从闭合轮廓创建加工图形（图章或矩阵）并自动设置起始孔。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     请参阅
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：
+   </font>
+  </font>
+  <a href="Automatisch_Figuren_erzeugen_ohne_vorhandenes_Startloch.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      自动创建图形。
+     </font>
+     <font style="vertical-align: inherit;">
+      - 没有现有的起始孔。
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    2.)
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     起始孔在图纸中标记
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    （如圆、C 圆或 C 点）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该命令自动创建加工图形（冲头或矩阵），并根据搜索方案搜索起始孔，并使用它们的中心点作为起始位置。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     请参阅
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：
+   </font>
+  </font>
+  <a href="Automatisch_Figuren_erzeugen_mit_vorhandenem_Startloch_.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      自动创建图形。
+     </font>
+     <font style="vertical-align: inherit;">
+      - 现有起始孔（起始孔搜索方案）。
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    例如，如果导入的 2D CAD 绘图包含许多应自动转换为加工图形的小孔或开口，则该命令非常理想。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="QUI_D_P1_shg.gif" border="0" height="27" src="../QUI_D_P1_shg.gif" usemap="#AreaMap0" width="207"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="0,1,52,22" href="Matrizen_Auto_Matritzen_Stempel.htm" shape="rect"/>
+   <area alt="" coords="53,2,100,22" href="Stempel_Auto_Matritzen_Stempel.htm" shape="rect"/>
+   <area alt="" coords="103,4,145,22" href="Filter_Auto_Matritzen_Stempel.htm" shape="rect"/>
+   <area alt="" coords="146,0,200,22" href="Optionen_Auto_Matritzen_Stempel.htm" shape="rect"/>
+  </map>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一个通知：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    当要将少量具有单独起始孔位置的复杂轮廓转换为加工图形时，请使用“
+   </font>
+  </font>
+  <a href="Linien_Boegen_Bearbeitungsfigur.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      直线/圆弧 =&gt; 加工图形”
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <span style="font-weight: bold;">
+    <a href="Common-049.chm::/CommonHelp2/Parametrische_Figuren.htm">
+     <font class="hcp1">
+      <font style="vertical-align: inherit;">
+       参数化图形
+      </font>
+     </font>
+    </a>
+   </span>
+   <font style="vertical-align: inherit;">
+    命令
+   </font>
+   <span style="font-weight: bold;">
+    <font style="vertical-align: inherit;">
+     ，
+    </font>
+   </span>
+   <font style="vertical-align: inherit;">
+    每当您想要构造简单的标准轮廓（圆形、矩形）时。
+   </font>
+  </font>
+  <span style="font-weight: bold;">
+   <a href="Common-049.chm::/CommonHelp2/Parametrische_Figuren.htm">
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+     </font>
+    </font>
+   </a>
+   <font style="vertical-align: inherit;">
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

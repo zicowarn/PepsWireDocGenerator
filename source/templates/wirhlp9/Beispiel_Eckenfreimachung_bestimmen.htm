@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -38,54 +37,378 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Eckenfreimachung bestimmen" %}</p><ul>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Erzeugen Sie eine Bearbeitungsfiguren aus der Geometrie, die Sie mit Eckenfreimachung versehen wollen." %}</p>
-</li>
-</ul>
-<p><img src="../Eckenfreimachungen_Exa_1.gif" alt="Eckenfreimachungen_Exa_1.gif" width="153" height="152" border="0"/></p>
-<ul>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Wählen Sie im Menü [Vorbereitung] den Befehl #[Eckenfreimachung]#." %}</p>
-</li>
-</ul>
-<p class="Prompts">{% trans "Wähle Figur:" %}</p>
-<ul>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Klicken Sie die Bearbeitungsfigur an." %}</p>
-</li>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Es folgt ein Dialog. Wählen Sie dort die Art der Freimachung (z.B. Schlitz) und geben Sie deren Maß(e) ein." %}</p>
-</li>
-</ul>
-<p><img src="../Eckenfreimach_dialog.gif" alt="Eckenfreimach_dialog.gif" width="213" height="524" border="0"/></p>
-<ul>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Sollen [alle Ecken mit der gleichen Freimachung], modifiziert werden, klickt man auf die Schaltfläche [Auf alle Ecken anwenden], schließt den Dialog mit [OK] und beendet die folgende Abfrage:" %}</p>
-</li>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "'[Eingabe Punkt für Eckenfreimachung]' mit der Option [Ende] (siehe [rechte Maustaste] od. [horizontale Ikonenleiste])." %}</p>
-</li>
-</ul>
-<ul>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Sollen [nur einzelne Ecken verändert] modifiziert werden, schließt man den Dialog mit [OK]. Es folgt die Abfrage '[Eingabe Punkt für Eckenfreimachung]'." %}</p>
-</li>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Aktivieren Sie die Fangfunktion [Endpunkt] und klicken Sie alle Ecken an, die freigemacht werden sollen." %}</p>
-</li>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Beenden Sie den Befehl mit der Option [Ende] (siehe: [rechte] Maustaste)." %}</p>
-</li>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Programmieren Sie nun eine #[Standard Konturbearbeitung]# und aktivieren Sie im Dialog #[Bearbeitung einstellen]# die Checkbox [Ecken Freimach]." %}</p>
-</li>
-</ul>
-<p><img src="../Eckenfreimach1.gif" alt="Eckenfreimach1.gif" width="122" height="61" border="0"/></p>
-<p class="hcp4"> </p>
-<p>{% trans "Die folgende Zeichnung zeigt das Ergebnis." %}</p>
-<p class="hcp4"> </p>
-<p><img src="../Eckenfreimachungen_Exa_2.gif" alt="Eckenfreimachungen_Exa_2.gif" width="166" height="162" border="0"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    确定拐角间隙
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      根据要提供拐角止裂槽的几何形状创建加工图形。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p>
+  <img alt="角间隙_Exa_1.gif" border="0" height="152" src="../Eckenfreimachungen_Exa_1.gif" width="153"/>
+ </p>
+ <ul>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       从“准备”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      菜单中，选择
+     </font>
+     <font style="vertical-align: inherit;">
+      “角
+     </font>
+    </font>
+    <a href="Eckenfreimachung.htm">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        间隙”
+       </font>
+      </font>
+     </font>
+    </a>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p class="Prompts">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选择角色：
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      单击编辑图。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      接下来是对话。
+     </font>
+     <font style="vertical-align: inherit;">
+      选择加盖邮资的类型（例如槽位）并输入其尺寸。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p>
+  <img alt="Eckenfreimach_dialog.gif" border="0" height="524" src="../Eckenfreimach_dialog.gif" width="213"/>
+ </p>
+ <ul>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      如果要
+     </font>
+     <font style="vertical-align: inherit;">
+      修改
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       具有相同间隙的所有角，请单击
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “应用到所有角”按钮，单击
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “确定”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      关闭对话框
+     </font>
+     <font style="vertical-align: inherit;">
+      并结束以下查询：
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      使用
+     </font>
+     <font style="vertical-align: inherit;">
+      “
+     </font>
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       结束”选项“
+      </font>
+     </font>
+    </font>
+    <font class="hcp3">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       输入角间隙点
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      ” （请参见
+     </font>
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       鼠标右键
+      </font>
+     </font>
+     <font style="vertical-align: inherit;">
+      或
+     </font>
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       水平图标栏
+      </font>
+     </font>
+     <font style="vertical-align: inherit;">
+      ）。
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+    </font>
+   </p>
+  </li>
+ </ul>
+ <ul>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      如果您
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       只想修改个别角，请单击
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “确定”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      关闭对话框
+     </font>
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+    <font class="hcp3">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       查询“输入角间隙点
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      ”如下
+     </font>
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      激活
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       端点
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      捕捉功能并单击所有应释放的角。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       使用“结束”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选项结束命令
+     </font>
+     <font style="vertical-align: inherit;">
+      （请参阅：
+     </font>
+     <font style="vertical-align: inherit;">
+      鼠标右键）
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       。
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      现在对
+     </font>
+    </font>
+    <a href="../wirhlp10/Standard_Konturbearbeitung____.htm">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        标准轮廓加工
+       </font>
+      </font>
+     </font>
+    </a>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      进行编程，并激活
+     </font>
+    </font>
+    <a href="../wirhlp10/Einstellungen_Einstellen_der_Schnittmethode.htm">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        “设置加工”
+       </font>
+      </font>
+     </font>
+    </a>
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       对话框中的“清除角”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      复选框
+     </font>
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p>
+  <img alt="角落清理1.gif" border="0" height="61" src="../Eckenfreimach1.gif" width="122"/>
+ </p>
+ <p class="hcp4">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图显示了结果。
+   </font>
+  </font>
+ </p>
+ <p class="hcp4">
+ </p>
+ <p>
+  <img alt="角间隙_Exa_2.gif" border="0" height="162" src="../Eckenfreimachungen_Exa_2.gif" width="166"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

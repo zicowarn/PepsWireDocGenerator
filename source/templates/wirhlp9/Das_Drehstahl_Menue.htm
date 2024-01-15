@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,16 +34,56 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <h1>{% trans "Das Drehstahl Menü" %}</h1><p class="hcp1"> </p>
-<p>{% trans "Im Menü [Drehstahl] finden Sie Befehle, um die Geometrie von verschiedenen Drehstählen zu erzeugen." %}</p>
-<p> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp1"> </p>
-<p>{% trans "&lt;img src='../WIR9b_shg.gif' alt='' usemap='#MAP485224823' style='border: none;' border='0'/&gt;&lt;map id='MAP485224823' name='MAP485224823'&gt;###&lt;/map&gt;" %}<map id="MAP485224823" name="MAP485224823">
-<area shape="rect" coords="2, 69, 269, 97" href="Drehstahlbearbeitung____.htm" alt=""/>
-<area shape="rect" coords="4, 99, 268, 129" href="Einseitiger_Tangentialdrehstahl.htm" alt=""/>
-<area shape="rect" coords="4, 130, 270, 160" href="Wechselseitiger_Tangentialdrehstahl.htm" alt=""/>
-</map> </p>
+ <h1>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    德雷斯塔尔菜单
+   </font>
+  </font>
+ </h1>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <span style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     在“车削钢”
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    菜单中
+   </font>
+   <font style="vertical-align: inherit;">
+    ，您将找到用于创建不同车削钢几何形状的命令。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="" border="0" src="../WIR9b_shg.gif" style="border: none;" usemap="#MAP485224823"/>
+  <map id="MAP485224823" name="MAP485224823">
+   <area alt="" coords="2, 69, 269, 97" href="Drehstahlbearbeitung____.htm" shape="rect"/>
+   <area alt="" coords="4, 99, 268, 129" href="Einseitiger_Tangentialdrehstahl.htm" shape="rect"/>
+   <area alt="" coords="4, 130, 270, 160" href="Wechselseitiger_Tangentialdrehstahl.htm" shape="rect"/>
+  </map>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

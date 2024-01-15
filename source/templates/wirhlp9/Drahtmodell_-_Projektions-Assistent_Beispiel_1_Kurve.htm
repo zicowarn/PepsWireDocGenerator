@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -44,52 +43,650 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Projektion einer Kurve unter einem konstanten Winkel" %}</p><p>{% trans "Das folgende Beispiel zeigt, wie man von [einer 3D Kurve] zwei XY-planare Regelflächengeometrien ableitet." %}</p><p>{% trans "Dies ermöglicht, die 3D Geometrie unter einer konstanten Konik, als Regelfläche zu schneiden." %}</p>
-<p><img src="../Wire_Projection_Wiz_1.gif" alt="" border="0" class="hcp2"/></p>
-<p><img src="../Wire_Projection_Wiz_Exa_2_1.gif" alt="" border="0" class="hcp2"/></p>
-<p>{% trans "[[Verwenden Sie die Schaltfläche]] [Wähle Kurve &amp;gt;&amp;gt;] [u][nd selektieren Sie die Geometrien der 3D Kurve.]" %}</p>
-<p class="hcp6">{% trans "[Hinweis]: Erlaubte Geometrietypen sind: [Linien/Bögen], [Kanten] und [NURBS-Kurven]." %}</p>
-<p>{% trans "[[Das] Rote Ausrufezeichen ][verändert sich zu einem] [Grünen Haken] [der anzeigt, dass eine passende 3D Kurve gewählt wurde.]" %}</p>
-<p> </p>
-<p><img src="../Wire_Projection_Wiz_Exa_2_2.gif" alt="" border="0" class="hcp2"/></p>
-<p>{% trans "[[Wählen Sie die Schaltfläche]] [Weiter &amp;gt;][, zum Aufruf des nächsten Dialogs:]" %}</p>
-<p> </p>
-<p><img src="../Wire_Projection_Wiz_Exa_2_3.gif" alt="" border="0" class="hcp2"/></p>
-<p>{% trans "Geben Sie im Feld [Winkel] den benötigten Konikwinkel ein" %}</p>
-<p>{% trans "Die beiden bebilderten Schaltflächen dienen zur Auswahl der [Konikrichtung]." %}</p>
-<p>{% trans "[Wählen Sie die Schaltfläche] [Weiter &amp;gt;&amp;gt;][, zum Aufruf des nächsten Dialogs:]" %}</p>
-<p> </p>
-<p><img src="../Wire_Projection_Wiz_Exa_2_4.gif" alt="" border="0" class="hcp2"/></p>
-<p> </p>
-<p>{% trans "[Obere Projektion]" %}</p>
-<p class="hcp6">{% trans "Geben Sie in diesem Feld die [Z-Höhe] ein, auf welche die [oberen] [Regelflächengeometrie] projiziert werden soll." %}</p>
-<p>{% trans "[[Untere]Projektion]" %}</p>
-<p class="hcp6">{% trans "Geben Sie in diesem Feld die [Z-Höhe] ein, auf welche die [untere] [Regelflächengeometrie] projiziert werden soll." %}</p>
-<p style="font-size: 10pt; font-weight: bold;">{% trans "Bereiche mit gleicher Elementanzahl angleichen" %}</p>
-<p class="hcp6">{% trans "Ist die Option aktiv, wird eine #proportionale Synchronisation# für die unter/obere Regelflächengeometrie ausgeführt." %}</p>
-<p class="hcp6">{% trans "Falls nicht, werden die Elementenden der unter/obere Regelflächengeometrie miteinander verbunden." %}</p>
-<p>{% trans "[Figuren erzeugen]" %}</p>
-<p class="hcp6">{% trans "Aktivieren Sie diese Option wenn [Figuren] anstatt [Linien/Bögen] erzeugt werden sollen." %}</p>
-<p>{% trans "[[Vorgabe für Figurnamen]]" %}</p>
-<p class="hcp6">{% trans "Falls [Figuren] erzeugt werden sollen, hier den Namen der Figur (z.B. [Fig_]) eingeben. Das System macht daraus [Fig_]001 und [Fig_]002." %}</p>
-<p>{% trans "[Projektionstoleranz]" %}</p>
-<p>{% trans "[[[S]]teuert wie genau die Linien/Bögen der projizierten Geometrie werden.]" %}</p>
-<p class="hcp6">{% trans "Je kleiner der Wert, desto genau die projizierten Geometrien. Wir empfehlen einen Wert von 0.001." %}</p>
-<p> </p>
-<p class="hcp6">{% trans "Klicken Sie nun auf die Schaltfläche [Projezieren], um die beiden planaren Geometrien abzuleiten." %}</p>
-<p class="hcp6">{% trans "Das folgende Bild zeigt in der Mitte die zu projizierende Geometrie und darüber/darunter die beiden projizierten Regelflächengeometrien." %}</p>
-<p> </p>
-<p><img src="../Wire_Projection_Wiz_Exa_2_5.gif" alt="" border="0" class="hcp2"/></p>
-<p> </p>
-<p>{% trans "[Beenden Sie den Dialog mit] [Fertig][.]" %}</p>
-<p> </p>
-<p>{% trans "Die [beiden projizierten Regelflächengeometrien sollten jetzt noch in #Bearbeitungsfiguren# inkl. Startpunkten umgewandelt werden.]" %}</p>
-<p class="hcp6">{% trans "Anschließend können Sie die Bearbeitungsfiguren für die #Regelflächenprogrammierung# verwenden." %}</p>
-<p> </p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    等角度曲线的投影
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    以下示例演示如何从
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     3D 曲线
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    导出两个 XY 平面直纹曲面几何形状。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这使得可以在恒定锥度下将 3D 几何体切割为直纹曲面。
+   </font>
+  </font>
+ </p>
+ <p>
+  <img alt="" border="0" class="hcp2" src="../Wire_Projection_Wiz_1.gif"/>
+ </p>
+ <p>
+  <img alt="" border="0" class="hcp2" src="../Wire_Projection_Wiz_Exa_2_1.gif"/>
+ </p>
+ <p>
+  <font>
+   <span class="hcp3">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      使用
+     </font>
+    </font>
+   </span>
+  </font>
+  <font class="hcp4" size="2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “选择曲线 &gt;&gt;”按钮
+    </font>
+   </font>
+  </font>
+  <span class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     并
+    </font>
+   </font>
+  </span>
+  <font class="hcp5" size="2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     选择 3D 曲线的几何形状。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp6">
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     注意
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：允许的几何类型有：
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     直线/圆弧
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     边线
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     NURBS 曲线
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp4" size="2">
+   <span style="font-size: 10pt; 
+	 font-weight: normal;">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      红色
+     </font>
+    </font>
+   </span>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     感叹号
+    </font>
+   </font>
+  </font>
+  <font class="hcp5" size="2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     变为
+    </font>
+   </font>
+  </font>
+  <font class="hcp4" size="2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     绿色勾号
+    </font>
+   </font>
+  </font>
+  <font class="hcp5" size="2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     ，表示已选择合适的 3D 曲线。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <img alt="" border="0" class="hcp2" src="../Wire_Projection_Wiz_Exa_2_2.gif"/>
+ </p>
+ <p>
+  <font>
+   <span class="hcp3">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选择
+     </font>
+    </font>
+   </span>
+  </font>
+  <font class="hcp4" size="2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “下一步 &gt;”按钮
+    </font>
+   </font>
+  </font>
+  <font class="hcp5" size="2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     打开下一个对话框：
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <img alt="" border="0" class="hcp2" src="../Wire_Projection_Wiz_Exa_2_3.gif"/>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp7">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     在
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    角度字段中输入
+   </font>
+   <font style="vertical-align: inherit;">
+    所需的锥角
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    图示的两个按钮用于选择
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     锥度方向
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <span class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     选择
+    </font>
+   </font>
+  </span>
+  <font class="hcp4" size="2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “下一步&gt;&gt;”按钮
+    </font>
+   </font>
+  </font>
+  <font class="hcp5" size="2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     打开下一个对话框：
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <img alt="" border="0" class="hcp2" src="../Wire_Projection_Wiz_Exa_2_4.gif"/>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font class="hcp4" size="2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     上投影
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp6">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在此字段中，输入
+   </font>
+   <span class="hcp1">
+    <font style="vertical-align: inherit;">
+     上
+    </font>
+   </span>
+   <span class="hcp1">
+    <font style="vertical-align: inherit;">
+     直纹曲面几何图形
+    </font>
+   </span>
+   <font style="vertical-align: inherit;">
+    应投影到 
+ 的
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     Z 高度
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </span>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font class="hcp4" size="2">
+   <span class="hcp8">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      较低的
+     </font>
+    </font>
+   </span>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     投影
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp6">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在此字段中，输入
+   </font>
+   <span class="hcp1">
+    <font style="vertical-align: inherit;">
+     下
+    </font>
+   </span>
+   <span class="hcp1">
+    <font style="vertical-align: inherit;">
+     直纹曲面几何图形
+    </font>
+   </span>
+   <font style="vertical-align: inherit;">
+    应投影到 
+ 的
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     Z 高度
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </span>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p style="font-size: 10pt; font-weight: bold;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    将区域与相同数量的元素对齐
+   </font>
+  </font>
+ </p>
+ <p class="hcp6">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果该选项处于活动状态，则会
+   </font>
+   <font style="vertical-align: inherit;">
+    对下/上直纹曲面几何形状执行
+   </font>
+  </font>
+  <a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('../wirhlp10/Proportionale_Synchronisation.htm',400,600);return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     比例同步。
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="hcp6">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果不是，则下/上直纹曲面几何体的单元端部相互连接。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp4" size="2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     创建人物
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp6">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果您想创建
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     图形
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    而不是
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     直线/圆弧
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，请激活此选项。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font>
+   <span class="hcp8">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      角色名称规范
+     </font>
+    </font>
+   </span>
+  </font>
+ </p>
+ <p class="hcp6">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果要创建
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     图形
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，请在此处输入图形名称（例如
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     Fig_
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ）。
+   </font>
+   <font style="vertical-align: inherit;">
+    系统将其转换为
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     Fig_
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    001 和
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     Fig_
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    002。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp4" size="2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     投影公差
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp5" size="2">
+   <font>
+    <font class="hcp5" size="2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       控制
+      </font>
+     </font>
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     投影几何体的直线/圆弧的精确度。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp6">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    值越小，投影几何形状越准确。
+   </font>
+   <font style="vertical-align: inherit;">
+    我们建议值为 0.001。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="hcp6">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    现在单击
+   </font>
+  </font>
+  <font class="hcp7">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “项目”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮来导出两个平面几何图形。
+   </font>
+  </font>
+ </p>
+ <p class="hcp6">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图显示了要投影在两个投影直纹曲面几何图形的中间和上方/下方的几何图形。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <img alt="" border="0" class="hcp2" src="../Wire_Projection_Wiz_Exa_2_5.gif"/>
+ </p>
+ <p>
+ </p>
+ <p>
+  <span class="hcp3">
+   <font style="vertical-align: inherit;">
+   </font>
+  </span>
+  <font class="hcp4" size="2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击Done
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <span class="hcp3">
+    <font style="vertical-align: inherit;">
+     结束对话框
+    </font>
+   </span>
+  </font>
+  <font class="hcp5" size="2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  Die
+  <span class="hcp3">
+   beiden projizierten Regelflaechengeometrien 
+ sollten jetzt noch in
+   <a class="hcp9" href="Linien_Boegen_Bearbeitungsfigur.htm">
+    Bearbeitungsfiguren
+   </a>
+   inkl. Startpunkten umgewandelt werden.
+  </span>
+ </p>
+ <p class="hcp6">
+  Anschliessend koennen Sie die Bearbeitungsfiguren 
+ fuer die
+  <a class="hcp9" href="../wirhlp10/Regelflaechenbearbeitung____.htm">
+   Regelflaechenprogrammierung
+  </a>
+  verwenden.
+ </p>
+ <p>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('a1');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

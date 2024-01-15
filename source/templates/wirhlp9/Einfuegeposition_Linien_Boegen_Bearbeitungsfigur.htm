@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,10 +33,155 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Einfügeposition (Linien/Bögen =&gt; Bearbeitungsfigur)" %}</p><p>{% trans "Dieses Textfeld erlaubt es dem Anwender die Einfügeposition der zu erzeugenden Bearbeitungsfigur zu beeinflussen." %}</p>
-<p>{% trans "Die Einfügeposition hat nur dann eine Bedeutung, wenn weitere Kopien einer vorhandenen Bearbeitungsfigur erzeugt werden sollen." %}</p>
-<p>{% trans "Dies kann mit der Optionen [Kopieren] oder [Figur einfügen] des Dialogs [Figur Optionen] oder dem Befehl #[Kreise/Bögen =&amp;gt; Mehrfachfigur]# im Menü [Vorbereitung &amp;gt; Diverses] geschehen." %}</p>
-<p>{% trans "Die Einfügeposition wird normalerweise direkt als [XY-Koordinate] eingegeben oder mit der Schaltfläche @ und mit Hilfe der [Fangfunktionen] [Endpunkt - Koordinaten] in der Zeichnung ermittelt." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    插入位置（线/弧=&gt;编辑图形）
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该文本字段允许用户影响要创建的编辑图形的插入位置。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    仅当要创建现有编辑图的更多副本时，插入位置才有意义。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这可以使用“
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     图形选项”
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    对话框 
+ 中的“
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     复制
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ”或
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “粘贴图形”选项或
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     “准备 &gt; 其他
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    ”菜单中的
+   </font>
+   <a href="Kreise_Boegen_Mehrfachfigur.htm">
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      “圆/圆弧 =&gt; 多个图形”
+     </font>
+    </font>
+   </a>
+   <font style="vertical-align: inherit;">
+    命令 
+ 来完成
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <a href="Kreise_Boegen_Mehrfachfigur.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    插入
+   </font>
+   <font style="vertical-align: inherit;">
+    位置
+   </font>
+   <font style="vertical-align: inherit;">
+    通常
+   </font>
+   <font style="vertical-align: inherit;">
+    直接
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     输入
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     为
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     _
+    </font>
+   </font>
+  </font>
+  <img alt="选择.gif" border="0" height="23" src="../Select.gif" width="24"/>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

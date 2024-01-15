@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,21 +35,191 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Kreise/Bögen ==&amp;gt; Mehrfachfigur" %}</p><p>{% trans "Dieser Befehl hat zwei Aufgaben:" %}</p>
-<p>{% trans "1.) #[Bohrungen gleichen Durchmessers suchen und Bearbeitungsfiguren erzeugen]#." %}</p>
-<p class="Block_Text">{% trans "In einigen Fällen kann die Situation auftreten, dass eine größere Anzahl von Bohrungen mit gleichen Durchmessern geschnitten werden müssen." %}</p>
-<p class="Block_Text">{% trans "Normalerweise ist es dabei notwendig, aus jeder Bohrung eine separate Bearbeitungsfigur zu erzeugen. Dies kann bei einer größeren Anzahl gleicher Bohrungen recht zeitaufwendig sein." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../MEHR_GRP.gif" alt="MEHR_GRP.gif" width="657" height="403" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Dieser Befehl erlaubt es, eine beliebige Anzahl Bohrungen gleichen Durchmessers mit einem Befehlsaufruf, automatisch in Bearbeitungsfiguren umzuwandeln." %}</p>
-<p>{% trans "2.) #[Eine Bearbeitungsfigur auf eine Punktegruppe (G1 ...) verteilen]#." %}</p>
-<p>{% trans "Manchmal soll eine vorhandene Bearbeitungsfigur auf einer Anzahl von Punktposition vervielfältigt werden." %}</p>
-<p>{% trans "Normalerweise ist es dabei notwendig, an jeder Position eine separate Bearbeitungsfigur zu erzeugen." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../MEHR_GR2.gif" alt="MEHR_GR2.gif" width="422" height="288" border="0"/></p>
-<p class="hcp2"> </p>
-<p style="text-align: justify;">{% trans "Mit dem Befehl ist es möglich, eine vorhandene Bearbeitungsfigur über eine [Punktegruppe] zu verteilen (Siehe Register [Gruppe] im Dialog [CAD] \ [3D-Geometrie erzeugen] \ [NURBS-Kurven und Surfaces])." %}</p>
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; 
+	 border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <img alt="Circle_to_Multifig.gif" border="0" height="27" src="../Circle_to_Multifig.gif" width="29"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    圆/弧==&gt;多个图形
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该命令有两个任务：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    1.)
+   </font>
+  </font>
+  <a href="Bohrungen_gleichen_Durchmessers_suchen_u_Bearbeitungsfiguren_erzeugen.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      找到相同直径的孔并创建加工图案
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在某些情况下，可能会出现需要切割大量相同直径的孔的情况。
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通常需要为每个孔创建单独的加工图形。
+   </font>
+   <font style="vertical-align: inherit;">
+    如果存在大量相同的孔，这可能会非常耗时。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="MORE_GRP.gif" border="0" height="403" src="../MEHR_GRP.gif" width="657"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该命令可以通过一次命令将任意数量的相同直径的孔自动转换为加工图形。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    2.)
+   </font>
+  </font>
+  <a href="Eine_Bearbeitungsfigur_auf_eine_Punktegruppe_G1_____verteilen.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      将加工图形分配给一组点(G1...)
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    有时需要在多个点位置复制现有的编辑图形。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通常需要在每个位置创建一个单独的加工图形。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="MORE_GR2.gif" border="0" height="288" src="../MEHR_GR2.gif" width="422"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p style="text-align: justify;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用该命令，可以
+   </font>
+   <font style="vertical-align: inherit;">
+    将现有加工图形分布在
+   </font>
+  </font>
+  <span style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     点组上（请参见
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     CAD
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    \
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     创建 3D 几何体
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    \
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     NURBS 曲线和曲面
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    对话框 
+ 中的“组”
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     选项卡
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ）。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

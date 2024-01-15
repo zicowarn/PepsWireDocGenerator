@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -38,39 +37,217 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Drahtmodell - Projektions-Assistent" %}</p><p>{% trans "Die Funktion führt zum Aufruf eines #Assistenten-Dialogs#, mit dem Sie die für eine 4 Achsen Regelflächenbearbeitung erforderlichen [zwei XY-planaren Geometrien] durch Projizieren von 3D Kurven ableiten können." %}</p><p>{% trans "Schritt [1] des #[Assistenten]# besteht aus der Auswahl der [Projektionsmethode]." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen. Klicken Sie auf die Schaltfläche] [Weiter &amp;gt;][, um den nächsten Dialog des Assistenten zu sehen.]" %}</p>
-<p> </p>
-<p><img src="../Wire_Proj_Man_Main_Dialog.gif" alt="" usemap="#MAP506454060" border="0" class="hcp4"/> <map id="MAP506454060" name="MAP506454060">
-<area shape="rect" coords="16, 39, 146, 320" href="javascript:BSSCPopup('../Commdata/COMMON_Bild.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="162, 138, 411, 185" href="Drahtmodell_-_Projektions-Assistent_Beispiel_2_Kurven.htm" alt=""/>
-<area shape="rect" coords="162, 187, 458, 239" href="Drahtmodell_-_Projektions-Assistent_Beispiel_1_Kurve.htm" alt=""/>
-<area shape="rect" coords="148, 323, 227, 345" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="243, 323, 316, 347" alt=""/>
-<area shape="rect" coords="414, 324, 488, 347" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area3" alt=""/></map></p>
-<p> </p>
-<p>{% trans "Es existieren zwei Möglichkeiten:" %}</p>
-<p class="dialog">{% trans "1.) Projektion über zwei 3D-Kurven." %}</p>
-<p class="hcp5"><img src="../Wire_Projection_Wiz_2.gif" alt="" border="0" class="hcp4"/></p>
-<p class="Tip_Note_Heading">{% trans "So wird es gemacht:" %}</p>
-<p class="hcp5">{% trans "#Projektion über zwei 3D-Kurven#" %}</p>
-<p> </p>
-<p class="dialog">{% trans "2.) Projektion einer Kurve unter einem konstanten Winkel." %}</p>
-<p class="hcp5"><img src="../Wire_Projection_Wiz_1.gif" alt="" border="0" class="hcp4"/></p>
-<p class="Tip_Note_Heading">{% trans "So wird es gemacht:" %}</p>
-<p class="hcp5">{% trans "#Projektion einer Kurve unter einem konstanten Winkel#" %}</p>
-<p> </p>
-<p> </p>
-<script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <img alt="Wire_Proj_Man.gif" border="0" height="29" src="../Wire_Proj_Man.gif" width="29"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    线框 - 投影向导
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该函数会调用一个
+   </font>
+  </font>
+  <a class="hcp1" href="../Commdata/COMMON_Wizard.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     向导对话框
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，您可以通过投影 3D 曲线导出4 轴直纹曲面加工所需的
+   </font>
+  </font>
+  <span style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     两个 XY 平面几何形状
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <a class="BSSCPopup" href="javascript:void(0);" id="a2" onclick="BSSCPopup('../Commdata/COMMON_Wizard.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      向导
+     </font>
+    </font>
+   </a>
+   <font style="vertical-align: inherit;">
+    的第
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     1
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    步
+   </font>
+   <font style="vertical-align: inherit;">
+    包括选择
+   </font>
+   <font class="hcp2">
+    <font style="vertical-align: inherit;">
+     投影方法
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <a class="BSSCPopup" href="javascript:void(0);" id="a2" onclick="BSSCPopup('../Commdata/COMMON_Wizard.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+   <font class="hcp2">
+    <font style="vertical-align: inherit;">
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <font class="hcp3" color="#FF0000">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+   <br/>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击
+    </font>
+   </font>
+  </font>
+  <font color="#FF0000" style="font-weight: bold; font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     下一步 &gt;按钮
+    </font>
+   </font>
+  </font>
+  <font class="hcp3" color="#FF0000">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     查看下一个向导对话框。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <img alt="" border="0" class="hcp4" src="../Wire_Proj_Man_Main_Dialog.gif" usemap="#MAP506454060"/>
+  <map id="MAP506454060" name="MAP506454060">
+   <area alt="" coords="16, 39, 146, 320" href="javascript:BSSCPopup('../Commdata/COMMON_Bild.htm',400,300);" id="area1" shape="rect"/>
+   <area alt="" coords="162, 138, 411, 185" href="Drahtmodell_-_Projektions-Assistent_Beispiel_2_Kurven.htm" shape="rect"/>
+   <area alt="" coords="162, 187, 458, 239" href="Drahtmodell_-_Projektions-Assistent_Beispiel_1_Kurve.htm" shape="rect"/>
+   <area alt="" coords="148, 323, 227, 345" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area2" shape="rect"/>
+   <area alt="" coords="243, 323, 316, 347" shape="rect"/>
+   <area alt="" coords="414, 324, 488, 347" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area3" shape="rect"/>
+  </map>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    有两种选择：
+   </font>
+  </font>
+ </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    1.) 两条 3D 曲线上的投影。
+   </font>
+  </font>
+ </p>
+ <p class="hcp5">
+  <img alt="" border="0" class="hcp4" src="../Wire_Projection_Wiz_2.gif"/>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    它是这样完成的：
+   </font>
+  </font>
+ </p>
+ <p class="hcp5">
+  <a href="Drahtmodell_-_Projektions-Assistent_Beispiel_2_Kurven.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     两条 3D 曲线上的投影
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+ </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    2.) 以恒定角度投影曲线。
+   </font>
+  </font>
+ </p>
+ <p class="hcp5">
+  <img alt="" border="0" class="hcp4" src="../Wire_Projection_Wiz_1.gif"/>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    它是这样完成的：
+   </font>
+  </font>
+ </p>
+ <p class="hcp5">
+  <a class="hcp1" href="Drahtmodell_-_Projektions-Assistent_Beispiel_1_Kurve.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     等角度曲线的投影
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+ </p>
+ <p>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
         if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
         FilePopupInit('a2');
         FilePopupInit('area1');
         FilePopupInit('area2');
         FilePopupInit('area3');
-//]]&gt;
-</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,15 +34,76 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Bezugsebenen" %}</p><p>{% trans "Diese Optionen legen fest auf welche Ebene sich die Eingaben für die Höhenänderung beziehen." %}</p>
-<p> </p>
-<p>{% trans "Folgende Optionen sind verfügbar:" %}</p>
-<p class="hcp1">{% trans "Absolute Höhe bezogen auf Z0" %}</p>
-<p class="hcp1">{% trans "Höhe bezogen auf Referenzhöhe" %}</p>
-<p style="font-weight: bold; text-indent: -28.35pt;">{% trans "[und] [und]" %}</p>
-<p class="hcp1">{% trans "[[Höhe bezogen auf Sekundärebene]]" %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p><img src="../REFSEC.gif" alt="REFSEC.gif" width="433" height="309" border="0"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    参考平面
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这些选项确定高程变化的输入所指的级别。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    可以使用以下选项：
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    与Z0相关的绝对高度
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    高度与参考高度相关
+   </font>
+  </font>
+ </p>
+ <p style="font-weight: bold; text-indent: -28.35pt;">
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     和
+    </font>
+   </font>
+  </span>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     和
+    </font>
+   </font>
+  </span>
+ </p>
+ <p class="hcp1">
+  <span style="text-indent: -28.35pt;">
+   <font style="font-weight: bold;">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      参考平面高度
+     </font>
+    </font>
+   </font>
+  </span>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <img alt="参考安全.gif" border="0" height="309" src="../REFSEC.gif" width="433"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

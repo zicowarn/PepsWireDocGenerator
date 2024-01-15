@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,10 +33,97 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Nächste Technologie" %}</p><p>{% trans "Die Schaltfläche [Nächste Technologie] ist nicht aktiv (grau), [wenn nur ein einzelnes Technologiesymbol] editiert wird." %}</p>
-<p>{% trans "Für den Fall, dass mehrere Technologiesymbole editiert werden, ist die Schaltfläche aktiv." %}</p>
-<p>{% trans "Sie erlaubt ein [schrittweises Editieren] der gewählten Technologiesymbole [in der Reihenfolge ihrer Auswahl]." %}</p>
-<p>{% trans "Wurden die Symbole in einer bestimmten Reihenfolge ausgewählt, bestimmt dies auch die Editierreihenfolge. Erfolgte die Auswahl durch ein Fenster, ist die Editierreihenfolge zufällig." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下一个技术
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    仅编辑
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     单个技术符号时，
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “下一个技术”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮
+   </font>
+   <font style="vertical-align: inherit;">
+    不活动（灰色） 。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果编辑了多个技术符号，则该按钮处于活动状态。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    它允许
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     按照选定的顺序
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     逐步编辑
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选定的技术符号
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果按特定顺序选择符号，这也决定了编辑顺序。
+   </font>
+   <font style="vertical-align: inherit;">
+    如果通过窗口进行选择，则编辑顺序是随机的。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

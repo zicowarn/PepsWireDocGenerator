@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,9 +28,35 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Kommentar" %}</p><p>{% trans "Ermöglicht die Eingabe von Kommentaren in die NC-Ausgabedatei." %}</p>
-<p>{% trans "Die Funktion wird üblicherweise genutzt, um dem NC-Maschinenbediener Bearbeitungsanweisungen (z.B. Teil entnehmen, Pratze Nr. 2 entfernen ...) zu übermitteln." %}</p>
-<p>{% trans "Der Code wird exakt an der Stelle ausgegeben, an der das NC-Codesymbol positioniert wurde." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    评论
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    允许将注释输入到 NC 输出文件中。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该功能通常用于向 NC 机床操作员发送加工指令（例如移除零件、移除 2 号爪...）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    代码准确地输出在 NC 代码符号所在的位置。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

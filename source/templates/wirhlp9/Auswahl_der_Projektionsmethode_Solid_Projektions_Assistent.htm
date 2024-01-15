@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -38,37 +37,306 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Auswahl der Projektionsmethode" %}</p><p class="Block_Text">{% trans "Diese Option legen fest, welche Methode zum Ableiten der 2D-Geometrie verwendet werden soll." %}</p>
-<p class="Block_Text">{% trans "Die Ableitung kann [automatisch] (Option '[Erodiergeometrie automatisch erkennen]') oder [manuell] (die anderen Optionen) durch Selektieren einzelner 3D-Geometrien ([Faces od. Kanten]) erfolgen." %}</p>
-<p class="Block_Text"> </p>
-<h2 class="hcp2">{% trans "Erodiergeometrie  automatisch erkennen" %}</h2>
-<p>{% trans "Der Solid wird [automatisch] nach erodierbaren 2D-Geometrien durchsucht." %}</p>
-<p>{% trans "Die Option [Gesamte Zeichnung] wird verwendet, wenn [alle] vorhandenen Solids durchsucht werden sollen." %}</p>
-<p>{% trans "Ist die Option nicht aktiv, folgt eine Möglichkeit zur Auswahl des(r) Solids der(ie) durchsucht werden sollen." %}</p>
-<p class="hcp3"> </p>
-<p><img src="../Projektions_Assis_Automatisch_erkennen.gif" alt="Projektions_Assis_Automatisch_erkennen.gif" width="907" height="227" border="0"/></p>
-<p class="hcp3"> </p>
-<h2 class="hcp2">{% trans "Faces verbinden" %}</h2>
-<p>{% trans "Bei dieser Methode können Sie ein [vertikales Face] innerhalb des Solidmodells wählen." %}</p>
-<p>{% trans "Das System sucht dann automatisch alle mit dem gewählten Face verbundenen Faces und leitet daraus 2D-Geometrien ab." %}</p>
-<p class="hcp3"> </p>
-<p><img src="../Projektions_Assis_Faces_verbinden.gif" alt="Projektions_Assis_Faces_verbinden.gif" width="530" height="175" border="0"/></p>
-<p class="hcp3"> </p>
-<h2 class="hcp2">{% trans "Oberes Face" %}</h2>
-<p>{% trans "Bei dieser Methode können Sie [ein oder mehrere horizontale Faces] innerhalb des Solidmodells wählen." %}</p>
-<p>{% trans "Das System sucht alle erodierbaren Geometrien innerhalb der gewählten Faces und leitet daraus 2D-Geometrien ab." %}</p>
-<p class="hcp3"> </p>
-<p><img src="../Projektions_Assis_Oberes_Face.gif" alt="Projektions_Assis_Oberes_Face.gif" width="863" height="214" border="0"/></p>
-<p class="hcp3"> </p>
-<h2 class="hcp2">{% trans "Kanten" %}</h2>
-<p>{% trans "Bei dieser Methode können Sie [Kanten] innerhalb des Solidmodells wählen. Das System erzeugt aus den gewählten Kanten 2D-Geometrien." %}</p>
-<p class="hcp3"> </p>
-<p><img src="../Projektions_Assis_Kanten.gif" alt="Projektions_Assis_Kanten.gif" width="863" height="218" border="0"/></p>
-<p class="hcp3"> </p>
-<h2 class="hcp2">{% trans "Manuelle Auswahl" %}</h2>
-<p>{% trans "Bei dieser Methode können Sie [ein oder mehrere vertikale Faces] innerhalb des Solidmodells wählen. Das System erzeugt 2D-Geometrien aus den gewählten Faces." %}</p>
-<p class="hcp3"> </p>
-<p><img src="../Projektions_Assis_Manuelle_Auswahl.gif" alt="Projektions_Assis_Manuelle_Auswahl.gif" width="826" height="218" border="0"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    投影方法的选择
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这些选项确定使用哪种方法来导出 2D 几何图形。
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    推导可以
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     自动完成（“
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <span style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     自动检测侵蚀几何体
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ” 
+ 选项
+   </font>
+   <font style="vertical-align: inherit;">
+    ），也可以通过选择单独的 3D 几何体（
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     面或边）
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     手动
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    完成 
+ （其他选项）
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="Block_Text">
+ </p>
+ <h2 class="hcp2">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    自动检测侵蚀几何体
+   </font>
+  </font>
+ </h2>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    实体会
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     自动
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    搜索可腐蚀的二维几何形状。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    当您想要搜索
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     所有
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    现有实体 
+ 时，请使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “整个绘图”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果该选项未激活，则可以选择要搜索的实体。
+   </font>
+  </font>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p>
+  <img alt="Projections_Assis_Automatically_recognize.gif" border="0" height="227" src="../Projektions_Assis_Automatisch_erkennen.gif" width="907"/>
+ </p>
+ <p class="hcp3">
+ </p>
+ <h2 class="hcp2">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    连接面
+   </font>
+  </font>
+ </h2>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此方法允许您在实体模型中
+   </font>
+   <font style="vertical-align: inherit;">
+    选择
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     垂直面。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    然后，系统会自动搜索与所选面连接的所有面，并从中导出 2D 几何形状。
+   </font>
+  </font>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p>
+  <img alt="Projections_Assis_Faces_connect.gif" border="0" height="175" src="../Projektions_Assis_Faces_verbinden.gif" width="530"/>
+ </p>
+ <p class="hcp3">
+ </p>
+ <h2 class="hcp2">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    上脸
+   </font>
+  </font>
+ </h2>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此方法允许您
+   </font>
+   <font style="vertical-align: inherit;">
+    在实体模型中选择
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     一个或多个水平面。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    系统搜索所选面内的所有可腐蚀几何形状，并从中导出 2D 几何形状。
+   </font>
+  </font>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p>
+  <img alt="Projections_Assis_Oberes_Face.gif" border="0" height="214" src="../Projektions_Assis_Oberes_Face.gif" width="863"/>
+ </p>
+ <p class="hcp3">
+ </p>
+ <h2 class="hcp2">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    边缘
+   </font>
+  </font>
+ </h2>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此方法允许您选择
+   </font>
+   <font style="vertical-align: inherit;">
+    实体模型内的
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     边。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    系统从选定的边创建 2D 几何图形。
+   </font>
+  </font>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p>
+  <img alt="Projections_Assis_Kanten.gif" border="0" height="218" src="../Projektions_Assis_Kanten.gif" width="863"/>
+ </p>
+ <p class="hcp3">
+ </p>
+ <h2 class="hcp2">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    手动选择
+   </font>
+  </font>
+ </h2>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此方法允许您
+   </font>
+   <font style="vertical-align: inherit;">
+    在实体模型中选择
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     一个或多个垂直面。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    系统从选定的面创建 2D 几何图形。
+   </font>
+  </font>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p>
+  <img alt="Projections_Assis_Manual_Selection.gif" border="0" height="218" src="../Projektions_Assis_Manuelle_Auswahl.gif" width="826"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,10 +28,52 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Beispiel für eine Bearbeitungsfigur mit Endpunkt" %}</p><p>{% trans "Die folgende Zeichnung zeigt eine offene und eine geschlossene Bearbeitungsfigur, die beide unter Angabe von [optionalen][ Endpunkten] erzeugt wurden." %}</p>
-<p>{% trans "Die Zeichnung zeigt, dass man durch die Angabe eines Endpunktes, eine beliebige Position bei der Abfahrbewegung anfahren kann." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p><img src="../ENDPNTP2.gif" alt="ENDPNTP2.gif" width="494" height="349" border="0"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    带终点的加工图形示例
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图显示了开放式和封闭式加工图形，两者都是使用指定的
+   </font>
+  </font>
+  <span style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     可选
+    </font>
+   </font>
+  </span>
+  <font style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     端点
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    创建的。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    从图中可以看出，通过指定终点，可以移动到出发运动过程中的任意位置。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <img alt="ENDPNTP2.gif" border="0" height="349" src="../ENDPNTP2.gif" width="494"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

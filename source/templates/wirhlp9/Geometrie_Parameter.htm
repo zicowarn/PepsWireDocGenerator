@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,11 +33,78 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Geometrie Parameter" %}</p><p>{% trans "Diese Option ruft einen Dialog auf, mit dem Sie die Geometrie-Eigenschaften von [Flächen], [Kanten] und [Vertexe] überprüfen können." %}</p>
-<p>{% trans "Auf diese Weise kann man beispielsweise den Start-\Endpunkt oder den Winkel einer Modellkante überprüfen." %}</p>
-<p>{% trans "Zudem wird analysiert, ob eine Kante oder Fläche erodierbar ist oder nicht." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p><img src="../Geometry_Properties.gif" alt="Geometry_Properties.gif" width="337" height="534" border="0"/></p>
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; 
+	 border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <img alt="Wire_Expert_Geo_Par.gif" border="0" height="30" src="../Wire_Expert_Geo_Par.gif" width="34"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    几何参数
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该选项打开一个对话框，允许您检查
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     面
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     边
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     顶点
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    的几何属性。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    例如，您可以通过这种方式检查起点/终点或模型边缘的角度。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    还分析边缘或表面是否会被侵蚀。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <img alt="几何属性.gif" border="0" height="534" src="../Geometry_Properties.gif" width="337"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

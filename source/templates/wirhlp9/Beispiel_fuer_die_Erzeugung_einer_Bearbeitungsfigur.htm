@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -37,40 +36,425 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Beispiel für die Erzeugung einer Bearbeitungsfigur" %}</p><p>{% trans "Fast alle Bearbeitungsoperationen der Module [Erodieren ]/ [2,5D] [Fräsen / Drehen] basieren auf dem Geometrietyp [Bearbeitungsfigur]." %}</p>
-<p>{% trans "Sie sollten unbedingt mit der Erzeugung von Konstruktionen auf der Basis von C-Linien, C-Kreisen und Linien-/Bogenelementen vertraut sein, bevor Sie weiterlesen." %}</p>
-<p>{% trans "Um eine Bearbeitung, ausführen zu können, müssen Sie die vorhandenen Linien-/Bogenelemente zu einer Bearbeitungsfigur zusammenfassen. Dies geht wie folgt:" %}</p>
-<ul>
-	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Es soll aus der folgenden Geometrie (müssen Linien-/Bogenelemente sein) eine Bearbeitungsfigur erzeugt werden." %}</p></li>
-</ul>
-<p> </p>
-<p class="hcp3"><img src="../Fig_Create_1.gif" alt="Fig_Create_1.gif" width="237" height="187" border="0"/></p>
-<ul>
-	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Wählen Sie im Menü [Vorbereitung] den Befehl #[Linien/Bögen =&amp;gt; Bearbeitungsfigur]#." %}</p></li>
-	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Geben Sie im Feld [Startloch] die Position ein, an welcher der Draht einfädeln soll oder ermitteln Sie die Koordinaten in der Zeichnung mit Hilfe der Schaltfläche @." %}</p></li>
-</ul>
-<p class="hcp3"> </p>
-<p>{% trans "[Hinweis:]" %}</p>
-<p>{% trans "Die Startlochposition muss VOR der Geometrie liegen. Sie kann [innerhalb] (Matrize) oder [außerhalb] (Stempel) der Geometrie liegen." %}</p>
-<ul>
-	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf die Schaltfläche [Wähle Linien/Bögen &amp;gt;&amp;gt;], um festzulegen, aus welchen Geometrieelementen Sie die Bearbeitungsfigur erzeugen wollen." %}</p></li>
-	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Nach Wahl der Schaltfläche zeigt das System die [Standardauswahlabfrage] zur Auswahl der Geometrieelemente." %}</p></li>
-	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Wählen Sie die Option [Verbinden] ([rechte Maustaste] od. [horizontale Ikonenleiste]) und klicken Sie [ein] Geometrieelement an." %}</p></li>
-	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Beachten Sie, wie das System alle folgenden Geometrieelemente automatisch auswählt." %}</p></li>
-</ul>
-<p class="hcp3"> </p>
-<p><img src="../Fig_Create_2.gif" alt="Fig_Create_2.gif" width="320" height="213" border="0"/></p>
-<p class="hcp3"> </p>
-<ul>
-	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Beenden Sie die Auswahl mit der Option [Ende] [(siehe] [rechte Maustaste] [od.] [horizontale Ikonenleiste][).]" %}</p></li>
-	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "[Das folgende Bild zeigt die fertige Figur, nebst Startlochposition.]" %}</p></li>
-</ul>
-<p class="hcp3"> </p>
-<p><img src="../Fig_Create_3.gif" alt="Fig_Create_3.gif" width="312" height="220" border="0"/></p>
-<p class="hcp3"> </p>
-<ul>
-	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Erzeugen Sie weitere Bearbeitungsfiguren oder beenden Sie den Dialog mit der Schaltfläche [OK]." %}</p></li>
-</ul>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    创建加工图形的示例
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     腐蚀
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    /2.5D
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     铣削/车削
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    模块中的几乎所有加工操作
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     都
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    基于
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     加工图形
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    几何类型。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在进一步阅读之前，熟悉基于 C 线、C 圆和线/弧元素创建设计非常重要。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    为了能够进行编辑，必须将现有的线/弧元素组合成编辑图形。
+   </font>
+   <font style="vertical-align: inherit;">
+    这是按如下方式完成的：
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      应根据以下几何形状创建加工图形（必须是直线/圆弧元素）。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p>
+ </p>
+ <p class="hcp3">
+  <img alt="Fig_Create_1.gif" border="0" height="187" src="../Fig_Create_1.gif" width="237"/>
+ </p>
+ <ul>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       在准备
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      菜单中，选择
+     </font>
+     <font style="vertical-align: inherit;">
+      直线
+     </font>
+    </font>
+    <a href="Linien_Boegen_Bearbeitungsfigur.htm">
+     <font class="hcp1">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        /圆弧 =&gt; 处理图形
+       </font>
+      </font>
+     </font>
+    </a>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      命令。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       在“起始孔”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      字段中，输入
+     </font>
+     <font style="vertical-align: inherit;">
+      应穿线的位置或使用按钮 确定图形中的坐标
+     </font>
+    </font>
+    <img alt="选择.gif" border="0" height="23" src="../Select.gif" width="24"/>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p class="hcp3">
+ </p>
+ <p>
+  <font class="hcp1" color="#0000FF">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     一个通知：
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    起始孔位置必须位于几何图形之前。
+   </font>
+   <font style="vertical-align: inherit;">
+    它可以位于
+   </font>
+   <font style="vertical-align: inherit;">
+    几何体的
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     内部
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    （模具）或
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     外部（印模）。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <ul>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      单击
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       选择直线/圆弧 &gt;&gt;
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      按钮指定要使用哪些几何元素来创建加工图形。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选择该按钮后，系统将显示
+     </font>
+     <font style="vertical-align: inherit;">
+      用于选择几何元素的
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       标准选择查询。
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+    </font>
+   </p>
+  </li>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选择
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “连接”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选项（
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       鼠标右键
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      或
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       水平图标栏
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      ）并单击几何
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       元素
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      请注意系统如何自动选择以下所有几何元素。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p class="hcp3">
+ </p>
+ <p>
+  <img alt="Fig_Create_2.gif" border="0" height="213" src="../Fig_Create_2.gif" width="320"/>
+ </p>
+ <p class="hcp3">
+ </p>
+ <ul>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       使用“结束”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选项结束选择
+     </font>
+    </font>
+    <font color="#000000">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       （请参见
+      </font>
+     </font>
+    </font>
+    <font class="hcp1" color="#000000">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       鼠标右键
+      </font>
+     </font>
+    </font>
+    <font color="#000000">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       或
+      </font>
+     </font>
+    </font>
+    <font class="hcp1" color="#000000">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       水平图标栏
+      </font>
+     </font>
+    </font>
+    <font color="#000000">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       ）。
+      </font>
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font color="#000000">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       下图是成品图，包括起始孔位置。
+      </font>
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p class="hcp3">
+ </p>
+ <p>
+  <img alt="Fig_Create_3.gif" border="0" height="220" src="../Fig_Create_3.gif" width="312"/>
+ </p>
+ <p class="hcp3">
+ </p>
+ <ul>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       创建其他编辑图形或使用“确定”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      按钮关闭对话框
+     </font>
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+
 
 {% endblock %}
 {% endlinebreakless %}

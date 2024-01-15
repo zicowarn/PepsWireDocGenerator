@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,13 +35,75 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Automatisch Figuren erzeugen MIT vorhandenen Startlöchern (Startloch Suchschema)" %}</p><p>{% trans "Das folgende Beispiel zeigt links eine Konstruktion [mit] Startlochinformationen." %}</p>
-<p>{% trans "Auf der rechten Seite wurde der Befehl [Auto Matrizen und Stempel] verwendet, um die Startlöcher in der Zeichnung automatisch zu erkennen und automatisch Bearbeitungsfiguren zu erzeugen." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../find_starthole_exa2.gif" alt="find_starthole_exa2.gif" width="540" height="195" border="0"/></p>
-<p class="hcp2"> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
-<p class="Tip_Note_Heading">{% trans "#Automatisch Bearbeitungsfiguren erzeugen wenn Geometrie Startlöcher enthält.#" %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    自动生成具有现有起始孔的图形（起始孔搜索方案）
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    以下示例显示了
+   </font>
+   <font style="vertical-align: inherit;">
+    左侧起始孔信息
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     的结构。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    右侧，
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “自动矩阵和冲孔”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令用于自动检测图纸中的起始孔并自动生成加工图形。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="find_starthole_exa2.gif" border="0" height="195" src="../find_starthole_exa2.gif" width="540"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    它是这样完成的：
+   </font>
+  </font>
+ </p>
+ <p class="Tip_Note_Heading">
+  <a href="Beispiel_Automatisch_Bearbeitungsfiguren_erzeugen_wenn_Geometrie_Startloecher_enthaelt_.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     如果几何体包含起始孔，则自动生成加工图形。
+    </font>
+   </font>
+  </a>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

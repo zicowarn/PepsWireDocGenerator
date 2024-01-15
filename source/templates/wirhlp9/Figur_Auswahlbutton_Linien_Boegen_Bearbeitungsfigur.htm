@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,17 +33,297 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Wähle Linien/Bögen &gt;&gt;" %}</p><p>{% trans "Mit der Schaltfläche [Wähle Linien/Bögen &amp;gt;&amp;gt;] legen Sie fest, aus welchen Geometrieelementen die Bearbeitungsfigur bestehen soll." %}</p>
-<p>{% trans "Nach Wahl der Schaltfläche zeigt das System die [Standardauswahlabfrage] zur Auswahl der Geometrieelemente." %}</p>
-<p>{% trans "Normalerweise wählt man die Elemente mit Hilfe der Option [Verbinden] ([rechte Maustaste] od. [horizontale Ikonenleiste]) ohne Beachtung einer Richtung aus." %}</p>
-<p>{% trans "Die oben gezeigte Vorgehensweise ist problemlos, wenn die Option [Richtung] [automatisch] im Register #[Offset]# des Dialogs #[Konturbearbeitung]# eingestellt ist." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p>{% trans "Es gibt allerdings Ausnahmen:" %}</p>
-<p>{% trans "Bei der Erzeugung von [offenen Bearbeitungsfiguren] oder wenn die Option [Offset wie Figurrichtung] im Register #[Offset]# des Dialogs [Konturbearbeitung] eingestellt ist." %}</p>
-<p>{% trans "In beiden Fällen muss man die Richtung der Bearbeitungsfigur selbst festlegen." %}</p>
-<p>{% trans "Die geht am besten, wenn man zunächst das nächste Element bezogen auf den Bearbeitungsstartpunkt anklickt." %}</p>
-<p>{% trans "Dann die Option [Verbinden] ([rechte Maustaste] od. [horizontale Ikonenleiste]) wählt und dann das nächste Geometrieelement anklickt." %}</p>
-<p>{% trans "Durch diese Vorgehensweise werden alle Figurelemente automatisch gewählt und die Figur bekommt eine definierte Richtung." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选择直线/圆弧 &gt;&gt;
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     使用“选择直线/圆弧&gt;&gt;”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮
+   </font>
+   <font style="vertical-align: inherit;">
+    指定加工图形应包含哪些几何元素。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选择该按钮后，系统将显示
+   </font>
+   <font style="vertical-align: inherit;">
+    用于选择几何元素的
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     标准选择查询。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     通常，您使用“连接”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项（
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     鼠标右键
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     水平图标栏
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ）选择元素，
+   </font>
+   <font style="vertical-align: inherit;">
+    而不考虑任何方向。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <a href="../wirhlp10/Standard_Konturbearbeitung____.htm">
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      如果在“轮廓编辑”
+     </font>
+    </font>
+   </a>
+   <font style="vertical-align: inherit;">
+    对话框的
+   </font>
+   <a href="../wirhlp10/Offset_Lasche.htm">
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      “偏移
+     </font>
+    </font>
+   </a>
+   <font style="vertical-align: inherit;">
+    ”选项卡中
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     自动设置
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “方向”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项，则上面显示的过程不会出现问题
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <a href="../wirhlp10/Offset_Lasche.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+  <a href="../wirhlp10/Standard_Konturbearbeitung____.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    但是，也有例外：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    创建
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     打开的加工图形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    时，或者在
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     “轮廓加工”
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    对话框的
+   </font>
+   <a href="../wirhlp10/Offset_Lasche.htm">
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      “偏移”
+     </font>
+    </font>
+   </a>
+   <font style="vertical-align: inherit;">
+    选项卡中设置
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “偏移和图形方向”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项时。
+   </font>
+  </font>
+  <a href="../wirhlp10/Offset_Lasche.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在这两种情况下，您都必须自己确定编辑图形的方向。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果您首先根据编辑起点单击下一个元素，则效果最佳。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    然后选择
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “连接”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项
+   </font>
+   <font style="vertical-align: inherit;">
+    （
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     鼠标右键
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     水平图标栏），然后单击下一个几何元素。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此过程意味着将自动选择所有图形元素，并且图形具有定义的方向。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

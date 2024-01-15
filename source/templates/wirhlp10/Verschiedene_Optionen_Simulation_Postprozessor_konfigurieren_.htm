@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,11 +33,60 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Verschiedene Optionen (Simulation - Postprozessor konfigurieren)" %}</p><p>{% trans "[Auswahl der Voreinstellungen bei 'Datei öffnen':] XXX" %}</p>
-<p> </p>
-<p>{% trans "[Camtek-Voreinstellungen benutzen]: Der Postprozessor wird auf die von Camtek voreingestellten Einstellungen zurückgesetzt." %}</p>
-<p> </p>
-<p>{% trans "[NC-Datei nach einem Postprozessorlauf mit Editor öffnen]: Nach jedem Postprozessorlauf (NC-Daten erzeugen) wird ein Editor aufgerufen, der die erzeugten NC-Daten anzeigt." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    各种选项（模拟 - 配置后处理器）
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     选择“打开文件”的默认设置：
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    XXX
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     使用 Camtek 预设
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：后处理器将重置为 Camtek 预设设置。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     后处理器运行后使用编辑器打开 NC 文件
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：每次后处理器运行（生成 NC 数据）后，都会调用一个编辑器来显示生成的 NC 数据。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

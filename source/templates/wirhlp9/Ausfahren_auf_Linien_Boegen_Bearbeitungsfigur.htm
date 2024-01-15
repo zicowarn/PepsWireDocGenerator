@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,15 +35,231 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Ausfahren auf" %}</p><p>{% trans "Die Felder im Abschnitt [Endpunkt] sind optional und müssen nicht unbedingt ausgefüllt werden." %}</p>
-<p>{% trans "Das Feld [Ausfahren] [auf] wird normalerweise nur bei der Bearbeitung von [offenen Figuren] verwendet [oder] wenn bei einer [geschlossenen Figur] die [Ausfahrposition ungleich] der [Startlochposition] sein soll." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../ausf_auf.gif" alt="ausf_auf.gif" width="490" height="329" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Die Position legt fest, welche [XY-Ausfahrposition] der Draht im Vorschub anfahren soll, wenn er sich von der Bearbeitungsfigur wegbewegt." %}</p>
-<p>{% trans "Die [Ausfahrposition] wird normalerweise direkt als [XY-Koordinate] eingegeben oder mit der Schaltfläche @ und mit Hilfe der [Fangfunktionen] [Endpunkt - Koordinaten] in der Zeichnung ermittelt." %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "[Siehe auch]: #[Beispiel für eine Bearbeitungsfigur mit Endpunkt]#" %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    退出于
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     端点
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    部分中的字段
+   </font>
+   <font style="vertical-align: inherit;">
+    是可选的，不是强制性的。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “延伸
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     至
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ”字段通常仅
+   </font>
+   <font style="vertical-align: inherit;">
+    在编辑
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     开放图形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     或
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     封闭图形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    的 
+ 延伸位置
+   </font>
+   <font style="vertical-align: inherit;">
+    不等于
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     起始
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    孔
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     位置
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    时
+   </font>
+   <font style="vertical-align: inherit;">
+    使用。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="ausf_auf.gif" border="0" height="329" src="../ausf_auf.gif" width="490"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该位置决定了
+   </font>
+   <font style="vertical-align: inherit;">
+    进给过程中，当焊丝远离加工图形时，焊丝应移动到哪个
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     XY 延伸位置。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    扩展
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     位置
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通常
+   </font>
+   <font style="vertical-align: inherit;">
+    直接
+   </font>
+   <font style="vertical-align: inherit;">
+    输入
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     为
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     _
+    </font>
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     _
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    _
+   </font>
+  </font>
+  <img alt="选择.gif" border="0" height="23" src="../Select.gif" width="24"/>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     另请参阅
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：
+   </font>
+  </font>
+  <a href="Beispiel_fuer_eine_Bearbeitungsfigur_mit_Endpunkt.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      带有终点的编辑图形示例
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

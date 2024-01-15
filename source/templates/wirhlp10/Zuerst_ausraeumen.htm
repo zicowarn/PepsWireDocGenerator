@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,20 +35,202 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Zuerst ausräumen" %}</p><p>{% trans "Aktiviert die Funktion [Taschenerodieren]." %}</p>
-<p>{% trans "Ohne das Aktivieren dieser Option sind die Felder [Überlappung] und [Startlochdurchmesser] nicht aktiv." %}</p>
-<p> </p>
-<p class="dialog">{% trans "Standard Methode" %}</p>
-<p>{% trans "Bei dieser Ausräummethode sind die Bahnabstände immer identisch." %}</p>
-<p><img src="../Taschenerodieren_Standardmethode_Methode.gif" alt="" border="0" class="hcp3"/></p>
-<p> </p>
-<p class="dialog">{% trans "Alternative Methode" %}</p>
-<p>{% trans "Bei der [alternativen Methode] passt das System die Bahnabstände dynamisch an, so dass ein größtmöglicher Bahnabstand und somit weniger Schnitte entstehen." %}</p>
-<p>{% trans "Daraus folgt, dass in einigen Bereichen der Bahnabstand größer sein kann, als voreingestellt." %}</p>
-<p>{% trans "So beträgt beispielsweise die Länge des Schneidweges für das[ obere ]Beispiel [932] mm und für das [untere] nur [850] mm." %}</p>
-<p><img src="../Taschenerodieren_Alternative_Methode.gif" alt="" border="0" class="hcp3"/></p>
-<p class="Hinweis">{% trans "Hinweis:" %}</p>
-<p>{% trans "Beachten Sie, dass es bei Anwendung der [Alternativen Methode] zu 'Ausfallteilen' kommen kann." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    先清除掉
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    激活
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     型腔腐蚀
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    功能。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果不激活此选项，
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     重叠
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     起始孔径
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    字段将不会处于活动状态。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    标准方法
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通过这种清理方法，轨道之间的距离始终相同。
+   </font>
+  </font>
+ </p>
+ <p>
+  <img alt="" border="0" class="hcp3" src="../Taschenerodieren_Standardmethode_Methode.gif"/>
+ </p>
+ <p>
+ </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    替代方法
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     替代方法
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，系统动态调整路径间距，以便获得最大可能的路径间距，从而减少切割次数。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这意味着在某些区域，路径间距可能大于预设。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    例如，
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     上
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    例的切割路径长度
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     为 932
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    毫米，而
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     下例的
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    切割路径长度仅为
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     850
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    毫米。
+   </font>
+  </font>
+ </p>
+ <p>
+  <img alt="" border="0" class="hcp3" src="../Taschenerodieren_Alternative_Methode.gif"/>
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一个通知：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    请注意，使用
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     替代方法
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    时可能会发生“掉落部件” &nbsp; 。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

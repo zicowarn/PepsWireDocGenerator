@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,20 +34,59 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <h1>{% trans "Das Diverses Menü" %}</h1><p class="hcp1"> </p>
-<p>{% trans "Im Menü [Diverses] finden Sie Befehle um Hilfsfiguren zu erzeugen, sowie Befehle um Bearbeitungsfiguren zu manipulieren." %}</p>
-<p> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp1"> </p>
-<p><img src="../WIR9a_shg.gif" usemap="#AreaMap0" alt="WIR9a_shg.gif" width="291" height="280" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="-3, 62, 287, 102" href="Sekundaerfigur_TWIST_erzeugen.htm" alt=""/>
-<area shape="rect" coords="-3, 100, 283, 132" href="Sekundaerfigur_erzeugen____.htm" alt=""/>
-<area shape="rect" coords="-3, 131, 283, 161" href="Figur_projizieren____.htm" alt=""/>
-<area shape="rect" coords="-1, 159, 285, 189" href="Kreise_Boegen_Mehrfachfigur.htm" alt=""/>
-<area shape="rect" coords="-2, 187, 285, 218" href="In_ISO_Linie_Bogen_Linie_umwandeln____.htm" alt=""/>
-<area shape="rect" coords="-2, 216, 285, 248" href="Radienmanipulation.htm" alt=""/>
-</map>  </p>
+ <h1>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    杂项菜单
+   </font>
+  </font>
+ </h1>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <span style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     在“杂项”
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    菜单中
+   </font>
+   <font style="vertical-align: inherit;">
+    ，您将找到用于创建辅助图形的命令以及用于操作编辑图形的命令。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="WIR9a_shg.gif" border="0" height="280" src="../WIR9a_shg.gif" usemap="#AreaMap0" width="291"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="-3, 62, 287, 102" href="Sekundaerfigur_TWIST_erzeugen.htm" shape="rect"/>
+   <area alt="" coords="-3, 100, 283, 132" href="Sekundaerfigur_erzeugen____.htm" shape="rect"/>
+   <area alt="" coords="-3, 131, 283, 161" href="Figur_projizieren____.htm" shape="rect"/>
+   <area alt="" coords="-1, 159, 285, 189" href="Kreise_Boegen_Mehrfachfigur.htm" shape="rect"/>
+   <area alt="" coords="-2, 187, 285, 218" href="In_ISO_Linie_Bogen_Linie_umwandeln____.htm" shape="rect"/>
+   <area alt="" coords="-2, 216, 285, 248" href="Radienmanipulation.htm" shape="rect"/>
+  </map>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,18 +35,161 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Bogenradius" %}</p><p>{% trans "Soll das System Bögen die [kleiner] sind, als ein bestimmbarer Radius, bei der Figurerzeugung [farblich kennzeichnen], dann können Sie dies mit den Optionen [Zeige Radien kleiner als] und [Graphisch in ...] einstellen." %}</p><p>{% trans "Wenn Sie einen [#Report#] über kleine Radien ausgegeben wollen, müssen Sie die Option [In Report] aktivieren." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Fig_Cre_check_Rad.gif" alt="Fig_Cre_check_Rad.gif" width="253" height="129" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Mit den Optionen im Feld [Zeige Radien größer als], können Sie Bögen die [größer] sind, als ein bestimmbarer Radius farblich kennzeichnen und in den [#Report#] einbeziehen." %}</p>
-<script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    圆弧半径
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果您希望系统
+   </font>
+   <font style="vertical-align: inherit;">
+    在创建图形时对
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     小于可确定半径的圆弧进行
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     颜色编码
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，则可以使用“
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     显示半径小于”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “以图形方式在...”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项来执行此操作。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果要输出有关小半径的
+   </font>
+  </font>
+  <font class="hcp1">
+   <a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('Report_anzeigen_Lin_Bof_Bea_figur.htm',400,300);return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      报告
+     </font>
+    </font>
+   </a>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，则必须激活
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “报告中”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="Fig_Cre_check_Rad.gif" border="0" height="129" src="../Fig_Cre_check_Rad.gif" width="253"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     使用“显示大于半径
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ”字段中的选项，您可以对
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     大于
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    可确定半径的
+   </font>
+   <font style="vertical-align: inherit;">
+    圆弧进行颜色编码，并将其包含在
+   </font>
+  </font>
+  <font class="hcp1">
+   <a class="BSSCPopup" href="javascript:void(0);" id="a2" onclick="BSSCPopup('Report_anzeigen_Lin_Bof_Bea_figur.htm',400,300);return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      报告
+     </font>
+    </font>
+   </a>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    中。
+   </font>
+  </font>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
         if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
         FilePopupInit('a1');
         FilePopupInit('a2');
-//]]&gt;
-</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

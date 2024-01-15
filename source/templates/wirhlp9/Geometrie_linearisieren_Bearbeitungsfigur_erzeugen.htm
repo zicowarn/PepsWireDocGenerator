@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,14 +28,72 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Radien linearisieren" %}</p><p>{% trans "Ersetzt alle Bogenelemente einer Bearbeitungsfigur durch kleine Geradenelemente." %}</p>
-<p> </p>
-<p class="dialog">{% trans "Radien und Linien linearisieren" %}</p>
-<p>{% trans "Ersetzt alle Bogen- und Linienelemente einer Bearbeitungsfigur durch kleine Geradenelemente." %}</p>
-<p style="font-weight: bold;">{% trans "Max. Splitlänge" %}</p>
-<p>{% trans "Maximale Länge der Geometrieelemente, die in kleine Geradenelemente aufgeteilt werden sollen." %}</p>
-<p>{% trans "Elemente die kürzer sind als die [Max. Splitlänge], werden nicht aufgeteilt." %}</p>
-<p> </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    线性化半径
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    用小直线元素替换加工图形的所有圆弧元素。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    线性化半径和直线
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    将编辑图形的所有圆弧和直线元素替换为小直线元素。
+   </font>
+  </font>
+ </p>
+ <p style="font-weight: bold;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    最大分割长度
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    要划分为小线元素的几何元素的最大长度。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    短于
+   </font>
+  </font>
+  <span style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     最大分割长度
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    的元素将不会被分割。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

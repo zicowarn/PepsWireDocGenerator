@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,21 +34,64 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Zurück zur Startposition" %}</p><p>{% trans "Veranlasst die NC-Maschine, zurück auf die im Dialog #[Operation starten]# festgelegte Startposition zu fahren." %}</p><p class="hcp1"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp1"> </p>
-<p><img src="../GOHOME_shg.gif" usemap="#AreaMap0" alt="GOHOME_shg.gif" width="335" height="178" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="13, 68, 171, 88" href="javascript:BSSCPopup('Im_Vorschub_Zurueck_z_Startpos.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="11, 52, 169, 69" href="javascript:BSSCPopup('Im_Eilgang_Zurueck_z_Startpos.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="9, 97, 170, 114" href="javascript:BSSCPopup('Draht_geschnitten_Zurueck_z_Startpos.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="8, 117, 166, 134" href="javascript:BSSCPopup('Draht_eingefaedelt_Zurueck_z_Startpos.htm',400,300);" id="area4" alt=""/>
-<area shape="rect" coords="205, 44, 319, 71" href="javascript:BSSCPopup('OK_Zurueck_z_Startpos.htm',400,300);" id="area5" alt=""/>
-<area shape="rect" coords="204, 77, 318, 102" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area6" alt=""/>
-<area shape="rect" coords="204, 112, 320, 131" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area7" alt=""/>
-<area shape="rect" coords="205, 141, 320, 163" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area8" alt=""/>
-</map> </p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; 
+	 border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <img alt="吴.gif" border="0" height="30" src="../Goh.gif" width="29"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    返回起始位置
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使 NC 机床
+   </font>
+   <font style="vertical-align: inherit;">
+    移回到
+   </font>
+  </font>
+  <a href="Operation_starten.htm">
+   <font style="font-weight: bold;">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      “开始操作”对话框中指定的开始位置。
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="GOHOME_shg.gif" border="0" height="178" src="../GOHOME_shg.gif" usemap="#AreaMap0" width="335"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="13, 68, 171, 88" href="javascript:BSSCPopup('Im_Vorschub_Zurueck_z_Startpos.htm',400,300);" id="area1" shape="rect"/>
+   <area alt="" coords="11, 52, 169, 69" href="javascript:BSSCPopup('Im_Eilgang_Zurueck_z_Startpos.htm',400,300);" id="area2" shape="rect"/>
+   <area alt="" coords="9, 97, 170, 114" href="javascript:BSSCPopup('Draht_geschnitten_Zurueck_z_Startpos.htm',400,300);" id="area3" shape="rect"/>
+   <area alt="" coords="8, 117, 166, 134" href="javascript:BSSCPopup('Draht_eingefaedelt_Zurueck_z_Startpos.htm',400,300);" id="area4" shape="rect"/>
+   <area alt="" coords="205, 44, 319, 71" href="javascript:BSSCPopup('OK_Zurueck_z_Startpos.htm',400,300);" id="area5" shape="rect"/>
+   <area alt="" coords="204, 77, 318, 102" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area6" shape="rect"/>
+   <area alt="" coords="204, 112, 320, 131" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area7" shape="rect"/>
+   <area alt="" coords="205, 141, 320, 163" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area8" shape="rect"/>
+  </map>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('area1');
 	FilePopupInit('area2');
@@ -59,7 +101,9 @@
 	FilePopupInit('area6');
 	FilePopupInit('area7');
 	FilePopupInit('area8');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

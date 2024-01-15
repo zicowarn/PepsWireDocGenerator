@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -40,33 +39,307 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Geometrie Toleranzen" %}</p><p>{% trans "Bei Verwendung der Funktionen #Automatische Feature-Erkennung# und #Manuelle Feature-Erkennen# , führt das System eine Untersuchung der zu bearbeitenden Flächen und Kanten durch. Hier wird überprüft, ob die Flächen und Kanten erodierbar sind oder nicht." %}</p>
-<p>{% trans "Im Dialogbereich [Geometrie Toleranzen] stellen Sie ein, mit welcher Genauigkeit die Flächen und Kanten eines Modells untersucht werden." %}</p>
-<p>{% trans "Flächenübergänge und Kanten die außerhalb der eingestellten Toleranzen liegen, werden als nicht erodierbar eingestuft und folglich werden für diese Elemente auch keine Bearbeitungsfeatures erzeugt." %}</p>
-<p>{% trans "Durch Anpassen der [Geometrie Toleranzen] können Sie die das Ergebnis der Feature-Erkennung für bauchige Flächen und Kanten und lückenhafte Flächenübergänge verbessern." %}</p>
-<p>{% trans "Folgende Einstellparameter stehen zur Verfügung:" %}</p>
-<p> </p>
-<p><img src="../Programstart_Geo_Toler_Feature_Man.gif" alt="" border="0" class="hcp2"/></p>
-<p> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Position" %}</p>
-<p class="Block-Text">{% trans "[XY]-Positionsdaten deren Unterschied kleiner ist als dieser Wert, werden als identisch betrachtet. Und Abstände die kleiner sind als dieser Wert, werden als Null betrachtet." %}</p>
-<p class="hcp4"> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Kurven / Regelflächen-Linearität" %}</p>
-<p>{% trans "Sind die Kantenübergänge von Fläche zu Fläche bauchiger (Kante ist nicht gerade sondern konvex od. konkav) als die hier eingestellte [Kurven / Regelflächen-Linearität], werden diese als nicht erodierbar eingestuft." %}</p>
-<p>{% trans "Durch Erhöhen des Toleranzwertes für die [Kurven / Regelflächen-Linearität], kann man erreichen, dass auch bauchige Kantenübergänge als erodierbar eingestuft werden." %}</p>
-<p> </p>
-<p><img src="../Geometry_Tolerances_1.gif" alt="Geometry_Tolerances_1.gif" width="222" height="219" border="0"/></p>
-<p class="hcp4"> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Regelflächen-Toleranz" %}</p>
-<p>{% trans "Wenn das System eine Regelfläche erzeugt, werden alle Geometrieelemente der oberen und unteren Regelflächengeometrie untersucht, ob man deren Geometrie vereinfachen kann." %}</p>
-<p>{% trans "Dies wäre beispielsweise der Fall, wenn ein Kreis aus vielen kleinen Linienelementen bestünde, anstatt aus einem Bogenelement. Hier versucht System innerhalb des vom Parameter [Regelflächen-Toleranz] vorgegebenen Genauigkeit aus den Linienelemente einen oder mehrere Bogenelemente zu erzeugen." %}</p>
-<p>{% trans "Der Tolerantwert bestimmt dabei die erlaubte Abweichung von der Originalgeometrie." %}</p>
-<p> </p>
-<p class="Tip_Note_Heading">{% trans "Maximale Kantenabweichung" %}</p>
-<p class="hcp5">{% trans "Im Bild unterhalb ist ein BSURFACE (Parametrische Fläche) zu sehen, deren interne Parameter-Linien (die [gelben] Linien) die [rot] gekennzeichnete Flächenkante überschneiden." %}</p>
-<p class="hcp5">{% trans "Theoretisch würde der Schneiddraht diesen gelben Parameter-Linien folgen. Was jedoch ein unerwünschtes Schneidergebnis zur Folge hätte." %}</p>
-<p class="hcp5">{% trans "Ändert man die Voreinstellung des Parameters [Maximale Kantenabweichung] von 5 Grad auf z.B. 25 Grad, würde dies in unserem Beispiel zu einem besseren Schneidergebnis führen." %}</p>
-<p class="hcp5"><img src="../Max_Kantenabweichung.gif" alt="" border="0" class="hcp2"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    几何公差
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用
+   </font>
+  </font>
+  <a href="../WIRE_ExpertRH_context_Menu/Automatische_Feature_Erkennung.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     自动特征检测
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <a href="../WIRE_ExpertRH_context_Menu/Manuelle_Feature_Erkennung.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     手动特征检测
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    功能时，系统会对要加工的表面和边缘进行检查。
+   </font>
+   <font style="vertical-align: inherit;">
+    此处检查表面和边缘是否易腐蚀。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “几何公差”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框区域中 
+ ，您可以设置检查模型的曲面和边的精度。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    位于设定公差之外的表面过渡和边缘被归类为不可侵蚀，因此不会为这些元素创建加工特征。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通过调整
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     几何公差
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，您可以改善凸出曲面和边缘以及不规则曲面过渡的特征检测结果。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    可以使用以下设置参数：
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <img alt="" border="0" class="hcp2" src="../Programstart_Geo_Toler_Feature_Man.gif"/>
+ </p>
+ <p>
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    位置
+   </font>
+  </font>
+ </p>
+ <p class="Block-Text">
+  <span class="hcp3">
+   <font style="vertical-align: inherit;">
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    差值小于该值的
+   </font>
+   <span class="hcp3">
+    <font style="vertical-align: inherit;">
+     XY位置数据被认为是相同的。
+    </font>
+   </span>
+   <font style="vertical-align: inherit;">
+    小于该值的距离被视为零。
+   </font>
+  </font>
+ </p>
+ <p class="hcp4">
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    曲线/直纹面线性度
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     如果从一个曲面到另一个曲面的边缘过渡比此处设置的曲线/直纹曲面线性度
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    更加凸出（边缘不是直的而是凸的或凹的）
+   </font>
+   <font style="vertical-align: inherit;">
+    ，则它们被归类为不可腐蚀的。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     通过增加曲线/受控曲面线性度
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    的公差值
+   </font>
+   <font style="vertical-align: inherit;">
+    ，您可以确保即使是凸出的边缘过渡也被归类为可腐蚀的。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <img alt="几何公差_1.gif" border="0" height="219" src="../Geometry_Tolerances_1.gif" width="222"/>
+ </p>
+ <p class="hcp4">
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    直纹面公差
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    当系统创建直纹面时，会检查上直纹面几何形状和下直纹面几何形状的所有几何元素，以查看它们的几何形状是否可以被简化。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    例如，如果一个圆由许多小线元素而不是一个弧元素组成，就会出现这种情况。
+   </font>
+  </font>
+  <br/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此处，系统尝试在
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “直纹曲面公差”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    参数 
+ 指定的精度范围内从线元素创建一个或多个圆弧元素。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    公差值决定了与原始几何形状的允许偏差。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    最大边缘偏差
+   </font>
+  </font>
+ </p>
+ <p class="hcp5">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在下图中，您可以看到 BSURFACE（参数化曲面），其内部参数线（
+   </font>
+  </font>
+  <span class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     黄
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    线）与
+   </font>
+  </font>
+  <span class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     红色
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    标记的曲面边缘重叠。
+   </font>
+  </font>
+ </p>
+ <p class="hcp5">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    理论上，切割线将遵循这些黄色参数线。
+   </font>
+   <font style="vertical-align: inherit;">
+    然而，这会导致不期望的切割结果。
+   </font>
+  </font>
+ </p>
+ <p class="hcp5">
+  <font style="vertical-align: inherit;">
+  </font>
+  <span class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     例如，如果将最大边缘偏差
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    参数的默认设置
+   </font>
+   <font style="vertical-align: inherit;">
+    从 5 度更改为 25 度，这将在我们的示例中产生更好的切割结果。
+   </font>
+  </font>
+ </p>
+ <p class="hcp5">
+  <img alt="" border="0" class="hcp2" src="../Max_Kantenabweichung.gif"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

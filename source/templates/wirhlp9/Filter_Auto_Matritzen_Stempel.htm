@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -39,42 +38,262 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Filter (Auto Matrizen Stempel)" %}</p><p>{% trans "Mit diesem Register kann der Anwender festlegen, welche geometrischen Formen in Bearbeitungsfiguren umgewandelt werden sollen." %}</p><p>{% trans "Das heißt, bei einer Elementauswahl werden nur zugelassenen Formen in Bearbeitungsfiguren umgewandelt." %}</p>
-<p class="hcp1"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp1"> </p>
-<p><img src="../QUI_D_P4_shg.gif" usemap="#AreaMap0" alt="QUI_D_P4_shg.gif" width="415" height="398" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="12, 45, 64, 63" href="Matrizen_Auto_Matritzen_Stempel.htm" alt=""/>
-<area shape="rect" coords="65, 43, 109, 62" href="Stempel_Auto_Matritzen_Stempel.htm" alt=""/>
-<area shape="rect" coords="121, 369, 209, 391" href="javascript:BSSCPopup('../Commdata/COMMON_Schliessen.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="219, 368, 310, 389" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="313, 361, 401, 386" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="157, 38, 209, 60" href="Optionen_Auto_Matritzen_Stempel.htm" alt=""/>
-<area shape="rect" coords="7, 361, 116, 391" href="javascript:BSSCPopup('Waehle_Matrizen_Stempel_Auto_Mat_Stemp.htm',400,300);" id="area4" alt=""/>
-</map> </p>
-<p style="text-align: center;"> </p>
-<p class="hcp2">{% trans "[Kreis] Ist diese Option aktiv, werden Kreisgeometrien in Bearbeitungsfiguren umgewandelt." %}</p>
-<p class="hcp2">{% trans "[Rechteck / Viereck] Ist diese Option aktiv, werden Rechteck- und Viereckgeometrien in Bearbeitungsfiguren umgewandelt." %}</p>
-<p class="hcp2">{% trans "[Verrundetes Rechteck / Viereck] Ist diese Option aktiv, werden verrundete Rechteck- und Viereckgeometrien in Bearbeitungsfiguren umgewandelt." %}</p>
-<p class="hcp2">{% trans "[Langloch] Ist diese Option aktiv, werden Langlöcher in Bearbeitungsfiguren umgewandelt." %}</p>
-<p class="hcp2">{% trans "[L-Form] Ist diese Option aktiv, werden L-förmige Geometrien in Bearbeitungsfiguren umgewandelt." %}</p>
-<p class="hcp2">{% trans "[D-Form / DD-Form] Ist diese Option aktiv, werden D- und DD-förmige Geometrien in Bearbeitungsfiguren umgewandelt." %}</p>
-<p class="hcp2">{% trans "[Kreis] Ist diese Option aktiv, werden Kreisgeometrien in Bearbeitungsfiguren umgewandelt." %}</p>
-<p class="hcp2">{% trans "[Beliebige Kontur] Ist diese Option aktiv, wandelt das System alle geschlossenen Konturen die nicht den obigen Kategorien entsprechen, in Bearbeitungsfiguren um." %}</p>
-<p class="hcp2"> </p>
-<p class="hcp2">{% trans "[Maske löschen / Maske invertieren]" %}</p>
-<p class="hcp2">{% trans "[Maske löschen] deaktiviert alle Häkchen vor den gemetrischen Formen (Kreis, Rechteck ...)" %}</p>
-<p class="hcp2">{% trans "[Maske invertieren] deaktiviert alle aktivierten Häkchen und aktiviert alle deaktivierten Häkchen." %}</p>
-<p>{% trans "[ Beachten Sie, dass das System bei der Elementauswahl unabhängig von den Einstellungen in dem Register] [#Filter#, zunächst alle gewählten Elemente markiert.]" %}</p>
-<p>{% trans "[Erst nach dem Beenden der Elementauswahl konvertiert das System die in durch den Filter zugelassenen Formen zu Bearbeitungsfi][g][uren.]" %}</p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    过滤器（自动模具印章）
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通过此选项卡，用户可以指定应将哪些几何形状转换为加工图形。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这意味着当选择一个元素时，只有允许的形状才会转换为加工图形。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="QUI_D_P4_shg.gif" border="0" height="398" src="../QUI_D_P4_shg.gif" usemap="#AreaMap0" width="415"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="12, 45, 64, 63" href="Matrizen_Auto_Matritzen_Stempel.htm" shape="rect"/>
+   <area alt="" coords="65, 43, 109, 62" href="Stempel_Auto_Matritzen_Stempel.htm" shape="rect"/>
+   <area alt="" coords="121, 369, 209, 391" href="javascript:BSSCPopup('../Commdata/COMMON_Schliessen.htm',400,300);" id="area1" shape="rect"/>
+   <area alt="" coords="219, 368, 310, 389" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area2" shape="rect"/>
+   <area alt="" coords="313, 361, 401, 386" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area3" shape="rect"/>
+   <area alt="" coords="157, 38, 209, 60" href="Optionen_Auto_Matritzen_Stempel.htm" shape="rect"/>
+   <area alt="" coords="7, 361, 116, 391" href="javascript:BSSCPopup('Waehle_Matrizen_Stempel_Auto_Mat_Stemp.htm',400,300);" id="area4" shape="rect"/>
+  </map>
+ </p>
+ <p style="text-align: center;">
+ </p>
+ <p class="hcp2">
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     圆
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果此选项处于活动状态，圆几何形状将转换为加工图形。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     矩形/正方形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果此选项处于活动状态，则矩形和正方形几何形状将转换为加工图形。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     圆角矩形/正方形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果此选项处于活动状态，则圆角矩形和正方形几何形状将转换为加工图形。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     细长孔
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果此选项处于活动状态，则细长孔将转换为加工图形。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     L 形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果此选项处于活动状态，L 形几何形状将转换为加工图形。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     D-shape / DD-shape
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果此选项处于活动状态，则 D- 和 DD-shape 几何形状将转换为加工图形。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     圆
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果此选项处于活动状态，圆几何形状将转换为加工图形。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     任意轮廓
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果激活此选项，系统会将所有不符合上述类别的闭合轮廓转换为加工图形。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="hcp2">
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     删除蒙版/反转蒙版
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+  <span class="hcp4">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     透明蒙版
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    会停用几何形状（圆形、矩形...）前面的所有复选标记
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+  <span class="hcp4">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     反转蒙版
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    会禁用所有已选中的复选标记并启用所有已停用的复选标记。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp3">
+   <br/>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     请注意，选择元素时，系统首先选择所有选定的元素，无论
+    </font>
+   </font>
+  </font>
+  <font class="hcp3">
+   <a href="Filter_Auto_Matritzen_Stempel.htm">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      “过滤器”
+     </font>
+    </font>
+   </a>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     选项卡中的设置如何。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     只有完成元素选择后，系统才会将过滤器允许的形状转换为加工
+    </font>
+   </font>
+  </font>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     图形
+    </font>
+   </font>
+  </font>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     。
+    </font>
+   </font>
+  </font>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('area1');
 	FilePopupInit('area2');
 	FilePopupInit('area3');
 	FilePopupInit('area4');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

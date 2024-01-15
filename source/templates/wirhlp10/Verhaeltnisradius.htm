@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,13 +35,181 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Verhältnisradius" %}</p><p>{% trans "In diesem Textfeld kann man einen Verhältnisradius für die Definition von konischen Werkstückecken bestimmen. Die Box wird nur angezeigt, wenn die Optionen [ISO + Drehspindel] oder [ISO + Scharf] aktiv sind. - Für die Variante [Drehspindel + Scharf] oder [Nur Drehspindel] existiert keine geometrische Lösung für einen Verhältnisradius." %}</p>
-<p>{% trans "Die folgende Zeichnung zeigt Winkelwechselsymbole an 5 verschiedenen Eckradien. Die Konik bleibt am gesamten Werkstück gleich, aber es wurden verschiedene Verhältnisradien angegeben." %}</p>
-<p>{% trans "Wird für eine Werkstückecke [kein] Verhältnisradius bestimmt und ist der Eckenmodus [ISO] eingestellt, erzeugt das System identische Radien für obere und untere Kontur." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../SECODANG.gif" alt="SECODANG.gif" width="414" height="239" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Das obige Beispiel zeigt den Eckenmodus [ISO + Scharf]. Hätte man den Modus [ISO] eingestellt, wären die [äußeren scharfen Ecken] zu konische Ecken geworden und die [inneren scharfen Ecken] wären nicht akzeptabel da der Draht einen Hinterschnitt erzeugen würde." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    比率半径
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在此文本字段中，您可以指定用于定义圆锥形工件角的比率半径。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     仅当ISO + Spindle
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     ISO + Sharp
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项处于活动状态
+   </font>
+   <font style="vertical-align: inherit;">
+    时才会出现该框。
+   </font>
+   <font style="vertical-align: inherit;">
+    -对于
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     车削主轴 + 锋利
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     仅车削主轴
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    变体，没有比率半径的几何解决方案。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图显示了 5 个不同拐角半径处的角度变化符号。
+   </font>
+   <font style="vertical-align: inherit;">
+    整个工件的锥度保持相同，但指定了不同的比率半径。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     如果未确定
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    工件拐角的比率半径
+   </font>
+   <font style="vertical-align: inherit;">
+    且拐角模式为
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     ISO
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，则系统会为上轮廓和下轮廓生成相同的半径。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="SECODANG.gif" border="0" height="239" src="../SECODANG.gif" width="414"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    上面的示例显示了
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     ISO + 锐角
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    模式。
+   </font>
+   <font style="vertical-align: inherit;">
+    如果
+   </font>
+   <font style="vertical-align: inherit;">
+    设置了
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     ISO模式，则
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     外部尖角
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    将变成锥形角，而
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     内部尖角
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    将是不可接受的，因为线会产生底切。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

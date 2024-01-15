@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -38,21 +37,195 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Matrizen- / Stempeltyp" %}</p><p>{% trans "Diese Listbox enthält die Geometrieformen, die das System bei der automatischen Erzeugung von Stempel- und Matrizenfiguren erkennt." %}</p>
-<p>{% trans "Jeder Geometrieform können Sie separate Einstellungen für die Startlochposition zuordnen. Bei der Auswahl einer Geometrieform zeigt das System ein Bitmap das die Form, eine typische Startlochposition und deren Parameter Position grafisch anzeigt." %}</p>
-<p class="hcp1"> </p>
-<p>{% trans "Folgende Geometrieformen existieren:" %}</p>
-<p> </p>
-<p class="hcp2">{% trans "[Rund] kreisrunde Stempel/Matrizen" %}</p>
-<p class="hcp2">{% trans "[Rechteck] rechteckige Stempel/Matrizen" %}</p>
-<p class="hcp2">{% trans "[Rechteck rund] an den vier Ecken verrundete rechteckige Stempel/Matrizen" %}</p>
-<p class="hcp2">{% trans "[Langloch] Geometrien von Typ Langloch" %}</p>
-<p class="hcp2">{% trans "[L-Form] L-förmige Stempel/Matrizen" %}</p>
-<p class="hcp2">{% trans "[D-Form / DD-Form] D- und DD-förmige Stempel/Matrizen" %}</p>
-<p class="hcp2">{% trans "[Beliebige Kontur] jede andere geschlossene Form" %}</p>
-<p class="hcp1"> </p>
-<p>{% trans "Beachten Sie, dass die Einstellungen für jede Form mit der Schaltfläche [Einstellungen] [speichern] für spätere PEPS Sitzungen gespeichert werden können." %}</p>
-<p>{% trans "(Diese Option ist bei Verwendung eines [Suchschemas] nicht aktiv)." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    冲模/冲头类型
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该列表框包含系统在自动生成冲头和冲模图形时识别的几何形状。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    您可以为每个几何形状分配起始孔位置的单独设置。
+   </font>
+   <font style="vertical-align: inherit;">
+    选择几何形状时，系统会显示一个位图，以图形方式显示该形状、典型的起始孔位置及其参数位置。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    存在以下几何形状：
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="hcp2">
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     圆形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    圆形印章/模具
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     矩形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    矩形冲头/冲模
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     矩形 圆形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    矩形邮票/模具的四个角为圆形
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    长孔类型的
+   </font>
+   <font class="hcp3">
+    <font style="vertical-align: inherit;">
+     长孔几何形状
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     L 形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    L 形冲头/模具
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     D-Form / DD-Form
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    D 和 DD 形冲头/模具
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     任何轮廓
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    任何其他闭合形状
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font class="hcp3">
+    <font style="vertical-align: inherit;">
+     请注意，可以使用“保存
+    </font>
+   </font>
+  </font>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     设置”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮 
+ 保存
+   </font>
+   <font style="vertical-align: inherit;">
+    每个形状的设置 
+ 以供将来的 PEPS 会话使用。
+   </font>
+  </font>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     （使用搜索方案
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    时此选项不活动
+   </font>
+   <font style="vertical-align: inherit;">
+    ）。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

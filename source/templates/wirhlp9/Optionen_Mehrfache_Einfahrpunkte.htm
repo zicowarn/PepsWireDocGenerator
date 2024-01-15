@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,16 +35,110 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Optionen" %}</p><p>{% trans "Diese Optionen legen fest, auf welche Weise die zusätzlichen Startpunkte zur Figur hinzugefügt werden sollen." %}</p>
-<p> </p>
-<h2 class="hcp1">{% trans "Punkt autom. hinzufügen" %}</h2>
-<p>{% trans "Ist diese Checkbox aktiviert, dann werden die Einfahrpunkte zur Bearbeitungsfigur hinzugefügt, ohne vorher auf die Schaltfläche [Hinzufügen] klicken zu müssen." %}</p>
-<p>{% trans "Ist die Option [nicht] aktiviert, können Sie noch Änderungen an der XY-Koordinate vornehmen und den Einfahrpunkt anschließend übernehmen." %}</p>
-<p> </p>
-<h2 class="hcp1">{% trans "Schnitt inkrementieren" %}</h2>
-<p>{% trans "Ist diese Checkbox aktiviert, dann wird jeder neuer Einfahrpunkt, automatisch dem nächsten Nachschnitt zugeordnet." %}</p>
-<p>{% trans "Das heißt, zusätzlicher Einfahrpunkt 1 wird Schnitt 2 zugeordnet. zusätzlicher Einfahrpunkt 2 wird Schnitt 3 zugeordnet, etc.." %}</p>
-<p>{% trans "Ist die Option nicht aktiviert, müssen Sie Schnittnummer manuell, mit Hilfe der Listbox @ zuordnen." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这些选项确定如何将附加起点添加到图中。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <h2 class="hcp1">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    点自动。
+   </font>
+   <font style="vertical-align: inherit;">
+    添加
+   </font>
+  </font>
+ </h2>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果激活此复选框，则入口点将添加到编辑图形中，而无需
+   </font>
+   <font style="vertical-align: inherit;">
+    先单击
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “添加”按钮。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果该选项
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     未
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    激活，您仍然可以更改 XY 坐标，然后接受输入点。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <h2 class="hcp1">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    增量切割
+   </font>
+  </font>
+ </h2>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果激活此复选框，每个新的入口点都会自动分配给下一个重新剪切。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这意味着额外的入口点 1 被分配给部分 2。
+   </font>
+   <font style="vertical-align: inherit;">
+    附加入口点 2 分配给第 3 部分，等等。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果该选项未激活，则必须使用列表框手动指定剪切编号
+   </font>
+  </font>
+  <img alt="Multiple_Einfahrpu3.gif" border="0" height="22" src="../Mehrfach_Einfahrpu3.gif" width="38"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

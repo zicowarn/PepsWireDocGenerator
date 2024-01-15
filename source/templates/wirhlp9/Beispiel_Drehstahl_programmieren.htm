@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -37,23 +36,248 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Drehstahl programmieren" %}</p><ul>	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Öffnen Sie eine Datei und erzeugen Sie die #[Bearbeitungsfigur]# des Drehteils." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Beachten Sie bitte, dass die Figur unbedingt aus programmtechnischen Gründen [unterhalb der X-Achse], im rechten XY-Quadranten liegen und die [Figu][r][richtung] von [links nach rechts] verlaufen muss." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Rufen Sie die Befehle [Programmstart] und #[Operation starten]# im Menü [Bearbeitung] auf. Füllen Sie die Dialoge korrekt aus." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Rufen Sie im Menü [Vorbereitung] den Menüpunkt [Drehstahlbearbeitung] auf. Es folgt ein Dialog:" %}</p></li>
-</ul>
-<p class="hcp3"> </p>
-<p><img src="../DREHSTA.gif" alt="DREHSTA.gif" width="460" height="509" border="0"/></p>
-<p class="hcp3"> </p>
-<ul>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Geben Sie die notwendigen Winkel sowie den Figurnamen ein und aktivieren ggf. weitere Optionen." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Es erfolgt die Berechnung und Erstellung der Geometrie. Ist die Option [#Bearbeitung erzeugen#] aktiviert, wird anschließend automatisch ein Regelflächenprogramm erzeugt." %}</p></li>
-</ul>
-<p> </p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    程序车削钢材
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      打开文件并创建
+     </font>
+     <font style="vertical-align: inherit;">
+      车削零件的
+     </font>
+    </font>
+    <a href="Linien_Boegen_Bearbeitungsfigur.htm">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        加工图形。
+       </font>
+      </font>
+     </font>
+    </a>
+    <font style="vertical-align: inherit;">
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       请注意，出于编程原因，
+      </font>
+     </font>
+     <font style="vertical-align: inherit;">
+      图形必须
+     </font>
+     <font style="vertical-align: inherit;">
+      位于
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       X 轴下方
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      、XY 右象限，并且
+     </font>
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       图形
+      </font>
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       方向
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       必须
+      </font>
+     </font>
+     <font style="vertical-align: inherit;">
+      从左到右。
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       从“编辑”
+      </font>
+     </font>
+     <font style="vertical-align: inherit;">
+      菜单
+     </font>
+     <font style="vertical-align: inherit;">
+      调用
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “程序启动”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      和
+     </font>
+    </font>
+    <a href="../wirhlp10/Operation_starten.htm">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        “启动操作”
+       </font>
+      </font>
+     </font>
+    </a>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      命令 
+	 。
+     </font>
+     <font style="vertical-align: inherit;">
+      正确填写对话框。
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       在准备
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      菜单中，
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       调用车削钢加工
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      菜单 
+	 项
+     </font>
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+     <font style="vertical-align: inherit;">
+      一段对话如下：
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p class="hcp3">
+ </p>
+ <p>
+  <img alt="德雷斯塔.gif" border="0" height="509" src="../DREHSTA.gif" width="460"/>
+ </p>
+ <p class="hcp3">
+ </p>
+ <ul>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      输入必要的角度和图形名称，并根据需要激活其他选项。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      计算并创建几何图形。
+     </font>
+     <font style="vertical-align: inherit;">
+      如果
+     </font>
+     <font style="vertical-align: inherit;">
+      激活
+     </font>
+    </font>
+    <font class="hcp2">
+     <a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('Bearbeitung_erzeugen_Drehstahlbearbeitung.htm',400,300);return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        “创建加工”选项，则会自动创建直纹曲面程序。
+       </font>
+      </font>
+     </a>
+    </font>
+    <font style="vertical-align: inherit;">
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('a1');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

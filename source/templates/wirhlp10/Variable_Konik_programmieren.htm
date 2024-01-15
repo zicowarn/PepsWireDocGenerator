@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -38,59 +37,474 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Variable Konik programmieren" %}</p><p class="Tip_Note_Heading">{% trans "Variable Konik programmieren (Zwei Möglichkeiten)." %}</p><p>{% trans "1.) Bestimmen Sie zunächst eine umlaufend gleiche Konik für das gesamte Teil." %}</p>
-<p>{% trans "Anschließend wird mit der Option [Variable Konik] an den Geometrieelementen, an denen die Konik von der umlaufenden Konik abweicht, eine andere Konik zugeordnet." %}</p>
-<p> </p>
-<p>{% trans "2.) Alternativ wird zunächst ein Konikwinkel von 0 Grad im Feld #[Winkel]# festgelegt und anschließend die Schaltfläche [Variable Konik] gewählt, um die Elemente zu bestimmen, an denen sich die Konik ändert." %}</p>
-<p>{% trans "Nach Wahl der Schaltfläche [Variable Konik] wird der eingegebene Winkel der gesamten Bearbeitungsfigur zugeordnet und es folgt eine Systemabfrage:" %}</p>
-<p class="Prompts">{% trans "Wähle Position in der Nähe des Elements :" %}</p>
-<ul>
-	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Bestimmen Sie nun eine Position in der [Nähe der Mitte] des Geometrieelementes, auf dem die Konik geändert werden soll." %}</p></li>
-	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Verwenden Sie die Fangfunktionen [Zentrum] oder [Koordinaten], um die Position zu bestimmen." %}</p></li>
-</ul>
-<p>{% trans "Nach Wahl des Elementes wird die Mitte des gewählten Elementes durch ein kleines Kreuz gekennzeichnet und der Dialog [Variable Konik] aufgerufen." %}</p>
-<p class="hcp3"> </p>
-<p>{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp3"> </p>
-<p><img src="../VAR_KON1_shg.gif" usemap="#AreaMap0" alt="VAR_KON1_shg.gif" width="242" height="419" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="6,178,230,202" href="javascript:BSSCPopup('Endwinkel.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="6,201,230,228" href="javascript:BSSCPopup('Verhaeltnisradius.htm',400,600);" id="area2" alt=""/>
-<area shape="rect" coords="12,260,231,353" href="Eckenmodus.htm" id="area3" alt=""/>
-<area shape="rect" coords="12,385,116,406" href="javascript:BSSCPopup('OK_Button_Variable_Konik.htm',400,300);" id="area4" alt=""/>
-<area shape="rect" coords="118,384,209,408" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area5" alt=""/>
-<area shape="rect" coords="13,358,224,378" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area6" alt=""/>
-<area shape="rect" coords="8,153,230,177" href="javascript:BSSCPopup('Startwinkel_Variable_Konik.htm',400,300);" id="area7" alt=""/>
-<area shape="rect" coords="8,37,226,143" href="javascript:BSSCPopup('Winkelrichtung_Variable_Konik.htm',400,500);" id="area8" alt=""/>
-</map> </p>
-<p class="hcp3"> </p>
-<p>{% trans "Das System zeigt auf der [rechten Maustaste] oder in der [horizontalen Ikonenleiste] weitere Optionen:" %}</p>
-<p class="hcp3"> </p>
-<p>{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp3"> </p>
-<p><img src="../VAR_KBUT_shg.gif" usemap="#AreaMap1" alt="VAR_KBUT_shg.gif" width="335" height="178" border="0"/>
-<map name="AreaMap1" id="AreaMap1">
-<area shape="rect" coords="3,67,173,85" href="KopTra_Variable_Konik.htm" alt=""/>
-<area shape="rect" coords="1,90,183,107" href="javascript:BSSCPopup('KopRot_Variable_Konik.htm',400,300);" id="area9" alt=""/>
-<area shape="rect" coords="0,110,174,129" href="javascript:BSSCPopup('Spiegeln_Variable_Konik.htm',400,300);" id="area10" alt=""/>
-<area shape="rect" coords="3,44,184,64" href="javascript:BSSCPopup('Loesche_Variable_Konik.htm',400,300);" id="area11" alt=""/>
-<area shape="rect" coords="2,131,152,147" href="Edit_Variable_Konik.htm" alt=""/>
-<area shape="rect" coords="2, 1, 182, 23" href="Common_049.chm::/CommonHelp5/Ausschnitt.htm" alt=""/>
-<area shape="rect" coords="3, 24, 184, 42" href="Common_049.chm::/CommonHelp5/Neuzeichnen_Mag.htm" alt=""/>
-</map> </p>
-<ul>
-	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf eine der Grafiken im Feld [Winkelrichtung], um die Konikrichtung einzustellen." %}</p></li>
-	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Geben Sie jetzt den [Endwinkel] (neuer Winkel) in den Dialog ein. Wählen Sie anschließend den benötigten [Eckenmodus]." %}</p></li>
-	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Die Schaltfläche [OK] führt die Eingaben aus und fügt das [Winkelwechselsymbol] (roter Kreis) in die Grafik ein." %}</p></li>
-</ul>
-<p>{% trans "Das System positioniert das Winkelwechselsymbol automatisch wird in die Mitte des gewählten Elementes." %}</p>
-<p>{% trans "Das Symbol (und die zugeordnete Konik) kann mit der Option [Löschen] entfernt werden." %}</p>
-<ul>
-	<li class="hcp2"><p class="Topic_Text_Bulleted">{% trans "Wiederholen Sie den Vorgang solange, bis alle Konikwechsel definiert sind." %}</p></li>
-</ul>
-<p>{% trans "Bei Ausführung des Befehls stehen die Optionen [Kopieren + Verschieben], [Kopieren + Rotieren] und [Spiegeln] (siehe [rechte Maustaste] oder [Horizontale Ikonenleiste]) zur Verfügung." %}</p>
-<p>{% trans "Die Option dienen zum Vervielfältigen von Winkelwechselsymbolen." %}</p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    程序变量二次曲线
+   </font>
+  </font>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    编程变量 锥度（两个选项）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    1.) 首先确定整个零件周围相同的锥度。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    然后，使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “可变锥度”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项，将不同的锥度分配给锥度偏离周围锥度的几何元素。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    2.) 或者，首先在“角度”字段中将锥角设置为 0 度
+   </font>
+  </font>
+  <a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('Standard_Konik.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      ，
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    然后选择
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “可变锥度”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮以确定锥度发生变化的元素。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选择
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     变量 锥度
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮后，输入的角度将分配给整个加工图形，系统查询如下：
+   </font>
+  </font>
+ </p>
+ <p class="Prompts">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选择元素附近的位置：
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       现在确定几何元素中心附近
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      应更改锥度的
+     </font>
+     <font style="vertical-align: inherit;">
+      位置。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      使用
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       中心
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      或
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       坐标
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      捕捉来确定位置。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选择元素后，所选元素的中心会标有一个小十字，并
+   </font>
+   <font style="vertical-align: inherit;">
+    调用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “Variable 锥度”对话框。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p>
+  <font class="hcp4" color="#FF0000">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p>
+  <img alt="VAR_KON1_shg.gif" border="0" height="419" src="../VAR_KON1_shg.gif" usemap="#AreaMap0" width="242"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="6,178,230,202" href="javascript:BSSCPopup('Endwinkel.htm',400,300);" id="area1" shape="rect"/>
+   <area alt="" coords="6,201,230,228" href="javascript:BSSCPopup('Verhaeltnisradius.htm',400,600);" id="area2" shape="rect"/>
+   <area alt="" coords="12,260,231,353" href="Eckenmodus.htm" id="area3" shape="rect"/>
+   <area alt="" coords="12,385,116,406" href="javascript:BSSCPopup('OK_Button_Variable_Konik.htm',400,300);" id="area4" shape="rect"/>
+   <area alt="" coords="118,384,209,408" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area5" shape="rect"/>
+   <area alt="" coords="13,358,224,378" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area6" shape="rect"/>
+   <area alt="" coords="8,153,230,177" href="javascript:BSSCPopup('Startwinkel_Variable_Konik.htm',400,300);" id="area7" shape="rect"/>
+   <area alt="" coords="8,37,226,143" href="javascript:BSSCPopup('Winkelrichtung_Variable_Konik.htm',400,500);" id="area8" shape="rect"/>
+  </map>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    系统在
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     鼠标右键
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     水平图标栏中
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    显示更多选项 
+ ：
+   </font>
+  </font>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p>
+  <font class="hcp4" color="#FF0000">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp3">
+ </p>
+ <p>
+  <img alt="VAR_KBUT_shg.gif" border="0" height="178" src="../VAR_KBUT_shg.gif" usemap="#AreaMap1" width="335"/>
+  <map id="AreaMap1" name="AreaMap1">
+   <area alt="" coords="3,67,173,85" href="KopTra_Variable_Konik.htm" shape="rect"/>
+   <area alt="" coords="1,90,183,107" href="javascript:BSSCPopup('KopRot_Variable_Konik.htm',400,300);" id="area9" shape="rect"/>
+   <area alt="" coords="0,110,174,129" href="javascript:BSSCPopup('Spiegeln_Variable_Konik.htm',400,300);" id="area10" shape="rect"/>
+   <area alt="" coords="3,44,184,64" href="javascript:BSSCPopup('Loesche_Variable_Konik.htm',400,300);" id="area11" shape="rect"/>
+   <area alt="" coords="2,131,152,147" href="Edit_Variable_Konik.htm" shape="rect"/>
+   <area alt="" coords="2, 1, 182, 23" href="Common_049.chm::/CommonHelp5/Ausschnitt.htm" shape="rect"/>
+   <area alt="" coords="3, 24, 184, 42" href="Common_049.chm::/CommonHelp5/Neuzeichnen_Mag.htm" shape="rect"/>
+  </map>
+ </p>
+ <ul>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       单击“角度方向”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      框中的图形之一
+     </font>
+     <font style="vertical-align: inherit;">
+      以设置锥度方向。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      现在在对话框中
+     </font>
+     <font style="vertical-align: inherit;">
+      输入
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       结束角度（新角度）。
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      接下来，选择 
+	 您需要的
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       转角模式
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      “
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       确定”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      按钮执行输入并将
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       角度变化符号
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      （红色圆圈）插入图形中。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    系统自动将角度变化符号放置在所选元素的中心。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     可以使用删除
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项 
+ 删除
+   </font>
+   <font style="vertical-align: inherit;">
+    符号（和关联的锥度） 。
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      重复该过程，直到定义了所有锥度更改。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    执行该命令时，可以使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “复制+移动”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “复制+旋转”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “镜像”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项
+   </font>
+   <font style="vertical-align: inherit;">
+    （请参见
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     鼠标右键
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <span style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     水平图标栏）。
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该选项用于复制角度变化符号。
+   </font>
+  </font>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('a1');
 	FilePopupInit('area1');
@@ -103,7 +517,9 @@
 	FilePopupInit('area9');
 	FilePopupInit('area10');
 	FilePopupInit('area11');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

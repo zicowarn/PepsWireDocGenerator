@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,33 +35,144 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Figur projizieren oder skalieren" %}</p><p>{% trans "Der Befehl erlaubt es, von einer Figur deren Definition nicht parallel (schräg) zur XY-Ebene liegt, eine Projektion auf Z0 in der XY-Ebene zu erzeugen." %}</p><p>{% trans "Der Befehl erlaubt ebenfalls, das differentiale Skalieren (unterschiedliche Faktoren für X und Y) von Figuren." %}</p>
-<p class="hcp1"> </p>
-<p><img src="../fig_proj_1.gif" alt="fig_proj_1.gif" width="396" height="210" border="0"/></p>
-<p class="hcp1"> </p>
-<p>{% trans "Eine typische Anwendung des Projektions-Befehls findet sich im Modul Drahterosion, wenn z.B. eine Bohrung schräg durch ein Werkstück geschnitten werden muss (Schrägschieber)." %}</p>
-<p>{% trans "Hier wird zunächst die Figur der Bohrungsgeometrie auf der XY-Ebene erzeugt und diese anschließend um die benötigten Winkel rotiert." %}</p>
-<p>{% trans "Da es nicht möglich ist, die rotierte Figur (liegt im Raum) zu bearbeiten, ist eine Projektion der Figur auf die XY-Ebene erforderlich." %}</p>
-<p> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp1"> </p>
-<p><img src="../PROJECT_shg.gif" usemap="#AreaMap0" alt="PROJECT_shg.gif" width="439" height="300" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="14, 174, 150, 198" href="javascript:BSSCPopup('Maximale_Abweichung.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="13, 48, 202, 98" href="javascript:BSSCPopup('Zu_projizierende_Figur.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="14, 107, 204, 157" href="javascript:BSSCPopup('Neuer_Figurname_Projektion.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="305, 39, 380, 57" href="XYZ_Skalieren_Figur_projizieren_skalieren.htm" alt=""/>
-<area shape="rect" coords="210, 37, 302, 58" href="javascript:BSSCPopup('Normale_der_Figur_In_Z.htm',400,300);" id="area4" alt=""/>
-<area shape="rect" coords="16, 265, 148, 288" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area5" alt=""/>
-<area shape="rect" coords="156, 263, 288, 287" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area6" alt=""/>
-<area shape="rect" coords="291, 264, 427, 286" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area7" alt=""/>
-<area shape="rect" coords="216, 72, 428, 257" href="javascript:BSSCPopup('../Commdata/COMMON_Bild.htm',400,300);" id="area8" alt=""/>
-</map> </p>
-<p class="hcp1"> </p>
-<p>{% trans "Nach der Projektion können Sie die Figur mit der Funktion #[Standard Konturbearbeitung]# und der Option #[Schrägschieber bearbeiten]# bearbeiten." %}</p>
-<p class="hcp1"> </p>
-<p>{% trans "[So wird es gemacht: ]#[Figur unterschiedlich in X und Y skalieren]#" %}</p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; 
+	 border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <img alt="Fig_proj_scale.gif" border="0" height="29" src="../Fig_proj_scale.gif" width="30"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    项目或比例图
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该命令允许您从定义不平行（倾斜）于 XY 平面的图形创建到 XY 平面中 Z0 的投影。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该命令还允许对图形进行不同的缩放（X 和 Y 的不同因子）。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="图_proj_1.gif" border="0" height="210" src="../fig_proj_1.gif" width="396"/>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    投影命令的典型应用可以在线蚀模块中找到，例如，当必须对角地穿过工件（对角滑块）切割孔时。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在这里，首先在 XY 平面上创建孔几何图形，然后旋转所需的角度。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    由于无法编辑旋转的图形（位于空间中），因此需要将图形投影到 XY 平面上。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="PROJECT_shg.gif" border="0" height="300" src="../PROJECT_shg.gif" usemap="#AreaMap0" width="439"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="14, 174, 150, 198" href="javascript:BSSCPopup('Maximale_Abweichung.htm',400,300);" id="area1" shape="rect"/>
+   <area alt="" coords="13, 48, 202, 98" href="javascript:BSSCPopup('Zu_projizierende_Figur.htm',400,300);" id="area2" shape="rect"/>
+   <area alt="" coords="14, 107, 204, 157" href="javascript:BSSCPopup('Neuer_Figurname_Projektion.htm',400,300);" id="area3" shape="rect"/>
+   <area alt="" coords="305, 39, 380, 57" href="XYZ_Skalieren_Figur_projizieren_skalieren.htm" shape="rect"/>
+   <area alt="" coords="210, 37, 302, 58" href="javascript:BSSCPopup('Normale_der_Figur_In_Z.htm',400,300);" id="area4" shape="rect"/>
+   <area alt="" coords="16, 265, 148, 288" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area5" shape="rect"/>
+   <area alt="" coords="156, 263, 288, 287" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area6" shape="rect"/>
+   <area alt="" coords="291, 264, 427, 286" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area7" shape="rect"/>
+   <area alt="" coords="216, 72, 428, 257" href="javascript:BSSCPopup('../Commdata/COMMON_Bild.htm',400,300);" id="area8" shape="rect"/>
+  </map>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <a href="../wirhlp10/Standard_Konturbearbeitung____.htm">
+   <font class="hcp2">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      投影后，您可以使用标准轮廓编辑
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    功能和
+   </font>
+  </font>
+  <a href="../wirhlp10/Schraegschieber_Ikone_Konik_Register_Std_Konturbearb.htm">
+   <font class="hcp2">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      编辑倾斜滑块
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项来编辑图形
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     做法如下：
+    </font>
+   </font>
+   <br/>
+  </font>
+  <a href="Beispiel_Figur_unterschiedlich_in_X_und_Y_skalieren.htm">
+   <font class="hcp2">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      在 X 和 Y 方向上以不同的方式缩放图形
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('area1');
 	FilePopupInit('area2');
@@ -72,7 +182,9 @@
 	FilePopupInit('area6');
 	FilePopupInit('area7');
 	FilePopupInit('area8');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,7 +28,21 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Auf Referenzhöhe / Sekundärebene" %}</p><p>{% trans "Bestimmt die Namen der zwei vom System erzeugten Figuren und legt fest, auf welchen Z-Höhen (Referenzhöhe / Sekundärebene) die Projektionen stattfinden sollen." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在参考高度/二级高度
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    确定系统生成的两个图形的名称，并确定应在哪个 Z 高度（参考高度/辅助平面）进行投影。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -40,33 +39,239 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Einseitiger Tangentialdrehstahl" %}</p><p class="hcp1">{% trans "Mit der Funktion [Tangentialdrehstahl] werden die Geometrien für Drehstähle erstellt, die Sie für stirnseitige und planseitige Drehbearbeitungen einsetzen können." %}</p><p> </p>
-<p class="hcp1">{% trans "Im Menü [Drehstahl] finden Sie die Einträge [Einseitiger Tangentialdrehstahl] und [#Wechselseitiger Tangentialdrehstahl#]." %}</p>
-<p class="hcp1">{% trans "Der Unterschied besteht darin, dass beim [Einseitigen Tangentialdrehstahl] der Freiwinkel nur einmal eingegeben werden kann. Dieser Winkel ist dann in eine Richtung ausgerichtet." %}</p>
-<p class="hcp1">{% trans "Beim [#Wechselseitigen Tangentialdrehstahl#] wechselt der Winkel immer in der Mitte, an den waagrechten Linien der Drehstahlgeometrie." %}</p>
-<p class="hcp1">{% trans "An den Wechselpunkten werden von System sogenannte Ereignispunkte (NCIs) erzeugt. Diese Ereignispunkte können nachträglich editiert werden." %}</p>
-<p class="hcp1">{% trans "Auf diese Weise kann der Winkel manipuliert werden. Dies geschieht dann mit der Dialogoption [Änderung des seitlichen Freiwinkels]." %}</p>
-<p class="Hinweis"> </p>
-<p class="dialog" style="font-style: normal;">{% trans "[&lt;i&gt;Beispiel: Einseitiger Tangentialdrehstahl&lt;/i&gt;]" %}</p>
-<p class="Hinweis"><img src="../Einseitiger%20Tangentialdrehstahl.gif" alt="" border="0" class="hcp4"/></p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp5"> </p>
-<p class="hcp5"><img src="../DREHSTA_Einseitig_shg.gif" alt="" usemap="#MAP620490227" border="0" class="hcp4"/>
-<map id="MAP620490227" name="MAP620490227">
-<area shape="rect" coords="9, 30, 346, 495" href="Einseitiger_Wechselseitiger_Tangentialdrehstahl.htm" alt=""/>
-<area shape="rect" coords="78, 505, 155, 527" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="191, 505, 265, 528" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area2" alt=""/>
-</map> </p>
-<p> </p>
-<p class="Hinweis">{% trans "Hinweis:" %}</p>
-<p>{% trans "Die Funktion [Einseitiger Tangentiald[rehstahl]] ist optional." %}</p>
-<p style="mso-bidi-font-weight: normal; mso-bidi-font-style: normal; font-size: 10.0pt;  font-family: Arial, sans-serif;"> </p>
-<p> </p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; 
+	 border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <img alt="旋转工具.gif" border="0" height="34" src="../turntool.gif" width="33"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    单面切向车刀
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+  <font style="vertical-align: inherit;">
+  </font>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     切向车削刀具
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    功能
+   </font>
+   <font style="vertical-align: inherit;">
+    可创建可用于端面和端面车削操作的车削刀具几何形状。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="hcp1">
+  <font style="vertical-align: inherit;">
+  </font>
+  <b class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     在车削刀具
+    </font>
+   </font>
+  </b>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    菜单中，您将找到
+   </font>
+  </font>
+  <b class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单面切向车削刀具
+    </font>
+   </font>
+  </b>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <b class="hcp3">
+   <a href="Wechselseitiger_Tangentialdrehstahl.htm">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      交替切向车削刀具
+     </font>
+    </font>
+   </a>
+  </b>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    条目
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    不同之处在于，对于
+   </font>
+  </font>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单面切向车刀
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，后角只能输入一次。
+   </font>
+   <font style="vertical-align: inherit;">
+    然后将该角度沿一个方向对齐。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用
+   </font>
+  </font>
+  <span class="hcp2">
+   <a href="Wechselseitiger_Tangentialdrehstahl.htm">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      交替切向车刀时，
+     </font>
+    </font>
+   </a>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    角度始终在车刀几何形状的水平线上的中间发生变化。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    系统在变化点创建所谓的事件点 (NCI)。
+   </font>
+   <font style="vertical-align: inherit;">
+    这些事件点可以稍后编辑。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这样就可以控制角度了。
+   </font>
+  </font>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     然后使用“更改横向间隙角度
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ”对话框选项来完成此操作
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="Hinweis">
+ </p>
+ <p class="dialog" style="font-style: normal;">
+  <b>
+   <i>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      示例：单面切向车刀
+     </font>
+    </font>
+   </i>
+  </b>
+ </p>
+ <p class="Hinweis">
+  <img alt="" border="0" class="hcp4" src="../Einseitiger%20Tangentialdrehstahl.gif"/>
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp5">
+ </p>
+ <p class="hcp5">
+  <img alt="" border="0" class="hcp4" src="../DREHSTA_Einseitig_shg.gif" usemap="#MAP620490227"/>
+  <map id="MAP620490227" name="MAP620490227">
+   <area alt="" coords="9, 30, 346, 495" href="Einseitiger_Wechselseitiger_Tangentialdrehstahl.htm" shape="rect"/>
+   <area alt="" coords="78, 505, 155, 527" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area1" shape="rect"/>
+   <area alt="" coords="191, 505, 265, 528" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area2" shape="rect"/>
+  </map>
+ </p>
+ <p>
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一个通知：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单侧切向
+    </font>
+   </font>
+   <font style="font-weight: bold;">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      扭钢
+     </font>
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    功能
+   </font>
+   <font style="vertical-align: inherit;">
+    可选。
+   </font>
+  </font>
+ </p>
+ <p style="mso-bidi-font-weight: normal; mso-bidi-font-style: normal; font-size: 10.0pt; 
+	 font-family: Arial, sans-serif;">
+ </p>
+ <p>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('area1');
 	FilePopupInit('area2');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

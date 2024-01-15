@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,20 +33,103 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Verschiedenes" %}</p><p class="Tip_Note_Heading">{% trans "Kommentar mit jedem Schnitt ausgeben:" %}</p><p>{% trans "Ist diese Option aktiviert, gibt das System Kommentare in die NC-Daten aus." %}</p>
-<p class="Block_Text" style="margin-top: 0; margin-bottom: 0;"> </p>
-<p class="Tip_Note_Heading">{% trans "Maschinentyp vor PP-Lauf auswählen:" %}</p>
-<p>{% trans "Es ist möglich, für unterschiedliche Maschinentypen eines Herstellers, Maschinenprofile anzulegen (siehe #[Maschinenprofile]# in diesem Dialog)." %}</p>
-<p>{% trans "Ist die Option [Maschinentyp vor PP-Lauf auswählen] aktiviert, zeigt das System bei einem Postprozessorlauf (NC-Daten erzeugen) einen Dialog, in der Sie auswählen können, für welchen Maschinentyp die NC-Daten erzeugt werden sollen." %}</p>
-<p> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
-<p class="Block_Text">{% trans "#[Ein Profil für einen Maschinentyp anlegen]#" %}</p>
-<script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    各种各样的
+   </font>
+  </font>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    每次剪切输出评论：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果激活此选项，系统将在 NC 数据中输出注释。
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text" style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    PP运行前选择机器类型：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    可以为制造商的不同机器类型创建机器配置文件（请参阅
+   </font>
+   <font style="vertical-align: inherit;">
+    此对话框中的
+   </font>
+  </font>
+  <a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('Maschinenprofile_Postprozessor_konfigurieren.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      机器配置文件）。
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果激活
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     PP 运行前选择机器类型选项
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，系统会在后处理器运行（生成 NC 数据）期间显示一个对话框，您可以在其中选择应为其生成 NC 数据的机器类型。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    它是这样完成的：
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <a href="Beispiel_Profil_fuer_einen_Maschinentyp_anlegen.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      为机器类型创建配置文件
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
         if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
         FilePopupInit('a1');
-//]]&gt;
-</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

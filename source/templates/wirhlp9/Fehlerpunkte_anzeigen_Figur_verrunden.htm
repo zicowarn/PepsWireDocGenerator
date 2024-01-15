@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,10 +33,78 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Fehlerpunkte anzeigen" %}</p><p>{% trans "Bei sehr kleinen Verrundungsradien sind Verrundungsfehler nicht immer sichtbar." %}</p>
-<p>{% trans "Ist die Option [Fehlerpunkte anzeigen] aktiv, kennzeichnet das System Verrundungsfehler durch [C-Punkte]." %}</p>
-<p>{% trans "Das Kennzeichnen der Verrundungsfehler, erlaubt Ihnen, die Ursache der Fehler zu untersuchen und ggf. manuell zu korrigieren." %}</p>
-<p>{% trans "Die C-Punkte, welche die Fehlerstellen kennzeichnen, sind auf dem Layer [@@ BLEND-FAIL] abgelegt." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    显示故障点
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    由于舍入半径非常小，舍入误差并不总是可见。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “显示误差点”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项处于活动状态，系统将使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     C 点
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    识别舍入误差。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    标记舍入错误使您可以调查错误的原因并在必要时手动更正它们。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    标识错误位置的 C 点存储在
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     @@ BLEND-FAIL
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    层上。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

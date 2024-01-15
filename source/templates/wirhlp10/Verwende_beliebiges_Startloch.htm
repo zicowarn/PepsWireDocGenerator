@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,15 +33,77 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Verwende unregelmäßiges Startloch" %}</p><p>{% trans "Wird aktiviert, wenn das [#Startloch keine runde Form#] hat und eine [beliebige andere geometrische] Form als Startloch verwendet werden soll." %}</p><p>{% trans "Die Funktion aktiviert das Feld [Beliebiges Startloch], in der Sie die Figur die das unregelmäßige Startloch bildet, auswählen können." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p><img src="../poc_bel.gif" alt="poc_bel.gif" width="480" height="260" border="0"/></p>
-<script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用不规则起始孔
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果
+   </font>
+  </font>
+  <font class="hcp1">
+   <a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('Startloch_durchmesser.htm',400,300);return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      起始孔不是圆形
+     </font>
+    </font>
+   </a>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    且
+   </font>
+   <font style="vertical-align: inherit;">
+    应使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     任何其他几何形状作为起始孔，则激活。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     该功能激活任意起始孔
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    字段
+   </font>
+   <font style="vertical-align: inherit;">
+    ，您可以在其中选择形成不规则起始孔的图形。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <img alt="poc_bel.gif" border="0" height="260" src="../poc_bel.gif" width="480"/>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
         if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
         FilePopupInit('a1');
-//]]&gt;
-</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

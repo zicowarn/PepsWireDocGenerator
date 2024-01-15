@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,17 +34,182 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Tip_Note_Heading">{% trans "Figur unterschiedlich in X und Y skalieren" %}</p><ul>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Wählen Sie im Menü [Vorbereitung \ Diverses] den Befehl [Figur projizieren oder skalieren]" %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Bestimmen Sie im Feld [Zu projizierende Figur] die Figur die skaliert werden soll. Verwenden Sie die Schaltfläche @ zur Auswahl der Figur." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf das Register [XY-Skalieren]." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Geben Sie im Feld [Bezugspunkt] die Position ein, auf die sich der Skaliervorgang beziehen soll." %}</p></li>
-	<li class="hcp1"><p class="Topic_Text_Bulleted">{% trans "Tragen Sie in den Feldern [X-Skalier] und [Y-Skalier] die Skalierfaktoren ein (z.B. 0.5 = 50 % kleiner - 2 = 200 % größer) und schließen Sie den Dialog mit [OK]." %}</p></li>
-</ul>
-<p>{% trans "Die folgende Zeichnung zeigt ein einfaches verrundetes Rechteck das in der X-Achse um 2 und in der Y-Achse um 1.5 skaliert wurde." %}</p>
-<p>{% trans "Die Zeichnung zeigt ebenfalls den Bezugspunkt für den Skaliervorgang und das die Ecken des Rechtecks durch die Skalierung in Ellipsen gewandelt wurden." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p><img src="../DIFSCALE.gif" alt="DIFSCALE.gif" width="326" height="187" border="0"/></p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在 X 和 Y 上以不同方式缩放图形
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       从“准备”\“其他”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      菜单中，选择
+     </font>
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       “项目”或“比例图形”
+      </font>
+     </font>
+     <font style="vertical-align: inherit;">
+      命令
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       在要投影的图形
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      字段中，指定
+     </font>
+     <font style="vertical-align: inherit;">
+      要缩放的图形。
+     </font>
+     <font style="vertical-align: inherit;">
+      使用 按钮
+     </font>
+    </font>
+    <img alt="选择.gif" border="0" height="23" src="../Select.gif" width="24"/>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选择图形。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      单击
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       XY 比例
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选项卡。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       在参考点
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      字段中，输入
+     </font>
+     <font style="vertical-align: inherit;">
+      缩放操作应参考的位置。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       在X 缩放
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      和
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       Y 缩放
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      字段中输入缩放系数（例如 0.5 = 小 50% - 2 = 大 200%），然后单击
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “确定”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      关闭对话框
+     </font>
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图显示了一个简单的圆角矩形，该矩形在 X 轴上缩放了 2，在 Y 轴上缩放了 1.5。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该图还显示了缩放过程的参考点，并且矩形的角通过缩放被转换为椭圆。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <img alt="DIFSCALE.gif" border="0" height="187" src="../DIFSCALE.gif" width="326"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

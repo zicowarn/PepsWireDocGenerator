@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -39,35 +38,278 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p>{% trans "[[Drehstahl um Schaftmitte gedreht]]" %}</p><p class="hcp1">{% trans "Die Drehstahlgeometrie wird um die Schaftmitte des Drehstahls gedreht, ansonsten wird die Drehstahlgeometrie um den kleinsten Durchmesser der zu erzeugenden Geometrie gedreht." %}</p>
-<p class="hcp1"> </p>
-<p class="hcp2">{% trans "[Frontaler Freiwinkel durch Vorrichtung]" %}</p>
-<p class="hcp1">{% trans "Spezielle Vorrichtung auf der Maschine. Der zu bearbeitende Drehstahl wird schräg aufgespannt. Der Winkel der Vorrichtung wird hier eingeben." %}</p>
-<p class="hcp1"> </p>
-<p class="hcp2">{% trans "[Frontaler Freiwinkel durch Maschine]" %}</p>
-<p class="hcp1">{% trans "Winkeleingabe des [frontalen Freiwinkels], den die Maschine bearbeiten muss." %}</p>
-<p class="hcp1"> </p>
-<p class="hcp2">{% trans "[Seitlicher Freiwinkel]" %}</p>
-<p class="hcp1">{% trans "Winkeleingabe des [seitlichen Freiwinkels] (positive und negative Eingabe)." %}</p>
-<p class="hcp1"> </p>
-<p class="hcp2">{% trans "[Änderung des seitlichen Freiwinkels]" %}</p>
-<p class="hcp1">{% trans "Wird nur aktiv bei [Wechselseitigen Tangentialdrehstahl] und beschreibt die Position, an dem der seitliche Freiwinkel geändert werden soll." %}</p>
-<p class="hcp1">{% trans "Man kann die Ereignispunkte (NCIs) anwählen und den Freiwinkel ändern. Diese Ereignispunkte entstehen aber nur bei [Wechselseitigen Tangentialdrehstahl]." %}</p>
-<p class="hcp1"> </p>
-<p class="hcp2">{% trans "[Seitlicher Freiwinkel neu initialisieren]" %}</p>
-<p class="hcp1">{% trans "Wird nur aktiv bei [Wechselseitigen Tangentialdrehstahl]. Neuerzeugung des seitlichen Freiwinkel." %}</p>
-<p class="hcp1"> </p>
-<p class="hcp2">{% trans "[Max. Winkel]" %}</p>
-<p class="hcp4">{% trans "Maximale Eingabe des Winkels der Geraden bei einem Winkelwechsel." %}</p>
-<p class="hcp4"> </p>
-<p class="hcp2">{% trans "[Zu bearbeitende Figur]" %}</p>
-<p class="hcp4">{% trans "Auswahl der Bearbeitungsfigur, [die bearbeitet werden soll.]" %}</p>
-<p class="hcp4"> </p>
-<p class="hcp2">{% trans "[Technologie]" %}</p>
-<p class="hcp1">{% trans "Technologieeingabe. Anwahl eines Schnittschemas, die beim Erzeugen der Regelflächenbearbeitung geladen wird." %}</p>
-<p class="hcp1"> </p>
-<p class="hcp2">{% trans "[Pendelschnitt]" %}</p>
-<p class="hcp1">{% trans "Anwahl Pendelschnitt, der beim Erzeugen der Regelflächenbearbeitung berücksichtigt wird." %}</p>
+ <p>
+  <b style="mso-bidi-font-weight: normal;">
+   <span style="font-family: Arial, sans-serif;">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      车削钢绕轴中部转动
+     </font>
+    </font>
+   </span>
+  </b>
+ </p>
+ <p class="hcp1">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    车削钢几何形状围绕车削钢轴的中心旋转，否则车削钢几何形状围绕要创建的几何形状的最小直径旋转。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p class="hcp2">
+  <b>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     通过装置的正面间隙角
+    </font>
+   </font>
+  </b>
+ </p>
+ <p class="hcp1">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    机器上的特殊装置。
+   </font>
+   <font style="vertical-align: inherit;">
+    将待加工的车削钢以一定角度夹紧。
+   </font>
+   <font style="vertical-align: inherit;">
+    此处输入设备的角度。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p class="hcp2">
+  <b>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     机器正面间隙角
+    </font>
+   </font>
+  </b>
+ </p>
+ <p class="hcp1">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    机器必须加工的
+   </font>
+  </font>
+  <span class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     前角
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    的角度输入。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p class="hcp2">
+  <b>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     横向间隙角
+    </font>
+   </font>
+  </b>
+ </p>
+ <p class="hcp1">
+  <font style="vertical-align: inherit;">
+  </font>
+  <span class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     横向间隙
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    角的角度输入
+   </font>
+   <font style="vertical-align: inherit;">
+    （正负输入）。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p class="hcp2">
+  <b>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     横向间隙角的变化
+    </font>
+   </font>
+  </b>
+ </p>
+ <p class="hcp1">
+  <font style="vertical-align: inherit;">
+  </font>
+  <span class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     仅对交替切向车刀
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    有效
+   </font>
+   <font style="vertical-align: inherit;">
+    ，并描述应更改横向后角的位置。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    您可以选择事件点 (NCI) 并更改间隙角度。
+   </font>
+  </font>
+  <span class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     然而，这些事件点仅在往复切向车削钢
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    时出现
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p class="hcp2">
+  <b>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     重新初始化横向间隙角
+    </font>
+   </font>
+  </b>
+ </p>
+ <p class="hcp1">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    仅适用于
+   </font>
+  </font>
+  <span class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     交替切向车刀
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+   <font style="vertical-align: inherit;">
+    重新创建横向间隙角。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p class="hcp2">
+  <b>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     最大角度
+    </font>
+   </font>
+  </b>
+ </p>
+ <p class="hcp4">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    改变角度时直线角度的最大输入。
+   </font>
+  </font>
+ </p>
+ <p class="hcp4">
+ </p>
+ <p class="hcp2">
+  <b>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     待编辑图
+    </font>
+   </font>
+  </b>
+ </p>
+ <p class="hcp4">
+  <font style="vertical-align: inherit;">
+   <span style="font-family: Arial, sans-serif; mso-tab-count: 1;">
+    <font style="vertical-align: inherit;">
+     选择要编辑的
+    </font>
+   </span>
+   <font style="vertical-align: inherit;">
+    编辑图形。
+   </font>
+  </font>
+  <span style="font-family: Arial, sans-serif; mso-tab-count: 1;">
+   <font style="vertical-align: inherit;">
+   </font>
+  </span>
+ </p>
+ <p class="hcp4">
+ </p>
+ <p class="hcp2">
+  <b>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     技术
+    </font>
+   </font>
+  </b>
+ </p>
+ <p class="hcp1">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    技术投入。
+   </font>
+   <font style="vertical-align: inherit;">
+    选择创建直纹面加工时加载的切削方案。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p class="hcp2">
+  <b>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     摆切
+    </font>
+   </font>
+  </b>
+ </p>
+ <p class="hcp1">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选择摆式切割，在创建直纹表面加工时要考虑这一点。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

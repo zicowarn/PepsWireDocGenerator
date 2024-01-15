@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,19 +34,142 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Winkeldefinition" %}</p><p>{% trans "Mit diesem Dialogfeld bestimmen Sie, unter welchem Winkel die Schrägschieberbearbeitung ausgeführt werden soll." %}</p>
-<p>{% trans "Der Winkel des Schiebers wird durch eine [Winkelangabe] oder durch eine [XY-Verschiebung] in mm festgelegt. Die XY-Verschiebung bezieht sich auf die untere Ebene." %}</p>
-<p> </p>
-<p class="Tip_Note_Heading">{% trans "XY-Verschiebung" %}</p>
-<p>{% trans "Ist diese Option aktiv, wird der Winkel des Schrägschiebers durch eine inkrementale [XY-Verschiebung] bestimmt." %}</p>
-<p>{% trans "Die Eingabe von positiven und negativen Verschiebewerten ist erlaubt, so dass eine Verschiebung in alle Richtungen möglich ist." %}</p>
-<p> </p>
-<p class="Tip_Note_Heading">{% trans "XY-Winkel" %}</p>
-<p>{% trans "Ist diese Option aktiv, wird der Winkel des Schrägschiebers durch [Winkelangaben] bezogen auf die Achsen X und Y bestimmt." %}</p>
-<p>{% trans "Auch hier ist die Eingabe von positiven und negativen Winkelwerten erlaubt, so dass eine Verschiebung in alle Richtungen möglich ist." %}</p>
-<p> </p>
-<p class="Tip_Note_Heading">{% trans "Keine Elemente reduzieren" %}</p>
-<p>XXX</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    角度定义
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用此对话框可以确定应执行倾斜滑动加工的角度。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    滑块的角度由
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     角度规格
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     XY 位移（
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    以 
+ 毫米为单位）确定。
+   </font>
+   <font style="vertical-align: inherit;">
+    XY位移是指下平面。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    XY位移
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     如果此选项处于活动状态，则倾斜滑块的角度由增量XY 位移
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    确定
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    允许输入正负偏移值，因此可以进行所有方向的偏移。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    XY角度
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果此选项处于活动状态，则倾斜滑块的角度由基于 X 轴和 Y 轴的
+   </font>
+  </font>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     角度信息
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    确定。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这里也允许输入正负角度值，因此可以在所有方向上进行移动。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    不要折叠元素
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    XXX
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}
