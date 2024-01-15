@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,12 +28,57 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Startlochdatei ausgeben" %}</p><p class="Tip_Note_Heading" style="margin-top: 0.00pt;">{% trans "Startlochdatei" %}</p>
-<p>{% trans "Legt fest, ob bei einem Postprozessorlauf (NC-Daten erzeugen) eine Datei mit den XY-Startlochkoordinaten der bearbeiteten Geometrien erzeugt werden soll." %}</p>
-<p>{% trans "Mit der Schaltfläche @, können Sie das Format der Startlochdatei anpassen." %}</p>
-<p> </p>
-<p class="Tip_Note_Heading">{% trans "Schräge Löcher ignorieren" %}</p>
-<p>{% trans "Ist diese Option aktiv, werden Startlöcher zum 'schräg Einfädeln' nicht in die Datendatei ausgegeben." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    输出起始孔文件
+   </font>
+  </font>
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 0.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    起始孔文件
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    指定是否应在后处理器运行期间创建包含已编辑几何图形的 XY 起始孔坐标的文件（生成 NC 数据）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <img alt="检查程序.gif" border="0" height="33" src="../CHKPROG.gif" width="33"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    您可以
+   </font>
+   <font style="vertical-align: inherit;">
+    使用 按钮调整起始孔文件的格式。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    忽略倾斜的孔
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果此选项处于活动状态，则“对角螺纹”的起始孔不会输出到数据文件中。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

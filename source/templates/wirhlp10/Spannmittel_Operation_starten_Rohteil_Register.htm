@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,22 +35,115 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Spannmittel" %}</p><p>{% trans "Wählen Sie hier die Solids aus, die in der #[Solid-Simulation]# als Spannmittel angezeigt werden sollen." %}</p><p>{% trans "Die Definition von [Spannmitteln] ist erforderlich, wenn Sie im Zuge einer #[Solid-Simulation]# Spannmittel darstellen und diese in die Kollisionsprüfung mit einbeziehen wollen." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Simulation_mit_Spannmitteln.gif" alt="Simulation_mit_Spannmitteln.gif" width="435" height="308" border="0"/></p>
-<p class="hcp2"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Spannmittel_shg.gif" usemap="#AreaMap0" alt="Spannmittel_shg.gif" width="277" height="197" border="0"/> <map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="12,159,88,182" href="javascript:BSSCPopup('Solid_s_Spannmittel_Operation_starten_Rohteil_Register.htm');" id="area1" alt=""/></map></p>
-<p class="hcp2"> </p>
-<p>{% trans "#[Spannmittel für Solidsimulation aus Solidgeometrien erzeugen]#" %}</p>
-<script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    夹紧装置
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <a href="../Simulation/Solid_Simulation.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      此处选择应在实体模拟
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    中显示为夹紧装置的实体
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <a href="../Simulation/Solid_Simulation.htm">
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      如果您想在实体模拟
+     </font>
+    </font>
+   </a>
+   <font style="vertical-align: inherit;">
+    过程中表示夹紧设备
+   </font>
+   <font style="vertical-align: inherit;">
+    并将其包含在碰撞检查中，则必须
+   </font>
+   <font style="vertical-align: inherit;">
+    定义
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     夹紧设备。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <a href="../Simulation/Solid_Simulation.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="带有夹紧装置的模拟.gif" border="0" height="308" src="../Simulation_mit_Spannmitteln.gif" width="435"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="Spannmittel_shg.gif" border="0" height="197" src="../Spannmittel_shg.gif" usemap="#AreaMap0" width="277"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="12,159,88,182" href="javascript:BSSCPopup('Solid_s_Spannmittel_Operation_starten_Rohteil_Register.htm');" id="area1" shape="rect"/>
+  </map>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <a href="Beispiel_Spannmittel_fuer_Solidsimulation_aus_Solidgeometrien_erzeugen.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      从实体几何形状创建用于实体模拟的夹紧装置
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
         if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
         FilePopupInit('area1');
-//]]&gt;
-</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

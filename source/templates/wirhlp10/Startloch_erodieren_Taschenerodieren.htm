@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,22 +33,157 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Startloch erodieren" %}</p><p>{% trans "Beim Schneiden von 'Stempelketten' ist es in einigen Fällen nötig, die Startlöcher durch ein Ausräumen zu erzeugen, anstatt diese im Vorfeld zu bohren." %}</p>
-<p>{% trans "Ist die Option '[Startloch erodieren]' aktiv, wird die Startlochlochgeometrien durch ein 'Ausräumen' erodiert." %}</p>
-<p>{% trans "Die Größe der Startlöcher wird bestimmt im Dialogbereich [Startloch &amp;gt; Durchmesser]." %}</p>
-<p> </p>
-<p>{% trans "Das folgende Bild zeigt, wie man eine Stempelkette ohne Einfädeln schneiden kann." %}</p>
-<p>{% trans "Die [Grünen Pfeile] zeigen die 3 Positionen an, denen die Startlöcher ausgeräumt werden." %}</p>
-<p><img src="../Sttarloch%20erodieren_Taschenerodieren.gif" alt="" style="border: none;" border="0"/></p>
-<p> </p>
-<p style="font-weight: bold;">{% trans "Ablauf zum Beispiel oberhalb:" %}</p>
-<p>{% trans "Der Draht fährt von Aussen an und räumt das Startloch aus." %}</p>
-<p>{% trans "Dann wird der erste Stempel geschnitten (z.B. pendelnd mit 3 Schnitten)." %}</p>
-<p>{% trans "Danach wird ohne ein Abschneiden zum Startpunkt des nächsten Stempels gefahren." %}</p>
-<p>{% trans "Nun wird das nächste Startloch ausgeräumt und der nächste Stempel geschnitten und so weiter ... ." %}</p>
-<p> </p>
-<p class="Hinweis">{% trans "Wichtiger Hinweis:" %}</p>
-<p>{% trans "Der Werkzeugweg für das Ausräumen der Startlöcher wird nur in der [#Standard-Simulation#] angezeigt." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    侵蚀起始孔
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    当切割“印章链”时，在某些情况下，需要通过清除它们而不是提前钻孔来创建起始孔。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果“
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     侵蚀起始孔
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ”选项处于活动状态，则起始孔几何形状将通过“清除”而侵蚀。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     起始孔的尺寸在起始孔 &gt; 直径
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框区域中确定
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图展示了如何在不穿线的情况下切割邮票链。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    绿色
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     箭头
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    表示将清除起始洞的 3 个位置。
+   </font>
+  </font>
+ </p>
+ <p>
+  <img alt="" border="0" src="../Sttarloch%20erodieren_Taschenerodieren.gif" style="border: none;"/>
+ </p>
+ <p>
+ </p>
+ <p style="font-weight: bold;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    例如上面的流程：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    电线从外部接近并清除起始孔。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    然后切割第一个印章（例如具有 3 个切割的摆锤）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    然后系统移动到下一个印记的起点，而不将其切断。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    现在下一个起始孔已被清除，下一个印章已被切割，依此类推......
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    重要的提示：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <span class="hcp1">
+   <a href="../Simulation/_Standard_Simulation.htm">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      用于清除起始孔的刀具路径仅在标准模拟
+     </font>
+    </font>
+   </a>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    中显示
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

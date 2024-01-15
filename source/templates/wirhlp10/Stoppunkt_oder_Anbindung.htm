@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,22 +33,207 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Stoppunkt oder Anbindung" %}</p><p>{% trans "Bei vielen Bearbeitungen ist kurz vor dem Ende einer Bearbeitung ein Maschinenstopp (z.B. M01), um das Ausfallteil zu entnehmen." %}</p>
-<p>{% trans "Oder es soll eine Anbindung (Haltesteg) zur Fixierung des Ausfallteils erzeugt werden." %}</p>
-<p>{% trans "Die Position des Stopps (M01) bzw. die Größe der Anbindung (Haltesteg) können Sie mit folgenden Optionen festlegen:" %}</p>
-<p> </p>
-<p>{% trans "[1.) Anbindungslänge]" %}</p>
-<p>{% trans "Aktivieren Sie die Option [Anbindungslänge] und geben Sie an, wie viel Millimeter [vor dem Ende] der Bearbeitung der Stopp (M01) erfolgen soll oder wie groß die Anbindung (Haltesteg) sein soll." %}</p>
-<p> </p>
-<p>{% trans "[2.) XY-Koordinate]" %}</p>
-<p>{% trans "Klicken Sie auf die Schaltfläche [&amp;gt;&amp;gt;] und ermitteln Sie dann die X/Y-Koordinaten des Stoppunktes, durch Klicken in der Nähe des benötigten Stoppunktes." %}</p>
-<p>{% trans "Auch die direkte XY-Eingabe der Stoppunktkoordinaten ist möglich." %}</p>
-<p> </p>
-<p>{% trans "3.) [Keine]" %}</p>
-<p class="Block_Text">{% trans "Es wird kein Stopp (M01) ausgeben und keine Anbindung (Haltesteg) erzeugt." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p>{% trans "Ob und auf welche Weise die Anbindung entfernt wird, legt die Optionen im Dialogbereich [Methode zur Entfernung der Anbindung(en)] fest." %}</p>
-<p>{% trans "Ist [mehr als eine Anbindungen] erforderlich, werden diese mit dem Befehl #[Zusätzliche Anbindungen]# im Menü [Vorbereitung] erzeugt." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    停止点或连接
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在许多加工过程中，机器会在加工过程结束前不久停止（例如 M01），以移除故障零件。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或者应创建一个连接（挡杆）来修复发生故障的部分。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    您可以使用以下选项指定停止位置 (M01) 或连接（固定杆）的尺寸：
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     1.) 连接长度
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    激活
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     连接长度选项并指定在加工
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     结束前
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    多少毫米
+   </font>
+   <font style="vertical-align: inherit;">
+    应出现停止 (M​​01) 或连接（停止腹板）应有多大。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     2.) XY坐标
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    单击
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     &gt;&gt;
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮 
+ ，然后通过在所需停止点附近单击来确定停止点的 X/Y 坐标。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    也可以直接 XY 输入停止点坐标。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    3.)
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     无
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    不输出停止（M01）并且不创建连接（停止条）。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     是否以及如何删除绑定由“删除绑定的方法”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框区域中的选项决定
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果需要
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     多个绑定，可以使用
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     “准备”
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    菜单 
+ 中的
+   </font>
+  </font>
+  <a href="../wirhlp9/Zusaetzliche_Anbindungen.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      “附加绑定”
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令创建这些绑定
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

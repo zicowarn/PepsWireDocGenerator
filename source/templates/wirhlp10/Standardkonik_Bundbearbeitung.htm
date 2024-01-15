@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,15 +35,195 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Standardkonik" %}</p><p>{% trans "Mit diesen Schaltflächen legen Sie fest, welche Art von Bundbearbeitung programmiert werden soll." %}</p>
-<p>{% trans "Sie können zwischen [Bund oben], [Bund unten] oder [Bund in der Mitte] (Nur bestimmte Maschinen z.B. [AgieVision]) wählen." %}</p>
-<p>{% trans "Die Schaltflächen zeigen eine Grafik, welche die notwendigen Eingaben für [Höhe (Z)] des Bundes und den [Konkwinkel (Alpha)] verdeutlichen soll." %}</p>
-<p class="hcp2"> </p>
-<p class="Hinweis">{% trans "Hinweis:" %}</p>
-<p>{% trans "Bei den meisten NC-Maschinen bezieht sich die Eingabe für [Höhe (Z)] auf die [untere Bearbeitungsebene]." %}</p>
-<p>{% trans "Nur bei [AgieVision] Postprozessoren bezieht sich die Referenzhöheneingabe auf die [obere Ebene] und ist [negativ]." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../KONIK_L_AGIE_2.gif" alt="KONIK_L_AGIE_2.gif" width="329" height="245" border="0"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    标准锥度
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用这些按钮，您可以确定应该对哪种类型的品丝处理进行编程。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    您可以选择
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     上腰带
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     下腰带
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     中腰带
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    （仅限某些机器，例如
+   </font>
+   <font style="vertical-align: inherit;">
+    AgieVision
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     ） 。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这些按钮显示一个图形，
+   </font>
+   <font style="vertical-align: inherit;">
+    说明了
+   </font>
+   <font style="vertical-align: inherit;">
+    衣领
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     高度 (Z)和
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     凹角 (alpha)的必要条目。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一个通知：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     对于大多数 NC 机床，高度 (Z)
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    的输入是
+   </font>
+   <font style="vertical-align: inherit;">
+    指
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     较低的加工平面
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    仅对于
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     AgieVision
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    后处理器，参考高度输入是指
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     上层高度
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    并且为
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     负值
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="KONIK_L_AGIE_2.gif" border="0" height="245" src="../KONIK_L_AGIE_2.gif" width="329"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -38,29 +37,452 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Startlochdurchmesser / Beliebiges Startloch" %}</p><p>{% trans "Dieser Dialogbereich ist mehrfach belegt und zeigt entweder [Rundes Startloch], [Unregelmäßiges Startloch] oder [Schlichtaufmaß] in Abhängigkeit davon, welche der Optionen [Verwende rundes Startloch], [Verwende unregelmäßiges Startloch] oder [Aufmaß schlichten] aktiviert wurde." %}</p>
-<p class="hcp2"> </p>
-<h2 class="hcp3">{% trans "Rundes Startloch" %}</h2>
-<p>{% trans "Das Feld [Rundes Startloch] wird angezeigt, wenn die Option [Verwende rundes Startloch] [aktiviert] wurde. Das Feld legt den Durchmesser der Startlochbohrung fest." %}</p>
-<p>{% trans "Zusätzlich bestimmt die Angabe, dass die Startlochbohrung vom Ausräumvorgang ausgenommen wird." %}</p>
-<p>{% trans "Der Durchmesser der Startlochbohrung sollte [kleiner] angegeben werden, als er tatsächlich ist. Dadurch wird Ausschuss bei Unrundheit der Bohrung und Bohrungsversatz vermieden." %}</p>
-<p>{% trans "Falls die Startlochbohrung in gezeichneter Form vorliegt, ist es möglich den Durchmesser der Bohrung aus einer Zeichnung zu ermitteln. Verwenden Sie dazu die Schaltfläche @." %}</p>
-<p class="Hinweis">{% trans "Hinweis:" %}</p>
-<p>{% trans "Das Feld [Rundes Startloch] spielt auch bei einer #[Solid-Simulation]# eine Rolle. Die Groesse des in der #[Solid-Simulation]# simulierten Startlochs wird hier eingestellt." %}</p>
-<p> </p>
-<h2 class="hcp3">{% trans "Unregelmäßiges Startloch" %}</h2>
-<p>{% trans "Dieses Feld ist aktiv, wenn Sie die Option [Verwende beliebiges Startloch] aktivieren." %}</p>
-<p>{% trans "Das Feld wird verwendet, wenn ein Startloch [KEINE runde Form] hat und [eine beliebige geometrische Form] als Startloch herangezogen werden soll und die Startlochgeometrie vom Ausräumvorgang ausgenommen werden soll." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../poc_bel.gif" alt="poc_bel.gif" width="480" height="260" border="0"/></p>
-<p class="hcp2"> </p>
-<h2 style="margin-top: 0.00pt; margin-bottom: 2.40pt;">{% trans "Schlichtaufmaß" %}</h2>
-<p>{% trans "Dieses Feld ist aktiv, wenn Sie die Option [Aufmaß schlichten] aktivieren. Das Feld [Schlichtaufmaß] bestimmt die Größe des Materialaufmaßes auf den zu bearbeitenden Durchbrüchen." %}</p>
-<p>{% trans "Die Option [Aufmaß schlichten] entfernt dieses Aufmaß durch eine Anzahl paralleler Schnitte." %}</p>
-<p>{% trans "Das folgende Bild zeigt eine Nut, bei der ein Aufmaß mit mehreren parallelen Schnitten entfernt wird:" %}</p>
-<p><img src="../poc_aufmass_schlichten.gif" alt="poc_aufmass_schlichten.gif" width="321" height="162" border="0"/></p>
-<p class="Hinweis">{% trans "Hinweis:" %}</p>
-<p>{% trans "Die Geometrie des Startlochs muss als Geometrietyp [Figur] vorliegen. Figuren kann man mit dem Befehl #[Linien/Boegen ==&amp;gt; Bearbeitungsfigur]# im Menue #[Vorbereitung]# erzeugen." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    起始孔径/任意起始孔
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该对话框区域有多种用途，并
+   </font>
+   <font style="vertical-align: inherit;">
+    根据激活的“
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     使用
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     圆形起始孔”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、 “使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     不规则
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    起始孔”或
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “精加工余量”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项显示“圆形起始孔” 、
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     “不规则起始孔
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    ”或
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     “精加工余量”
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <h2 class="hcp3">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    圆形起始孔
+   </font>
+  </font>
+ </h2>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="font-weight: bold; font-style: italic;">
+    <font style="vertical-align: inherit;">
+     当启用“使用
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     圆形起始孔
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ”选项
+   </font>
+   <font style="vertical-align: inherit;">
+    时，将出现“
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     圆形起始孔”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    字段。
+   </font>
+   <font style="vertical-align: inherit;">
+    该字段指定起始孔的直径。
+   </font>
+  </font>
+  <font style="font-weight: bold; font-style: italic;">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此外，该信息还指定起始洞不参与清球过程。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    起始孔的直径应指定
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     为小于
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    实际直径。
+   </font>
+   <font style="vertical-align: inherit;">
+    如果孔不圆且孔未对准，这可以避免废品。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果起始孔是图纸形式，则可以从图纸确定孔的直径。
+   </font>
+   <font style="vertical-align: inherit;">
+    为此，请使用按钮
+   </font>
+  </font>
+  <img alt="选择.gif" border="0" height="29" src="../Select.gif" width="34"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一个通知：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     圆形起始孔
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    场也在
+   </font>
+  </font>
+  <a href="../Simulation/Solid_Simulation.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      实体模拟
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    中发挥作用
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+   <font style="vertical-align: inherit;">
+    此处设置
+   </font>
+  </font>
+  <a href="../Simulation/Solid_Simulation.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      实体模拟
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    中模拟的起始孔的尺寸。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <h2 class="hcp3">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    不规则起始孔
+   </font>
+  </font>
+ </h2>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果
+   </font>
+   <font style="vertical-align: inherit;">
+    激活
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “使用任何起始孔”选项，则此字段处于活动状态。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    当起始孔
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     不具有圆形形状
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    且
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     任何几何形状
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    将用作起始孔且起始孔几何形状将从清理过程中排除时，使用该字段。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="poc_bel.gif" border="0" height="260" src="../poc_bel.gif" width="480"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <h2 style="margin-top: 0.00pt; margin-bottom: 2.40pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    精加工津贴
+   </font>
+  </font>
+ </h2>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果激活“
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     完成超大尺寸
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ”选项，则此字段处于活动状态。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     精加工余量
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    字段
+   </font>
+   <font style="vertical-align: inherit;">
+    确定要加工的开口上的材料余量的大小。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “完成超大尺寸”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项
+   </font>
+   <font style="vertical-align: inherit;">
+    可通过多次平行切割去除此超大尺寸。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图显示了通过多次平行切割去除余量的凹槽：
+   </font>
+  </font>
+ </p>
+ <p>
+  <img alt="poc_aufmass_schlichten.gif" border="0" height="162" src="../poc_aufmass_schlichten.gif" width="321"/>
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一个通知：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    起始孔的几何形状必须属于
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     图形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    几何类型。
+   </font>
+   <font style="vertical-align: inherit;">
+    可以使用
+   </font>
+   <a href="../wirhlp9/Das_Vorbereitungs_Menue.htm">
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      “准备”
+     </font>
+    </font>
+   </a>
+   <font style="vertical-align: inherit;">
+    菜单中的
+   </font>
+  </font>
+  <a href="../wirhlp9/Linien_Boegen_Bearbeitungsfigur.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      “线/弧 ==&gt; 编辑图形”
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令创建图形。
+   </font>
+  </font>
+  <a href="../wirhlp9/Das_Vorbereitungs_Menue.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -37,58 +36,389 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Standard Konturbearbeitung" %}</p><p>{% trans "Mit diesem Dialog können Sie die Bearbeitungsfunktionen [zylindrische] [Bearbeitungen,] mit [konstanter Konik], mit [variabler Konik], [Taschenerodieren] sowie [Schrägschieber] programmieren." %}</p><p class="Block_Text">{% trans "Für konische Bearbeitungen, erlaubt der Dialog auch die Festlegung des Eckenmodus (scharf, ISO, ISO + scharf oder Drehspindel)." %}</p>
-<p class="Block_Text">{% trans "Beachten Sie, dass die Eckenmodi je nach verwendeter NC-Steuerung variieren können." %}</p>
-<p>{% trans "Sehr komplexe Eckengeometrien oder variable Koniken, welche die Grenzen der verwendeten NC-Steuerung überschreiten, müssen mit dem Befehl #[Regelflächenbearbeitung]# programmiert werden." %}</p>
-<p class="hcp2"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp2"> </p>
-<p><img src="../STD_KON_shg.gif" usemap="#AreaMap0" alt="STD_KON_shg.gif" width="611" height="497" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="287, 274, 584, 416" href="Eckenmodus.htm" alt=""/>
-<area shape="rect" coords="126, 396, 254, 420" href="Einstellungen_Einstellen_der_Schnittmethode.htm" alt=""/>
-<area shape="rect" coords="20, 56, 256, 183" href="Figurnamen_Std_Konturbea.htm" alt=""/>
-<area shape="rect" coords="394, 182, 585, 270" href="Standard_Konik.htm" alt=""/>
-<area shape="rect" coords="495, 430, 594, 456" href="Variable_Konik_programmieren.htm" alt=""/>
-<area shape="rect" coords="314, 43, 431, 64" href="Taschenerodieren_1.htm" alt=""/>
-<area shape="rect" coords="10, 253, 181, 297" href="Schnittschemen.htm" alt=""/>
-<area shape="rect" coords="182, 269, 254, 294" href="Schnittschema_laden_speichern.htm" id="area2" alt=""/>
-<area shape="rect" coords="519, 46, 572, 67" href="Optionen_Lasche_Standard_Konturbearbeitung.htm" alt=""/>
-<area shape="rect" coords="275, 43, 318, 65" href="Konik_lasche.htm" alt=""/>
-<area shape="rect" coords="12, 464, 151, 489" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="162, 466, 302, 490" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area4" alt=""/>
-<area shape="rect" coords="457, 470, 599, 492" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area5" alt=""/>
-<area shape="rect" coords="20, 192, 93, 218" href="Figurnamen_Std_Konturbea.htm" alt=""/>
-<area shape="rect" coords="100, 190, 172, 216" href="javascript:BSSCPopup('Aendern_Figurname_Figurauswahl_STD_Konturbea.htm',400,500);" id="area6" alt=""/>
-<area shape="rect" coords="182, 192, 248, 219" href="javascript:BSSCPopup('Neu_ordnen_Figurname_Figurauswahl_STD_Konturbea.htm',400,500);" id="area7" alt=""/>
-<area shape="rect" coords="312, 467, 442, 488" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area8" alt=""/>
-<area shape="rect" coords="294, 83, 479, 178" href="Konik_Ikonen_Konik_Register_Std_Konturbearb.htm" alt=""/>
-<area shape="rect" coords="495, 83, 577, 172" href="Schraegschieber_Ikone_Konik_Register_Std_Konturbearb.htm" alt=""/>
-<area shape="rect" coords="431, 44, 516, 65" href="Rotationsachse_Register_Standard_Konturbearbeitung_.htm" alt=""/>
-<area shape="rect" coords="15, 297, 252, 378" href="javascript:BSSCPopup('Technologie_STD_Konturbearbeitung.htm',400,600);" id="area9" alt=""/>
-<area shape="rect" coords="15, 218, 136, 239" href="javascript:BSSCPopup('Nur_Figuren_waehlbar.htm',400,300);" id="area10" alt=""/>
-</map>  XXXJUMP</p>
-<p class="hcp2"> </p>
-<p class="hcp3">{% trans "[Siehe auch:]" %}</p>
-<p class="hcp3">{% trans "#[Erzeugen einer Bearbeitungsfigur]#" %}</p>
-<p>{% trans "#[Beispiel für die Erzeugung einer Bearbeitungsfigur]#" %}</p>
-<p>{% trans "@ #[Zeige Beispielfilm für Erzeugung einer Bearbeitungsfigur]#" %}</p>
-<p class="hcp3">{% trans "#[Bearbeitungsparameter einstellen]#" %}</p>
-<p>{% trans "#[Ein/Ausfahrstrategien]#" %}</p>
-<p>{% trans "#[Offset bestimmen]#" %}</p>
-<p class="hcp3">{% trans "#[Technologiedatenbank]#" %}</p>
-<p class="hcp3">{% trans "#[Anbindungen festlegen]#" %}</p>
-<p class="hcp3">{% trans "#[Zylindrischen Schnitt programmieren]#" %}</p>
-<p>{% trans "@ #[Zeige Beispielfilm für zylindrischen Schnitt]#" %}</p>
-<p class="hcp3">{% trans "#[Standard Konik programmieren]#" %}</p>
-<p>{% trans "[XXX] @ [Zeige Beispielfilm für Standard Konik]" %}</p>
-<p class="hcp3">{% trans "#[Variable Konik programmieren]#" %}</p>
-<p class="hcp3">{% trans "#[Beispielprogramm zur variablen Konik]#" %}</p>
-<p class="hcp3">{% trans "#[Taschenerodieren]#" %}</p>
-<p>{% trans "@ #[Zeige Beispielfilm Taschenerodieren]#" %}</p>
-<p class="hcp3">{% trans "#[Schrägschieber programmieren]#" %}</p>
-<p>{% trans "#[Schnittschemen verwenden]#" %}</p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; 
+	 border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <img alt="简介.gif" border="0" height="29" src="../Profile.gif" width="29"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    标准轮廓加工
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     通过此对话框，您可以对圆柱
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     加工、
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    恒定
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     锥度
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     可变锥度
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     型腔腐蚀
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     对角滑动
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    等加工功能进行编程
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对于圆锥形加工，该对话框还允许您设置转角模式（锐角、ISO、ISO + 锐角或旋转主轴）。
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    请注意，拐角模式可能会根据所使用的 NC 控制而有所不同。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    超过所用 NC 控制限制的非常复杂的拐角几何形状或可变锥度必须使用
+   </font>
+  </font>
+  <a href="Regelflaechenbearbeitung____.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      直纹曲面加工
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令进行编程。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="STD_KON_shg.gif" border="0" height="497" src="../STD_KON_shg.gif" usemap="#AreaMap0" width="611"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="287, 274, 584, 416" href="Eckenmodus.htm" shape="rect"/>
+   <area alt="" coords="126, 396, 254, 420" href="Einstellungen_Einstellen_der_Schnittmethode.htm" shape="rect"/>
+   <area alt="" coords="20, 56, 256, 183" href="Figurnamen_Std_Konturbea.htm" shape="rect"/>
+   <area alt="" coords="394, 182, 585, 270" href="Standard_Konik.htm" shape="rect"/>
+   <area alt="" coords="495, 430, 594, 456" href="Variable_Konik_programmieren.htm" shape="rect"/>
+   <area alt="" coords="314, 43, 431, 64" href="Taschenerodieren_1.htm" shape="rect"/>
+   <area alt="" coords="10, 253, 181, 297" href="Schnittschemen.htm" shape="rect"/>
+   <area alt="" coords="182, 269, 254, 294" href="Schnittschema_laden_speichern.htm" id="area2" shape="rect"/>
+   <area alt="" coords="519, 46, 572, 67" href="Optionen_Lasche_Standard_Konturbearbeitung.htm" shape="rect"/>
+   <area alt="" coords="275, 43, 318, 65" href="Konik_lasche.htm" shape="rect"/>
+   <area alt="" coords="12, 464, 151, 489" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area3" shape="rect"/>
+   <area alt="" coords="162, 466, 302, 490" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area4" shape="rect"/>
+   <area alt="" coords="457, 470, 599, 492" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area5" shape="rect"/>
+   <area alt="" coords="20, 192, 93, 218" href="Figurnamen_Std_Konturbea.htm" shape="rect"/>
+   <area alt="" coords="100, 190, 172, 216" href="javascript:BSSCPopup('Aendern_Figurname_Figurauswahl_STD_Konturbea.htm',400,500);" id="area6" shape="rect"/>
+   <area alt="" coords="182, 192, 248, 219" href="javascript:BSSCPopup('Neu_ordnen_Figurname_Figurauswahl_STD_Konturbea.htm',400,500);" id="area7" shape="rect"/>
+   <area alt="" coords="312, 467, 442, 488" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area8" shape="rect"/>
+   <area alt="" coords="294, 83, 479, 178" href="Konik_Ikonen_Konik_Register_Std_Konturbearb.htm" shape="rect"/>
+   <area alt="" coords="495, 83, 577, 172" href="Schraegschieber_Ikone_Konik_Register_Std_Konturbearb.htm" shape="rect"/>
+   <area alt="" coords="431, 44, 516, 65" href="Rotationsachse_Register_Standard_Konturbearbeitung_.htm" shape="rect"/>
+   <area alt="" coords="15, 297, 252, 378" href="javascript:BSSCPopup('Technologie_STD_Konturbearbeitung.htm',400,600);" id="area9" shape="rect"/>
+   <area alt="" coords="15, 218, 136, 239" href="javascript:BSSCPopup('Nur_Figuren_waehlbar.htm',400,300);" id="area10" shape="rect"/>
+  </map>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    XXX跳跃
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="hcp3">
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     也可以看看：
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp3">
+  <a href="Erzeugen_einer_Bearbeitungsfigur.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      创建加工图形
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+  <a href="../wirhlp9/Beispiel_fuer_die_Erzeugung_einer_Bearbeitungsfigur.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      创建加工图形的示例
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+  <img alt="电影.gif" border="0" height="27" src="../MOVIE.gif" width="27"/>
+  <a href="../Videos/Video__Bearbeitungsfigur_erzeugen_geschlossen_V8.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      显示用于创建编辑人物的示例影片
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p class="hcp3">
+  <a href="Einstellungen_Einstellen_der_Schnittmethode.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      设置加工参数
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+  <a href="Ein_Ausfahren_Lasche.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      进入/退出策略
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+  <a href="Offset_Lasche.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      确定偏移量
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p class="hcp3">
+  <a href="Datenbank_fuer_Technologie_Lasche.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      技术数据库
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p class="hcp3">
+  <a href="Anbinden_Lasche.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      定义连接
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p class="hcp3">
+  <a href="Beispiel_Zylindrischen_Schnitt_programmieren.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      程序圆柱切削
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+  <img alt="电影.gif" border="0" height="27" src="../MOVIE.gif" width="27"/>
+  <a href="../Videos/Video__Konturbearbeitung_V8.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      显示圆柱形切割薄膜示例
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p class="hcp3">
+  <a href="Standard_Konik.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      程序标准 Konik
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     XXX
+    </font>
+   </font>
+  </font>
+  <img alt="电影.gif" border="0" height="27" src="../MOVIE.gif" width="27"/>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     显示标准 Konik 的样片
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp3">
+  <a href="Variable_Konik_programmieren.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      程序变量二次曲线
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p class="hcp3">
+  <a href="Beispiel_Variable_Konik_programmieren.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      变量二次曲线的示例程序
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p class="hcp3">
+  <a href="Taschenerodieren_1.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      口袋侵蚀
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+  <img alt="电影.gif" border="0" height="27" src="../MOVIE.gif" width="27"/>
+  <a href="../Videos/Video__Taschenerodieren_V8.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      显示有关型腔腐蚀的样本影片
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p class="hcp3">
+  <a href="Beispiel_Schraegschieber_programmieren.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      程序倾斜滑道
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+  <a href="Schnittschemen.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      使用切割方案
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('area3');
 	FilePopupInit('area4');
@@ -98,7 +428,9 @@
 	FilePopupInit('area8');
 	FilePopupInit('area9');
 	FilePopupInit('area10');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

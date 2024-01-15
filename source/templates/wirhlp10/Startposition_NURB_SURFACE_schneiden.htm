@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,8 +28,43 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Startposition" %}</p><p>{% trans "In diesem Dialog legt man die Drahtstartposition für NURBS-Surface Bearbeitungen fest. Soll der Draht senkrecht starten reicht die Eingabe einer XY-Position." %}</p>
-<p>{% trans "Soll der Draht in einem bestimmten Winkel anfahren, müssen Sie eine zweite XY-Position im Feld [UV-Startposition] eingeben, die das System dann in UV-Daten umrechnet." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    起始位置
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在此对话框中，您可以指定 NURBS 曲面处理的线起始位置。
+   </font>
+   <font style="vertical-align: inherit;">
+    如果导线应垂直开始，输入 XY 位置就足够了。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果您希望导线以特定角度接近，则必须在
+   </font>
+  </font>
+  <font style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     UV 起始位置
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    字段中输入第二个 XY 位置，系统随后会将其转换为 UV 数据。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

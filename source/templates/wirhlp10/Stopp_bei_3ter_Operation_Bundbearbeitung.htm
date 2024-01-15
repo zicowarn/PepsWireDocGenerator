@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,12 +35,133 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Stopp bei 3ter Operation" %}</p><p class="Block_Text">{% trans "Mit dem Dialog [Bundbearbeitung] können Sie für einige CNC-Maschinen (z.B. ACVision) Bundbearbeitungen programmieren, die aus [3 Bereichen] bestehen." %}</p>
-<p class="Block_Text">{% trans "Nämlich aus einer [oberen Konik], einem [mittleren] [zylindrischen Bereich] und einer [unteren Konik] bestehen." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Konik_Zylindrisch_Konik.gif" alt="Konik_Zylindrisch_Konik.gif" width="89" height="88" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Die Option [Stopp bei 3ter Operation] definiert, ob für den mittleren, zylindrischen Bereich ein zusätzlicher Stopp (z.B. [M01]) ausgegeben werden soll." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    第 3 次操作停止
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     通过轴环加工
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框，您可以对某些 CNC 机床（例如 ACVision）的轴环加工进行编程，该对话框由
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     3 个区域
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    组成
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     即由上圆锥曲线
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     中
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     圆柱区
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     下圆锥曲线
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    组成
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="Konik_Cylindrical_Konik.gif" border="0" height="88" src="../Konik_Zylindrisch_Konik.gif" width="89"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “第三次操作时停止”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项定义是否
+   </font>
+   <font style="vertical-align: inherit;">
+    应为中间圆柱形区域输出附加
+   </font>
+   <font style="vertical-align: inherit;">
+    停止（例如
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     M01 ）。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

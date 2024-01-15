@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,18 +33,174 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Startloch (Bundbearbeitung)" %}</p><p class="dialog">{% trans "Rund" %}</p><p>{% trans "Wird aktiviert, wenn das Startloch eine runde Bohrung ist. Die Option aktiviert das Feld [Startlochdurchmesser] in der Sie den Durchmesser der Startlochbohrung bestimmen können." %}</p>
-<p> </p>
-<p class="dialog">{% trans "Unregelmäßig" %}</p>
-<p>{% trans "Wird aktiviert, wenn das [#Startloch keine runde Form#] hat und eine [beliebige andere geometrische] Form als Startloch verwendet werden soll." %}</p>
-<p>{% trans "Die Funktion aktiviert das Feld [Beliebiges Startloch], in der Sie die Figur auswählen können, die das unregelmäßige Startloch bildet." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p class="Hinweis">{% trans "Hinweis:" %}</p>
-<p>{% trans "Die Geometrie des beliebigen Startlochs muss als Geometrietyp [Figur] vorliegen. Figuren kann man erzeugen mit dem Befehl #[Linien/Bögen ==&amp;gt; Bearbeitungsfigur]# im Menü #[Vorbereitung]#." %}</p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    起始孔（束加工）
+   </font>
+  </font>
+ </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    大约
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果起始孔是圆孔，则激活。
+   </font>
+   <font style="vertical-align: inherit;">
+    该选项激活
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “起始孔直径”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    字段 
+ ，您可以在其中确定起始孔的直径。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    不规律的
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果
+   </font>
+  </font>
+  <font class="hcp1">
+   <a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('Startloch_durchmesser.htm',400,300);return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      起始孔不是圆形
+     </font>
+    </font>
+   </a>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    且
+   </font>
+   <font style="vertical-align: inherit;">
+    应使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     任何其他几何形状作为起始孔，则激活。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该功能激活
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     任意起始孔
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    字段，您可以在其中选择形成不规则起始孔的图形。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一个通知：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    任何起始孔的几何形状必须属于
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     图形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    几何类型。
+   </font>
+   <a href="../wirhlp9/Das_Vorbereitungs_Menue.htm">
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      可以使用“准备”
+     </font>
+    </font>
+   </a>
+   <font style="vertical-align: inherit;">
+    菜单中的
+   </font>
+  </font>
+  <a href="../wirhlp9/Linien_Boegen_Bearbeitungsfigur.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      “线/弧”==&gt;“编辑图形”
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令来创建图形
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <a href="../wirhlp9/Das_Vorbereitungs_Menue.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('a1');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

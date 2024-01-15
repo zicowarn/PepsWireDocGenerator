@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,16 +35,140 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Startposition für Taschenerodieren" %}</p><p>{% trans "In den meisten Fällen ist die Position der Startlochbohrung vorgegeben, da die Bohrung schon im Werkstück eingebracht wurde." %}</p>
-<p>{% trans "Die Position wird bei der Erzeugung der Bearbeitungsfigur (Siehe Befehl #[Linien/Bögen =&amp;gt; Bearbeitungsfigur]# im Menü [Vorbereitung]) als Startposition verwendet." %}</p>
-<p>{% trans "Wenn noch keine Startlochbohrung im Werkstück vorhanden ist und Sie die optimale Position und Größe für die Bohrung ermitteln wollen, können Sie den Befehl #[Optimales Startloch ermitteln]# (Siehe Menü [Vorbereitung]) verwenden." %}</p>
-<p>{% trans "Dieser Befehl ermittelt die optimale Startposition und verändert die Startposition (C-Punkt) und die Anfahrposition auf der Geometrie (C-Punkt) der gewählten Bearbeitungsfigur. Durch die Ermittlung der optimalen Startlochposition und Größe kann die Bearbeitungszeit reduzieren. Das folgende Beispiel zeigt eine optimierte Startlochbohrung." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../POCKAPP2.gif" alt="POCKAPP2.gif" width="430" height="278" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "[Hinweis]: Das Startloch wird als Insel betrachtet und sollte nicht zu groß definiert werden." %}</p>
-<p>{% trans "Dies ist erforderlich, damit noch genügend Platz für den Draht vorhanden ist, um durch die Lücke zwischen der Insel und der Matrizenkante hindurch zu fahren." %}</p>
-<p>{% trans "Verkleinern Sie einfach den Wert für den Startlochdurchmesser, falls der Draht nicht durch die Lücke passt." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    型腔侵蚀的起始位置
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在大多数情况下，起始孔的位置是预先确定的，因为孔已经钻到工件中。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该位置用作创建加工图形时的起始位置（请参见
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     准备
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    菜单中的命令“
+   </font>
+  </font>
+  <a href="../wirhlp9/Linien_Boegen_Bearbeitungsfigur.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      直线/圆弧”=&gt;“加工图形”
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ）。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果工件上还没有起始孔，并且您想要确定孔的最佳位置和尺寸，则可以使用确定
+   </font>
+  </font>
+  <a href="../wirhlp9/Optimales_Startloch_ermitteln.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      最佳起始孔
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令（请参见
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “准备”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    菜单）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该命令确定最佳起始位置，并更改所选加工图形的几何形状（C 点）上的起始位置（C 点）和逼近位置。
+   </font>
+  </font>
+  <br/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    确定最佳的起始孔位置和尺寸可以减少加工时间。
+   </font>
+   <font style="vertical-align: inherit;">
+    以下示例显示了优化的起始钻孔。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="POCKAPP2.gif" border="0" height="278" src="../POCKAPP2.gif" width="430"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     注意
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：起始孔被认为是一个岛，不应定义得太大。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这是必要的，以便有足够的空间让电线穿过岛和芯片边缘之间的间隙。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果电线无法穿过间隙，只需减小起始孔径值即可。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

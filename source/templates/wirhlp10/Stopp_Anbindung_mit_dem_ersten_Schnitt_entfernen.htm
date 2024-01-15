@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,18 +35,137 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Stopp - Anbindung mit dem ersten Schnitt entfernen" %}</p><p> </p>
-<p>{% trans "Diese Option kann sowohl bei einem [Einzelschnitt] als auch bei [Mehrfachschnitten] eingesetzt werden." %}</p>
-<p>{% trans "Ist die Option gewählt, hält die Maschine am Ende des ersten Schnittes am Stoppunkt (M01). Die Anbindung wird anschließend automatisch von System entfernt." %}</p>
-<p>{% trans "Es folgen die restlichen Schnitte OHNE einen Stopp." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../TAGMETH1.gif" alt="TAGMETH1.gif" width="487" height="204" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Aus offensichtlichen Gründen kann diese Methode [nicht] für den [unbemannten Betrieb einsetzen], da der Bediener die NC-Maschine am Ende jeden [ersten Schnittes] neu starten muss, um den Abfall zu sichern." %}</p>
-<p> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
-<p>{% trans "@ [#Zeige Beispielfilm zum o.g. Thema#]" %}</p>
-<p> </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    停止 - 删除与第一次切割的连接
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该选项可用于
+   </font>
+   <font style="vertical-align: inherit;">
+    单
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     次切割
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     多次切割。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果选择该选项，机器将在第一次切削结束时停止在停止点 (M01)。
+   </font>
+   <font style="vertical-align: inherit;">
+    然后该连接会自动从系统中删除。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    剩下的削减继续进行，没有停止。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="TAGMETH1.gif" border="0" height="204" src="../TAGMETH1.gif" width="487"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    由于显而易见的原因，这种方法
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     不能
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    用于
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     无人操作，因为操作员必须在每次
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     第一次切割
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    结束时重新启动数控机床
+   </font>
+   <font style="vertical-align: inherit;">
+    以确保废料。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    它是这样完成的：
+   </font>
+  </font>
+ </p>
+ <p>
+  <img alt="电影.gif" border="0" height="27" src="../MOVIE.gif" width="27"/>
+  <font class="hcp1">
+   <a href="../Strategie_1_Stop_Anbindungen_mit_1ten_Schnitt_entfernen.gif" id="a2">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      播放有关上述主题的示例影片
+     </font>
+    </font>
+   </a>
+  </font>
+ </p>
+ <p>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

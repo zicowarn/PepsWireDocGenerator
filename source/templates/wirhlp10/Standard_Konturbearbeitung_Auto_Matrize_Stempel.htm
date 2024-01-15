@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -37,45 +36,446 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Standard Konturbearbeitung + Auto Matrize / Stempel" %}</p><p>{% trans "Dieser Befehl ist identisch mit dem Befehl #[Auto Matrize / Stempel]# des Menüs [Vorbereitung]." %}</p><p>{% trans "Der einzige Unterschied besteht darin, dass die Option #[Schnittschema]# in den Registern [Matrizen Optionen] und [Stempel Optionen] freigeschaltet ist." %}</p>
-<p>{% trans "Der Befehl #[Auto Matrize / Stempel]# im Menü [Vorbereitung] hat die Aufgabe, Linien/Bogengeometrien automatisch in Bearbeitungsfiguren umzuwandeln." %}</p>
-<p>{% trans "Nach diesem Vorgang bearbeitet man die Bearbeitungsfiguren mit Hilfe der Befehle [Standard Konturbearbeitung] oder [Regelflächenbearbeitung]." %}</p>
-<p>{% trans "Mit dem Befehl [Standard Konturbearbeitung + Auto Matrize / Stempel] ist es möglich, Linien-/Bogengeometrien automatisch in Bearbeitungsfiguren umzuwandeln und diesen ein gespeichertes #[Schnittschema]# zuzuweisen. Auf diese Weise kann man die Bearbeitungsprogrammierung weitgehend automatisieren." %}</p>
-<p class="hcp2"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp2"> </p>
-<p class="footnote_text"><img src="../QUI_D_P5_shg.gif" usemap="#AreaMap0" alt="QUI_D_P5_shg.gif" width="415" height="398" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="64, 40, 111, 58" href="../wirhlp9/Stempel_Auto_Matritzen_Stempel.htm" alt=""/>
-<area shape="rect" coords="115, 40, 155, 59" href="../wirhlp9/Filter_Auto_Matritzen_Stempel.htm" alt=""/>
-<area shape="rect" coords="29, 174, 232, 202" href="../wirhlp9/Umfangs_Parameter_Auto_Matritzen_Stempel.htm" id="area1" alt=""/>
-<area shape="rect" coords="25, 116, 229, 140" href="javascript:BSSCPopup('../wirhlp9/Einfahrabstand_Auto_Matritzen_Stempel.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="25, 145, 233, 171" href="javascript:BSSCPopup('../wirhlp9/Winkel_zur_Normalen_Auto_Matritzen_Stempel.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="27, 268, 386, 342" href="../wirhlp9/Schnittschemen_Auto_Matritzen_Stempel.htm" id="area4" alt=""/>
-<area shape="rect" coords="239, 232, 384, 275" href="../wirhlp9/Matrizen_Stempeltyp_Auto_Mat_Stemp.htm" id="area5" alt=""/>
-<area shape="rect" coords="14, 363, 120, 387" href="javascript:BSSCPopup('../wirhlp9/Waehle_Matrizen_Stempel_Auto_Mat_Stemp.htm',400,300);" id="area6" alt=""/>
-<area shape="rect" coords="26, 89, 157, 113" href="javascript:BSSCPopup('../wirhlp9/Startloch_zentrieren_Auto_Mat_Stemp.htm',400,300);" id="area7" alt=""/>
-<area shape="rect" coords="239, 75, 382, 213" href="javascript:BSSCPopup('../Commdata/COMMON_Bild.htm',400,300);" id="area8" alt=""/>
-<area shape="rect" coords="123, 362, 211, 387" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area9" alt=""/>
-<area shape="rect" coords="217, 363, 310, 386" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area10" alt=""/>
-<area shape="rect" coords="312, 361, 402, 388" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area11" alt=""/>
-<area shape="rect" coords="27, 231, 222, 259" href="../wirhlp9/Startloch_Suchschema_Auto_Mat_Stemp.htm" alt=""/>
-<area shape="rect" coords="158, 43, 209, 62" href="../wirhlp9/Optionen_Auto_Matritzen_Stempel.htm" alt=""/>
-</map> </p>
-<p class="hcp2"> </p>
-<p class="Tip_Note_Heading">{% trans "Automatisch Figuren erzeugen und ein Schnittschema zuweisen" %}</p>
-<ul>
-	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Füllen Sie zunächst den Dialog #[Operation starten]# aus." %}</p></li>
-	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Die zu bearbeitenden Geometrien müssen als Linien/Bogenelemente bestehen und am Bildschirm sichtbar sein." %}</p></li>
-	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Rufen Sie den Befehl [Standard Konturbearbeitung + Auto Matrize / Stempel] auf." %}</p></li>
-	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Wählen Sie eines der Register @, um festzulegen, ob [Stempel] oder [Matrizen] erzeugt werden sollen." %}</p></li>
-	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Legen Sie durch die Eingaben in den Feldern @ fest, wo die Startlochposition der Bearbeitungsfiguren liegen sollen." %}</p></li>
-	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Laden Sie mit der Schaltfläche @ ein [#Schnittschema#], das den Bearbeitungsfiguren zugewiesen werden soll." %}</p></li>
-	<li class="hcp3"><p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf die Schaltfläche @, um die Geometrien auszuwählen, aus denen automatisch Bearbeitungsfiguren erzeugt und das gewählte Schnittschema zugewiesen werden soll." %}</p></li>
-</ul>
-<p class="hcp2"> </p>
-<p>{% trans "[Siehe auch:] #[Auto Matrize / Stempel]# im Menü #[Vorbereitung]#." %}</p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; 
+	 border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <img alt="Profile_Auto_Matr.gif" border="0" height="30" src="../Profile_Auto_Matr.gif" width="31"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    标准轮廓加工+自动冲模/冲床
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     该命令与“准备”
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    菜单 
+ 中的
+   </font>
+  </font>
+  <a href="../wirhlp9/Auto_Matritzen_und_Stempel.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      “自动冲模/打孔”
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令相同
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    唯一的区别是
+   </font>
+  </font>
+  <a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('Schnittschemen.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      “切割方案”
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项在
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “模具选项”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “冲孔选项”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项卡中启用。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     “准备”
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    菜单 
+ 中的
+   </font>
+  </font>
+  <a href="../wirhlp9/Auto_Matritzen_und_Stempel.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      “自动模具/冲压”
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令
+   </font>
+   <font style="vertical-align: inherit;">
+    的任务是将直线/圆弧几何形状自动转换为加工图形。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     此过程之后，使用命令“标准轮廓编辑”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “直纹曲面编辑”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    来编辑加工图形
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     使用标准轮廓加工+自动模具/冲压
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令
+   </font>
+   <font style="vertical-align: inherit;">
+    ，可以自动将直线/圆弧几何形状转换为加工图形，并为其分配保存的
+   </font>
+  </font>
+  <a class="BSSCPopup" href="javascript:void(0);" id="a2" onclick="BSSCPopup('Schnittschemen.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      切割方案
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+   <font style="vertical-align: inherit;">
+    这样，加工编程就可以很大程度上实现自动化。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="footnote_text">
+  <img alt="QUI_D_P5_shg.gif" border="0" height="398" src="../QUI_D_P5_shg.gif" usemap="#AreaMap0" width="415"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="64, 40, 111, 58" href="../wirhlp9/Stempel_Auto_Matritzen_Stempel.htm" shape="rect"/>
+   <area alt="" coords="115, 40, 155, 59" href="../wirhlp9/Filter_Auto_Matritzen_Stempel.htm" shape="rect"/>
+   <area alt="" coords="29, 174, 232, 202" href="../wirhlp9/Umfangs_Parameter_Auto_Matritzen_Stempel.htm" id="area1" shape="rect"/>
+   <area alt="" coords="25, 116, 229, 140" href="javascript:BSSCPopup('../wirhlp9/Einfahrabstand_Auto_Matritzen_Stempel.htm',400,300);" id="area2" shape="rect"/>
+   <area alt="" coords="25, 145, 233, 171" href="javascript:BSSCPopup('../wirhlp9/Winkel_zur_Normalen_Auto_Matritzen_Stempel.htm',400,300);" id="area3" shape="rect"/>
+   <area alt="" coords="27, 268, 386, 342" href="../wirhlp9/Schnittschemen_Auto_Matritzen_Stempel.htm" id="area4" shape="rect"/>
+   <area alt="" coords="239, 232, 384, 275" href="../wirhlp9/Matrizen_Stempeltyp_Auto_Mat_Stemp.htm" id="area5" shape="rect"/>
+   <area alt="" coords="14, 363, 120, 387" href="javascript:BSSCPopup('../wirhlp9/Waehle_Matrizen_Stempel_Auto_Mat_Stemp.htm',400,300);" id="area6" shape="rect"/>
+   <area alt="" coords="26, 89, 157, 113" href="javascript:BSSCPopup('../wirhlp9/Startloch_zentrieren_Auto_Mat_Stemp.htm',400,300);" id="area7" shape="rect"/>
+   <area alt="" coords="239, 75, 382, 213" href="javascript:BSSCPopup('../Commdata/COMMON_Bild.htm',400,300);" id="area8" shape="rect"/>
+   <area alt="" coords="123, 362, 211, 387" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area9" shape="rect"/>
+   <area alt="" coords="217, 363, 310, 386" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area10" shape="rect"/>
+   <area alt="" coords="312, 361, 402, 388" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area11" shape="rect"/>
+   <area alt="" coords="27, 231, 222, 259" href="../wirhlp9/Startloch_Suchschema_Auto_Mat_Stemp.htm" shape="rect"/>
+   <area alt="" coords="158, 43, 209, 62" href="../wirhlp9/Optionen_Auto_Matritzen_Stempel.htm" shape="rect"/>
+  </map>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    自动创建图形并指定切割方案
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      首先填写
+     </font>
+    </font>
+    <a href="Operation_starten.htm">
+     <font class="hcp1">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        开始操作
+       </font>
+      </font>
+     </font>
+    </a>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      对话框。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      要编辑的几何图形必须以直线/圆弧元素的形式存在，并且在屏幕上可见。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      调用
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       标准轮廓编辑+自动模具/图章
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      命令。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选择选项卡之一
+     </font>
+    </font>
+    <img alt="ebx_-721293247.gif" border="0" height="21" src="../ebx_-721293247.gif" width="106"/>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      以确定是
+     </font>
+     <font style="vertical-align: inherit;">
+      创建
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       图章
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      还是
+     </font>
+    </font>
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       模具。
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+    </font>
+   </p>
+  </li>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      使用字段中的条目
+     </font>
+    </font>
+    <img alt="ebx_13494991.gif" border="0" height="22" src="../ebx_13494991.gif" width="195"/>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      确定加工图形的起始孔位置。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      使用该按钮加载
+     </font>
+     <font style="vertical-align: inherit;">
+      应分配给加工图形的
+     </font>
+     <font class="hcp1">
+      <a class="BSSCPopup" href="javascript:void(0);" id="a3" onclick="BSSCPopup('Schnittschemen.htm',400,300);return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+       <font style="vertical-align: inherit;">
+        切割方案
+       </font>
+      </a>
+     </font>
+    </font>
+    <img alt="Fig_load.gif" border="0" height="24" src="../Fig_load.gif" width="23"/>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+    <font class="hcp1">
+     <a class="BSSCPopup" href="javascript:void(0);" id="a3" onclick="BSSCPopup('Schnittschemen.htm',400,300);return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+      <font style="vertical-align: inherit;">
+      </font>
+     </a>
+    </font>
+    <font style="vertical-align: inherit;">
+    </font>
+   </p>
+  </li>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      单击该按钮
+     </font>
+    </font>
+    <img alt="选择_1.gif" border="0" height="22" src="../select_1.gif" width="73"/>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      可选择自动创建加工图形并分配所选切削方案的几何形状。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     另请参阅：
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <a href="../wirhlp9/Das_Vorbereitungs_Menue.htm">
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      “准备”
+     </font>
+    </font>
+   </a>
+   <font style="vertical-align: inherit;">
+    菜单 
+ 中的
+   </font>
+  </font>
+  <a href="../wirhlp9/Auto_Matritzen_und_Stempel.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      “自动冲模/冲孔”
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <a href="../wirhlp9/Das_Vorbereitungs_Menue.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('a1');
 	FilePopupInit('a2');
@@ -88,7 +488,9 @@
 	FilePopupInit('area10');
 	FilePopupInit('area11');
 	FilePopupInit('a3');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}
