@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,7 +33,51 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Taschenerodieren von Bohrungen" %}</p><p>{% trans "Legt fest, mit welcher Strategie (spiralförmiges oder konzentrisches Ausräumen), [kreisrunde] Bohrungen bei Anwendung der Funktion #[Taschenerodieren]# 'zerstört' werden." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    孔穴侵蚀
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <a href="Taschenerodieren_1.htm">
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      确定在使用型腔腐蚀
+     </font>
+    </font>
+   </a>
+   <font style="vertical-align: inherit;">
+    功能时使用哪种策略（螺旋或同心清除）来“破坏”
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     圆形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    孔
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <a href="Taschenerodieren_1.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

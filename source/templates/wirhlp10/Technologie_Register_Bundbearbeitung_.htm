@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,29 +34,58 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Technologie Register (Bundbearbeitung)" %}</p><p>{% trans "In diesem Register bestimmen Sie, die Schneidtechnologie (Anzahl der Schnitte, Größe der Anbindung, Anfahrstrategie etc.) separat einstellbar für Konik und Bund." %}</p><p class="hcp1"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp1"> </p>
-<p><img src="../Bundbearbeitung_2_shg.gif" usemap="#AreaMap0" alt="Bundbearbeitung_2_shg.gif" width="833" height="433" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="15, 35, 96, 56" href="Bundbearbeitung_.htm" alt=""/>
-<area shape="rect" coords="20, 73, 88, 93" href="Startloch_Bundbearbeitung.htm" alt=""/>
-<area shape="rect" coords="17, 89, 90, 112" href="Optionen_Register_Bundbearbeitung_.htm" alt=""/>
-<area shape="rect" coords="457, 401, 529, 422" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="536, 400, 611, 421" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="616, 402, 744, 424" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="746, 401, 819, 424" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area4" alt=""/>
-<area shape="rect" coords="210, 312, 737, 367" href="Schnittschemen.htm" id="area5" alt=""/>
-<area shape="rect" coords="220, 55, 543, 301" href="Technologieauswahl_Bundbearbeitung.htm" id="area6" alt=""/>
-<area shape="rect" coords="541, 50, 735, 299" href="Einstellungen_Bundbearbeitung.htm" alt=""/>
-</map> </p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    技术登记（捆绑处理）
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在此选项卡中，您可以确定切削技术（切削次数、连接尺寸、接近策略等），这些技术可以为锥度和轴环单独设置。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="外滩处理_2_shg.gif" border="0" height="433" src="../Bundbearbeitung_2_shg.gif" usemap="#AreaMap0" width="833"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="15, 35, 96, 56" href="Bundbearbeitung_.htm" shape="rect"/>
+   <area alt="" coords="20, 73, 88, 93" href="Startloch_Bundbearbeitung.htm" shape="rect"/>
+   <area alt="" coords="17, 89, 90, 112" href="Optionen_Register_Bundbearbeitung_.htm" shape="rect"/>
+   <area alt="" coords="457, 401, 529, 422" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area1" shape="rect"/>
+   <area alt="" coords="536, 400, 611, 421" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area2" shape="rect"/>
+   <area alt="" coords="616, 402, 744, 424" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area3" shape="rect"/>
+   <area alt="" coords="746, 401, 819, 424" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area4" shape="rect"/>
+   <area alt="" coords="210, 312, 737, 367" href="Schnittschemen.htm" id="area5" shape="rect"/>
+   <area alt="" coords="220, 55, 543, 301" href="Technologieauswahl_Bundbearbeitung.htm" id="area6" shape="rect"/>
+   <area alt="" coords="541, 50, 735, 299" href="Einstellungen_Bundbearbeitung.htm" shape="rect"/>
+  </map>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('area1');
 	FilePopupInit('area2');
 	FilePopupInit('area3');
 	FilePopupInit('area4');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

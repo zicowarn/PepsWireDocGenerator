@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,15 +34,75 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Abstand der Mittelpunktsbahnen" %}</p><p>{% trans "Die Systemvoreinstellung der Überlappung beträgt der 50% des verwendeten Drahtdurchmessers." %}</p>
-<p>{% trans "Es besteht aber die Möglichkeit die Voreinstellung zu verändern und abzuspeichern." %}</p>
-<p>{% trans "Bei geometrisch einfachen Durchbrüchen darf die Drahtbahnüberlappung größer sein als 50%." %}</p>
-<p>{% trans "Beachten Sie aber, dass es dann bei Durchbrüchen mit spitzen Ecken zu Ausfallteilen kommen kann (Siehe folgende Zeichnung)." %}</p>
-<p class="hcp1"> </p>
-<p><img src="../POC.gif" alt="POC.gif" width="576" height="158" border="0"/></p>
-<p class="hcp1"> </p>
-<p class="Hinweis">{% trans "Hinweis:" %}</p>
-<p>{% trans "Um Ausfallteile zu vermeiden, empfehlen wir die [Drahtbahnüberlappung nicht größer als 50%] des Drahtdurchmesser zu programmieren." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    中心路径之间的距离
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    重叠的系统默认设置是所用线径的 50%。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    但是，可以更改并保存默认设置。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对于几何形状简单的开口，线迹重叠可能大于 50%。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    但请注意，带有尖角的开口可能会导致零件损坏（参见下图）。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="POC.gif" border="0" height="158" src="../POC.gif" width="576"/>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一个通知：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    为了避免丢失零件，我们建议不要将线轨重叠
+   </font>
+   <font style="vertical-align: inherit;">
+    编程
+   </font>
+  </font>
+  <font style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     为大于线径的 50% 。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

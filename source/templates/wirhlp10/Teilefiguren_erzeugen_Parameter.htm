@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,39 +34,286 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Teilefiguren erzeugen - Parameter" %}</p><p> </p>
-<p class="Tip_Note_Heading">{% trans "[Vorgehensweise:][ ]" %}</p>
-<p>{% trans "Zunächst ist eine geschlossene Figur für die zu schneidende Geometrie zu erstellen. Anschließend wird die Funktion [Teilfiguren] [[erzeugen] aufgerufen.]" %}</p>
-<p>{% trans "An der ausgewählten Figur wird nun ein Richtungspfeil angezeigt." %}</p>
-<p>{% trans "In Figurrichtung sind nun die Endpunkte für die Teilfiguren zu definieren, sowie deren Ausfahrabstand und die Anzahl der Schnitte pro Teilefigur." %}</p>
-<p>{% trans "Für das [letzte Teilstück] der Figur müssen Sie die Schaltfläche [Letztes Teilstück erstellen] verwenden, um die Funktion zu beenden." %}</p>
-<p class="dialog"> </p>
-<p class="dialog">{% trans "Die Dialogparameter:" %}</p>
-<p class="Tip_Note_Heading">{% trans "Figur" %}</p>
-<p>{% trans "Figur auswählen (Original Figur)" %}</p>
-<p> </p>
-<p class="Tip_Note_Heading">{% trans "Endpunkt" %}</p>
-<p>{% trans "Definiert den Endpunkt der jeweiligen Teilfigur." %}</p>
-<p> </p>
-<p class="Tip_Note_Heading">{% trans "Ausfahrlänge" %}</p>
-<p>{% trans "Ausfahrlänge für die jeweilige Teilfigur." %}</p>
-<p> </p>
-<p class="Tip_Note_Heading">{% trans "Anzahl der Schnitte" %}</p>
-<p>{% trans "Anzahl der Schnitte für die jeweilige Teilfigur." %}</p>
-<p> </p>
-<p class="Tip_Note_Heading">{% trans "Schnittschema" %}</p>
-<p>{% trans "Möglichkeit zum Import eines #Schnittschemas# aus der Schnittschemadatenbank." %}</p>
-<p> </p>
-<p class="Tip_Note_Heading">{% trans "Teilfigur erstellen" %}</p>
-<p>{% trans "Mit dieser Schaltfläche werden die jeweiligen Teilfiguren erzeugt." %}</p>
-<p> </p>
-<p class="Tip_Note_Heading">{% trans "Letztes Teilstück erstellen" %}</p>
-<p>{% trans "Dieses Schaltfläche [muss] verwendet werden, zur Definition des [letzten Teilstücks]." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p class="Hinweis">{% trans "Hinweis:" %}</p>
-<p>{% trans "Diese Funktion ist optional." %}</p>
-<p> </p>
-<p> </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    创建零件图 - 参数
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Tip_Note_Heading">
+  <b class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     方法：
+    </font>
+   </font>
+  </b>
+  <span style="mso-tab-count: 1;">
+  </span>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    首先，必须为要切割的几何图形创建一个闭合图形。
+   </font>
+   <font style="vertical-align: inherit;">
+    然后调用函数
+   </font>
+   <span style="text-indent: 35.4pt;">
+    <b class="hcp1">
+     <font style="vertical-align: inherit;">
+      创建
+     </font>
+    </b>
+   </span>
+  </font>
+  <b class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     部分图形
+    </font>
+   </font>
+  </b>
+  <font style="vertical-align: inherit;">
+   <span style="text-indent: 35.4pt;">
+    <font style="vertical-align: inherit;">
+     。
+    </font>
+   </span>
+  </font>
+  <span style="text-indent: 35.4pt;">
+   <b class="hcp1">
+    <font style="vertical-align: inherit;">
+    </font>
+   </b>
+   <font style="vertical-align: inherit;">
+   </font>
+  </span>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    现在，所选图形上将出现方向箭头。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    现在必须在图形的方向上定义部分图形的端点，以及它们的延伸距离和每个部分图形的切割数量。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对于图形的
+   </font>
+  </font>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     最后一部分
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，必须使用
+   </font>
+  </font>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “创建最后一部分”
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮退出该功能。
+   </font>
+  </font>
+ </p>
+ <p class="dialog">
+ </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框参数：
+   </font>
+  </font>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    数字
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选择图（原图）
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    终点
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    定义相应子图的终点。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    延长长度
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    相应部分图形的延伸长度。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    切割次数
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    每个部分图形的切割次数。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    切割方案
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    能够
+   </font>
+   <font style="vertical-align: inherit;">
+    从切割方案数据库导入
+   </font>
+  </font>
+  <a href="Schnittschema_laden_Dialog_-_Parameter.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     切割方案。
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    创建部分图形
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该按钮创建相应的子图。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    创建最终部分
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该按钮
+   </font>
+  </font>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     必须
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    用于定义
+   </font>
+  </font>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     最后一部分
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一个通知：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此功能是可选的。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

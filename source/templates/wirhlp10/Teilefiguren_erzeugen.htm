@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -39,34 +38,211 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Teilfiguren erzeugen" %}</p><p> </p><p>{% trans "Mit dem Sondermakro [Teilfiguren] [erzeugen] können Sie Teilbereiche einer Geometrie, mit einer unterschiedlichen Anzahl von Schnitten bearbeiten." %}</p>
-<p>{% trans "Dabei werden automatisch offene Figuren erzeugt, welche anschließend bearbeitet werden." %}</p>
-<p>{% trans "Auf diese Weise reduziert sich zum Einen der Programmieraufwand, zum Anderen wird die Bearbeitungszeit erheblich verkürzt." %}</p>
-<p><img src="../Teilefigur_erzeugen_example_1.gif" alt="" border="0" class="hcp1"/></p>
-<p>{% trans "[Vorgehensweise:][ ]" %}</p>
-<p> </p>
-<p>{% trans "Zunächst ist eine geschlossene Figur für die zu schneidende Geometrie zu erstellen. Anschließend wird die Funktion [Teilfiguren] [[erzeugen] aufgerufen.]" %}</p>
-<p>{% trans "An der ausgewählten Figur wird nun ein Richtungspfeil für die Figurrichtung angezeigt. In Figurrichtung sind nun die Endpunkte für die Teilfiguren zu definieren, sowie deren Ausfahrabstand und die Anzahl der Schnitte pro Teilefigur." %}</p>
-<p>{% trans "Für das [letzte Teilstück] der Figur müssen Sie die Schaltfläche [Letztes Teilstück erstellen] verwenden, um die Funktion zu beenden." %}</p>
-<p> </p>
-<p class="MsoNormal" style="color: #ff0000; font-style: italic;">{% trans "[K]licken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen." %}</p>
-<p class="hcp5"> </p>
-<p class="hcp5"><img src="../Teilefigur_erzeugen_dialog.gif" alt="" usemap="#MAP560803134" border="0" class="hcp1"/>
-<map id="MAP560803134" name="MAP560803134">
-<area shape="rect" coords="0, 29, 264, 413" href="Teilefiguren_erzeugen_Parameter.htm" alt=""/>
-<area shape="rect" coords="11, 431, 130, 453" href="javascript:BSSCPopup('../Commdata/COMMON_Schliessen.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="142, 426, 257, 452" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area2" alt=""/>
-</map> </p>
-<p class="hcp5"> </p>
-<p class="Hinweis">{% trans "Hinweis:" %}</p>
-<p>{% trans "Diese Funktion ist optional." %}</p>
-<p> </p>
-<p> </p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; 
+	 border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <img alt="" border="0" class="hcp1" src="../Teilefigur_erzeugen_ico.gif"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    创建部分图形
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用特殊宏
+   </font>
+   <b class="hcp2">
+    <font style="vertical-align: inherit;">
+     “创建
+    </font>
+   </b>
+  </font>
+  <b class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     部分图形”，
+    </font>
+   </font>
+  </b>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    您可以使用不同的切割次数来编辑几何体的各个部分。
+   </font>
+  </font>
+  <b class="hcp2">
+   <font style="vertical-align: inherit;">
+   </font>
+  </b>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    开放的图形会自动创建，然后进行编辑。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这样，一方面减少了编程工作量，另一方面显着缩短了处理时间。
+   </font>
+  </font>
+ </p>
+ <p>
+  <img alt="" border="0" class="hcp1" src="../Teilefigur_erzeugen_example_1.gif"/>
+ </p>
+ <p>
+  <b class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     方法：
+    </font>
+   </font>
+  </b>
+  <span style="mso-tab-count: 1;">
+  </span>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    首先，必须为要切割的几何图形创建一个闭合图形。
+   </font>
+   <font style="vertical-align: inherit;">
+    然后调用函数
+   </font>
+   <span class="hcp3">
+    <b class="hcp2">
+     <font style="vertical-align: inherit;">
+      创建
+     </font>
+    </b>
+   </span>
+  </font>
+  <b class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     部分图形
+    </font>
+   </font>
+  </b>
+  <font style="vertical-align: inherit;">
+   <span class="hcp3">
+    <font style="vertical-align: inherit;">
+     。
+    </font>
+   </span>
+  </font>
+  <span class="hcp3">
+   <b class="hcp2">
+    <font style="vertical-align: inherit;">
+    </font>
+   </b>
+   <font style="vertical-align: inherit;">
+   </font>
+  </span>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    现在，所选图形上会显示图形方向的方向箭头。
+   </font>
+   <font style="vertical-align: inherit;">
+    现在必须在图形的方向上定义部分图形的端点，以及它们的延伸距离和每个部分图形的切割数量。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对于图形的
+   </font>
+  </font>
+  <span class="hcp4">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     最后一部分
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，必须使用
+   </font>
+  </font>
+  <span class="hcp4">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “创建最后一部分”
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮退出该功能。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="MsoNormal" style="color: #ff0000; font-style: italic;">
+  <span class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图的各个区域可访问帮助文本。
+   </font>
+  </font>
+ </p>
+ <p class="hcp5">
+ </p>
+ <p class="hcp5">
+  <img alt="" border="0" class="hcp1" src="../Teilefigur_erzeugen_dialog.gif" usemap="#MAP560803134"/>
+  <map id="MAP560803134" name="MAP560803134">
+   <area alt="" coords="0, 29, 264, 413" href="Teilefiguren_erzeugen_Parameter.htm" shape="rect"/>
+   <area alt="" coords="11, 431, 130, 453" href="javascript:BSSCPopup('../Commdata/COMMON_Schliessen.htm',400,300);" id="area1" shape="rect"/>
+   <area alt="" coords="142, 426, 257, 452" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area2" shape="rect"/>
+  </map>
+ </p>
+ <p class="hcp5">
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一个通知：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此功能是可选的。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('area1');
 	FilePopupInit('area2');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

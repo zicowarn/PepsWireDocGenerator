@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,14 +33,100 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Technologie" %}</p><p>{% trans "[Bearbeitungshöhe]" %}</p>
-<p class="Block_Text">{% trans "In diesem Dialogbereich bestimmen Sie die Schneidhöhe der aktuellen Bearbeitung." %}</p>
-<p class="Block_Text">{% trans "Beachten Sie, dass dieser Wert nicht für jede Drahterodiermaschine in die NC-Daten ausgegeben wird." %}</p>
-<p class="Block_Text" style="margin-top: 0; margin-bottom: 0;"> </p>
-<p class="Block_Text">{% trans "[Wähle Technologie]" %}</p>
-<p>{% trans "Für viele Drahterodiermaschinen, jedoch nicht für alle, existieren optional Technologiedatenbanken, die Sie mit der Schaltfläche [Wähle Technologie] aufrufen können." %}</p>
-<p>{% trans "Beachten Sie, dass die Verwendung von Technologiedatenbanken optional ist und lizenziert werden muss." %}</p>
-<p>{% trans "Ist keine Lizenz für die Technologiedatenbank verfügbar, ist die Schaltfläche [Wähle Technologie] nicht verfügbar[.]" %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    技术
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     加工高度
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在此对话框区域中，您可以确定当前加工的切削高度。
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    请注意，该值不会输出到每台线切割机床的 NC 数据中。
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text" style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p class="Block_Text">
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     选择技术
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对于许多（但并非所有）线切割机床，您可以使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “选择技术”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮访问可选的技术数据库。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    请注意，技术数据库的使用是可选的，并且需要许可。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果技术数据库的许可证不可用，则
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “选择技术”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮不可用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     。
+    </font>
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

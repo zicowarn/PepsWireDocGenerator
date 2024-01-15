@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,40 +33,339 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Strategieart" %}</p><p>{% trans "Wählen Sie hier die benötigte Bearbeitungsstrategie. Folgende Strategien sind verfügbar:" %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Strategien der Bearbeitungsoperationen verwenden" %}</p>
-<p>{% trans "Die Bearbeitungsstrategie wird von den #[Strategieeinstellungen]# der [programmierten Bearbeitungsoperation(en)] gesteuert." %}</p>
-<p class="Hinweis">{% trans "Hinweis:" %}</p>
-<p>{% trans "Diese Option ist die Voreinstellung des Systems." %}</p>
-<p>{% trans "Wählt man eine der folgenden Strategien, so gilt die gewählte Strategie für das [gesamte Programm]." %}</p>
-<p>{% trans "In den einzelnen Bearbeitungsoperationen können dann keine #[Strategieeinstellungen]# eingestellt werden." %}</p>
-<p class="footnote_text" style="margin-bottom: 0.00pt;"> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Matrize - Beaufsichtigter Tagbetrieb" %}</p>
-<p>{% trans "Ausfallteil wird nach erstem Schnitt entfernt. Stopp vor Entfernen des Ausfallteils. Jeder Durchbruch wird komplett fertiggeschlichtet, bevor der nächste bearbeitet wird." %}</p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Matrize - Unbeaufsichtigter Tagbetrieb" %}</p>
-<p>{% trans "Der erste Schnitt wird für jeden Durchbruch ausgeführt, wobei eine Anbindung stehen bleibt. Die Maschine stoppt. Dann werden alle Anbindungen entfernt und die Ausfallteile entnommen." %}</p>
-<p>{% trans "Jeder Durchbruch wird dann komplett geschlichtet bevor der nächste Durchbruch fertig bearbeitet wird." %}</p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Matrize - Unbeaufsichtigter Nachtbetrieb" %}</p>
-<p>{% trans "Alle Schnitte werden an allen Durchbrüchen im Pendelschnitt ausgeführt, wobei eine Anbindung stehen bleibt. Die Maschine stoppt." %}</p>
-<p>{% trans "Dann wird die Anbindung entfernt und im Pendelschnitt fertig geschlichtet." %}</p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;"> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Stempel - Beaufsichtigt schneiden" %}</p>
-<p>{% trans "Alle Schnitte werden am ersten Stempel im Pendelschnitt ausgeführt, wobei eine Anbindung stehen bleibt. Die Maschine stoppt." %}</p>
-<p>{% trans "Der Stempel wird vom Bediener fixiert und die Anbindung fertig bearbeitet. Dann zum nächsten Stempel fahren und die Arbeitsfolge wiederholen." %}</p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Stempel - Beaufsichtigt schneiden (Anbindung wird abgeschliffen)" %}</p>
-<p>{% trans "Alle Schnitte werden am ersten Stempel im Pendelschnitt ausgeführt, wobei eine Anbindung stehen bleibt. Die" %}</p>
-<p>{% trans "Maschine stoppt. Der Stempel wird vom Bediener fixiert und die Anbindung mit einem Schnitt bearbeitet. Dann zum nächsten Stempel fahren und die Arbeitsfolge wiederholen." %}</p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Stempel - Unbeaufsichtigt schneiden" %}</p>
-<p>{% trans "Alle Schnitte werden am ersten Stempel im Pendelschnitt ausgeführt, wobei eine Anbindung stehen bleibt. Dann wird der nächste Stempel angefahren und die Bearbeitungsfolge wiederholt." %}</p>
-<p>{% trans "Die Maschine stoppt. Alle Stempel werden vom Bediener fixiert und die Anbindungen werden im Pendelschnitt fertig geschlichtet." %}</p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;"> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "Spannungsfrei schneiden" %}</p>
-<p>{% trans "Der erste Schnitt wird für jeden Durchbruch ausgeführt, wobei eine Anbindung stehen bleibt. Die Maschine stoppt. Dann werden alle Anbindungen entfernt und die Ausfallteile entnommen." %}</p>
-<p>{% trans "Die Schlichtschnitte werden nacheinander an jedem Durchbruch ausgeführt." %}</p>
-<p> </p>
-<p class="Tip_Note_Heading">{% trans "Erzeuge 3 Dateien für Schruppen, Anbindung entfernen und Schlichten" %}</p>
-<p>{% trans "Bei einem Postprozessorlauf werden [3 separate NC-Dateien] erzeugt, für den Schruppschnitt, das Entfernen der Anbindung und die Schlichtschnitte." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    策略型
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在此选择所需的处理策略。
+   </font>
+   <font style="vertical-align: inherit;">
+    可以采用以下策略：
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    加工操作的使用策略
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    加工策略由
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     编程加工操作
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    的
+   </font>
+  </font>
+  <a href="Anbinden_Lasche.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      策略设置
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    控制 
+ 。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一个通知：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该选项是系统默认选项。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果您选择以下策略之一，则所选策略将应用于
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     整个程序
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    无法在各个加工操作中
+   </font>
+   <font style="vertical-align: inherit;">
+    设置
+   </font>
+  </font>
+  <a href="Anbinden_Lasche.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      策略设置。
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="footnote_text" style="margin-bottom: 0.00pt;">
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    模具 - 白天操作受监督
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    第一次切割后，损坏的部分将被移除。
+   </font>
+   <font style="vertical-align: inherit;">
+    在移除故障部件之前停止。
+   </font>
+   <font style="vertical-align: inherit;">
+    每个突破都在加工下一个突破之前完全完成。
+   </font>
+  </font>
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    模具 - 白天无人值守操作
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    每次突破都会进行第一次切割，并保留一条领带。
+   </font>
+   <font style="vertical-align: inherit;">
+    机器停止。
+   </font>
+   <font style="vertical-align: inherit;">
+    然后移除所有连接并移除故障部件。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    每次突破完成后，下一次突破才会完成。
+   </font>
+  </font>
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    模具-夜间无人值守操作
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    所有切割均使用摆式切割在所有开口处进行，并保留一个连接。
+   </font>
+   <font style="vertical-align: inherit;">
+    机器停止。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    然后移除连接并使用摆锤切割完成。
+   </font>
+  </font>
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    邮票 - 监督切割
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    所有切割均使用摆式切割在第一个冲头上进行，并保留一个连接。
+   </font>
+   <font style="vertical-align: inherit;">
+    机器停止。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    操作人员将印章固定好，连接完成。
+   </font>
+   <font style="vertical-align: inherit;">
+    然后移动到下一个印记并重复工作顺序。
+   </font>
+  </font>
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    标记 - 在监督下切断（连接已接地）
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    所有切割均使用摆式切割在第一个冲头上进行，并保留一个连接。
+   </font>
+   <font style="vertical-align: inherit;">
+    这
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    机器停止。
+   </font>
+   <font style="vertical-align: inherit;">
+    冲头由操作者固定，连接处用切口加工。
+   </font>
+   <font style="vertical-align: inherit;">
+    然后移动到下一个印记并重复工作顺序。
+   </font>
+  </font>
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    印章 - 无人值守切割
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    所有切割均使用摆式切割在第一个冲头上进行，并保留一个连接。
+   </font>
+   <font style="vertical-align: inherit;">
+    然后接近下一个印记并重复处理序列。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    机器停止。
+   </font>
+   <font style="vertical-align: inherit;">
+    所有冲头均由操作员固定，并使用摆式切割完成连接。
+   </font>
+  </font>
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    无张力切割
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    每次突破都会进行第一次切割，并保留一条领带。
+   </font>
+   <font style="vertical-align: inherit;">
+    机器停止。
+   </font>
+   <font style="vertical-align: inherit;">
+    然后移除所有连接并移除故障部件。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    每次突破时都会进行最后的削减。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    创建 3 个文件用于粗加工、解绑和精加工
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在后处理器运行期间，会创建
+   </font>
+  </font>
+  <span style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     3 个独立的 NC 文件
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，用于粗切、连接移除和精切。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,7 +33,69 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Techno.(logien)" %}</p><p>{% trans "Ist diese Checkbox aktiviert, wird jede [zusätzliche Technologieinformation] die mit dem Befehl #[Zusaetzliche Technologien]# im Menue #[Vorbereitung]# zu einer Bearbeitungsfigur hinzugefügt wurde, dem gewählten Schnitt zugeordnet und in die NC-Daten ausgegeben." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    技术
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果激活此复选框，则使用
+   </font>
+   <a href="../wirhlp9/Das_Vorbereitungs_Menue.htm">
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      “准备”
+     </font>
+    </font>
+   </a>
+   <font style="vertical-align: inherit;">
+    菜单中的
+   </font>
+   <a href="../wirhlp9/Zusaetzliche_Technologien____.htm">
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      “附加技术”
+     </font>
+    </font>
+   </a>
+   <font style="vertical-align: inherit;">
+    命令添加到加工图形的任何
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     附加技术信息
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    都将分配给 NC 数据中选定的切削和输出。
+   </font>
+  </font>
+  <a href="../wirhlp9/Zusaetzliche_Technologien____.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+  <a href="../wirhlp9/Das_Vorbereitungs_Menue.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

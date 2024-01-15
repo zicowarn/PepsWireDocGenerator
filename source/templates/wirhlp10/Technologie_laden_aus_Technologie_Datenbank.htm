@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -37,49 +36,227 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Technologie laden (aus Technologie Datenbank)" %}</p><p>{% trans "Mit dieser Funktion können Sie einer Bearbeitung Technologieparameter (Anzahl der Schnitte, Stromstufe, verwendeter Offset usw.) aus der Technologiedatenbank zuweisen." %}</p><p class="hcp1"> </p>
-<p class="Tip_Note_Heading">{% trans "Technologie aus Datenbank laden:" %}</p>
-<ul>
-<li class="hcp2">
-<p class="Topic_Text_Bulleted">{% trans "Wählen Sie die Bearbeitungsstrategie und bestimmen Sie, welche Figur(en) bearbeitet werden sollen. Legen Sie die Anbindung, das Offset und die Ein/Ausfahrstrategie fest." %}</p>
-</li>
-<li class="hcp2">
-<p class="Topic_Text_Bulleted">{% trans "Sie auf das Register [#Datenbank#]. Es folgt ein neuer Dialog." %}</p>
-</li>
-<li class="hcp2">
-<p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf die Schaltfläche [#Liste neu aufbauen#] um alle vorhandenen Datenbankeinträge aufzulisten." %}</p>
-</li>
-<li class="hcp2">
-<p class="Topic_Text_Bulleted">{% trans "Wählen Sie einen Eintrag aus der Liste und prüfen Sie die zugeordneten Technologien mit der Schaltfläche [#Editieren#]." %}</p>
-</li>
-<li class="hcp2">
-<p class="Topic_Text_Bulleted">{% trans "Laden Sie die Technologien mit [#Technologie laden#]." %}</p>
-</li>
-</ul>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp1"> </p>
-<p><img src="../TECHN_LA_shg.gif" usemap="#AreaMap0" alt="TECHN_LA_shg.gif" width="362" height="512" border="0"/> <map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="12,39,61,55" href="Einstellungen_Einstellen_der_Schnittmethode.htm" alt=""/>
-<area shape="rect" coords="62,38,117,55" href="Anbinden_Lasche.htm" alt=""/>
-<area shape="rect" coords="120,36,197,55" href="Ein_Ausfahren_Lasche.htm" alt=""/>
-<area shape="rect" coords="197,37,238,55" href="Offset_Lasche.htm" alt=""/>
-<area shape="rect" coords="19,66,325,92" href="javascript:BSSCPopup('Filter_Material.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="17,92,323,114" href="javascript:BSSCPopup('Filter_Dicke.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="18,116,320,139" href="javascript:BSSCPopup('Filter_Oberflaechenguete.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="19,151,324,385" href="javascript:BSSCPopup('Technologie_Datenbank_Liste_der_Materialien.htm',400,300);" id="area4" alt=""/>
-<area shape="rect" coords="29,392,180,412" href="javascript:BSSCPopup('Liste_neu_aufbauen.htm',400,300);" id="area5" alt=""/>
-<area shape="rect" coords="193,392,332,413" href="javascript:BSSCPopup('Technologie_laden_aus_Technologie_Datenbank.htm',400,300);" id="area6" alt=""/>
-<area shape="rect" coords="24,420,101,442" href="javascript:BSSCPopup('Editieren_Technologie_Datenbank.htm',400,300);" id="area7" alt=""/>
-<area shape="rect" coords="104,422,180,442" href="javascript:BSSCPopup('Loeschen_Technologie_Datenbank.htm',400,300);" id="area8" alt=""/>
-<area shape="rect" coords="190,420,329,443" href="javascript:BSSCPopup('Technologie_speichern_Technologie_Datenbank.htm',400,300);" id="area9" alt=""/>
-<area shape="rect" coords="12,476,83,501" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area10" alt=""/>
-<area shape="rect" coords="92,478,168,504" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area11" alt=""/>
-<area shape="rect" coords="172,479,266,501" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area12" alt=""/>
-<area shape="rect" coords="271,479,347,503" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area13" alt=""/></map></p>
-<p style="text-align: center;"> </p>
-<p>{% trans "Wenn zu viele Einträge aufgelistet werden kann man mit den Checkboxen [Filter Material], [Filter Dicke] [und Filter Oberflächengüte] eine #[gefilterte Liste]# erzeugen." %}</p>
-<script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    加载技术（来自技术数据库）
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通过此功能，您可以将技术参数（切削次数、当前级别、使用的偏移量等）从技术数据库分配给加工过程。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    从数据库加载技术：
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选择编辑策略并确定应编辑哪些图形。
+     </font>
+     <font style="vertical-align: inherit;">
+      指定连接、偏移量和进入/退出策略。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      单击
+     </font>
+    </font>
+    <font class="hcp3">
+     <a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('Datenbank_fuer_Technologie_Lasche.htm',400,300);return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        “数据库”
+       </font>
+      </font>
+     </a>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选项卡。
+     </font>
+     <font style="vertical-align: inherit;">
+      接下来是新的对话。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      单击
+     </font>
+    </font>
+    <font class="hcp3">
+     <a class="BSSCPopup" href="javascript:void(0);" id="a2" onclick="BSSCPopup('Liste_neu_aufbauen.htm',400,300);return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        “重建列表”
+       </font>
+      </font>
+     </a>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      按钮列出所有现有数据库条目。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      从列表中选择一个条目，然后使用
+     </font>
+    </font>
+    <font class="hcp3">
+     <a class="BSSCPopup" href="javascript:void(0);" id="a3" onclick="BSSCPopup('Editieren_Technologie_Datenbank.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        “编辑”
+       </font>
+      </font>
+     </a>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      按钮检查分配的技术。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp2">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp3">
+     <a class="BSSCPopup" href="javascript:void(0);" id="a4" onclick="BSSCPopup('Technologie_laden_aus_Technologie_Datenbank.htm',400,300);return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        使用Load Technology
+       </font>
+      </font>
+     </a>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      加载技术
+     </font>
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="TECHN_LA_shg.gif" border="0" height="512" src="../TECHN_LA_shg.gif" usemap="#AreaMap0" width="362"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="12,39,61,55" href="Einstellungen_Einstellen_der_Schnittmethode.htm" shape="rect"/>
+   <area alt="" coords="62,38,117,55" href="Anbinden_Lasche.htm" shape="rect"/>
+   <area alt="" coords="120,36,197,55" href="Ein_Ausfahren_Lasche.htm" shape="rect"/>
+   <area alt="" coords="197,37,238,55" href="Offset_Lasche.htm" shape="rect"/>
+   <area alt="" coords="19,66,325,92" href="javascript:BSSCPopup('Filter_Material.htm',400,300);" id="area1" shape="rect"/>
+   <area alt="" coords="17,92,323,114" href="javascript:BSSCPopup('Filter_Dicke.htm',400,300);" id="area2" shape="rect"/>
+   <area alt="" coords="18,116,320,139" href="javascript:BSSCPopup('Filter_Oberflaechenguete.htm',400,300);" id="area3" shape="rect"/>
+   <area alt="" coords="19,151,324,385" href="javascript:BSSCPopup('Technologie_Datenbank_Liste_der_Materialien.htm',400,300);" id="area4" shape="rect"/>
+   <area alt="" coords="29,392,180,412" href="javascript:BSSCPopup('Liste_neu_aufbauen.htm',400,300);" id="area5" shape="rect"/>
+   <area alt="" coords="193,392,332,413" href="javascript:BSSCPopup('Technologie_laden_aus_Technologie_Datenbank.htm',400,300);" id="area6" shape="rect"/>
+   <area alt="" coords="24,420,101,442" href="javascript:BSSCPopup('Editieren_Technologie_Datenbank.htm',400,300);" id="area7" shape="rect"/>
+   <area alt="" coords="104,422,180,442" href="javascript:BSSCPopup('Loeschen_Technologie_Datenbank.htm',400,300);" id="area8" shape="rect"/>
+   <area alt="" coords="190,420,329,443" href="javascript:BSSCPopup('Technologie_speichern_Technologie_Datenbank.htm',400,300);" id="area9" shape="rect"/>
+   <area alt="" coords="12,476,83,501" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area10" shape="rect"/>
+   <area alt="" coords="92,478,168,504" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area11" shape="rect"/>
+   <area alt="" coords="172,479,266,501" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area12" shape="rect"/>
+   <area alt="" coords="271,479,347,503" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area13" shape="rect"/>
+  </map>
+ </p>
+ <p style="text-align: center;">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果列出的条目太多，您可以使用
+   </font>
+  </font>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “过滤器材料”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “过滤器厚度
+    </font>
+   </font>
+  </font>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     ”和“过滤器表面质量”复选框创建
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <a href="So_erzeugt_man_eine_gefilterte_Liste_Technologie_Datenbank.htm">
+   <font class="hcp3">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      过滤
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    列表
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
         if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
         FilePopupInit('a1');
         FilePopupInit('a2');
@@ -98,8 +275,9 @@
         FilePopupInit('area11');
         FilePopupInit('area12');
         FilePopupInit('area13');
-//]]&gt;
-</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

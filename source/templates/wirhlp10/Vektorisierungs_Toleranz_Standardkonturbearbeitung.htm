@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,12 +28,65 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Vektorisierungs Toleranz" %}</p><p>{% trans "Einige NC-Steuerungen können bei konischen Bearbeitungen keine zirkulare Interpolation (Radien) ausführen." %}</p>
-<p>{% trans "Bei diesen Steuerungen müssen konische Radien bei der NC-Ausgabe, in eine Anzahl von kleinen Geraden zerlegt werden." %}</p>
-<p>{% trans "Je kleiner die Geraden, umso feiner die Werkstückoberfläche. Im Feld [Vektorisierungs Toleranz] legt der Anwender die gewünschte Präzision der Oberfläche fest." %}</p>
-<p>{% trans "Je kleiner der Wert, desto genauer ist die Konturtreue. Beachten Sie, dass die Größe der NC-Ausgabedatei mit steigender Oberflächenpräzision zunimmt (mehr Geraden)." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p><img src="../CUS1.gif" alt="CUS1.gif" width="382" height="197" border="0"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    矢量化容差
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    某些 NC 控件无法执行圆锥形加工的圆弧插补（半径）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通过这些控制，圆锥半径必须在 NC 输出中分解为许多小直线。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    直线越小，工件表面越精细。
+   </font>
+  </font>
+  <font style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     在“矢量化公差”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    字段中，
+   </font>
+   <font style="vertical-align: inherit;">
+    用户指定所需的表面精度。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    值越小，轮廓保真度越精确。
+   </font>
+   <font style="vertical-align: inherit;">
+    请注意，NC 输出文件的大小随着表面精度的增加（更多直线）而增加。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <img alt="CUS1.gif" border="0" height="197" src="../CUS1.gif" width="382"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

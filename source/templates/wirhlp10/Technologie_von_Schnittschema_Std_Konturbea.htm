@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,9 +33,111 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Technologie von Schnittschema" %}</p><p>{% trans "Mit Hilfe von #[Schnittschemen]# können Sie [alle Einstellungen] des Dialoges [Standard Konturbearbeitung] abspeichern und für spätere Bearbeitungsprogrammierungen erneut verwenden." %}</p>
-<p>{% trans "Mit der Funktion [Technologie von Schnittschema] können Sie [ausschließlich] die [Technologiewerte] eines Schnittschemas importieren und verwenden." %}</p>
-<p>{% trans "Alle anderen Einstellungen des Schnittschemas (z.B. Anzahl der Schnitte, Haltestegbreite, Offsetwerte etc.) werden nicht importiert." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    切割方案技术
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    借助
+   </font>
+  </font>
+  <a href="Schnittschemen.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      切割方案，
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    您可以保存
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     “标准轮廓加工”
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    对话框的
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     所有设置
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，并在以后的加工编程中再次使用它们。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通过
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     切割方案技术
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    功能，您
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     只能
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    导入和使用切割方案的
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     技术值
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    不会导入切割方案的所有其他设置（例如切割次数、固定杆宽度、偏移值等）。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

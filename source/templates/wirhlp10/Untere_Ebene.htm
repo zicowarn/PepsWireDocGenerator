@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,13 +33,150 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Untere Ebene" %}</p><p>{% trans "Name der Bearbeitungsfigur der [UNTEREN] Regelflächenebene. Der Figurname wird mit der Schaltfläche @ aus der Zeichnung ermittelt." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p class="Hinweis">{% trans "Hinweis:" %}</p>
-<p>{% trans "Die Bearbeitungsfigur wird mit dem Befehl #[Linien/Bögen ==&amp;gt; Bearbeitunsfigur]#, [Parametrische Figuren] oder #[Auto. Matrize / Stempel]# im Menü [Vorbereitung] erzeugt." %}</p>
-<p>{% trans "Stellen Sie bei der Figurerzeugung sicher, dass die Bearbeitungsfigur keine Lücken aufweist." %}</p>
-<p>{% trans "Verwenden Sie bei der Elementauswahl die Option [Verbinden (Verketten)] um die Auswahl zu vereinfachen." %}</p>
-<p>{% trans "Weisen Sie den Bearbeitungsfiguren für die obere und untere Ebene, die gleiche Richtung und die gleichen Figurstartpunkte zu." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    低等级
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     LOWER
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    直纹曲面平面加工图形
+   </font>
+   <font style="vertical-align: inherit;">
+    的名称。
+   </font>
+   <font style="vertical-align: inherit;">
+    图形名称是
+   </font>
+  </font>
+  <img alt="选择.gif" border="0" height="23" src="../Select.gif" width="24"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用按钮从绘图中确定的。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一个通知：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    加工图形是使用命令行“
+   </font>
+  </font>
+  <a href="../wirhlp9/Linien_Boegen_Bearbeitungsfigur.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      直线/圆弧==&gt;编辑图形”
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “参数化图形”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <a href="../wirhlp9/Auto_Matritzen_und_Stempel.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      “自动”创建的。
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     在准备
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    菜单中
+   </font>
+   <font style="vertical-align: inherit;">
+    创建
+   </font>
+   <a href="../wirhlp9/Auto_Matritzen_und_Stempel.htm">
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      模具/冲头。
+     </font>
+    </font>
+   </a>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    创建图形时，请确保编辑图形没有任何间隙。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选择元素时，使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “连接”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项可以简化选择。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    将顶层和底层的编辑图形指定为相同的方向和相同的图形起点。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

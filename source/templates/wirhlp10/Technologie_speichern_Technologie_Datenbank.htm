@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,38 +34,284 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Technologie speichern (Technologie Datenbank)" %}</p><p>{% trans "Mit dieser Funktion können Sie die Technologieparameter der momentanen Bearbeitung abspeichern. Gehen Sie wie folgt vor:" %}</p><p class="Tip_Note_Heading">{% trans "Technologie in Technologiedatenbank speichern" %}</p>
-<ul>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Wählen Sie die Bearbeitungsstrategie und bestimmen Sie welche Figur(en) bearbeitet werden sollen. Legen Sie den Stoppunkt, das Offset und die Ein/Ausfahrstrategie fest." %}</p>
-</li>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf das Register #[Schnitte]#." %}</p>
-</li>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Legen Sie die [Anzahl der Schnitte] fest und bestimmen Sie ggf. ein Offset." %}</p>
-</li>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf die Schaltfläche [...] unterhalb des Bereiches [#Tech.#] und ordnen Sie den einzelnen Schnitten z.B. Stromstufe und Offsetregister (NC-Steuerungsabhängig) zu." %}</p>
-</li>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf das Register [#Datenbank#]." %}</p>
-</li>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "[Aktivieren] Sie die Checkboxen: [Filter Material], [Filter Dicke] und [Filter Oberflächengüte]. Wählen Sie das [Material], die [Dicke] und die [Oberflächengüte] aus für das Sie Ihre Technologie speichern wollen. Fehlt z.B. ein Material kann man dies in der Combobox links neben dem Feld [Filter Material] eingeben." %}</p>
-</li>
-<li class="hcp1">
-<p class="Topic_Text_Bulleted">{% trans "Klicken Sie auf die Schaltfläche [#Technologie speichern#]." %}</p>
-</li>
-</ul>
-<script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    保存技术（技术数据库）
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用此功能可以保存当前加工的工艺参数。
+   </font>
+   <font style="vertical-align: inherit;">
+    请按如下方式进行：
+   </font>
+  </font>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    将技术保存到技术数据库
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选择编辑策略并确定应编辑哪些图形。
+     </font>
+     <font style="vertical-align: inherit;">
+      设置止损点、偏移量和进场/出场策略。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      单击“部分”
+     </font>
+    </font>
+    <a href="Einstellungen_Einstellen_der_Schnittmethode.htm">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        选项卡
+       </font>
+      </font>
+     </font>
+    </a>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      确定
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       切割次数
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      ，如有必要，确定偏移量。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      单击“技术”部分
+     </font>
+     <font style="vertical-align: inherit;">
+      下方的
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “...”按钮
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('Tech______Technologie_zuweisen.htm',400,300);return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        。
+       </font>
+      </font>
+     </a>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      并将电流水平和偏移寄存器（取决于 NC 控制）分配给各个切割。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      单击
+     </font>
+    </font>
+    <font class="hcp2">
+     <a class="BSSCPopup" href="javascript:void(0);" id="a3" onclick="BSSCPopup('Datenbank_fuer_Technologie_Lasche.htm',400,300);return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        数据库
+       </font>
+      </font>
+     </a>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选项卡。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       激活
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      复选框：
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       过滤器材料
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      、
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       过滤器厚度
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      和
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       过滤器表面光洁度
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+     <font style="vertical-align: inherit;">
+      选择
+     </font>
+     <font style="vertical-align: inherit;">
+      您想要保存技术的
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       材料
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      、
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       厚度
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      和
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       表面光洁度。
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       例如，如果缺少某种材料，您可以在“过滤材料”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      字段左侧的组合框中输入该材料
+     </font>
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp1">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      单击
+     </font>
+    </font>
+    <font class="hcp2">
+     <a class="BSSCPopup" href="javascript:void(0);" id="a2" onclick="BSSCPopup('Technologie_speichern_Technologie_Datenbank.htm',400,300);return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        保存技术
+       </font>
+      </font>
+     </a>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      按钮。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
         if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
         FilePopupInit('a1');
         FilePopupInit('a3');
         FilePopupInit('a2');
-//]]&gt;
-</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

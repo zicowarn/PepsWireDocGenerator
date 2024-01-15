@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,26 +35,234 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Tech. ... (Technologie zuweisen)" %}</p><p> </p>
-<p style="color: #ff0000; font-style: italic;">{% trans "Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen." %}</p>
-<p class="hcp1"> </p>
-<p><img src="../MEHRFACH_shg.gif" alt="MEHRFACH_shg.gif" usemap="#MAP542981257" width="140" height="110" border="0"/>
-<map id="MAP542981257" name="MAP542981257">
-<area shape="rect" coords="3, 3, 43, 110" href="Tech______Technologie_zuweisen.htm" alt=""/>
-<area shape="rect" coords="46, 2, 137, 109" href="Extra_Techn_M_Cddes.htm" alt=""/>
-</map> </p>
-<p class="hcp1"> </p>
-<p>{% trans "Die Schaltfläche @ ruft einen Dialog auf, in der Sie jedem Schnitt Technologiewerte zuweisen können." %}</p>
-<p>{% trans "Beachten Sie, dass Sie die Technologiewerte mit der Option #Extra# dort [Techno]logie im Dialog, überschreiben können." %}</p>
-<p class="hcp1"> </p>
-<p><img src="../TECH_FIL.gif" alt="TECH_FIL.gif" width="240" height="185" border="0"/></p>
-<p class="hcp1"> </p>
-<p>{% trans "Die Optionen im Dialog können je nach verwendeter NC-Maschine unterschiedlich sein. Normalerweise finden Sie hier Einstellungen für [Stromstufe], [Offset], [Spülparameter], etc. ." %}</p>
-<p class="hcp1"> </p>
-<p class="Beispiel">{% trans "Beispiel:" %}</p>
-<p>{% trans "Die Option [Strom] ist an den meisten NC-Steuerungen verfügbar. Damit können Sie jedem Schnitt eine separate Stromstufe zuordnen (z.B. 506)." %}</p>
-<p>{% trans "Die Option [Offset] hingegen, weist jedem Schnitt ein Offsetregisternummer zu. Das heißt, die Eingabe von 0, 1 oder 2 im Dialog entsprächen z.B. D0, D1 oder D2 in der NC-Ausgabe." %}</p>
-<p>{% trans "Einmal bestimmt, können Sie Technologien in der Technologie Datenbank speichern. Verwenden Sie dazu den Befehl [Speichern ...] im Feld [Technologie] [Datenbank]." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    技术。
+   </font>
+   <font style="vertical-align: inherit;">
+    ...（分配技术）
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p style="color: #ff0000; font-style: italic;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    单击下图的各个区域可访问帮助文本。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="MULTIPLE_shg.gif" border="0" height="110" src="../MEHRFACH_shg.gif" usemap="#MAP542981257" width="140"/>
+  <map id="MAP542981257" name="MAP542981257">
+   <area alt="" coords="3, 3, 43, 110" href="Tech______Technologie_zuweisen.htm" shape="rect"/>
+   <area alt="" coords="46, 2, 137, 109" href="Extra_Techn_M_Cddes.htm" shape="rect"/>
+  </map>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该按钮
+   </font>
+  </font>
+  <img alt="3_points.gif" border="0" height="20" src="../3_points.gif" width="19"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    会打开一个对话框，您可以在其中为每次切割分配技术值。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    请注意，您可以使用对话框中
+   </font>
+   <font class="hcp2">
+    <font style="vertical-align: inherit;">
+     “技术”
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    中的
+   </font>
+  </font>
+  <a href="Techno__logien.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “额外”
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项覆盖技术值。
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="TECH_FIL.gif" border="0" height="185" src="../TECH_FIL.gif" width="240"/>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框中的选项可能因所使用的 NC 机床而异。
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     通常您会在这里找到当前级别
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     偏移量
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     冲洗参数
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    等设置
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p class="Beispiel">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    例子：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    大多数 NC 控制器都提供
+   </font>
+   <font style="vertical-align: inherit;">
+    电源
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     选项。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这允许您为每个剪切分配单独的当前级别（例如 506）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    另一方面，“偏移”选项为每个剪切分配一个偏移寄存器
+   </font>
+   <font style="vertical-align: inherit;">
+    编号
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这意味着在对话框中输入 0、1 或 2 将对应于 NC 输出中的 D0、D1 或 D2。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一旦确定，您可以将技术存储在技术数据库中。
+   </font>
+   <font style="vertical-align: inherit;">
+    为此，请使用
+   </font>
+   <font class="hcp2">
+    <font style="vertical-align: inherit;">
+     “技术
+    </font>
+   </font>
+   <font class="hcp2">
+    <font style="vertical-align: inherit;">
+     数据库”
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    字段中的
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “保存...”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令。
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}
