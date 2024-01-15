@@ -112,7 +112,7 @@ def main():
     idx = 0
     is_reload = False
     while idx < length_templates:
-        if iMaxCount > 10:
+        if iMaxCount > 25:
             break
         relative_path = list_templates[idx]
         template_path = TEMPALTES_BASE_PATH + relative_path
@@ -143,7 +143,7 @@ def main():
             except:
                 input(">>> 程序错误，任意键退出")
                 break
-            time.sleep(2)
+            time.sleep(1)
             actions = ActionChains(driver)
             # 等待页面中的某个元素出现，例如，这里等待一个 id 为 "myElement" 的元素
             time.sleep(1)
@@ -155,6 +155,7 @@ def main():
                 except gw.PyGetWindowException:
                     pass
             actions.context_click().perform()
+            time.sleep(1)
             pyautogui.typewrite(['up', 'up', 'up'])
             pyautogui.typewrite(['return'])
             time.sleep(15)
