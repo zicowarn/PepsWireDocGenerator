@@ -15,6 +15,8 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+
+ROOT_DIR = os.path.split(BASE_DIR)[0]
 #
 PROJECT_PATH = os.path.abspath(os.path.dirname(__name__))
 
