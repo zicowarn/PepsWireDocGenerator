@@ -1,5 +1,16 @@
+import os
+import django
 import json
+from django.template.loader import get_template, render_to_string  # @UnusedImport
 from bs4 import BeautifulSoup
+
+try:
+    from myapp import settings  # @UnusedImport
+except:
+    pass
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "myapp.settings")
+django.setup()
 
 """
 本py模块将 hhc文件转换成 navimenu.py， 用于调试翻译的页面。
@@ -48,10 +59,8 @@ def convert_to_dict(html_content):
         result_dict.update(process_ul(ul_element))
     return result_dict
 
-hhc_fullpath = "source/asset/086/wire_xxx.hhc"
-html_content = ''
-with open(hhc_fullpath, 'r', encoding="utf-8") as hhc:
-    html_content = hhc.read()
+hhc_fullpath = os.path.join(settings.BASE_DIR, "asset", "086", "wire_xxx.hhc")
+html_content = get_template(hhc_fullpath).render()
 result_dict = convert_to_dict(html_content)
 print(result_dict)
 
@@ -60,7 +69,7 @@ menu_fullpath = "source/myapp/navimenu.py"
 # 定义变量名
 variable_name = 'menus'
 # 使用 f-string 格式化输出
-formatted_output = f"{variable_name} = {json.dumps(result_dict, indent=2)}"
+formatted_output = f"{variable_name} = {json.dumps(result_dict, ensure_ascii=False, indent=2).encode().decode('utf-8')}"
 
-with open(menu_fullpath, 'w') as file:
+with open(menu_fullpath, 'w', encoding='utf-8') as file:
     file.write(formatted_output)

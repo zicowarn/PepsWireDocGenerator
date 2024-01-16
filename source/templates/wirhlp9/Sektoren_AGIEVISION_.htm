@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,30 +35,245 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kastoum" style="border-top: 1.50pt solid #0000ff; border-bottom: 1.50pt solid #0000ff;  border-left: 1.50pt solid #0000ff; border-right: 1.50pt solid #0000ff;">{% trans "@ Sektoren (AGIEVISION)" %}</p><p>{% trans "Der Befehl [Sektoren] ist [nur für] AGIEVISION Maschinen verfügbar." %}</p><p>{% trans "Die Funktion findet Anwendung, wenn an bestimmten Positionen einer Bearbeitungsfigur, eine [zusätzliche Konik,] eine [Schnittluftänderung,] eine [Positionierbewegung] eingebracht oder die Eckenstrategie geändert werden soll." %}</p>
-<p>{% trans "Nach Aufruf des Befehls wird der Anwender aufgefordert die Bearbeitungsfigur anzuklicken, an die der [Sektor] eingebracht werden sollen." %}</p>
-<p>{% trans "Verwenden Sie anschließend die [Fangfunktionen], um die Start-/Endpositionen des [Sektors] festzulegen. Nach der Eingabe der Position erfolgt der Aufruf eines Dialogs." %}</p>
-<p>{% trans "Geben Sie dort ein, welches Ereignis (Konik, Schnittluftänderung etc.), mit welchen Parametern ausgeführt werden soll." %}</p>
-<p>{% trans "Jeder Sektor wird durch 2 [hellblaue Kreissymbole] symbolisiert." %}</p>
-<p class="hcp2"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "XXX &lt;img src='../Sektoren_AV1_shg.gif' usemap='#AreaMap0' alt='Sektoren_AV1_shg.gif' width='377' height='431' border='0'/&gt;&lt;map name='AreaMap0' id='AreaMap0'&gt;########&lt;/map&gt;" %}<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="5,52,365,138" href="javascript:BSSCPopup('Konik_Sektor_AGIEVISON.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="5,139,369,181" href="javascript:BSSCPopup('Schnittluft_Sektor_AGIEVISION.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="7,182,367,247" href="javascript:BSSCPopup('Positionierung_Sektor_AGIEVISION.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="8,248,370,391" href="javascript:BSSCPopup('Eckenfunktion_Sektor_AGIEVISION.htm',400,300);" id="area4" alt=""/>
-<area shape="rect" coords="12,396,121,419" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area5" alt=""/>
-<area shape="rect" coords="132,395,243,420" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area6" alt=""/>
-<area shape="rect" coords="254,397,364,420" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area7" alt=""/>
-<area shape="rect" coords="6,21,366,50" href="javascript:BSSCPopup('Sektor_Name_Sektor_AGIEVISION.htm',400,300);" id="area8" alt=""/>
-</map> </p>
-<p class="hcp2"> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
-<p style="font-weight: bold;">{% trans "#Sektoren programmieren (Nur AGIEVISION)#" %}</p>
-<p class="Hinweis">{% trans "Wichtiger Hinweis:" %}</p>
-<p>{% trans "Die Wirkung der Sektoren (z.B. Konik- oder Schnittluftänderung) wird in PEPS [nicht simuliert]." %}</p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="Kastoum" style="border-top: 1.50pt solid #0000ff; border-bottom: 1.50pt solid #0000ff; 
+	 border-left: 1.50pt solid #0000ff; border-right: 1.50pt solid #0000ff;">
+  <img alt="AC_扇区.gif" border="0" height="28" src="../AC_Sector.gif" width="28"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    部门（AGIEVISION）
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     扇区
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令
+   </font>
+   <font style="vertical-align: inherit;">
+    仅
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     适用于
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    AGIEVISION 机器。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    当需要在加工图形的某些位置引入
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     附加锥​​度、
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     切削空气变化、
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    定位
+   </font>
+   <font style="vertical-align: inherit;">
+    运动
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     或
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    拐角策略时，可使用该功能。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    调用该命令后，要求用户单击
+   </font>
+   <font style="vertical-align: inherit;">
+    要插入
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     扇区的编辑图形。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    然后使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     捕捉功能
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    设置扇区的开始/结束
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     位置
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+   <font style="vertical-align: inherit;">
+    输入位置后，将打开一个对话框。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    输入应使用哪些参数执行哪个事件（二次曲线、切割空气更换等）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     每个扇区由 2 个浅蓝色圆圈符号
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    表示
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    XXX
+   </font>
+  </font>
+  <img alt="扇区_AV1_shg.gif" border="0" height="431" src="../Sektoren_AV1_shg.gif" usemap="#AreaMap0" width="377"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="5,52,365,138" href="javascript:BSSCPopup('Konik_Sektor_AGIEVISON.htm',400,300);" id="area1" shape="rect"/>
+   <area alt="" coords="5,139,369,181" href="javascript:BSSCPopup('Schnittluft_Sektor_AGIEVISION.htm',400,300);" id="area2" shape="rect"/>
+   <area alt="" coords="7,182,367,247" href="javascript:BSSCPopup('Positionierung_Sektor_AGIEVISION.htm',400,300);" id="area3" shape="rect"/>
+   <area alt="" coords="8,248,370,391" href="javascript:BSSCPopup('Eckenfunktion_Sektor_AGIEVISION.htm',400,300);" id="area4" shape="rect"/>
+   <area alt="" coords="12,396,121,419" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area5" shape="rect"/>
+   <area alt="" coords="132,395,243,420" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area6" shape="rect"/>
+   <area alt="" coords="254,397,364,420" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area7" shape="rect"/>
+   <area alt="" coords="6,21,366,50" href="javascript:BSSCPopup('Sektor_Name_Sektor_AGIEVISION.htm',400,300);" id="area8" shape="rect"/>
+  </map>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    它是这样完成的：
+   </font>
+  </font>
+ </p>
+ <p style="font-weight: bold;">
+  <a href="Beispiel_Sektoren_programmieren_Nur_AGIEVISION_.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     编程扇区（仅限 AGIEVISION）
+    </font>
+   </font>
+  </a>
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    重要的提示：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     PEPS 中未模拟
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    扇区的影响（例如圆锥曲线或切空气变化）
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('area1');
 	FilePopupInit('area2');
@@ -69,7 +283,9 @@
 	FilePopupInit('area6');
 	FilePopupInit('area7');
 	FilePopupInit('area8');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,11 +33,110 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Vorgabe für Figurnamen" %}</p><p>{% trans "Mit Hilfe dieses Feldes kann man die Systemvoreinstellung für den Namen der Bearbeitungsfigur ([Fig]) verändern." %}</p>
-<p>{% trans "Verwenden Sie die Schaltfläche [Eingaben speichern], um eine neue Vorgabe für den Figurnamen zu speichern." %}</p>
-<p>{% trans "Beachten Sie, dass das System mehrere Bearbeitungsfiguren mit gleichem Namen, automatisch nummeriert ([Fig_001], [Fig_002], [Fig_003] ...)." %}</p>
-<p> </p>
-<p>{% trans "Mit den Schaltflächen @ können Sie eine Liste eigener Figurnamen erstellen und diese nachträglich bearbeiten." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    角色名称规范
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该字段可用于更改系统默认的编辑图形名称（
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     图
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “保存输入”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮保存新的角色名称预设。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    请注意，系统会自动对多个同名的加工图形进行编号（
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     Fig_001
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     Fig_002
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     Fig_003
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ...）。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <img alt="creprfg_Buttons.gif" border="0" height="27" src="../creprfg_Buttons.gif" width="77"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    您可以
+   </font>
+   <font style="vertical-align: inherit;">
+    使用这些按钮创建您自己的角色名称列表并稍后进行编辑。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

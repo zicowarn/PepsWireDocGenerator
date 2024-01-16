@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,52 +35,499 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Variable Bearbeitungsebenen" %}</p><p>{% trans "Bei Werkstücken mit unterschiedlichen Höhen entsteht bei der Bearbeitung mit Konik die Schwierigkeit, dass bei jeder sich ergebenden Höhenänderung, Referenz- und Sekundärhöhe neu angeglichen werden müssen." %}</p><p>{% trans "Eine Möglichkeit diese Problemstellung zu lösen, ist die Projektion des vorhandenen Höhenprofils auf die zu bearbeitende Kontur." %}</p>
-<p>{% trans "Da die Erstellung solcher projizierten Konturen bei entsprechenden Höhenprofilen sehr komplex sein kann, ist eine manuelle Erstellung nur bei einfachen Anwendungsfällen ratsam." %}</p>
-<p>{% trans "Für darüber hinausgehende Anwendungsgebiete wurde der Befehl [Variable Bearbeitungsebenen] entwickelt, der die Erstellung der projizierten Kontur nach Eingabe der Höhenwerte automatisch übernimmt." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../VARI_LAN.gif" alt="VARI_LAN.gif" width="605" height="327" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Nach Aufruf des Befehls werden Sie aufgefordert die Bearbeitungsfigur zu wählen, auf der die [Höhenänderungen] eingebracht werden sollen." %}</p>
-<p>{% trans "Verwenden Sie die Fangfunktionen, um die Positionen der [Höhenänderung] festzulegen." %}</p>
-<p>{% trans "Nach der Eingabe der Position erfolgt der Aufruf eines Dialogs in dem Sie die [Bezugsebene] und die [Höhenänderung] eingeben." %}</p>
-<p class="hcp2"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p><img src="../VARIEBEN_shg.gif" usemap="#AreaMap0" alt="VARIEBEN_shg.gif" width="257" height="192" border="0"/> <map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="12,85,248,145" href="javascript:BSSCPopup('Bezugsebenen_Variable_Bearbeitungsebenen.htm',400,700);" id="area1" alt=""/>
-<area shape="rect" coords="82,44,236,66" href="javascript:BSSCPopup('Naechste_Vorherige_variable_Bearbeitungsebene.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="13,28,81,64" href="javascript:BSSCPopup('Hoehe_Variable_Bearbeitungsebenen.htm',400,300);" id="area3" alt=""/></map></p>
-<p class="hcp2"> </p>
-<p>{% trans "Bestimmen Sie im Dialog die Z-Höhe. Jede Höhenänderung wird durch ein [kleines Dreieck] in der Farbe [Magenta] symbolisiert." %}</p>
-<p>{% trans "Fahren Sie fort, bis alle Höhenänderungen bestimmt sind und bearbeiten Sie die Figuren als [Regelfläche]." %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "Innerhalb des Befehls stehen Optionen für Transformationen zur Verfügung:" %}</p>
-<p>{% trans "[Var. Höhen kopieren + verschieben], [Var. Höhen kopieren + rotieren] und [Var. Höhen spiegeln] (siehe [rechte Maustaste] od. [horizontale Ikonenleiste])." %}</p>
-<p>{% trans "Die Optionen finden bei symmetrischen Formen Verwendung, die das Kopieren von vorhandenen Symbolen für variable Bearbeitungsebenen erlauben." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../EXTAGSBU.gif" alt="EXTAGSBU.gif" width="271" height="197" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Beachten Sie auch die Option [Löschen] (siehe [rechte Maustaste] od. [horizontale Ikonenleiste]) die das Löschen von fehlerhaften Symbolen erlaubt." %}</p>
-<p>{% trans "Mit der Option [Var. Höhen editieren] können Sie vorhandene Symbole editieren, um die Höhe der Ebene zu verändern." %}</p>
-<p class="hcp2"> </p>
-<h2 style="margin-top: 4.00pt; margin-bottom: 0.00pt;">{% trans "So wird es gemacht" %}</h2>
-<p>{% trans "#[Variables Höhenprofil erodieren]#" %}</p>
-<p class="hcp2"> </p>
-<p class="Hinweis">{% trans "Wichtige Hinweise:" %}</p>
-<p>{% trans "1.) Zur Bearbeitung von variablen Bearbeitungsebenen [muss man eine] #[Regelflächenbearbeitung]# programmieren." %}</p>
-<p>{% trans "2.) [Variable Ebenen werden nur dann ausgeführt], wenn die Checkbox [Ebene variabel] im Dialog [Regelflächenbearbeitung] [aktiviert] ist." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../EXTAGS_EB_VAR.gif" alt="EXTAGS_EB_VAR.gif" width="230" height="81" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "3.) Je mehr Ebenen-Wechselpunkte in der Geometrie eingebracht werden, desto genauer ist das Ergebnis." %}</p>
-<script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <img alt="varland.gif" border="0" height="27" src="../varland.gif" width="28"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    可变编辑级别
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    当加工具有不同高度的工件时，会出现这样的困难：每次高度变化都必须重新调整参考高度和辅助高度。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    解决此问题的一种方法是将现有高度轮廓投影到要加工的轮廓上。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    由于创建此类具有相应高度轮廓的投影轮廓可能非常复杂，因此仅建议简单的应用进行手动创建。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     变量编辑平面
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令是为其他应用领域而开发的
+   </font>
+   <font style="vertical-align: inherit;">
+    ，它在输入高度值后自动创建投影轮廓。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="VARI_LAN.gif" border="0" height="327" src="../VARI_LAN.gif" width="605"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    调用该命令后，会要求您选择要改变
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     高度的
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    加工图形。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用捕捉功能设置
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     高程变化
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    位置。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    输入位置后，将打开一个对话框，您可以在其中输入
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     参考平面
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     高度变化
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <img alt="VARIEBEN_shg.gif" border="0" height="192" src="../VARIEBEN_shg.gif" usemap="#AreaMap0" width="257"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="12,85,248,145" href="javascript:BSSCPopup('Bezugsebenen_Variable_Bearbeitungsebenen.htm',400,700);" id="area1" shape="rect"/>
+   <area alt="" coords="82,44,236,66" href="javascript:BSSCPopup('Naechste_Vorherige_variable_Bearbeitungsebene.htm',400,300);" id="area2" shape="rect"/>
+   <area alt="" coords="13,28,81,64" href="javascript:BSSCPopup('Hoehe_Variable_Bearbeitungsebenen.htm',400,300);" id="area3" shape="rect"/>
+  </map>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在对话框中指定 Z 高度。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     每次高度变化都用一个洋红色
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     小
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    三角形
+   </font>
+   <font style="vertical-align: inherit;">
+    表示
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    继续直到确定所有高程变化并将图形编辑为
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     直纹曲面
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令中提供了转换选项：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     变种。
+    </font>
+    <font style="vertical-align: inherit;">
+     复制+移动高度
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     Var。
+    </font>
+    <font style="vertical-align: inherit;">
+     复制高度+旋转
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     变量。
+    </font>
+    <font style="vertical-align: inherit;">
+     镜像高度
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    （参见
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     鼠标右键
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     水平图标栏
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这些选项用于对称形状，允许复制现有符号以实现可变编辑级别。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="EXTAGSBU.gif" border="0" height="197" src="../EXTAGSBU.gif" width="271"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    另请注意
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “删除”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项（请参见
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     鼠标右键
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     水平图标栏
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ），该选项允许您删除不正确的符号。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     Var 选项。
+    </font>
+    <font style="vertical-align: inherit;">
+     编辑高度
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    允许您编辑现有符号以更改图层的高度。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <h2 style="margin-top: 4.00pt; margin-bottom: 0.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    就是这样完成的
+   </font>
+  </font>
+ </h2>
+ <p>
+  <a href="Beispiel_Variables_Hoehenprofil_erodieren.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      侵蚀可变高程剖面
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    重要说明：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    1.) 要编辑可变加工平面，
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     您必须编写
+    </font>
+   </font>
+  </font>
+  <a href="../wirhlp10/Regelflaechenbearbeitung____.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      直纹面加工
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    编程。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    2.)仅当在
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     直纹曲面编辑
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    对话框中
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     激活
+    </font>
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     变量层
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    复选框时
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     ，才会执行变量层
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="EXTAGS_EB_VAR.gif" border="0" height="81" src="../EXTAGS_EB_VAR.gif" width="230"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    3.) 几何中引入的平面变化点越多，结果就越精确。
+   </font>
+  </font>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
         if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
         FilePopupInit('area1');
         FilePopupInit('area2');
         FilePopupInit('area3');
-//]]&gt;
-</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

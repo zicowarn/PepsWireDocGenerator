@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,12 +28,62 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Reduktion" %}</p><p class="Block_Text">{% trans "Mit dieser Option können Sie bei einer Figurerzeugung, sehr kleine Geometrieelemente (z.B. Geraden mit einer Länge von 0.1 - 0.001 mm), zu Linien und Bogenelementen zusammenfassen." %}</p>
-<p class="Block_Text">{% trans "Auf diese Weise können Sie die Anzahl der Geometrieelemente verringern." %}</p>
-<p>{% trans "Die geometrische Abweichung zur Originalgeometrie beträgt maximal, den im Feld [Toleranz] eingegebenen Wert." %}</p>
-<p>{% trans "Je größer der Wert, umso mehr Elemente werden entfernt. Beachten Sie jedoch, dass zu große Toleranzwerte, zu Ungenauigkeiten in der erzeugten Figur führen können." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p><img src="../reduktion.gif" alt="reduktion.gif" width="629" height="395" border="0"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    减少
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用此选项，您可以在创建图形时将非常小的几何元素（例如长度为 0.1 - 0.001 毫米的直线）组合成直线和圆弧元素。
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这允许您减少几何元素的数量。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     与原始几何形状的最大几何偏差是在“公差”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    字段中输入的值
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    值越大，删除的元素就越多。
+   </font>
+   <font style="vertical-align: inherit;">
+    但请注意，公差值太大可能会导致创建的图形不准确。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <img alt="减少.gif" border="0" height="395" src="../reduktion.gif" width="629"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

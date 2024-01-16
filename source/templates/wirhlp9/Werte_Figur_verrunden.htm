@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,21 +33,153 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Werte" %}</p><p>{% trans "Geben Sie hier die Größe für die inneren und äußeren Eckradien ein. Die Eingabe von [0] ist erlaubt und führt zu scharfen Ecken." %}</p>
-<p> </p>
-<p>{% trans "[Innerer Radius] und [Äußerer Radius]" %}</p>
-<p>{% trans "Diese Felder werden je nach gewählter Verrundungsmethode, aktiviert oder deaktiviert." %}</p>
-<p class="Block_Text">{% trans "[Hinweis:] Die Eingabe von negativen Radiuswerten ist erlaubt und führt zu Schleifenbildungen an den Ecken." %}</p>
-<p class="Block_Text"> </p>
-<p>{% trans "[Kleinste Linie]" %}</p>
-<p>{% trans "Wird verwendet, um die kleinste erlaubte Elementlänge festzulegen, die nach einer Verrundungsoperation übrig bleiben darf." %}</p>
-<p>{% trans "Der Wert sollte so klein wie möglich und so eingestellt werden, dass die CNC-Steuerung beim Bearbeiten der Geometrie keine Geometriefehler anzeigt." %}</p>
-<p> </p>
-<p>{% trans "[Winkeltoleranz]" %}</p>
-<p>{% trans "Steuert, ab welchem Winkelgrad eine Ecke verrundet werden darf. Ist der Winkel einer Ecke, bezogen auf eine Gerade, kleiner als die Winkeltoleranz, dann wird diese Ecke nicht verrundet." %}</p>
-<p>{% trans "Das System gibt dabei keine Fehlermeldung aus. Die folgenden Abbildung soll den Parameter [Winkeltoleranz] erläutern (Aus Gründen der Übersichtlichkeit wurden die Winkel übertrieben dargestellt):" %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p><img src="../winkel_toler.gif" alt="winkel_toler.gif" width="451" height="129" border="0"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    价值观
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在此输入内角半径和外角半径的尺寸。
+   </font>
+   <font style="vertical-align: inherit;">
+    允许输入
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     0
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，这会导致尖角。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     内半径
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     外半径
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这些字段的激活或停用取决于所选的舍入方法。
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font color="#0000FF">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     注意：
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    允许输入负半径值，这会导致拐角处出现环路。
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     最小线
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    用于设置圆角操作后剩余的最小允许元素长度。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该值应尽可能小，并设置为使得 CNC 控制器在编辑几何图形时不会显示任何几何错误。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     角度公差
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    控制拐角的圆角程度。
+   </font>
+   <font style="vertical-align: inherit;">
+    如果拐角相对于直线的角度小于角度公差，则该拐角不是圆角。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    系统不会发出任何错误消息。
+   </font>
+   <font style="vertical-align: inherit;">
+    下图旨在解释
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     角度公差
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    参数（为了清楚起见，角度被放大了）：
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <img alt="winkel_toler.gif" border="0" height="129" src="../winkel_toler.gif" width="451"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

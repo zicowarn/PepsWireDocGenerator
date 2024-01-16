@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,26 +35,104 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Vorschau vor Ausführung" %}</p><p>{% trans "Wenn Sie diese Option wählen, wird die Schaltfläche [Anwenden] in [Vorschau] umbenannt." %}</p><p>{% trans "Auf diese Weise können Sie das Ergebnis der Verrundungsoperation betrachten, ohne die Operation auszuführen." %}</p>
-<p>{% trans "Ein Klick auf die Schaltfläche [Vorschau], führt zum Aufruf des unterhalb dargestellten Dialogs:" %}</p>
-<p class="hcp2"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp2"> </p>
-<p><img src="../ABRUND1_shg.gif" usemap="#AreaMap0" alt="ABRUND1_shg.gif" width="314" height="260" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="177,78,310,123" href="javascript:BSSCPopup('Zeigen_Figur_verrunden.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="176,131,308,151" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="177,182,304,202" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area4" alt=""/>
-<area shape="rect" coords="177,155,307,177" href="javascript:BSSCPopup('../Commdata/COMMON_Ausfuehren_Anwenden.htm',400,300);" id="area5" alt=""/>
-<area shape="rect" coords="252, 34, 291, 67" href="Common-049.chm::/CommonHelp5/Neuzeichnen_Mag.htm" alt=""/>
-</map> </p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    执行前预览
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果您选择此选项，
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “应用”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮将被 
+ 重命名为
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “预览”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这允许您在不执行操作的情况下查看舍入操作的结果。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    单击
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “预览”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮将打开如下所示的对话框：
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="ABRUND1_shg.gif" border="0" height="260" src="../ABRUND1_shg.gif" usemap="#AreaMap0" width="314"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="177,78,310,123" href="javascript:BSSCPopup('Zeigen_Figur_verrunden.htm',400,300);" id="area1" shape="rect"/>
+   <area alt="" coords="176,131,308,151" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area3" shape="rect"/>
+   <area alt="" coords="177,182,304,202" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area4" shape="rect"/>
+   <area alt="" coords="177,155,307,177" href="javascript:BSSCPopup('../Commdata/COMMON_Ausfuehren_Anwenden.htm',400,300);" id="area5" shape="rect"/>
+   <area alt="" coords="252, 34, 291, 67" href="Common-049.chm::/CommonHelp5/Neuzeichnen_Mag.htm" shape="rect"/>
+  </map>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('area1');
 	FilePopupInit('area3');
 	FilePopupInit('area4');
 	FilePopupInit('area5');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

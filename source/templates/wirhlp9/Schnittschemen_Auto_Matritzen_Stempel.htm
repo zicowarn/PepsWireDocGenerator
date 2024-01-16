@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,12 +33,184 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Schnittschemen (Auto Matrizen Stempel)" %}</p><p>{% trans "In diesem Dialogbereich kann man Matrizen und Stempelfiguren automatisch ein #[Schnittschema]# (Anzahl der Schnitt, Bearbeitungsart, Länge der Anbindung ...) zuweisen." %}</p>
-<p>{% trans "Schnittschemen werden im Dialog #[Standard Konturbearbeitung]# im Abschnitt [Schnittschemen] erzeugt." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p class="Hinweis">{% trans "Wichtiger Hinweis:" %}</p>
-<p>{% trans "Dieser Abschnitt des Dialoges hat [KEINE WIRKUNG], wenn der Dialog [Auto Matrizen und Stempel] mit dem Befehl [Auto Matrizen und Stempel] aus dem Menü [Vorbereitung] aufgerufen wurde." %}</p>
-<p>{% trans "Wird der Dialog jedoch mit dem Befehl #[Std. Konturb.+ Auto Matr./Stemp.]# im Menü [Bearbeitung] aufgerufen, kann man automatisch Matrizen oder Stempelfiguren erzeugen und diesen gleichzeitig ein [Schnittschema] (Anzahl der Schnitt, Bearbeitungsart, Länge der Anbindung ...) zuweisen." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    切割方案（自动冲模）
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在此对话框区域中，您可以自动为矩阵和图章图形指定
+   </font>
+  </font>
+  <a href="../wirhlp10/Schnittschemen.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      切割方案
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    （切割次数、加工类型、连接长度等）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <a href="../wirhlp10/Standard_Konturbearbeitung____.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      切割方案是在标准轮廓编辑
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框的
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     切割方案
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    部分中创建的
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    重要的提示：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果
+   </font>
+   <font style="vertical-align: inherit;">
+    使用
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     “准备”菜单中的
+    </font>
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     “自动模具和图章”
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    命令调用
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     “自动模具和图章”
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    对话框 
+ ，则
+   </font>
+   <font style="vertical-align: inherit;">
+    该对话框的此部分不会产生
+   </font>
+  </font>
+  <font style="font-weight: bold; font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     任何影响。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    但是，如果使用命令
+   </font>
+  </font>
+  <a href="../wirhlp10/Standard_Konturbearbeitung_Auto_Matrize_Stempel.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      Std. Contour + Auto Matr./Stemp 打开该对话框。
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     在“加工”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    菜单中调用时
+   </font>
+   <font style="vertical-align: inherit;">
+    ，您可以自动创建矩阵或冲压图形，同时为其指定
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     切割方案
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    （切割次数、加工类型、连接长度等）。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

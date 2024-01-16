@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,16 +33,146 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Report Optionen" %}</p><p>{% trans "Diese Optionen erlauben es, einen Überblick über die [kleinsten] und [größten Radien] zu bekommen." %}</p>
-<p> </p>
-<p class="dialog">{% trans "Zeige Radien Report" %}</p>
-<p>{% trans "Ist diese Option aktiv, zeigt das System nach Ausführung des Befehls '[Auto Matritzen / Stempel]' den folgenden Dialog." %}</p>
-<p>{% trans "Er informiert über die [kleinsten/größten Radien] in den aktuell ausgewählten Zeichnungsdasten." %}</p>
-<p> </p>
-<p><img src="../Radien_Report.gif" alt="" style="border: none;" border="0"/></p>
-<p> </p>
-<p class="dialog">{% trans "Markiere kleine Radien" %}</p>
-<p>{% trans "[Radien] die [kleiner oder gleich] sind, als der hier eingestellte Wert, werden im der Zeichnung durch [Punkte] gekennzeichnet." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    报告选项
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这些选项使您能够概览最小
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     和
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    最大
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     半径
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    显示半径报告
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     如果此选项处于活动状态，则执行“ Auto Dies/Pumps
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ”命令后系统将显示以下对话框
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    它提供有关
+   </font>
+   <font style="vertical-align: inherit;">
+    当前所选绘图数据中
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     最小/最大半径的信息。
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <img alt="" border="0" src="../Radien_Report.gif" style="border: none;"/>
+ </p>
+ <p>
+ </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    标记小半径
+   </font>
+  </font>
+ </p>
+ <p>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    小于
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     或等于此处设置值的
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <span class="hcp1">
+    <font style="vertical-align: inherit;">
+     半径在图中用
+    </font>
+   </span>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     点
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    标记
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

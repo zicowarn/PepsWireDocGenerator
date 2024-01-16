@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,23 +35,91 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Startloch Suchschema" %}</p><p>{% trans "Mit Hilfe eines [Startloch Suchschemas] können Sie eine Zeichnung nach vorgegeben Startlochgeometrien durchsuchen und diese bei der automatisch Figurerzeugung mit einbeziehen." %}</p><p>{% trans "Im Suchschema können Sie Farbe, Durchmesser, Linientyp und Layer der gesuchten Startlochgeometrie einstellen. Einmal eingestellt lassen sich Suchschemen speichern, ändern und laden." %}</p>
-<p class="hcp2"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Startloch_Such_Schema_shg.gif" usemap="#AreaMap0" alt="Startloch_Such_Schema_shg.gif" width="216" height="55" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="9,19,31,41" href="Startloch_Suchschema_erzeugen_laden_aendern_Auto_Mat_Stemp.htm" alt=""/>
-<area shape="rect" coords="64,22,205,42" href="javascript:BSSCPopup('Suchschema_nicht_verwenden_Auto_Mat_Stemp.htm',400,400);" id="area1" alt=""/>
-<area shape="rect" coords="36,22,57,42" href="javascript:BSSCPopup('Startlochpositionen_testen_Auto_Mat_Stem.htm',400,300);" id="area2" alt=""/>
-</map> </p>
-<p class="hcp2"> </p>
-<p>{% trans "[Siehe auch:] #[Automatisch Figuren erzeugen - MIT vorhandenen Startlöchern (Startloch Suchschema).]#" %}</p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    启动孔搜索方案
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    借助
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     起始孔搜索方案，
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    您可以在图形中搜索指定的起始孔几何形状，并将它们包含在自动图形创建中。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在搜索方案中，您可以设置要查找的起始孔几何形状的颜色、直径、线型和图层。
+   </font>
+   <font style="vertical-align: inherit;">
+    设置后，可以保存、更改和加载搜索方案。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="Startloch_Such_Schema_shg.gif" border="0" height="55" src="../Startloch_Such_Schema_shg.gif" usemap="#AreaMap0" width="216"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="9,19,31,41" href="Startloch_Suchschema_erzeugen_laden_aendern_Auto_Mat_Stemp.htm" shape="rect"/>
+   <area alt="" coords="64,22,205,42" href="javascript:BSSCPopup('Suchschema_nicht_verwenden_Auto_Mat_Stemp.htm',400,400);" id="area1" shape="rect"/>
+   <area alt="" coords="36,22,57,42" href="javascript:BSSCPopup('Startlochpositionen_testen_Auto_Mat_Stem.htm',400,300);" id="area2" shape="rect"/>
+  </map>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     另请参阅：
+    </font>
+   </font>
+  </font>
+  <a href="Automatisch_Figuren_erzeugen_mit_vorhandenem_Startloch_.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      自动创建图形 - 使用现有起始孔（起始孔搜索方案）。
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('area1');
 	FilePopupInit('area2');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

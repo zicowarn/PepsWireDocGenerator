@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,8 +28,28 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Strom" %}</p><p>{% trans "Dieses Feld ist NC-Steuerungsabhängig und kann je nach verwendeter CNC-Maschine variieren." %}</p>
-<p>{% trans "Hier wird in der Regel die bei einem Technologiewechsel verwendete Stromstufe eingetragen." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    电
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该字段取决于 NC 控制，并且可能会根据所使用的 CNC 机床而有所不同。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通常在此处输入更改技术时使用的当前级别。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -48,10 +48,10 @@ TRANSCODE_FROM = "cp1252"
 TRANSCODE_TO = "utf-8"
 
 
-CHM_HHK_TEMPLATE = "Common_xxx.hhk"
-CHM_HHC_TEMPLATE = "Common_xxx.hhc"
-CHM_HHP_TEMPLATE = "Common_xxx.hhp"
-CHM_BRS_TEMPLATE = "Common_xxx.brs"
+CHM_HHK_TEMPLATE = "wire_xxx.hhk"
+CHM_HHC_TEMPLATE = "wire_xxx.hhc"
+CHM_HHP_TEMPLATE = "wire_xxx.hhp"
+CHM_BRS_TEMPLATE = "wire_xxx.brs"
 CHM_LNG_TEMPLATE = "RoboHHRE_xxx.lng"
 TEMPALTES_BASE_PATH = os.path.join(settings.BASE_DIR, "templates")
 CHM_EXTRA_BASE_PATH = os.path.join(settings.BASE_DIR, "asset")
@@ -1157,29 +1157,29 @@ def convert_htm_to_template(str_relativ_path="", b_break_nextfile=False, b_break
                                         print('Error, can not handle the p <tag> : %s' % p_tag_string)
 
                             else:
-                            #
-                            b_processed = True
-                            # assume it has only texts
-                            p_text = p_single.text
-                            if p_text != None and p_text != "" and p_text != '\xa0':
-                                # move newlines symbols
-                                p_text = p_text.replace('\n', '')
-                                # move some uncessary symbols : br
-                                p_text = p_text.replace('<br/>', '')
-                                p_text = p_text.replace('<br>', '')
-                                # replace dobble spaces
-                                p_text = " ".join(p_text.split())
-                                #repalce " into '
-                                p_text = p_text.replace('"', "'")
-                                p_text = p_text.lstrip()
-                                p_text = p_text.rstrip()
-                                p_tag_check_string = p_text.replace("X", '')
-                                p_tag_check_string = p_tag_check_string.replace(" ", '')
-                                if p_tag_check_string != "" and "XXX" != p_text:
-                                    p_newtext = '{% trans "' + p_text + '" %}'
-                                    p_single.text = p_newtext
-                            else:
-                                pass
+                                #
+                                b_processed = True
+                                # assume it has only texts
+                                p_text = p_single.text
+                                if p_text != None and p_text != "" and p_text != '\xa0':
+                                    # move newlines symbols
+                                    p_text = p_text.replace('\n', '')
+                                    # move some uncessary symbols : br
+                                    p_text = p_text.replace('<br/>', '')
+                                    p_text = p_text.replace('<br>', '')
+                                    # replace dobble spaces
+                                    p_text = " ".join(p_text.split())
+                                    #repalce " into '
+                                    p_text = p_text.replace('"', "'")
+                                    p_text = p_text.lstrip()
+                                    p_text = p_text.rstrip()
+                                    p_tag_check_string = p_text.replace("X", '')
+                                    p_tag_check_string = p_tag_check_string.replace(" ", '')
+                                    if p_tag_check_string != "" and "XXX" != p_text:
+                                        p_newtext = '{% trans "' + p_text + '" %}'
+                                        p_single.text = p_newtext
+                                else:
+                                    pass
                     
 
                     ### all cases would be handled
@@ -1636,6 +1636,13 @@ def fix_filenames_in_hhc(hhc_fullpath=""):
         nodechar = nodechar.replace("ü", "ue")
         nodechar = nodechar.replace("Ü", "Ue")
         nodechar = nodechar.replace("ß", "ss")
+        nodechar = nodechar.replace("&auml;", "ae")
+        nodechar = nodechar.replace("&Auml;", "Ae")
+        nodechar = nodechar.replace("&ouml;", "oe")
+        nodechar = nodechar.replace("&Ouml;", "Oe")
+        nodechar = nodechar.replace("&uuml;", "ue")
+        nodechar = nodechar.replace("&Uuml;", "Ue")
+        nodechar = nodechar.replace("&szlig;", "ss")
         return nodechar
 
     html_content = fix_name_local(html_content)
@@ -1661,14 +1668,15 @@ def translate_brs_and_export(str_sub_folder="", str_brs_template_name="", vCount
             print("Try to get template: %s" % (brs_templates_path))
         ss = get_template(brs_templates_path).render()
         ss = ss.replace("\n\n", "\n")
-        cont = ss.replace(u'\ufeff\n', '', 1)
+        utf8_content = ss.replace(u'\ufeff\n', '', 1)
         strGoal = str_brs_template_name.replace("xxx", vCountryCode)
         strDest = os.path.join(CHM_BUILD_BASE_PATH, strGoal)
-        fw= codecs.open(strDest, "w", encoding)
+        # 编码为 GB2312
+        gb2312_content = utf8_content.encode('gb2312', errors='ignore')
         if PRINT_DEBUG:
-            print(cont)
-        fw.write(cont)
-        fw.close()
+            print(gb2312_content)
+        with open(strDest, 'wb') as file:
+            file.write(gb2312_content)
         return True
     except Exception as e:
         if PRINT_DEBUG:
@@ -1692,14 +1700,15 @@ def translate_hhc_and_export(str_sub_folder="", str_hhc_template_name="", vCount
             print("Try to get template: %s" % (hhc_templates_path))
         ss = get_template(hhc_templates_path).render()
         ss = ss.replace("\n\n", "\n")
-        cont = ss.replace(u'\ufeff\n', '', 1)
+        utf8_content = ss.replace(u'\ufeff\n', '', 1)
         strGoal = str_hhc_template_name.replace("xxx", vCountryCode)
         strDest = os.path.join(CHM_BUILD_BASE_PATH, strGoal)
-        fw= codecs.open(strDest, "w", encoding)
+        # 编码为 GB2312
+        gb2312_content = utf8_content.encode('gb2312', errors='ignore')
         if PRINT_DEBUG:
-            print(cont)
-        fw.write(cont)
-        fw.close()
+            print(gb2312_content)
+        with open(strDest, 'wb') as file:
+            file.write(gb2312_content)
         return True
     except Exception as e:
         if PRINT_DEBUG:
@@ -1723,14 +1732,15 @@ def translate_hhk_and_export(str_sub_folder="", str_hhk_template_name="", vCount
             print("Try to get template: %s" % (hhk_templates_path))
         ss = get_template(hhk_templates_path).render()
         ss = ss.replace("\n\n", "\n")
-        cont = ss.replace(u'\ufeff\n', '', 1)
+        utf8_content = ss.replace(u'\ufeff\n', '', 1)
         strGoal = str_hhk_template_name.replace("xxx", vCountryCode)
         strDest = os.path.join(CHM_BUILD_BASE_PATH, strGoal)
-        fw= codecs.open(strDest, "w", encoding)
+        # 编码为 GB2312
+        gb2312_content = utf8_content.encode('gb2312', errors='ignore')
         if PRINT_DEBUG:
-            print(cont)
-        fw.write(cont)
-        fw.close()
+            print(gb2312_content)
+        with open(strDest, 'wb') as file:
+            file.write(gb2312_content)
         return True
     except Exception as e:
         if PRINT_DEBUG:
@@ -1754,14 +1764,15 @@ def translate_hhp_and_export(str_sub_folder="", str_hhp_template_name="", vCount
             print("Try to get template: %s" % (hhp_templates_path))
         ss = get_template(hhp_templates_path).render()
         ss = ss.replace("\n\n", "\n")
-        cont = ss.replace(u'\ufeff\n', '', 1)
+        utf8_content = ss.replace(u'\ufeff\n', '', 1)
         strGoal = str_hhp_template_name.replace("xxx", vCountryCode)
         strDest = os.path.join(CHM_BUILD_BASE_PATH, strGoal)
-        fw= codecs.open(strDest, "w", encoding)
+        # 编码为 GB2312
+        gb2312_content = utf8_content.encode('gb2312', errors='ignore')
         if PRINT_DEBUG:
-            print(cont)
-        fw.write(cont)
-        fw.close()
+            print(gb2312_content)
+        with open(strDest, 'wb') as file:
+            file.write(gb2312_content)
         return True
     except Exception as e:
         if PRINT_DEBUG:
@@ -2221,7 +2232,7 @@ def main(args):
             for relative_path, file_name in list_templates:
                 if PRINT_DEBUG:
                     print("Render the template %s\\%s", (relative_path, file_name))
-                rts = translate_templates_and_export(relative_path, file_name. encoding_code)
+                rts = translate_templates_and_export(relative_path, file_name, encoding_code)
                 if rts != None:
                     export_results.append(rts)
             if PRINT_DEBUG == True and len(export_results) != 0:

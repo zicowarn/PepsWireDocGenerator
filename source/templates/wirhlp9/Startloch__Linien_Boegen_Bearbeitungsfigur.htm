@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,9 +33,91 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Startloch (Linien/Bögen =&gt; Bearbeitungsfigur)" %}</p><p>{% trans "In diesem Feld wird die [Startposition] einer Figurbearbeitung festgelegt. Dies kann das Zentrum einer Startlochbohrung sein oder eine andere Position, weit genug von der Bearbeitungsfigur entfernt." %}</p>
-<p>{% trans "Von dieser Position aus beginnt die Bearbeitung einer Figur mit einer Vorschubbewegung." %}</p>
-<p>{% trans "Die Startposition wird normalerweise direkt als [XY-Koordinate] eingegeben oder mit der Schaltfläche @ und mit Hilfe der [Fangfunktionen] [Endpunkt - Koordinaten] in der Zeichnung ermittelt." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    起始孔（线/圆弧=&gt;加工图形）
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     图形编辑的起始位​​置
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在此字段中定义
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+   <font style="vertical-align: inherit;">
+    这可以是起始孔的中心或距加工图形足够远的另一个位置。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    从该位置开始，图形的处理以进给运动开始。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    起始
+   </font>
+   <font style="vertical-align: inherit;">
+    位置
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     通常
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    直接
+   </font>
+   <font style="vertical-align: inherit;">
+    输入
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     为
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     _
+    </font>
+   </font>
+  </font>
+  <img alt="选择.gif" border="0" height="23" src="../Select.gif" width="24"/>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

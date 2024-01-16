@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -39,29 +38,182 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Solid - Projektions-Assistent - Schritt 2" %}</p><p>{% trans "Der [Schritt 2] des [Assistenten] wird verwendet, um von den ermittelten 2D-Geometrien, die auszuwählen, die verwendet werden sollen." %}</p><p>{% trans "Klicken Sie zur Auswahl [einzelne] Geometrien in der Liste an ([Linke] Maustaste + [Strg]-Taste erlaubt Mehrfachauswahl) oder verwenden Sie die Schaltfläche [Alle wählen], um [alle] Geometrien der Liste auszuwählen." %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen. Klicken Sie auf die Schaltflächen] [&amp;lt; Zurück] [/] [Weiter &amp;gt;] [um den nächsten/vorherigen Dialog des Assistenten zu sehen.]" %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Solid_Proj_Assis_2_shg.gif" usemap="#AreaMap0" alt="Solid_Proj_Assis_2_shg.gif" width="495" height="357" border="0"/> <map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="146,320,222,342" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm');" id="area1" alt=""/>
-<area shape="rect" coords="11,33,137,307" href="javascript:BSSCPopup('../Commdata/COMMON_Bild.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="236,319,311,341" href="Solid_Projektions_Assistent.htm" alt=""/>
-<area shape="rect" coords="317,320,395,342" href="Solid_Projektions_Assistent_Schritt_3.htm" alt=""/>
-<area shape="rect" coords="408,317,485,341" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="146,114,284,300" href="javascript:BSSCPopup('Liste_der_gefundenen_Geometrien_Solid_Projektions_Assistent.htm',400,300);" id="area4" alt=""/>
-<area shape="rect" coords="289, 274, 478, 300" href="javascript:BSSCPopup('Alle_waehlen_Alle_loeschen_Solid_Projektions_Assistent.htm',400,300);" id="area5" alt=""/>
-<area shape="rect" coords="434, 231, 480, 269" href="Common_049.chm::/CommonHelp5/Neuzeichnen_Mag.htm" alt=""/></map></p>
-<script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    实体 - 投影向导 - 步骤 2
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    向导
+   </font>
+   <font style="vertical-align: inherit;">
+    的
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     第 2 步
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     用于
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    从已识别的应使用的 2D 几何形状中进行选择。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    要进行选择，请单击
+   </font>
+   <font style="vertical-align: inherit;">
+    列表中的
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     各个
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    几何图形（鼠标左键 +
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     Ctrl
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     键
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    可进行多项选择）或使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “全选”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮选择
+   </font>
+   <font style="vertical-align: inherit;">
+    列表中的
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     所有几何图形。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font class="hcp3" color="#FF0000">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+   <br/>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击
+    </font>
+   </font>
+  </font>
+  <font class="hcp4" color="#FF0000">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     &lt;后退
+    </font>
+   </font>
+  </font>
+  <font class="hcp3" color="#FF0000">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     /
+    </font>
+   </font>
+  </font>
+  <font class="hcp4" color="#FF0000">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     下一步&gt;按钮
+    </font>
+   </font>
+  </font>
+  <font class="hcp3" color="#FF0000">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     可查看向导的下一个/上一个对话框。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="Solid_Proj_Assis_2_shg.gif" border="0" height="357" src="../Solid_Proj_Assis_2_shg.gif" usemap="#AreaMap0" width="495"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="146,320,222,342" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm');" id="area1" shape="rect"/>
+   <area alt="" coords="11,33,137,307" href="javascript:BSSCPopup('../Commdata/COMMON_Bild.htm',400,300);" id="area2" shape="rect"/>
+   <area alt="" coords="236,319,311,341" href="Solid_Projektions_Assistent.htm" shape="rect"/>
+   <area alt="" coords="317,320,395,342" href="Solid_Projektions_Assistent_Schritt_3.htm" shape="rect"/>
+   <area alt="" coords="408,317,485,341" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area3" shape="rect"/>
+   <area alt="" coords="146,114,284,300" href="javascript:BSSCPopup('Liste_der_gefundenen_Geometrien_Solid_Projektions_Assistent.htm',400,300);" id="area4" shape="rect"/>
+   <area alt="" coords="289, 274, 478, 300" href="javascript:BSSCPopup('Alle_waehlen_Alle_loeschen_Solid_Projektions_Assistent.htm',400,300);" id="area5" shape="rect"/>
+   <area alt="" coords="434, 231, 480, 269" href="Common_049.chm::/CommonHelp5/Neuzeichnen_Mag.htm" shape="rect"/>
+  </map>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
         if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
         FilePopupInit('area1');
         FilePopupInit('area2');
         FilePopupInit('area3');
         FilePopupInit('area4');
         FilePopupInit('area5');
-//]]&gt;
-</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

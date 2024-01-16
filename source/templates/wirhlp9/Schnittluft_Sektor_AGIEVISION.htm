@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,9 +28,38 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Schnittluft (Sektor)" %}</p><p>{% trans "Diese Funktion erlaubt es, ein Auf-/Untermaß (Schnittluft) für einen [Teilbereich] einer Bearbeitungsfigur zu bestimmen." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p><img src="../Sektoren_AV3.gif" alt="Sektoren_AV3.gif" width="362" height="43" border="0"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    切割空气（扇形）
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该功能允许您
+   </font>
+   <font style="vertical-align: inherit;">
+    确定加工图形的
+   </font>
+  </font>
+  <font style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     部分区域的过大/过小（切削间隙）。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <img alt="扇区_AV3.gif" border="0" height="43" src="../Sektoren_AV3.gif" width="362"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

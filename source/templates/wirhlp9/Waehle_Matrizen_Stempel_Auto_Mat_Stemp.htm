@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,10 +33,81 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Wähle Matrizen / Stempel &gt;&gt;" %}</p><p>{% trans "Die Schaltfläche [Wähle Matrizen / Stempel &amp;gt;&amp;gt;] dient zur Auswahl der Elemente, die in Bearbeitungsfiguren vom Typ Matrize oder Stempel umgewandelt werden sollen." %}</p>
-<p> </p>
-<p>{% trans "[Beachten Sie, dass das System bei der Elementauswahl unabhängig von den Einstellungen in dem Register] [#Filter#, zunächst alle gewählten Elemente markiert.]" %}</p>
-<p>{% trans "[Erst nach dem Beenden der Elementauswahl konvertiert das System die in durch den Filter zugelassenen Formen zu Bearbeitungsfi][g][uren.]" %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选择模具/冲头 &gt;&gt;
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选择
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     模具/冲压件 &gt;&gt;
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮用于选择要转换为模具或冲压件类型的加工图形的元素。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     请注意，选择元素时，系统首先选择所有选定的元素，无论
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <a href="Filter_Auto_Matritzen_Stempel.htm">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      “过滤器”
+     </font>
+    </font>
+   </a>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     选项卡中的设置如何。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     只有完成元素选择后，系统才会将过滤器允许的形状转换为加工
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     图形
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     。
+    </font>
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

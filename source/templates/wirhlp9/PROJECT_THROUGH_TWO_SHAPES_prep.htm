@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -37,60 +36,395 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "PROJECT THROUGH TWO SHAPES" %}</p><p>XXX</p>
-<p class="hcp1"/>
-<p class="hcp2"> </p>
-<p>{% trans "Pick the [Select Profile&amp;gt;&amp;gt;] Button and choose the First Profile Figure." %}</p>
-<p>{% trans "The [Red Exclamation Mark] changes to a [Green Tick] indicating that a profile has been selected." %}</p>
-<p class="hcp2"> </p>
-<p class="hcp1"/>
-<p class="hcp2"> </p>
-<p>{% trans "Pick the [Next] Button, to move on." %}</p>
-<p class="hcp2"> </p>
-<p class="hcp1"/>
-<p class="hcp2"> </p>
-<p>{% trans "Pick the [Select Profile&amp;gt;&amp;gt;] Button and choose the Second Profile Figure." %}</p>
-<p class="hcp2"> </p>
-<p class="hcp1"><img src="../WizardProfileDirection.gif" alt="WizardProfileDirection.gif" width="16" height="16" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "The [Reverse Direction] Button allows you to change the direction of the Profile." %}</p>
-<p>{% trans "The directions of both Profiles must be the same." %}</p>
-<p class="hcp2"> </p>
-<p class="hcp1"/>
-<p class="hcp2"> </p>
-<p>{% trans "Pick the [Select Guides] Button and choose at least one Guide Line." %}</p>
-<p>{% trans "If no Guide Lines are available pick the [Draw Guides] Button and draw at least one Guide Line." %}</p>
-<p>{% trans "Then Select Guides the Guide Line(s)." %}</p>
-<p class="hcp2"> </p>
-<p class="hcp1"/>
-<p class="hcp2"> </p>
-<p>{% trans "[Upper Projection]" %}</p>
-<p>{% trans "Tick/Enable and enter a Height for it to be produced." %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "[Lower Projection]" %}</p>
-<p>{% trans "Tick/Enable and enter a Height for it to be produced." %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "[Equalise sections with equal span count]" %}</p>
-<p>{% trans "Tick/Enable for the two Profiles will be linked using proportional linear equalisation if not enabled the corresponding span ends of the two will be linked." %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "[Produce Figures]" %}</p>
-<p>{% trans "Tick/Enable to Produce Figures instead of Line/Arcs." %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "[Figure Name Prefix]" %}</p>
-<p>{% trans "Will be required if Figures are to be produced" %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "[Projection Tolerance]" %}</p>
-<p>{% trans "Controls how the Lines/Arcs are vectored when generating the projected geometry." %}</p>
-<p>{% trans "The lower the value the more accurate the projected geometry is." %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "Pick the [Project] Button, to produce required Projection(s)." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../WizardProfileProjections1.gif" alt="WizardProfileProjections1.gif" width="16" height="16" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Pick the [Finish] Button." %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "[RELATED TOPICS]" %}</p>
-<p>{% trans "[WIREFRAME PROJECTION WIZARD]" %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    通过两种形状进行项目
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    XXX
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选择
+   </font>
+  </font>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “选择个人资料&gt;&gt;”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮并选择第一个个人资料图。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    红色
+   </font>
+  </font>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     感叹号
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    变为
+   </font>
+  </font>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     绿色勾号
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，表示已选择配置文件。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="hcp1">
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选择
+   </font>
+  </font>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “下一步”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮继续。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="hcp1">
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选择
+   </font>
+  </font>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “选择个人资料&gt;&gt;”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮并选择第二个个人资料图。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="hcp1">
+  <img alt="WizardProfileDirection.gif" border="0" height="16" src="../WizardProfileDirection.gif" width="16"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     反向
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮
+   </font>
+   <font style="vertical-align: inherit;">
+    允许您更改轮廓的方向。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    两个配置文件的方向必须相同。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="hcp1">
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选择
+   </font>
+  </font>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “选择参考线”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮并选择至少一条参考线。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果没有可用的引导线，请选择
+   </font>
+  </font>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “绘制引导线”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮并绘制至少一条引导线。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    然后选择引导引导线。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="hcp1">
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     上投影
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    勾选/启用并输入要生成的高度。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     较低的投影
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    勾选/启用并输入要生成的高度。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     使跨度数相等的部分相等
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    两个配置文件的勾选/启用将使用比例线性均衡进行链接，如果未启用，则将链接两个配置文件的相应跨度端。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     生产人物
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    勾选/启用以生成图形而不是线/弧。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     图名称前缀
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果要制作人物，则需要
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     投影公差
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    控制生成投影几何体时直线/圆弧的矢量化方式。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    值越低，投影几何形状越准确。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选择
+   </font>
+  </font>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “项目”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮，以生成所需的投影。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="WizardProfileProjections1.gif" border="0" height="16" src="../WizardProfileProjections1.gif" width="16"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选择
+   </font>
+  </font>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     完成
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font class="hcp3" color="#7BC143">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     相关话题
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp3">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     线框投影向导
+    </font>
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

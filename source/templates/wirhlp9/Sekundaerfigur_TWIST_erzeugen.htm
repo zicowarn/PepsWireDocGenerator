@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -37,75 +36,646 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Sekundärfigur (TWIST) erzeugen" %}</p><p>{% trans "Dieser Befehl erzeugt eine Kopie (Sekundärfigur) von einer vorhandenen Figur. Anschließend besteht die Möglichkeit, die kopierte Sekundärfigur zu rotieren, transformieren und zu skalieren." %}</p>
-<p>{% trans "Mit Hilfe dieses Befehls können Sie auf einfache Weise die z.B. untere Regelflächengeometrie für Schrägschieber oder verdrehte Schrägschieber (TWIST) erzeugen." %}</p>
-<p class="hcp1"> </p>
-<p class="Hinweis">{% trans "Wichtiger Hinweis:" %}</p>
-<p>{% trans "Dieser Befehl findet ab der Version 5 [kaum] noch Verwendung, da man [Schrägschieber] direkt programmieren kann, mit der Option #[Konik]# des Bearbeitungsbefehls #[Standard Konturbearbeitung]#." %}</p>
-<p class="hcp1"> </p>
-<p class="Tip_Note_Heading">{% trans "Schrägschieber mit TWIST erzeugen und bearbeiten:" %}</p>
-<p>{% trans "In eine Schnittplatte soll eine 20 Grad schräge Bohrung (Schrägschieber) eingebracht werden." %}</p>
-<p class="hcp1"> </p>
-<p><img src="../TWIST.gif" alt="TWIST.gif" width="229" height="369" border="0"/></p>
-<ul>
-<li class="hcp3">
-<p class="Topic_Text_Bulleted">{% trans "Zeichnen Sie den 20 mm Kreis und erzeugen Sie eine Bearbeitungsfigur." %}</p>
-</li>
-<li class="hcp3">
-<p class="Topic_Text_Bulleted">{% trans "Rotieren Sie die Figur um 20 Grad um die Y-Achse. Verwenden Sie den Befehl [3D Rotieren] im Menü [Transformation]." %}</p>
-</li>
-<li class="hcp3">
-<p class="Topic_Text_Bulleted">{% trans "Da wir eine rotierte Figur nicht schneiden können, müssen wir diese auf die XY-Ebene projizieren." %}</p>
-</li>
-<li class="hcp3">
-<p class="Topic_Text_Bulleted">{% trans "Erzeugen Sie die Projektion mit dem Befehl #[Figur projizieren oder skalieren]# im Menü [Vorbereitung \ Diverses]. Das Ergebnis der Projektion ist eine Ellipse." %}</p>
-</li>
-<li class="hcp3">
-<p class="Topic_Text_Bulleted">{% trans "Der Schrägschieber wird als Regelfläche geschnitten, deshalb benötigen wir eine weitere, verschobene Figur für die untere (z-20) Regelfläche." %}</p>
-</li>
-<li class="hcp3">
-<p class="Topic_Text_Bulleted">{% trans "Der Befehl [Sekundärfigur (TWIST) erzeugen] erzeugt eben diese zweite Figur (Sekundärfigur)." %}</p>
-</li>
-<li class="hcp3">
-<p class="Topic_Text_Bulleted">{% trans "Wählen Sie den Befehl [Sekundärfigur (TWIST) erzeugen] im Menü [Vorbereitung \ Diverses]." %}</p>
-</li>
-<li class="hcp3">
-<p class="Topic_Text_Bulleted">{% trans "Klicken Sie zunächst die projizierte Figur an. Das System fragt nun:" %}</p>
-</li>
-</ul>
-<p class="Prompts">{% trans "Startposition od. Mittelpunkt für die Skalierung/Rotation/Spiegelung :" %}</p>
-<ul>
-<li class="hcp3">
-<p class="Topic_Text_Bulleted">{% trans "Fangen Sie die Position der Startlochbohrung." %}</p>
-</li>
-<li class="hcp3">
-<p class="Topic_Text_Bulleted">{% trans "Das System fragt nun ob skaliert, transformiert oder rotiert werden soll. In unserem Fall benötigen wir eine Transformation." %}</p>
-</li>
-<li class="hcp3">
-<p class="Topic_Text_Bulleted">{% trans "Wählen Sie auf die Option [Transformieren] (siehe [rechte Maustaste] od. [horizontale Ikonenleiste])." %}</p>
-</li>
-<li class="hcp3">
-<p class="Topic_Text_Bulleted">{% trans "Die untere Regelflächenfigur muss [inkremental] (DX, DY) verschoben werden. Die Formel lautet: [DX],[Y] [tangens]([Winkel]) [X] [Höhe]" %}</p>
-</li>
-<li class="hcp3">
-<p class="Topic_Text_Bulleted">{% trans "Geben Sie ein: [DXtan(20)*20]. Beenden Sie den Befehl" %}</p>
-</li>
-<li class="hcp3">
-<p class="Topic_Text_Bulleted">{% trans "Editieren Sie die Figur und fügen Sie [2 C-Punkte] ein, welche die Startlochposition und die Bearbeitungsposition auf der Figur definieren." %}</p>
-</li>
-</ul>
-<p class="hcp1"> </p>
-<p>{% trans "[Hinweis][:] Es darauf zu achten, dass das [Startloch der unteren Figur in] [der Schnittmenge der beiden Figuren liegt], damit der Draht eingefädelt werden kann." %}</p>
-<p>{% trans "Ggf. muss die Figur nochmals editiert werden, um die Startlochposition zu verändern. Schneiden sich die Figuren nicht, muss der Draht schräg eingefädelt werden." %}</p>
-<p>{% trans "[Figuren, die keine Schnittmenge aufweisen:] Wenn die Geometrie des Schrägschiebers sehr klein ist und/oder das Teil sehr hoch und/oder der Winkel sehr groß, kann es vorkommen, dass es keinen Bereich gibt, den beide Bearbeitungsfiguren einschließen." %}</p>
-<p>{% trans "In diesem Fall sind folgende Regeln zu beachten:" %}</p>
-<p>{% trans "Weil das automatische Einfädeln und Abschneiden des Drahtes in der Regelflächenbearbeitung ausgeschaltet wird, muss der Befehl zum Draht Einfädeln [vor] der Regelflächenbearbeitung aufgerufen werden." %}</p>
-<p>{% trans "Dies geschieht im Menü [Bearbeitung] mit dem Befehl #[Draht abschneiden/einfädeln]# oder mit der entsprechenden Ikone." %}</p>
-<ul>
-<li class="hcp3">
-<p class="Topic_Text_Bulleted">{% trans "Bearbeiten Sie nun beide Figuren als Regelfläche." %}</p>
-</li>
-</ul>
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <img alt="扭曲图.gif" border="0" height="29" src="../twistfig.gif" width="29"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    创建辅助图形 (TWIST)。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此命令创建现有图窗的副本（辅助图窗）。
+   </font>
+   <font style="vertical-align: inherit;">
+    然后可以旋转、变换和缩放复制的辅助图形。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    例如，借助此命令，您可以轻松创建倾斜滑块或扭曲倾斜滑块 (TWIST) 的下直纹曲面几何形状。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    重要的提示：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    从版本 5 开始，此命令
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     很少
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用，因为您可以
+   </font>
+   <font style="vertical-align: inherit;">
+    使用
+   </font>
+   <a href="../wirhlp10/Standard_Konturbearbeitung____.htm">
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      标准轮廓加工加工
+     </font>
+    </font>
+   </a>
+   <font style="vertical-align: inherit;">
+    命令的
+   </font>
+   <a href="../wirhlp10/Konik_lasche.htm">
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      Konik
+     </font>
+    </font>
+   </a>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     选项直接对对角滑块
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    进行编程。
+   </font>
+  </font>
+  <a href="../wirhlp10/Konik_lasche.htm">
+   <font class="hcp2">
+    <font style="vertical-align: inherit;">
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+  <a href="../wirhlp10/Standard_Konturbearbeitung____.htm">
+   <font class="hcp2">
+    <font style="vertical-align: inherit;">
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    使用 TWIST 创建和编辑对角滑块：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    应在切割板上开一个 20 度的斜孔（斜滑道）。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="扭曲.gif" border="0" height="369" src="../TWIST.gif" width="229"/>
+ </p>
+ <ul>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      画出 20mm 的圆并创建加工图形。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      将图形绕 Y 轴旋转 20 度。
+     </font>
+     <font style="vertical-align: inherit;">
+      使用
+     </font>
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       “变换”
+      </font>
+     </font>
+     <font style="vertical-align: inherit;">
+      菜单上的
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “3D 旋转”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      命令。
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+    </font>
+   </p>
+  </li>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      由于我们无法切割旋转图形，因此必须将其投影到 XY 平面上。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       使用“准备\杂项”
+      </font>
+     </font>
+     <font style="vertical-align: inherit;">
+      菜单中的
+     </font>
+    </font>
+    <a href="Figur_projizieren____.htm">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       <font style="vertical-align: inherit;">
+        “项目”或“缩放图形”
+       </font>
+      </font>
+     </font>
+    </a>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      命令创建投影
+     </font>
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+     <font style="vertical-align: inherit;">
+      投影的结果是一个椭圆。
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+    </font>
+   </p>
+  </li>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      倾斜幻灯片被切割为直纹面，因此我们需要另一个移动图形来表示下部 (z-20) 直纹面。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      创建
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       辅助图形 (TWIST)
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      命令创建第二个图形（辅助图形）。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font class="hcp2">
+      <font style="vertical-align: inherit;">
+       在“准备”\“杂项”
+      </font>
+     </font>
+     <font style="vertical-align: inherit;">
+      菜单中
+     </font>
+     <font style="vertical-align: inherit;">
+      选择
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “创建辅助图形 (TWIST)”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      命令。
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+    </font>
+   </p>
+  </li>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      首先单击投影图形。
+     </font>
+     <font style="vertical-align: inherit;">
+      系统现在询问：
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p class="Prompts">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    缩放/旋转/镜像的起始位置或中心点：
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      捕捉起始孔的位置。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      系统现在询问您是否要缩放、变换或旋转。
+     </font>
+     <font style="vertical-align: inherit;">
+      就我们而言，我们需要进行转型。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选择
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       “变换”
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      选项（请参见
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       鼠标右键
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      或
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       水平图标栏
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      ）。
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      下直纹曲面图形必须
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       增量
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      移动（DX、DY）。
+     </font>
+    </font>
+    <br/>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      公式为：
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       DX
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      、
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       Y
+      </font>
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       切线
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      （
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       角度
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      ）
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       X
+      </font>
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       高度
+      </font>
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      输入：
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       DXtan(20)*20
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      。
+     </font>
+     <font style="vertical-align: inherit;">
+      结束命令
+     </font>
+    </font>
+   </p>
+  </li>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      编辑图形并添加
+     </font>
+    </font>
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      <font style="vertical-align: inherit;">
+       2 个 C 点
+      </font>
+     </font>
+    </font>
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      ，用于定义图形上的起始孔位置和编辑位置。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font class="hcp2" color="#0000FF">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     注意
+    </font>
+   </font>
+  </font>
+  <font color="#0000FF">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     ：
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    确保
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     下图的起始孔
+    </font>
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     位于两图的交叉处
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，以便可以穿线。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如有必要，必须再次编辑图形以更改起始孔位置。
+   </font>
+   <font style="vertical-align: inherit;">
+    如果图形不相交，则必须对角线穿线。
+   </font>
+  </font>
+ </p>
+ <p>
+  <br/>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     没有相交的图形：
+    </font>
+   </font>
+  </font>
+  <br/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果倾斜滑块的几何形状非常小和/或零件非常高和/或角度很大，则可能会出现两个加工图形都没有包围的区域。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在这种情况下，必须遵守以下规则：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    由于直纹面加工时自动穿丝和切断钢丝功能被关闭，因此必须在直纹面加工
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     前
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    调用穿丝指令。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这是通过
+   </font>
+   <font style="vertical-align: inherit;">
+    “
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     编辑”菜单中的
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <a href="../wirhlp10/Draht_einfaedeln.htm">
+   <font class="hcp2">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      “切割/穿线”
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令或相应的图标来完成的。
+   </font>
+  </font>
+ </p>
+ <ul>
+  <li class="hcp3">
+   <p class="Topic_Text_Bulleted">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      现在将两个图形编辑为直纹曲面。
+     </font>
+    </font>
+   </p>
+  </li>
+ </ul>
+
 
 {% endblock %}
 {% endlinebreakless %}

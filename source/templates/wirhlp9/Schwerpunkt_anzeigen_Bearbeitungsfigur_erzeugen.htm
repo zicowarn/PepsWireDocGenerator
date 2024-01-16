@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,9 +28,41 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Schwerpunkt anzeigen" %}</p><p>{% trans "Kennzeichnet den Schwerpunkt einer Figur durch einen C-Punkt. Nur bei [geschlossenen] Figuren möglich." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p><img src="../centre_of_gravity.gif" alt="centre_of_gravity.gif" width="253" height="163" border="0"/></p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    显示重心
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    用C点表示图形的重心。
+   </font>
+   <font style="vertical-align: inherit;">
+    仅适用于
+   </font>
+  </font>
+  <font style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     封闭
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    图形。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <img alt="重力中心.gif" border="0" height="163" src="../centre_of_gravity.gif" width="253"/>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

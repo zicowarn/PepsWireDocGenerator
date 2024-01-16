@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -37,25 +36,194 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Solid - Projektions-Assistent" %}</p><p class="Block_Text">{% trans "Dieser #[Assistent]# erlaubt es, von einem [Solidmodell] alle 2D-Geometrien abzuleiten, die man theoretisch mit einer Drahterodiermaschine bearbeiten könnte." %}</p><p class="Block_Text">{% trans "Die Ableitung kann vollautomatisch oder manuell durch Selektieren von Geometrien erfolgen." %}</p>
-<p class="Block_Text">{% trans "Dabei erkennt der Assistent nicht nur [zylindrische] sondern auch [konische] Durchbrüche und Außengeometrien. Die abgeleiteten 2D-Geometrien werden auf zwei bestimmbare Z-Ebenen projiziert." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Solid_Projektion.gif" alt="Solid_Projektion.gif" width="839" height="307" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Schritt [1] des #[Assistenten]# besteht aus der Auswahl der [Projektionsmethode]." %}</p>
-<p class="hcp2"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen. Klicken Sie auf die Schaltfläche] [Weiter &amp;gt;][, um den nächsten Dialog des Assistenten zu sehen.]" %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Solid_Proj_Assis_1_shg.gif" usemap="#AreaMap0" alt="Solid_Proj_Assis_1_shg.gif" width="495" height="357" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="146,318,220,338" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="237,318,313,341" href="javascript:BSSCPopup('../Commdata/COMMON_Nicht_verwendete_Funktion.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="318,318,393,342" href="Solid_Projektions_Assistent_Schritt_2.htm" alt=""/>
-<area shape="rect" coords="407,319,483,344" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area3" alt=""/>
-<area shape="rect" coords="141,44,476,298" href="Auswahl_der_Projektionsmethode_Solid_Projektions_Assistent.htm" alt=""/>
-<area shape="rect" coords="17,34,136,307" href="javascript:BSSCPopup('../Commdata/COMMON_Bild.htm',400,300);" id="area4" alt=""/>
-</map> </p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; 
+	 border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <img alt="Sol_Proj_Man.gif" border="0" height="29" src="../Sol_Proj_Man.gif" width="28"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    Solid-投影助手
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该
+   </font>
+  </font>
+  <a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('../Commdata/COMMON_Wizard.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      助手
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    允许您从理论上可以使用线切割机加工的
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     实体模型
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    导出所有 2D 几何形状。
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    推导可以完全自动完成，也可以通过选择几何形状手动完成。
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该助手不仅可以识别
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     圆柱形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，还可以识别
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     圆锥形
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    开口和外部几何形状。
+   </font>
+   <font style="vertical-align: inherit;">
+    导出的 2D 几何形状被投影到两个可定义的 Z 平面上。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="Solid_Projection.gif" border="0" height="307" src="../Solid_Projektion.gif" width="839"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <a class="BSSCPopup" href="javascript:void(0);" id="a2" onclick="BSSCPopup('../Commdata/COMMON_Wizard.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      向导
+     </font>
+    </font>
+   </a>
+   <font style="vertical-align: inherit;">
+    的第
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     1
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    步
+   </font>
+   <font style="vertical-align: inherit;">
+    包括选择
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     投影方法
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <a class="BSSCPopup" href="javascript:void(0);" id="a2" onclick="BSSCPopup('../Commdata/COMMON_Wizard.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font class="hcp3" color="#FF0000">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+   <br/>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击
+    </font>
+   </font>
+  </font>
+  <font color="#FF0000" style="font-weight: bold; 
+												 font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     下一步 &gt;按钮
+    </font>
+   </font>
+  </font>
+  <font class="hcp3" color="#FF0000">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     查看下一个向导对话框。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="Solid_Proj_Assis_1_shg.gif" border="0" height="357" src="../Solid_Proj_Assis_1_shg.gif" usemap="#AreaMap0" width="495"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="146,318,220,338" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area1" shape="rect"/>
+   <area alt="" coords="237,318,313,341" href="javascript:BSSCPopup('../Commdata/COMMON_Nicht_verwendete_Funktion.htm',400,300);" id="area2" shape="rect"/>
+   <area alt="" coords="318,318,393,342" href="Solid_Projektions_Assistent_Schritt_2.htm" shape="rect"/>
+   <area alt="" coords="407,319,483,344" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area3" shape="rect"/>
+   <area alt="" coords="141,44,476,298" href="Auswahl_der_Projektionsmethode_Solid_Projektions_Assistent.htm" shape="rect"/>
+   <area alt="" coords="17,34,136,307" href="javascript:BSSCPopup('../Commdata/COMMON_Bild.htm',400,300);" id="area4" shape="rect"/>
+  </map>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('a1');
 	FilePopupInit('a2');
@@ -63,7 +231,9 @@
 	FilePopupInit('area2');
 	FilePopupInit('area3');
 	FilePopupInit('area4');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

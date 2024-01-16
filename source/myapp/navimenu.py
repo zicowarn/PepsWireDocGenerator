@@ -1,1951 +1,1893 @@
 menus = {
-  "Willkommen zum PEPS Hilfesystem Drahterodieren": {
+  "欢迎使用 PEPS 线切割帮助系统": {
     "url": "Welcome/Willkommen_zum_PEPS_Hilfesystem_Drahterodieren.htm",
     "children": {}
   },
-  "Die Bearbeitungs Men\u00fcs": {
-    "url": "#",
-    "children": {
-      "Das Vorbereitungs Men\u00fc": {
-        "url": "wirhlp9/Das_Vorbereitungs_Menue.htm",
-        "children": {}
-      },
-      "Das WIRE-Expert Men\u00fc": {
-        "url": "wirhlp9/Das_WIRE_Expert_Untermenue.htm",
-        "children": {}
-      },
-      "Das Bearbeitung Men\u00fc": {
-        "url": "wirhlp10/Das_Bearbeitungs_Menue.htm",
-        "children": {}
-      },
-      "Das Simulation Men\u00fc": {
-        "url": "Simulation/Das_Simulation_Menue.htm",
-        "children": {}
-      },
-      "Das Extras Men\u00fc": {
-        "url": "Extras/Das_Extra_Menue.htm",
-        "children": {}
-      }
-    }
-  },
-  "Das Vorbereitungs Men\u00fc": {
-    "url": "wirhlp9/Das_Vorbereitungs_Menue.htm",
-    "children": {}
-  },
-  "Das WIRE-Expert Men\u00fc": {
-    "url": "wirhlp9/Das_WIRE_Expert_Untermenue.htm",
-    "children": {}
-  },
-  "Das Bearbeitung Men\u00fc": {
+  "编辑菜单": {
     "url": "wirhlp10/Das_Bearbeitungs_Menue.htm",
     "children": {}
   },
-  "Das Simulation Men\u00fc": {
+  "准备菜单": {
+    "url": "wirhlp9/Das_Vorbereitungs_Menue.htm",
+    "children": {}
+  },
+  "WIRE 专家菜单": {
+    "url": "wirhlp9/Das_WIRE_Expert_Untermenue.htm",
+    "children": {}
+  },
+  "模拟菜单": {
     "url": "Simulation/Das_Simulation_Menue.htm#642b3b9347ca42c9b00b820c00c373fa=1",
     "children": {}
   },
-  "Das Extras Men\u00fc": {
+  "额外菜单": {
     "url": "Extras/Das_Extra_Menue.htm",
     "children": {}
   },
-  "Simulation": {
+  "模拟": {
     "url": "#",
     "children": {
-      "Das Simulation Men\u00fc": {
+      "模拟菜单": {
         "url": "Simulation/Das_Simulation_Menue.htm#642b3b9347ca42c9b00b820c00c373fa=1",
         "children": {}
       },
-      "Simulation ausf\u00fchren": {
+      "运行模拟": {
         "url": "Simulation/_Standard_Simulation.htm",
         "children": {}
       },
-      "Dialoge zur Steuerung der SOLID-Simulation": {
+      "用于控制 SOLID 模拟的对话框": {
         "url": "Simulation/Solid_Simulation.htm",
         "children": {}
       },
-      "Dialoge zur Steuerung der Maschinenraumsimulation": {
+      "用于控制机舱模拟的对话": {
         "url": "Simulation/Maschinenraum-Simulation_Beschreibung_der_Benutzeroberflaeche/Maschinenraum_Simulation_-_Uebersicht.htm",
         "children": {}
       },
-      "Dialog zur Steuerung der Drahtmodell-Simulation": {
+      "控制线框模拟的对话框": {
         "url": "Simulation/Drahtmodell_Simulation.htm",
         "children": {}
       }
     }
   },
-  "Simulation ausf\u00fchren": {
+  "运行模拟": {
     "url": "Simulation/_Standard_Simulation.htm",
     "children": {}
   },
-  "Dialoge zur Steuerung der SOLID-Simulation": {
+  "用于控制 SOLID 模拟的对话框": {
     "url": "Simulation/Solid_Simulation.htm",
     "children": {}
   },
-  "Dialoge zur Steuerung der Maschinenraumsimulation": {
+  "用于控制机舱模拟的对话": {
     "url": "Simulation/Maschinenraum-Simulation_Beschreibung_der_Benutzeroberflaeche/Maschinenraum_Simulation_-_Uebersicht.htm",
     "children": {}
   },
-  "Dialog zur Steuerung der Drahtmodell-Simulation": {
+  "控制线框模拟的对话框": {
     "url": "Simulation/Drahtmodell_Simulation.htm",
     "children": {}
   },
-  "Der Operationsmanager": {
-    "url": "#",
-    "children": {
-      "Operationsmanager": {
-        "url": "Operationsmanager/Operation_editieren____.htm",
-        "children": {}
-      },
-      "Bearbeitungs Register (Operationsmanager)": {
-        "url": "Operationsmanager/Bearbeitungs_Register_Operationsmanager.htm",
-        "children": {}
-      },
-      "Geometrie Register (Operationsmanager)": {
-        "url": "Operationsmanager/Geometrie_Register_Operationsmanager.htm",
-        "children": {}
-      },
-      "Features Register (Operationsmanager)": {
-        "url": "WIRE_Expert_FeatureManager/WIRE_Expert_FeatureManager.htm",
-        "children": {}
-      },
-      "Parameter Register (Operationsmanager)": {
-        "url": "WIRE_Expert_FeatureManager/Parameter_Register_Operationsmanager_.htm",
-        "children": {}
-      }
-    }
-  },
-  "Operationsmanager": {
+  "运营经理": {
     "url": "Operationsmanager/Operation_editieren____.htm",
     "children": {}
   },
-  "Bearbeitungs Register (Operationsmanager)": {
+  "处理寄存器（操作管理器）": {
     "url": "Operationsmanager/Bearbeitungs_Register_Operationsmanager.htm",
     "children": {}
   },
-  "Geometrie Register (Operationsmanager)": {
+  "几何寄存器（操作管理器）": {
     "url": "Operationsmanager/Geometrie_Register_Operationsmanager.htm",
     "children": {}
   },
-  "Features Register (Operationsmanager)": {
+  "功能注册（运营经理）": {
     "url": "WIRE_Expert_FeatureManager/WIRE_Expert_FeatureManager.htm",
     "children": {}
   },
-  "Parameter Register (Operationsmanager)": {
+  "参数寄存器（操作管理器）": {
     "url": "WIRE_Expert_FeatureManager/Parameter_Register_Operationsmanager_.htm",
     "children": {}
   },
-  "Hilfe f\u00fcr spezielle NC-Maschinen": {
+  "特殊数控机床的帮助": {
     "url": "#",
     "children": {
-      "Besonderheiten bei der Programmierung von AGIEVISION-Maschinen": {
+      "AGIEVISION 机器编程时的特殊功能": {
         "url": "Agievhlp/Besonderheiten_bei_der_Programmierung_von_AGIEVISION_Maschinen.htm",
         "children": {}
       },
-      "Ge\u00e4ndertes \"Vorbereitungs Men\u00fc\" f\u00fcr AGIEVISION-Maschinen": {
+      "更改了“准备菜单” 适用于 AGIEVISION 机器": {
         "url": "Agievhlp/Das_Vorbereitungs_Menue_AGIEVISION.htm",
         "children": {}
       },
-      "Ge\u00e4ndertes \"Bearbeitungs Men\u00fc\" f\u00fcr AGIEVISION-Maschinen": {
+      "更改了“编辑菜单” 适用于 AGIEVISION 机器": {
         "url": "Agievhlp/Das_Bearbeitungs_Menue_AGIEVISION.htm",
         "children": {}
       },
-      "NC-Daten f\u00fcr AGIEVISION-Maschinen": {
+      "AGIEVISION 机器的 NC 数据": {
         "url": "Agievhlp/NC_Daten_fuer_AGIEVISION_NC_Maschinen.htm",
         "children": {}
       }
     }
   },
-  "Besonderheiten bei der Programmierung von AGIEVISION-Maschinen": {
+  "AGIEVISION 机器编程时的特殊功能": {
     "url": "Agievhlp/Besonderheiten_bei_der_Programmierung_von_AGIEVISION_Maschinen.htm",
     "children": {}
   },
-  "Ge\u00e4ndertes \"Vorbereitungs Men\u00fc\" f\u00fcr AGIEVISION-Maschinen": {
+  "更改了“准备菜单” 适用于 AGIEVISION 机器": {
     "url": "Agievhlp/Das_Vorbereitungs_Menue_AGIEVISION.htm",
     "children": {}
   },
-  "Ge\u00e4ndertes \"Bearbeitungs Men\u00fc\" f\u00fcr AGIEVISION-Maschinen": {
+  "更改了“编辑菜单” 适用于 AGIEVISION 机器": {
     "url": "Agievhlp/Das_Bearbeitungs_Menue_AGIEVISION.htm",
     "children": {}
   },
-  "NC-Daten f\u00fcr AGIEVISION-Maschinen": {
+  "AGIEVISION 机器的 NC 数据": {
     "url": "Agievhlp/NC_Daten_fuer_AGIEVISION_NC_Maschinen.htm",
     "children": {}
   },
-  "So wird's gemacht - Tipps & Tricks": {
+  "操作方法 - 技巧和窍门": {
     "url": "#",
     "children": {
-      "Bearbeitungsfiguren erzeugen/\u00e4ndern": {
+      "创建/更改加工数据": {
         "url": "#",
         "children": {
-          "Bearbeitungsfigur erzeugen": {
+          "创建加工图": {
             "url": "wirhlp9/Beispiel_fuer_die_Erzeugung_einer_Bearbeitungsfigur.htm",
             "children": {}
           },
-          "Ver\u00e4ndern der Geometrie einer Bearbeitungsfigur": {
+          "更改加工图形的几何形状": {
             "url": "wirhlp10/Beispiel_Nachtraegliches_Veraendern_der_Geometrie_einer_Bearbeitungsfigur.htm",
             "children": {}
           },
-          "Nachtr\u00e4gliches \u00c4ndern der Startposition einer Bearbeitungsfigur": {
+          "随后更改加工图形的起始位置": {
             "url": "wirhlp10/Beispiel_Nachtraegliches_Aendern_der_Startposition_einer_Bearbeitungsfigur.htm",
             "children": {}
           },
-          "Automatisch Bearbeitungsfiguren erzeugen - Geometrien haben KEIN Startloch": {
+          "自动生成加工数据 - 几何图形没有起始孔": {
             "url": "wirhlp9/Beispiel_Automatisch_Bearbeitungsfiguren_erzeugen_wenn_Geometrie_keine_Startloecher_enthaelt_.htm",
             "children": {}
           },
-          "Automatisch Bearbeitungsfiguren erzeugen  - Geometrien haben Startloch": {
+          "自动生成加工图形——几何形状有一个起点": {
             "url": "wirhlp9/Beispiel_Automatisch_Bearbeitungsfiguren_erzeugen_wenn_Geometrie_Startloecher_enthaelt_.htm",
             "children": {}
           }
         }
       },
-      "Bearbeitungsfigur erzeugen": {
+      "创建加工图": {
         "url": "wirhlp9/Beispiel_fuer_die_Erzeugung_einer_Bearbeitungsfigur.htm",
         "children": {}
       },
-      "Ver\u00e4ndern der Geometrie einer Bearbeitungsfigur": {
+      "更改加工图形的几何形状": {
         "url": "wirhlp10/Beispiel_Nachtraegliches_Veraendern_der_Geometrie_einer_Bearbeitungsfigur.htm",
         "children": {}
       },
-      "Nachtr\u00e4gliches \u00c4ndern der Startposition einer Bearbeitungsfigur": {
+      "随后更改加工图形的起始位置": {
         "url": "wirhlp10/Beispiel_Nachtraegliches_Aendern_der_Startposition_einer_Bearbeitungsfigur.htm",
         "children": {}
       },
-      "Automatisch Bearbeitungsfiguren erzeugen - Geometrien haben KEIN Startloch": {
+      "自动生成加工数据 - 几何图形没有起始孔": {
         "url": "wirhlp9/Beispiel_Automatisch_Bearbeitungsfiguren_erzeugen_wenn_Geometrie_keine_Startloecher_enthaelt_.htm",
         "children": {}
       },
-      "Automatisch Bearbeitungsfiguren erzeugen  - Geometrien haben Startloch": {
+      "自动生成加工图形——几何形状有一个起点": {
         "url": "wirhlp9/Beispiel_Automatisch_Bearbeitungsfiguren_erzeugen_wenn_Geometrie_Startloecher_enthaelt_.htm",
         "children": {}
       },
-      "Rohteil-, Spannmitteldefinition": {
+      "毛坯件及夹紧装置定义": {
         "url": "#",
         "children": {
-          "Rechteckiges Rohteil definieren": {
+          "定义矩形毛坯": {
             "url": "wirhlp10/Beispiel_Rechteckiges_Rohteil_definieren.htm",
             "children": {}
           },
-          "Solid als Rohteil verwenden": {
+          "使用实体作为原始零件": {
             "url": "wirhlp10/Beispiel_Solid_als_Rohteil_verwenden.htm",
             "children": {}
           },
-          "Spannmittel f\u00fcr Solidsimulation aus Solidgeometrien erzeugen": {
+          "从实体几何形状创建用于实体模拟的夹紧装置": {
             "url": "wirhlp10/Beispiel_Spannmittel_fuer_Solidsimulation_aus_Solidgeometrien_erzeugen.htm",
             "children": {}
           }
         }
       },
-      "Rechteckiges Rohteil definieren": {
+      "定义矩形毛坯": {
         "url": "wirhlp10/Beispiel_Rechteckiges_Rohteil_definieren.htm",
         "children": {}
       },
-      "Solid als Rohteil verwenden": {
+      "使用实体作为原始零件": {
         "url": "wirhlp10/Beispiel_Solid_als_Rohteil_verwenden.htm",
         "children": {}
       },
-      "Spannmittel f\u00fcr Solidsimulation aus Solidgeometrien erzeugen": {
+      "从实体几何形状创建用于实体模拟的夹紧装置": {
         "url": "wirhlp10/Beispiel_Spannmittel_fuer_Solidsimulation_aus_Solidgeometrien_erzeugen.htm",
         "children": {}
       },
-      "Vorbereitende Bearbeitungsfunktionen": {
+      "预备编辑功能": {
         "url": "#",
         "children": {
-          "Synchronisationslinien erzeugen": {
+          "创建同步线": {
             "url": "wirhlp9/Beispiel_Synchronisationslinien_erzeugen.htm",
             "children": {}
           },
-          "Vorhandene Synchronisationslinien editieren": {
+          "编辑现有同步线": {
             "url": "wirhlp9/Beispiel_Vorhandene_Synchronisationslinien_editieren.htm",
             "children": {}
           },
-          "Zus\u00e4tzliche Anbindungen definieren": {
+          "定义附加连接": {
             "url": "wirhlp9/Beispiel_Zusaetzliche_Anbindungen_definieren.htm",
             "children": {}
           },
-          "Zus\u00e4tzliche Technologieaufrufe in eine Bearbeitung einbringen": {
+          "将额外的技术调用纳入编辑中": {
             "url": "wirhlp9/Beispiel_Zusaetzliche_Technologieaufrufe_in_eine_Bearbeitung_einbringen.htm",
             "children": {}
           },
-          "Zus\u00e4tzlichen M-Code oder NC-Code in eine Bearbeitung einbringen": {
+          "在加工过程中引入附加的 M 代码或 NC 代码": {
             "url": "wirhlp9/Beispiel_Zusaetzlichen_M_Code_NC_Code_usw_in_eine_Bearbeitung_einbringen.htm",
             "children": {}
           },
-          "Eckenfreimachungen in Bearbeitungsfigur einbringen": {
+          "在加工图中包括角间隙": {
             "url": "wirhlp9/Beispiel_Eckenfreimachung_bestimmen.htm",
             "children": {}
           },
-          "Schnittluft\u00e4nderung in Bearbeitungsfigur einbringen": {
+          "将切削空气变化引入加工图形中": {
             "url": "wirhlp9/Beispiel_Schnittluftaenderung.htm",
             "children": {}
           },
-          "Variables H\u00f6henprofil erodieren": {
+          "侵蚀可变高程剖面": {
             "url": "wirhlp9/Beispiel_Variables_Hoehenprofil_erodieren.htm",
             "children": {}
           },
-          "Neue Drahtsorte zur Drahttabelle hinzuf\u00fcgen": {
+          "将新的电线类型添加到电线表": {
             "url": "wirhlp10/Drahtbeschreibung_Durchmesser.htm",
             "children": {}
           },
-          "Drahtsorte in Drahttabelle l\u00f6schen": {
+          "删除线表中的线类型": {
             "url": "wirhlp10/Drahtsorte_loeschen.htm",
             "children": {}
           },
-          "Reihenfolge der Drahttabelle \u00e4ndern": {
+          "更改线表顺序": {
             "url": "wirhlp10/Reihenfolge_der_Drahttabelle_aendern.htm",
             "children": {}
           }
         }
       },
-      "Synchronisationslinien erzeugen": {
+      "创建同步线": {
         "url": "wirhlp9/Beispiel_Synchronisationslinien_erzeugen.htm",
         "children": {}
       },
-      "Vorhandene Synchronisationslinien editieren": {
+      "编辑现有同步线": {
         "url": "wirhlp9/Beispiel_Vorhandene_Synchronisationslinien_editieren.htm",
         "children": {}
       },
-      "Zus\u00e4tzliche Anbindungen definieren": {
+      "定义附加连接": {
         "url": "wirhlp9/Beispiel_Zusaetzliche_Anbindungen_definieren.htm",
         "children": {}
       },
-      "Zus\u00e4tzliche Technologieaufrufe in eine Bearbeitung einbringen": {
+      "将额外的技术调用纳入编辑中": {
         "url": "wirhlp9/Beispiel_Zusaetzliche_Technologieaufrufe_in_eine_Bearbeitung_einbringen.htm",
         "children": {}
       },
-      "Zus\u00e4tzlichen M-Code oder NC-Code in eine Bearbeitung einbringen": {
+      "在加工过程中引入附加的 M 代码或 NC 代码": {
         "url": "wirhlp9/Beispiel_Zusaetzlichen_M_Code_NC_Code_usw_in_eine_Bearbeitung_einbringen.htm",
         "children": {}
       },
-      "Eckenfreimachungen in Bearbeitungsfigur einbringen": {
+      "在加工图中包括角间隙": {
         "url": "wirhlp9/Beispiel_Eckenfreimachung_bestimmen.htm",
         "children": {}
       },
-      "Schnittluft\u00e4nderung in Bearbeitungsfigur einbringen": {
+      "将切削空气变化引入加工图形中": {
         "url": "wirhlp9/Beispiel_Schnittluftaenderung.htm",
         "children": {}
       },
-      "Variables H\u00f6henprofil erodieren": {
+      "侵蚀可变高程剖面": {
         "url": "wirhlp9/Beispiel_Variables_Hoehenprofil_erodieren.htm",
         "children": {}
       },
-      "Neue Drahtsorte zur Drahttabelle hinzuf\u00fcgen": {
+      "将新的电线类型添加到电线表": {
         "url": "wirhlp10/Drahtbeschreibung_Durchmesser.htm",
         "children": {}
       },
-      "Drahtsorte in Drahttabelle l\u00f6schen": {
+      "删除线表中的线类型": {
         "url": "wirhlp10/Drahtsorte_loeschen.htm",
         "children": {}
       },
-      "Reihenfolge der Drahttabelle \u00e4ndern": {
+      "更改线表顺序": {
         "url": "wirhlp10/Reihenfolge_der_Drahttabelle_aendern.htm",
         "children": {}
       },
-      "Bearbeitungsfunktionen": {
+      "编辑功能": {
         "url": "#",
         "children": {
-          "Zylindrischen Schnitt(e) erodieren": {
+          "侵蚀圆柱形切口。": {
             "url": "wirhlp10/Beispiel_Zylindrischen_Schnitt_programmieren.htm",
             "children": {
-              "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+              "WIRE-Expert自动化加工原理": {
                 "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
                 "children": {}
               },
-              "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+              "自动加工物体识别（特征识别）": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
                 "children": {}
               },
-              "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+              "手动编辑对象检测（特征检测）": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
                 "children": {}
               },
-              "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+              "创建角色+编辑特征": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
                 "children": {}
               }
             }
           },
-          "Umlaufend gleiche Konik erodieren": {
+          "周围都有相同的锥度侵蚀": {
             "url": "wirhlp10/Beispiel_Umlaufend_gleiche_Konik_programmieren.htm",
             "children": {
-              "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+              "WIRE-Expert自动化加工原理": {
                 "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
                 "children": {}
               },
-              "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+              "自动加工物体识别（特征识别）": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
                 "children": {}
               },
-              "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+              "手动编辑对象检测（特征检测）": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
                 "children": {}
               },
-              "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+              "创建角色+编辑特征": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
                 "children": {}
               }
             }
           },
-          "Bundbearbeitung programmieren": {
+          "程序线圈加工": {
             "url": "wirhlp10/Beispiel_Bundbearbeitung_programmieren.htm",
             "children": {
-              "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+              "WIRE-Expert自动化加工原理": {
                 "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
                 "children": {}
               },
-              "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+              "自动加工物体识别（特征识别）": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
                 "children": {}
               },
-              "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+              "手动编辑对象检测（特征检测）": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
                 "children": {}
               },
-              "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+              "创建角色+编辑特征": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
                 "children": {}
               }
             }
           },
-          "Variable Konik erodieren": {
+          "可变锥度侵蚀": {
             "url": "wirhlp10/Beispiel_Variable_Konik_programmieren.htm",
             "children": {
-              "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+              "WIRE-Expert自动化加工原理": {
                 "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
                 "children": {}
               },
-              "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+              "自动加工物体识别（特征识别）": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
                 "children": {}
               },
-              "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+              "手动编辑对象检测（特征检测）": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
                 "children": {}
               },
-              "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+              "创建角色+编辑特征": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
                 "children": {}
               }
             }
           },
-          "Taschenerodieren (Zerst\u00f6rschnitt) programmieren": {
+          "编程型腔腐蚀（破坏性切削）。": {
             "url": "wirhlp10/Beispiel_Taschenerodieren_programmieren.htm",
             "children": {
-              "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+              "WIRE-Expert自动化加工原理": {
                 "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
                 "children": {}
               },
-              "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+              "自动加工物体识别（特征识别）": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
                 "children": {}
               },
-              "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+              "手动编辑对象检测（特征检测）": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
                 "children": {}
               },
-              "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+              "创建角色+编辑特征": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
                 "children": {}
               }
             }
           },
-          "Schr\u00e4gschieber erodieren": {
+          "斜滑道侵蚀": {
             "url": "wirhlp10/Beispiel_Schraegschieber_programmieren.htm",
             "children": {
-              "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+              "WIRE-Expert自动化加工原理": {
                 "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
                 "children": {}
               },
-              "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+              "自动加工物体识别（特征识别）": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
                 "children": {}
               },
-              "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+              "手动编辑对象检测（特征检测）": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
                 "children": {}
               },
-              "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+              "创建角色+编辑特征": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
                 "children": {}
               }
             }
           },
-          "Regelfl\u00e4che ohne Synchronisationslinien erodieren": {
+          "腐蚀直纹面，无需同步线": {
             "url": "wirhlp10/Beispiel_Regelflaeche_ohne_Synchronisationslinien_erodieren.htm",
             "children": {
-              "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+              "WIRE-Expert自动化加工原理": {
                 "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
                 "children": {}
               },
-              "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+              "自动加工物体识别（特征识别）": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
                 "children": {}
               },
-              "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+              "手动编辑对象检测（特征检测）": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
                 "children": {}
               },
-              "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+              "创建角色+编辑特征": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
                 "children": {}
               }
             }
           },
-          "Regelfl\u00e4che mit Synchronisationslinien erodieren": {
+          "用同步线侵蚀直纹面": {
             "url": "wirhlp10/Beispiel_Regelflaeche_mit_Synchronisationslinien_erodieren.htm",
             "children": {
-              "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+              "WIRE-Expert自动化加工原理": {
                 "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
                 "children": {}
               },
-              "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+              "自动加工物体识别（特征识别）": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
                 "children": {}
               },
-              "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+              "手动编辑对象检测（特征检测）": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
                 "children": {}
               },
-              "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+              "创建角色+编辑特征": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
                 "children": {}
               }
             }
           },
-          "Regelfl\u00e4che mit variablen H\u00f6henprofil erodieren": {
+          "具有可变高度轮廓的侵蚀受控表面": {
             "url": "wirhlp9/Beispiel_Variables_Hoehenprofil_erodieren.htm#642b3b9347ca42c9b00b820c00c373fa=1",
             "children": {
-              "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+              "WIRE-Expert自动化加工原理": {
                 "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
                 "children": {}
               },
-              "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+              "自动加工物体识别（特征识别）": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
                 "children": {}
               },
-              "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+              "手动编辑对象检测（特征检测）": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
                 "children": {}
               },
-              "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+              "创建角色+编辑特征": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
                 "children": {}
               }
             }
           },
-          "Regelfl\u00e4che 4 Achsig Ausr\u00e4umen": {
+          "清除控制面4轴": {
             "url": "wirhlp10/Beispiel_4_Achs_Ausraeumen.htm",
             "children": {
-              "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+              "WIRE-Expert自动化加工原理": {
                 "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
                 "children": {}
               },
-              "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+              "自动加工物体识别（特征识别）": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
                 "children": {}
               },
-              "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+              "手动编辑对象检测（特征检测）": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
                 "children": {}
               },
-              "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+              "创建角色+编辑特征": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
                 "children": {}
               }
             }
           },
-          "Bearbeitungen durch Schnittschemen automatisieren": {
+          "使用剪切方案自动编辑": {
             "url": "wirhlp10/Beispiel_Erodierbearbeitungen_durch_Schnittschemen_automatisieren.htm",
             "children": {
-              "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+              "WIRE-Expert自动化加工原理": {
                 "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
                 "children": {}
               },
-              "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+              "自动加工物体识别（特征识别）": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
                 "children": {}
               },
-              "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+              "手动编辑对象检测（特征检测）": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
                 "children": {}
               },
-              "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+              "创建角色+编辑特征": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
                 "children": {}
               }
             }
           },
-          "Ausfallteil Sicherung programmieren": {
+          "对故障部件熔断器进行编程": {
             "url": "wirhlp10/Beispiel_Ausfallteil_Sicherung_Beispiel.htm",
             "children": {
-              "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+              "WIRE-Expert自动化加工原理": {
                 "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
                 "children": {}
               },
-              "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+              "自动加工物体识别（特征识别）": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
                 "children": {}
               },
-              "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+              "手动编辑对象检测（特征检测）": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
                 "children": {}
               },
-              "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+              "创建角色+编辑特征": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
                 "children": {}
               }
             }
           },
-          "WIRE-Expert (optional)": {
+          "WIRE 专家（可选）": {
             "url": "#",
             "children": {
-              "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+              "WIRE-Expert自动化加工原理": {
                 "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
                 "children": {}
               },
-              "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+              "自动加工物体识别（特征识别）": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
                 "children": {}
               },
-              "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+              "手动编辑对象检测（特征检测）": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
                 "children": {}
               },
-              "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+              "创建角色+编辑特征": {
                 "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
                 "children": {}
               }
             }
           },
-          "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+          "WIRE-Expert自动化加工原理": {
             "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
             "children": {}
           },
-          "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "自动加工物体识别（特征识别）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "手动编辑对象检测（特征检测）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+          "创建角色+编辑特征": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
             "children": {}
           }
         }
       },
-      "Zylindrischen Schnitt(e) erodieren": {
+      "侵蚀圆柱形切口。": {
         "url": "wirhlp10/Beispiel_Zylindrischen_Schnitt_programmieren.htm",
         "children": {
-          "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+          "WIRE-Expert自动化加工原理": {
             "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
             "children": {}
           },
-          "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "自动加工物体识别（特征识别）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "手动编辑对象检测（特征检测）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+          "创建角色+编辑特征": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
             "children": {}
           }
         }
       },
-      "Umlaufend gleiche Konik erodieren": {
+      "周围都有相同的锥度侵蚀": {
         "url": "wirhlp10/Beispiel_Umlaufend_gleiche_Konik_programmieren.htm",
         "children": {
-          "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+          "WIRE-Expert自动化加工原理": {
             "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
             "children": {}
           },
-          "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "自动加工物体识别（特征识别）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "手动编辑对象检测（特征检测）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+          "创建角色+编辑特征": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
             "children": {}
           }
         }
       },
-      "Bundbearbeitung programmieren": {
+      "程序线圈加工": {
         "url": "wirhlp10/Beispiel_Bundbearbeitung_programmieren.htm",
         "children": {
-          "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+          "WIRE-Expert自动化加工原理": {
             "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
             "children": {}
           },
-          "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "自动加工物体识别（特征识别）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "手动编辑对象检测（特征检测）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+          "创建角色+编辑特征": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
             "children": {}
           }
         }
       },
-      "Variable Konik erodieren": {
+      "可变锥度侵蚀": {
         "url": "wirhlp10/Beispiel_Variable_Konik_programmieren.htm",
         "children": {
-          "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+          "WIRE-Expert自动化加工原理": {
             "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
             "children": {}
           },
-          "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "自动加工物体识别（特征识别）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "手动编辑对象检测（特征检测）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+          "创建角色+编辑特征": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
             "children": {}
           }
         }
       },
-      "Taschenerodieren (Zerst\u00f6rschnitt) programmieren": {
+      "编程型腔腐蚀（破坏性切削）。": {
         "url": "wirhlp10/Beispiel_Taschenerodieren_programmieren.htm",
         "children": {
-          "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+          "WIRE-Expert自动化加工原理": {
             "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
             "children": {}
           },
-          "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "自动加工物体识别（特征识别）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "手动编辑对象检测（特征检测）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+          "创建角色+编辑特征": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
             "children": {}
           }
         }
       },
-      "Schr\u00e4gschieber erodieren": {
+      "斜滑道侵蚀": {
         "url": "wirhlp10/Beispiel_Schraegschieber_programmieren.htm",
         "children": {
-          "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+          "WIRE-Expert自动化加工原理": {
             "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
             "children": {}
           },
-          "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "自动加工物体识别（特征识别）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "手动编辑对象检测（特征检测）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+          "创建角色+编辑特征": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
             "children": {}
           }
         }
       },
-      "Regelfl\u00e4che ohne Synchronisationslinien erodieren": {
+      "腐蚀直纹面，无需同步线": {
         "url": "wirhlp10/Beispiel_Regelflaeche_ohne_Synchronisationslinien_erodieren.htm",
         "children": {
-          "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+          "WIRE-Expert自动化加工原理": {
             "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
             "children": {}
           },
-          "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "自动加工物体识别（特征识别）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "手动编辑对象检测（特征检测）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+          "创建角色+编辑特征": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
             "children": {}
           }
         }
       },
-      "Regelfl\u00e4che mit Synchronisationslinien erodieren": {
+      "用同步线侵蚀直纹面": {
         "url": "wirhlp10/Beispiel_Regelflaeche_mit_Synchronisationslinien_erodieren.htm",
         "children": {
-          "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+          "WIRE-Expert自动化加工原理": {
             "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
             "children": {}
           },
-          "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "自动加工物体识别（特征识别）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "手动编辑对象检测（特征检测）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+          "创建角色+编辑特征": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
             "children": {}
           }
         }
       },
-      "Regelfl\u00e4che mit variablen H\u00f6henprofil erodieren": {
+      "具有可变高度轮廓的侵蚀受控表面": {
         "url": "wirhlp9/Beispiel_Variables_Hoehenprofil_erodieren.htm#642b3b9347ca42c9b00b820c00c373fa=1",
         "children": {
-          "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+          "WIRE-Expert自动化加工原理": {
             "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
             "children": {}
           },
-          "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "自动加工物体识别（特征识别）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "手动编辑对象检测（特征检测）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+          "创建角色+编辑特征": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
             "children": {}
           }
         }
       },
-      "Regelfl\u00e4che 4 Achsig Ausr\u00e4umen": {
+      "清除控制面4轴": {
         "url": "wirhlp10/Beispiel_4_Achs_Ausraeumen.htm",
         "children": {
-          "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+          "WIRE-Expert自动化加工原理": {
             "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
             "children": {}
           },
-          "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "自动加工物体识别（特征识别）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "手动编辑对象检测（特征检测）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+          "创建角色+编辑特征": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
             "children": {}
           }
         }
       },
-      "Bearbeitungen durch Schnittschemen automatisieren": {
+      "使用剪切方案自动编辑": {
         "url": "wirhlp10/Beispiel_Erodierbearbeitungen_durch_Schnittschemen_automatisieren.htm",
         "children": {
-          "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+          "WIRE-Expert自动化加工原理": {
             "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
             "children": {}
           },
-          "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "自动加工物体识别（特征识别）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "手动编辑对象检测（特征检测）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+          "创建角色+编辑特征": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
             "children": {}
           }
         }
       },
-      "Ausfallteil Sicherung programmieren": {
+      "对故障部件熔断器进行编程": {
         "url": "wirhlp10/Beispiel_Ausfallteil_Sicherung_Beispiel.htm",
         "children": {
-          "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+          "WIRE-Expert自动化加工原理": {
             "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
             "children": {}
           },
-          "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "自动加工物体识别（特征识别）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "手动编辑对象检测（特征检测）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+          "创建角色+编辑特征": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
             "children": {}
           }
         }
       },
-      "WIRE-Expert (optional)": {
+      "WIRE 专家（可选）": {
         "url": "#",
         "children": {
-          "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+          "WIRE-Expert自动化加工原理": {
             "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
             "children": {}
           },
-          "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "自动加工物体识别（特征识别）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "手动编辑对象检测（特征检测）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+          "创建角色+编辑特征": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
             "children": {}
           }
         }
       },
-      "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+      "WIRE-Expert自动化加工原理": {
         "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
         "children": {}
       },
-      "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+      "自动加工物体识别（特征识别）": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
         "children": {}
       },
-      "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+      "手动编辑对象检测（特征检测）": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
         "children": {}
       },
-      "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
-        "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
+      "创建角色+编辑特征": {
+        "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm#642b3b9347ca42c9b00b820c00c373fa=1",
         "children": {}
       },
-      "WIRE-Expert - Automatische Featureerkennung": {
+      "WIRE-Expert - 自动特征检测": {
         "url": "#",
         "children": {
-          "Automatische Feature-Erkennung": {
+          "自动特征检测": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm#642b3b9347ca42c9b00b820c00c373fa=1",
             "children": {}
           },
-          "Manuelle Feature-Erkennung": {
+          "手动特征检测": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm#642b3b9347ca42c9b00b820c00c373fa=1",
             "children": {}
           },
-          "Erzeuge Figuren + Bearbeitungen von Features": {
+          "创建角色+编辑特征": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm#642b3b9347ca42c9b00b820c00c373fa=1",
             "children": {}
           },
-          "WIRE-Expert FeatureManager": {
+          "WIRE-Expert 特征管理器": {
             "url": "WIRE_Expert_FeatureManager/WIRE_Expert_FeatureManager.htm#642b3b9347ca42c9b00b820c00c373fa=1",
             "children": {}
           },
-          "WIRE-Expert FeatureManager - Optionen der rechten Maustaste": {
+          "WIRE-Expert 特征管理器 - 右键单击​​选项": {
             "url": "WIRE_ExpertRH_context_Menu/OPTICAM_FeatureManager_Optionen_der_rechten_Maustaste.htm",
             "children": {}
           }
         }
       },
-      "Automatische Feature-Erkennung": {
+      "自动特征检测": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm#642b3b9347ca42c9b00b820c00c373fa=1",
         "children": {}
       },
-      "Manuelle Feature-Erkennung": {
+      "手动特征检测": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm#642b3b9347ca42c9b00b820c00c373fa=1",
         "children": {}
       },
-      "Erzeuge Figuren + Bearbeitungen von Features": {
-        "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm#642b3b9347ca42c9b00b820c00c373fa=1",
-        "children": {}
-      },
-      "WIRE-Expert FeatureManager": {
+      "WIRE-Expert 特征管理器": {
         "url": "WIRE_Expert_FeatureManager/WIRE_Expert_FeatureManager.htm#642b3b9347ca42c9b00b820c00c373fa=1",
         "children": {}
       },
-      "WIRE-Expert FeatureManager - Optionen der rechten Maustaste": {
+      "WIRE-Expert 特征管理器 - 右键单击​​选项": {
         "url": "WIRE_ExpertRH_context_Menu/OPTICAM_FeatureManager_Optionen_der_rechten_Maustaste.htm",
         "children": {}
       },
-      "Operationsmanager bedienen": {
+      "运营运营经理": {
         "url": "#",
         "children": {
-          "Neue Bearbeitungsoperation erzeugen": {
+          "创建新的加工操作": {
             "url": "Operationsmanager/Beispiel_Neue_Bearbeitungsoperation_erzeugen.htm",
             "children": {}
           },
-          "Bearbeitungsoperationen NACH einer vorhandenen Operation einf\u00fcgen": {
+          "在现有操作之后插入编辑操作": {
             "url": "Operationsmanager/Beispiel_Bearbeitungsoperationen_NACH_einer_vorhandenen_Operation_einfuegen.htm",
             "children": {}
           },
-          "Vorhandene Bearbeitungsoperation \u00e4ndern": {
+          "修改现有加工操作": {
             "url": "Operationsmanager/Beispiel_Vorhandene_Bearbeitungsoperation_aendern.htm",
             "children": {}
           },
-          "Bearbeitungsoperation kopieren": {
+          "仿形加工操作": {
             "url": "Operationsmanager/Beispiel_Bearbeitungsoperation_kopieren.htm",
             "children": {}
           },
-          "Vorhandene Bearbeitungsoperationen deaktivieren/aktivieren": {
+          "禁用/启用现有编辑操作": {
             "url": "Operationsmanager/Beispiel_Vorhandene_Bearbeitungsoperationen_deaktivieren_aktivieren.htm",
             "children": {}
           },
-          "Reihenfolge der Bearbeitungsoperationen \u00e4ndern": {
+          "更改加工操作顺序": {
             "url": "Operationsmanager/Beispiel_Reihenfolge_der_Bearbeitungsoperationen_aendern.htm",
             "children": {}
           },
-          "Vorhandene Bearbeitungsoperation(en) l\u00f6schen": {
+          "删除现有的加工操作。": {
             "url": "Operationsmanager/Beispiel_Vorhandene_Bearbeitungsoperation_en_loeschen.htm",
             "children": {}
           }
         }
       },
-      "Neue Bearbeitungsoperation erzeugen": {
+      "创建新的加工操作": {
         "url": "Operationsmanager/Beispiel_Neue_Bearbeitungsoperation_erzeugen.htm",
         "children": {}
       },
-      "Bearbeitungsoperationen NACH einer vorhandenen Operation einf\u00fcgen": {
+      "在现有操作之后插入编辑操作": {
         "url": "Operationsmanager/Beispiel_Bearbeitungsoperationen_NACH_einer_vorhandenen_Operation_einfuegen.htm",
         "children": {}
       },
-      "Vorhandene Bearbeitungsoperation \u00e4ndern": {
+      "修改现有加工操作": {
         "url": "Operationsmanager/Beispiel_Vorhandene_Bearbeitungsoperation_aendern.htm",
         "children": {}
       },
-      "Bearbeitungsoperation kopieren": {
+      "仿形加工操作": {
         "url": "Operationsmanager/Beispiel_Bearbeitungsoperation_kopieren.htm",
         "children": {}
       },
-      "Vorhandene Bearbeitungsoperationen deaktivieren/aktivieren": {
+      "禁用/启用现有编辑操作": {
         "url": "Operationsmanager/Beispiel_Vorhandene_Bearbeitungsoperationen_deaktivieren_aktivieren.htm",
         "children": {}
       },
-      "Reihenfolge der Bearbeitungsoperationen \u00e4ndern": {
+      "更改加工操作顺序": {
         "url": "Operationsmanager/Beispiel_Reihenfolge_der_Bearbeitungsoperationen_aendern.htm",
         "children": {}
       },
-      "Vorhandene Bearbeitungsoperation(en) l\u00f6schen": {
+      "删除现有的加工操作。": {
         "url": "Operationsmanager/Beispiel_Vorhandene_Bearbeitungsoperation_en_loeschen.htm",
         "children": {}
       }
     }
   },
-  "Bearbeitungsfiguren erzeugen/\u00e4ndern": {
+  "创建/更改加工数据": {
     "url": "#",
     "children": {
-      "Bearbeitungsfigur erzeugen": {
+      "创建加工图": {
         "url": "wirhlp9/Beispiel_fuer_die_Erzeugung_einer_Bearbeitungsfigur.htm",
         "children": {}
       },
-      "Ver\u00e4ndern der Geometrie einer Bearbeitungsfigur": {
+      "更改加工图形的几何形状": {
         "url": "wirhlp10/Beispiel_Nachtraegliches_Veraendern_der_Geometrie_einer_Bearbeitungsfigur.htm",
         "children": {}
       },
-      "Nachtr\u00e4gliches \u00c4ndern der Startposition einer Bearbeitungsfigur": {
+      "随后更改加工图形的起始位置": {
         "url": "wirhlp10/Beispiel_Nachtraegliches_Aendern_der_Startposition_einer_Bearbeitungsfigur.htm",
         "children": {}
       },
-      "Automatisch Bearbeitungsfiguren erzeugen - Geometrien haben KEIN Startloch": {
+      "自动生成加工数据 - 几何图形没有起始孔": {
         "url": "wirhlp9/Beispiel_Automatisch_Bearbeitungsfiguren_erzeugen_wenn_Geometrie_keine_Startloecher_enthaelt_.htm",
         "children": {}
       },
-      "Automatisch Bearbeitungsfiguren erzeugen  - Geometrien haben Startloch": {
+      "自动生成加工图形——几何形状有一个起点": {
         "url": "wirhlp9/Beispiel_Automatisch_Bearbeitungsfiguren_erzeugen_wenn_Geometrie_Startloecher_enthaelt_.htm",
         "children": {}
       }
     }
   },
-  "Bearbeitungsfigur erzeugen": {
+  "创建加工图": {
     "url": "wirhlp9/Beispiel_fuer_die_Erzeugung_einer_Bearbeitungsfigur.htm",
     "children": {}
   },
-  "Ver\u00e4ndern der Geometrie einer Bearbeitungsfigur": {
+  "更改加工图形的几何形状": {
     "url": "wirhlp10/Beispiel_Nachtraegliches_Veraendern_der_Geometrie_einer_Bearbeitungsfigur.htm",
     "children": {}
   },
-  "Nachtr\u00e4gliches \u00c4ndern der Startposition einer Bearbeitungsfigur": {
+  "随后更改加工图形的起始位置": {
     "url": "wirhlp10/Beispiel_Nachtraegliches_Aendern_der_Startposition_einer_Bearbeitungsfigur.htm",
     "children": {}
   },
-  "Automatisch Bearbeitungsfiguren erzeugen - Geometrien haben KEIN Startloch": {
+  "自动生成加工数据 - 几何图形没有起始孔": {
     "url": "wirhlp9/Beispiel_Automatisch_Bearbeitungsfiguren_erzeugen_wenn_Geometrie_keine_Startloecher_enthaelt_.htm",
     "children": {}
   },
-  "Automatisch Bearbeitungsfiguren erzeugen  - Geometrien haben Startloch": {
+  "自动生成加工图形——几何形状有一个起点": {
     "url": "wirhlp9/Beispiel_Automatisch_Bearbeitungsfiguren_erzeugen_wenn_Geometrie_Startloecher_enthaelt_.htm",
     "children": {}
   },
-  "Rohteil-, Spannmitteldefinition": {
+  "毛坯件及夹紧装置定义": {
     "url": "#",
     "children": {
-      "Rechteckiges Rohteil definieren": {
+      "定义矩形毛坯": {
         "url": "wirhlp10/Beispiel_Rechteckiges_Rohteil_definieren.htm",
         "children": {}
       },
-      "Solid als Rohteil verwenden": {
+      "使用实体作为原始零件": {
         "url": "wirhlp10/Beispiel_Solid_als_Rohteil_verwenden.htm",
         "children": {}
       },
-      "Spannmittel f\u00fcr Solidsimulation aus Solidgeometrien erzeugen": {
+      "从实体几何形状创建用于实体模拟的夹紧装置": {
         "url": "wirhlp10/Beispiel_Spannmittel_fuer_Solidsimulation_aus_Solidgeometrien_erzeugen.htm",
         "children": {}
       }
     }
   },
-  "Rechteckiges Rohteil definieren": {
+  "定义矩形毛坯": {
     "url": "wirhlp10/Beispiel_Rechteckiges_Rohteil_definieren.htm",
     "children": {}
   },
-  "Solid als Rohteil verwenden": {
+  "使用实体作为原始零件": {
     "url": "wirhlp10/Beispiel_Solid_als_Rohteil_verwenden.htm",
     "children": {}
   },
-  "Spannmittel f\u00fcr Solidsimulation aus Solidgeometrien erzeugen": {
+  "从实体几何形状创建用于实体模拟的夹紧装置": {
     "url": "wirhlp10/Beispiel_Spannmittel_fuer_Solidsimulation_aus_Solidgeometrien_erzeugen.htm",
     "children": {}
   },
-  "Vorbereitende Bearbeitungsfunktionen": {
+  "预备编辑功能": {
     "url": "#",
     "children": {
-      "Synchronisationslinien erzeugen": {
+      "创建同步线": {
         "url": "wirhlp9/Beispiel_Synchronisationslinien_erzeugen.htm",
         "children": {}
       },
-      "Vorhandene Synchronisationslinien editieren": {
+      "编辑现有同步线": {
         "url": "wirhlp9/Beispiel_Vorhandene_Synchronisationslinien_editieren.htm",
         "children": {}
       },
-      "Zus\u00e4tzliche Anbindungen definieren": {
+      "定义附加连接": {
         "url": "wirhlp9/Beispiel_Zusaetzliche_Anbindungen_definieren.htm",
         "children": {}
       },
-      "Zus\u00e4tzliche Technologieaufrufe in eine Bearbeitung einbringen": {
+      "将额外的技术调用纳入编辑中": {
         "url": "wirhlp9/Beispiel_Zusaetzliche_Technologieaufrufe_in_eine_Bearbeitung_einbringen.htm",
         "children": {}
       },
-      "Zus\u00e4tzlichen M-Code oder NC-Code in eine Bearbeitung einbringen": {
+      "在加工过程中引入附加的 M 代码或 NC 代码": {
         "url": "wirhlp9/Beispiel_Zusaetzlichen_M_Code_NC_Code_usw_in_eine_Bearbeitung_einbringen.htm",
         "children": {}
       },
-      "Eckenfreimachungen in Bearbeitungsfigur einbringen": {
+      "在加工图中包括角间隙": {
         "url": "wirhlp9/Beispiel_Eckenfreimachung_bestimmen.htm",
         "children": {}
       },
-      "Schnittluft\u00e4nderung in Bearbeitungsfigur einbringen": {
+      "将切削空气变化引入加工图形中": {
         "url": "wirhlp9/Beispiel_Schnittluftaenderung.htm",
         "children": {}
       },
-      "Variables H\u00f6henprofil erodieren": {
+      "侵蚀可变高程剖面": {
         "url": "wirhlp9/Beispiel_Variables_Hoehenprofil_erodieren.htm",
         "children": {}
       },
-      "Neue Drahtsorte zur Drahttabelle hinzuf\u00fcgen": {
+      "将新的电线类型添加到电线表": {
         "url": "wirhlp10/Drahtbeschreibung_Durchmesser.htm",
         "children": {}
       },
-      "Drahtsorte in Drahttabelle l\u00f6schen": {
+      "删除线表中的线类型": {
         "url": "wirhlp10/Drahtsorte_loeschen.htm",
         "children": {}
       },
-      "Reihenfolge der Drahttabelle \u00e4ndern": {
+      "更改线表顺序": {
         "url": "wirhlp10/Reihenfolge_der_Drahttabelle_aendern.htm",
         "children": {}
       }
     }
   },
-  "Synchronisationslinien erzeugen": {
+  "创建同步线": {
     "url": "wirhlp9/Beispiel_Synchronisationslinien_erzeugen.htm",
     "children": {}
   },
-  "Vorhandene Synchronisationslinien editieren": {
+  "编辑现有同步线": {
     "url": "wirhlp9/Beispiel_Vorhandene_Synchronisationslinien_editieren.htm",
     "children": {}
   },
-  "Zus\u00e4tzliche Anbindungen definieren": {
+  "定义附加连接": {
     "url": "wirhlp9/Beispiel_Zusaetzliche_Anbindungen_definieren.htm",
     "children": {}
   },
-  "Zus\u00e4tzliche Technologieaufrufe in eine Bearbeitung einbringen": {
+  "将额外的技术调用纳入编辑中": {
     "url": "wirhlp9/Beispiel_Zusaetzliche_Technologieaufrufe_in_eine_Bearbeitung_einbringen.htm",
     "children": {}
   },
-  "Zus\u00e4tzlichen M-Code oder NC-Code in eine Bearbeitung einbringen": {
+  "在加工过程中引入附加的 M 代码或 NC 代码": {
     "url": "wirhlp9/Beispiel_Zusaetzlichen_M_Code_NC_Code_usw_in_eine_Bearbeitung_einbringen.htm",
     "children": {}
   },
-  "Eckenfreimachungen in Bearbeitungsfigur einbringen": {
+  "在加工图中包括角间隙": {
     "url": "wirhlp9/Beispiel_Eckenfreimachung_bestimmen.htm",
     "children": {}
   },
-  "Schnittluft\u00e4nderung in Bearbeitungsfigur einbringen": {
+  "将切削空气变化引入加工图形中": {
     "url": "wirhlp9/Beispiel_Schnittluftaenderung.htm",
     "children": {}
   },
-  "Variables H\u00f6henprofil erodieren": {
+  "侵蚀可变高程剖面": {
     "url": "wirhlp9/Beispiel_Variables_Hoehenprofil_erodieren.htm",
     "children": {}
   },
-  "Neue Drahtsorte zur Drahttabelle hinzuf\u00fcgen": {
+  "将新的电线类型添加到电线表": {
     "url": "wirhlp10/Drahtbeschreibung_Durchmesser.htm",
     "children": {}
   },
-  "Drahtsorte in Drahttabelle l\u00f6schen": {
+  "删除线表中的线类型": {
     "url": "wirhlp10/Drahtsorte_loeschen.htm",
     "children": {}
   },
-  "Reihenfolge der Drahttabelle \u00e4ndern": {
+  "更改线表顺序": {
     "url": "wirhlp10/Reihenfolge_der_Drahttabelle_aendern.htm",
     "children": {}
   },
-  "Bearbeitungsfunktionen": {
+  "编辑功能": {
     "url": "#",
     "children": {
-      "Zylindrischen Schnitt(e) erodieren": {
+      "侵蚀圆柱形切口。": {
         "url": "wirhlp10/Beispiel_Zylindrischen_Schnitt_programmieren.htm",
         "children": {
-          "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+          "WIRE-Expert自动化加工原理": {
             "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
             "children": {}
           },
-          "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "自动加工物体识别（特征识别）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "手动编辑对象检测（特征检测）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+          "创建角色+编辑特征": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
             "children": {}
           }
         }
       },
-      "Umlaufend gleiche Konik erodieren": {
+      "周围都有相同的锥度侵蚀": {
         "url": "wirhlp10/Beispiel_Umlaufend_gleiche_Konik_programmieren.htm",
         "children": {
-          "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+          "WIRE-Expert自动化加工原理": {
             "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
             "children": {}
           },
-          "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "自动加工物体识别（特征识别）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "手动编辑对象检测（特征检测）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+          "创建角色+编辑特征": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
             "children": {}
           }
         }
       },
-      "Bundbearbeitung programmieren": {
+      "程序线圈加工": {
         "url": "wirhlp10/Beispiel_Bundbearbeitung_programmieren.htm",
         "children": {
-          "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+          "WIRE-Expert自动化加工原理": {
             "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
             "children": {}
           },
-          "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "自动加工物体识别（特征识别）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "手动编辑对象检测（特征检测）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+          "创建角色+编辑特征": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
             "children": {}
           }
         }
       },
-      "Variable Konik erodieren": {
+      "可变锥度侵蚀": {
         "url": "wirhlp10/Beispiel_Variable_Konik_programmieren.htm",
         "children": {
-          "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+          "WIRE-Expert自动化加工原理": {
             "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
             "children": {}
           },
-          "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "自动加工物体识别（特征识别）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "手动编辑对象检测（特征检测）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+          "创建角色+编辑特征": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
             "children": {}
           }
         }
       },
-      "Taschenerodieren (Zerst\u00f6rschnitt) programmieren": {
+      "编程型腔腐蚀（破坏性切削）。": {
         "url": "wirhlp10/Beispiel_Taschenerodieren_programmieren.htm",
         "children": {
-          "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+          "WIRE-Expert自动化加工原理": {
             "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
             "children": {}
           },
-          "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "自动加工物体识别（特征识别）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "手动编辑对象检测（特征检测）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+          "创建角色+编辑特征": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
             "children": {}
           }
         }
       },
-      "Schr\u00e4gschieber erodieren": {
+      "斜滑道侵蚀": {
         "url": "wirhlp10/Beispiel_Schraegschieber_programmieren.htm",
         "children": {
-          "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+          "WIRE-Expert自动化加工原理": {
             "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
             "children": {}
           },
-          "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "自动加工物体识别（特征识别）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "手动编辑对象检测（特征检测）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+          "创建角色+编辑特征": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
             "children": {}
           }
         }
       },
-      "Regelfl\u00e4che ohne Synchronisationslinien erodieren": {
+      "腐蚀直纹面，无需同步线": {
         "url": "wirhlp10/Beispiel_Regelflaeche_ohne_Synchronisationslinien_erodieren.htm",
         "children": {
-          "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+          "WIRE-Expert自动化加工原理": {
             "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
             "children": {}
           },
-          "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "自动加工物体识别（特征识别）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "手动编辑对象检测（特征检测）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+          "创建角色+编辑特征": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
             "children": {}
           }
         }
       },
-      "Regelfl\u00e4che mit Synchronisationslinien erodieren": {
+      "用同步线侵蚀直纹面": {
         "url": "wirhlp10/Beispiel_Regelflaeche_mit_Synchronisationslinien_erodieren.htm",
         "children": {
-          "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+          "WIRE-Expert自动化加工原理": {
             "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
             "children": {}
           },
-          "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "自动加工物体识别（特征识别）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "手动编辑对象检测（特征检测）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+          "创建角色+编辑特征": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
             "children": {}
           }
         }
       },
-      "Regelfl\u00e4che mit variablen H\u00f6henprofil erodieren": {
+      "具有可变高度轮廓的侵蚀受控表面": {
         "url": "wirhlp9/Beispiel_Variables_Hoehenprofil_erodieren.htm#642b3b9347ca42c9b00b820c00c373fa=1",
         "children": {
-          "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+          "WIRE-Expert自动化加工原理": {
             "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
             "children": {}
           },
-          "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "自动加工物体识别（特征识别）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "手动编辑对象检测（特征检测）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+          "创建角色+编辑特征": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
             "children": {}
           }
         }
       },
-      "Regelfl\u00e4che 4 Achsig Ausr\u00e4umen": {
+      "清除控制面4轴": {
         "url": "wirhlp10/Beispiel_4_Achs_Ausraeumen.htm",
         "children": {
-          "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+          "WIRE-Expert自动化加工原理": {
             "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
             "children": {}
           },
-          "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "自动加工物体识别（特征识别）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "手动编辑对象检测（特征检测）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+          "创建角色+编辑特征": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
             "children": {}
           }
         }
       },
-      "Bearbeitungen durch Schnittschemen automatisieren": {
+      "使用剪切方案自动编辑": {
         "url": "wirhlp10/Beispiel_Erodierbearbeitungen_durch_Schnittschemen_automatisieren.htm",
         "children": {
-          "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+          "WIRE-Expert自动化加工原理": {
             "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
             "children": {}
           },
-          "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "自动加工物体识别（特征识别）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "手动编辑对象检测（特征检测）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+          "创建角色+编辑特征": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
             "children": {}
           }
         }
       },
-      "Ausfallteil Sicherung programmieren": {
+      "对故障部件熔断器进行编程": {
         "url": "wirhlp10/Beispiel_Ausfallteil_Sicherung_Beispiel.htm",
         "children": {
-          "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+          "WIRE-Expert自动化加工原理": {
             "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
             "children": {}
           },
-          "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "自动加工物体识别（特征识别）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "手动编辑对象检测（特征检测）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+          "创建角色+编辑特征": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
             "children": {}
           }
         }
       },
-      "WIRE-Expert (optional)": {
+      "WIRE 专家（可选）": {
         "url": "#",
         "children": {
-          "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+          "WIRE-Expert自动化加工原理": {
             "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
             "children": {}
           },
-          "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "自动加工物体识别（特征识别）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+          "手动编辑对象检测（特征检测）": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
             "children": {}
           },
-          "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+          "创建角色+编辑特征": {
             "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
             "children": {}
           }
         }
       },
-      "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+      "WIRE-Expert自动化加工原理": {
         "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
         "children": {}
       },
-      "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+      "自动加工物体识别（特征识别）": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
         "children": {}
       },
-      "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+      "手动编辑对象检测（特征检测）": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
         "children": {}
       },
-      "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+      "创建角色+编辑特征": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
         "children": {}
       }
     }
   },
-  "Zylindrischen Schnitt(e) erodieren": {
+  "侵蚀圆柱形切口。": {
     "url": "wirhlp10/Beispiel_Zylindrischen_Schnitt_programmieren.htm",
     "children": {
-      "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+      "WIRE-Expert自动化加工原理": {
         "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
         "children": {}
       },
-      "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+      "自动加工物体识别（特征识别）": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
         "children": {}
       },
-      "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+      "手动编辑对象检测（特征检测）": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
         "children": {}
       },
-      "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+      "创建角色+编辑特征": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
         "children": {}
       }
     }
   },
-  "Umlaufend gleiche Konik erodieren": {
+  "周围都有相同的锥度侵蚀": {
     "url": "wirhlp10/Beispiel_Umlaufend_gleiche_Konik_programmieren.htm",
     "children": {
-      "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+      "WIRE-Expert自动化加工原理": {
         "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
         "children": {}
       },
-      "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+      "自动加工物体识别（特征识别）": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
         "children": {}
       },
-      "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+      "手动编辑对象检测（特征检测）": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
         "children": {}
       },
-      "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+      "创建角色+编辑特征": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
         "children": {}
       }
     }
   },
-  "Bundbearbeitung programmieren": {
+  "程序线圈加工": {
     "url": "wirhlp10/Beispiel_Bundbearbeitung_programmieren.htm",
     "children": {
-      "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+      "WIRE-Expert自动化加工原理": {
         "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
         "children": {}
       },
-      "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+      "自动加工物体识别（特征识别）": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
         "children": {}
       },
-      "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+      "手动编辑对象检测（特征检测）": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
         "children": {}
       },
-      "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+      "创建角色+编辑特征": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
         "children": {}
       }
     }
   },
-  "Variable Konik erodieren": {
+  "可变锥度侵蚀": {
     "url": "wirhlp10/Beispiel_Variable_Konik_programmieren.htm",
     "children": {
-      "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+      "WIRE-Expert自动化加工原理": {
         "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
         "children": {}
       },
-      "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+      "自动加工物体识别（特征识别）": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
         "children": {}
       },
-      "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+      "手动编辑对象检测（特征检测）": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
         "children": {}
       },
-      "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+      "创建角色+编辑特征": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
         "children": {}
       }
     }
   },
-  "Taschenerodieren (Zerst\u00f6rschnitt) programmieren": {
+  "编程型腔腐蚀（破坏性切削）。": {
     "url": "wirhlp10/Beispiel_Taschenerodieren_programmieren.htm",
     "children": {
-      "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+      "WIRE-Expert自动化加工原理": {
         "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
         "children": {}
       },
-      "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+      "自动加工物体识别（特征识别）": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
         "children": {}
       },
-      "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+      "手动编辑对象检测（特征检测）": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
         "children": {}
       },
-      "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+      "创建角色+编辑特征": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
         "children": {}
       }
     }
   },
-  "Schr\u00e4gschieber erodieren": {
+  "斜滑道侵蚀": {
     "url": "wirhlp10/Beispiel_Schraegschieber_programmieren.htm",
     "children": {
-      "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+      "WIRE-Expert自动化加工原理": {
         "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
         "children": {}
       },
-      "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+      "自动加工物体识别（特征识别）": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
         "children": {}
       },
-      "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+      "手动编辑对象检测（特征检测）": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
         "children": {}
       },
-      "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+      "创建角色+编辑特征": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
         "children": {}
       }
     }
   },
-  "Regelfl\u00e4che ohne Synchronisationslinien erodieren": {
+  "腐蚀直纹面，无需同步线": {
     "url": "wirhlp10/Beispiel_Regelflaeche_ohne_Synchronisationslinien_erodieren.htm",
     "children": {
-      "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+      "WIRE-Expert自动化加工原理": {
         "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
         "children": {}
       },
-      "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+      "自动加工物体识别（特征识别）": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
         "children": {}
       },
-      "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+      "手动编辑对象检测（特征检测）": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
         "children": {}
       },
-      "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+      "创建角色+编辑特征": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
         "children": {}
       }
     }
   },
-  "Regelfl\u00e4che mit Synchronisationslinien erodieren": {
+  "用同步线侵蚀直纹面": {
     "url": "wirhlp10/Beispiel_Regelflaeche_mit_Synchronisationslinien_erodieren.htm",
     "children": {
-      "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+      "WIRE-Expert自动化加工原理": {
         "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
         "children": {}
       },
-      "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+      "自动加工物体识别（特征识别）": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
         "children": {}
       },
-      "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+      "手动编辑对象检测（特征检测）": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
         "children": {}
       },
-      "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+      "创建角色+编辑特征": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
         "children": {}
       }
     }
   },
-  "Regelfl\u00e4che mit variablen H\u00f6henprofil erodieren": {
+  "具有可变高度轮廓的侵蚀受控表面": {
     "url": "wirhlp9/Beispiel_Variables_Hoehenprofil_erodieren.htm#642b3b9347ca42c9b00b820c00c373fa=1",
     "children": {
-      "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+      "WIRE-Expert自动化加工原理": {
         "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
         "children": {}
       },
-      "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+      "自动加工物体识别（特征识别）": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
         "children": {}
       },
-      "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+      "手动编辑对象检测（特征检测）": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
         "children": {}
       },
-      "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+      "创建角色+编辑特征": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
         "children": {}
       }
     }
   },
-  "Regelfl\u00e4che 4 Achsig Ausr\u00e4umen": {
+  "清除控制面4轴": {
     "url": "wirhlp10/Beispiel_4_Achs_Ausraeumen.htm",
     "children": {
-      "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+      "WIRE-Expert自动化加工原理": {
         "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
         "children": {}
       },
-      "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+      "自动加工物体识别（特征识别）": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
         "children": {}
       },
-      "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+      "手动编辑对象检测（特征检测）": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
         "children": {}
       },
-      "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+      "创建角色+编辑特征": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
         "children": {}
       }
     }
   },
-  "Bearbeitungen durch Schnittschemen automatisieren": {
+  "使用剪切方案自动编辑": {
     "url": "wirhlp10/Beispiel_Erodierbearbeitungen_durch_Schnittschemen_automatisieren.htm",
     "children": {
-      "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+      "WIRE-Expert自动化加工原理": {
         "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
         "children": {}
       },
-      "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+      "自动加工物体识别（特征识别）": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
         "children": {}
       },
-      "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+      "手动编辑对象检测（特征检测）": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
         "children": {}
       },
-      "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+      "创建角色+编辑特征": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
         "children": {}
       }
     }
   },
-  "Ausfallteil Sicherung programmieren": {
+  "对故障部件熔断器进行编程": {
     "url": "wirhlp10/Beispiel_Ausfallteil_Sicherung_Beispiel.htm",
     "children": {
-      "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+      "WIRE-Expert自动化加工原理": {
         "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
         "children": {}
       },
-      "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+      "自动加工物体识别（特征识别）": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
         "children": {}
       },
-      "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+      "手动编辑对象检测（特征检测）": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
         "children": {}
       },
-      "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+      "创建角色+编辑特征": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
         "children": {}
       }
     }
   },
-  "WIRE-Expert (optional)": {
+  "WIRE 专家（可选）": {
     "url": "#",
     "children": {
-      "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+      "WIRE-Expert自动化加工原理": {
         "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
         "children": {}
       },
-      "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+      "自动加工物体识别（特征识别）": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
         "children": {}
       },
-      "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+      "手动编辑对象检测（特征检测）": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
         "children": {}
       },
-      "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
+      "创建角色+编辑特征": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
         "children": {}
       }
     }
   },
-  "WIRE-Expert Prinzip der automatisierten Bearbeitung": {
+  "WIRE-Expert自动化加工原理": {
     "url": "WIRE_Expert_FeatureManager/Beispiel_Prinzip_der_automatisierten_Bearbeitung_mit_WIRE_Expert.htm",
     "children": {}
   },
-  "Automatische Bearbeitungsobjekterkennung (Featureerkennung)": {
+  "自动加工物体识别（特征识别）": {
     "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
     "children": {}
   },
-  "Manuelle Bearbeitungsobjekterkennung (Featureerkennung)": {
+  "手动编辑对象检测（特征检测）": {
     "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm",
     "children": {}
   },
-  "Figuren + Bearbeitungen von Bearbeitungsobjekten erzeugen": {
-    "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm",
+  "创建角色+编辑特征": {
+    "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm#642b3b9347ca42c9b00b820c00c373fa=1",
     "children": {}
   },
-  "WIRE-Expert - Automatische Featureerkennung": {
+  "WIRE-Expert - 自动特征检测": {
     "url": "#",
     "children": {
-      "Automatische Feature-Erkennung": {
+      "自动特征检测": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm#642b3b9347ca42c9b00b820c00c373fa=1",
         "children": {}
       },
-      "Manuelle Feature-Erkennung": {
+      "手动特征检测": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm#642b3b9347ca42c9b00b820c00c373fa=1",
         "children": {}
       },
-      "Erzeuge Figuren + Bearbeitungen von Features": {
+      "创建角色+编辑特征": {
         "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm#642b3b9347ca42c9b00b820c00c373fa=1",
         "children": {}
       },
-      "WIRE-Expert FeatureManager": {
+      "WIRE-Expert 特征管理器": {
         "url": "WIRE_Expert_FeatureManager/WIRE_Expert_FeatureManager.htm#642b3b9347ca42c9b00b820c00c373fa=1",
         "children": {}
       },
-      "WIRE-Expert FeatureManager - Optionen der rechten Maustaste": {
+      "WIRE-Expert 特征管理器 - 右键单击​​选项": {
         "url": "WIRE_ExpertRH_context_Menu/OPTICAM_FeatureManager_Optionen_der_rechten_Maustaste.htm",
         "children": {}
       }
     }
   },
-  "Automatische Feature-Erkennung": {
+  "自动特征检测": {
     "url": "WIRE_ExpertRH_context_Menu/Beispiel_Automatische_Bearbeitungsobjekterkennung_Featureerkennung_.htm#642b3b9347ca42c9b00b820c00c373fa=1",
     "children": {}
   },
-  "Manuelle Feature-Erkennung": {
+  "手动特征检测": {
     "url": "WIRE_ExpertRH_context_Menu/Beispiel_Manuelle_Bearbeitungsobjekterkennung_Featureerkennung_.htm#642b3b9347ca42c9b00b820c00c373fa=1",
     "children": {}
   },
-  "Erzeuge Figuren + Bearbeitungen von Features": {
-    "url": "WIRE_ExpertRH_context_Menu/Beispiel_Figuren_und_Bearbeitungen_von_Bearbeitungsobjekten_erzeugen.htm#642b3b9347ca42c9b00b820c00c373fa=1",
-    "children": {}
-  },
-  "WIRE-Expert FeatureManager": {
+  "WIRE-Expert 特征管理器": {
     "url": "WIRE_Expert_FeatureManager/WIRE_Expert_FeatureManager.htm#642b3b9347ca42c9b00b820c00c373fa=1",
     "children": {}
   },
-  "WIRE-Expert FeatureManager - Optionen der rechten Maustaste": {
+  "WIRE-Expert 特征管理器 - 右键单击​​选项": {
     "url": "WIRE_ExpertRH_context_Menu/OPTICAM_FeatureManager_Optionen_der_rechten_Maustaste.htm",
     "children": {}
   },
-  "Operationsmanager bedienen": {
+  "运营运营经理": {
     "url": "#",
     "children": {
-      "Neue Bearbeitungsoperation erzeugen": {
+      "创建新的加工操作": {
         "url": "Operationsmanager/Beispiel_Neue_Bearbeitungsoperation_erzeugen.htm",
         "children": {}
       },
-      "Bearbeitungsoperationen NACH einer vorhandenen Operation einf\u00fcgen": {
+      "在现有操作之后插入编辑操作": {
         "url": "Operationsmanager/Beispiel_Bearbeitungsoperationen_NACH_einer_vorhandenen_Operation_einfuegen.htm",
         "children": {}
       },
-      "Vorhandene Bearbeitungsoperation \u00e4ndern": {
+      "修改现有加工操作": {
         "url": "Operationsmanager/Beispiel_Vorhandene_Bearbeitungsoperation_aendern.htm",
         "children": {}
       },
-      "Bearbeitungsoperation kopieren": {
+      "仿形加工操作": {
         "url": "Operationsmanager/Beispiel_Bearbeitungsoperation_kopieren.htm",
         "children": {}
       },
-      "Vorhandene Bearbeitungsoperationen deaktivieren/aktivieren": {
+      "禁用/启用现有编辑操作": {
         "url": "Operationsmanager/Beispiel_Vorhandene_Bearbeitungsoperationen_deaktivieren_aktivieren.htm",
         "children": {}
       },
-      "Reihenfolge der Bearbeitungsoperationen \u00e4ndern": {
+      "更改加工操作顺序": {
         "url": "Operationsmanager/Beispiel_Reihenfolge_der_Bearbeitungsoperationen_aendern.htm",
         "children": {}
       },
-      "Vorhandene Bearbeitungsoperation(en) l\u00f6schen": {
+      "删除现有的加工操作。": {
         "url": "Operationsmanager/Beispiel_Vorhandene_Bearbeitungsoperation_en_loeschen.htm",
         "children": {}
       }
     }
   },
-  "Neue Bearbeitungsoperation erzeugen": {
+  "创建新的加工操作": {
     "url": "Operationsmanager/Beispiel_Neue_Bearbeitungsoperation_erzeugen.htm",
     "children": {}
   },
-  "Bearbeitungsoperationen NACH einer vorhandenen Operation einf\u00fcgen": {
+  "在现有操作之后插入编辑操作": {
     "url": "Operationsmanager/Beispiel_Bearbeitungsoperationen_NACH_einer_vorhandenen_Operation_einfuegen.htm",
     "children": {}
   },
-  "Vorhandene Bearbeitungsoperation \u00e4ndern": {
+  "修改现有加工操作": {
     "url": "Operationsmanager/Beispiel_Vorhandene_Bearbeitungsoperation_aendern.htm",
     "children": {}
   },
-  "Bearbeitungsoperation kopieren": {
+  "仿形加工操作": {
     "url": "Operationsmanager/Beispiel_Bearbeitungsoperation_kopieren.htm",
     "children": {}
   },
-  "Vorhandene Bearbeitungsoperationen deaktivieren/aktivieren": {
+  "禁用/启用现有编辑操作": {
     "url": "Operationsmanager/Beispiel_Vorhandene_Bearbeitungsoperationen_deaktivieren_aktivieren.htm",
     "children": {}
   },
-  "Reihenfolge der Bearbeitungsoperationen \u00e4ndern": {
+  "更改加工操作顺序": {
     "url": "Operationsmanager/Beispiel_Reihenfolge_der_Bearbeitungsoperationen_aendern.htm",
     "children": {}
   },
-  "Vorhandene Bearbeitungsoperation(en) l\u00f6schen": {
+  "删除现有的加工操作。": {
     "url": "Operationsmanager/Beispiel_Vorhandene_Bearbeitungsoperation_en_loeschen.htm",
     "children": {}
   },
-  "Filmbeispiele - Drahterodieren": {
+  "薄膜示例 - 线切割放电加工": {
     "url": "#",
     "children": {
-      "Bearbeitungsfigur erzeugen geschlossen": {
+      "创建加工图形关闭": {
         "url": "Videos/Video__Bearbeitungsfigur_erzeugen_geschlossen_V8.htm",
         "children": {}
       },
-      "Bearbeitungsfigur - Startposition \u00e4ndern": {
+      "编辑图形 - 更改起始位置": {
         "url": "Videos/Video__Bearbeitungsfigur_Startposition_aendern_V8.htm",
         "children": {}
       },
-      "Konturbearbeitung": {
+      "轮廓加工": {
         "url": "Videos/Video__Konturbearbeitung_V8.htm",
         "children": {}
       },
-      "Taschenerodieren": {
+      "口袋侵蚀": {
         "url": "Videos/Video__Taschenerodieren_V8.htm",
         "children": {}
       },
-      "Synchronisationslinien f\u00fcr Regelfl\u00e4che erzeugen": {
+      "为直纹曲面生成同步线": {
         "url": "Videos/Video__Synchronisationslinien_fuer_Regelflaeche_erzeugen_V8.htm",
         "children": {}
       },
-      "Regelfl\u00e4che ohne Synchronisationslinien": {
+      "无同步线的直纹面": {
         "url": "Videos/Video__Regelflaeche_ohne_Synchronisationslinien_V8.htm",
         "children": {}
       },
-      "Strategien zum Entfernen der Anbindungen": {
+      "移除绑定的策略": {
         "url": "wirhlp10/Video_Strategien_zum_Entfernen_der_Anbindungen.htm",
         "children": {}
       }
     }
   },
-  "Bearbeitungsfigur erzeugen geschlossen": {
+  "创建加工图形关闭": {
     "url": "Videos/Video__Bearbeitungsfigur_erzeugen_geschlossen_V8.htm",
     "children": {}
   },
-  "Bearbeitungsfigur - Startposition \u00e4ndern": {
+  "编辑图形 - 更改起始位置": {
     "url": "Videos/Video__Bearbeitungsfigur_Startposition_aendern_V8.htm",
     "children": {}
   },
-  "Konturbearbeitung": {
+  "轮廓加工": {
     "url": "Videos/Video__Konturbearbeitung_V8.htm",
     "children": {}
   },
-  "Taschenerodieren": {
+  "口袋侵蚀": {
     "url": "Videos/Video__Taschenerodieren_V8.htm",
     "children": {}
   },
-  "Synchronisationslinien f\u00fcr Regelfl\u00e4che erzeugen": {
+  "为直纹曲面生成同步线": {
     "url": "Videos/Video__Synchronisationslinien_fuer_Regelflaeche_erzeugen_V8.htm",
     "children": {}
   },
-  "Regelfl\u00e4che ohne Synchronisationslinien": {
+  "无同步线的直纹面": {
     "url": "Videos/Video__Regelflaeche_ohne_Synchronisationslinien_V8.htm",
     "children": {}
   },
-  "Strategien zum Entfernen der Anbindungen": {
+  "移除绑定的策略": {
     "url": "wirhlp10/Video_Strategien_zum_Entfernen_der_Anbindungen.htm",
     "children": {}
   }

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,61 +35,871 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Synchronisationslinien" %}</p><p>{% trans "Der Befehl #[Regelflächenbearbeitung]# im Menü [Bearbeitung] hat den Zweck, eine 4-Achsenbearbeitung zwischen zwei Bearbeitungsfiguren auszuführen, wobei die eine Figur die untere und die andere die obere Form bildet." %}</p><p>{% trans "Wenn die zwei die Regelfläche bildenden Figuren symmetrisch, mit einer identischen Anzahl von Geometrieelementen sind, so ist die Regelfläche welche PEPS automatisch erzeugt, für viele Anwendungen ausreichend." %}</p>
-<p>{% trans "Bei nicht symmetrischen Regelflächen, deren obere und untere Figuren sich deutlich unterscheiden, kann der Anwender eingreifen, um die Regelfläche in die gewünschte Form zu bringen." %}</p>
-<p class="Block_Text">{% trans "Die folgende Zeichnung zeigt zwei einfache Figuren, welche obwohl sie symmetrisch sind, zwei völlig unterschiedliche Regelflächen bilden können." %}</p>
-<p class="Block_Text">{% trans "Die Figuren können so miteinander verbunden werden, dass sich entweder konische oder zylindrische Ecken bilden." %}</p>
-<p class="Block_Text">{% trans "In solchen Fällen bietet PEPS die Möglichkeit, die wichtigsten Verbindungspunkte zwischen 2 Figuren eindeutig festzulegen - diese Verbindung nennt man Synchronisation oder auch Synchronisationslinie." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../KUR1.gif" alt="KUR1.gif" width="576" height="310" border="0"/></p>
-<p class="hcp2"> </p>
-<h2 style="margin-top: 4.00pt; margin-bottom: 0.00pt;">{% trans "So wird es gemacht" %}</h2>
-<p>{% trans "#[Synchronisationslinien erzeugen]#" %}</p>
-<p>{% trans "@ #[Zeige Beispielfilm zum o.g. Thema]#" %}</p>
-<p style="font-weight: bold;">{% trans "#Vorhandene Synchronisationslinien editieren#" %}</p>
-<p> </p>
-<p>{% trans "Synchronisationslinien werden immer dann angewendet, wenn die automatische Synchronisation des Systems nicht den Wünschen des Anwenders entspricht und dieser an ganz bestimmten Stellen Verbindungspunkte zwischen den 2 Regelflächengeometrien definieren möchte." %}</p>
-<p>{% trans "Synchronisationslinien können entweder in der XY-Ebene ([2D-Synchronisation]) oder zwischen zwei Figuren, von denen eine Figur in Z auf die korrekte Z-Höhe verschoben wurde [(3D-Synchronisation]), bestimmt werden." %}</p>
-<p>{% trans "Bei der [3D-Synchronisation] werden die Synchronisationslinien von einer Figur zu der anderen gezeichnet, wobei die Fangfunktionen [Endpunkt], [Schnittpunkt], [Mitte von] [Zentrum], [Quadrant] und [Lot] Verwendung finden." %}</p>
-<p>{% trans "[2D-Synchronisationslinien] dürfen auch über die Figur(en) hinausgehen, so dass auch ungefähre Punktpositionen mit der Fangfunktion [Koordinaten] digitalisiert werden können." %}</p>
-<p>{% trans "Natürlich werden bei einer [2D-Synchronisation] auch die anderen Fangfunktionen [Endpunkt], [Schnittpunkt], [Mitte von], [Zentrum], [Quadrant] und [Lot] verwendet." %}</p>
-<p>{% trans "Die Methode [3D-Synchronisation] erlaubt die Synchronisation von sehr komplexen Formen mit Hinterschnitten, welche mit einer [2D-Synchronisation] nicht synchronisiert werden können." %}</p>
-<p class="hcp2"> </p>
-<p class="Hinweis">{% trans "Wichtiger Hinweis:" %}</p>
-<p>{% trans "[Es ist zu vermeiden, dass der Draht in einer Ebene (z.B. obere) keine Bewegung ausführt, während er sich in der anderen Ebene (z.B. untere) bewegt. Aus diesem Grunde dürfen 2 Synchronisationslinien sich niemals schneiden oder berühren.]" %}</p>
-<p class="hcp2"> </p>
-<p>{% trans "Bei der Konstruktion von Synchronisationslinien ist es ratsam die Fangfunktion [Koordinaten] zu verwenden, wenn die Fangfunktionen [Endpunkt], [Schnittpunkt], [Zentrum], [Quadrant] und [Lot] auf keiner der beiden Figuren angewendet werden können." %}</p>
-<p>{% trans "Die Funktion [Koordinaten] erlaubt es, einen beliebigen Punkt in der Nähe des Start/Endpunktes einer Synchronisationslinie zu digitalisieren. Die Synchronisationslinie wird bei dieser Vorgehensweise automatisch getrimmt." %}</p>
-<p>{% trans "Für den unwahrscheinlichen Fall, dass mit keiner der oben geschilderten Methoden Synchronisationslinien erzeugt werden können, ist es möglich die Bearbeitungsfigur mit dem Befehl [Figur editieren] in Linien/Bogenelemente umzuwandeln." %}</p>
-<p>{% trans "Anschließend werden die Linien/Bogenelemente an den relevanten Stellen aufgebrochen (Siehe Befehl [Aufbrechen])." %}</p>
-<p>{% trans "Verwandeln Sie anschließend die Linien/Bogenelemente mit dem Befehl [Figur editieren Ende] zurück in die Bearbeitungsfigur und setzen Sie die Synchronisationslinien mit der Fangfunktion [Endpunkt] auf die Bruchpunkte." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../CONSTR2.gif" alt="CONSTR2.gif" width="346" height="275" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Die obige Zeichnung zeigt zwei nicht symmetrische Figuren, von denen die äußere Figur mehr Geometrieelemente hat als die innere. Mit dem Befehl [Synchronisationslinien] wurden 7 Synchronisationslinien gezeichnet. 2 mit der Fangfunktion [Lot], 2 mit [Koordinaten] und die anderen 3 mit der Funktion [Endpunkt]. Die folgende Zeichnung zeigt die fertige Regelfläche." %}</p>
-<p><img src="../CONSTR3.gif" alt="CONSTR3.gif" width="429" height="407" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Die folgende Zeichnung zeigt einen Teil einer Extrusionsmatrize, die aus zwei Bearbeitungsfiguren besteht. Die äußere Figur bildet die Eintrittsöffnung der Matrize, die innere Figur die Austrittsöffnung." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../DEMOW3.gif" alt="DEMOW3.gif" width="576" height="401" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Es ist deutlich sichtbar, dass die äußere Figur weniger Geometrieelemente aufweist als die innere Figur. Die Zeichnung zeigt ebenfalls die Synchronisationslinien." %}</p>
-<p>{% trans "Ohne die Synchronisationslinien hätte die Matrize nicht geschnitten werden können." %}</p>
-<p>{% trans "Nach der Wahl des Befehl [Synchronisationslinien] stehen drei Optionen (siehe [rechte Maustaste] od. [horizontale Ikonenleiste]) zur Verfügung: #[Kopieren + Verschieben]# , #[Kopieren + Rotieren]# und #[Spiegeln]# . Die Optionen finden bei symmetrischen Formen Verwendung, die das Kopieren von vorhandenen Synchronisationslinien erlauben." %}</p>
-<p>{% trans "Beachten Sie auch die Option #[Löschen]# , diese ermöglicht das Löschen fehlerhafter Synchronisationslinien." %}</p>
-<p class="hcp2"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp2"> </p>
-<p><img src="../BUTT_SYN_shg.gif" usemap="#AreaMap0" alt="BUTT_SYN_shg.gif" width="274" height="198" border="0"/> <map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="0,88,211,104" href="javascript:BSSCPopup('KopTra_Synchronisationslinien.htm');" id="area1" alt=""/>
-<area shape="rect" coords="0,110,211,127" href="javascript:BSSCPopup('KopRot_Synchronisationslinien.htm');" id="area2" alt=""/>
-<area shape="rect" coords="0,131,211,146" href="javascript:BSSCPopup('Spiegeln_Synchronisationslinien.htm');" id="area3" alt=""/>
-<area shape="rect" coords="0,68,211,84" href="javascript:BSSCPopup('Loesche_Synchronisationslinien.htm');" id="area4" alt=""/>
-<area shape="rect" coords="1,23,122,42" href="javascript:BSSCPopup('../CommonHelp3/Neuzei_Offset_erzeugen.htm');" id="area5" alt=""/>
-<area shape="rect" coords="1,44,110,66" href="javascript:BSSCPopup('../CommonHelp3/Rueckg_Klinkung.htm');" id="area6" alt=""/>
-<area shape="rect" coords="1, 149, 191, 167" href="Waehle_Synchronisations_Optionen_Synchronisationslinien.htm" alt=""/></map></p>
-<script type="text/javascript" language="JavaScript1.2">
-//&lt;![CDATA[
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <img alt="规则cons.gif" border="0" height="27" src="../rulecons.gif" width="28"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    同步线
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     加工
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    菜单中的
+   </font>
+  </font>
+  <a href="../wirhlp10/Regelflaechenbearbeitung____.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      直纹曲面加工
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令
+   </font>
+   <font style="vertical-align: inherit;">
+    的目的是在两个加工图形之间执行 4 轴加工，一个图形形成下部形状，另一个图形形成上部形状。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果形成直纹面的两个图形是对称的，并且具有相同数量的几何元素，则 PEPS 自动生成的直纹面足以满足许多应用。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对于非对称直纹面，其上下图形差异很大，用户可以进行干预，使直纹面变成所需的形状。
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图显示了两个简单的图形，它们虽然对称，但却可以形成两个完全不同的直纹面。
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这些图形可以相互连接以形成圆锥形或圆柱形角。
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在这种情况下，PEPS 提供了明确定义两个图形之间最重要的连接点的可能性 - 这种连接称为同步或同步线。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="KUR1.gif" border="0" height="310" src="../KUR1.gif" width="576"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <h2 style="margin-top: 4.00pt; margin-bottom: 0.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    就是这样完成的
+   </font>
+  </font>
+ </h2>
+ <p>
+  <a href="Beispiel_Synchronisationslinien_erzeugen.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      创建同步线
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+  <img alt="电影.gif" border="0" height="27" src="../MOVIE.gif" width="27"/>
+  <a href="../Videos/Video__Synchronisationslinien_fuer_Regelflaeche_erzeugen_V8.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      播放有关上述主题的示例影片
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+ <p style="font-weight: bold;">
+  <a href="Beispiel_Vorhandene_Synchronisationslinien_editieren.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     编辑现有同步线
+    </font>
+   </font>
+  </a>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    当系统的自动同步不符合用户的意愿并且他想要在非常特定的点处定义2个直纹表面几何形状之间的连接点时，总是使用同步线。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     同步线可以在 XY 平面（ 2D 同步
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ）或两个图形之间确定
+   </font>
+   <font style="vertical-align: inherit;">
+    ，其中一个图形已在 Z 轴上移动到正确的 Z 高度
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     （3D 同步
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     3D 同步
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    中，使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     端点
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     交点
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     中心点
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     象限
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     垂直
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     捕捉
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    将同步线从一个图形绘制到另一图形。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     2D 同步线
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    也可能延伸到图形之外，因此
+   </font>
+   <font style="vertical-align: inherit;">
+    也可以使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     坐标捕捉功能将近似点位置数字化。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     当然，其他捕捉函数Endpoint
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     Intersection
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     Center of
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     Center
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     Quadrant
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     Perpendillary
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    也用于
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     2D
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    同步
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     3D 同步
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    方法
+   </font>
+   <font style="vertical-align: inherit;">
+    允许同步具有底切的非常复杂的形状，而这
+   </font>
+   <font style="vertical-align: inherit;">
+    无法与
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     2D 同步同步。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    重要的提示：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     重要的是要避免导线不在一个平面（例如上平面）移动而在另一平面（例如下平面）移动。
+    </font>
+    <font style="vertical-align: inherit;">
+     因此，两条同步线绝不能相交或接触。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     构造同步线时，如果端点
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     交点
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     中心
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     象限
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     垂直
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    捕捉函数不能应用于任一图形，
+   </font>
+   <font style="vertical-align: inherit;">
+    建议
+   </font>
+   <font style="vertical-align: inherit;">
+    使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     坐标捕捉函数。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    坐标功能允许您
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     对
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    同步线起点/终点附近的任何点进行数字化。
+   </font>
+   <font style="vertical-align: inherit;">
+    通过此过程自动修剪同步线。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    万一无法使用上述任何方法创建同步线，可以
+   </font>
+   <font style="vertical-align: inherit;">
+    使用“编辑图形”命令将
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     编辑图形转换为线/弧元素。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    然后，线/弧元素在相关点处被分解（请参阅
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “分解”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    然后使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “编辑图形结束”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令将线/弧元素转换回编辑图形，并使用“
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     端点
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    捕捉”功能将同步线设置为断点。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="CONSTR2.gif" border="0" height="275" src="../CONSTR2.gif" width="346"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    上图显示了两个不对称的图形，其中外部图形比内部图形具有更多的几何元素。
+   </font>
+   <font style="vertical-align: inherit;">
+    使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     同步线
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令，绘制了 7 条同步线。
+   </font>
+   <font style="vertical-align: inherit;">
+    2 个具有
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     批次
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    捕捉功能，2 个具有
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     坐标功能
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，另外 3 个具有
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     终点
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    功能。
+   </font>
+   <font style="vertical-align: inherit;">
+    下图显示了完成的直纹表面。
+   </font>
+  </font>
+ </p>
+ <p>
+  <img alt="CONSTR3.gif" border="0" height="407" src="../CONSTR3.gif" width="429"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图显示了挤压模具的一部分，它由两个加工图组成。
+   </font>
+   <font style="vertical-align: inherit;">
+    外部图形形成模具的入口开口，内部图形形成出口开口。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="DEMOW3.gif" border="0" height="401" src="../DEMOW3.gif" width="576"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    可以清楚地看到，外部图形的几何元素比内部图形少。
+   </font>
+   <font style="vertical-align: inherit;">
+    该图还显示了同步线。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果没有同步线，就无法切割模具。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选择
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “同步线”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令后，可以使用
+   </font>
+   <font style="vertical-align: inherit;">
+    三个选项（请参见
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     鼠标右键
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     水平图标栏）：
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('KopRot_Synchronisationslinien.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      “复制+移动
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ” 、
+   </font>
+  </font>
+  <a class="BSSCPopup" href="javascript:void(0);" id="a2" onclick="BSSCPopup('KopRot_Synchronisationslinien.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      “复制+旋转”
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <a class="BSSCPopup" href="javascript:void(0);" id="a3" onclick="BSSCPopup('Spiegeln_Synchronisationslinien.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      “镜像”
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+   <font style="vertical-align: inherit;">
+    这些选项用于允许复制现有同步线的对称形状。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    另请注意
+   </font>
+  </font>
+  <a class="BSSCPopup" href="javascript:void(0);" id="a4" onclick="BSSCPopup('Loesche_Synchronisationslinien.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      “删除”
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项，这允许您删除不正确的同步行。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="BUTT_SYN_shg.gif" border="0" height="198" src="../BUTT_SYN_shg.gif" usemap="#AreaMap0" width="274"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="0,88,211,104" href="javascript:BSSCPopup('KopTra_Synchronisationslinien.htm');" id="area1" shape="rect"/>
+   <area alt="" coords="0,110,211,127" href="javascript:BSSCPopup('KopRot_Synchronisationslinien.htm');" id="area2" shape="rect"/>
+   <area alt="" coords="0,131,211,146" href="javascript:BSSCPopup('Spiegeln_Synchronisationslinien.htm');" id="area3" shape="rect"/>
+   <area alt="" coords="0,68,211,84" href="javascript:BSSCPopup('Loesche_Synchronisationslinien.htm');" id="area4" shape="rect"/>
+   <area alt="" coords="1,23,122,42" href="javascript:BSSCPopup('../CommonHelp3/Neuzei_Offset_erzeugen.htm');" id="area5" shape="rect"/>
+   <area alt="" coords="1,44,110,66" href="javascript:BSSCPopup('../CommonHelp3/Rueckg_Klinkung.htm');" id="area6" shape="rect"/>
+   <area alt="" coords="1, 149, 191, 167" href="Waehle_Synchronisations_Optionen_Synchronisationslinien.htm" shape="rect"/>
+  </map>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
         if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
         FilePopupInit('a1');
         FilePopupInit('a2');
@@ -102,8 +911,9 @@
         FilePopupInit('area4');
         FilePopupInit('area5');
         FilePopupInit('area6');
-//]]&gt;
-</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

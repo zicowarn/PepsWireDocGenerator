@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,12 +33,95 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Synchronisationslinien anpassen" %}</p><p>{% trans "Diese Option wird verwendet, wenn die Geometrie der oberen oder unteren Regelflächenebene geometrisch verändert wurde oder durch eine Transformation in der Z-Achse verschoben wurden und vorhandene Synchronisationslinien neu angepasst werden müssen." %}</p>
-<p> </p>
-<p>{% trans "[Beispiel]:" %}</p>
-<p>{% trans "Beide Ebenen einer Regelfläche wurden auf der XY-Ebene gezeichnet und mit Synchronisationslinien versehen." %}</p>
-<p>{% trans "Es stellt sich aber im Zuge der Arbeit heraus, dass die obere Ebene in der Z-Achse verschoben werden muss, um komplexere Synchronisationslinien in 3D zu zeichnen." %}</p>
-<p>{% trans "Damit die in der XY-Ebene gezeichneten Synchronisationslinien nicht verloren gehen, wählt man die Option [Anpassen] (siehe [rechte Maustaste] od. [horizontale Ikonenleiste]), um die Synchronisationslinien anzupassen." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    调整同步线
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    当上或下直纹曲面平面的几何形状已通过 Z 轴变换进行几何更改或移动并且需要重新调整现有同步线时，使用此选项。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     例子
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    直纹面的两个平面均绘制在XY平面上，并设有同步线。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    然而，在工作过程中发现，为了在 3D 中绘制更复杂的同步线，上层必须在 Z 轴上移动。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    为了确保在 XY 平面上绘制的同步线不会丢失，请选择
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “调整”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项 
+ （请参见
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     鼠标右键
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     水平图标栏
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ）来调整同步线。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

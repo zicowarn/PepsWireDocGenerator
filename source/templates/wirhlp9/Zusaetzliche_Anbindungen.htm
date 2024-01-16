@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,32 +35,469 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Zusätzliche Anbindungen" %}</p><p>{% trans "Der Befehl [Zusätzliche] [Anbindungen] findet Anwendung, wenn an eine Bearbeitungsfigur [mehrere] [Haltestege] (Anbindungen) angebracht werden müssen." %}</p>
-<p>{% trans "Ein [einzelner Haltesteg] (Anbindung) wird mit der Funktion #[Stoppunkt od. Anbindung]# im Dialog #[Bearbeitung einstellen]# erzeugt." %}</p>
-<p>{% trans "Nach Aufruf des Befehls wird der Anwender aufgefordert, die Bearbeitungsfigur zu wählen, an der die Anbindungen (Haltestege) angebracht werden sollen." %}</p>
-<p>{% trans "Verwenden Sie anschließend die [Fangfunktionen], um die Positionen der Startlochbohrungen für die Anbindungen (Haltestege) festzulegen." %}</p>
-<p>{% trans "Die Länge des Haltestege wird zu diesem Zeitpunkt noch nicht bestimmt. Die Position der Startlochbohrung wird für jede Anbindung (Haltesteg) durch ein kleines blaues Quadrat symbolisiert." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../zus_anbi.gif" alt="zus_anbi.gif" width="360" height="232" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Die Länge der Anbindungen (Haltestege) wird im Dialog [Bearbeitung einstellen] im Register #[Anbinden]# festgelegt." %}</p>
-<p>{% trans "Aktivieren Sie dort die Checkbox #[Zusätzliche Anbindungen]#, um festzulegen, dass die zusätzlichen Anbindungen bei einer Bearbeitung berücksichtigt werden sollen." %}</p>
-<p>{% trans "Im Register [Anbinden] wird ebenfalls festgelegt, wann und auf welche Weise die Haltestege entfernt werden." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../Anbd_opt.gif" alt="Anbd_opt.gif" width="162" height="102" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Innerhalb des Befehls stehen drei Optionen zur Verfügung: [Steg kopieren + verschieben], [Steg kopieren + rotieren] und [Steg Spiegeln] (siehe [rechte Maustaste] od. [horizontale Ikonenleiste])." %}</p>
-<p>{% trans "Die Optionen finden bei symmetrischen Formen Verwendung, die das Kopieren von vorhandenen Haltestegsymbolen erlauben." %}</p>
-<p class="hcp2"> </p>
-<p><img src="../BUT_ZUA.gif" alt="BUT_ZUA.gif" width="267" height="176" border="0"/></p>
-<p class="hcp2"> </p>
-<p>{% trans "Beachten Sie auch die Option [Löschen] (siehe [rechte Maustaste] od. [horizontale Ikonenleiste]), diese ermöglicht das Löschen von fehlerhaften Haltestegsymbolen." %}</p>
-<p>{% trans "Zusätzliche Anbindungen (Haltestege) [sollten immer VOR] der Programmierung der Bearbeitungsstrategie bestimmt werden. Sie können diese aber [auch nachträglich] bestimmen." %}</p>
-<p>{% trans "Es ist im so einem Fall aber notwendig, die Bearbeitungsoperation mit dem Befehl #[Operation editieren]# zu editieren um die Länge der Anbindung zu bestimmen." %}</p>
-<p>{% trans "Falls das Drahtmodell der NC-Bearbeitung bei dem oben geschilderten Vorgang vom Bildschirm verschwindet, können Sie dieses mit den Befehl #[Grafik NC-Bearbeitung neu erzeugen]# erneut aufbauen." %}</p>
-<p class="hcp2"> </p>
-<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">{% trans "So wird es gemacht:" %}</p>
-<p>{% trans "#[Zusätzliche Anbindungen definieren]#" %}</p>
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; 
+	 border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <img alt="额外标签.gif" border="0" height="27" src="../extrtags.gif" width="29"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    附加连接
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     当需要将多个
+    </font>
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     固定杆
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    （连接）连接到加工图形
+   </font>
+   <font style="vertical-align: inherit;">
+    时，请使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “附加
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     连接”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <a href="../wirhlp10/Anbinden_Lasche.htm">
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      使用编辑设置
+     </font>
+    </font>
+   </a>
+   <font style="vertical-align: inherit;">
+    对话框 
+ 中的
+   </font>
+   <a href="../wirhlp10/Stoppunkt_oder_Anbindung.htm">
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      停止点或连接
+     </font>
+    </font>
+   </a>
+   <font style="vertical-align: inherit;">
+    功能创建单个停止栏（
+   </font>
+   <font style="vertical-align: inherit;">
+    连接
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     ）
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <a href="../wirhlp10/Stoppunkt_oder_Anbindung.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+  <a href="../wirhlp10/Anbinden_Lasche.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    调用该命令后，系统会要求用户选择应连接连接（支撑杆）的处理图形。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    然后使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     捕捉功能
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    确定连接（支撑杆）的起始孔的位置。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    目前，固定杆的长度尚未确定。
+   </font>
+   <font style="vertical-align: inherit;">
+    每个连接（固定杆）的起始孔位置由蓝色小方块表示。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="zus_暗笔.gif" border="0" height="232" src="../zus_anbi.gif" width="360"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <a href="../wirhlp10/Anbinden_Lasche.htm">
+    <font class="hcp1">
+     <font style="vertical-align: inherit;">
+      连接（支撑杆）的长度在“绑定”选项
+     </font>
+    </font>
+   </a>
+   <font style="vertical-align: inherit;">
+    卡的“设置
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     编辑”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框中指定
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <a href="../wirhlp10/Anbinden_Lasche.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    激活
+   </font>
+  </font>
+  <a href="../wirhlp10/Zusaetzliche_Anbindungen_in_Bearbeitung_dialog.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      附加连接
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    复选框以指定编辑时应考虑附加连接。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “绑定”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项卡
+   </font>
+   <font style="vertical-align: inherit;">
+    还决定何时以及如何移除固定杆。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="Anbd_opt.gif" border="0" height="102" src="../Anbd_opt.gif" width="162"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令中提供了三个选项：
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     复制 + 移动栏
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     复制栏 + 旋转
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     镜像栏
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    （请参见
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     鼠标右键
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     水平图标栏
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这些选项用于允许复制现有条形符号的对称形状。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="BUT_ZUA.gif" border="0" height="176" src="../BUT_ZUA.gif" width="267"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    另请注意
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “删除”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项 
+ （请参阅
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     鼠标右键
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     水平图标栏
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ），该选项允许您删除不正确的支撑栏符号。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在对加工策略进行编程之前，
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     应始终
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    确定附加连接（固定杆） 。
+   </font>
+   <font style="vertical-align: inherit;">
+    您
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     也可以稍后指定这些
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    然而，在这种情况下，需要使用编辑
+   </font>
+  </font>
+  <a href="../Operationsmanager/Operation_editieren____.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      操作
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令来编辑编辑操作，以确定连接的长度。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果在上述过程中 NC 加工线框从屏幕上消失，您可以使用“
+   </font>
+  </font>
+  <a href="../Simulation/Grafik_NC_Bearbeitung_neu_erzeugen.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      重新创建 NC 加工图形”
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令重建它。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    它是这样完成的：
+   </font>
+  </font>
+ </p>
+ <p>
+  <a href="Beispiel_Zusaetzliche_Anbindungen_definieren.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      定义附加连接
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

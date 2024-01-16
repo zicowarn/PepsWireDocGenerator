@@ -1,0 +1,29 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load rendermenu %}
+{% load linebreakless %}{% linebreakless %}
+<!--Head Title -->
+{% block headtitle %}
+    <TITLE>{% trans "Main Menu" %}</TITLE>
+{% endblock %}
+<!--/ Head Title -->
+<!-- Head CSS-->
+{% block headcss %}
+  <style title="hcp" type="text/css">
+  </style>
+{% endblock %}
+<!--/ Head CSS -->
+<!-- Head JavaScript -->
+{% block headjs %}
+    
+{% endblock %}
+<!--/ Head JavaScript -->
+{% block bodyshell %}
+  <body>
+    {% for message_tuple in messages %}
+      <p id="{{ message_tuple.0 }}">{{ message_tuple.1 }}</p>
+    {% endfor %}
+  </body>
+{% endblock %}
+{% endlinebreakless %}

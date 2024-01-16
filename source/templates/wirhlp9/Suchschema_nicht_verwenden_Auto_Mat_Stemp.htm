@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,13 +33,98 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "@Suchschema nicht verwenden" %}</p><p> </p>
-<p>{% trans "Ein Klick auf diese Ikone führt dazu, dass [kein] [Suchschema ausgeführt wird]. Die Funktion löscht den Eintrag des momentan aktiven Suchschemas." %}</p>
-<p> </p>
-<p><img src="../startloch_Such_Schema1.gif" alt="startloch_Such_Schema1.gif" width="315" height="25" align="left" border="0"/></p>
-<p> </p>
-<p> </p>
-<p>{% trans "Die Parameter [Startloch zentrieren] / [Einfahrabstand] und [Umfangs Parameter] sind aktiv und es werden Bearbeitungsfiguren ohne Berücksichtigung von Startlochgeometrien erzeugt." %}</p>
+ <p class="dialog">
+  <img align="left" alt="Search_Hole_ico_3.gif" border="0" height="22" src="../Search_Hole_ico_3.gif" width="27"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    不使用搜索方案
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    单击此图标将导致
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     不
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     执行任何搜索方案
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+   <font style="vertical-align: inherit;">
+    该函数删除当前活动搜索方案的条目。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p>
+  <img align="left" alt="startloch_Such_Schema1.gif" border="0" height="25" src="../startloch_Such_Schema1.gif" width="315"/>
+ </p>
+ <p>
+ </p>
+ <p>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    中心
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     起始孔
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    /
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     入口距离
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     周长参数
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    处于活动状态，并且在创建加工图形时不考虑起始孔几何形状。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

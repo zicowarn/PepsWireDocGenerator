@@ -1,6 +1,7 @@
 import os
 import re
 import time
+from hashlib import md5
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.chrome.options import Options
@@ -40,8 +41,284 @@ def checkout_template_translation(template_path=""):
         else:
             pass
     return False
+
+def generate_messages_records(message_path=""):
+    """massage_path, po file
+
+    message_file = os.path.join(settings.BASE_DIR, "locale", 'zh_hans', "LC_MESSAGES", "django.po")
+    Args:
+        message_path (str, optional): _description_. Defaults to "".
+
+    Returns:
+        _type_: _description_
+    """
+    if not os.path.exists(message_path):
+        return False
+    with open(message_path, "r", encoding="utf-8") as tm:
+        lines_file = tm.readlines()
+    msgid = ""
+    records = []
+    for ln in lines_file:
+        if 'msgid' in ln:
+            fixln = ln.replace('\n', '')
+            fixln = fixln.replace('msgid ', '')
+            fixln = fixln.lstrip('"')
+            fixln = fixln.rstrip('"')
+            if fixln == '""':
+                msgid = ""
+                continue
+            msgid = fixln
+        elif 'msgstr' in ln and msgid != "":
+            fixln = ln.replace('\n', '')
+            fixln = fixln.replace('msgstr ', '')
+            fixln = fixln.lstrip('"')
+            fixln = fixln.rstrip('"')
+            msgstr = fixln
+            md5_value = md5(msgid.encode('utf-8')).hexdigest()
+            md5l16 = md5_value[:16]  # 取前16位
+            records.append((md5l16, msgid, msgstr))
+            msgid = ""
+        else:
+            pass
+    with open("messages.records", "w", encoding='utf-8') as mr:
+        for sR in records:
+            mr.write(str(sR) + '\n')
+    return True
+
+def update_messages_pofile(message_path="", records_path=""):
+    """ massage_path, po file
+        records_path, messages.records file
+
+    message_file = os.path.join(settings.BASE_DIR, "locale", 'zh_hans', "LC_MESSAGES", "django.po")
+    Args:
+        message_path (str, optional): _description_. Defaults to "".
+        records_path (str, optional): _description_. Defaults to "".
+    Returns:
+        _type_: _description_
+    """
+    if not os.path.exists(message_path):
+        return False
+    if not os.path.exists(records_path):
+        return False
+    origin_records = []
+    with open(records_path, 'r', encoding='utf-8') as mr:
+        origin_records = mr.readlines()
+    if len(origin_records) == 0:
+        return False
+    updated_messages = {}
+    pattern = re.compile(r'[\u4e00-\u9fa5]')
+    for ln in origin_records:
+        fix_line = ln.rstrip('\n')
+        tuple_record = eval(fix_line)
+        if len(tuple_record) != 3:
+            continue
+        translated_id = tuple_record[0]
+        translated_msg = tuple_record[2]
+        if translated_msg != '' and bool(pattern.search(translated_msg)) == True:
+            updated_messages[translated_id] = translated_msg
+    if not updated_messages:
+        return False
+    with open(message_path, "r", encoding="utf-8") as tm:
+        lines_file = tm.readlines()
+    msgid = ""
+    update_lines = []
+    for ln in lines_file:
+        if 'msgid' in ln:
+            fixln = ln.replace('\n', '')
+            fixln = fixln.replace('msgid ', '')
+            fixln = fixln.lstrip('"')
+            fixln = fixln.rstrip('"')
+            if fixln == '""':
+                msgid = ""
+                continue
+            msgid = fixln
+            update_lines.append(ln)
+        elif 'msgstr' in ln and msgid != "":
+            fixln = ln.replace('\n', '')
+            fixln = fixln.replace('msgstr ', '')
+            fixln = fixln.lstrip('"')
+            fixln = fixln.rstrip('"')
+            msgstr = fixln
+            md5_value = md5(msgid.encode('utf-8')).hexdigest()
+            md5l16 = md5_value[:16]  # 取前16位
+            if md5l16 in updated_messages:
+                translated_message = updated_messages[md5l16]
+                new_line = f'msgstr "{translated_message}"\n'
+                update_lines.append(new_line)
+            else:
+                update_lines.append(ln)
+        else:
+            update_lines.append(ln)
+    with open(message_path, "w", encoding='utf-8') as mr:
+        mr.writelines(update_lines)
+    return True
+
+
+def translate_messages_records(msgrecords_path=""):
+    """完成po文件的翻译，从po文件得到要翻译的字符列表，
+    使用函数checkout_template_translation检查文件中body是否有% trans，确定该文件是否翻译。如果未翻译，则使用selenium加chrome打开，
+    文件。
+
+    Returns:
+        _type_: _description_
+    """
+    if os.path.exists(msgrecords_path) == False:
+        return False
+    
+    driver_infos = {"port": None, "session_id": None}
+    chrome_options = Options()
+    #options.add_argument("headless")
+    chrome_options.add_argument("--lang=zh-Hans")  # 将 "en-US" 替换为您想要的语言代码
+    # 添加选项，启用自动打开开发者工具
+    # chrome_options.add_argument("--auto-open-devtools-for-tabs")
+    chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
+    chrome_options.add_experimental_option("useAutomationExtension", False)
+
+    # 获取Templates文件列表
+    TEMPALTES_BASE_PATH = os.path.join(settings.BASE_DIR, "templates")
+    message_template = os.path.join(TEMPALTES_BASE_PATH, "messages.html")
+    
+    if os.path.exists(message_template) == False:
+        return False
+    
+    # 启动 Chrome 浏览器
+    chrome_service = ChromeService(executable_path="D:\\Eclipse-Works\\workspace\\PEPSWireDocGenerator\\extra\\chromedriver.exe")
+    driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
+    # 最大化窗口（全屏）
+    # driver.maximize_window()
+    driver_infos['port'] = driver.command_executor._url.split(':')[2]
+    print("# 驱动URL：" + driver.command_executor._url)
+    # 获取当前窗口的 session id
+    current_session_id = driver.session_id
+    driver_infos['session_id'] = current_session_id
+    print("# 驱动Session：" + current_session_id)
+    
+    chrome_windows = None
+    # 获取所有打开的窗口
+    for window in gw.getWindowsWithTitle("Google Chrome"):
+        # 切换到当前窗口
+        try:
+            window.activate()
+        except gw.PyGetWindowException:
+            pass
+        # 获取当前窗口的 session id
+        current_window_session_id = driver.session_id
+        # 如果 session id 匹配，将窗口添加到列表
+        if current_window_session_id == current_session_id:
+            chrome_windows = window
+            break
         
-def main():
+    # 获取所有打开的窗口
+    vscode_windows = None
+    windows = gw.getWindowsWithTitle("Visual Studio Code")
+    vscode_windows = windows[0]
+    
+    i_offset = 50
+    is_continue = True
+    is_reload = False
+    soup = None
+    while is_continue:
+        url_full = f"http://127.0.0.1:8000/messages.html?id={i_offset}"
+        try:
+            rts = driver.get(url_full)
+            # 获取页面源代码
+            page_source = driver.page_source
+            # 使用 BeautifulSoup 解析页面源代码
+            soup = BeautifulSoup(page_source, 'html.parser')
+            #
+            body_content = soup.body
+            size_p = soup.body.find_all('p')
+            #
+            if body_content.text == '404':
+                print("# 无页面内容，代码404 退出。")
+                break
+            elif len(size_p) == 0:
+                print("# 无页面内容，<p>长度0 退出。")
+                break
+            else:
+                pass
+        except:
+            input(">>> 程序错误，任意键退出")
+            #
+            break
+        time.sleep(1)
+        actions = ActionChains(driver)
+        # 等待页面中的某个元素出现，例如，这里等待一个 id 为 "myElement" 的元素
+        time.sleep(1)
+        # 鼠标右键菜单
+        # 如果找到 Chrome 窗口，则激活它
+        if chrome_windows:
+            try:
+                chrome_windows.activate()
+            except gw.PyGetWindowException:
+                pass
+        actions.context_click().perform()
+        time.sleep(1)
+        pyautogui.typewrite(['up', 'up', 'up'])
+        pyautogui.typewrite(['return'])
+        time.sleep(8)
+        #
+        print("# 执行操作 continue, 完成翻译执行操作，获取翻译的页面内容。")
+        # 获取页面源代码
+        page_source = driver.page_source
+        # 使用 BeautifulSoup 解析页面源代码
+        soup = BeautifulSoup(page_source, 'html.parser')
+        # 找到要删除的 div，假设要删除 id 为 "div2" 的 div
+        div_to_remove = soup.find('div', {'id': 'goog-gt-tt'})
+        if div_to_remove:
+            div_to_remove.decompose()
+        # 打印 <body> 内容
+        # 提取页面的 <body> 内容
+        body_content = soup.body
+        # 
+        list_p = body_content.find_all('p')
+        translated_records = {}
+        pattern = re.compile(r'[\u4e00-\u9fa5]')
+        for p_node in list_p:
+            node_id = p_node.get('id', '')
+            node_message = p_node.text
+            if node_id != '' and node_message != '' and bool(pattern.search(node_message)) == True:
+                translated_records[node_id] = node_message
+        if translated_records:
+            origin_records = []
+            tosave_records = []
+            b_records_updated = False
+            with open(msgrecords_path, 'r', encoding='utf-8') as mr:
+                origin_records = mr.readlines()
+            if len(origin_records) == 0:
+                pass
+            try:
+                for ln in origin_records:
+                    fix_line = ln.rstrip('\n')
+                    list_record = list(eval(fix_line))
+                    if len(list_record) != 3:
+                        continue
+                    msg_id = list_record[0]
+                    if msg_id in translated_records:
+                        list_record[2] = translated_records[msg_id]
+                    tosave_records.append(tuple(list_record))
+                b_records_updated = True
+            except Exception as e:
+                pass
+            if b_records_updated:
+                with open(msgrecords_path, "w", encoding='utf-8') as mr:
+                    for sR in tosave_records:
+                        mr.write(str(sR) + '\n')
+        time.sleep(5)
+    
+    # 关闭浏览器
+    driver.quit()
+
+    
+        
+def translate_templates_files():
+    """完成htm文件的翻译，从origin文件得到文件列表，在从templates找到对应的htm文件，
+    使用函数checkout_template_translation检查文件中body是否有% trans，确定该文件是否翻译。如果未翻译，则使用selenium加chrome打开，
+    文件。
+
+    Returns:
+        _type_: _description_
+    """
     driver_infos = {"port": None, "session_id": None}
     chrome_options = Options()
     #options.add_argument("headless")
@@ -158,7 +435,7 @@ def main():
             time.sleep(1)
             pyautogui.typewrite(['up', 'up', 'up'])
             pyautogui.typewrite(['return'])
-            time.sleep(15)
+            time.sleep(8)
         else:
             print("# 模板文件需要进行校验" + template_path)
             url_full = f"http://127.0.0.1:8000{relative_path}"
@@ -325,7 +602,14 @@ def main():
                 time.sleep(5)
     # 关闭浏览器
     driver.quit()
-    
+
+def main():
+    message_file = os.path.join(settings.BASE_DIR, "locale", 'zh_hans', "LC_MESSAGES", "django.po")
+    # generate_messages_records(message_file)
+    root_path, dummy_dir = os.path.split(settings.BASE_DIR)
+    message_records = os.path.join(root_path, 'messages.records')
+    # translate_messages_records(msgrecords_path=message_records)
+    update_messages_pofile(message_file, message_records)
     
 if __name__ == '__main__':
     main()

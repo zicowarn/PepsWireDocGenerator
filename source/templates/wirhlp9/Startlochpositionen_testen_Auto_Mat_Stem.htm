@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,8 +28,32 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "@Startlochpositionen testen" %}</p><p>{% trans "Zeigt Ihnen, welche Startlöcher das System finden würde, ohne jedoch Bearbeitungsfiguren zu erzeugen." %}</p>
-<p>{% trans "Nach Wahl der Ikone zieht man ein Auswahlfenster über die Geometrien. Anschließend kennzeichnet das System die Startlochpositionen durch blaue C-Punkte." %}</p>
+ <p class="dialog">
+  <img align="left" alt="Search_Hole_ico_2.gif" border="0" height="23" src="../Search_Hole_ico_2.gif" width="24"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    测试起始孔位置
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    显示系统会找到哪些起始块，但不创建处理图形。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选择图标后，将选择窗口拖动到几何图形上。
+   </font>
+   <font style="vertical-align: inherit;">
+    然后系统用蓝色 C 点标记起始孔位置。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

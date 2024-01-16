@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,25 +35,350 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <h1>{% trans "Radienmanipulation Dialogparameter" %}</h1><p> </p>
-<p class="dialog">{% trans "Figur(en)" %}</p>
-<p>{% trans "Wählen Sie hier die Bearbeitungsfigur oder Figuren die manipuliert werden sollen." %}</p>
-<p> </p>
-<p class="dialog">{% trans "Zu ersetzende Radien von / bis" %}</p>
-<p>{% trans "Bestimmt welche Radien, z.B. alle Radien von [R2] bis [R6], manipuliert werden sollen." %}</p>
-<p> </p>
-<p class="dialog">{% trans "Unterscheidung zwischen Aussen und Innenradien" %}</p>
-<p>{% trans "Mit dieser Option können Sie [innere] und [äußere Radien] unterschiedlich [verkleinern / vergrößern]." %}</p>
-<p>{% trans "Das Bild unterhalb zeigt links die Originalgeometrie und rechts die gleiche Geometrie, bei der alle Innen- und Aussenradien zwischen [R5] und [R6] verkleinert / vergrößert wurden." %}</p>
-<p>{% trans "Die zwei [äußeren Radien 6] wurden [vergrößert] um 0.01 auf [R6.01] und die beiden [inneren] [Radien 5] [verkleinert] um 0.02 auf [R4.98]." %}</p>
-<p><img src="../Radienmanipulation_Radien_verkleinern_vergroessern.gif" alt="" border="0" class="hcp3"/></p>
-<p> </p>
-<p class="dialog">{% trans "Alle zu ersetzenden Radien mit gleichem Radius ersetzen" %}</p>
-<p>{% trans "Verwenden Sie diese Option, wenn Sie bestimmte Radien, z.B. alle Radien der Größer [ab] [R2 bis R6], durch [einen anderen Radius ersetzen] wollen." %}</p>
-<p>{% trans "Das Bild unterhalb zeigt links die Originalgeometrie und rechts die gleiche Geometrie, bei der alle Radien zwischen [R1] und [R2] durch dem [Radius 5] ersetzt wurden." %}</p>
-<p><img src="../Radienmanipulation_Radien_ersetzen.gif" alt="" border="0" class="hcp3"/></p>
-<p> </p>
-<p> </p>
+ <h1>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    半径操作对话框参数
+   </font>
+  </font>
+ </h1>
+ <p>
+ </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    人物）
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在这里选择要操作的一个或多个编辑图形。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    半径要替换自/至
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    确定应操纵
+   </font>
+   <font style="vertical-align: inherit;">
+    哪些半径，例如从
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     R2
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    到
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     R6的所有半径。
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    外半径和内半径的区别
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此选项允许您
+   </font>
+   <font style="vertical-align: inherit;">
+    以不同的 
+ 方式
+   </font>
+   <span class="hcp1">
+    <font style="vertical-align: inherit;">
+     减小/放大
+    </font>
+   </span>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     内半径
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     外半径
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图左为原始几何形状，右为相同几何形状，其中
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     R5
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     R6
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    之间的所有内半径和外半径 
+ 都已减小/放大。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    两个
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     外半径6
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    增加
+   </font>
+   <font style="vertical-align: inherit;">
+    0.01至
+   </font>
+   <span class="hcp1">
+    <font style="vertical-align: inherit;">
+     R6.01
+    </font>
+   </span>
+   <font style="vertical-align: inherit;">
+    ，并且两个
+   </font>
+  </font>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     内
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <span class="hcp1">
+    <font style="vertical-align: inherit;">
+     半径
+    </font>
+   </span>
+   <span class="hcp1">
+    <font style="vertical-align: inherit;">
+     5
+    </font>
+   </span>
+   <span class="hcp2">
+    <font style="vertical-align: inherit;">
+     减少
+    </font>
+   </span>
+   <font style="vertical-align: inherit;">
+    0.02至
+   </font>
+   <span class="hcp1">
+    <font style="vertical-align: inherit;">
+     R4.98
+    </font>
+   </span>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </span>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </span>
+  <span class="hcp2">
+   <font style="vertical-align: inherit;">
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <img alt="" border="0" class="hcp3" src="../Radienmanipulation_Radien_verkleinern_vergroessern.gif"/>
+ </p>
+ <p>
+ </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    将所有要替换的半径替换为相同的半径
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <span class="hcp1">
+    <font style="vertical-align: inherit;">
+     如果您想用不同的
+    </font>
+   </span>
+   <font style="vertical-align: inherit;">
+    radius 替换某些半径，例如
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     从
+    </font>
+   </font>
+  </span>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     R2 到 R6
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    的所有半径，请使用此选项
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    下图左侧显示原始几何图形，右侧显示相同的几何图形，其中
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     R1
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     R2
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    之间的所有半径均已替换为
+   </font>
+  </font>
+  <span class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     半径 5
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <img alt="" border="0" class="hcp3" src="../Radienmanipulation_Radien_ersetzen.gif"/>
+ </p>
+ <p>
+ </p>
+ <p>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,7 +28,24 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Toleranz für die Projektion" %}</p><p>{% trans "Legt fest, mit welcher Genauigkeit (Abweichung von der Original-Solidgeometrie) die Projektion erfolgen soll. Normalerweise stellt man hier einen Wert von 0.001 ein." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    投影公差
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    指定进行投影的精度（与原始实体几何体的偏差）。
+   </font>
+   <font style="vertical-align: inherit;">
+    通常您在此设置值 0.001。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

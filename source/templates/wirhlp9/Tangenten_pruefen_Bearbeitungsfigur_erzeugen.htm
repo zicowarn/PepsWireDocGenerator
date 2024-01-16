@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -29,7 +28,21 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Tangenten prüfen" %}</p><p>{% trans "Diese Checkbox erlaubt es, die Geometrieelemente der Bearbeitungsfigur auf nicht tangentiale Verbindungen in den Situationen Linie/Bogen/Line, Bogen/Bogen/Bogen und Bogen/Bogen/Linie zu überprüfen." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    检查切线
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    此复选框允许检查加工图形的几何元素，以了解直线/圆弧/直线、圆弧/圆弧/圆弧和圆弧/圆弧/直线情况下的非相切连接。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

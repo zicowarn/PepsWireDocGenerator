@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,23 +35,153 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Zeige Fehlerfigur bei offenen Figuren" %}</p><p>{% trans "Ist diese Option aktiv und wird bei der Figurerzeugung eine Geometrielücke erkannt, dann erzeugt das System eine zusätzliche Figur, welche die Lücke durch zwei Punkte kennzeichnet." %}</p><p>{% trans "Zunächst erfolgt jedoch eine Warnung:" %}</p>
-<p class="hcp1"> </p>
-<p><img src="../Err_fig1.gif" alt="Err_fig1.gif" width="263" height="152" border="0"/></p>
-<p class="hcp1"> </p>
-<p>{% trans "Wird die Warnung mit [Ja] beantwortet, erzeugt das System eine offene Figur." %}</p>
-<p>{% trans "Bei [Nein] erzeugt das System die zusätzliche Figur (@@error) und legt diese ÜBER die Originalgeometrie, wobei es die Lücke mit zwei Punkten kennzeichnet." %}</p>
-<p class="hcp1"> </p>
-<p><img src="../Err_fig2.gif" alt="Err_fig2.gif" width="237" height="140" border="0"/></p>
-<p class="hcp1"> </p>
-<p>{% trans "Auf diese Weise können Sie kontrollieren, wo die Lücke ist und diese manuell schließen." %}</p>
-<p class="hcp1"> </p>
-<p class="Hinweis">{% trans "Hinweis:" %}</p>
-<p>{% trans "Die Fehlerfigur wird nur erzeugt, wenn die Lücke [größer ist], als der Wert im Feld #[Toleranz f. Linien-/Bogenverbindung]# im Dialogboxregister #[Optionen]#." %}</p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    显示开放数字的错误数字
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果此选项处于活动状态并且在图形创建过程中检测到几何间隙，系统将创建一个附加图形来标识具有两点的间隙。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    但首先有一个警告：
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="Err_fig1.gif" border="0" height="152" src="../Err_fig1.gif" width="263"/>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果警告的回答为
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     yes
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ，系统将创建一个开放图形。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     否，
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    系统将创建附加图形（@@error）并将其放置在原始几何图形之上，并用两个点标记间隙。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="Err_fig2.gif" border="0" height="140" src="../Err_fig2.gif" width="237"/>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这样您就可以控制间隙的位置并手动关闭它。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p class="Hinweis">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    一个通知：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    仅当间隙
+   </font>
+  </font>
+  <font class="hcp2">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     大于
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <a href="Optionen_Register_Linien_Boegen_Bearbeitungsfigur.htm">
+    <font class="hcp2">
+     <font style="vertical-align: inherit;">
+      “选项”
+     </font>
+    </font>
+   </a>
+   <font style="vertical-align: inherit;">
+    对话框选项卡中
+   </font>
+  </font>
+  <a class="BSSCPopup" href="javascript:void(0);" id="a1" onclick="BSSCPopup('Toleranz_fuer_Linien_Bogenverbindung_Linien_Boegen_Bearbeitungsfigur.htm');return false;" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);">
+   <font class="hcp2">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      “直线/圆弧连接公差”
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    字段中的值时，才会创建错误数字
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+  <a href="Optionen_Register_Linien_Boegen_Bearbeitungsfigur.htm">
+   <font class="hcp2">
+    <font style="vertical-align: inherit;">
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('a1');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

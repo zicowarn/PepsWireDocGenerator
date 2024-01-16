@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -36,31 +35,205 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Stempel Register" %}</p><p>{% trans "Wählen Sie das Register [Stempel], wenn die Geometrieelemente automatisch in Bearbeitungsfiguren vom Typ [Stempel] (Startloch [außerhalb] der Bearbeitungsfigur) umgewandelt werden sollen." %}</p><p>{% trans "Stellen Sie [vorher] die Optionen im Register #[Filter]# korrekt ein." %}</p>
-<p>{% trans "[Beachten Sie, dass das System bei der Elementauswahl unabhängig von den Einstellungen in dem Register] [#Filter#, zunächst alle gewählten Elemente markiert. ]" %}</p>
-<p>{% trans "[Erst nach dem Beenden der Elementauswahl, konvertiert das System die in durch den Filter zugelassenen Formen zu Bearbeitungsfi][g][uren.]" %}</p>
-<p>{% trans "Die Schaltfläche [Wähle Stempel &amp;gt;&amp;gt;] dient zur Auswahl der Elemente, die in Bearbeitungsfiguren vom Typ [Stempel] umgewandelt werden sollen." %}</p>
-<p class="hcp2"> </p>
-<p class="pitalic">{% trans "[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp2"> </p>
-<p><img src="../QUI_D_P3_shg.gif" usemap="#AreaMap0" alt="QUI_D_P3_shg.gif" width="415" height="398" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="16, 41, 64, 61" href="Matrizen_Auto_Matritzen_Stempel.htm" alt=""/>
-<area shape="rect" coords="115, 46, 152, 64" href="Filter_Auto_Matritzen_Stempel.htm" alt=""/>
-<area shape="rect" coords="20, 112, 228, 138" href="javascript:BSSCPopup('Einfahrabstand_Auto_Matritzen_Stempel.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="20, 141, 230, 174" href="javascript:BSSCPopup('Winkel_zur_Normalen_Auto_Matritzen_Stempel.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="20, 176, 228, 207" href="javascript:BSSCPopup('Umfangs_Parameter_Auto_Matritzen_Stempel.htm',400,600);" id="area3" alt=""/>
-<area shape="rect" coords="26, 213, 234, 268" href="Startloch_Suchschema_Auto_Mat_Stemp.htm" alt=""/>
-<area shape="rect" coords="238, 226, 387, 268" href="javascript:BSSCPopup('Matrizen_Stempeltyp_Auto_Mat_Stemp.htm',400,300);" id="area4" alt=""/>
-<area shape="rect" coords="22, 269, 385, 341" href="javascript:BSSCPopup('Schnittschemen_Auto_Matritzen_Stempel.htm',400,500);" id="area5" alt=""/>
-<area shape="rect" coords="11, 363, 115, 384" href="javascript:BSSCPopup('Waehle_Matrizen_Stempel_Auto_Mat_Stemp.htm',400,300);" id="area6" alt=""/>
-<area shape="rect" coords="121, 364, 209, 382" href="javascript:BSSCPopup('../Commdata/COMMON_Schliessen.htm',400,300);" id="area7" alt=""/>
-<area shape="rect" coords="214, 364, 307, 383" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area8" alt=""/>
-<area shape="rect" coords="313, 362, 401, 386" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area9" alt=""/>
-<area shape="rect" coords="241, 79, 379, 217" href="javascript:BSSCPopup('../Commdata/COMMON_Bild.htm',400,300);" id="area10" alt=""/>
-<area shape="rect" coords="154, 43, 210, 60" href="Optionen_Auto_Matritzen_Stempel.htm" alt=""/>
-</map> </p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    印章登记
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果您希望将几何元素自动
+   </font>
+   <font style="vertical-align: inherit;">
+    转换为
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     图章类型的加工图形（在加工图形
+    </font>
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     外部
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    开始孔），
+   </font>
+   <font style="vertical-align: inherit;">
+    请选择
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “图章”选项卡。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font style="font-weight: bold; text-decoration: underline; ">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     预先在
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <a href="Filter_Auto_Matritzen_Stempel.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      “过滤器”
+     </font>
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项卡中正确设置
+   </font>
+   <font style="vertical-align: inherit;">
+    选项
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     请注意，选择元素时，系统首先选择所有选定的元素，无论
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <a href="Filter_Auto_Matritzen_Stempel.htm">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      “过滤器”
+     </font>
+    </font>
+   </a>
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     选项卡中的设置如何。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     只有完成元素选择后，系统才会将过滤器允许的形状转换为加工
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     图形
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选择
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     图章&gt;&gt;
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按钮 
+ 用于选择要
+   </font>
+   <font style="vertical-align: inherit;">
+    转换为
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     图章类型的编辑图形的元素。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="QUI_D_P3_shg.gif" border="0" height="398" src="../QUI_D_P3_shg.gif" usemap="#AreaMap0" width="415"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="16, 41, 64, 61" href="Matrizen_Auto_Matritzen_Stempel.htm" shape="rect"/>
+   <area alt="" coords="115, 46, 152, 64" href="Filter_Auto_Matritzen_Stempel.htm" shape="rect"/>
+   <area alt="" coords="20, 112, 228, 138" href="javascript:BSSCPopup('Einfahrabstand_Auto_Matritzen_Stempel.htm',400,300);" id="area1" shape="rect"/>
+   <area alt="" coords="20, 141, 230, 174" href="javascript:BSSCPopup('Winkel_zur_Normalen_Auto_Matritzen_Stempel.htm',400,300);" id="area2" shape="rect"/>
+   <area alt="" coords="20, 176, 228, 207" href="javascript:BSSCPopup('Umfangs_Parameter_Auto_Matritzen_Stempel.htm',400,600);" id="area3" shape="rect"/>
+   <area alt="" coords="26, 213, 234, 268" href="Startloch_Suchschema_Auto_Mat_Stemp.htm" shape="rect"/>
+   <area alt="" coords="238, 226, 387, 268" href="javascript:BSSCPopup('Matrizen_Stempeltyp_Auto_Mat_Stemp.htm',400,300);" id="area4" shape="rect"/>
+   <area alt="" coords="22, 269, 385, 341" href="javascript:BSSCPopup('Schnittschemen_Auto_Matritzen_Stempel.htm',400,500);" id="area5" shape="rect"/>
+   <area alt="" coords="11, 363, 115, 384" href="javascript:BSSCPopup('Waehle_Matrizen_Stempel_Auto_Mat_Stemp.htm',400,300);" id="area6" shape="rect"/>
+   <area alt="" coords="121, 364, 209, 382" href="javascript:BSSCPopup('../Commdata/COMMON_Schliessen.htm',400,300);" id="area7" shape="rect"/>
+   <area alt="" coords="214, 364, 307, 383" href="javascript:BSSCPopup('../Commdata/COMMON_Eingaben_speichern.htm',400,300);" id="area8" shape="rect"/>
+   <area alt="" coords="313, 362, 401, 386" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area9" shape="rect"/>
+   <area alt="" coords="241, 79, 379, 217" href="javascript:BSSCPopup('../Commdata/COMMON_Bild.htm',400,300);" id="area10" shape="rect"/>
+   <area alt="" coords="154, 43, 210, 60" href="Optionen_Auto_Matritzen_Stempel.htm" shape="rect"/>
+  </map>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('area1');
 	FilePopupInit('area2');
@@ -72,7 +245,9 @@
 	FilePopupInit('area8');
 	FilePopupInit('area9');
 	FilePopupInit('area10');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

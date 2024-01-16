@@ -1,56 +1,438 @@
- <h1>
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; 
+	 border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <img alt="extrtech.gif" border="0" height="27" src="../extrtech.gif" width="27"/>
   <font style="vertical-align: inherit;">
    <font style="vertical-align: inherit;">
-    使用 FeatureManager 设计树
+    附加技术
    </font>
   </font>
- </h1>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    当加工图形中需要包含附加技术信息时，使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     附加
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     技术
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果每次切割只需使用一种全局技术来切割图形，或者只需确定开始/结束技术，则不要使用“
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     附加
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     技术”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    与开始/结束技术的定义相反，其中技术更改仅发生在编辑图形的开头或结尾，附加
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     技术
+    </font>
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     命令
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    允许在图形中的任何点
+   </font>
+   <font style="vertical-align: inherit;">
+    插入任意数量的
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     技术更改。
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    调用该命令后，要求用户选择应引入工艺变更的加工图形。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    然后使用
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     捕捉功能
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    设置技术变化点的位置。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    输入技术变更点的位置后，会调用一个对话框，在其中分配新技术，例如偏移寄存器或电流电平。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    每项技术变革均以一个
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     洋红色
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    小圆圈符号表示。
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    技术变更对话框取决于 CNC 机床和 CNC 控制。
+   </font>
+  </font>
+ </p>
+ <p class="Block_Text">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    以下对话框旨在作为示例，允许输入当前电平和偏移寄存器：
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font color="#FF0000" style="font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="EXTR_TEC_shg.gif" border="0" height="204" src="../EXTR_TEC_shg.gif" usemap="#AreaMap0" width="262"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="19, 135, 135, 167" href="javascript:BSSCPopup('Strom_Zus_Technologie.htm',400,300);" id="area1" shape="rect"/>
+   <area alt="" coords="18, 167, 134, 198" href="javascript:BSSCPopup('Offset_Zus_Technologie.htm',400,300);" id="area2" shape="rect"/>
+   <area alt="" coords="151, 95, 259, 120" href="javascript:BSSCPopup('Naechste_Technologie_Zus_Technologie.htm',400,300);" id="area3" shape="rect"/>
+   <area alt="" coords="148, 166, 254, 190" href="javascript:BSSCPopup('Vorherige_Technologie_Zus_Technologie.htm',400,300);" id="area4" shape="rect"/>
+   <area alt="" coords="148, 44, 253, 67" href="javascript:BSSCPopup('../Commdata/COMMON_Hilfe.htm',400,300);" id="area5" shape="rect"/>
+   <area alt="" coords="151, 132, 257, 155" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area6" shape="rect"/>
+  </map>
+ </p>
+ <p>
+  <span style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     注意
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ：此对话框根据所选 CNC 机床的不同而有所不同。
+   </font>
+  </font>
+ </p>
  <p>
  </p>
  <p>
   <font style="vertical-align: inherit;">
    <font style="vertical-align: inherit;">
-    您将在下面找到一些使用
+    命令中提供了三个可用的转换选项：
    </font>
   </font>
-  <font style="font-weight: bold;">
+ </p>
+ <p>
+  <font class="hcp1">
    <font style="vertical-align: inherit;">
     <font style="vertical-align: inherit;">
-     WIRE-Expert
+     复制+移动技术
     </font>
    </font>
   </font>
-  <a href="WIRE_Expert_FeatureManager.htm">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    、
+   </font>
+  </font>
+  <font class="hcp1">
    <font style="vertical-align: inherit;">
     <font style="vertical-align: inherit;">
-     FeatureManager 设计树
+     复制+旋转技术
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    和
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     镜像技术
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    （见
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     鼠标右键
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    或
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     水平图标栏
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    ）。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    这些选项用于允许复制现有技术符号的对称形状。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="BUTT_EXTR_TEC.gif" border="0" height="200" src="../BUTT_EXTR_TEC.gif" width="336"/>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    另请注意
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “删除”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项，它允许您删除不正确的技术符号。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     编辑技术
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选项
+   </font>
+   <font style="vertical-align: inherit;">
+    允许您编辑现有技术符号以更改符号的技术参数。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在编程加工策略之前
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     应始终
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    确定技术参数。
+   </font>
+   <font style="vertical-align: inherit;">
+    您
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     也可以稍后指定这些
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    它是这样完成的：
+   </font>
+  </font>
+ </p>
+ <p>
+  <a href="Beispiel_Zusaetzliche_Technologieaufrufe_in_eine_Bearbeitung_einbringen.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      将额外的技术调用纳入编辑中
+     </font>
     </font>
    </font>
   </a>
+ </p>
+ <p class="hcp2">
+ </p>
+ <p class="Hinweis">
   <font style="vertical-align: inherit;">
    <font style="vertical-align: inherit;">
-    的提示：
+    一个通知：
    </font>
   </font>
  </p>
  <p>
- </p>
- <p>
-  <a href="Doppelklick_auf_ein_Element_des_FeatureManagers.htm">
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
    <font style="vertical-align: inherit;">
     <font style="vertical-align: inherit;">
-     双击 FeatureManager 设计树的元素
+     仅当选中“额外 - 技术”复选框
     </font>
    </font>
-  </a>
- </p>
- <p>
-  <a href="Klick_mit_rechter_Maustaste_auf_ein_Element_des_FeatureManagers.htm">
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    时才会显示其他技术 
+ 。
+   </font>
+  </font>
+  <font class="hcp1">
    <font style="vertical-align: inherit;">
     <font style="vertical-align: inherit;">
-     右键单击 FeatureManager 设计树的元素
+     在“设置编辑”
     </font>
    </font>
-  </a>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对话框中处于活动状态
+   </font>
+   <font style="vertical-align: inherit;">
+    （参见下图）。
+   </font>
+  </font>
  </p>
+ <p class="hcp2">
+ </p>
+ <p>
+  <img alt="TECHN_2.gif" border="0" height="115" src="../TECHN_2.gif" width="319"/>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('area1');
+	FilePopupInit('area2');
+	FilePopupInit('area3');
+	FilePopupInit('area4');
+	FilePopupInit('area5');
+	FilePopupInit('area6');
+//]]>
+ </script>
 

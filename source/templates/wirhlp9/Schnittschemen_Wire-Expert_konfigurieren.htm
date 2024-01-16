@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,26 +34,214 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="dialog">{% trans "Schnittschemen" %}</p><p>{% trans "Dieser Dialogbereich legt fest, ob und wann [Schnittschemen] (abgespeicherte Bearbeitungsstrategien z.B. Technologiewerte, Anzahl der Schnitte, Breite der Anbindung, Bearbeitungsstrategie etc.) zugewiesen werden sollen." %}</p>
-<p> </p>
-<p class="dialog">{% trans "Schnittschemenzuweisung" %}</p>
-<p class="hcp2">{% trans "Abfrage nach Maschinentechnologie" %}</p>
-<p>{% trans "- Nicht verfügbar - Funktion im Entwicklungsstadium -" %}</p>
-<p class="hcp2">{% trans "Abfrage nach Schnittschema manuell" %}</p>
-<p>XXX</p>
-<p class="hcp2">{% trans "Abfrage nach Schnittschema automatisch" %}</p>
-<p>XXX</p>
-<p>{% trans "[Keine Abfrage:]" %}</p>
-<p>{% trans "Es wird kein Dialog zur Auswahl eines Schnittschemas angezeigt." %}</p>
-<p><br/>
-</p>
-<p class="dialog">{% trans "Schnittschemen Abfrage" %}</p>
-<p class="hcp2">{% trans "Einmal beim Start" %}</p>
-<p>{% trans "Es wird nur einmal der Dialog zur Auswahl eines Schnittschemas angezeigt.[ ]" %}</p>
-<p class="hcp2">{% trans "Für jede Operation:" %}</p>
-<p>{% trans "Werden vom [WIRE-Expert] mehrere [Operationsstarts] in der [PEPS] Operationsliste erzeugt, wird für jeden neuen [Operationsstart] ein Dialog zur Auswahl eines Schnittschemas angezeigt." %}</p>
-<p>{% trans "[Für jedes Feature]" %}</p>
-<p>{% trans "Für jedes erzeugte Feature (erkannte Bearbeitungsgeometrie) wird ein Dialog zur Auswahl eines Schnittschemas angezeigt." %}</p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    切割方案
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该对话框区域确定是否以及何时应
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     分配切割方案
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    （保存的加工策略，例如技术值、切割次数、连接宽度、加工策略等）。
+   </font>
+  </font>
+ </p>
+ <p>
+ </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    切割方案分配
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    按机器技术查询
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    - 不可用 - 功能正在开发中 -
+   </font>
+  </font>
+  <br/>
+ </p>
+ <p class="hcp2">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    手动查询切割方案
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    XXX
+   </font>
+  </font>
+  <br/>
+ </p>
+ <p class="hcp2">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    自动查询切割方案
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    XXX
+   </font>
+  </font>
+  <br/>
+ </p>
+ <p>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     无查询：
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    不显示用于选择切割方案的对话框。
+   </font>
+  </font>
+ </p>
+ <p>
+  <br/>
+ </p>
+ <p class="dialog">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    切割方案查询
+   </font>
+  </font>
+ </p>
+ <p class="hcp2">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    启动时一次
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    选择切割方案的对话框仅显示一次。
+   </font>
+  </font>
+  <font class="hcp1">
+   <br/>
+  </font>
+ </p>
+ <p class="hcp2">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对于每个操作：
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    如果
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     WIRE-Expert
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在
+   </font>
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     PEPS
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    手术列表中创建了
+   </font>
+   <font style="vertical-align: inherit;">
+    多个
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     手术开始，则为每个新
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     手术开始
+    </font>
+   </font>
+   <font style="vertical-align: inherit;">
+    都会显示一个用于选择切口方案的对话框 
+ 。
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+  </font>
+ </p>
+ <p>
+  <br/>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     对于每个功能
+    </font>
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    对于每个创建的特征（识别的加工几何形状），都会显示一个用于选择切削方案的对话框。
+   </font>
+  </font>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}

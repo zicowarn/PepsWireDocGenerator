@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -35,27 +34,90 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000;  border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Voreinstellungen" %}</p><p>{% trans "In diesem Dialog können Sie die Sprache des [WIRE-Expert] Menüs bestimmen, Toleranzen einstellen, sowie die Ikonengröße des [WIRE-Expert] #FeatureManagers# anpassen." %}</p><p class="hcp1"> </p>
-<p class="Normal_(Web) pitalic" style="margin-left: 5.75pt; margin-right: 6.50pt;  margin-top: 4.00pt; margin-bottom: 0.00pt;">{% trans "&lt;p class='Normal_(Web)' style='margin-left: 5.75pt; margin-right: 6.50pt; margin-top: 4.00pt; margin-bottom: 0.00pt;'&gt;[Klicken Sie auf die einzelnen Bereiche des folgenden Bildes, um Hilfetexte aufzurufen.]" %}</p>
-<p class="hcp1"> </p>
-<p><img src="../Basic_Settings_Dialog_shg.gif" usemap="#AreaMap0" alt="Basic_Settings_Dialog_shg.gif" width="795" height="575" border="0"/>
-<map name="AreaMap0" id="AreaMap0">
-<area shape="rect" coords="205, 212, 433, 351" href="Geometrie_Toleranzen_Programmstart_Feature_Man.htm" alt=""/>
-<area shape="rect" coords="207, 85, 430, 211" href="javascript:BSSCPopup('Eingabeeinheiten_Programmstart_Feature_Man.htm',400,300);" id="area1" alt=""/>
-<area shape="rect" coords="433, 84, 646, 209" href="javascript:BSSCPopup('Sprache_Programmstart_Feature_Man.htm',400,300);" id="area2" alt=""/>
-<area shape="rect" coords="10, 130, 182, 150" href="../WIRE_ExpertRH_context_Menu/Feature_Erkenungs_Einstellungen.htm" alt=""/>
-<area shape="rect" coords="10, 114, 182, 131" href="../WIRE_ExpertRH_context_Menu/Startloch_Einstellungen.htm" alt=""/>
-<area shape="rect" coords="438, 212, 649, 351" href="FeatureManager_Grund_Einstellungen_Dialog.htm" id="area3" alt=""/>
-<area shape="rect" coords="110, 33, 152, 78" href="javascript:BSSCPopup('../Commdata/Dialogeinstellungen_speichern.htm',400,300);" id="area4" alt=""/>
-<area shape="rect" coords="151, 34, 192, 75" href="javascript:BSSCPopup('../Commdata/Gespeicherte_Dialogeinstellungen_laden.htm',400,300);" id="area5" alt=""/>
-<area shape="rect" coords="478, 41, 521, 78" href="javascript:BSSCPopup('../Commdata/Dialog_uebersetzen_Common.htm',400,300);" id="area6" alt=""/>
-<area shape="rect" coords="9, 99, 179, 117" href="../WIRE_ExpertRH_context_Menu/Feature_Erkennung_nach_Flaechenfarben.htm" alt=""/>
-<area shape="rect" coords="225, 485, 377, 516" href="javascript:BSSCPopup('../Commdata/COMMON_Vorgaben.htm',400,300);" id="area7" alt=""/>
-<area shape="rect" coords="3, 28, 44, 74" alt="" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area8"/>
-<area shape="rect" coords="46, 33, 78, 77" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area9" alt=""/>
-<area shape="rect" coords="206, 352, 654, 528" href="../Commdata/Hilfeaufruf_in_Arbeit.htm" alt=""/>
-</map> </p>
-<script type="text/javascript" language="JavaScript1.2">//&lt;![CDATA[
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; 
+	 border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <img alt="Wire_Expert_Settings.gif" border="0" height="28" src="../Wire_Expert_Settings.gif" width="28"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    预设
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在此对话框中，您可以确定
+   </font>
+  </font>
+  <span style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     WIRE-Expert菜单的语言、设置公差并调整
+    </font>
+   </font>
+  </span>
+  <font style="vertical-align: inherit;">
+  </font>
+  <font style="font-weight: bold;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     WIRE-Expert
+    </font>
+   </font>
+  </font>
+  <a href="../WIRE_Expert_FeatureManager/WIRE_Expert_FeatureManager.htm">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     FeatureManager
+    </font>
+   </font>
+  </a>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    的图标大小
+   </font>
+   <font style="vertical-align: inherit;">
+    。
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p class="Normal_(Web)" style="margin-left: 5.75pt; margin-right: 6.50pt; 
+	 margin-top: 4.00pt; margin-bottom: 0.00pt;">
+  <font color="#FF0000" face="Arial" size="2" style="font-family: Arial; 
+														 font-size: 9pt; 
+														 font-style: italic;">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     单击下图的各个区域可访问帮助文本。
+    </font>
+   </font>
+  </font>
+ </p>
+ <p class="hcp1">
+ </p>
+ <p>
+  <img alt="Basic_Settings_Dialog_shg.gif" border="0" height="575" src="../Basic_Settings_Dialog_shg.gif" usemap="#AreaMap0" width="795"/>
+  <map id="AreaMap0" name="AreaMap0">
+   <area alt="" coords="205, 212, 433, 351" href="Geometrie_Toleranzen_Programmstart_Feature_Man.htm" shape="rect"/>
+   <area alt="" coords="207, 85, 430, 211" href="javascript:BSSCPopup('Eingabeeinheiten_Programmstart_Feature_Man.htm',400,300);" id="area1" shape="rect"/>
+   <area alt="" coords="433, 84, 646, 209" href="javascript:BSSCPopup('Sprache_Programmstart_Feature_Man.htm',400,300);" id="area2" shape="rect"/>
+   <area alt="" coords="10, 130, 182, 150" href="../WIRE_ExpertRH_context_Menu/Feature_Erkenungs_Einstellungen.htm" shape="rect"/>
+   <area alt="" coords="10, 114, 182, 131" href="../WIRE_ExpertRH_context_Menu/Startloch_Einstellungen.htm" shape="rect"/>
+   <area alt="" coords="438, 212, 649, 351" href="FeatureManager_Grund_Einstellungen_Dialog.htm" id="area3" shape="rect"/>
+   <area alt="" coords="110, 33, 152, 78" href="javascript:BSSCPopup('../Commdata/Dialogeinstellungen_speichern.htm',400,300);" id="area4" shape="rect"/>
+   <area alt="" coords="151, 34, 192, 75" href="javascript:BSSCPopup('../Commdata/Gespeicherte_Dialogeinstellungen_laden.htm',400,300);" id="area5" shape="rect"/>
+   <area alt="" coords="478, 41, 521, 78" href="javascript:BSSCPopup('../Commdata/Dialog_uebersetzen_Common.htm',400,300);" id="area6" shape="rect"/>
+   <area alt="" coords="9, 99, 179, 117" href="../WIRE_ExpertRH_context_Menu/Feature_Erkennung_nach_Flaechenfarben.htm" shape="rect"/>
+   <area alt="" coords="225, 485, 377, 516" href="javascript:BSSCPopup('../Commdata/COMMON_Vorgaben.htm',400,300);" id="area7" shape="rect"/>
+   <area alt="" coords="3, 28, 44, 74" href="javascript:BSSCPopup('../Commdata/CAMMON_OK.htm',400,300);" id="area8" shape="rect"/>
+   <area alt="" coords="46, 33, 78, 77" href="javascript:BSSCPopup('../Commdata/COMMON_Abbruch.htm',400,300);" id="area9" shape="rect"/>
+   <area alt="" coords="206, 352, 654, 528" href="../Commdata/Hilfeaufruf_in_Arbeit.htm" shape="rect"/>
+  </map>
+ </p>
+ <script language="JavaScript1.2" type="text/javascript">
+  //<![CDATA[
 	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
 	FilePopupInit('area1');
 	FilePopupInit('area2');
@@ -65,7 +127,9 @@
 	FilePopupInit('area7');
 	FilePopupInit('area8');
 	FilePopupInit('area9');
-//]]&gt;</script>
+//]]>
+ </script>
+
 
 {% endblock %}
 {% endlinebreakless %}

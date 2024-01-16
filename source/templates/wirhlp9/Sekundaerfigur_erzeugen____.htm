@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load linebreakless %}{% linebreakless %}
@@ -34,15 +33,88 @@
 {% endblock %}
 <!--/ Head JavaScript -->
 {% block mainbody %}
-    <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">{% trans "@ Sekundärfigur erzeugen" %}</p><p>{% trans "In einigen Fällen ist es notwendig, eine Regelfläche zu schneiden, deren z.B. obere Figur sich nur unwesentlich von der unteren Figur unterscheidet." %}</p>
-<p>{% trans "Der Unterschied könnte beispielsweise darin bestehen, dass einige Elemente der oberen Figur eine Konik aufweisen." %}</p>
-<p>{% trans "Um die obere Figur nicht komplett neu zeichnen zu müssen, wurde der Befehl [Sekundärfigur erzeugen] eingeführt." %}</p>
-<p>{% trans "Der Befehl erzeugt eine Kopie der Originalfigur (Sekundärfigur). Die Geometrieelemente der Sekundärfigur können anschließend mit einer Konik versehen werden." %}</p>
-<p>{% trans "Der Befehl führt zu einem Dialog, in der Sie der Sekundärfigur eine umlaufend gleiche oder variable Konik zuordnen können." %}</p>
-<p style="margin-top: 0; margin-bottom: 0;"> </p>
-<p><img src="../Sekund.gif" alt="Sekund.gif" width="431" height="287" border="0"/></p>
-<p class="Tip_Note_Heading">{% trans "So wird es gemacht" %}</p>
-<p>{% trans "#[Sekundärfigur erzeugen]#" %}</p>
+ <p class="Kasten" style="border-top: 1.50pt solid #ff0000; border-bottom: 1.50pt solid #ff0000; border-left: 1.50pt solid #ff0000; border-right: 1.50pt solid #ff0000;">
+  <img alt="seconfig.gif" border="0" height="29" src="../seconfig.gif" width="30"/>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    创建辅助图形
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    在某些情况下，需要切割直纹表面，例如，其上图与下图仅略有不同。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    例如，差异可能在于上图的某些元件具有锥度。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    为了不必完全重绘上图，引入了
+   </font>
+  </font>
+  <font class="hcp1">
+   <font style="vertical-align: inherit;">
+    <font style="vertical-align: inherit;">
+     “创建次要图”
+    </font>
+   </font>
+  </font>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    命令。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该命令创建原始图窗（辅助图窗）的副本。
+   </font>
+   <font style="vertical-align: inherit;">
+    然后可以为第二图形的几何元素提供锥度。
+   </font>
+  </font>
+ </p>
+ <p>
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    该命令会打开一个对话框，您可以在其中为辅助图形指定相同或可变的锥度。
+   </font>
+  </font>
+ </p>
+ <p style="margin-top: 0; margin-bottom: 0;">
+ </p>
+ <p>
+  <img alt="第二张动图" border="0" height="287" src="../Sekund.gif" width="431"/>
+ </p>
+ <p class="Tip_Note_Heading">
+  <font style="vertical-align: inherit;">
+   <font style="vertical-align: inherit;">
+    就是这样完成的
+   </font>
+  </font>
+ </p>
+ <p>
+  <a href="Beispiel_Sekundaerfigur_erzeugen.htm">
+   <font class="hcp1">
+    <font style="vertical-align: inherit;">
+     <font style="vertical-align: inherit;">
+      创建辅助图形
+     </font>
+    </font>
+   </font>
+  </a>
+ </p>
+
 
 {% endblock %}
 {% endlinebreakless %}
