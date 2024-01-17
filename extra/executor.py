@@ -1,7 +1,7 @@
 from __future__ import print_function
 '''
 Created on 21.06.2019
-Updated on 10.01.2024
+Updated on 17.01.2024
 
 @author: wang
 '''
@@ -23,7 +23,10 @@ from django.template import Template, Context
 from django.template.engine import Engine
 from django.shortcuts import render  # @UnusedImport
 from django.template.loader import get_template, render_to_string  # @UnusedImport
-from django.utils.translation import ugettext_lazy as _  # @UnusedImport
+try:
+    from django.utils.translation import ugettext_lazy as _  # @UnusedImport
+except:
+    from django.utils.translation import gettext_lazy as _
 try:
     from myapp import settings  # @UnusedImport
 except:
@@ -47,19 +50,18 @@ CHM_FILES_CODING_LIST = {
 TRANSCODE_FROM = "cp1252"
 TRANSCODE_TO = "utf-8"
 
-
-CHM_HHK_TEMPLATE = "Common_xxx.hhk"
-CHM_HHC_TEMPLATE = "Common_xxx.hhc"
-CHM_HHP_TEMPLATE = "Common_xxx.hhp"
-CHM_BRS_TEMPLATE = "Common_xxx.brs"
+CHM_HHK_TEMPLATE = "wire_xxx.hhk"
+CHM_HHC_TEMPLATE = "wire_xxx.hhc"
+CHM_HHP_TEMPLATE = "wire_xxx.hhp"
+CHM_BRS_TEMPLATE = "wire_xxx.brs"
 CHM_LNG_TEMPLATE = "RoboHHRE_xxx.lng"
 TEMPALTES_BASE_PATH = os.path.join(settings.BASE_DIR, "templates")
 CHM_EXTRA_BASE_PATH = os.path.join(settings.BASE_DIR, "asset")
 CHM_STATC_BASE_PATH = os.path.join(settings.BASE_DIR, "static")
-CHM_BUILD_BASE_PATH = os.path.join("D:\Eclipse-Works\workspace\\PepsWireDocGenerator", "build")
+CHM_BUILD_BASE_PATH = os.path.join(settings.ROOT_DIR, "build")
 
 SELENIUM_DRIVER_LOCATION = "/Users/mrwang/workspace/1-no-project/chromedriver"
-H2T_RECORD_A_TAG_HREF = os.path.join("D:\Eclipse-Works\workspace\\PepsWireDocGenerator\\source", "htmlataghref.h2t")
+H2T_RECORD_A_TAG_HREF = os.path.join(settings.ROOT_DIR, "htmlataghref.h2t")
 
 
 DEMO_1 = '''
@@ -408,768 +410,778 @@ def convert_htm_to_template(str_relativ_path="", b_break_nextfile=False, b_break
                     else:
                         headstyle_str = ""
                     
-                    ### 
-                    # handle all h1 tags
-                    h1_lists = htmldoc.body.findall('h1')
-                    for idx, h1_single in enumerate(h1_lists):
-                        # get h2 text 
-                        h1_text = h1_single.text or ''
-                        # check h2 text
-                        if h1_text.replace(' ', '') != '' and h1_text.replace('\xa0', '') != '':
-                            # remove newline symbols
-                            h1_text = h1_text.replace('\n', '')
-                            # set translation flag
-                            h1_newtext = '{% trans "' + h1_text + '" %}'
-                            h1_single.text = h1_newtext
+                    ### body part
+                    if True: # 新模型中，不在翻译body，添加一个dummy作为未翻译的标识。
+                        # 创建一个新的 <p> 元素
+                        new_p = soup.new_tag("p")
+                        new_p.string = '{% trans "no translated" %}'
 
-                    # handle all h2 tags
-                    h2_lists = htmldoc.body.findall('h2')
-                    for idx, h2_single in enumerate(h2_lists):
-                        # get h2 text 
-                        h2_text = h2_single.text or ''
-                        # check h2 text
-                        if h2_text.replace(' ', '') != '' and h2_text.replace('\xa0', '') != '':
-                            # remove newline symbols
-                            h2_text = h2_text.replace('\n', '')
-                            # set translation flag
-                            h2_newtext = '{% trans "' + h2_text + '" %}'
-                            # reset the text of h2
-                            h2_single.text = h2_newtext
-                        else:
-                            # get img sub tag of h2
-                            h2_img_list = h2_single.findall('img')
-                            # get a tag html string
-                            h2_new_text = etree.tostring(h2_single, encoding="utf-8").decode('utf-8')
-                            if len(h2_img_list) >= 1: # h2>img + text
-                                for h2_img in h2_img_list:
-                                    h2_img_attrib = h2_img.attrib
-                                    with open(H2T_RECORD_A_TAG_HREF, 'a', encoding='utf-8') as h2tfile:
-                                        new_record = os.path.join(relevant_base, single_file) + "||" + 'img||' + str(h2_img_attrib) + "\n"
-                                        h2tfile.write(new_record)
-                                    h2_single.remove(h2_img)
-                                # remove img sub tag text
-                                h2_new_text = h2_new_text.replace('\n', '')
-                                # replace multi spaces to single space
-                                h2_new_text = " ".join(h2_new_text.split())
-                                #replace img tag to @
-                                h2_new_text = re.sub("""<img[\sa-zA-Z0-9="'.:;/_-]*>""", '@', h2_new_text)
-                                #repalce " into '
-                                h2_new_text = h2_new_text.replace('"', "'")
-                                h2_new_text = re.sub('</h2>', '', h2_new_text)
-                                h2_new_text = re.sub("""<h2[\sa-zA-Z0-9="'#&.:;/_-]*>""", '', h2_new_text)
-                                # add the translate flag
-                                h2_new_text = h2_new_text.lstrip()
-                                h2_new_text = h2_new_text.rstrip()
-                                h2_check_text = h2_new_text.replace("X", '')
-                                h2_check_text = h2_check_text.replace(" ", '')
-                                if h2_check_text != "" and "XXX" != h2_check_text:
-                                    h2_single.text = '{% trans "' + h2_new_text + '" %}'
+                        # 直接在 <body> 中插入 <p> 元素
+                        htmldoc.body.insert(0, new_p)
+                        #
+                        b_processed = True
+                    else:
+                        # handle all h1 tags
+                        h1_lists = htmldoc.body.findall('h1')
+                        for idx, h1_single in enumerate(h1_lists):
+                            # get h2 text 
+                            h1_text = h1_single.text or ''
+                            # check h2 text
+                            if h1_text.replace(' ', '') != '' and h1_text.replace('\xa0', '') != '':
+                                # remove newline symbols
+                                h1_text = h1_text.replace('\n', '')
+                                # set translation flag
+                                h1_newtext = '{% trans "' + h1_text + '" %}'
+                                h1_single.text = h1_newtext
+
+                        # handle all h2 tags
+                        h2_lists = htmldoc.body.findall('h2')
+                        for idx, h2_single in enumerate(h2_lists):
+                            # get h2 text 
+                            h2_text = h2_single.text or ''
+                            # check h2 text
+                            if h2_text.replace(' ', '') != '' and h2_text.replace('\xa0', '') != '':
+                                # remove newline symbols
+                                h2_text = h2_text.replace('\n', '')
+                                # set translation flag
+                                h2_newtext = '{% trans "' + h2_text + '" %}'
+                                # reset the text of h2
+                                h2_single.text = h2_newtext
+                            else:
+                                # get img sub tag of h2
+                                h2_img_list = h2_single.findall('img')
+                                # get a tag html string
+                                h2_new_text = etree.tostring(h2_single, encoding="utf-8").decode('utf-8')
+                                if len(h2_img_list) >= 1: # h2>img + text
+                                    for h2_img in h2_img_list:
+                                        h2_img_attrib = h2_img.attrib
+                                        with open(H2T_RECORD_A_TAG_HREF, 'a', encoding='utf-8') as h2tfile:
+                                            new_record = os.path.join(relevant_base, single_file) + "||" + 'img||' + str(h2_img_attrib) + "\n"
+                                            h2tfile.write(new_record)
+                                        h2_single.remove(h2_img)
+                                    # remove img sub tag text
+                                    h2_new_text = h2_new_text.replace('\n', '')
+                                    # replace multi spaces to single space
+                                    h2_new_text = " ".join(h2_new_text.split())
+                                    #replace img tag to @
+                                    h2_new_text = re.sub("""<img[\sa-zA-Z0-9="'.:;/_-]*>""", '@', h2_new_text)
+                                    #repalce " into '
+                                    h2_new_text = h2_new_text.replace('"', "'")
+                                    h2_new_text = re.sub('</h2>', '', h2_new_text)
+                                    h2_new_text = re.sub("""<h2[\sa-zA-Z0-9="'#&.:;/_-]*>""", '', h2_new_text)
+                                    # add the translate flag
+                                    h2_new_text = h2_new_text.lstrip()
+                                    h2_new_text = h2_new_text.rstrip()
+                                    h2_check_text = h2_new_text.replace("X", '')
+                                    h2_check_text = h2_check_text.replace(" ", '')
+                                    if h2_check_text != "" and "XXX" != h2_check_text:
+                                        h2_single.text = '{% trans "' + h2_new_text + '" %}'
+                                    else:
+                                        pass
+
+                        # handle all h3 tags
+                        h3_lists = htmldoc.body.findall('h3')
+                        for idx, h3_single in enumerate(h3_lists):
+                            h3_text = h3_single.text or ''
+                            if h3_text.replace(' ', '') != '' and h3_text.replace('\xa0', '') != '':
+                                h3_text = h3_text.replace('\n', '')
+                                h3_newtext = '{% trans "' + h3_text + '" %}'
+                                h3_single.text = h3_newtext
+                        
+                        ### case 1
+                        # handle all body>p tags
+                        p_lists = htmldoc.body.findall('p')
+                        # 
+                        for idx, p_single in enumerate(p_lists):
+                            # set process flag
+                            b_process = True
+                            # set italic flag
+                            b_full_italic = False
+                            # get atrribs of p_single
+                            p_attrib = p_single.attrib
+                            # 
+                            rts = [0]*6
+                            involk_handler(p_single, rts, False)
+                            # check if p tag has sub tags: font, a, b, br, or span 
+                            if sum(rts[0:6]) != 0:
+                                #
+                                b_processed = True
+                                # get text of p_single
+                                p_text = p_single.text
+                                
+                                # get pure html code of p tag
+                                p_tag_string = etree.tostring(p_single, encoding="utf-8").decode('utf-8')
+                                # p tag has sub tag: font
+                                if rts[0] != 0:
+                                    if "font-style: italic;" in p_tag_string and rts[0] == 1:
+                                        if p_text == None:
+                                            b_full_italic = True
+                                        else:
+                                            b_full_italic = False
+                                    else:
+                                        b_full_italic = False
                                 else:
                                     pass
+                                
+                                # in case, no font tags and no start-text of p tag
+                                if p_text == None and rts[0] == 0:
+                                    check_str = p_tag_string.replace('\n', '')
+                                    check_str = check_str.replace('<br/>', ' ')
+                                    check_str = check_str.replace('<br>', ' ')
+                                    if len(check_str) <= 90:
+                                        output_text = check_str[-50:-1]
+                                    else:
+                                        output_text = check_str[-50:-1]
+                                    print('-'*40)
+                                    print('Warning, danger handle the p <tag> : %s' % output_text)
+                                    a_newlist =[]
+                                    involk_tagbyname(p_single, 'a', a_newlist)
+                                    b_newlist =[]
+                                    involk_tagbyname(p_single, 'b', b_newlist)
+                                    img_newlist = []
+                                    involk_tagbyname(p_single, 'img', img_newlist)
+                                    span_newlist = []
+                                    involk_tagbyname(p_single, 'span', span_newlist)
+                                    map_newlist = []
+                                    involk_tagbyname(p_single, 'map', map_newlist)
+                                    # get string before p close tag
+                                    p_before_close = re.search("[\sa-zA-Z0-9()]*</p>$", check_str)
+                                    # get matched string
+                                    if p_before_close != None:
+                                        # strip </p>
+                                        p_before_close_string = p_before_close.group(0).rstrip('</p>')
+                                    else:
+                                        # set empty
+                                        p_before_close_string = ''
+                                    if len(a_newlist) != 0:
+                                        b_process = True
+                                    elif len(b_newlist) != 0:
+                                        b_process = True
+                                    elif len(span_newlist) != 0:
+                                        b_process = True
+                                    elif len(img_newlist) != 0 and p_before_close_string != '' and len(map_newlist) == 0:
+                                        b_process = True
+                                    else: #input_text = input("Press input any char to continous procsessing...")
+                                        b_process = False
+                                else:
+                                    a = 0
+                                # p tag has sub tag: a
+                                if sum(rts[1:3]) != 0 and b_process == True:
+                                    #
+                                    b_processed = True
+                                    # get a tags list
+                                    a_newlist =[]
+                                    involk_tagbyname(p_single, 'a', a_newlist)
+                                    for a_new in a_newlist:
+                                        a_new_text = a_new.text
+                                        check_str = ''
+                                        if a_new_text != None:
+                                            # replace newline symbols
+                                            check_str = a_new_text.replace('\n', '')
+                                            # replace dobble spaces 
+                                            check_str = check_str.replace(' ', '')
+                                            # get a tag html string
+                                            a_text = etree.tostring(a_new, encoding="utf-8").decode('utf-8')
+                                            # remove newline char
+                                            a_text = a_text.replace('\n', '')
+                                            # replace multi spaces to single space
+                                            a_text = " ".join(a_text.split())
+                                            # move close tag and tail: </a>xxxx
+                                            a_text = re.sub('</a>.*', '', a_text)
+                                            # get a tag atrributes string
+                                            a_new_attrib = re.search("""<a[\sa-zA-Z0-9="'.:&\)\(;/_-]*>{1}""", a_text)
+                                            if a_new_attrib == None: 
+                                                a_new_attrib = re.search("""<a[\sa-zA-Z0-9="\\'.,:&#\)\(;/_-]*>{1}""", a_text)
+                                        else:
+                                            pass
+                                        if a_new_text == None or check_str == '':
+                                            # get a tag html string
+                                            a_new_text = etree.tostring(a_new, encoding="utf-8").decode('utf-8')
+                                            # remove newline char
+                                            a_new_text = a_new_text.replace('\n', '')
+                                            # replace multi spaces to single space
+                                            a_new_text = " ".join(a_new_text.split())
+                                            # move close tag and tail: </a>xxxx
+                                            a_new_text = re.sub('</a>.*', '', a_new_text)
+                                            # get a tag atrributes string
+                                            a_new_attrib = re.search("""<a[\sa-zA-Z0-9="'.:&\)\(;/_-]*>{1}""", a_new_text)
+                                            if a_new_attrib == None: 
+                                                a_new_attrib = re.search("""<a[\sa-zA-Z0-9="\\'.,:&\)\(;/_-]*>{1}""", a_new_text)
+                                            # move open tag 
+                                            a_new_text = re.sub("""<a[\sa-zA-Z0-9="\\'.,:&#\)\(;/_-]*>{1}""", '', a_new_text)
+                                            # move child open tag <font>
+                                            a_new_text = re.sub("""<font[\sa-zA-Z0-9="'&#.,!:;/_-]*>""", '', a_new_text)
+                                            # move close tag
+                                            a_new_text = re.sub('</font>', '', a_new_text)
+                                            # move child open tag <span>
+                                            a_new_text = re.sub("""<span[\sa-zA-Z0-9="'#.,!:;/_-]*>""", '', a_new_text)
+                                            # move close tag
+                                            a_new_text = re.sub('</span>', '', a_new_text)
+                                        else:
+                                            pass
+                                            
+                                        a_new_text = a_new_text.replace('\n', '')
+                                        a_new_text = a_new_text.replace('<br/>', ' ')
+                                        a_new_text = a_new_text.replace('<br>', ' ')
+                                        a_new_text = a_new_text.lstrip()
+                                        a_new_text = a_new_text.rstrip()
+                                        a_new_text = " ".join(a_new_text.split())
+                                        a_new_text = a_new_text.replace('"', "'")
+                                        a_new_href = a_new.get('href') or ''
+                                        a_new_tranlate_text = '{% trans "' + a_new_text + '" %}'
+                                        with open(H2T_RECORD_A_TAG_HREF, 'a', encoding='utf-8') as h2tfile:
+                                            if 'javascript:void' in a_new_href:
+                                                a_new_href = a_new_attrib.group(0)
+                                            elif a_new_href == None: # <a name="xxx" id="xxx"/>
+                                                a_new_href = a_new_attrib.group(0)
+                                            new_record = os.path.join(relevant_base, single_file) + "||" + 'a||' + a_new_text + "||" +  a_new_tranlate_text + "||" + a_new_href + "\n"
+                                            h2tfile.write(new_record)
+                                    img_newlist = []
+                                    involk_tagbyname(p_single, 'img', img_newlist)
+                                    for img_new in img_newlist:
+                                        img_new_attrib = img_new.attrib
+                                        with open(H2T_RECORD_A_TAG_HREF, 'a', encoding='utf-8') as h2tfile:
+                                            new_record = os.path.join(relevant_base, single_file) + "||" + 'img||' + str(img_new_attrib) + "\n"
+                                            h2tfile.write(new_record)
+                                else:
+                                    pass
+                                
+                                if b_process == True:
+                                    # delete all sub tags, object levels
+                                    involk_handler(p_single, [0]*6, True)
+                                    # delete all sub tags, string levels
+                                    p_tag_string = p_tag_string.replace('\n', '')
+                                    p_tag_string = p_tag_string.replace('&#10;', '')
+                                    p_tag_string = p_tag_string.replace('&#9;', ' ')
+                                    p_tag_string = p_tag_string.replace('<br/>', ' ')
+                                    p_tag_string = p_tag_string.replace('<br>', ' ')
+                                    p_tag_string = " ".join(p_tag_string.split())
+                                    # move some uncessary symbols : font
+                                    p_tag_string = re.sub("""<font[\sa-zA-Z0-9="'&#.,!:;/_-]*>""", '[', p_tag_string)
+                                    p_tag_string = re.sub('</font>', ']', p_tag_string)
+                                    # move some uncessary symbols : span
+                                    p_tag_string = re.sub("""<span[\sa-zA-Z0-9="'#.,!:;/_-]*>""", '[', p_tag_string)
+                                    p_tag_string = re.sub('</span>', ']', p_tag_string)
+                                    # move some uncessary symbols : b
+                                    p_tag_string = re.sub("""<b[\sa-zA-Z0-9="'#.,!:;/_-]*>""", '[', p_tag_string)
+                                    p_tag_string = re.sub('</b>', ']', p_tag_string)
+                                    #replace img tag to @
+                                    p_tag_string = re.sub("""<img[\sa-zA-Z0-9="'.:;/_-]*>""", '@', p_tag_string)
+                                    #replace a tag to #
+                                    p_tag_string = re.sub('</a>', '#', p_tag_string)
+                                    #p_tag_string = re.sub("""<a[\sa-zA-Z0-9="'.:&\)\(;/_-]*>""", '#', p_tag_string)
+                                    p_tag_string = re.sub("""<a[\sa-zA-Z0-9="\\'.,:&#\)\(;/_-]*>{1}""", '#', p_tag_string)
+                                    #repalce " into '
+                                    p_tag_string = p_tag_string.replace('"', "'")
+                                    p_tag_string = re.sub('</p>', '', p_tag_string)
+                                    p_tag_string = re.sub("""<p[\sa-zA-Z0-9="'#&.:;/_-]*>""", '', p_tag_string)
+                                    # add the translate flag
+                                    p_tag_string = p_tag_string.lstrip()
+                                    p_tag_string = p_tag_string.rstrip()
+                                    p_tag_check_string = p_tag_string.replace("X", '')
+                                    p_tag_check_string = p_tag_check_string.replace(" ", '')
+                                    if p_tag_check_string != "" and "XXX" != p_tag_string:
+                                        p_single.text = '{% trans "' + p_tag_string + '" %}'
+                                    # set class attribute of p tag
+                                    if b_full_italic == True:
+                                        p_single.classes |= ['pitalic']
+                                    else:
+                                        a = 0
+                                else:
+                                    p_tag_string = etree.tostring(p_single, encoding="utf-8").decode('utf-8')
+                                    print('-'*40)
+                                    if len(p_tag_string) > 80:
+                                        print('Error, can not handle the p <tag> : %s' % p_tag_string[:79])
+                                    else:
+                                        print('Error, can not handle the p <tag> : %s' % p_tag_string)
+                            else:
+                                #
+                                b_processed = True
+                                # assume it has only texts
+                                p_text = p_single.text
+                                if p_text != None and p_text != "" and p_text != '\xa0':
+                                    # move newlines symbols
+                                    p_text = p_text.replace('\n', '')
+                                    # move some uncessary symbols : br
+                                    p_text = p_text.replace('<br/>', '')
+                                    p_text = p_text.replace('<br>', '')
+                                    # replace dobble spaces
+                                    p_text = " ".join(p_text.split())
+                                    #repalce " into '
+                                    p_text = p_text.replace('"', "'")
+                                    p_text = p_text.lstrip()
+                                    p_text = p_text.rstrip()
+                                    p_tag_check_string = p_text.replace("X", '')
+                                    p_tag_check_string = p_tag_check_string.replace(" ", '')
+                                    if p_tag_check_string != "" and "XXX" != p_text:
+                                        p_newtext = '{% trans "' + p_text + '" %}'
+                                        p_single.text = p_newtext
+                                else:
+                                    pass
+                        
+                        ### case 2
+                        # handle all ul>li>p case
+                        p_lists = htmldoc.body.findall('ul/li/p')
 
-                    # handle all h3 tags
-                    h3_lists = htmldoc.body.findall('h3')
-                    for idx, h3_single in enumerate(h3_lists):
-                        h3_text = h3_single.text or ''
-                        if h3_text.replace(' ', '') != '' and h3_text.replace('\xa0', '') != '':
-                            h3_text = h3_text.replace('\n', '')
-                            h3_newtext = '{% trans "' + h3_text + '" %}'
-                            h3_single.text = h3_newtext
-                    
-                    ### case 1
-                    # handle all body>p tags
-                    p_lists = htmldoc.body.findall('p')
-                    # 
-                    for idx, p_single in enumerate(p_lists):
-                        # set process flag
-                        b_process = True
-                        # set italic flag
-                        b_full_italic = False
-                        # get atrribs of p_single
-                        p_attrib = p_single.attrib
-                        # 
-                        rts = [0]*6
-                        involk_handler(p_single, rts, False)
-                        # check if p tag has sub tags: font, a, b, br, or span 
-                        if sum(rts[0:6]) != 0:
-                            #
-                            b_processed = True
-                            # get text of p_single
-                            p_text = p_single.text
-                            
-                            # get pure html code of p tag
-                            p_tag_string = etree.tostring(p_single, encoding="utf-8").decode('utf-8')
-                            # p tag has sub tag: font
-                            if rts[0] != 0:
-                                if "font-style: italic;" in p_tag_string and rts[0] == 1:
-                                    if p_text == None:
-                                        b_full_italic = True
+                        for idx, p_single in enumerate(p_lists):
+                            # set process flag
+                            b_process = True
+                            # set italic flag
+                            b_full_italic = False
+                            # get atrribs of p_single
+                            p_attrib = p_single.attrib
+                            # 
+                            rts = [0]*6
+                            involk_handler(p_single, rts, False)
+                            # check if p tag has sub tags: font, a, b, br, or span 
+                            if sum(rts[0:6]) != 0:
+                                #
+                                b_processed = True
+                                # get text of p_single
+                                p_text = p_single.text
+                                
+                                # get pure html code of p tag
+                                p_tag_string = etree.tostring(p_single, encoding="utf-8").decode('utf-8')
+                                # p tag has sub tag: font
+                                if rts[0] != 0:
+                                    if "font-style: italic;" in p_tag_string and rts[0] == 1:
+                                        if p_text == None:
+                                            b_full_italic = True
+                                        else:
+                                            b_full_italic = False
                                     else:
                                         b_full_italic = False
                                 else:
-                                    b_full_italic = False
-                            else:
-                                pass
-                            
-                            # in case, no font tags and no start-text of p tag
-                            if p_text == None and rts[0] == 0:
-                                check_str = p_tag_string.replace('\n', '')
-                                check_str = check_str.replace('<br/>', ' ')
-                                check_str = check_str.replace('<br>', ' ')
-                                if len(check_str) <= 90:
-                                    output_text = check_str[-50:-1]
-                                else:
-                                    output_text = check_str[-50:-1]
-                                print('-'*40)
-                                print('Warning, danger handle the p <tag> : %s' % output_text)
-                                a_newlist =[]
-                                involk_tagbyname(p_single, 'a', a_newlist)
-                                b_newlist =[]
-                                involk_tagbyname(p_single, 'b', b_newlist)
-                                img_newlist = []
-                                involk_tagbyname(p_single, 'img', img_newlist)
-                                span_newlist = []
-                                involk_tagbyname(p_single, 'span', span_newlist)
-                                map_newlist = []
-                                involk_tagbyname(p_single, 'map', map_newlist)
-                                # get string before p close tag
-                                p_before_close = re.search("[\sa-zA-Z0-9()]*</p>$", check_str)
-                                # get matched string
-                                if p_before_close != None:
-                                    # strip </p>
-                                    p_before_close_string = p_before_close.group(0).rstrip('</p>')
-                                else:
-                                    # set empty
-                                    p_before_close_string = ''
-                                if len(a_newlist) != 0:
-                                    b_process = True
-                                elif len(b_newlist) != 0:
-                                    b_process = True
-                                elif len(span_newlist) != 0:
-                                    b_process = True
-                                elif len(img_newlist) != 0 and p_before_close_string != '' and len(map_newlist) == 0:
-                                    b_process = True
-                                else: #input_text = input("Press input any char to continous procsessing...")
-                                    b_process = False
-                            else:
-                                a = 0
-                            # p tag has sub tag: a
-                            if sum(rts[1:3]) != 0 and b_process == True:
-                                #
-                                b_processed = True
-                                # get a tags list
-                                a_newlist =[]
-                                involk_tagbyname(p_single, 'a', a_newlist)
-                                for a_new in a_newlist:
-                                    a_new_text = a_new.text
-                                    check_str = ''
-                                    if a_new_text != None:
-                                        # replace newline symbols
-                                        check_str = a_new_text.replace('\n', '')
-                                        # replace dobble spaces 
-                                        check_str = check_str.replace(' ', '')
-                                        # get a tag html string
-                                        a_text = etree.tostring(a_new, encoding="utf-8").decode('utf-8')
-                                        # remove newline char
-                                        a_text = a_text.replace('\n', '')
-                                        # replace multi spaces to single space
-                                        a_text = " ".join(a_text.split())
-                                        # move close tag and tail: </a>xxxx
-                                        a_text = re.sub('</a>.*', '', a_text)
-                                        # get a tag atrributes string
-                                        a_new_attrib = re.search("""<a[\sa-zA-Z0-9="'.:&\)\(;/_-]*>{1}""", a_text)
-                                        if a_new_attrib == None: 
-                                            a_new_attrib = re.search("""<a[\sa-zA-Z0-9="\\'.,:&#\)\(;/_-]*>{1}""", a_text)
+                                    pass
+                                
+                                # in case, no font tags and no start-text of p tag
+                                if p_text == None and rts[0] == 0:
+                                    check_str = p_tag_string.replace('\n', '')
+                                    check_str = check_str.replace('<br/>', ' ')
+                                    check_str = check_str.replace('<br>', ' ')
+                                    if len(check_str) <= 90:
+                                        output_text = check_str
                                     else:
-                                        pass
-                                    if a_new_text == None or check_str == '':
-                                        # get a tag html string
-                                        a_new_text = etree.tostring(a_new, encoding="utf-8").decode('utf-8')
-                                        # remove newline char
-                                        a_new_text = a_new_text.replace('\n', '')
-                                        # replace multi spaces to single space
-                                        a_new_text = " ".join(a_new_text.split())
-                                        # move close tag and tail: </a>xxxx
-                                        a_new_text = re.sub('</a>.*', '', a_new_text)
-                                        # get a tag atrributes string
-                                        a_new_attrib = re.search("""<a[\sa-zA-Z0-9="'.:&\)\(;/_-]*>{1}""", a_new_text)
-                                        if a_new_attrib == None: 
-                                            a_new_attrib = re.search("""<a[\sa-zA-Z0-9="\\'.,:&\)\(;/_-]*>{1}""", a_new_text)
-                                        # move open tag 
-                                        a_new_text = re.sub("""<a[\sa-zA-Z0-9="\\'.,:&#\)\(;/_-]*>{1}""", '', a_new_text)
-                                        # move child open tag <font>
-                                        a_new_text = re.sub("""<font[\sa-zA-Z0-9="'&#.,!:;/_-]*>""", '', a_new_text)
-                                        # move close tag
-                                        a_new_text = re.sub('</font>', '', a_new_text)
-                                        # move child open tag <span>
-                                        a_new_text = re.sub("""<span[\sa-zA-Z0-9="'#.,!:;/_-]*>""", '', a_new_text)
-                                        # move close tag
-                                        a_new_text = re.sub('</span>', '', a_new_text)
+                                        output_text = check_str[:90]
+                                    print('-'*40)
+                                    print('Warning, danger handle the p <tag> : %s' % output_text)
+                                    a_newlist =[]
+                                    involk_tagbyname(p_single, 'a', a_newlist)
+                                    b_newlist =[]
+                                    involk_tagbyname(p_single, 'b', b_newlist)
+                                    img_newlist = []
+                                    involk_tagbyname(p_single, 'img', img_newlist)
+                                    span_newlist = []
+                                    involk_tagbyname(p_single, 'span', span_newlist)
+                                    map_newlist = []
+                                    involk_tagbyname(p_single, 'map', map_newlist)
+                                    # get string before p close tag
+                                    p_before_close = re.search("[\sa-zA-Z0-9]*</p>$", check_str)
+                                    # get matched string
+                                    if p_before_close != None:
+                                        # strip </p>
+                                        p_before_close_string = p_before_close.group(0).rstrip('</p>')
                                     else:
-                                        pass
-                                        
-                                    a_new_text = a_new_text.replace('\n', '')
-                                    a_new_text = a_new_text.replace('<br/>', ' ')
-                                    a_new_text = a_new_text.replace('<br>', ' ')
-                                    a_new_text = a_new_text.lstrip()
-                                    a_new_text = a_new_text.rstrip()
-                                    a_new_text = " ".join(a_new_text.split())
-                                    a_new_text = a_new_text.replace('"', "'")
-                                    a_new_href = a_new.get('href') or ''
-                                    a_new_tranlate_text = '{% trans "' + a_new_text + '" %}'
-                                    with open(H2T_RECORD_A_TAG_HREF, 'a', encoding='utf-8') as h2tfile:
-                                        if 'javascript:void' in a_new_href:
-                                            a_new_href = a_new_attrib.group(0)
-                                        elif a_new_href == None: # <a name="xxx" id="xxx"/>
-                                            a_new_href = a_new_attrib.group(0)
-                                        new_record = os.path.join(relevant_base, single_file) + "||" + 'a||' + a_new_text + "||" +  a_new_tranlate_text + "||" + a_new_href + "\n"
-                                        h2tfile.write(new_record)
-                                img_newlist = []
-                                involk_tagbyname(p_single, 'img', img_newlist)
-                                for img_new in img_newlist:
-                                    img_new_attrib = img_new.attrib
-                                    with open(H2T_RECORD_A_TAG_HREF, 'a', encoding='utf-8') as h2tfile:
-                                        new_record = os.path.join(relevant_base, single_file) + "||" + 'img||' + str(img_new_attrib) + "\n"
-                                        h2tfile.write(new_record)
-                            else:
-                                pass
-                            
-                            if b_process == True:
-                                # delete all sub tags, object levels
-                                involk_handler(p_single, [0]*6, True)
-                                # delete all sub tags, string levels
-                                p_tag_string = p_tag_string.replace('\n', '')
-                                p_tag_string = p_tag_string.replace('&#10;', '')
-                                p_tag_string = p_tag_string.replace('&#9;', ' ')
-                                p_tag_string = p_tag_string.replace('<br/>', ' ')
-                                p_tag_string = p_tag_string.replace('<br>', ' ')
-                                p_tag_string = " ".join(p_tag_string.split())
-                                # move some uncessary symbols : font
-                                p_tag_string = re.sub("""<font[\sa-zA-Z0-9="'&#.,!:;/_-]*>""", '[', p_tag_string)
-                                p_tag_string = re.sub('</font>', ']', p_tag_string)
-                                # move some uncessary symbols : span
-                                p_tag_string = re.sub("""<span[\sa-zA-Z0-9="'#.,!:;/_-]*>""", '[', p_tag_string)
-                                p_tag_string = re.sub('</span>', ']', p_tag_string)
-                                # move some uncessary symbols : b
-                                p_tag_string = re.sub("""<b[\sa-zA-Z0-9="'#.,!:;/_-]*>""", '[', p_tag_string)
-                                p_tag_string = re.sub('</b>', ']', p_tag_string)
-                                #replace img tag to @
-                                p_tag_string = re.sub("""<img[\sa-zA-Z0-9="'.:;/_-]*>""", '@', p_tag_string)
-                                #replace a tag to #
-                                p_tag_string = re.sub('</a>', '#', p_tag_string)
-                                #p_tag_string = re.sub("""<a[\sa-zA-Z0-9="'.:&\)\(;/_-]*>""", '#', p_tag_string)
-                                p_tag_string = re.sub("""<a[\sa-zA-Z0-9="\\'.,:&#\)\(;/_-]*>{1}""", '#', p_tag_string)
-                                #repalce " into '
-                                p_tag_string = p_tag_string.replace('"', "'")
-                                p_tag_string = re.sub('</p>', '', p_tag_string)
-                                p_tag_string = re.sub("""<p[\sa-zA-Z0-9="'#&.:;/_-]*>""", '', p_tag_string)
-                                # add the translate flag
-                                p_tag_string = p_tag_string.lstrip()
-                                p_tag_string = p_tag_string.rstrip()
-                                p_tag_check_string = p_tag_string.replace("X", '')
-                                p_tag_check_string = p_tag_check_string.replace(" ", '')
-                                if p_tag_check_string != "" and "XXX" != p_tag_string:
-                                    p_single.text = '{% trans "' + p_tag_string + '" %}'
-                                # set class attribute of p tag
-                                if b_full_italic == True:
-                                    p_single.classes |= ['pitalic']
+                                        # set empty
+                                        p_before_close_string = ''
+                                    if len(a_newlist) != 0:
+                                        b_process = True
+                                    elif len(a_newlist) != 0:
+                                        b_process = True
+                                    elif len(span_newlist) != 0:
+                                        b_process = True
+                                    elif len(img_newlist) != 0 and p_before_close_string != '' and len(map_newlist) == 0:
+                                        b_process = True
+                                    else: #input_text = input("Press input any char to continous procsessing...")
+                                        b_process = False
                                 else:
                                     a = 0
-                            else:
-                                p_tag_string = etree.tostring(p_single, encoding="utf-8").decode('utf-8')
-                                print('-'*40)
-                                if len(p_tag_string) > 80:
-                                    print('Error, can not handle the p <tag> : %s' % p_tag_string[:79])
+                                # p tag has sub tag: a
+                                if sum(rts[1:3]) != 0 and b_process == True:
+                                    #
+                                    b_processed = True
+                                    # get a tags list
+                                    a_newlist =[]
+                                    involk_tagbyname(p_single, 'a', a_newlist)
+                                    for a_new in a_newlist:
+                                        a_new_text = a_new.text
+                                        check_str = ''
+                                        if a_new_text != None:
+                                            # replace newline symbols
+                                            check_str = a_new_text.replace('\n', '')
+                                            # replace dobble spaces 
+                                            check_str = check_str.replace(' ', '')
+                                            # get a tag html string
+                                            a_text = etree.tostring(a_new, encoding="utf-8").decode('utf-8')
+                                            # remove newline char
+                                            a_text = a_text.replace('\n', '')
+                                            # replace multi spaces to single space
+                                            a_text = " ".join(a_text.split())
+                                            # move close tag and tail: </a>xxxx
+                                            a_text = re.sub('</a>.*', '', a_text)
+                                            # get a tag atrributes string
+                                            a_new_attrib = re.search("""<a[\sa-zA-Z0-9="'.:&\)\(;/_-]*>{1}""", a_text)
+                                            if a_new_attrib == None: 
+                                                a_new_attrib = re.search("""<a[\sa-zA-Z0-9="\\'.,:&#\)\(;/_-]*>{1}""", a_text)
+                                        else:
+                                            pass
+                                        if a_new_text == None or check_str == '':
+                                            # get a tag html string
+                                            a_new_text = etree.tostring(a_new, encoding="utf-8").decode('utf-8')
+                                            # remove newline char
+                                            a_new_text = a_new_text.replace('\n', '')
+                                            # replace multi spaces to single space
+                                            a_new_text = " ".join(a_new_text.split())
+                                            # move close tag and tail: </a>xxxx
+                                            a_new_text = re.sub('</a>.*', '', a_new_text)
+                                            # get a tag atrributes string
+                                            a_new_attrib = re.search("""<a[\sa-zA-Z0-9="'.:&\)\(;/_-]*>{1}""", a_new_text)
+                                            if a_new_attrib == None: 
+                                                a_new_attrib = re.search("""<a[\sa-zA-Z0-9="\\'.,:&#\)\(;/_-]*>{1}""", a_new_text)
+                                            # move open tag 
+                                            a_new_text = re.sub("""<a[\sa-zA-Z0-9="\\'.,:&\)\(;/_-]*>{1}""", '', a_new_text)
+                                            # move child open tag <font>
+                                            a_new_text = re.sub("""<font[\sa-zA-Z0-9="'&#.,!:;/_-]*>""", '', a_new_text)
+                                            # move close tag
+                                            a_new_text = re.sub('</font>', '', a_new_text)
+                                            # move child open tag <span>
+                                            a_new_text = re.sub("""<span[\sa-zA-Z0-9="'#.,!:;/_-]*>""", '', a_new_text)
+                                            # move close tag
+                                            a_new_text = re.sub('</span>', '', a_new_text)
+                                        else:
+                                            pass
+                                            
+                                        a_new_text = a_new_text.replace('\n', '')
+                                        a_new_text = a_new_text.replace('<br/>', ' ')
+                                        a_new_text = a_new_text.replace('<br>', ' ')
+                                        a_new_text = a_new_text.lstrip()
+                                        a_new_text = a_new_text.rstrip()
+                                        a_new_text = " ".join(a_new_text.split())
+                                        a_new_text = a_new_text.replace('"', "'")
+                                        a_new_href = a_new.get('href') or ''
+                                        a_new_tranlate_text = '{% trans "' + a_new_text + '" %}'
+                                        with open(H2T_RECORD_A_TAG_HREF, 'a', encoding='utf-8') as h2tfile:
+                                            if 'javascript:void' in a_new_href:
+                                                a_new_href = a_new_attrib.group(0)
+                                            elif a_new_href == '': # <a name="xxx" id="xxx"/>
+                                                a_new_href = a_new_attrib.group(0)
+                                            new_record = os.path.join(relevant_base, single_file) + "||" + 'a||' + a_new_text + "||" +  a_new_tranlate_text + "||" + a_new_href + "\n"
+                                            h2tfile.write(new_record)
+                                    img_newlist = []
+                                    involk_tagbyname(p_single, 'img', img_newlist)
+                                    for img_new in img_newlist:
+                                        img_new_attrib = img_new.attrib
+                                        with open(H2T_RECORD_A_TAG_HREF, 'a', encoding='utf-8') as h2tfile:
+                                            new_record = os.path.join(relevant_base, single_file) + "||" + 'img||' + str(img_new_attrib) + "\n"
+                                            h2tfile.write(new_record)
                                 else:
-                                    print('Error, can not handle the p <tag> : %s' % p_tag_string)
-                        else:
-                            #
-                            b_processed = True
-                            # assume it has only texts
-                            p_text = p_single.text
-                            if p_text != None and p_text != "" and p_text != '\xa0':
-                                # move newlines symbols
-                                p_text = p_text.replace('\n', '')
-                                # move some uncessary symbols : br
-                                p_text = p_text.replace('<br/>', '')
-                                p_text = p_text.replace('<br>', '')
-                                # replace dobble spaces
-                                p_text = " ".join(p_text.split())
-                                #repalce " into '
-                                p_text = p_text.replace('"', "'")
-                                p_text = p_text.lstrip()
-                                p_text = p_text.rstrip()
-                                p_tag_check_string = p_text.replace("X", '')
-                                p_tag_check_string = p_tag_check_string.replace(" ", '')
-                                if p_tag_check_string != "" and "XXX" != p_text:
-                                    p_newtext = '{% trans "' + p_text + '" %}'
-                                    p_single.text = p_newtext
-                            else:
-                                pass
-                    
-                    ### case 2
-                    # handle all ul>li>p case
-                    p_lists = htmldoc.body.findall('ul/li/p')
+                                    pass
+                                
+                                if b_process == True:
+                                    # delete all sub tags, object levels
+                                    involk_handler(p_single, [0]*6, True)
+                                    # delete all sub tags, string levels
+                                    p_tag_string = p_tag_string.replace('\n', '')
+                                    p_tag_string = p_tag_string.replace('&#10;', '')
+                                    p_tag_string = p_tag_string.replace('&#9;', ' ')
+                                    p_tag_string = p_tag_string.replace('<br/>', ' ')
+                                    p_tag_string = p_tag_string.replace('<br>', ' ')
+                                    p_tag_string = " ".join(p_tag_string.split())
+                                    # move some uncessary symbols : font
+                                    p_tag_string = re.sub("""<font[\sa-zA-Z0-9="'&#.,!:;/_-]*>""", '[', p_tag_string)
+                                    p_tag_string = re.sub('</font>', ']', p_tag_string)
+                                    # move some uncessary symbols : span
+                                    p_tag_string = re.sub("""<span[\sa-zA-Z0-9="'#.,!:;/_-]*>""", '[', p_tag_string)
+                                    p_tag_string = re.sub('</span>', ']', p_tag_string)
+                                    # move some uncessary symbols : b
+                                    p_tag_string = re.sub("""<b[\sa-zA-Z0-9="'#.,!:;/_-]*>""", '[', p_tag_string)
+                                    p_tag_string = re.sub('</b>', ']', p_tag_string)
+                                    #replace img tag to @
+                                    p_tag_string = re.sub("""<img[\sa-zA-Z0-9="'.:;/_-]*>""", '@', p_tag_string)
+                                    #replace a tag to #
+                                    p_tag_string = re.sub('</a>', '#', p_tag_string)
+                                    #p_tag_string = re.sub("""<a[\sa-zA-Z0-9="'.:&\)\(;/_-]*>""", '#', p_tag_string)
+                                    p_tag_string = re.sub("""<a[\sa-zA-Z0-9="\\'.,:&#\)\(;/_-]*>{1}""", '#', p_tag_string)
+                                    #repalce " into '
+                                    p_tag_string = p_tag_string.replace('"', "'")
+                                    p_tag_string = re.sub('</p>', '', p_tag_string)
+                                    p_tag_string = re.sub("""<p[\sa-zA-Z0-9="'#&.:;/_-]*>""", '', p_tag_string)
+                                    # add the translate flag
+                                    p_tag_string = p_tag_string.lstrip()
+                                    p_tag_string = p_tag_string.rstrip()
+                                    p_tag_check_string = p_tag_string.replace("X", '')
+                                    p_tag_check_string = p_tag_check_string.replace(" ", '')
+                                    if p_tag_check_string != "" and "XXX" != p_tag_string:
+                                        p_single.text = '{% trans "' + p_tag_string + '" %}'
+                                    # set class attribute of p tag
+                                    if b_full_italic == True:
+                                        p_single.classes |= ['pitalic']
+                                    else:
+                                        a = 0
+                                else:
+                                    p_tag_string = etree.tostring(p_single, encoding="utf-8").decode('utf-8')
+                                    print('-'*40)
+                                    if len(p_tag_string) > 80:
+                                        print('Error, can not handle the p <tag> : %s' % p_tag_string[:79])
+                                    else:
+                                        print('Error, can not handle the p <tag> : %s' % p_tag_string)
 
-                    for idx, p_single in enumerate(p_lists):
-                        # set process flag
-                        b_process = True
-                        # set italic flag
-                        b_full_italic = False
-                        # get atrribs of p_single
-                        p_attrib = p_single.attrib
-                        # 
-                        rts = [0]*6
-                        involk_handler(p_single, rts, False)
-                        # check if p tag has sub tags: font, a, b, br, or span 
-                        if sum(rts[0:6]) != 0:
-                            #
-                            b_processed = True
-                            # get text of p_single
-                            p_text = p_single.text
-                            
-                            # get pure html code of p tag
-                            p_tag_string = etree.tostring(p_single, encoding="utf-8").decode('utf-8')
-                            # p tag has sub tag: font
-                            if rts[0] != 0:
-                                if "font-style: italic;" in p_tag_string and rts[0] == 1:
-                                    if p_text == None:
-                                        b_full_italic = True
+                            else:
+                                #
+                                b_processed = True
+                                # assume it has only texts
+                                p_text = p_single.text
+                                if p_text != None and p_text != "" and p_text != '\xa0':
+                                    # move newlines symbols
+                                    p_text = p_text.replace('\n', '')
+                                    # move some uncessary symbols : br
+                                    p_text = p_text.replace('<br/>', '')
+                                    p_text = p_text.replace('<br>', '')
+                                    # replace dobble spaces
+                                    p_text = " ".join(p_text.split())
+                                    #repalce " into '
+                                    p_text = p_text.replace('"', "'")
+                                    p_text = p_text.lstrip()
+                                    p_text = p_text.rstrip()
+                                    p_tag_check_string = p_text.replace("X", '')
+                                    p_tag_check_string = p_tag_check_string.replace(" ", '')
+                                    if p_tag_check_string != "" and "XXX" != p_text:
+                                        p_newtext = '{% trans "' + p_text + '" %}'
+                                        p_single.text = p_newtext
+                                else:
+                                    pass
+                        
+                        ### case 3
+                        # handle all ol>li>p case
+                        p_lists = htmldoc.body.findall('ol/li/p')
+
+                        for idx, p_single in enumerate(p_lists):
+                            # set process flag
+                            b_process = True
+                            # set italic flag
+                            b_full_italic = False
+                            # get atrribs of p_single
+                            p_attrib = p_single.attrib
+                            # 
+                            rts = [0]*6
+                            involk_handler(p_single, rts, False)
+                            # check if p tag has sub tags: font, a, b, br, or span 
+                            if sum(rts[0:6]) != 0:
+                                #
+                                b_processed = True
+                                # get text of p_single
+                                p_text = p_single.text
+                                
+                                # get pure html code of p tag
+                                p_tag_string = etree.tostring(p_single, encoding="utf-8").decode('utf-8')
+                                # p tag has sub tag: font
+                                if rts[0] != 0:
+                                    if "font-style: italic;" in p_tag_string and rts[0] == 1:
+                                        if p_text == None:
+                                            b_full_italic = True
+                                        else:
+                                            b_full_italic = False
                                     else:
                                         b_full_italic = False
                                 else:
-                                    b_full_italic = False
-                            else:
-                                pass
-                            
-                            # in case, no font tags and no start-text of p tag
-                            if p_text == None and rts[0] == 0:
-                                check_str = p_tag_string.replace('\n', '')
-                                check_str = check_str.replace('<br/>', ' ')
-                                check_str = check_str.replace('<br>', ' ')
-                                if len(check_str) <= 90:
-                                    output_text = check_str
-                                else:
-                                    output_text = check_str[:90]
-                                print('-'*40)
-                                print('Warning, danger handle the p <tag> : %s' % output_text)
-                                a_newlist =[]
-                                involk_tagbyname(p_single, 'a', a_newlist)
-                                b_newlist =[]
-                                involk_tagbyname(p_single, 'b', b_newlist)
-                                img_newlist = []
-                                involk_tagbyname(p_single, 'img', img_newlist)
-                                span_newlist = []
-                                involk_tagbyname(p_single, 'span', span_newlist)
-                                map_newlist = []
-                                involk_tagbyname(p_single, 'map', map_newlist)
-                                # get string before p close tag
-                                p_before_close = re.search("[\sa-zA-Z0-9]*</p>$", check_str)
-                                # get matched string
-                                if p_before_close != None:
-                                    # strip </p>
-                                    p_before_close_string = p_before_close.group(0).rstrip('</p>')
-                                else:
-                                    # set empty
-                                    p_before_close_string = ''
-                                if len(a_newlist) != 0:
-                                    b_process = True
-                                elif len(a_newlist) != 0:
-                                    b_process = True
-                                elif len(span_newlist) != 0:
-                                    b_process = True
-                                elif len(img_newlist) != 0 and p_before_close_string != '' and len(map_newlist) == 0:
-                                    b_process = True
-                                else: #input_text = input("Press input any char to continous procsessing...")
-                                    b_process = False
-                            else:
-                                a = 0
-                            # p tag has sub tag: a
-                            if sum(rts[1:3]) != 0 and b_process == True:
-                                #
-                                b_processed = True
-                                # get a tags list
-                                a_newlist =[]
-                                involk_tagbyname(p_single, 'a', a_newlist)
-                                for a_new in a_newlist:
-                                    a_new_text = a_new.text
-                                    check_str = ''
-                                    if a_new_text != None:
-                                        # replace newline symbols
-                                        check_str = a_new_text.replace('\n', '')
-                                        # replace dobble spaces 
-                                        check_str = check_str.replace(' ', '')
-                                        # get a tag html string
-                                        a_text = etree.tostring(a_new, encoding="utf-8").decode('utf-8')
-                                        # remove newline char
-                                        a_text = a_text.replace('\n', '')
-                                        # replace multi spaces to single space
-                                        a_text = " ".join(a_text.split())
-                                        # move close tag and tail: </a>xxxx
-                                        a_text = re.sub('</a>.*', '', a_text)
-                                        # get a tag atrributes string
-                                        a_new_attrib = re.search("""<a[\sa-zA-Z0-9="'.:&\)\(;/_-]*>{1}""", a_text)
-                                        if a_new_attrib == None: 
-                                            a_new_attrib = re.search("""<a[\sa-zA-Z0-9="\\'.,:&#\)\(;/_-]*>{1}""", a_text)
+                                    pass
+                                
+                                # in case, no font tags and no start-text of p tag
+                                if p_text == None and rts[0] == 0:
+                                    check_str = p_tag_string.replace('\n', '')
+                                    check_str = check_str.replace('<br/>', ' ')
+                                    check_str = check_str.replace('<br>', ' ')
+                                    if len(check_str) <= 90:
+                                        output_text = check_str
                                     else:
-                                        pass
-                                    if a_new_text == None or check_str == '':
-                                        # get a tag html string
-                                        a_new_text = etree.tostring(a_new, encoding="utf-8").decode('utf-8')
-                                        # remove newline char
-                                        a_new_text = a_new_text.replace('\n', '')
-                                        # replace multi spaces to single space
-                                        a_new_text = " ".join(a_new_text.split())
-                                        # move close tag and tail: </a>xxxx
-                                        a_new_text = re.sub('</a>.*', '', a_new_text)
-                                        # get a tag atrributes string
-                                        a_new_attrib = re.search("""<a[\sa-zA-Z0-9="'.:&\)\(;/_-]*>{1}""", a_new_text)
-                                        if a_new_attrib == None: 
-                                            a_new_attrib = re.search("""<a[\sa-zA-Z0-9="\\'.,:&#\)\(;/_-]*>{1}""", a_new_text)
-                                        # move open tag 
-                                        a_new_text = re.sub("""<a[\sa-zA-Z0-9="\\'.,:&\)\(;/_-]*>{1}""", '', a_new_text)
-                                        # move child open tag <font>
-                                        a_new_text = re.sub("""<font[\sa-zA-Z0-9="'&#.,!:;/_-]*>""", '', a_new_text)
-                                        # move close tag
-                                        a_new_text = re.sub('</font>', '', a_new_text)
-                                        # move child open tag <span>
-                                        a_new_text = re.sub("""<span[\sa-zA-Z0-9="'#.,!:;/_-]*>""", '', a_new_text)
-                                        # move close tag
-                                        a_new_text = re.sub('</span>', '', a_new_text)
+                                        output_text = check_str[:90]
+                                    print('-'*40)
+                                    print('Warning, danger handle the p <tag> : %s' % output_text)
+                                    a_newlist =[]
+                                    involk_tagbyname(p_single, 'a', a_newlist)
+                                    b_newlist =[]
+                                    involk_tagbyname(p_single, 'b', b_newlist)
+                                    img_newlist = []
+                                    involk_tagbyname(p_single, 'img', img_newlist)
+                                    span_newlist = []
+                                    involk_tagbyname(p_single, 'span', span_newlist)
+                                    map_newlist = []
+                                    involk_tagbyname(p_single, 'map', map_newlist)
+                                    # get string before p close tag
+                                    p_before_close = re.search("[\sa-zA-Z0-9]*</p>$", check_str)
+                                    # get matched string
+                                    if p_before_close != None:
+                                        # strip </p>
+                                        p_before_close_string = p_before_close.group(0).rstrip('</p>')
                                     else:
-                                        pass
-                                        
-                                    a_new_text = a_new_text.replace('\n', '')
-                                    a_new_text = a_new_text.replace('<br/>', ' ')
-                                    a_new_text = a_new_text.replace('<br>', ' ')
-                                    a_new_text = a_new_text.lstrip()
-                                    a_new_text = a_new_text.rstrip()
-                                    a_new_text = " ".join(a_new_text.split())
-                                    a_new_text = a_new_text.replace('"', "'")
-                                    a_new_href = a_new.get('href') or ''
-                                    a_new_tranlate_text = '{% trans "' + a_new_text + '" %}'
-                                    with open(H2T_RECORD_A_TAG_HREF, 'a', encoding='utf-8') as h2tfile:
-                                        if 'javascript:void' in a_new_href:
-                                            a_new_href = a_new_attrib.group(0)
-                                        elif a_new_href == '': # <a name="xxx" id="xxx"/>
-                                            a_new_href = a_new_attrib.group(0)
-                                        new_record = os.path.join(relevant_base, single_file) + "||" + 'a||' + a_new_text + "||" +  a_new_tranlate_text + "||" + a_new_href + "\n"
-                                        h2tfile.write(new_record)
-                                img_newlist = []
-                                involk_tagbyname(p_single, 'img', img_newlist)
-                                for img_new in img_newlist:
-                                    img_new_attrib = img_new.attrib
-                                    with open(H2T_RECORD_A_TAG_HREF, 'a', encoding='utf-8') as h2tfile:
-                                        new_record = os.path.join(relevant_base, single_file) + "||" + 'img||' + str(img_new_attrib) + "\n"
-                                        h2tfile.write(new_record)
-                            else:
-                                pass
-                            
-                            if b_process == True:
-                                # delete all sub tags, object levels
-                                involk_handler(p_single, [0]*6, True)
-                                # delete all sub tags, string levels
-                                p_tag_string = p_tag_string.replace('\n', '')
-                                p_tag_string = p_tag_string.replace('&#10;', '')
-                                p_tag_string = p_tag_string.replace('&#9;', ' ')
-                                p_tag_string = p_tag_string.replace('<br/>', ' ')
-                                p_tag_string = p_tag_string.replace('<br>', ' ')
-                                p_tag_string = " ".join(p_tag_string.split())
-                                # move some uncessary symbols : font
-                                p_tag_string = re.sub("""<font[\sa-zA-Z0-9="'&#.,!:;/_-]*>""", '[', p_tag_string)
-                                p_tag_string = re.sub('</font>', ']', p_tag_string)
-                                # move some uncessary symbols : span
-                                p_tag_string = re.sub("""<span[\sa-zA-Z0-9="'#.,!:;/_-]*>""", '[', p_tag_string)
-                                p_tag_string = re.sub('</span>', ']', p_tag_string)
-                                # move some uncessary symbols : b
-                                p_tag_string = re.sub("""<b[\sa-zA-Z0-9="'#.,!:;/_-]*>""", '[', p_tag_string)
-                                p_tag_string = re.sub('</b>', ']', p_tag_string)
-                                #replace img tag to @
-                                p_tag_string = re.sub("""<img[\sa-zA-Z0-9="'.:;/_-]*>""", '@', p_tag_string)
-                                #replace a tag to #
-                                p_tag_string = re.sub('</a>', '#', p_tag_string)
-                                #p_tag_string = re.sub("""<a[\sa-zA-Z0-9="'.:&\)\(;/_-]*>""", '#', p_tag_string)
-                                p_tag_string = re.sub("""<a[\sa-zA-Z0-9="\\'.,:&#\)\(;/_-]*>{1}""", '#', p_tag_string)
-                                #repalce " into '
-                                p_tag_string = p_tag_string.replace('"', "'")
-                                p_tag_string = re.sub('</p>', '', p_tag_string)
-                                p_tag_string = re.sub("""<p[\sa-zA-Z0-9="'#&.:;/_-]*>""", '', p_tag_string)
-                                # add the translate flag
-                                p_tag_string = p_tag_string.lstrip()
-                                p_tag_string = p_tag_string.rstrip()
-                                p_tag_check_string = p_tag_string.replace("X", '')
-                                p_tag_check_string = p_tag_check_string.replace(" ", '')
-                                if p_tag_check_string != "" and "XXX" != p_tag_string:
-                                    p_single.text = '{% trans "' + p_tag_string + '" %}'
-                                # set class attribute of p tag
-                                if b_full_italic == True:
-                                    p_single.classes |= ['pitalic']
+                                        # set empty
+                                        p_before_close_string = ''
+                                    if len(a_newlist) != 0:
+                                        b_process = True
+                                    elif len(a_newlist) != 0:
+                                        b_process = True
+                                    elif len(span_newlist) != 0:
+                                        b_process = True
+                                    elif len(img_newlist) != 0 and p_before_close_string != '' and len(map_newlist) == 0:
+                                        b_process = True
+                                    else: #input_text = input("Press input any char to continous procsessing...")
+                                        b_process = False
                                 else:
                                     a = 0
-                            else:
-                                p_tag_string = etree.tostring(p_single, encoding="utf-8").decode('utf-8')
-                                print('-'*40)
-                                if len(p_tag_string) > 80:
-                                    print('Error, can not handle the p <tag> : %s' % p_tag_string[:79])
+                                # p tag has sub tag: a
+                                if sum(rts[1:3]) != 0 and b_process == True:
+                                    #
+                                    b_processed = True
+                                    # get a tags list
+                                    a_newlist =[]
+                                    involk_tagbyname(p_single, 'a', a_newlist)
+                                    for a_new in a_newlist:
+                                        a_new_text = a_new.text
+                                        check_str = ''
+                                        if a_new_text != None:
+                                            # replace newline symbols
+                                            check_str = a_new_text.replace('\n', '')
+                                            # replace dobble spaces 
+                                            check_str = check_str.replace(' ', '')
+                                            # get a tag html string
+                                            a_text = etree.tostring(a_new, encoding="utf-8").decode('utf-8')
+                                            # remove newline char
+                                            a_text = a_text.replace('\n', '')
+                                            # replace multi spaces to single space
+                                            a_text = " ".join(a_text.split())
+                                            # move close tag and tail: </a>xxxx
+                                            a_text = re.sub('</a>.*', '', a_text)
+                                            # get a tag atrributes string
+                                            a_new_attrib = re.search("""<a[\sa-zA-Z0-9="'.:&\)\(;/_-]*>{1}""", a_text)
+                                            if a_new_attrib == None: 
+                                                a_new_attrib = re.search("""<a[\sa-zA-Z0-9="\\'.,:&#\)\(;/_-]*>{1}""", a_text)
+                                        else:
+                                            pass
+                                        if a_new_text == None or check_str == '':
+                                            # get a tag html string
+                                            a_new_text = etree.tostring(a_new, encoding="utf-8").decode('utf-8')
+                                            # remove newline char
+                                            a_new_text = a_new_text.replace('\n', '')
+                                            # replace multi spaces to single space
+                                            a_new_text = " ".join(a_new_text.split())
+                                            # move close tag and tail: </a>xxxx
+                                            a_new_text = re.sub('</a>.*', '', a_new_text)
+                                            # get a tag atrributes string
+                                            a_new_attrib = re.search("""<a[\sa-zA-Z0-9="'.:&\)\(;/_-]*>{1}""", a_new_text)
+                                            if a_new_attrib == None: 
+                                                a_new_attrib = re.search("""<a[\sa-zA-Z0-9="\\'.,:&#\)\(;/_-]*>{1}""", a_new_text)
+                                            # move open tag 
+                                            a_new_text = re.sub("""<a[\sa-zA-Z0-9="\\'.,:&\)\(;/_-]*>{1}""", '', a_new_text)
+                                            # move child open tag <font>
+                                            a_new_text = re.sub("""<font[\sa-zA-Z0-9="'&#.,!:;/_-]*>""", '', a_new_text)
+                                            # move close tag
+                                            a_new_text = re.sub('</font>', '', a_new_text)
+                                            # move child open tag <span>
+                                            a_new_text = re.sub("""<span[\sa-zA-Z0-9="'#.,!:;/_-]*>""", '', a_new_text)
+                                            # move close tag
+                                            a_new_text = re.sub('</span>', '', a_new_text)
+                                        else:
+                                            pass
+                                            
+                                        a_new_text = a_new_text.replace('\n', '')
+                                        a_new_text = a_new_text.replace('<br/>', ' ')
+                                        a_new_text = a_new_text.replace('<br>', ' ')
+                                        a_new_text = a_new_text.lstrip()
+                                        a_new_text = a_new_text.rstrip()
+                                        a_new_text = " ".join(a_new_text.split())
+                                        a_new_text = a_new_text.replace('"', "'")
+                                        a_new_href = a_new.get('href') or ''
+                                        a_new_tranlate_text = '{% trans "' + a_new_text + '" %}'
+                                        with open(H2T_RECORD_A_TAG_HREF, 'a', encoding='utf-8') as h2tfile:
+                                            if 'javascript:void' in a_new_href:
+                                                a_new_href = a_new_attrib.group(0)
+                                            elif a_new_href == '': # <a name="xxx" id="xxx"/>
+                                                a_new_href = a_new_attrib.group(0)
+                                            new_record = os.path.join(relevant_base, single_file) + "||" + 'a||' + a_new_text + "||" +  a_new_tranlate_text + "||" + a_new_href + "\n"
+                                            h2tfile.write(new_record)
+                                    img_newlist = []
+                                    involk_tagbyname(p_single, 'img', img_newlist)
+                                    for img_new in img_newlist:
+                                        img_new_attrib = img_new.attrib
+                                        with open(H2T_RECORD_A_TAG_HREF, 'a', encoding='utf-8') as h2tfile:
+                                            new_record = os.path.join(relevant_base, single_file) + "||" + 'img||' + str(img_new_attrib) + "\n"
+                                            h2tfile.write(new_record)
                                 else:
-                                    print('Error, can not handle the p <tag> : %s' % p_tag_string)
-
-                        else:
-                            #
-                            b_processed = True
-                            # assume it has only texts
-                            p_text = p_single.text
-                            if p_text != None and p_text != "" and p_text != '\xa0':
-                                # move newlines symbols
-                                p_text = p_text.replace('\n', '')
-                                # move some uncessary symbols : br
-                                p_text = p_text.replace('<br/>', '')
-                                p_text = p_text.replace('<br>', '')
-                                # replace dobble spaces
-                                p_text = " ".join(p_text.split())
-                                #repalce " into '
-                                p_text = p_text.replace('"', "'")
-                                p_text = p_text.lstrip()
-                                p_text = p_text.rstrip()
-                                p_tag_check_string = p_text.replace("X", '')
-                                p_tag_check_string = p_tag_check_string.replace(" ", '')
-                                if p_tag_check_string != "" and "XXX" != p_text:
-                                    p_newtext = '{% trans "' + p_text + '" %}'
-                                    p_single.text = p_newtext
-                            else:
-                                pass
-                    
-                    ### case 3
-                    # handle all ol>li>p case
-                    p_lists = htmldoc.body.findall('ol/li/p')
-
-                    for idx, p_single in enumerate(p_lists):
-                        # set process flag
-                        b_process = True
-                        # set italic flag
-                        b_full_italic = False
-                        # get atrribs of p_single
-                        p_attrib = p_single.attrib
-                        # 
-                        rts = [0]*6
-                        involk_handler(p_single, rts, False)
-                        # check if p tag has sub tags: font, a, b, br, or span 
-                        if sum(rts[0:6]) != 0:
-                            #
-                            b_processed = True
-                            # get text of p_single
-                            p_text = p_single.text
-                            
-                            # get pure html code of p tag
-                            p_tag_string = etree.tostring(p_single, encoding="utf-8").decode('utf-8')
-                            # p tag has sub tag: font
-                            if rts[0] != 0:
-                                if "font-style: italic;" in p_tag_string and rts[0] == 1:
-                                    if p_text == None:
-                                        b_full_italic = True
+                                    pass
+                                
+                                if b_process == True:
+                                    # delete all sub tags, object levels
+                                    involk_handler(p_single, [0]*6, True)
+                                    # delete all sub tags, string levels
+                                    p_tag_string = p_tag_string.replace('\n', '')
+                                    p_tag_string = p_tag_string.replace('&#10;', '')
+                                    p_tag_string = p_tag_string.replace('&#9;', ' ')
+                                    p_tag_string = p_tag_string.replace('<br/>', ' ')
+                                    p_tag_string = p_tag_string.replace('<br>', ' ')
+                                    p_tag_string = " ".join(p_tag_string.split())
+                                    # move some uncessary symbols : font
+                                    p_tag_string = re.sub("""<font[\sa-zA-Z0-9="'&#.,!:;/_-]*>""", '[', p_tag_string)
+                                    p_tag_string = re.sub('</font>', ']', p_tag_string)
+                                    # move some uncessary symbols : span
+                                    p_tag_string = re.sub("""<span[\sa-zA-Z0-9="'#.,!:;/_-]*>""", '[', p_tag_string)
+                                    p_tag_string = re.sub('</span>', ']', p_tag_string)
+                                    # move some uncessary symbols : b
+                                    p_tag_string = re.sub("""<b[\sa-zA-Z0-9="'#.,!:;/_-]*>""", '[', p_tag_string)
+                                    p_tag_string = re.sub('</b>', ']', p_tag_string)
+                                    #replace img tag to @
+                                    p_tag_string = re.sub("""<img[\sa-zA-Z0-9="'.:;/_-]*>""", '@', p_tag_string)
+                                    #replace a tag to #
+                                    p_tag_string = re.sub('</a>', '#', p_tag_string)
+                                    #p_tag_string = re.sub("""<a[\sa-zA-Z0-9="'.:&\)\(;/_-]*>""", '#', p_tag_string)
+                                    p_tag_string = re.sub("""<a[\sa-zA-Z0-9="\\'.,:&#\)\(;/_-]*>{1}""", '#', p_tag_string)
+                                    #repalce " into '
+                                    p_tag_string = p_tag_string.replace('"', "'")
+                                    p_tag_string = re.sub('</p>', '', p_tag_string)
+                                    p_tag_string = re.sub("""<p[\sa-zA-Z0-9="'#&.:;/_-]*>""", '', p_tag_string)
+                                    # add the translate flag
+                                    p_tag_string = p_tag_string.lstrip()
+                                    p_tag_string = p_tag_string.rstrip()
+                                    p_tag_check_string = p_tag_string.replace("X", '')
+                                    p_tag_check_string = p_tag_check_string.replace(" ", '')
+                                    if p_tag_check_string != "" and "XXX" != p_tag_string:
+                                        p_single.text = '{% trans "' + p_tag_string + '" %}'
+                                    # set class attribute of p tag
+                                    if b_full_italic == True:
+                                        p_single.classes |= ['pitalic']
                                     else:
-                                        b_full_italic = False
+                                        a = 0
                                 else:
-                                    b_full_italic = False
+                                    p_tag_string = etree.tostring(p_single, encoding="utf-8").decode('utf-8')
+                                    print('-'*40)
+                                    if len(p_tag_string) > 80:
+                                        print('Error, can not handle the p <tag> : %s' % p_tag_string[:79])
+                                    else:
+                                        print('Error, can not handle the p <tag> : %s' % p_tag_string)
+
                             else:
-                                pass
-                            
-                            # in case, no font tags and no start-text of p tag
-                            if p_text == None and rts[0] == 0:
-                                check_str = p_tag_string.replace('\n', '')
-                                check_str = check_str.replace('<br/>', ' ')
-                                check_str = check_str.replace('<br>', ' ')
-                                if len(check_str) <= 90:
-                                    output_text = check_str
-                                else:
-                                    output_text = check_str[:90]
-                                print('-'*40)
-                                print('Warning, danger handle the p <tag> : %s' % output_text)
-                                a_newlist =[]
-                                involk_tagbyname(p_single, 'a', a_newlist)
-                                b_newlist =[]
-                                involk_tagbyname(p_single, 'b', b_newlist)
-                                img_newlist = []
-                                involk_tagbyname(p_single, 'img', img_newlist)
-                                span_newlist = []
-                                involk_tagbyname(p_single, 'span', span_newlist)
-                                map_newlist = []
-                                involk_tagbyname(p_single, 'map', map_newlist)
-                                # get string before p close tag
-                                p_before_close = re.search("[\sa-zA-Z0-9]*</p>$", check_str)
-                                # get matched string
-                                if p_before_close != None:
-                                    # strip </p>
-                                    p_before_close_string = p_before_close.group(0).rstrip('</p>')
-                                else:
-                                    # set empty
-                                    p_before_close_string = ''
-                                if len(a_newlist) != 0:
-                                    b_process = True
-                                elif len(a_newlist) != 0:
-                                    b_process = True
-                                elif len(span_newlist) != 0:
-                                    b_process = True
-                                elif len(img_newlist) != 0 and p_before_close_string != '' and len(map_newlist) == 0:
-                                    b_process = True
-                                else: #input_text = input("Press input any char to continous procsessing...")
-                                    b_process = False
-                            else:
-                                a = 0
-                            # p tag has sub tag: a
-                            if sum(rts[1:3]) != 0 and b_process == True:
                                 #
                                 b_processed = True
-                                # get a tags list
-                                a_newlist =[]
-                                involk_tagbyname(p_single, 'a', a_newlist)
-                                for a_new in a_newlist:
-                                    a_new_text = a_new.text
-                                    check_str = ''
-                                    if a_new_text != None:
-                                        # replace newline symbols
-                                        check_str = a_new_text.replace('\n', '')
-                                        # replace dobble spaces 
-                                        check_str = check_str.replace(' ', '')
-                                        # get a tag html string
-                                        a_text = etree.tostring(a_new, encoding="utf-8").decode('utf-8')
-                                        # remove newline char
-                                        a_text = a_text.replace('\n', '')
-                                        # replace multi spaces to single space
-                                        a_text = " ".join(a_text.split())
-                                        # move close tag and tail: </a>xxxx
-                                        a_text = re.sub('</a>.*', '', a_text)
-                                        # get a tag atrributes string
-                                        a_new_attrib = re.search("""<a[\sa-zA-Z0-9="'.:&\)\(;/_-]*>{1}""", a_text)
-                                        if a_new_attrib == None: 
-                                            a_new_attrib = re.search("""<a[\sa-zA-Z0-9="\\'.,:&#\)\(;/_-]*>{1}""", a_text)
-                                    else:
-                                        pass
-                                    if a_new_text == None or check_str == '':
-                                        # get a tag html string
-                                        a_new_text = etree.tostring(a_new, encoding="utf-8").decode('utf-8')
-                                        # remove newline char
-                                        a_new_text = a_new_text.replace('\n', '')
-                                        # replace multi spaces to single space
-                                        a_new_text = " ".join(a_new_text.split())
-                                        # move close tag and tail: </a>xxxx
-                                        a_new_text = re.sub('</a>.*', '', a_new_text)
-                                        # get a tag atrributes string
-                                        a_new_attrib = re.search("""<a[\sa-zA-Z0-9="'.:&\)\(;/_-]*>{1}""", a_new_text)
-                                        if a_new_attrib == None: 
-                                            a_new_attrib = re.search("""<a[\sa-zA-Z0-9="\\'.,:&#\)\(;/_-]*>{1}""", a_new_text)
-                                        # move open tag 
-                                        a_new_text = re.sub("""<a[\sa-zA-Z0-9="\\'.,:&\)\(;/_-]*>{1}""", '', a_new_text)
-                                        # move child open tag <font>
-                                        a_new_text = re.sub("""<font[\sa-zA-Z0-9="'&#.,!:;/_-]*>""", '', a_new_text)
-                                        # move close tag
-                                        a_new_text = re.sub('</font>', '', a_new_text)
-                                        # move child open tag <span>
-                                        a_new_text = re.sub("""<span[\sa-zA-Z0-9="'#.,!:;/_-]*>""", '', a_new_text)
-                                        # move close tag
-                                        a_new_text = re.sub('</span>', '', a_new_text)
-                                    else:
-                                        pass
-                                        
-                                    a_new_text = a_new_text.replace('\n', '')
-                                    a_new_text = a_new_text.replace('<br/>', ' ')
-                                    a_new_text = a_new_text.replace('<br>', ' ')
-                                    a_new_text = a_new_text.lstrip()
-                                    a_new_text = a_new_text.rstrip()
-                                    a_new_text = " ".join(a_new_text.split())
-                                    a_new_text = a_new_text.replace('"', "'")
-                                    a_new_href = a_new.get('href') or ''
-                                    a_new_tranlate_text = '{% trans "' + a_new_text + '" %}'
-                                    with open(H2T_RECORD_A_TAG_HREF, 'a', encoding='utf-8') as h2tfile:
-                                        if 'javascript:void' in a_new_href:
-                                            a_new_href = a_new_attrib.group(0)
-                                        elif a_new_href == '': # <a name="xxx" id="xxx"/>
-                                            a_new_href = a_new_attrib.group(0)
-                                        new_record = os.path.join(relevant_base, single_file) + "||" + 'a||' + a_new_text + "||" +  a_new_tranlate_text + "||" + a_new_href + "\n"
-                                        h2tfile.write(new_record)
-                                img_newlist = []
-                                involk_tagbyname(p_single, 'img', img_newlist)
-                                for img_new in img_newlist:
-                                    img_new_attrib = img_new.attrib
-                                    with open(H2T_RECORD_A_TAG_HREF, 'a', encoding='utf-8') as h2tfile:
-                                        new_record = os.path.join(relevant_base, single_file) + "||" + 'img||' + str(img_new_attrib) + "\n"
-                                        h2tfile.write(new_record)
-                            else:
-                                pass
-                            
-                            if b_process == True:
-                                # delete all sub tags, object levels
-                                involk_handler(p_single, [0]*6, True)
-                                # delete all sub tags, string levels
-                                p_tag_string = p_tag_string.replace('\n', '')
-                                p_tag_string = p_tag_string.replace('&#10;', '')
-                                p_tag_string = p_tag_string.replace('&#9;', ' ')
-                                p_tag_string = p_tag_string.replace('<br/>', ' ')
-                                p_tag_string = p_tag_string.replace('<br>', ' ')
-                                p_tag_string = " ".join(p_tag_string.split())
-                                # move some uncessary symbols : font
-                                p_tag_string = re.sub("""<font[\sa-zA-Z0-9="'&#.,!:;/_-]*>""", '[', p_tag_string)
-                                p_tag_string = re.sub('</font>', ']', p_tag_string)
-                                # move some uncessary symbols : span
-                                p_tag_string = re.sub("""<span[\sa-zA-Z0-9="'#.,!:;/_-]*>""", '[', p_tag_string)
-                                p_tag_string = re.sub('</span>', ']', p_tag_string)
-                                # move some uncessary symbols : b
-                                p_tag_string = re.sub("""<b[\sa-zA-Z0-9="'#.,!:;/_-]*>""", '[', p_tag_string)
-                                p_tag_string = re.sub('</b>', ']', p_tag_string)
-                                #replace img tag to @
-                                p_tag_string = re.sub("""<img[\sa-zA-Z0-9="'.:;/_-]*>""", '@', p_tag_string)
-                                #replace a tag to #
-                                p_tag_string = re.sub('</a>', '#', p_tag_string)
-                                #p_tag_string = re.sub("""<a[\sa-zA-Z0-9="'.:&\)\(;/_-]*>""", '#', p_tag_string)
-                                p_tag_string = re.sub("""<a[\sa-zA-Z0-9="\\'.,:&#\)\(;/_-]*>{1}""", '#', p_tag_string)
-                                #repalce " into '
-                                p_tag_string = p_tag_string.replace('"', "'")
-                                p_tag_string = re.sub('</p>', '', p_tag_string)
-                                p_tag_string = re.sub("""<p[\sa-zA-Z0-9="'#&.:;/_-]*>""", '', p_tag_string)
-                                # add the translate flag
-                                p_tag_string = p_tag_string.lstrip()
-                                p_tag_string = p_tag_string.rstrip()
-                                p_tag_check_string = p_tag_string.replace("X", '')
-                                p_tag_check_string = p_tag_check_string.replace(" ", '')
-                                if p_tag_check_string != "" and "XXX" != p_tag_string:
-                                    p_single.text = '{% trans "' + p_tag_string + '" %}'
-                                # set class attribute of p tag
-                                if b_full_italic == True:
-                                    p_single.classes |= ['pitalic']
+                                # assume it has only texts
+                                p_text = p_single.text
+                                if p_text != None and p_text != "" and p_text != '\xa0':
+                                    # move newlines symbols
+                                    p_text = p_text.replace('\n', '')
+                                    # move some uncessary symbols : br
+                                    p_text = p_text.replace('<br/>', '')
+                                    p_text = p_text.replace('<br>', '')
+                                    # replace dobble spaces
+                                    p_text = " ".join(p_text.split())
+                                    #repalce " into '
+                                    p_text = p_text.replace('"', "'")
+                                    p_text = p_text.lstrip()
+                                    p_text = p_text.rstrip()
+                                    p_tag_check_string = p_text.replace("X", '')
+                                    p_tag_check_string = p_tag_check_string.replace(" ", '')
+                                    if p_tag_check_string != "" and "XXX" != p_text:
+                                        p_newtext = '{% trans "' + p_text + '" %}'
+                                        p_single.text = p_newtext
                                 else:
-                                    a = 0
-                            else:
-                                p_tag_string = etree.tostring(p_single, encoding="utf-8").decode('utf-8')
-                                print('-'*40)
-                                if len(p_tag_string) > 80:
-                                    print('Error, can not handle the p <tag> : %s' % p_tag_string[:79])
-                                else:
-                                    print('Error, can not handle the p <tag> : %s' % p_tag_string)
-
-                        else:
-                            #
-                            b_processed = True
-                            # assume it has only texts
-                            p_text = p_single.text
-                            if p_text != None and p_text != "" and p_text != '\xa0':
-                                # move newlines symbols
-                                p_text = p_text.replace('\n', '')
-                                # move some uncessary symbols : br
-                                p_text = p_text.replace('<br/>', '')
-                                p_text = p_text.replace('<br>', '')
-                                # replace dobble spaces
-                                p_text = " ".join(p_text.split())
-                                #repalce " into '
-                                p_text = p_text.replace('"', "'")
-                                p_text = p_text.lstrip()
-                                p_text = p_text.rstrip()
-                                p_tag_check_string = p_text.replace("X", '')
-                                p_tag_check_string = p_tag_check_string.replace(" ", '')
-                                if p_tag_check_string != "" and "XXX" != p_text:
-                                    p_newtext = '{% trans "' + p_text + '" %}'
-                                    p_single.text = p_newtext
-                            else:
-                                pass
+                                    pass
                     
 
                     ### all cases would be handled
@@ -1601,6 +1613,43 @@ def fix_filenames_in_hhp(hhp_fullpath=""):
     print("\n".join(tocheck_lines))
     with open(hhp_fullpath, "w", encoding="utf-8") as brs:
         brs.writelines(backup_lines)
+        
+
+########################################
+# FIX HHC：remove the german characters# 
+########################################
+def fix_filenames_in_hhc(hhc_fullpath=""):
+    """[summary]
+
+    Args:
+        hhc_fullpath (str, optional): [description]. Defaults to "".
+    """
+    html_content = ''
+    with open(hhc_fullpath, 'r', encoding="utf-8") as hhc:
+        html_content = hhc.read()
+    if html_content == '':
+        return False
+    
+    def fix_name_local(input_string=''):
+        nodechar = input_string.replace("ä", "ae")
+        nodechar = nodechar.replace("Ä", "Ae")
+        nodechar = nodechar.replace("ö", "oe")
+        nodechar = nodechar.replace("Ö", "Oe")
+        nodechar = nodechar.replace("ü", "ue")
+        nodechar = nodechar.replace("Ü", "Ue")
+        nodechar = nodechar.replace("ß", "ss")
+        nodechar = nodechar.replace("&auml;", "ae")
+        nodechar = nodechar.replace("&Auml;", "Ae")
+        nodechar = nodechar.replace("&ouml;", "oe")
+        nodechar = nodechar.replace("&Ouml;", "Oe")
+        nodechar = nodechar.replace("&uuml;", "ue")
+        nodechar = nodechar.replace("&Uuml;", "Ue")
+        nodechar = nodechar.replace("&szlig;", "ss")
+        return nodechar
+
+    html_content = fix_name_local(html_content)
+    with open(hhc_fullpath, "w", encoding="utf-8") as hhc:
+        hhc.write(html_content)
 
 
 ########################################
@@ -1621,14 +1670,15 @@ def translate_brs_and_export(str_sub_folder="", str_brs_template_name="", vCount
             print("Try to get template: %s" % (brs_templates_path))
         ss = get_template(brs_templates_path).render()
         ss = ss.replace("\n\n", "\n")
-        cont = ss.replace(u'\ufeff\n', '', 1)
+        utf8_content = ss.replace(u'\ufeff\n', '', 1)
         strGoal = str_brs_template_name.replace("xxx", vCountryCode)
         strDest = os.path.join(CHM_BUILD_BASE_PATH, strGoal)
-        fw= codecs.open(strDest, "w", encoding)
+        # 编码为 GB2312
+        gb2312_content = utf8_content.encode('gb2312', errors='ignore')
         if PRINT_DEBUG:
-            print(cont)
-        fw.write(cont)
-        fw.close()
+            print(gb2312_content)
+        with open(strDest, 'wb') as file:
+            file.write(gb2312_content)
         return True
     except Exception as e:
         if PRINT_DEBUG:
@@ -1652,14 +1702,15 @@ def translate_hhc_and_export(str_sub_folder="", str_hhc_template_name="", vCount
             print("Try to get template: %s" % (hhc_templates_path))
         ss = get_template(hhc_templates_path).render()
         ss = ss.replace("\n\n", "\n")
-        cont = ss.replace(u'\ufeff\n', '', 1)
+        utf8_content = ss.replace(u'\ufeff\n', '', 1)
         strGoal = str_hhc_template_name.replace("xxx", vCountryCode)
         strDest = os.path.join(CHM_BUILD_BASE_PATH, strGoal)
-        fw= codecs.open(strDest, "w", encoding)
+        # 编码为 GB2312
+        gb2312_content = utf8_content.encode('gb2312', errors='ignore')
         if PRINT_DEBUG:
-            print(cont)
-        fw.write(cont)
-        fw.close()
+            print(gb2312_content)
+        with open(strDest, 'wb') as file:
+            file.write(gb2312_content)
         return True
     except Exception as e:
         if PRINT_DEBUG:
@@ -1683,14 +1734,15 @@ def translate_hhk_and_export(str_sub_folder="", str_hhk_template_name="", vCount
             print("Try to get template: %s" % (hhk_templates_path))
         ss = get_template(hhk_templates_path).render()
         ss = ss.replace("\n\n", "\n")
-        cont = ss.replace(u'\ufeff\n', '', 1)
+        utf8_content = ss.replace(u'\ufeff\n', '', 1)
         strGoal = str_hhk_template_name.replace("xxx", vCountryCode)
         strDest = os.path.join(CHM_BUILD_BASE_PATH, strGoal)
-        fw= codecs.open(strDest, "w", encoding)
+        # 编码为 GB2312
+        gb2312_content = utf8_content.encode('gb2312', errors='ignore')
         if PRINT_DEBUG:
-            print(cont)
-        fw.write(cont)
-        fw.close()
+            print(gb2312_content)
+        with open(strDest, 'wb') as file:
+            file.write(gb2312_content)
         return True
     except Exception as e:
         if PRINT_DEBUG:
@@ -1714,14 +1766,15 @@ def translate_hhp_and_export(str_sub_folder="", str_hhp_template_name="", vCount
             print("Try to get template: %s" % (hhp_templates_path))
         ss = get_template(hhp_templates_path).render()
         ss = ss.replace("\n\n", "\n")
-        cont = ss.replace(u'\ufeff\n', '', 1)
+        utf8_content = ss.replace(u'\ufeff\n', '', 1)
         strGoal = str_hhp_template_name.replace("xxx", vCountryCode)
         strDest = os.path.join(CHM_BUILD_BASE_PATH, strGoal)
-        fw= codecs.open(strDest, "w", encoding)
+        # 编码为 GB2312
+        gb2312_content = utf8_content.encode('gb2312', errors='ignore')
         if PRINT_DEBUG:
-            print(cont)
-        fw.write(cont)
-        fw.close()
+            print(gb2312_content)
+        with open(strDest, 'wb') as file:
+            file.write(gb2312_content)
         return True
     except Exception as e:
         if PRINT_DEBUG:
@@ -1745,14 +1798,15 @@ def translate_glo_and_export(str_sub_folder="", str_glo_template_name="", vCount
             print("Try to get template: %s" % (glo_templates_path))
         ss = get_template(glo_templates_path).render()
         ss = ss.replace("\n\n", "\n")
-        cont = ss.replace(u'\ufeff\n', '', 1)
+        utf8_content = ss.replace(u'\ufeff\n', '', 1)
         strGoal = str_glo_template_name.replace("xxx", vCountryCode)
         strDest = os.path.join(CHM_BUILD_BASE_PATH, strGoal)
-        fw= codecs.open(strDest, "w", encoding)
+        # 编码为 GB2312
+        gb2312_content = utf8_content.encode('gb2312', errors='ignore')
         if PRINT_DEBUG:
-            print(cont)
-        fw.write(cont)
-        fw.close()
+            print(gb2312_content)
+        with open(strDest, 'wb') as file:
+            file.write(gb2312_content)
         return True
     except Exception as e:
         if PRINT_DEBUG:
@@ -1776,14 +1830,15 @@ def translate_lng_and_export(str_sub_folder="", str_lng_template_name="", vCount
             print("Try to get template: %s" % (lng_templates_path))
         ss = get_template(lng_templates_path).render()
         ss = ss.replace("\n\n", "\n")
-        cont = ss.replace(u'\ufeff\n', '', 1)
+        utf8_content = ss.replace(u'\ufeff\n', '', 1)
         strGoal = str_lng_template_name.replace("xxx", vCountryCode)
         strDest = os.path.join(CHM_BUILD_BASE_PATH, strGoal)
-        fw= codecs.open(strDest, "w", encoding)
+        # 编码为 GB2312
+        gb2312_content = utf8_content.encode('gb2312', errors='ignore')
         if PRINT_DEBUG:
-            print(cont)
-        fw.write(cont)
-        fw.close()
+            print(gb2312_content)
+        with open(strDest, 'wb') as file:
+            file.write(gb2312_content)
         return True
     except Exception as e:
         if PRINT_DEBUG:
@@ -1809,17 +1864,16 @@ def translate_templates_and_export(str_sub_folder_name="", str_template_name="",
         ss = get_template(strTempPath).render({'encoding':encoding })
         ss = ss.replace("\n\n", "\n")
         cont = ss.replace(u'\ufeff\n', '', 1)
-        cont = cont.replace(u'\xa0', ' ')
+        utf8_content = cont.replace(u'\xa0', ' ')
         strDestPath = os.path.join(CHM_BUILD_BASE_PATH, str_sub_folder_name, str_template_name)
         if not os.path.exists(os.path.join(CHM_BUILD_BASE_PATH, str_sub_folder_name)):
             os.mkdir(os.path.join(CHM_BUILD_BASE_PATH, str_sub_folder_name))
         if PRINT_DEBUG:
             print("Got template, save the rendered template into path: %s" % strDestPath)
-        fw= codecs.open(strDestPath, "w", encoding)
-        #if PRINT_DEBUG:
-        #    print(cont)
-        fw.write(cont)
-        fw.close()
+        # 编码为 GB2312
+        gb2312_content = utf8_content.encode('gb2312', errors='ignore')
+        with open(strDestPath, 'wb') as file:
+            file.write(gb2312_content)
         return
     except Exception as e:
         if PRINT_DEBUG:
@@ -1989,6 +2043,12 @@ def main(args):
         elif len(args) == 3 and "hhp" in args:
             hhp_file_path = args[2]
             fix_filenames_in_hhp(hhp_fullpath=hhp_file_path)
+        if len(args) == 2 and "hhc" in args:
+            hhc_file_path = os.path.join(CHM_EXTRA_BASE_PATH, "086\\wire_xxx.hhc")
+            fix_filenames_in_hhc(hhc_fullpath=hhc_file_path)
+        elif len(args) == 3 and "hhc" in args:
+            hhc_file_path = args[2]
+            fix_filenames_in_hhc(hhc_fullpath=hhc_file_path)
         else:
             print("python executor.py fix hhp")
             print("python executor.py fix hhp <hhp relative path of source folder>")
@@ -2175,7 +2235,7 @@ def main(args):
             for relative_path, file_name in list_templates:
                 if PRINT_DEBUG:
                     print("Render the template %s\\%s", (relative_path, file_name))
-                rts = translate_templates_and_export(relative_path, file_name. encoding_code)
+                rts = translate_templates_and_export(relative_path, file_name, encoding_code)
                 if rts != None:
                     export_results.append(rts)
             if PRINT_DEBUG == True and len(export_results) != 0:
@@ -2213,8 +2273,12 @@ def main(args):
         print("python executor.py transcode step <relative path (subfolder) of template folder>")
         print("python executor.py transcode folder <relative path (subfolder) of template folder>")
         print("python executor.py transcode full <relative path (subfolder) of template folder>")
+        print("python executor.py fix hhp")
+        print("python executor.py fix hhp <hhp relative path of source folder>")
         print("python executor.py fix brs")
         print("python executor.py fix brs <brs file's relative path of source folder>")
+        print("python executor.py fix hhc")
+        print("python executor.py fix hhc <hhp relative path of source folder>")
         print("python executor.py fixname step <relative path (subfolder) of template folder>")
         print("python executor.py fixname folder <relative path (subfolder) of template folder>")
         print("python executor.py fixname full <relative path (subfolder) of template folder>")

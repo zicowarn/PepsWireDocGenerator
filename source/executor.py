@@ -1,7 +1,7 @@
 from __future__ import print_function
 '''
 Created on 21.06.2019
-Updated on 10.01.2024
+Updated on 17.01.2024
 
 @author: wang
 '''
@@ -1798,14 +1798,15 @@ def translate_glo_and_export(str_sub_folder="", str_glo_template_name="", vCount
             print("Try to get template: %s" % (glo_templates_path))
         ss = get_template(glo_templates_path).render()
         ss = ss.replace("\n\n", "\n")
-        cont = ss.replace(u'\ufeff\n', '', 1)
+        utf8_content = ss.replace(u'\ufeff\n', '', 1)
         strGoal = str_glo_template_name.replace("xxx", vCountryCode)
         strDest = os.path.join(CHM_BUILD_BASE_PATH, strGoal)
-        fw= codecs.open(strDest, "w", encoding)
+        # 编码为 GB2312
+        gb2312_content = utf8_content.encode('gb2312', errors='ignore')
         if PRINT_DEBUG:
-            print(cont)
-        fw.write(cont)
-        fw.close()
+            print(gb2312_content)
+        with open(strDest, 'wb') as file:
+            file.write(gb2312_content)
         return True
     except Exception as e:
         if PRINT_DEBUG:
@@ -1829,14 +1830,15 @@ def translate_lng_and_export(str_sub_folder="", str_lng_template_name="", vCount
             print("Try to get template: %s" % (lng_templates_path))
         ss = get_template(lng_templates_path).render()
         ss = ss.replace("\n\n", "\n")
-        cont = ss.replace(u'\ufeff\n', '', 1)
+        utf8_content = ss.replace(u'\ufeff\n', '', 1)
         strGoal = str_lng_template_name.replace("xxx", vCountryCode)
         strDest = os.path.join(CHM_BUILD_BASE_PATH, strGoal)
-        fw= codecs.open(strDest, "w", encoding)
+        # 编码为 GB2312
+        gb2312_content = utf8_content.encode('gb2312', errors='ignore')
         if PRINT_DEBUG:
-            print(cont)
-        fw.write(cont)
-        fw.close()
+            print(gb2312_content)
+        with open(strDest, 'wb') as file:
+            file.write(gb2312_content)
         return True
     except Exception as e:
         if PRINT_DEBUG:
@@ -1862,17 +1864,16 @@ def translate_templates_and_export(str_sub_folder_name="", str_template_name="",
         ss = get_template(strTempPath).render({'encoding':encoding })
         ss = ss.replace("\n\n", "\n")
         cont = ss.replace(u'\ufeff\n', '', 1)
-        cont = cont.replace(u'\xa0', ' ')
+        utf8_content = cont.replace(u'\xa0', ' ')
         strDestPath = os.path.join(CHM_BUILD_BASE_PATH, str_sub_folder_name, str_template_name)
         if not os.path.exists(os.path.join(CHM_BUILD_BASE_PATH, str_sub_folder_name)):
             os.mkdir(os.path.join(CHM_BUILD_BASE_PATH, str_sub_folder_name))
         if PRINT_DEBUG:
             print("Got template, save the rendered template into path: %s" % strDestPath)
-        fw= codecs.open(strDestPath, "w", encoding)
-        #if PRINT_DEBUG:
-        #    print(cont)
-        fw.write(cont)
-        fw.close()
+        # 编码为 GB2312
+        gb2312_content = utf8_content.encode('gb2312', errors='ignore')
+        with open(strDestPath, 'wb') as file:
+            file.write(gb2312_content)
         return
     except Exception as e:
         if PRINT_DEBUG:
