@@ -3,7 +3,7 @@ function onImgLoad(item) {
         {
                 item.mwIsInitialized = true;
                 item.mwImgSrc = item.src;
-                item.mwPreviewSrc = '../preview.gif';
+                item.mwPreviewSrc = '../preview.jpg';
                 item.mwIsPreview = true;
                 item.src = item.mwPreviewSrc;
         }

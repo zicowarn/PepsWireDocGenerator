@@ -147,13 +147,15 @@ def update_templates_imgsrc(static_base_path, templates_base_path):
     list_nofound = []
     for file_templae in list_templates:
         print(f"# 正在处理模板: {file_templae}")
+        if 'Das_Vorbereitungs' in file_templae:
+            a = 0
         template_content = ""
         is_updated = False
         with open(file_templae, 'r', encoding='utf-8') as fr:
             template_content = fr.read()
         # 匹配 img 标签中的 src 属性值
-        pattern = r'<img\s+src="(.*?)"'
-        imgmatches = re.findall(pattern, template_content)
+        pattern = r'<img.+src="(.*?)"' # r'<img.+src="(.*?)"'
+        imgmatches = re.findall(pattern, template_content, re.DOTALL)
         if len(imgmatches) == 0:
             continue
         for imgsrc in imgmatches:
@@ -205,8 +207,8 @@ def main():
     h2t_record_path = os.path.join(settings.BASE_DIR, 'htmlataghref.h2t')
     templates_base_path = os.path.join(settings.BASE_DIR, 'templates')
     # convert_git2jpg_update_h2t(static_base_path, h2t_record_path)
-    # update_templates_imgsrc(static_base_path, templates_base_path)
-    update_templates_imgsize(templates_base_path)
+    update_templates_imgsrc(static_base_path, templates_base_path)
+    # update_templates_imgsize(templates_base_path)
     
 if __name__ == '__main__':
     main()
