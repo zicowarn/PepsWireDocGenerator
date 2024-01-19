@@ -123,7 +123,7 @@
       <font style="vertical-align: inherit;">要创建新机器，请点击图标栏中的“新机器”按钮。</font>
     </font>
   </p>
-  <p><img alt="setup_new_machine.gif" border="0" height="530" src="../../setup_new_machine.gif" width="312" /></p>
+  <p><img alt="setup_new_machine.gif" border="0" height="530" src="../../setup_new_machine.gif" width="auto" /></p>
   <p>
     <font style="vertical-align: inherit;">
       <font style="vertical-align: inherit;">现有计算机将被删除，并出现一个新的、空的未命名计算机。</font>
@@ -131,7 +131,7 @@
       <font style="vertical-align: inherit;">这将允许您修改树中的项目。</font>
     </font>
   </p>
-  <p><img alt="setup_edit_machine.gif" border="0" height="530" src="../../setup_edit_machine.gif" width="312" /></p>
+  <p><img alt="setup_edit_machine.gif" border="0" height="530" src="../../setup_edit_machine.gif" width="auto" /></p>
   <p>
     <font style="vertical-align: inherit;">
       <font style="vertical-align: inherit;">单击“未命名机器”。</font>
@@ -144,7 +144,7 @@
       <font style="vertical-align: inherit;">该名称是您的新机器的名称。</font>
     </font>
   </p>
-  <p><img alt="setup_ID.gif" border="0" height="530" src="../../setup_ID.gif" width="312" /></p>
+  <p><img alt="setup_ID.gif" border="0" height="530" src="../../setup_ID.gif" width="auto" /></p>
   <p>
     <font style="vertical-align: inherit;">
       <font style="vertical-align: inherit;">请记住：机器 ID 名称和机器数据的文件夹名称必须相同。</font>
@@ -153,7 +153,7 @@
       <font style="vertical-align: inherit;">将“new_machine.xml”保存到“new_machine”文件夹。</font>
     </font>
   </p>
-  <p><img alt="setup_saveas.gif" border="0" height="530" src="../../setup_saveas.gif" width="312" /></p>
+  <p><img alt="setup_saveas.gif" border="0" height="530" src="../../setup_saveas.gif" width="auto" /></p>
   <p class="hcp1">&nbsp;</p>
   <h3>
     <font style="vertical-align: inherit;">
@@ -172,49 +172,49 @@
       <font style="vertical-align: inherit;">点击“编辑机器”按钮即可更改为编辑模式。</font>
     </font>
   </p>
-  <p><img alt="setup_edit_machine.gif" border="0" height="530" src="../../setup_edit_machine.gif" width="312" /></p>
+  <p><img alt="setup_edit_machine.gif" border="0" height="530" src="../../setup_edit_machine.gif" width="auto" /></p>
   <p>
     <font style="vertical-align: inherit;">
       <font style="vertical-align: inherit;">首先要做的就是为您的机器命名。</font>
     </font>
   </p>
-  <p><img alt="setup_housing.gif" border="0" height="530" src="../../setup_housing.gif" width="312" /></p>
+  <p><img alt="setup_housing.gif" border="0" height="530" src="../../setup_housing.gif" width="auto" /></p>
   <p>Right click the 'new_machine' in the kinematics tree and choose 'Add Geometry' from the drop down window. Select the 'HOUSING.STL' from the 'new_machine'directory.</p>
-  <p><img alt="setup_add_geo.gif" border="0" height="468" src="../../setup_add_geo.gif" width="338" /></p>
+  <p><img alt="setup_add_geo.gif" border="0" height="468" src="../../setup_add_geo.gif" width="auto" /></p>
   <p>There is a special setting about the housing. When you are running machine simulation you have the opportunity to blank out the machine housing by pushing that button.</p>
-  <p><img alt="机器外壳.gif" border="0" height="30" src="../../machinehousing.gif" width="31" /></p>
+  <p><img alt="机器外壳.gif" border="0" height="30" src="../../machinehousing.gif" width="auto" /></p>
   <p>These blank able parts will be defined when you add to your name the prefix 'mh_'. So, all parts with the prefix mh_ will be blanked out. In our case the name would be 'mh_housing'.</p>
   <p>Properties for new geometry are displayed in bottom of window. Change the ID with "mh_housing" and also you can set up the color. Pick any colour.</p>
   <p>After setting up the housing, you machine tree looks like this:</p>
-  <p><img alt="ms_housing.gif" border="0" height="530" src="../../ms_housing.gif" width="312" /></p>
+  <p><img alt="ms_housing.gif" border="0" height="530" src="../../ms_housing.gif" width="auto" /></p>
   <p>Save the machine. This time use the 'Save Machine' button. That simply saves the changes without bringing the file browser.</p>
-  <p><img alt="设置保存.gif" border="0" height="530" src="../../setup_save.gif" width="312" /></p>
+  <p><img alt="设置保存.gif" border="0" height="530" src="../../setup_save.gif" width="auto" /></p>
   <p class="hcp1">&nbsp;</p>
   <h3>Attaching the kinematic axes</h3>
   <p>As like the housing, the axes will be added into the kinematic tree and its subbranches. The structure of the machine parts is hierarchically. The dependence of an tree item always start from the top item of a branch. The main branch itself is the machine top item which has the housing attached.</p>
   <p>To give an example we look at our 'new_machine'. The 'new_machine' is a so called 'table table' machine. That means that both rotation axes (A and C) lie in the table of the machine. The A axis (blue) and C axis (purple) axis are attached to the Y axis (grey). The table is independent from the linear axes X (green) and Z (orange). Accordingly the Y axis and the X axis build a new branch for themselves.</p>
-  <p><img alt="setup_full.gif" border="0" height="369" src="../../setup_full.gif" width="306" /></p>
+  <p><img alt="setup_full.gif" border="0" height="369" src="../../setup_full.gif" width="auto" /></p>
   <p>To add a kinematic axis you have to do 2 things:</p>
   <p>Add the kinematic description</p>
   <p>Attach the machine model part</p>
   <p class="hcp1">&nbsp;</p>
   <h3>Adding the kinematic description</h3>
   <p>Right click on the 'new_machine', go to 'add Transl. Axis' and select 'Y Axis'. The property window opens automatically.</p>
-  <p><img alt="setup_Y.gif" border="0" height="468" src="../../setup_Y.gif" width="435" /></p>
+  <p><img alt="setup_Y.gif" border="0" height="468" src="../../setup_Y.gif" width="auto" /></p>
   <p>The new Y axis is added. When you select it from the tree, the properties menu appears in bottom of window. The properties for 'ID', 'Direction', 'Limits' are setup by default.</p>
   <p>The first thing you can change here is ID name. Due to its definition the kinematic axes ID's can't be named randomly (like 'Y axis').</p>
   <p class="hcp1">&nbsp;</p>
   <p>The next thing to be changed is the kinematic orientation, which is the direction the linear axis should move. Here the direction must be expressed by a vector which is described in the coordinates X Y and Z. To let the linear axis move in Y, setup value 1 for Y.</p>
   <p>Last option that can be changed is the limit for that axis. Setup minimum limit -80 and maximum limit 100.</p>
   <p>The Y axis appeared in a new branch underneath the machine.</p>
-  <p><img alt="setup_Y_1.gif" border="0" height="567" src="../../setup_Y_1.gif" width="312" /></p>
+  <p><img alt="setup_Y_1.gif" border="0" height="567" src="../../setup_Y_1.gif" width="auto" /></p>
   <p>The next thing to do is to attach the A axis onto the Y axis. Right click on the Y axis, go to 'Add rotation axis' and select 'A Axis'.</p>
-  <p><img alt="setup_add_rot.gif" border="0" height="526" src="../../setup_add_rot.gif" width="388" /></p>
+  <p><img alt="setup_add_rot.gif" border="0" height="526" src="../../setup_add_rot.gif" width="auto" /></p>
   <p>Properties menu from the bottom of window are setup by default.</p>
   <p>Center point must be changed from default value. This center point defines the position where this axis rotates around. Due to its definition you have give that information to the kinematic. The distance will be measured in X, Y and Z to the absolute center point. The A axis is shifted, so you have to add the shift distance accordingly. In our case it is -106 mm in Z. Our direction is Y 1, X and Z 0 (it's turning around Y axis).</p>
   <p>The limits now will be expressed by angles since it is a rotation axis. Enter the range from -90 to 90.</p>
   <p>Set up the kinematic tree like this:</p>
-  <p><img alt="setup_add_complete.gif" border="0" height="567" src="../../setup_add_complete.gif" width="312" /></p>
+  <p><img alt="setup_add_complete.gif" border="0" height="567" src="../../setup_add_complete.gif" width="auto" /></p>
   <p class="hcp1">&nbsp;</p>
   <p>The other axis settings:</p>
   <p class="hcp1">&nbsp;</p>
@@ -252,13 +252,13 @@
   <p>The workpiece, toolpath, stock and initial stock are so called dynamic elements. That means that they can be changed during simulation and don't stay static like the axes geometries.</p>
   <p>In order to attach the elements onto the table, you have to define a certain coordination transformation.</p>
   <p>Now right click on the C axis, select branch 'Add Dynamic Element' and add workpiece set. This option added a group of options : workpiece, stock, initial stock and toolpath. Also you can add those options manually.</p>
-  <p><img alt="setup_add_coord_transform.gif" border="0" height="635" src="../../setup_add_coord_transform.gif" width="484" /></p>
+  <p><img alt="setup_add_coord_transform.gif" border="0" height="635" src="../../setup_add_coord_transform.gif" width="auto" /></p>
   <p class="hcp1">&nbsp;</p>
   <h3>Attaching the tool</h3>
   <p>The tool also is a dynamic element. It changes during simulation and doesn't stay static like the axes geometries.</p>
   <p>In order to attach the spindle, you have to define a certain coordination transformation.</p>
   <p>Right click on the Z axis (which in this case is the spindle), select branch 'Add Dynamic Element' and add 'Tool Set'.</p>
-  <p><img alt="setup_add_coord_transform_tool.gif" border="0" height="635" src="../../setup_add_coord_transform_tool.gif" width="484" /></p>
+  <p><img alt="setup_add_coord_transform_tool.gif" border="0" height="635" src="../../setup_add_coord_transform_tool.gif" width="auto" /></p>
   <p class="hcp1">&nbsp;</p>
   <h3>Defining the collision pairs</h3>
   <p>For the machine simulation it is very important that collisions will be recognized. Therefore you can set collision control sets for machine parts.</p>
@@ -277,7 +277,7 @@
       <font style="vertical-align: inherit;">右键单击“new_machine”计算机并选择“添加 collcheck”。</font>
     </font>
   </p>
-  <p><img alt="setup_add_collcheck.gif" border="0" height="545" src="../../setup_add_collcheck.gif" width="514" /></p>
+  <p><img alt="setup_add_collcheck.gif" border="0" height="545" src="../../setup_add_collcheck.gif" width="auto" /></p>
   <p class="hcp1">&nbsp;</p>
   <p>
     <font style="vertical-align: inherit;">
@@ -311,7 +311,7 @@
       <font style="vertical-align: inherit;">单击“+”或“x”按钮来添加或删除对象。</font>
     </font>
   </p>
-  <p><img alt="machine_cc1.gif" border="0" height="707" src="../../machine_cc1.gif" width="481" /></p>
+  <p><img alt="machine_cc1.gif" border="0" height="707" src="../../machine_cc1.gif" width="auto" /></p>
   <p class="hcp1">&nbsp;</p>
   <p>
     <font style="vertical-align: inherit;">
@@ -319,7 +319,7 @@
       <font style="vertical-align: inherit;">看起来像这样。</font>
     </font>
   </p>
-  <p><img alt="setup_add_collcheck_1.gif" border="0" height="591" src="../../setup_add_collcheck_1.gif" width="514" /></p>
+  <p><img alt="setup_add_collcheck_1.gif" border="0" height="591" src="../../setup_add_collcheck_1.gif" width="auto" /></p>
   <p class="hcp1">&nbsp;</p>
   <p>
     <font style="vertical-align: inherit;">
@@ -346,7 +346,7 @@
     </font>
   </p>
   <p>
-    <img alt="setup_full.gif" border="0" height="369" src="../../setup_full.gif" width="306" /> <img alt="设置结果.gif" border="0" height="457" src="../../setup_result.gif" width="249" />
+    <img alt="setup_full.gif" border="0" height="369" src="../../setup_full.gif" width="auto" /> <img alt="设置结果.gif" border="0" height="457" src="../../setup_result.gif" width="auto" />
   </p>
 {% endblock %}
 {% endlinebreakless %}
