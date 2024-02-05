@@ -28,7 +28,7 @@ def fancy_utility_function(s, marker_infos):
     imgtag_markers = re.findall('@', s)
     for imgtag_marker in imgtag_markers:
         for marker_info in marker_infos:
-            # <img src="../DELETE.gif" alt="DELETE.gif" width="30" height="28" border="0">
+            # <img src="../DELETE.jpg" alt="DELETE" width="30" height="28" border="0">
             img_attribs = ""
             marker_info_dict = eval(marker_info)
             for ky, vl in marker_info_dict.items():

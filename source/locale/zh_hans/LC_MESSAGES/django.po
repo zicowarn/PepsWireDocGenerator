@@ -1729,11 +1729,11 @@ msgstr "袖珍 EDM XXX 已更改"
 
 #: .\asset\086\wire_xxx.brs:460
 msgid "Beispiel: Taschenerodieren programmieren XXXCHANGED "
-msgstr "示例：程序口袋侵蚀 XXXCHANGED"
+msgstr "示例：程序无屑加工 XXXCHANGED"
 
 #: .\asset\086\wire_xxx.brs:461
 msgid "Startposition für Taschenerodieren "
-msgstr "型腔侵蚀的起始位置"
+msgstr "无屑加工的起始位置"
 
 #: .\asset\086\wire_xxx.brs:462
 msgid "Verwende rundes Startloch "
@@ -2197,7 +2197,7 @@ msgstr "起始孔寄存器"
 
 #: .\asset\086\wire_xxx.brs:583
 msgid "Regelfläche ohne Synchronisationslinien erodieren "
-msgstr "腐蚀直纹面，无需同步线"
+msgstr "上下异形，无需同步线"
 
 #: .\asset\086\wire_xxx.brs:584
 msgid "Regelfläche mit Synchronisationslinien erodieren "
@@ -2321,7 +2321,7 @@ msgstr "剪切、复制、粘贴"
 
 #: .\asset\086\wire_xxx.brs:620
 msgid "Der Operationsmanager "
-msgstr "运营经理"
+msgstr "操作管理器"
 
 #: .\asset\086\wire_xxx.brs:621
 msgid "Bearbeitungs Register (Operationsmanager) XXXTO DO "
@@ -3171,11 +3171,11 @@ msgstr "控制线框模拟的对话框"
 #: .\asset\086\wire_xxx.hhk:1169
 #: .\templates\Operationsmanager\Operation_editieren____.htm:7
 msgid "Der Operationsmanager"
-msgstr "运营经理"
+msgstr "操作管理器"
 
 #: .\asset\086\wire_xxx.hhc:77 .\asset\086\wire_xxx.hhk:1168
 msgid "Operationsmanager"
-msgstr "运营经理"
+msgstr "操作管理器"
 
 #: .\asset\086\wire_xxx.hhc:81 .\asset\086\wire_xxx.hhk:223
 msgid "Bearbeitungs Register (Operationsmanager)"
@@ -3188,7 +3188,7 @@ msgstr "几何寄存器（操作管理器）"
 
 #: .\asset\086\wire_xxx.hhc:89
 msgid "Features Register (Operationsmanager)"
-msgstr "功能注册（运营经理）"
+msgstr "功能注册（操作管理器）"
 
 #: .\asset\086\wire_xxx.hhc:93 .\asset\086\wire_xxx.hhk:1204
 #: .\templates\WIRE_Expert_FeatureManager\Parameter_Register_Operationsmanager_.htm:6
@@ -3334,7 +3334,7 @@ msgstr "可变锥度侵蚀"
 
 #: .\asset\086\wire_xxx.hhc:234
 msgid "Taschenerodieren (Zerstoerschnitt) programmieren"
-msgstr "编程型腔腐蚀（破坏性切削）。"
+msgstr "编程无屑加工（破坏性切削）。"
 
 #: .\asset\086\wire_xxx.hhc:238
 msgid "Schraegschieber erodieren"
@@ -3342,7 +3342,7 @@ msgstr "斜滑道侵蚀"
 
 #: .\asset\086\wire_xxx.hhc:242
 msgid "Regelflaeche ohne Synchronisationslinien erodieren"
-msgstr "腐蚀直纹面，无需同步线"
+msgstr "上下异形，无需同步线"
 
 #: .\asset\086\wire_xxx.hhc:246
 msgid "Regelflaeche mit Synchronisationslinien erodieren"
@@ -3419,7 +3419,7 @@ msgstr "WIRE-Expert 特征管理器 - 右键单击​​选项"
 
 #: .\asset\086\wire_xxx.hhc:313
 msgid "Operationsmanager bedienen"
-msgstr "运营运营经理"
+msgstr "运营操作管理器"
 
 #: .\asset\086\wire_xxx.hhc:317 .\asset\086\wire_xxx.hhk:1063
 #: .\asset\086\wire_xxx.hhk:1064
@@ -3455,7 +3455,7 @@ msgstr "删除现有的加工操作。"
 
 #: .\asset\086\wire_xxx.hhc:347
 msgid "Filmbeispiele - Drahterodieren"
-msgstr "薄膜示例 - 线切割放电加工"
+msgstr "视频示例 - 线切割放电加工"
 
 #: .\asset\086\wire_xxx.hhc:351
 msgid "Bearbeitungsfigur erzeugen geschlossen"
@@ -3471,7 +3471,7 @@ msgstr "轮廓加工"
 
 #: .\asset\086\wire_xxx.hhc:363 .\asset\086\wire_xxx.hhk:1618
 msgid "Taschenerodieren"
-msgstr "口袋侵蚀"
+msgstr "无屑加工"
 
 #: .\asset\086\wire_xxx.hhc:367
 msgid "Synchronisationslinien fuer Regelflaeche erzeugen"
@@ -5132,7 +5132,7 @@ msgstr "输出起始孔文件"
 
 #: .\asset\086\wire_xxx.hhk:1542
 msgid "Startlochdurchmesser (Taschenerodieren)"
-msgstr "起始孔径（型腔侵蚀）"
+msgstr "起始孔径（无屑加工）"
 
 #: .\asset\086\wire_xxx.hhk:1543
 msgid "Startlochdurchmesser / Beliebiges Startloch"
@@ -5152,7 +5152,7 @@ msgstr "起始位置"
 #: .\asset\086\wire_xxx.hhk:1557 .\asset\086\wire_xxx.hhk:1558
 #: .\templates\wirhlp10\Startposition_fuer_Taschenerodieren.htm:6
 msgid "Startposition für Taschenerodieren"
-msgstr "型腔侵蚀的起始位置"
+msgstr "无屑加工的起始位置"
 
 #: .\asset\086\wire_xxx.hhk:1562 .\asset\086\wire_xxx.hhk:1563
 #: .\asset\086\wire_xxx.hhk:1568 .\templates\wirhlp10\Starttechnologie.htm:6
@@ -5218,7 +5218,7 @@ msgstr "直纹曲面编辑对话框中的同步线选项"
 
 #: .\asset\086\wire_xxx.hhk:1617
 msgid "Taschenerodieren / Vollabtragsschnitt"
-msgstr "型腔腐蚀/全去除切割"
+msgstr "无屑加工/全去除切割"
 
 #: .\asset\086\wire_xxx.hhk:1622
 msgid "Technologie Datenbank"
@@ -6845,7 +6845,7 @@ msgstr "从实体几何形状创建用于实体模拟的夹紧装置"
 
 #: .\templates\wirhlp10\Beispiel_Taschenerodieren_programmieren.htm:6
 msgid "Beispiel: Taschenerodieren programmieren XXXCHANGED"
-msgstr "示例：程序口袋侵蚀 XXXCHANGED"
+msgstr "示例：程序无屑加工 XXXCHANGED"
 
 #: .\templates\wirhlp10\Beispiel_Umlaufend_gleiche_Konik_programmieren.htm:6
 msgid "Beispiel: Umlaufend gleiche Konik programmieren"
