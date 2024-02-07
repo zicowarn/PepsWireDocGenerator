@@ -1121,7 +1121,7 @@ msgstr "欢迎使用 PEPS 线切割帮助系统"
 
 #: .\asset\086\wire_xxx.brs:295
 msgid "Parameter Register (Operationsmanager) "
-msgstr "参数寄存器（操作管理器）"
+msgstr "参数选项卡（操作管理器）"
 
 #: .\asset\086\wire_xxx.brs:296
 msgid "WIRE-Expert FeatureManager - Optionen der rechten Maustaste "
@@ -2325,7 +2325,7 @@ msgstr "操作管理器"
 
 #: .\asset\086\wire_xxx.brs:621
 msgid "Bearbeitungs Register (Operationsmanager) XXXTO DO "
-msgstr "处理寄存器（操作管理器）XXXTO DO"
+msgstr "加工选项卡（操作管理器）XXXTO DO"
 
 #: .\asset\086\wire_xxx.brs:622
 msgid "Neuer Operationsstart "
@@ -3179,21 +3179,21 @@ msgstr "操作管理器"
 
 #: .\asset\086\wire_xxx.hhc:81 .\asset\086\wire_xxx.hhk:223
 msgid "Bearbeitungs Register (Operationsmanager)"
-msgstr "处理寄存器（操作管理器）"
+msgstr "加工选项卡（操作管理器）"
 
 #: .\asset\086\wire_xxx.hhc:85 .\asset\086\wire_xxx.hhk:679
 #: .\asset\086\wire_xxx.hhk:680 .\asset\086\wire_xxx.hhk:685
 msgid "Geometrie Register (Operationsmanager)"
-msgstr "几何寄存器（操作管理器）"
+msgstr "几何选项卡（操作管理器）"
 
 #: .\asset\086\wire_xxx.hhc:89
 msgid "Features Register (Operationsmanager)"
-msgstr "功能注册（操作管理器）"
+msgstr "Feat.选项卡（操作管理器）"
 
 #: .\asset\086\wire_xxx.hhc:93 .\asset\086\wire_xxx.hhk:1204
 #: .\templates\WIRE_Expert_FeatureManager\Parameter_Register_Operationsmanager_.htm:6
 msgid "Parameter Register (Operationsmanager)"
-msgstr "参数寄存器（操作管理器）"
+msgstr "参数选项卡（操作管理器）"
 
 #: .\asset\086\wire_xxx.hhc:98
 msgid "Hilfe fuer spezielle NC-Maschinen"
@@ -4765,7 +4765,7 @@ msgstr ""
 
 #: .\asset\086\wire_xxx.hhk:1203
 msgid "Parameter Register Operationsmanager"
-msgstr "参数寄存器操作管理器"
+msgstr "参数选项卡操作管理器"
 
 #: .\asset\086\wire_xxx.hhk:1208
 msgid "Passwort Schutz für den Eingaben speichern Button"
@@ -6110,7 +6110,7 @@ msgstr "起始孔PP"
 
 #: .\templates\Operationsmanager\Bearbeitungs_Register_Operationsmanager.htm:7
 msgid "Bearbeitungs Register (Operationsmanager) XXXTO DO"
-msgstr "处理寄存器（操作管理器）XXXTO DO"
+msgstr "加工选项卡（操作管理器）XXXTO DO"
 
 #: .\templates\Operationsmanager\Beispiel_Bearbeitungsoperationen_NACH_einer_vorhandenen_Operation_einfuegen.htm:6
 msgid "Bearbeitungsoperationen NACH einer vorhandenen Operation einfügen"
@@ -6138,7 +6138,7 @@ msgstr "特征"
 
 #: .\templates\Operationsmanager\Geometrie_Register_Operationsmanager.htm:7
 msgid "Geometrie Register (Operationsmanager) XXXNEU BILDER"
-msgstr "几何寄存器（操作经理）XXX新图像"
+msgstr "几何选项卡（操作经理）XXX新图像"
 
 #: .\templates\Operationsmanager\Gruppieren_OP_Liste.htm:7
 msgid "Gruppieren XXXNEU BILD"

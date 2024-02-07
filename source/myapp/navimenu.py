@@ -60,7 +60,7 @@ menus = {
                 "url": "Operationsmanager/Operation_editieren____.htm",
                 "children": {},
             },
-            "处理寄存器（操作管理器）": {
+            "加工选项卡（操作管理器）": {
                 "url": "Operationsmanager/Bearbeitungs_Register_Operationsmanager.htm",
                 "children": {},
             },
@@ -68,11 +68,11 @@ menus = {
                 "url": "Operationsmanager/Geometrie_Register_Operationsmanager.htm",
                 "children": {},
             },
-            "功能注册（操作管理器）": {
+            "Feat.选项卡（操作管理器）": {
                 "url": "WIRE_Expert_FeatureManager/WIRE_Expert_FeatureManager.htm",
                 "children": {},
             },
-            "参数寄存器（操作管理器）": {
+            "参数选项卡（操作管理器）": {
                 "url": "WIRE_Expert_FeatureManager/Parameter_Register_Operationsmanager_.htm",
                 "children": {},
             },
